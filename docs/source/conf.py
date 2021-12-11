@@ -35,3 +35,8 @@ html_theme = 'sphinx_rtd_theme'
 epub_show_urls = 'footnote'
 
 latex_engine = 'xelatex'
+latex_elements = {
+    'preamble':r'''
+    \usepackage {kotex}
+    '''
+}
