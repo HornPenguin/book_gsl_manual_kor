@@ -15,4 +15,5 @@ Contents
 .. toctree::
    
    소개
+   usage
    api
