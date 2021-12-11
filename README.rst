@@ -1,9 +1,9 @@
-Template for the Read the Docs tutorial
+GNU 과학계산 라이브러리 한글 번역
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+GSL(GNU Scientific Library) 메뉴얼의 한글 번역본입니다.
+2.7v을 번역했습니다.
 
-Read the tutorial here:
+원본 메뉴얼은 다음 링크에서 볼 수 있습니다.
 
-https://docs.readthedocs.io/en/stable/tutorial/
+https://www.gnu.org/software/gsl/doc/html/index.html

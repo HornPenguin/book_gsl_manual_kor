@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'GSL Kor'
+copyright = '2021, Hyun Seong, Kim'
+author = 'Hyun Seong, Kim'
 
 release = '0.1'
 version = '0.1.0'
