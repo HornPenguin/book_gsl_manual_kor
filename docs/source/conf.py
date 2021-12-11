@@ -1,7 +1,6 @@
 from docutils.writers.latex2e import Babel
 Babel.language_codes = {'ko':'korean', 'en':'english'}
 
-
 # Configuration file for the Sphinx documentation builder.
 
 # -- Project information
@@ -24,7 +23,6 @@ extensions = [
     'sphinx.ext.intersphinx',
 ]
 
-extensions = ['myst_parser']
 source_suffix = {
     '.rst': 'restructuredtext',
     '.txt': 'markdown',
