@@ -9,21 +9,48 @@ GSL의 기능
 본 라이브러리는 수치 계산의 다양한 분야를 지원합니다. 다음은 GSL에서 제공하는 수치해석 기능들입니다.
 
 
+.. list-table:: GSL 라이브러리의 제공 기능들
+    :header-rows: 1
 
-|  |  | |
-|--|--|--|
-|Complex numbers|Roots of polynomials|Special Functions|
-|Vectors and Martices| Permutations|Combinations|
-|Sorting|BLAS Support|Linear Algebra|
-|CBLAS Library|Fast Fourier Transforms|Eigensystems|
-|Random numbers|Quadrature|Random Distribution|
-|Quasi-Random Sequences|Histograms|Statistics|
-|Monte Carlo Integration|N-Tuples|Differential Equations|
-|Simulated Annealing|Numerical Differentiation|Interpolation|
-|Series Acceleratio|Chebyshev Approximations|Root-Finding|
-|Discrete Hankel Transforms|Least-Squares Fitting|Minimization|
-|IEEE Floating-Point|Physical Constants|Basis Splines|
-|Wavelets|Sparse BLAS Support|Sparse Linear Algebra|
+    * -
+      -
+      -
+    * - 복소수
+      - 다항식의 근 탐색
+      - 특수 함수들
+    * - 벡터와 행렬
+      - 순열
+      - 조합
+    * - 정렬
+      - BLAS 지원
+      - 선형 대수학
+    * - CBLAS 라이브러리
+      - 고속 푸리에 변환
+      - 고유계 문제의 해답
+    * - 난수
+      - Quadrature
+      - 난수 분포
+    * - Quasi-Random Sequences
+      - 히스토그램
+      - 통계
+    * - 몬테 카를로 적분
+      - N-튜플
+      - 미분 방정식의 해
+    * - 담금질 기법
+      - 수치 미분
+      - 보간법
+    * - 급수 가속
+      - 체비쇼프 근사
+      - 근 탐색
+    * - 이산 한켈 변환
+      - 최소 제곱법
+      - 최소 지점 탐색
+    * - IEEE 부동 소수 대수
+      - 물리 상수
+      - B-스플라인
+    * - 웨이블렛 변환
+      - 희소 BLAS 지원
+      - 희소 선형 대수학
 
 
 
@@ -58,10 +85,11 @@ GSL 얻기
 
 새로운 배포, 업데이트 그리고 다른 관련 이벤트들은 <info-gsl@gnu.org>에서 알림을 받을 수 있습니다. 이메일을 통해 알림을 받고 싶으시다면, 다음과 같은 형식으로 이메일을 보내면 됩니다.
 
-```
-To: info-gsl-request@gnu.org
-Subject: subscribe
-```
+.. code-block:: email
+    
+    To: info-gsl-request@gnu.org
+    Subject: subscribe
+
 
 보내고 나면 구독 요청 확인 답장이 올 것입니다.
 
