@@ -44,6 +44,8 @@ GSL 디자인 문서
 	  - Forth Scientific Library는 Forh 사용자들만을 대상으로 합니다.
 	* - Numerical Algorithms with C
 	  - Numerical Algorithms with C, G. Engeln-Mullges, F. Uhlig는 서적과 함께 제공되는 ANSI C로 짜인 훌륭한 수치 해석 라이브러리입니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
+    * - NUMAL
+      - NUMAL 라이브러리의 C 버전은 H.T. Lau에 의해 작성되었으며, "A Numerical Library in C for Scientists and Engineers" 제목의 책과 디스크로 출판되었습니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
 	* - C Mathematical Function Handbook
 	  - C Mathematical Function Handbook by Louis Baker는 "Handbook of Mathematical Functions" by Abramowitz and Stegun의 수학 함수들에 대응되는 근사와 C 구현체 라이브러리입니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
 	* - CCMATH
