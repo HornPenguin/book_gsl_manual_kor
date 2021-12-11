@@ -84,7 +84,7 @@ GSL의 설치는 다운로드 받은 압축 파일 내의 ``INSTALL``  파일에
 .. code-block:: bash
 
     gcc: fatal error: no input files
-compliation terminated
+    compliation terminated
 
 
 의 메세지가 뜰 것입니다. 
@@ -99,7 +99,7 @@ compliation terminated
 .. code-block:: bash
 
     $ sudo apt update
-$ sudo apt upgrade
+    $ sudo apt upgrade
 
 
 만약 설치되어있지 않다면,  ``gcc`` 를 설치해 주어야합니다. Ubuntu의 기본 저장소에서 이는 ``build-essential`` 패키지 내에 포함되어 있습니다. 다음을 입력해  ``build-essential`` 를 설치하면 필요한 ``gcc`` ,``g++`` ,``make`` 등의 여러 컴파일러와 유틸리티를 설치 할 수 있습니다.
@@ -109,7 +109,7 @@ $ sudo apt upgrade
 .. code-block:: bash
 
     $ sudo apt update
-$ sudo apt install build-essential
+    $ sudo apt install build-essential
 
 
 Downloading Source
@@ -195,7 +195,7 @@ Final install
 .. code-block:: bash
 
     # libc default configuration
-/usr/local/lib
+    /usr/local/lib
 
 **환경 변수에 추가하기**
 
@@ -204,7 +204,7 @@ Final install
 .. code-block:: bash
 
     LD_LIBRARY_PATH=${LD_LIBRARY_PARH}:/usr/local/lib
-export LD_LIBRARY_PATH 
+    export LD_LIBRARY_PATH 
 
 
 그러나 이 방법은 새로운 ``bash`` 창을 열 때마다 별도로 입력해 주어야합니다. 때문에, 계정의 홈 디렉토리에 있는 ``.bashrc`` 파일의 끝에 다음의 문구를 추가해줍니다.[^bashrc]
@@ -213,7 +213,7 @@ export LD_LIBRARY_PATH
 .. code-block:: bash
 
     LD_LIBRARY_PATH=${LD_LIBRARY_PARH}:/usr/local/lib
-export LD_LIBRARY_PATH 
+    export LD_LIBRARY_PATH 
 
 
 재부팅 후나 ``$ source ~/.bashrc`` 를 입력하면 정상적으로 사용이 가능합니다.
