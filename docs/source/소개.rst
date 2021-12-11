@@ -1,5 +1,5 @@
 소개
-=====
+===============
 
 GNU Scientific Library (GSL)은 수치 계산을 위한 라이브러리로 C로 작성되었습니다. 기본적으로 C-api를 제공하며, 다른 고급언어를 위한 인터페이스도 존재합니다. 또 이러한 인터페이스의 작성도 허용됩니다. 이 라이브러리의 코드는 **GNU 일반 공중  사용 허가서** 하에 베포됩니다.
 
@@ -102,6 +102,7 @@ Subject: subscribe
 어떤 질문이나 라이브러리 설치에 관한 것들은 <help-gsl@gnu.org>에서 주는 목록에 물어 볼 수 있습니다. 본 리스트를 구독하려면 다음과 같이 이메일을 보내면 됩니다.
 
 .. code-block:: email
+
     To: help-gsl-request@gnu.org
     Subject: subscribe
 
@@ -112,6 +113,7 @@ Subject: subscribe
 만약 GNU Scientific Library를 저널의 문서에 참고문헌으로 넣고싶다면, 본 메뉴얼을 넣는 것을 추천합니다. 예시로:
 
 .. code-block:: 
+
     M. Galassi et al, GNU Scientific Library Reference Manual (3rd Ed.), ISBN  0954612078
 
 
@@ -123,6 +125,7 @@ Subject: subscribe
 본 메뉴얼에서는 키보드로 작성해야하는 많은 예시들을 포함하고 있습니다. 터미널에서 작성해야하는 경우 다음과 같이 작성됩니다.
 
 .. code-block:: bash
+
     $ command
 
 
@@ -131,6 +134,7 @@ Subject: subscribe
 원본 메뉴얼은 라이브러리의 사용에 필요한 상세한 내용을 전부 기술하고 있지는 않습니다. 필요에 따라 본래 메뉴얼에 없는 추가적인 정보들을 단락이나, 단원에 넣을 것 입니다. 그러한 정보들은 끝에 다음과 같은 기호 '(\*)'를 써서 나타낼 것입니다. (\*)
 
 .. code-block::
+
     Additional Contents (*)
     #.# Additional Contents Chapter (*)
         Additional sentence (*). 
