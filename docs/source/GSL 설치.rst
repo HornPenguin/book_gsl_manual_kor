@@ -31,7 +31,7 @@ Windows, Linux, Mac에서 사전 컴파일 된 라이브러리가 존재합니�
 GSL 다운로드 
 -----------------
 
-GSL은 ``Main GNU FTP site <ftp://ftp.gnu.org/gnu/gsl/>`_ 나 가까운 `GNU mirror site <http://ftpmirror.gnu.org/gsl/>`_  에서 소스코드를 내려받을 수 있습니다.
+GSL은 `Main GNU FTP site <ftp://ftp.gnu.org/gnu/gsl/>`_ 나 가까운 `GNU mirror site <http://ftpmirror.gnu.org/gsl/>`_  에서 소스코드를 내려받을 수 있습니다.
 
 현재 가장 최신버전은 2021년 6월 1일에 배포된 ``gsl-2.7`` 버전 입니다. 가장 최신 버전의 라이브러리를 다운로드 하고 싶다면, 다음과 같이 위의 ftp 링크에서 가장 최신 버전의 파일을 내려받거나.
 
@@ -70,14 +70,14 @@ GSL의 설치는 다운로드 받은 압축 파일 내의 ``INSTALL``  파일에
 5. Testing(optional)
 6. Final install
 
- Prerequisites
+Prerequisites
 ~~~~~~~~~~~~~~~~~~~~~~
 
 소스코드 형태의 프로젝트를 설치하기 위해서는 먼저 이러한 소스코드들을 컴파일 할 수 있는 컴파일러가 필요합니다. 일반적으로 GNU 프로젝트를 설치할 때에는 GCC(Gnu Compiler Collection)을 기본으로 사용합니다. 다음을 터미널 창에 입력하면 ``gcc`` 의 설치 유무를 알 수 있습니다.
 
- .. code-block:: bash
+.. code-block:: bash
 
-     $ gcc
+    $ gcc
  
 만약,  ``gcc`` 가 설치되어있다면, 
  
