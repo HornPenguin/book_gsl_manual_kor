@@ -79,10 +79,10 @@ GSL의 설계는 라이브러리 안에 존재하는 기능들을 간단하게 �
 .. code-block:: bash
 
     $ tar xvfz rngextra-0.1.tar.gz
-	$ cd rngextra-0.1
-	$ ./configure; make; make check; make install
-	$ ...
-	$ gcc -Wall main.c -lrngextra -lgsl -lgslcblas -lm
+    $ cd rngextra-0.1
+    $ ./configure; make; make check; make install
+    $ ...
+    $ gcc -Wall main.c -lrngextra -lgsl -lgslcblas -lm
 
 
 아래 내용의 요점은 패키지 디자인 방법에 관한 것입니다. 이 방법은 GSL 스스로 패키지들의 일관성을 보장해, 실 사용자들이 사용하기 쉽고, 향후 GSL에 포함될 잘 검증되고 인기 있는 패키지를 해당 패키지만으로 베포할 수 있게하기 위함입니다.
@@ -93,7 +93,7 @@ GSL의 설계는 라이브러리 안에 존재하는 기능들을 간단하게 �
 .. code-block:: c
 
     #include<rngextra.h>
-	gsl_rng * r = gsl_rng_alloc (rngextra_lsfr32);
+    gsl_rng * r = gsl_rng_alloc (rngextra_lsfr32);
 
 
 * 개발단계를 잘 반영하는 버전 숫자를 사용하십시오. 일반적으로 ``0.x`` 는 알파 버전으로 기능의 보증성이 없는 버전을 의미합니다. ``0.9.x`` 는 베타 버전으로 필수적인 기능이 완성되었고, 소소한 변화와 버그 수정만 남은 경우를 의미합니다. 첫번째 정식 베포는 ``1.0`` 입니다. ``1.0`` 이나 어느 차후 버전이든 간에, 해당 베포판은 잘 정의된 API를 제공해야합니다. API는 갱신과정에서 변경되어서는 안되며, 기존 코드의 수정이 필요 없도록, 작동에 있어 호환성을 가져야합니다(버그 수정은 제외합니다). 패키지에서 API의 변경이 필요한 경우 새로운 정식 베포가 필요합니다. (예, ``2.0`` 과 같은)
@@ -169,13 +169,13 @@ C 가 매크로 어셈블러라는 사실을 항상 기억하는 것이 좋습�
 
 * Kiem-Phong Vo, "The Discipline and Method Architecture for Reusable Libraries", Software - Practice & Experience, v.30, pp.107-128, 2000.
 
-이 논문은 [http://www.research.att.com/sw/tools/sfio/dm-spe.ps](http://www.research.att.com/sw/tools/sfio/dm-spe.ps)에서 찾아보거나, 더 이전의 기술 보고서를  Kiem-Phong Vo, "An Architecture for Reusable Libraries" [http://citeseer.nj.nec.com/48973.html](http://citeseer.nj.nec.com/48973.html)에서 찾아 볼 수 있습니다.
+이 논문은 http://www.research.att.com/sw/tools/sfio/dm-spe.ps 에서 찾아보거나, 더 이전의 기술 보고서를  Kiem-Phong Vo, "An Architecture for Reusable Libraries" http://citeseer.nj.nec.com/48973.html 에서 찾아 볼 수 있습니다.
 
 포터블 C 라이브러리 디자인에 관련한 Vmalloc, SFIO 그리고 CDT 논문들이 있습니다.
 
-* Kiem-Phong Vo, "Vmalloc: A General and Efficient Memory Allocator". Software Practice & Experience, 26:1--18, 1996. [http://www.research.att.com/sw/tools/vmalloc/vmalloc.ps](http://www.research.att.com/sw/tools/vmalloc/vmalloc.ps)
-* iem-Phong Vo. "Cdt: A Container Data Type Library". Soft. Prac. & Exp., 27:1177--1197, 1997 [http://www.research.att.com/sw/tools/cdt/cdt.ps](http://www.research.att.com/sw/tools/cdt/cdt.ps)
-* David G. Korn and Kiem-Phong Vo, "Sfio: Safe/Fast String/File IO", Proceedings of the Summer '91 Usenix Conference, pp. 235-256, 1991. [http://citeseer.nj.nec.com/korn91sfio.html](http://citeseer.nj.nec.com/korn91sfio.html)
+* Kiem-Phong Vo, "Vmalloc: A General and Efficient Memory Allocator". Software Practice & Experience, 26:1--18, 1996. http://www.research.att.com/sw/tools/vmalloc/vmalloc.ps
+* iem-Phong Vo. "Cdt: A Container Data Type Library". Soft. Prac. & Exp., 27:1177--1197, 1997 http://www.research.att.com/sw/tools/cdt/cdt.ps
+* David G. Korn and Kiem-Phong Vo, "Sfio: Safe/Fast String/File IO", Proceedings of the Summer '91 Usenix Conference, pp. 235-256, 1991. http://citeseer.nj.nec.com/korn91sfio.html
 
 
 소스 코드들은 GNU Coding Standards에 밎추어 탭이 아닌 스페이스만 사용해야 합니다. 예로 ``indent`` 명령어를 사용해서:
@@ -195,12 +195,13 @@ C 가 매크로 어셈블러라는 사실을 항상 기억하는 것이 좋습�
 * 해당 기능이 이미 자유 라이브러리(GPL이나 GPL-호환)에서 제공하는 기능인지 판별하기. 만약, 이미 존재한다면 재구현할 필요 없습니다. Netlib, GAMs, na-net, sci.math.num-analysis, 그리고 일반적인 인터넷에서 조사를 해보아야 합니다. 이러한 과정은 관련성이 있는 기존의 독점 라이브러리 목록도 조사할 수 있습니다. 다음 단계에서 참조할 수 있도록 해당 목록을 기록하는 것을 권장합니다.
 * 기존의 상업/자유 라이브러리들의 구현체들에 대한 비교 조사를 수행합니다. 일반적인 API, 프로그램과 하위 기능들간의 통신 방법을 검사하고, 해당 구현체들이 가지거나 가지지 않는 기능들을 조사하니다. 그리고 이들을 관련 핵심 개념과 기능들에 익숙해지도록  분류합니다. 이미 존재하는 라이러리들의 문서 리뷰는 좋은 레퍼런스가 되어주는 것을 잊지 말아야 합니다.
 * 해당 주제들을 살펴보고 최신 기술이 무엇인지 파악합니다. 가장 최신의 리뷰 논문들을 찾아보고, 다음의 저널들을 검색해 봅시다.
-	-   ACM Transactions on Mathematical Software
-	-   Numerische Mathematik
-	-   Journal of Computation and Applied Mathematics
-	-   Computer Physics Communications
-	-   SIAM Journal of Numerical Analysis
-	-   SIAM Journal of Scientific Computing
+    
+    -   ACM Transactions on Mathematical Software
+    -   Numerische Mathematik
+    -   Journal of Computation and Applied Mathematics
+    -   Computer Physics Communications
+    -   SIAM Journal of Numerical Analysis
+    -   SIAM Journal of Scientific Computing
 
 GSL이 연구 프로젝트가 아님을 명심합시다. 좋은 구현체를 만드는 일은, 새로운 알고리즘을 만들지 않더라도 충분히 어려운 작업입니다. 본 프로젝트는 구현 가능하고 존재 가능한 알고리즘의 구현체를 목적으로 합니다. 소소한 개선에 시간을 조금 써도 나쁘지는 않지만, 거기에 몰두하지는 말아야합니다.
 
@@ -254,9 +255,9 @@ GSL이 연구 프로젝트가 아님을 명심합시다. 좋은 구현체를 만
 .. code-block:: c
 
     #ifndef __GSL_HISTOGRAM_H__
-	#define __GSL_HISTOGRAM_H__
-	...
-	#endif /* __GSL_HISTOGRAM_H__ */
+    #define __GSL_HISTOGRAM_H__
+    ...
+    #endif /* __GSL_HISTOGRAM_H__ */
 
 
 대상 시스템
@@ -275,8 +276,8 @@ GSL이 연구 프로젝트가 아님을 명심합시다. 좋은 구현체를 만
 알고리즘들은 ANSI C에서 허용하는 한, 객체 지향적이어야 합니다. 캐스팅의 사용이나 상속을 구현하려는 편법은 권장하지 않고 비슷한 상황의 기능들도 작성하지 않도록 주의해야 합니다. 이는 많은 코딩 패턴들을 금지합니다. 그러나, 해당 패던들은 라이브러리에 사용하기에는 너무나 복잡하기 때문에 고려되지 않을 것입니다.
 
 .. note:: 
-	
-	C에서 함수 포인터를 사용해 추상화된 기초적인 클래스를 정의할 수 있습니다. ``rng``  디렉토리를 보면 예시를 볼 수 있습니다.
+    
+    C에서 함수 포인터를 사용해 추상화된 기초적인 클래스를 정의할 수 있습니다. ``rng``  디렉토리를 보면 예시를 볼 수 있습니다.
 
 퍼블릭 도메인인 포트란 코드를 재구현 할 때는, 해당 코드를 그대로 배열로 옿기기 보다는 구조체 형태의 적절한 객체를 선언해주시길 바랍니다. 구조체는 파일 내부에서 사용할 때만 유용할 수도 있습니다. 굳이 사용자들에게 제공하지 않아도 됩니다.
 
@@ -292,15 +293,15 @@ $X(K, D)$는 $X(K1, D)$로 조정될 격자를 의미합니다. 이러한 형태
 .. code-block:: c
 
     struct grid {
-		int nd;	/* number of dimensions */
-		int k;	/* number of bins */
-		double * x; 	/* partition of axes, array of size x[k][nd] */
-	}
+        int nd;    /* number of dimensions */
+        int k;    /* number of bins */
+        double * x;     /* partition of axes, array of size x[k][nd] */
+    }
 
-	void resize_grid (struct grid * g, int k_new)
-	{
-		...
-	}
+    void resize_grid (struct grid * g, int k_new)
+    {
+        ...
+    }
 
 
 비슷하게, 단일 파일 내에서 반복적으로 사용되는 코드가 있을 경우, 정적 함수나 정적 인라인 함수를 정의해서 사용할 수 있습니다. 이는 코드를 typesafe하게 하고, 해당 내용을 사용하는 모든 곳에서 동일한 기능을 하도록 보장해 줍니다.
@@ -377,9 +378,9 @@ heap영역에 할당되어야 하는 함수들은 ``_alloc`` 으로 끝나야 �
 .. code-block:: C
 
     int gsl_foo_fread (FILE * stream, gsl_foo * v);
-	int gsl_foo_fwrite (FILE * stream, const gsl_foo * v);
-	int gsl_foo_fscanf (FILE * stream, gsl_foo * v);
-	int gsl_foo_fprintf (FILE * stream, const gsl_foo * v, const char *format);
+    int gsl_foo_fwrite (FILE * stream, const gsl_foo * v);
+    int gsl_foo_fscanf (FILE * stream, gsl_foo * v);
+    int gsl_foo_fprintf (FILE * stream, const gsl_foo * v, const char *format);
 
 
 이 함수들은 오직 메모리 블럭들만을 인자로 가져야 합니다. 블럭의 길이와 같은 연관된 인자는 가지면 안됩니다. 이는 사용자들이 라이브러리에서 제공하는 함수들을 이용해 고수준의 입/출력 기능들을 작성할 수 있도록 하기 위함입니다. ``fprintf/fscanf``  버전의 함수들은 아키텍처 사이에서 이식 가능하도록 작성되어야 하며, 바이너리 버전은 ``raw``  형태의 데이터를 사용해야 합니다. 다음과 같이 실제로 읽고 쓰는 함수들을 구현하면 됩니다.
@@ -387,19 +388,17 @@ heap영역에 할당되어야 하는 함수들은 ``_alloc`` 으로 끝나야 �
 .. code-block:: C
 
     int gsl_block_fread (FILE * stream, gsl_block * b);
-	int gsl_block_fwrite (FILE * stream, const gsl_block * b);
-	int gsl_block_fscanf (FILE * stream, gsl_block * b);
-	int gsl_block_fprintf (FILE * stream, const gsl_block * b, const char *format);
+    int gsl_block_fwrite (FILE * stream, const gsl_block * b);
+    int gsl_block_fscanf (FILE * stream, gsl_block * b);
+    int gsl_block_fprintf (FILE * stream, const gsl_block * b, const char *format);
 
 
 .. code-block:: C
 
     int gsl_block_raw_fread (FILE * stream, double * b, size_t n, size_t stride);
-	int gsl_block_raw_fwrite (FILE * stream, const double * b, size_t n, size_t stri
-	de);
-	int gsl_block_raw_fscanf (FILE * stream, double * b, size_t n, size_t stride);
-	int gsl_block_raw_fprintf (FILE * stream, const double * b, size_t n, size_t str
-	ide, const char *format);
+    int gsl_block_raw_fwrite (FILE * stream, const double * b, size_t n, size_t stride);
+    int gsl_block_raw_fscanf (FILE * stream, double * b, size_t n, size_t stride);
+    int gsl_block_raw_fprintf (FILE * stream, const double * b, size_t n, size_t stride, const char *format);
 
 
 반환값 사용
@@ -419,10 +418,10 @@ heap영역에 할당되어야 하는 함수들은 ``_alloc`` 으로 끝나야 �
 .. code-block:: C
 
     {
-		double u = h(x,y);
-		double v = g(u);
-		a = f(v);
-	}
+        double u = h(x,y);
+        double v = g(u);
+        a = f(v);
+    }
 
 
 이러한 작성법은 디버거에서 좀 더 쉽게 검사를 수행할 수 있게하며, 정지점(breakpoint)을 더 정확하게 잡을 수 있게해줍니다. 프로그램의 최적화를 수행하는 컴파일러에서는 이러한 임시 변수들이 자동으로 제거됩니다.
@@ -431,7 +430,7 @@ heap영역에 할당되어야 하는 함수들은 ``_alloc`` 으로 끝나야 �
 변수 이름
 ~~~~~~~~~~~~~~~~~~~~~~
 
-변수 이름에 다음의 이름 규약들을 사요해야 합니다.
+변수 이름에 다음의 이름 규약들을 사용해야 합니다.
 
 ``dim``  : 차원의 수.
 
@@ -465,9 +464,8 @@ heap영역에 할당되어야 하는 함수들은 ``_alloc`` 으로 끝나야 �
 ~~~~~~~~~~~~~~~~~~~~~~
 
 
-ANSI C가 제공하는 ``int``  자료형은 16bit 크기를 보장함을 명심해야합니다[^int size]. 시스템에 따라 더 큰 크기를 제공할 수도 있지만 해당 자료형의 크기는 C에서 보장하지 않습니다. 따라서, 32bit 크기의 자료형이 필요하다면 ``long int`` 를 사용해야 합니다. 이 데이터형은 최소 32bit의 크기를 보장합니다. 물론 많은 플랫폼에서 ``int``  자료형의 크기가 32bit인 경우가 많습니다. 하지만 이 라이브러리의 코드들은 특정 플랫폼보다는 ANSI 표준을 준수할 것입니다.
+ANSI C가 제공하는 ``int``  자료형은 16bit 크기를 보장함을 명심해야합니다 [#int_size]_ . 시스템에 따라 더 큰 크기를 제공할 수도 있지만 해당 자료형의 크기는 C에서 보장하지 않습니다. 따라서, 32bit 크기의 자료형이 필요하다면 ``long int`` 를 사용해야 합니다. 이 데이터형은 최소 32bit의 크기를 보장합니다. 물론 많은 플랫폼에서 ``int``  자료형의 크기가 32bit인 경우가 많습니다. 하지만 이 라이브러리의 코드들은 특정 플랫폼보다는 ANSI 표준을 준수할 것입니다.
 
-[^int size]: int 자료형은 구동 플랫폼의 기본 데이터 처리 타입을 따릅니다. 이는 실행 환경에서 가장 빠른 동작을 보장하기 위함입니다. short 같은 자료형이 고정된 byte 크기를 가진 반면, int는 플랫폼에 따라서 다양한데, 어떤 플랫폼에서는 32bit, 64bit 크기를 가지고 어떤 플랫폼에서는 16bit의 크기를 가질 수도 있습니다. 대표적으로 아두이노와 같은 AVR 시스템에서 16bit 크기를 가진 경우가 흔합니다. 시스템에 따른 이러한 자료형 크기의 차이는 ISO C 표준 문서의 규약이 int 자료형의 최소 크기 16bit와 자료형에 따른 상대적 크기만을 정해 놓았기 때문입니다. 이로 인해 시스템 별로 자료형의 실제 크기는 최소 크기보다 같거나 크기만 하면 다양하게 나올 수 있습니다. 이 디자인 문서는 매우 옛날에 쓰인 문서로 이 시기에 사용된 컴퓨터는 16bit가 기본으로 쓰이는 시스템도 매우 흔했습니다. 해당 시스템에서 ANSI C ``int`` 는 16bit가 기본 크기입니다. 
 
 size_t
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -505,19 +503,19 @@ size_t
 .. code-block:: C
 
     /* real value, set on output */
-	int foo (double * x);                           
-
-	/* real vector, modified */
-	int foo (double * x, size_t stride, size_t n);  
-
-	/* constant real vector */
-	int foo (const double * x, size_t stride, size_t n);  
-
-	/* real array, modified */
-	int bar (double x[], size_t n);                 
-
-	/* real array, not modified */
-	int baz (const double x[], size_t n);      
+    int foo (double * x);
+                      
+    /* real vector, modified */
+    int foo (double * x, size_t stride, size_t n);
+    
+    /* constant real vector */
+    int foo (const double * x, size_t stride, size_t n);
+    
+    /* real array, modified */
+    int bar (double x[], size_t n);
+    
+    /* real array, not modified */
+    int baz (const double x[], size_t n);      
 
 
 포인터
@@ -530,26 +528,26 @@ size_t
 .. code-block:: C
 
     while (fabs (f) < 0.5)
-	{
-	*e = *e - 1;
-	f  *= 2;
-	}
+    {
+    *e = *e - 1;
+    f  *= 2;
+    }
 
 보다는 다음과 같이 작성하는 것이 좋습니다.
 
 .. code-block:: C
 
     { 
-	int p = *e;
-
-	while (fabs(f) < 0.5)
-		{
-		p--;
-		f *= 2;
-		}
-
-	*e = p;
-	}
+        int p = *e;
+        
+        while (fabs(f) < 0.5)
+            {
+            p--;
+            f *= 2;
+            }
+            
+        *e = p;
+    }
 
 
 상수화
@@ -566,12 +564,12 @@ size_t
 
 다른 함수들은 부동 소수점에 대해 ``double`` 을 사용하거나 정수들에 대해 적절한 정수형을 사용할 수 있습니다. 정수형의 예로 난수에 대해 ``unsinged long int`` 가 있습니다. 이 템플릿은 라이브러리의 전체 기능들을 제공하기 위함이 아닙니다.
 
-이는 "1 파인트 잔에 1 쿼트를 채우는 것"[^putpot]과 같이 불가능한 일입니다. 요약하자면, 대부분의 모든 기능들은 일반적인 용도에 적합한 "자연적인 자료형"으로 구성되어야 한다는 것입니다. 템플릿은 다른 데이터형이 발생하는 것을 발생하는 몇몇 경우를 처리하기 위해 존재할 뿐입니다.
+이는 "1 파인트 잔에 1 쿼트를 채우는 것" [#putpot]_ 과 같이 불가능한 일입니다. 요약하자면, 대부분의 모든 기능들은 일반적인 용도에 적합한 "자연적인 자료형"으로 구성되어야 한다는 것입니다. 템플릿은 다른 데이터형이 발생하는 것을 발생하는 몇몇 경우를 처리하기 위해 존재할 뿐입니다.
 
 부동 소수점 작업에서 ``double`` 이 "자연적인 자료형"으로 간주됩니다. 이는 C 언어의 기본적인 정신이기도 합니다.
 
 
-[^putpot]: 원문은 "putting a quart into a pint pot"로 실현 불가능한 일을 일컫는 표현입니다. ``quart`` 는 약 946.353ml이고 ``pint`` 는 약 473.176ml입니다. 
+
 
 임의의 상수
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -589,15 +587,15 @@ size_t
 .. code-block:: C
 
     if (residual < 1e-30){
-		return 0.0; /* residual is zero within round-off error */
-	}
+        return 0.0; /* residual is zero within round-off error */
+    }
 
 
 이 코드는 다음과 같이 쓰여야 합니다.
 
 .. code-block:: C
 
-	return residual;
+    return residual;
 
 
 ``residual``  값을 반환함으로써 사용자 ``residual``  값이 계산에 큰 영향을 끼치는 지, 아닌 지 판단할 수 있게 해야합니다.
@@ -631,9 +629,9 @@ $1$나 $0$과 같은 간단한 값들은 검증 과정에서 버그를 밝혀내
 .. code-block:: bash
 
     make CFLAGS="-ansi -pedantic -Werror -W -Wall -Wtraditional -Wconversion 
-	-Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings 
-	-Wstrict-prototypes -fshort-enums -fno-common -Wmissing-prototypes 
-	-Wnested-externs -Dinline= -g -O4"
+    -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings 
+    -Wstrict-prototypes -fshort-enums -fno-common -Wmissing-prototypes 
+    -Wnested-externs -Dinline= -g -O4"
 
 
 그리고 ``checkergcc``  를 사용해 스택(stack)과 힙(heap)에서 발생할 수 있는 메모리 문제를 검증해야합니다. ``checkergcc``  는 최고의 메모리 검사 도구입니다. ``checkergcc``  를 사용할 수 없다면, Electric Fence를 사용해 힙영역을 검사해야 합니다. 아무런 검사가 없는 것보다는 좋습니다.
@@ -661,12 +659,12 @@ $1$나 $0$과 같은 간단한 값들은 검증 과정에서 버그를 밝혀내
 
 .. code-block:: 
 
-	Yoyodyne, Inc., hereby disclaims all copyright interest in the software
-	`GNU Scientific Library - Legendre Functions' (routines for computing
-	legendre functions numerically in C) written by James Hacker.
+    Yoyodyne, Inc., hereby disclaims all copyright interest in the software
+    `GNU Scientific Library - Legendre Functions' (routines for computing
+    legendre functions numerically in C) written by James Hacker.
 
-	<signature of Ty Coon>, 1 April 1989
-	Ty Coon, President of Vice
+    <signature of Ty Coon>, 1 April 1989
+    Ty Coon, President of Vice
 
 
 * 자명하게도, 비-자유 코드들을 사용하거나 가져오면 안됩니다. 특히, *Numerical Recipes* 나 *ACM TOMS* 에서 코드를 가져오거나 번역해오면 안됩니다. Numerical Recipes는 제약이 있는 허가서 아래에 있고 자유 소프트웨어가 아닙니다. 출판사인 Cambridge University Press는 책과 그 안의 모든 코드들에 대해 저작권을 행사할 권리가 있고 이는 함수, 변수들의 이름 그리고 수학적으로 정의된 하위식 순서도 포함합니다. GSL에 있는 기능들은 어떠한 방식으로든, Numerical Recipes을 참조하거나 기반해 있으면 안됩니다. TOMS(Transactions on Mathematical Software)에서 출판한 ACM 알고리즘은 퍼블릭 도메인이 아닙니다. 물론, 인터넷에 공개되어 있기는 하나, ACM 사용자들은 특수한 비-상업적 허가서 아래에 사용가능하고 GPL과 호환되지 않습니다. 해당 허가서의 자세한 내용은 ACM Transactions on Mathematical Software의 표지나, ACM 웹사이트에서 확인가능합니다. 확실하게 자유로운 허가서 GPL이나 퍼블릭 도메인 아래에서 사용가능한 코드만을 사용해야 합니다. 허가서가 없다고 해당 코드들이 퍼블릭 도메인인 것이 아닙니다. 명백한 허가서 조항이 필요하고, 저자에게 재확인을 해야합니다.
@@ -710,3 +708,9 @@ $1$나 $0$과 같은 간단한 값들은 검증 과정에서 버그를 밝혀내
 변수 이름에 ``l`` 는 사용하지 마십시오. 숫자 ``1`` 과 구분하기 힘듭니다. 오래된 포트란 프로그램에서 매우 흔한 일이었습니다.
 
 마지막 사항: 하나의 완벽한 구현체가 오류 있는 많은 구현체보다 낫습니다.
+
+
+.. rubric:: Footnotes
+
+.. [#int_size] int 자료형은 구동 플랫폼의 기본 데이터 처리 타입을 따릅니다. 이는 실행 환경에서 가장 빠른 동작을 보장하기 위함입니다. short 같은 자료형이 고정된 byte 크기를 가진 반면, int는 플랫폼에 따라서 다양한데, 어떤 플랫폼에서는 32bit, 64bit 크기를 가지고 어떤 플랫폼에서는 16bit의 크기를 가질 수도 있습니다. 대표적으로 아두이노와 같은 AVR 시스템에서 16bit 크기를 가진 경우가 흔합니다. 시스템에 따른 이러한 자료형 크기의 차이는 ISO C 표준 문서의 규약이 int 자료형의 최소 크기 16bit와 자료형에 따른 상대적 크기만을 정해 놓았기 때문입니다. 이로 인해 시스템 별로 자료형의 실제 크기는 최소 크기보다 같거나 크기만 하면 다양하게 나올 수 있습니다. 이 디자인 문서는 매우 옛날에 쓰인 문서로 이 시기에 사용된 컴퓨터는 16bit가 기본으로 쓰이는 시스템도 매우 흔했습니다. 해당 시스템에서 ANSI C ``int`` 는 16bit가 기본 크기입니다. 
+.. [#putpot] 원문은 "putting a quart into a pint pot"로 실현 불가능한 일을 일컫는 표현입니다. ``quart`` 는 약 946.353ml이고 ``pint`` 는 약 473.176ml입니다. 
