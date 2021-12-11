@@ -37,6 +37,10 @@ epub_show_urls = 'footnote'
 latex_engine = 'xelatex'
 latex_elements = {
     'preamble':r'''
-    \usepackage {kotex}
-    '''
+\usepackage{xeCJK}
+\setmainfont{Noto Serif}
+\setCJKmainfont{Noto Serif CJK KR}
+\setCJKsansfont{Noto Sans CJK KR}
+\setCJKmonofont{Noto Sans Mono CJK KR}
+'''
 }
