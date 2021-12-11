@@ -26,40 +26,40 @@ GSL 디자인 문서
 
     * - 라이브러리
       - 설명
-	* - `Netlib <http://www.netlib.org/>`_
-	  - Netlib는 AT&T에서 관리하는 라이브러리로, 인터넷상에서 가장 발전된 수치해석 알고리즘입니다. 불행히도, 대부분의 소프트웨어가 포트란으로 작성되어 있어 대다수의 상황에서 낮선 호출 규약을 사용해야하고, 매우 파편화되어 있어 Netlib의 사용에 큰 노력이 필요합니다.
-	* - `GAMS <http://gams.nist.gov/>`_
-	  - GAMS는 잘 조직된 과학 계산 소프트웨어들의 집합체입니다. 하지만, Netlib와 같이, 각각의 기능들마다 구현체의 질과 문서화 수준이 매우 천차만별입니다.
-	* - `Numerical Recipes <http://www.nr.com, http://cfata2.harvard.edu/nr/>`_
-	  - Numerical Recipes는 명확한 방법으로 알고리즘들을 잘 설명하는 훌륭한 책입니다. 하지만, 이 책의 저자는 해당 서적에 있는 코드의 사용은 허용하고 있으나, 재배포에 제약이 있습니다. 따라서 Numerical Recipes는 자유롭지 않습니다. 무엇보다도, 해당 책의 코드 구현체는 포트란스럽다( *Fortrannitis* )는 평과 다른 한계들이 있습니다. `Reviews of Numerical Recipes <https://www.lysator.liu.se/c/num-recipes-in-c.html>`_
-	* - SLATEC
-	  - SLATEC는 1970년도 Department of Energy program에서 작성된 수치 해석 소프트웨어들의 대규모 집합체입니다.  해당 소프트웨어들은 퍼블릭 도메인으로 배포되고 있습니다. 각각의 기능들은 잘 검증되어 있고 잘 짜여진 구조를 가지고 있습니다(그 시기 한계가 있기는 합니다.). GSL은 현대적인 SLATEC를 목적으로 하고 있습니다.
-	* - NSWC
-	  - NSWC는 Naval Surface Warfare Center numerical library의 약자입니다. 이 라이브러리는 퍼블릭 도메인으로 배포되는 고수준의 대규모 포트란 라이브러리입니다. 이 라이브러리는 문서를 찾기가 매우 힘듭니다. 출판본의 일부 복사본이 확인되었을 뿐입니다.
-	* - NAG와 IMSL
-	  - NAG와 IMSL는 모두 상업적으로 판매되는 고수준의 수치 해석 라이브러리입니다. NAG 라이브러리는 IMSL보다 더 많은 기능과 발전된 형태를 가지고 있습니다. IMSL 라이브러리는 편의성에 더 치우쳐져있고, 기본 인자들을 광범위한 가변 인자 배열을 사용해 에뮬레이트합니다.
-	* - ESSL와 SCSL
-	  - ESSL와 SCSL는 각각 IBM과 SGI에서 상업적으로 판매하는 라이브러리입니다.
-	* - `Forth Scientific Library <http://www.taygeta.com/fsl/sciforth.html>`_
-	  - Forth Scientific Library는 Forh 사용자들만을 대상으로 합니다.
-	* - Numerical Algorithms with C
-	  - Numerical Algorithms with C, G. Engeln-Mullges, F. Uhlig는 서적과 함께 제공되는 ANSI C로 짜인 훌륭한 수치 해석 라이브러리입니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
-	* - NUMAL
-	  - NUMAL 라이브러리의 C 버전은 H.T. Lau에 의해 작성되었으며, "A Numerical Library in C for Scientists and Engineers" 제목의 책과 디스크로 출판되었습니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
-	* - C Mathematical Function Handbook
-	  - C Mathematical Function Handbook by Louis Baker는 "Handbook of Mathematical Functions" by Abramowitz and Stegun의 수학 함수들에 대응되는 근사와 C 구현체 라이브러리입니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
-	* - CCMATH
-	  - CCMATH by Daniel A. Atkinson 는 GSL과 비슷한 범주를 다루는 C로 짜인 수치해석 라이브러리입니다. 코드가 간결한 장점이 있습니다. 초기 버전은 GPL 라이센스 하에서 배포되었지만, 불행히도 최근 버전은 LGPL로 바뀌었습니다.
-	* - CEPHES
-	  - CEPHES는 C로 짜인 고품질의 특수 함수 구현체 모음입니다. GPL 라이센스가 아닙니다.
-	* - WNLIB
-	  - WNLIB는 소규모의 수치 해석 C 구현체의 집합입니다. Will Naylor가 작성했으며, 퍼블릭 도메인입니다.
-	* - MESHACH
-	  - MESHACH는 C로 짜인 포괄적인 행렬-벡터 선행 대수 라이브러리입니다. 자유롭게 사용가능하나 GPL은 아닙니다.
-	* - CERNLIB
-	  - CERNLIB는 대규모의 고품질 포트란 라이브러리로 CERN에서 개발되어 많은 세월동안 사용되었습니다. 본래 비자유 소프트웨어였으나 최근 GPL 라이센스로 베포되고 있습니다.
-	* - COLT
-	  - COLT는 자바로 작성된 자유로은 수치 해석 라이브러리로 CERN에서 Wolfgang Hoschek가 작성했습니다. 이  라이브러리는 BSD 형태의 라이센스 하에 베포됩니다.
+    * - `Netlib <http://www.netlib.org/>`_
+      - Netlib는 AT&T에서 관리하는 라이브러리로, 인터넷상에서 가장 발전된 수치해석 알고리즘입니다. 불행히도, 대부분의 소프트웨어가 포트란으로 작성되어 있어 대다수의 상황에서 낮선 호출 규약을 사용해야하고, 매우 파편화되어 있어 Netlib의 사용에 큰 노력이 필요합니다.
+    * - `GAMS <http://gams.nist.gov/>`_
+      - GAMS는 잘 조직된 과학 계산 소프트웨어들의 집합체입니다. 하지만, Netlib와 같이, 각각의 기능들마다 구현체의 질과 문서화 수준이 매우 천차만별입니다.
+    * - `Numerical Recipes <http://www.nr.com, http://cfata2.harvard.edu/nr/>`_
+      - Numerical Recipes는 명확한 방법으로 알고리즘들을 잘 설명하는 훌륭한 책입니다. 하지만, 이 책의 저자는 해당 서적에 있는 코드의 사용은 허용하고 있으나, 재배포에 제약이 있습니다. 따라서 Numerical Recipes는 자유롭지 않습니다. 무엇보다도, 해당 책의 코드 구현체는 포트란스럽다( *Fortrannitis* )는 평과 다른 한계들이 있습니다. `Reviews of Numerical Recipes <https://www.lysator.liu.se/c/num-recipes-in-c.html>`_
+    * - SLATEC
+      - SLATEC는 1970년도 Department of Energy program에서 작성된 수치 해석 소프트웨어들의 대규모 집합체입니다.  해당 소프트웨어들은 퍼블릭 도메인으로 배포되고 있습니다. 각각의 기능들은 잘 검증되어 있고 잘 짜여진 구조를 가지고 있습니다(그 시기 한계가 있기는 합니다.). GSL은 현대적인 SLATEC를 목적으로 하고 있습니다.
+    * - NSWC
+      - NSWC는 Naval Surface Warfare Center numerical library의 약자입니다. 이 라이브러리는 퍼블릭 도메인으로 배포되는 고수준의 대규모 포트란 라이브러리입니다. 이 라이브러리는 문서를 찾기가 매우 힘듭니다. 출판본의 일부 복사본이 확인되었을 뿐입니다.
+    * - NAG와 IMSL
+      - NAG와 IMSL는 모두 상업적으로 판매되는 고수준의 수치 해석 라이브러리입니다. NAG 라이브러리는 IMSL보다 더 많은 기능과 발전된 형태를 가지고 있습니다. IMSL 라이브러리는 편의성에 더 치우쳐져있고, 기본 인자들을 광범위한 가변 인자 배열을 사용해 에뮬레이트합니다.
+    * - ESSL와 SCSL
+      - ESSL와 SCSL는 각각 IBM과 SGI에서 상업적으로 판매하는 라이브러리입니다.
+    * - `Forth Scientific Library <http://www.taygeta.com/fsl/sciforth.html>`_
+      - Forth Scientific Library는 Forh 사용자들만을 대상으로 합니다.
+    * - Numerical Algorithms with C
+      - Numerical Algorithms with C, G. Engeln-Mullges, F. Uhlig는 서적과 함께 제공되는 ANSI C로 짜인 훌륭한 수치 해석 라이브러리입니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
+    * - NUMAL
+      - NUMAL 라이브러리의 C 버전은 H.T. Lau에 의해 작성되었으며, "A Numerical Library in C for Scientists and Engineers" 제목의 책과 디스크로 출판되었습니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
+    * - C Mathematical Function Handbook
+      - C Mathematical Function Handbook by Louis Baker는 "Handbook of Mathematical Functions" by Abramowitz and Stegun의 수학 함수들에 대응되는 근사와 C 구현체 라이브러리입니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
+    * - CCMATH
+      - CCMATH by Daniel A. Atkinson 는 GSL과 비슷한 범주를 다루는 C로 짜인 수치해석 라이브러리입니다. 코드가 간결한 장점이 있습니다. 초기 버전은 GPL 라이센스 하에서 배포되었지만, 불행히도 최근 버전은 LGPL로 바뀌었습니다.
+    * - CEPHES
+      - CEPHES는 C로 짜인 고품질의 특수 함수 구현체 모음입니다. GPL 라이센스가 아닙니다.
+    * - WNLIB
+      - WNLIB는 소규모의 수치 해석 C 구현체의 집합입니다. Will Naylor가 작성했으며, 퍼블릭 도메인입니다.
+    * - MESHACH
+      - MESHACH는 C로 짜인 포괄적인 행렬-벡터 선행 대수 라이브러리입니다. 자유롭게 사용가능하나 GPL은 아닙니다.
+    * - CERNLIB
+      - CERNLIB는 대규모의 고품질 포트란 라이브러리로 CERN에서 개발되어 많은 세월동안 사용되었습니다. 본래 비자유 소프트웨어였으나 최근 GPL 라이센스로 베포되고 있습니다.
+    * - COLT
+      - COLT는 자바로 작성된 자유로은 수치 해석 라이브러리로 CERN에서 Wolfgang Hoschek가 작성했습니다. 이  라이브러리는 BSD 형태의 라이센스 하에 베포됩니다.
 
 
 GSL 라이브러리는 실제 수치 해석 전문가(나 그들의 대학원생)가 기여할 틀을 제공하는 것을 장기적인 목표로 삼고 있습니다.
