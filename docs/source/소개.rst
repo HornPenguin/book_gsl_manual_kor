@@ -168,7 +168,7 @@ GSL 얻기
         Additional sentence (*). 
 
 
-본 문서에서 GNU Scientific Library는 앞으로 ``GSL``이란 단어로 쓰입니다.
+본 문서에서 GNU Scientific Library는 앞으로 ``GSL`` 이란 단어로 쓰입니다.
 
 
 
