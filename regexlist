@@ -38,11 +38,22 @@ out:
 - math inline
 regex:
 ${1}(.+?)${1}
+output:
+ :math:`$1` 
 
+- math display
+regex:
+${1}(.+?)${1}
+output:
+.. math:: $1 
 
 - image
 regex:
 !\[(.+?)\]\((.+?)\)
 output:
 .. image:: $1
+
+- file
+
+ :file:`$1` 
 
