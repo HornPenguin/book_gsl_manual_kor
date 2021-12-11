@@ -28,63 +28,38 @@ GSL 디자인 문서
       - 설명
 	* - `Netlib <http://www.netlib.org/>`_
 	  - Netlib는 AT&T에서 관리하는 라이브러리로, 인터넷상에서 가장 발전된 수치해석 알고리즘입니다. 불행히도, 대부분의 소프트웨어가 포트란으로 작성되어 있어 대다수의 상황에서 낮선 호출 규약을 사용해야하고, 매우 파편화되어 있어 Netlib의 사용에 큰 노력이 필요합니다.
-	* - ` <>`_
-	  -
-	* - ` <>`_
-	  -
-
-
-GAMS
-http://gams.nist.gov/
-
-GAMS는 잘 조직된 과학 계산 소프트웨어들의 집합체입니다. 하지만, Netlib와 같이, 각각의 기능들마다 구현체의 질과 문서화 수준이 매우 천차만별입니다.
-
-Numerical Recipes
-http://www.nr.com, http://cfata2.harvard.edu/nr/
-
-Numerical Recipes는 명확한 방법으로 알고리즘들을 잘 설명하는 훌륭한 책입니다. 하지만, 이 책의 저자는 해당 서적에 있는 코드의 사용은 허용하고 있으나, 재배포에 제약이 있습니다. 따라서 Numerical Recipes는 자유롭지 않습니다. 무엇보다도, 해당 책의 코드 구현체는 포트란스럽다(*Fortrannitis*)는 평과 다른 한계들이 있습니다. [Reviews of Numerical Recipes](https://www.lysator.liu.se/c/num-recipes-in-c.html)
-
-*SLATEC***
-SLATEC는 1970년도 Department of Energy program에서 작성된 수치 해석 소프트웨어들의 대규모 집합체입니다.  해당 소프트웨어들은 퍼블릭 도메인으로 배포되고 있습니다. 각각의 기능들은 잘 검증되어 있고 잘 짜여진 구조를 가지고 있습니다(그 시기 한계가 있기는 합니다.). GSL은 현대적인 SLATEC를 목적으로 하고 있습니다.
-
-*NSWC***
-NSWC는 Naval Surface Warfare Center numerical library의 약자입니다. 이 라이브러리는 퍼블릭 도메인으로 배포되는 고수준의 대규모 포트란 라이브러리입니다. 이 라이브러리는 문서를 찾기가 매우 힘듭니다. 출판본의 일부 복사본이 확인되었을 뿐입니다.
-
-*NAG*와 *IMSL***
-NAG와 IMSL는 모두 상업적으로 판매되는 고수준의 수치 해석 라이브러리입니다. NAG 라이브러리는 IMSL보다 더 많은 기능과 발전된 형태를 가지고 있습니다. IMSL 라이브러리는 편의성에 더 치우쳐져있고,  기본 인자들을 광범위한 가변 인자 배열을 사용해 에뮬레이트합니다.
-
-*ESSL*와 *SCSL***
-ESSL와 SCSL는 각각 IBM과 SGI에서 상업적으로 판매하는 라이브러리입니다.
-
-**Forth Scientific Library***](http://www.taygeta.com/fsl/sciforth.html)
-Forth Scientific Library는 Forh 사용자들만을 대상으로 합니다.
-
-Numerical Algorithms with C***
-Numerical Algorithms with C, G. Engeln-Mullges, F. Uhlig는 서적과 함께 제공되는 ANSI C로 짜인 훌륭한 수치 해석 라이브러리입니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
-
-*NUMAL***
-NUMAL 라이브러리의 C 버전은 H.T. Lau에 의해 작성되었으며, "A Numerical Library in C for Scientists and Engineers" 제목의 책과 디스크로 출판되었습니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
-
-*C Mathematical Function Handbook***
-C Mathematical Function Handbook by Louis Baker는 "Handbook of Mathematical Functions" by Abramowitz and Stegun의 수학 함수들에 대응되는 근사와 C 구현체 라이브러리입니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
-
-*CCMATH***
-CCMATH_ by Daniel A. Atkinson 는 GSL과 비슷한 범주를 다루는 C로 짜인 수치해석 라이브러리입니다. 코드가 간결한 장점이 있습니다. 초기 버전은 GPL 라이센스 하에서 배포되었지만, 불행히도 최근 버전은 LGPL로 바뀌었습니다.
-
-**CEPHES***
-CEPHES는 C로 짜인 고품질의 특수 함수 구현체 모음입니다. GPL 라이센스가 아닙니다.
-
-*WNLIB***
-WNLIB는 소규모의 수치 해석 C 구현체의 집합입니다. Will Naylor가 작성했으며, 퍼블릭 도메인입니다.
-
-*MESHACH***
-MESHACH는 C로 짜인 포괄적인 행렬-벡터 선행 대수 라이브러리입니다. 자유롭게 사용가능하나 GPL은 아닙니다.
-
-*CERNLIB***
-CERNLIB는 대규모의 고품질 포트란 라이브러리로 CERN에서 개발되어 많은 세월동안 사용되었습니다. 본래 비자유 소프트웨어였으나 최근 GPL 라이센스로 베포되고 있습니다.
-
-*COLT***
-COLT는 자바로 작성된 자유로은 수치 해석 라이브러리로 CERN에서 Wolfgang Hoschek가 작성했습니다. 이  라이브러리는 BSD 형태의 라이센스 하에 베포됩니다.
+	* - `GAMS <http://gams.nist.gov/>`_
+	  - GAMS는 잘 조직된 과학 계산 소프트웨어들의 집합체입니다. 하지만, Netlib와 같이, 각각의 기능들마다 구현체의 질과 문서화 수준이 매우 천차만별입니다.
+	* - `Numerical Recipes <http://www.nr.com, http://cfata2.harvard.edu/nr/>`_
+	  - Numerical Recipes는 명확한 방법으로 알고리즘들을 잘 설명하는 훌륭한 책입니다. 하지만, 이 책의 저자는 해당 서적에 있는 코드의 사용은 허용하고 있으나, 재배포에 제약이 있습니다. 따라서 Numerical Recipes는 자유롭지 않습니다. 무엇보다도, 해당 책의 코드 구현체는 포트란스럽다(*Fortrannitis*)는 평과 다른 한계들이 있습니다. [Reviews of Numerical Recipes](https://www.lysator.liu.se/c/num-recipes-in-c.html)
+	* - SLATEC
+	  - SLATEC는 1970년도 Department of Energy program에서 작성된 수치 해석 소프트웨어들의 대규모 집합체입니다.  해당 소프트웨어들은 퍼블릭 도메인으로 배포되고 있습니다. 각각의 기능들은 잘 검증되어 있고 잘 짜여진 구조를 가지고 있습니다(그 시기 한계가 있기는 합니다.). GSL은 현대적인 SLATEC를 목적으로 하고 있습니다.
+	* - NSWC
+	  - NSWC는 Naval Surface Warfare Center numerical library의 약자입니다. 이 라이브러리는 퍼블릭 도메인으로 배포되는 고수준의 대규모 포트란 라이브러리입니다. 이 라이브러리는 문서를 찾기가 매우 힘듭니다. 출판본의 일부 복사본이 확인되었을 뿐입니다.
+	* - NAG와 IMSL
+	  - NAG와 IMSL는 모두 상업적으로 판매되는 고수준의 수치 해석 라이브러리입니다. NAG 라이브러리는 IMSL보다 더 많은 기능과 발전된 형태를 가지고 있습니다. IMSL 라이브러리는 편의성에 더 치우쳐져있고, 기본 인자들을 광범위한 가변 인자 배열을 사용해 에뮬레이트합니다.
+	* - ESSL와 SCSL
+	  - ESSL와 SCSL는 각각 IBM과 SGI에서 상업적으로 판매하는 라이브러리입니다.
+	* - `Forth Scientific Library <http://www.taygeta.com/fsl/sciforth.html>`_
+	  - Forth Scientific Library는 Forh 사용자들만을 대상으로 합니다.
+	* - Numerical Algorithms with C
+	  - Numerical Algorithms with C, G. Engeln-Mullges, F. Uhlig는 서적과 함께 제공되는 ANSI C로 짜인 훌륭한 수치 해석 라이브러리입니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
+    * - NUMAL
+	  - NUMAL 라이브러리의 C 버전은 H.T. Lau에 의해 작성되었으며, "A Numerical Library in C for Scientists and Engineers" 제목의 책과 디스크로 출판되었습니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
+	* - C Mathematical Function Handbook
+	  - C Mathematical Function Handbook by Louis Baker는 "Handbook of Mathematical Functions" by Abramowitz and Stegun의 수학 함수들에 대응되는 근사와 C 구현체 라이브러리입니다. 코드 사용이 가능하지만, 라이브러리는 자유 소프트웨어가 아닙니다.
+	* - CCMATH
+	  - CCMATH by Daniel A. Atkinson 는 GSL과 비슷한 범주를 다루는 C로 짜인 수치해석 라이브러리입니다. 코드가 간결한 장점이 있습니다. 초기 버전은 GPL 라이센스 하에서 배포되었지만, 불행히도 최근 버전은 LGPL로 바뀌었습니다.
+	* - CEPHES
+	  - CEPHES는 C로 짜인 고품질의 특수 함수 구현체 모음입니다. GPL 라이센스가 아닙니다.
+	* - WNLIB
+	  - WNLIB는 소규모의 수치 해석 C 구현체의 집합입니다. Will Naylor가 작성했으며, 퍼블릭 도메인입니다.
+	* - MESHACH
+	  - MESHACH는 C로 짜인 포괄적인 행렬-벡터 선행 대수 라이브러리입니다. 자유롭게 사용가능하나 GPL은 아닙니다.
+	* - CERNLIB
+	  - CERNLIB는 대규모의 고품질 포트란 라이브러리로 CERN에서 개발되어 많은 세월동안 사용되었습니다. 본래 비자유 소프트웨어였으나 최근 GPL 라이센스로 베포되고 있습니다.
+	* - COLT
+	  - COLT는 자바로 작성된 자유로은 수치 해석 라이브러리로 CERN에서 Wolfgang Hoschek가 작성했습니다. 이  라이브러리는 BSD 형태의 라이센스 하에 베포됩니다.
 
 
 GSL 라이브러리는 실제 수치 해석 전문가(나 그들의 대학원생)가 기여할 틀을 제공하는 것을 장기적인 목표로 삼고 있습니다.
@@ -96,27 +71,30 @@ GSL 팀은 라이브러리의 기능을 강화해 줄 수 있는 새 기여자�
 
 많은 양의 새 코드를 추가하는 일은 라이브러리의 다른 부분들과 완성도 면에서 많은 차이를 낳기 때문에 어렵습니다. 라이브러리의 안전성 유지를 위해, 이러한 새 기능들은 GSL 프로젝트 최상단에 패키지로 만들어 개발자가 각각 독립적으로 유지보수하는 것을 권장합니다. 이는 Perl CPAN 아카이브나 TEX CTAN 아카이브등과 같은 자유 소프트웨어 프로젝트에서도 사용하는 방법입니다.
 
-### 패키지
+패키지
+~~~~~~~~~~~~~~~~~~~~~~
 
 GSL의 설계는 라이브러리 안에 존재하는 기능들을 간단하게 연결해, 따로 떼어 사용하게 할 수 있습니다. 예로, 추가적인 난수 생성기는 독립된 라이브러리로 제공될 수 있습니다.
 
-```bash
-$ tar xvfz rngextra-0.1.tar.gz
-$ cd rngextra-0.1
-$ ./configure; make; make check; make install
-$ ...
-$ gcc -Wall main.c -lrngextra -lgsl -lgslcblas -lm
-```
+.. code-block:: bash
+
+    $ tar xvfz rngextra-0.1.tar.gz
+	$ cd rngextra-0.1
+	$ ./configure; make; make check; make install
+	$ ...
+	$ gcc -Wall main.c -lrngextra -lgsl -lgslcblas -lm
+
 
 아래 내용의 요점은 패키지 디자인 방법에 관한 것입니다. 이 방법은 GSL 스스로 패키지들의 일관성을 보장해, 실 사용자들이 사용하기 쉽고, 향후 GSL에 포함될 잘 검증되고 인기 있는 패키지를 해당 패키지만으로 베포할 수 있게하기 위함입니다.
 
 * 이 문서에서 제공하는 GSL과 GNU 코딩 표준 규약을 준수하십시오. 이는 표준 GNU 패키징 도구들을 이용하는 것으로, *Automake*나 문서화에 *Texinfo*를 사용하는 것과 *test suite*를 의미합니다. *test suite*는 `make check`를 실행해 검증해야하고, GSL에서 제공하는 검증 함수들을 사용해 결과가 `PASS:/FAIL:`로 출력되도록 해야합니다. *libtool* 사용은 필수가 아닙니다. 패키지는 충분히 작게 만들 수 있고, 정적 라이브러리는 손쉽게 만들수 있기 때문입니다.
 * 패키지를 위한 새로운 접두사를 만드십시오.(`gsl_`은 내부 사용을 위한 접두사입니다.) 예로, 추가적인 난수 생성자는 `rngextra`라는 접두사를 사용할 수 있습니다.
 
-```c
-#include<rngextra.h>
-gsl_rng * r = gsl_rng_alloc (rngextra_lsfr32);
-```
+.. code-block:: c
+
+    #include<rngextra.h>
+	gsl_rng * r = gsl_rng_alloc (rngextra_lsfr32);
+
 
 * 개발단계를 잘 반영하는 버전 숫자를 사용하십시오. 일반적으로 `0.x`는 알파 버전으로 기능의 보증성이 없는 버전을 의미합니다. `0.9.x`는 베타 버전으로 필수적인 기능이 완성되었고, 소소한 변화와 버그 수정만 남은 경우를 의미합니다. 첫번째 정식 베포는 `1.0`입니다. `1.0`이나 어느 차후 버전이든 간에, 해당 베포판은 잘 정의된 API를 제공해야합니다. API는 갱신과정에서 변경되어서는 안되며, 기존 코드의 수정이 필요 없도록, 작동에 있어 호환성을 가져야합니다(버그 수정은 제외합니다). 패키지에서 API의 변경이 필요한 경우 새로운 정식 베포가 필요합니다. (예, `2.0`과 같은)
 * GNU 일반 공중 사용 허가서 (GPL)을 사용하십시오. 패키지르 향후 GSL에 포함되기를 원한다면, 저작권 고지를 얻는 일반적인 절차를 따를 수 있습니다.
@@ -128,26 +106,31 @@ gsl_rng * r = gsl_rng_alloc (rngextra_lsfr32);
 GSL의 디자인
 ------------------
 
-### 언어
+언어
+~~~~~~~~~~~~~~~~~~~~~~
 GSL 라이브러리는 **C 언어 하나**만을 사용합니다. 이는 이미 존재하는 컴파일러의 사용이 가능하며, 구조가 간단하고, 손쉽게 범용성을 얻을 수 있는 장점이 있습니다.
 
-### 다른 언어를 위한 인터페이스
+다른 언어를 위한 인터페이스
+~~~~~~~~~~~~~~~~~~~~~~
 
 다른 언어를 위한 랩핑은 "별도의" 패키지로 제공됩니다. "핵심" 라이브러리 패키지로는 제공되지 않습니다. 해당 랩핑은 각각의 기여자들이 별도 관리합니다.
 
 랩핑을 위한 표준 도구들을 사용하는 것을 권장합니다. swing이나 g-warp가 있습니다.
 
-### 구현하는 기능
+구현하는 기능
+~~~~~~~~~~~~~~~~~~~~~~
 
 존재하는 라이브러리들에 있는 모든 기능을 대상으로합니다. 
 
-### 구현하지 않는 기능
+구현하지 않는 기능
+~~~~~~~~~~~~~~~~~~~~~~
 
 * GPL 라이센스 하에 베포되는 고품질의 패키지에 있는 기능
 * 너무 광대한 기능, 하위 기능이 아닌 응용 프로그램 수주을 만드는 것을 의미합니다. 예를 들어, 편미분 방정식(PDE)의 풀이를 위한 기능은 매우 크고 전문화된 응용 프로그램으로 제공되는 경우가 빈번합니다. 이는  매우 다양한 편미분 방정식과 해, 방법들이 존재하기 때문입니다. 이러한 종류의 기능들은 각각 작은 기능들로 분할해서 남겨야합니다. 이런 경우는 사용자들에게 해당하는 좋은 응용 프로그램들을 추천하는 것이 좋습니다.
 * 독립적으로 별도 제공되었을 때 유용한 것들, 날짜와 시간등을 조작하는 기능이나, 재정 관련 함수들은 "과학 계산" 라이브러리에 포함될 수 있습니다. 이는 의심할 여지가 없지만, 이러한 모듈은 다른 프로그램들에서도 독립적으로 사용할 수 있어, 별도의 라이브러리 사용이 더 유용합니다.
 
-### 수치해석  라이브러리의 디자인
+수치해석  라이브러리의 디자인
+~~~~~~~~~~~~~~~~~~~~~~
 
 수치해석 라이브러리의 작성을 할 때, 필연적으로 라이브러리의 **완전성**과 **간결성** 사이에서 갈등하게 됩니다. 완전성은 라이브러리가 "닫혀"있어 서로 다른 객체들에게 작업을 수행할 수 있다는 것을 의미합니다. 수학적 대상은 무한히 많은 방법으로 결합하거나 표현할 수 있습니다. 예를 들어서, 스칼라 필드를 미분해 벡터필드를 표현할 수도 있고, 벡터 필드를 이용해 스칼라 필드를 얻을 수도 있습니다.
 
@@ -157,12 +140,14 @@ GSL 라이브러리는 **C 언어 하나**만을 사용합니다. 이는 이미 
 
 완전성보다는 간결성이 더 좋은 선택입니다. 라이브러리 내의 새로운 기능을 디자인할 때, 가능한 한 모듈들이 독립적으로 작동할 수 있도록 작성해야 합니다. 만약, 모듈 간의 상호 의존성이 시도된다면, 어디까지 독립성을 깰지 확실히 정해야 합니다.
 
-### 코드 재사용
+코드 재사용
+~~~~~~~~~~~~~~~~~~~~~~
 
 라이브러리 전체를 사용할 필요 없이, 각각의 코드파일을 사용자가 만드는 프로그램에 포함할 수 있으면 매우 유용합니다.  이와 같은 독립 실행형 파일이 되도록 하는 것이 권장됩니다. 컴파일 과정에서 당연히, 사용자가 `GSL_ERROR`와 같은 몇몇 매크로들을 정의해야 할 수도 있습니다. 이런 행위까지는 괜찮습니다. 이러한 예시로, 라이브러리 내의 단일 난수 생성기(single random number generator)를 볼 수 있습니다. 
 
 
-### 표준과 규약
+표준과 규약
+~~~~~~~~~~~~~~~~~~~~~~
 
 이 프로젝트에 참여하는 사람들은 코딩 표준과 규약을 준수해야합니다. 해당 프로젝트에서는 다음의 표준과 규약들을 따릅니다.
 
@@ -195,13 +180,15 @@ C 가 매크로 어셈블러라는 사실을 항상 기억하는 것이 좋습�
 
 소스 코드들은 GNU Coding Standards에 밎추어 탭이 아닌 스페이스만 사용해야 합니다. 예로 `indent` 명령어를 사용해서:
 
-```bash
-indent -gnu -nut *.c *.h
-```
+.. code-block:: bash
+
+    indent -gnu -nut *.c *.h
+
 
 `-nut` 옵션은 탭을 스페이스들로 바꾸어줍니다.
 
-### 작업전 확인 사항들
+작업전 확인 사항들
+~~~~~~~~~~~~~~~~~~~~~~
 
 기능을 구현하기 전에 관련 내용들에 관한 철저한 조사가 필요합니다. 이는 장기적으로는 많은 시간을 절약해 줍니다. 가장 중요한 두 가지 단계는 다음과 같습니다.
 
@@ -217,13 +204,15 @@ indent -gnu -nut *.c *.h
 
 GSL이 연구 프로젝트가 아님을 명심합시다. 좋은 구현체를 만드는 일은, 새로운 알고리즘을 만들지 않더라도 충분히 어려운 작업입니다. 본 프로젝트는 구현 가능하고 존재 가능한 알고리즘의 구현체를 목적으로 합니다. 소소한 개선에 시간을 조금 써도 나쁘지는 않지만, 거기에 몰두하지는 말아야합니다.
 
-### 알고리즘의 선택
+알고리즘의 선택
+~~~~~~~~~~~~~~~~~~~~~~
 
 가능한 한, 잘 확장되는 알고리즘을 고르고 점근적으로 처리를 해야함을 기억해야합니다. 특히 정수 인자가 있는 함수들에서 주의해야 합니다.  Abramowitz & Stegun에서는 재귀적 관계와 같이 함수를 정의하는 데 $O(n)$의 시간 복잡도를 가지는 간단한 알고리즘을 많이 사용하고, 이를 구현하는 데 사용하고 싶을 수 있습니다. 그러나, 이러한 알고리즘은 $n=O(10-100)$에서는 잘 작동할지 몰라도, $n=1000000$인 경우, 원하는 데로 작동하지 않을 것입니다.
 
 비슷하게, 다변량 자료들이 동일한 크기로 조정된 원소들이나 $O(1)$의 복잡도를 가지고 있다고 가정하지 말아야합니다. 알고리즘들은 반드시 내부적으로 필요한 스케일 조정과 균형을 처리해야 하고, 이를 위해 적절한 노름들을 사용해야합니다. (예를 들어, $\|x\|$ 보다는 $\|Dx\|$를 사용하는 것이 좋습니다. $D$는 스케일 조정을 위한 대각 행렬입니다.)
 
-### 문서화
+문서화
+~~~~~~~~~~~~~~~~~~~~~~
 
 문서화: 프로젝트 관리자는 어떻게 문서화 되는지에 대해 예제를 제공해야합니다. 고품질의 문서화는 반드시 필요한 작업입니다. 각 문서는 주제를 소개하고, 제공하는 함수들에 대해 세심한 참조를 제공해야합니다. 우선 순위는 함수에 대한 좋은 참조 문헌을 제공하는 것이라, 예제를 반드시 문서에 포함시킬 필요는 없습니다.
 
@@ -242,7 +231,8 @@ GSL이 연구 프로젝트가 아님을 명심합시다. 좋은 구현체를 만
 [James Theiler 왈:
 그리고, 소프트웨어 문서화에 열과 성을 다할 것을 약속합니다. 이러한 문서화에는 왜 소프트웨어를 사용해야하는지, 정확히 어떤 기능을 하는지, 어떻게 정확한 호출을 할 수 있을지, 대략적으로 어떻게 알고리즘이 작동하는지, 어디서 알고리즘을 얻었는지, 그리고 우리가 작성하지 않은 부분들은 어디서 코드를 얻었느지를 포함할 것입니다. 우리는 모든 패키지를 계산 알고리즘으로 부터 새로 구축하는 것을 추구하지 않습니다. 이러한 재구축 보다는 이미 존재하는 자유롭게 사용가능한 수학 소프트웨어들의 집합체로써 사용되길 원합니다. 또, 우리가 작성하는 이 소프트웨어도 동일하게 사용될 수 있길 바랍니다. ]
 
-### 네임 스페이스
+네임 스페이스
+~~~~~~~~~~~~~~~~~~~~~~
 
 모든 외부 호출용 함수와 변수들은 `gsl_` 접두사를 가집니다.
 
@@ -256,26 +246,31 @@ GSL이 연구 프로젝트가 아님을 명심합시다. 좋은 구현체를 만
 
 모든 함수, 변수 이름등은 소문자로, 매크로와 전처리 변수들은 대문자로 써야합니다.
 
-### 헤더 파일
+헤더 파일
+~~~~~~~~~~~~~~~~~~~~~~
 
 헤더파일들은 반드시 한 번만 포함되어야 합니다. 이를 idempotent 하다라 부르는데, 예를 들어, 헤더파일의 내용을 전처리 문구로 감싸서 이를 가능하게 할 수 있습니다.
 
-```c
-#ifndef __GSL_HISTOGRAM_H__
-#define __GSL_HISTOGRAM_H__
-...
-#endif /* __GSL_HISTOGRAM_H__ */
-```
+.. code-block:: c
 
-### 대상 시스템
+    #ifndef __GSL_HISTOGRAM_H__
+	#define __GSL_HISTOGRAM_H__
+	...
+	#endif /* __GSL_HISTOGRAM_H__ */
+
+
+대상 시스템
+~~~~~~~~~~~~~~~~~~~~~~
 
 목표로 하는 대상 시스템은 IEEE 대수를 사용하고, 표준 C 라이브러리를 모두 사용가능한 ANSI C 시스템입니다.
 
-### 함수 이름
+함수 이름
+~~~~~~~~~~~~~~~~~~~~~~
 
 각각의 모듈 이름들은 그 모듈 안의 함수들 이름에 접두사로 작용합니다. 예를 들어서 `gsl_fft` 모듈에는 `gsl_fft_init` 함수가 있습니다. 모듈들은 라이브러리 소스 트리의 하위 디렉토리들과 대응됩니다.
 
-### 객체 지향성
+객체 지향성
+~~~~~~~~~~~~~~~~~~~~~~
 
 알고리즘들은 ANSI C에서 허용하는 한, 객체 지향적이어야 합니다. 캐스팅의 사용이나 상속을 구현하려는 편법은 권장하지 않고 비슷한 상황의 기능들도 작성하지 않도록 주의해야 합니다. 이는 많은 코딩 패턴들을 금지합니다. 그러나, 해당 패던들은 라이브러리에 사용하기에는 너무나 복잡하기 때문에 고려되지 않을 것입니다.
 
@@ -285,45 +280,51 @@ Note: C에서 함수 포인터를 사용해 추상화된 기초적인 클래스�
 
 예를 들어서 어느 포트란 프로그램이 다음과 같이 반복작업을 하는 부분이 있다면,
 
-```fortran
-SUBROUTINE RESIZE (X, K, ND, K1)
-```
+.. code-block:: fortran
+
+    SUBROUTINE RESIZE (X, K, ND, K1)
+
 
 $X(K, D)$는 $X(K1, D)$로 조정될 격자를 의미합니다. 이러한 형태는 구조체를 도입해 좀 더 읽기 편한 형태로 만들 수 있습니다.
 
-```c
-struct grid {
-	int nd;	/* number of dimensions */
-	int k;	/* number of bins */
-	double * x; 	/* partition of axes, array of size x[k][nd] */
-}
+.. code-block:: c
 
-void resize_grid (struct grid * g, int k_new)
-{
-	...
-}
-```
+    struct grid {
+		int nd;	/* number of dimensions */
+		int k;	/* number of bins */
+		double * x; 	/* partition of axes, array of size x[k][nd] */
+	}
+
+	void resize_grid (struct grid * g, int k_new)
+	{
+		...
+	}
+
 
 비슷하게, 단일 파일 내에서 반복적으로 사용되는 코드가 있을 경우, 정적 함수나 정적 인라인 함수를 정의해서 사용할 수 있습니다. 이는 코드를 typesafe하게 하고, 해당 내용을 사용하는 모든 곳에서 동일한 기능을 하도록 보장해 줍니다.
 
-### 주석
+주석
+~~~~~~~~~~~~~~~~~~~~~~
 
 GNU 표준 코딩 규약을 따릅니다. 인용구는 다음과 같이 쓸 수 있습니다.
 
 "완전한 문장을 쓰고 첫 단어는 대문자를 써야합니다. 문장의 시작을 소문자인 식별자로 해야한다면 대문자로 바꾸면 안됩니다. 철자를 변경하면 다른 식별자를 의미합니다. 소문자로 문장이 시작되길 원치 않는다면 문장을 다르게 써야합니다(예: "소문자 식별자 ...는 ..")."
 
-### 최소화 된 구조
+최소화 된 구조
+~~~~~~~~~~~~~~~~~~~~~~
 
 구조를 최소화하길 바랍니다. 예를 들어서 여러 단계의 알고리즘들로 풀 수 있는 문제가 있다면, 각 경우를 다룰 수 있는 분리된 구조체를 만드는 것이 더 좋습니다. 이러한 경우로 미분값 정보가 있고, 없는 경우를 모두 사용하는 상황이 있는데, 런타임 식별자 사용은 권장하지 않습니다.
 
-### 알고리즘 분해
+알고리즘 분해
+~~~~~~~~~~~~~~~~~~~~~~
 
 반복 알고리즘들은 INITIALIZE(초기화), ITERATE(반복), 그리고 TEST(검증) 단계로 분해해, 사용자가 반복 과정을 제어가능하게 하고 중간 단계에서 값을 확인 할 수 있게 해야합니다. 이러한 방식은 call-back을 사용하거나 flag를 이용해 중간 값을 출력하도록 제어하는 것보다 더 좋습니다. 사실 call-back의 사용은 권장하지 않습니다. 만일 call-back의 사용이 필요하다면, 이는 알고리즘을 더 세분화해 사용자가 완전히 제어 가능하도록 만들어야한다는 뜻입니다.
 
 예를 들어서 미분방정식을 풀 때, 사용자가 개별적인 단계의 해를 실시간으로 확인하며 진행해야 할 때가 있습니다. 이러한 상황에서 사용가능한 알고리즘은 알고리즘이 각 단계별로 분해된 상황일 때만 가능합니다. 고수준의 분해는 이러한 유연성 측면에서 적절하지 않습니다.
 
 
-### 메모리 할당과 소유권
+메모리 할당과 소유권
+~~~~~~~~~~~~~~~~~~~~~~
 
 heap영역에 할당되어야 하는 함수들은 `_alloc`으로 끝나야 합니다(예: `gsl_foo_alloc`). 그리고 `_free`가 붙은 대응 함수로 해제되어야 합니다(`gsl_foo_free`).
 
@@ -331,12 +332,14 @@ heap영역에 할당되어야 하는 함수들은 `_alloc`으로 끝나야 합�
 
 절대로, 함수 내부에서 임시로(temporarily) 메모리를 할당하고 반환 전에 해제하면 안됩니다. 이는 사용자의 메모리 할당 관리를 방해합니다. 모든 메모리는 할당과 해제가 각각 분리된 함수로 구현되어야 하고, "작업 공간" 인자를 전달받아야 합니다. 이 방법을 이용하면 메모리 할당을 세세한 반복 과정에서 고려하지 않아도 됩니다.
 
-### 메모리 레이아웃
+메모리 레이아웃
+~~~~~~~~~~~~~~~~~~~~~~
 
 이 라이브러리에서는 행렬과 벡터들을 저장하는 데 C 스타일의 포인터-포인터 배열이 아니라, 메모리 블럭을 이용합니다. 행렬은 행 순서로 저장되며, 열은 메모리를 따라 연속적으로 저장됩니다.
 
 
-### 선형대수 단계
+선형대수 단계
+~~~~~~~~~~~~~~~~~~~~~~
 
 선형 대수학에서 쓰이는 함수는 두가지 단계로 나뉘어져있습니다.
 
@@ -353,7 +356,8 @@ heap영역에 할당되어야 하는 함수들은 `_alloc`으로 끝나야 합�
 효율성을 위해, 라이브러리 내에서는 BLAS 기능들을 주로 사용하길 바랍니다.
 
 
-### 예외와 오류 관리
+예외와 오류 관리
+~~~~~~~~~~~~~~~~~~~~~~
 
 기본적인 오류 관리 절차는 오류 코드의 반환입니다( `gsl_errno.h`에서 가능한 값들을 참고할 수 있습니다.). `GSL_ERROR` 메크로를 사용해 오류를 표시할 수 있습니다. 현재 이 매크로의 정의는 완전하진 않지만, 컴파일 시간에 변경될 수 있습니다.
 
@@ -363,59 +367,67 @@ heap영역에 할당되어야 하는 함수들은 `_alloc`으로 끝나야 합�
 
 특정 초기화 객체를 이용한 작업에서 발생한 오류와 같이, 사전에 할당된 메모리에서 오류가 발생했다면, 해당 메모리를 해제하는 것을 잊으면 안됩니다.
 
-### 영속성
+영속성
+~~~~~~~~~~~~~~~~~~~~~~
 
 라이브러리를 개발할 때 메모리 블럭을 사용하는 객체(예: `vector`, `matrix`, `histogram`) `foo`를 만든다 칩시다. 이 경우 이러한 블럭들을 읽고 쓸 수 있는 함수들을 제공해야 합니다.
 
-```C
-int gsl_foo_fread (FILE * stream, gsl_foo * v);
-int gsl_foo_fwrite (FILE * stream, const gsl_foo * v);
-int gsl_foo_fscanf (FILE * stream, gsl_foo * v);
-int gsl_foo_fprintf (FILE * stream, const gsl_foo * v, const char *format);
-```
+.. code-block:: C
+
+    int gsl_foo_fread (FILE * stream, gsl_foo * v);
+	int gsl_foo_fwrite (FILE * stream, const gsl_foo * v);
+	int gsl_foo_fscanf (FILE * stream, gsl_foo * v);
+	int gsl_foo_fprintf (FILE * stream, const gsl_foo * v, const char *format);
+
 
 이 함수들은 오직 메모리 블럭들만을 인자로 가져야 합니다. 블럭의 길이와 같은 연관된 인자는 가지면 안됩니다. 이는 사용자들이 라이브러리에서 제공하는 함수들을 이용해 고수준의 입/출력 기능들을 작성할 수 있도록 하기 위함입니다. `fprintf/fscanf` 버전의 함수들은 아키텍처 사이에서 이식 가능하도록 작성되어야 하며, 바이너리 버전은 `raw` 형태의 데이터를 사용해야 합니다. 다음과 같이 실제로 읽고 쓰는 함수들을 구현하면 됩니다.
 
-```C
-int gsl_block_fread (FILE * stream, gsl_block * b);
-int gsl_block_fwrite (FILE * stream, const gsl_block * b);
-int gsl_block_fscanf (FILE * stream, gsl_block * b);
-int gsl_block_fprintf (FILE * stream, const gsl_block * b, const char *format);
-```
+.. code-block:: C
 
-```C
-int gsl_block_raw_fread (FILE * stream, double * b, size_t n, size_t stride);
-int gsl_block_raw_fwrite (FILE * stream, const double * b, size_t n, size_t stri
-de);
-int gsl_block_raw_fscanf (FILE * stream, double * b, size_t n, size_t stride);
-int gsl_block_raw_fprintf (FILE * stream, const double * b, size_t n, size_t str
-ide, const char *format);
-```
+    int gsl_block_fread (FILE * stream, gsl_block * b);
+	int gsl_block_fwrite (FILE * stream, const gsl_block * b);
+	int gsl_block_fscanf (FILE * stream, gsl_block * b);
+	int gsl_block_fprintf (FILE * stream, const gsl_block * b, const char *format);
 
-### 반환값 사용
+
+.. code-block:: C
+
+    int gsl_block_raw_fread (FILE * stream, double * b, size_t n, size_t stride);
+	int gsl_block_raw_fwrite (FILE * stream, const double * b, size_t n, size_t stri
+	de);
+	int gsl_block_raw_fscanf (FILE * stream, double * b, size_t n, size_t stride);
+	int gsl_block_raw_fprintf (FILE * stream, const double * b, size_t n, size_t str
+	ide, const char *format);
+
+
+반환값 사용
+~~~~~~~~~~~~~~~~~~~~~~
 
 반환값들을 사용하기 전에 항상 변수에 할당을 하고 사용해야합니다. 이 방법은 함수의 디버깅과 반환값의 검사 수정을 용이하게 해줍니다. 만약, 변수가 중요치 않고 임시로 사용된다면, 적절한 범주 내에 포함시켜 사용해야 합니다.
 
 예를 들어서 다음과 같이 쓰기보다는,
 
-```C
-a  = f(g(h(x,y)))
-```
+.. code-block:: C
+
+    a  = f(g(h(x,y)))
+
 
 중간값을 저장하는 임시 변수들을 사용해 다음과 같이 작성해야 합니다.
 
-```C
-{
-	double u = h(x,y);
-	double v = g(u);
-	a = f(v);
-}
-```
+.. code-block:: C
+
+    {
+		double u = h(x,y);
+		double v = g(u);
+		a = f(v);
+	}
+
 
 이러한 작성법은 디버거에서 좀 더 쉽게 검사를 수행할 수 있게하며, 정지점(breakpoint)을 더 정확하게 잡을 수 있게해줍니다. 프로그램의 최적화를 수행하는 컴파일러에서는 이러한 임시 변수들이 자동으로 제거됩니다.
 
 
-### 변수 이름
+변수 이름
+~~~~~~~~~~~~~~~~~~~~~~
 
 변수 이름에 다음의 이름 규약들을 사요해야 합니다.
 
@@ -447,14 +459,16 @@ a  = f(g(h(x,y)))
 
 `r`: 난수 발생자 (`gsl_rng`).
 
-### 자료형 크기
+자료형 크기
+~~~~~~~~~~~~~~~~~~~~~~
 
 
 ANSI C가 제공하는 `int` 자료형은 16bit 크기를 보장함을 명심해야합니다[^int size]. 시스템에 따라 더 큰 크기를 제공할 수도 있지만 해당 자료형의 크기는 C에서 보장하지 않습니다. 따라서, 32bit 크기의 자료형이 필요하다면 `long int`를 사용해야 합니다. 이 데이터형은 최소 32bit의 크기를 보장합니다. 물론 많은 플랫폼에서 `int` 자료형의 크기가 32bit인 경우가 많습니다. 하지만 이 라이브러리의 코드들은 특정 플랫폼보다는 ANSI 표준을 준수할 것입니다.
 
 [^int size]: int 자료형은 구동 플랫폼의 기본 데이터 처리 타입을 따릅니다. 이는 실행 환경에서 가장 빠른 동작을 보장하기 위함입니다. short 같은 자료형이 고정된 byte 크기를 가진 반면, int는 플랫폼에 따라서 다양한데, 어떤 플랫폼에서는 32bit, 64bit 크기를 가지고 어떤 플랫폼에서는 16bit의 크기를 가질 수도 있습니다. 대표적으로 아두이노와 같은 AVR 시스템에서 16bit 크기를 가진 경우가 흔합니다. 시스템에 따른 이러한 자료형 크기의 차이는 ISO C 표준 문서의 규약이 int 자료형의 최소 크기 16bit와 자료형에 따른 상대적 크기만을 정해 놓았기 때문입니다. 이로 인해 시스템 별로 자료형의 실제 크기는 최소 크기보다 같거나 크기만 하면 다양하게 나올 수 있습니다. 이 디자인 문서는 매우 옛날에 쓰인 문서로 이 시기에 사용된 컴퓨터는 16bit가 기본으로 쓰이는 시스템도 매우 흔했습니다. 해당 시스템에서 ANSI C `int`는 16bit가 기본 크기입니다. 
 
-### size_t
+size_t
+~~~~~~~~~~~~~~~~~~~~~~
 
 모든 객체(예: 메모리 블럭)들은 `size_t`로 크기가 측정되어야 합니다. 따라서, 모든 반복 과정(예: `for(i=0; i<N; i++)`)은 `size_t`의 형태를 가지는 인덱스를 사용해야 합니다.
 
@@ -462,77 +476,87 @@ ANSI C가 제공하는 `int` 자료형은 16bit 크기를 보장함을 명심해
 
 감소하는 반복문을 사용하고 싶다면 주의해야 하는 데, `size_t` 자료형은 부호가 없는 자료형이기 때문입니다. 일반적인 감소 반복문보다는,
 
-```C
-for (i = N - 1; i >= 0; i--) { ... } /* DOESN'T WORK */
-```
+.. code-block:: C
+
+    for (i = N - 1; i >= 0; i--) { ... } /* DOESN'T WORK */
+
 
 다음과 같이 쓰는 것을 권장합니다. 이는 `i=0` 근처에서 발생하는 문제를 해결해줍니다.
 
-```C
-for (i = N; i > 0 && i--;) { ... }
-```
+.. code-block:: C
+
+    for (i = N; i > 0 && i--;) { ... }
+
 
 혼동을 피하고 싶다면 독립적인 변수를 반복문 안에 삽입해 반복 순서를 반대로 바꾸는 것이 좋습니다.
 
-```C
-for (i = 0; i < N; i++) { j = N - i; ... }
-```
+.. code-block:: C
 
-### 배열 vs 포인터
+    for (i = 0; i < N; i++) { j = N - i; ... }
+
+
+배열 vs 포인터
+~~~~~~~~~~~~~~~~~~~~~~
 
 함수의 선언과정에서 포인터 인자나 배열 인자들을 모두 사용할 수 있습니다. 표준 C에서는 이 둘이 동일하다고 간주합니다. 그러나, 실용적으로 이 둘을 구분지어서 사용하는 것이 매우 유용합니다. 포인터는 수정할 단일 객체를 나타내고, 배열은 구분 단위를 가지는 객체의 집합으로 간주합니다. 배열의 수정 여부는 `const`의 유무에 따릅니다. 벡터의 경우 구분 단위가 별도로 필요하지 않고 포인터 형식이 선호됩니다. 
 
-```C
-/* real value, set on output */
-int foo (double * x);                           
+.. code-block:: C
 
-/* real vector, modified */
-int foo (double * x, size_t stride, size_t n);  
+    /* real value, set on output */
+	int foo (double * x);                           
 
-/* constant real vector */
-int foo (const double * x, size_t stride, size_t n);  
+	/* real vector, modified */
+	int foo (double * x, size_t stride, size_t n);  
 
-/* real array, modified */
-int bar (double x[], size_t n);                 
+	/* constant real vector */
+	int foo (const double * x, size_t stride, size_t n);  
 
-/* real array, not modified */
-int baz (const double x[], size_t n);      
-```
+	/* real array, modified */
+	int bar (double x[], size_t n);                 
 
-### 포인터
+	/* real array, not modified */
+	int baz (const double x[], size_t n);      
+
+
+포인터
+~~~~~~~~~~~~~~~~~~~~~~
 
 가능한 한 수식의 우변에 포인터의 역참조를 사용하지 말아야합니다. 이러한 코드가 필요한 경우 임시 변수의 활용이 더 적절합니다. 이는 컴파일러가 최적화를 더 쉽게 할 수 있게 해주며 가독성이 좋은 코드를 만듭니다. 이에 더해 곱셈이나 역참조에 모두 쓰이는 `*` 기호의 혼동을 줄여줍니다.
 
 다시 말해,
 
-```C
-while (fabs (f) < 0.5)
-{
-  *e = *e - 1;
-  f  *= 2;
-}
-```
+.. code-block:: C
+
+    while (fabs (f) < 0.5)
+	{
+	*e = *e - 1;
+	f  *= 2;
+	}
+
 보다는 다음과 같이 작성하는 것이 좋습니다.
 
-```C
-{ 
-  int p = *e;
+.. code-block:: C
 
-  while (fabs(f) < 0.5)
-    {
-     p--;
-     f *= 2;
-    }
+    { 
+	int p = *e;
 
-  *e = p;
-}
-```
+	while (fabs(f) < 0.5)
+		{
+		p--;
+		f *= 2;
+		}
 
-### 상수화
+	*e = p;
+	}
+
+
+상수화
+~~~~~~~~~~~~~~~~~~~~~~
 
 함수의 선언에서 `const`는 포인터에 의해 가리켜지고 있는 객체가 상수일 때 사용합니다. 함수나 특정 범주 내에서 의미있는 변수들도 `const`를 사용할 수 있습니다. 이는 상수인 값들을 실수로 수정하는 행위들을 막아줍니다. 이러한 예시로 배열의 길이 등이 있습니다. 이러한 작성방법은 컴파일러의 최적화에도 도움을 줍니다. `const` 키워드는 함수로 전달되는 인자가 중요한 의미를 가질 때도 사용할 수 있습니다.
 
-### 의사 템플릿(Pesudo template)(--)
+의사 템플릿(Pesudo template)(--)
+~~~~~~~~~~~~~~~~~~~~~~
 
 몇몇 의사 템플릿 매크로들이 `templates_on.h`와 `templates_off.h`에 있습니다. `block` 디렉토리에서 이 기능들의 자세한 사용을 참고해볼 수 있습니다. 가능한 한 사용을 자제해야 하는 것이 좋습니다. 이 기능들을 악몽과 같지만, 여기서의 사용을 피할 수는 없었습니다.
 
@@ -547,7 +571,8 @@ while (fabs (f) < 0.5)
 
 [^putpot]: 원문은 "putting a quart into a pint pot"로 실현 불가능한 일을 일컫는 표현입니다. `quart`는 약 946.353ml이고 `pint`는 약 473.176ml입니다. 
 
-### 임의의 상수
+임의의 상수
+~~~~~~~~~~~~~~~~~~~~~~
 
 임의의 상수 사용은 피해야 합니다.
 
@@ -559,11 +584,12 @@ while (fabs (f) < 0.5)
 
 예를 들어서 다음의 코드를 생각해 봅시다.
 
-```C
-if (residual < 1e-30){
-	return 0.0; /* residual is zero within round-off error */
-}
-```
+.. code-block:: C
+
+    if (residual < 1e-30){
+		return 0.0; /* residual is zero within round-off error */
+	}
+
 
 이 코드는 다음과 같이 쓰여야 합니다.
 
@@ -575,7 +601,8 @@ if (residual < 1e-30){
 
 `GSL_DBL_EPSILON`과 같은 상수들을 사용하는 것이 허용되는 경우는 함수를 근사하는 경우입니다. 이러한 예시로 테일러 급수나 점근적 확장(asymptotic expansions)등이 있습니다. 이러한 경우에 이 상수들은 임의의 상수가 아닌 알고리즘의 한 구성요소입니다.
 
-### Test suites
+Test suites
+~~~~~~~~~~~~~~~~~~~~~~
 
 각 모듈의 구현체들은 각 기능들에 대한 적절한 검증 절차를 함께 제공해야합니다.
 
@@ -593,16 +620,18 @@ $1$나 $0$과 같은 간단한 값들은 검증 과정에서 버그를 밝혀내
 
 검증 프로그램에서 `sprintf` 함수를 사용해서는 안됩니다. 이는 검증 프로그램이 자체적으로 가지고 있는 버그를 찾기 힘들게 합니다. `gsl_test_...` 함수들은 문자열 인자들의 포멧팅을 지원합니다. 이들을 대신 사용해야 합니다.
 
-### 컴파일
+컴파일
+~~~~~~~~~~~~~~~~~~~~~~
 
 모든 컴파일 과정은 명료하게 이루어져야합니다. 컴파일 과정에서 엄격한 제약들을 넣어 추가로 검사를 수행해야 합니다.
 
-```bash
-make CFLAGS="-ansi -pedantic -Werror -W -Wall -Wtraditional -Wconversion 
-  -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings 
-  -Wstrict-prototypes -fshort-enums -fno-common -Wmissing-prototypes 
-  -Wnested-externs -Dinline= -g -O4"
-```
+.. code-block:: bash
+
+    make CFLAGS="-ansi -pedantic -Werror -W -Wall -Wtraditional -Wconversion 
+	-Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings 
+	-Wstrict-prototypes -fshort-enums -fno-common -Wmissing-prototypes 
+	-Wnested-externs -Dinline= -g -O4"
+
 
 그리고 `checkergcc`를 사용해 스택(stack)과 힙(heap)에서 발생할 수 있는 메모리 문제를 검증해야합니다. `checkergcc`는 최고의 메모리 검사 도구입니다. `checkergcc`를 사용할 수 없다면, Electric Fence를 사용해 힙영역을 검사해야 합니다. 아무런 검사가 없는 것보다는 좋습니다.
 
@@ -610,7 +639,8 @@ make CFLAGS="-ansi -pedantic -Werror -W -Wall -Wtraditional -Wconversion
 
 라이브러리가 C++ 컴파일러(g++)로도 컴파일이 이루어지는 지 검사애햐합니다. ANSI C로 작성했다면 많은 문제가 발생하지는 않을 것입니다.
 
-### 쓰레드 안전성
+쓰레드 안전성
+~~~~~~~~~~~~~~~~~~~~~~
 
 이 라이브러리는 쓰레드-안전성을 가지는 프로그램이어야합니다. 모든 함수가 쓰레드-안전해야하며, 정적 변수를 사용하지 않아야합니다. 
 
@@ -619,7 +649,8 @@ make CFLAGS="-ansi -pedantic -Werror -W -Wall -Wtraditional -Wconversion
 다중 쓰레드 프로그램에서 GSL 기능들을 호출할 수 없는 경우를 방지하기 위해 명시적으로 쓰레드 기능을 지원할 필요는 없습니다. 예로 잠금 메커니즘(locking mechanisms) 등이 있습니다. 
 
 
-### 법적 문제들
+법적 문제들
+~~~~~~~~~~~~~~~~~~~~~~
 
 * 모든 기여자들은 작성한 코드들이 GNU 일반 공중 사용 허가서 (GPL) 아래에 베포됨을 명심해야합니다. 이는 당신의 고용인으로 부터 면책 특권을 가짐을 의미합니다.
 * 존재하는 코드와 알고리즘들의 소유권을 명확히 이해해야합니다.
@@ -637,7 +668,8 @@ Ty Coon, President of Vice
 * 자명하게도, 비-자유 코드들을 사용하거나 가져오면 안됩니다. 특히, *Numerical Recipes*나 *ACM TOMS*에서 코드를 가져오거나 번역해오면 안됩니다. Numerical Recipes는 제약이 있는 허가서 아래에 있고 자유 소프트웨어가 아닙니다. 출판사인 Cambridge University Press는 책과 그 안의 모든 코드들에 대해 저작권을 행사할 권리가 있고 이는 함수, 변수들의 이름 그리고 수학적으로 정의된 하위식 순서도 포함합니다. GSL에 있는 기능들은 어떠한 방식으로든, Numerical Recipes을 참조하거나 기반해 있으면 안됩니다. TOMS(Transactions on Mathematical Software)에서 출판한 ACM 알고리즘은 퍼블릭 도메인이 아닙니다. 물론, 인터넷에 공개되어 있기는 하나, ACM 사용자들은 특수한 비-상업적 허가서 아래에 사용가능하고 GPL과 호환되지 않습니다. 해당 허가서의 자세한 내용은 ACM Transactions on Mathematical Software의 표지나, ACM 웹사이트에서 확인가능합니다. 확실하게 자유로운 허가서 GPL이나 퍼블릭 도메인 아래에서 사용가능한 코드만을 사용해야 합니다. 허가서가 없다고 해당 코드들이 퍼블릭 도메인인 것이 아닙니다. 명백한 허가서 조항이 필요하고, 저자에게 재확인을 해야합니다.
 * 사견으로, 수치 해석에 관한 고전적인 책의 알고리즘들은 참고할 수 있다고 생각합니다.(BIJ: 코드가 독립적으로 구현되고, 기존 소프트웨어에서 복사된 경우가 아니라면 가능합니다.)
 
-### 비 유닉스 이식성
+비 유닉스 이식성
+~~~~~~~~~~~~~~~~~~~~~~
 
 비 유닉스 시스템에서도 이 라이브러리를 사용할 이유는 충분합니다. DOS는 무시하고, Windows95/Windows 등에서의 사용만을 고려하는 것이 현명합니다. 사견으로, 파일 이름이 길어질 수 있을 것 같습니다.
 
@@ -645,7 +677,8 @@ Ty Coon, President of Vice
 
 가장 좋은 방법은 "꼭 필요하지 않으면 XYZ를 사용하지 마십시오."와 같은 이식성 관련 지침을 내리는 것입니다. 그러면, 필요시 Windows 유저들은 스스로 포팅을 할 수 있을 것입니다.
 
-### 다른 라이브러리와의 호환성
+다른 라이브러리와의 호환성
+~~~~~~~~~~~~~~~~~~~~~~
 
 이 프로젝트는 다른 라이브러리들과의 호환성을 우선 순위로 두지 않습니다.
 
@@ -657,15 +690,18 @@ Ty Coon, President of Vice
 
 
 
-### 병렬 처리
+병렬 처리
+~~~~~~~~~~~~~~~~~~~~~~
 
 라이브러리의 설계에서 병렬 처리는 지원하지 않습니다. 병렬처리 라이브러리는 완전히 다른 설계가 필요하고, 다른 응용 프로그램에서 필요로 하지않는 사항들을 요구합니다. 
 
-### 정밀도
+정밀도
+~~~~~~~~~~~~~~~~~~~~~~
 
 알고리즘에서 분지 절단이나 다른 정밀도에 관련된 항들이 있다면 이 항들을 `GSL_DBL_EPSILON`과 `GSL_DBL_MIN` 이들의 거듭제곱, 조합으로 작성하길 바랍니다. 이러한 작성은 각 기능들을 다른 정밀도로 손쉽게 이식할 수 있게 합니다.
 
-### 잡다한 사항
+잡다한 사항
+~~~~~~~~~~~~~~~~~~~~~~
 
 변수 이름에 `l`는 사용하지 마십시오. 숫자 `1`과 구분하기 힘듭니다. 오래된 포트란 프로그램에서 매우 흔한 일이었습니다.
 
