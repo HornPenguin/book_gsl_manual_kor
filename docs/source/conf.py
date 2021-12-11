@@ -7,7 +7,7 @@ Babel.language_codes = {'ko':'korean', 'en':'english'}
 
 project = 'GSL Kor'
 copyright = '2021, Hyun Seong, Kim'
-author = ''
+author = 'Hyun Seong, Ki'
 translator = 'Hyun Seong, Kim'
 
 release = '2.7'
@@ -43,6 +43,8 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+epub_author ='Hyun Seong, Kim'
+epub_publisher = 'OFPublisher'
 
 latex_engine = 'xelatex'
 latex_elements = {
