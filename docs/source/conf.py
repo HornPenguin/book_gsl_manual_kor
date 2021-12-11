@@ -1,12 +1,17 @@
+from docutils.writers.latex2e import Babel
+Babel.language_codes = {'ko':'korean', 'en':'english'}
+
+
 # Configuration file for the Sphinx documentation builder.
 
 # -- Project information
 
 project = 'GSL Kor'
 copyright = '2021, Hyun Seong, Kim'
-author = 'Hyun Seong, Kim'
+author = ''
+translator = 'Hyun Seong, Kim'
 
-release = '0.1'
+release = '2.7'
 version = '0.1.0'
 
 # -- General configuration
@@ -18,6 +23,13 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
 ]
+
+extensions = ['myst_parser']
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'markdown',
+    '.md': 'markdown',
+}
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
@@ -36,11 +48,10 @@ epub_show_urls = 'footnote'
 
 latex_engine = 'xelatex'
 latex_elements = {
-    'preamble':r'''
-\usepackage{xeCJK}
-\setmainfont{NanumMyeongjo.ttf}
-\setCJKmainfont{NanumMyeongjo.ttf}
-\setCJKsansfont{NanumMyeongjo.ttf}
-\setCJKmonofont{NanumMyeongjo.ttf}
-'''
+    'fontpkg': r'''
+\setmainfont{Noto Serif CJK KR}
+\setsansfont{Noto Sans CJK KR}
+\setmonofont{Noto Sans Mono CJK KR}
+    '''
 }
+

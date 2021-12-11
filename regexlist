@@ -1,0 +1,48 @@
+-Headings
+
+regex:
+^#{1}\s(.+?)\r?$
+out:
+$1
+===============
+
+regex:
+^#{2}\s(.+?)\r?$
+out:
+$1
+-----------------
+
+regex:
+^#{3}\s(.+?)\r?$
+out:
+$1
+~~~~~~~~~~~~~~~~~~~~~~
+
+-link
+regex:\[[^\^](.+?)\]\((.+?)\)
+out:`$1 <$2>`_ 
+
+-code-block
+regex: ```([\w\d]+?)\r?\n([\w\d\W]+?)```\r?$
+out:
+.. code-block:: $1
+
+    $2
+
+- inline
+regex:
+`(.+?)`
+out:
+``$1`` 
+
+- math inline
+regex:
+${1}(.+?)${1}
+
+
+- image
+regex:
+!\[(.+?)\]\((.+?)\)
+output:
+.. image:: $1
+
