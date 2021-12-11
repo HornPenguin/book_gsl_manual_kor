@@ -1,7 +1,7 @@
 GSL 디자인 문서
 =======================
 
-본 문서는 Mark Galassi, James Theiler and Brian Gough 저 [GNU Scientific Library -- Design document](https://www.gnu.org/software/gsl/design/gsl-design_toc.html)입니다.
+본 문서는 Mark Galassi, James Theiler and Brian Gough 저 `GNU Scientific Library -- Design document <https://www.gnu.org/software/gsl/design/gsl-design_toc.html>`_ 입니다.
 
 
 프로젝트의 시작
@@ -31,7 +31,7 @@ GSL 디자인 문서
 	* - `GAMS <http://gams.nist.gov/>`_
 	  - GAMS는 잘 조직된 과학 계산 소프트웨어들의 집합체입니다. 하지만, Netlib와 같이, 각각의 기능들마다 구현체의 질과 문서화 수준이 매우 천차만별입니다.
 	* - `Numerical Recipes <http://www.nr.com, http://cfata2.harvard.edu/nr/>`_
-	  - Numerical Recipes는 명확한 방법으로 알고리즘들을 잘 설명하는 훌륭한 책입니다. 하지만, 이 책의 저자는 해당 서적에 있는 코드의 사용은 허용하고 있으나, 재배포에 제약이 있습니다. 따라서 Numerical Recipes는 자유롭지 않습니다. 무엇보다도, 해당 책의 코드 구현체는 포트란스럽다(*Fortrannitis*)는 평과 다른 한계들이 있습니다. [Reviews of Numerical Recipes](https://www.lysator.liu.se/c/num-recipes-in-c.html)
+	  - Numerical Recipes는 명확한 방법으로 알고리즘들을 잘 설명하는 훌륭한 책입니다. 하지만, 이 책의 저자는 해당 서적에 있는 코드의 사용은 허용하고 있으나, 재배포에 제약이 있습니다. 따라서 Numerical Recipes는 자유롭지 않습니다. 무엇보다도, 해당 책의 코드 구현체는 포트란스럽다( *Fortrannitis* )는 평과 다른 한계들이 있습니다. `Reviews of Numerical Recipes <https://www.lysator.liu.se/c/num-recipes-in-c.html>`_
 	* - SLATEC
 	  - SLATEC는 1970년도 Department of Energy program에서 작성된 수치 해석 소프트웨어들의 대규모 집합체입니다.  해당 소프트웨어들은 퍼블릭 도메인으로 배포되고 있습니다. 각각의 기능들은 잘 검증되어 있고 잘 짜여진 구조를 가지고 있습니다(그 시기 한계가 있기는 합니다.). GSL은 현대적인 SLATEC를 목적으로 하고 있습니다.
 	* - NSWC
