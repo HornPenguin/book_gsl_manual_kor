@@ -38,9 +38,9 @@ latex_engine = 'xelatex'
 latex_elements = {
     'preamble':r'''
 \usepackage{xeCJK}
-\setmainfont{Noto Serif}
-\setCJKmainfont{Noto Serif CJK KR}
-\setCJKsansfont{Noto Sans CJK KR}
-\setCJKmonofont{Noto Sans Mono CJK KR}
+\setmainfont{NanumMyeongjo.ttf}
+\setCJKmainfont{NanumMyeongjo.ttf}
+\setCJKsansfont{NanumMyeongjo.ttf}
+\setCJKmonofont{NanumMyeongjo.ttf}
 '''
 }
