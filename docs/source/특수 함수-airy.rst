@@ -2,7 +2,7 @@
 .. index:: Ai(x)
 .. index:: Bi(x)
 
-에어리 함수(Airy function) :math:`Ai(x)`와 :math:`Bi(x)`는 적분표현으로 다음과 같이 정의됩니다.
+에어리 함수(Airy function) :math:`Ai(x)` 와 :math:`Bi(x)` 는 적분표현으로 다음과 같이 정의됩니다.
 
 .. math::
 
