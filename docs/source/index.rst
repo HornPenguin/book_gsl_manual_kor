@@ -1,17 +1,28 @@
-GSL Kor Manual
-===================================
+****************
+서문 
+****************
 
-본 책은 GNU Scientific Library(GSL) 2.7 manual과 관련 자료들을 한글로 번역한 책입니다. 
-python 같은 경우는 한글 자료도 많지만, C로 작성된 라이브러리는 한글 자료가 빈약하여 시작하게 되었습니다.
 
-gsl 2.7 manual document를 기준으로 해서 번역합니다. 최대한 한글로 풀어쓰는 것을 목적으로 합니다. 원문 문서는 `web page <https://www.gnu.org/software/gsl/doc/html/index.html>`_  로 보거나, `pdf <https://www.gnu.org/software/gsl/doc/latex/gsl-ref.pdf>`_ 로 다운받을 수도 있습니다. 
+본 책은 GNU Scientific Library(GSL) 2.7 manual과 관련 자료들을 한글로 번역한 책입니다.
+
+python api를 제공하는 라이브러리(예: :code:`numpy`, :code:`scipy` 등)들은 한글로 된 자료들도 많지만, 
+C의 경우 많은 입문서에도 불구하고 과학 계산 라이브러리 쪽에서 한글 자료들이 빈약해 번역을 시작하게 되었습니다.
+
+gsl 2.7 manual document를 기준으로 해서 번역합니다. GSL 차후 버전업이 발생할 시 해당 버전의 메뉴얼들도 같이 번역할 예정입니다.
+최대한 한글로 풀어쓰는 것을 목적으로 합니다. 
+원문 문서는 `web page <https://www.gnu.org/software/gsl/doc/html/index.html>`_  로 보거나, 
+`pdf <https://www.gnu.org/software/gsl/doc/latex/gsl-ref.pdf>`_ 로 다운받을 수도 있습니다. 
+
+해당 문서들은 rst 포멧으로 GSL 베포 파일 내부 :code:`/doc/` 디렉토리 내부에 저장되어 있습니다.
+
+본 프로젝트의 Git 저장소는 `<>`_
 
 .. note::
 
    이 번역 프로젝트는 현재 진행중에 있습니다.
 
 Contents
---------
+---------
 
 .. toctree::
    
