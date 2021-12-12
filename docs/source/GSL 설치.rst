@@ -54,8 +54,6 @@ GSL은 `Main GNU FTP site <ftp://ftp.gnu.org/gnu/gsl/>`_ 나 가까운 `GNU mirr
     $ wget https://ftp.gnu.org/gnu/gsl/gsl-lastest.tar.gz
 
 
-
-
 GSL 설치(Unbuntu)
 -----------------
 
@@ -218,5 +216,6 @@ Final install
 
 재부팅 후나 ``$ source ~/.bashrc`` 를 입력하면 정상적으로 사용이 가능합니다.
 
+.. rubric:: 각주
 
- [^bashrc]: 해당 파일은 bash가 시작할 때 실행되는 명령어를 기술하고 있습니다. 예를 들어, ``ls`` 를 입력한다면 로그인시 홈 디렉토리에 있는 파일 목록을 실행하마자 볼 수 있습니다.
+.. [#bashrc] 해당 파일은 bash가 시작할 때 실행되는 명령어를 기술하고 있습니다(*).

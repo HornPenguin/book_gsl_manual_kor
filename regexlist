@@ -18,9 +18,15 @@ out:
 $1
 ~~~~~~~~~~~~~~~~~~~~~~
 
+regex:
+^#{4}\s(.+?)\r?$
+out:
+$1
+^^^^^^^^^^^^^^^^^^^^^^^
+
 -link
-regex:\[[^\^](.+?)\]\((.+?)\)
-out:`$1 <$2>`_ 
+regex:[^!]\[[^\^](.+?)\]\((.+?)\)
+out: `$1 <$2>`_ 
 
 -code-block
 regex: ```([\w\d]+?)\r?\n([\w\d\W]+?)```\r?$
@@ -31,7 +37,7 @@ out:
 
 - inline
 regex:
-`(.+?)`
+`(.+?)`[^_]
 out:
 ``$1`` 
 
@@ -43,15 +49,21 @@ output:
 
 - math display
 regex:
-${1}(.+?)${1}
+^${2}([\w\W\s\S\d\D]+?)${2}\r?$
 output:
-.. math:: $1 
+.. math:: 
+  $1 
+  
 
 - image
 regex:
 !\[(.+?)\]\((.+?)\)
 output:
-.. image:: $1
+.. figure:: $2
+  :align: center
+  
+  $1
+
 
 - file
 
