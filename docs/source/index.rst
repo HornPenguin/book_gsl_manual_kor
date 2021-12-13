@@ -27,9 +27,8 @@ gsl 2.7 manual document를 기준으로 해서 번역합니다. GSL 차후 버�
   qwqwhsnote@gm.gist.ac.kr
 
 
-
 목차
----------
+======
 
 .. toctree::
    
@@ -37,6 +36,11 @@ gsl 2.7 manual document를 기준으로 해서 번역합니다. GSL 차후 버�
    소개
    GSL 설치
    라이브러리 사용
+   다항식
+   고속 푸리에 변환
+   담금질 기법
+   물리 상수
+
 ..
    
    오류 관리

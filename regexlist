@@ -69,3 +69,24 @@ output:
 
  :file:`$1` 
 
+
+-------------------------------
+Rst 문법
+
+문서 내부 링크
+
+  1. :ref:`문서 내부 Heading 문자열`
+  2. 사용자 정의 링크:
+    
+    .. _링크할 위치 텍스트
+
+    :ref:`링크할 위치 텍스트`
+
+문서 외부 웹페이지 링크
+
+  1. `Replace text <Web Page URL>`_
+  2. 분리해서 사용
+    `Replace text`_
+  
+    .. _Replace text: Web Page URL
+  
