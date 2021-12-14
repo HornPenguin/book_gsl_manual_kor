@@ -18,53 +18,53 @@ CGSM 계로 정의된 상수들은 :code:`gsl_const_cgsm.h` 에 정의되어 있
 기초 상수
 =====================
 
-.. macro:: GSL_CONST_MKSA_SPEED_OF_LIGHT
+.. c:macro:: GSL_CONST_MKSA_SPEED_OF_LIGHT
 
   진공에서의 빛의 속도 :math:`c` 
 
-.. macro:: GSL_CONST_MKSA_VACUUM_PERMEABILITY
+.. c:macro:: GSL_CONST_MKSA_VACUUM_PERMEABILITY
 
   진공 투자율 :math:`\mu_0` . 
   이 상수는 MKSA 계에서만 정의되었습니다.
 
-.. macro:: GSL_CONST_MKSA_VACUUM_PERMITTIVITY
+.. c:macro:: GSL_CONST_MKSA_VACUUM_PERMITTIVITY
 
   진공 유전율 :math:`\epsilon_0` . 
   이 상수는 MKSA 계에서만 정의되었습니다.
 
-.. macro:: GSL_CONST_MKSA_PLANKS_CONSTANT_H
+.. c:macro:: GSL_CONST_MKSA_PLANKS_CONSTANT_H
 
   플랑크 상수 :math:`h` .
 
-.. macro:: GSL_CONST_MKSA_PLANKS_CONSTANT_HBAR
+.. c:macro:: GSL_CONST_MKSA_PLANKS_CONSTANT_HBAR
 
   플랑크 상수를 :math:`2 \pi` 로 나눈 값 :math:`\hbar` .
 
-.. macro:: GSL_CONST_NUM_AVOGADRO
+.. c:macro:: GSL_CONST_NUM_AVOGADRO
 
 아보가드로 수 :math:`N_\alpha` .
 
-.. macro:: GSL_CONST_MKSA_FARADAY
+.. c:macro:: GSL_CONST_MKSA_FARADAY
 
  :math::`1`mol 양의 전자의 전하량; :math::`1` 패러데이(F).
 
-.. macro:: GSL_CONST_MKSA_BOLTZMANN
+.. c:macro:: GSL_CONST_MKSA_BOLTZMANN
 
 볼츠만 상수 :math:`k` .
 
-.. macro:: GSL_CONST_MKSA_MOLAR_GAS
+.. c:macro:: GSL_CONST_MKSA_MOLAR_GAS
 
 표준 기체 상수 :math:`R_0` .
 
-.. macro:: GSL_CONST_MKSA_STANDARD_GAS_VOLUME
+.. c:macro:: GSL_CONST_MKSA_STANDARD_GAS_VOLUME
 
 표준 기체 부피 :math:`V_0` .
 
-.. macro:: GSL_CONST_MKSA_STEFAN_BOLTZMANN_CONSTANT
+.. c:macro:: GSL_CONST_MKSA_STEFAN_BOLTZMANN_CONSTANT
 
 슈테판 볼츠만 상수 :math:`\sigma` 
 
-.. macro:: GSL_CONST_MKSA_GAUSS
+.. c:macro:: GSL_CONST_MKSA_GAUSS
 
  :math::`1` 가우스(Gauss) 크기의 자기장 세기.
 
@@ -72,104 +72,104 @@ CGSM 계로 정의된 상수들은 :code:`gsl_const_cgsm.h` 에 정의되어 있
 천문학과 천체물리
 =====================
 
-.. macro:: GSL_CONST_MKSA_ASTRONOMICAL_UNIT
+.. c:macro:: GSL_CONST_MKSA_ASTRONOMICAL_UNIT
 
 천문 단위 (지구-태양 사이의 거리), :math:`au` 
 
-.. macro:: GSL_CONST_MKSA_GRAVITATIONAL_CONSTANT
+.. c:macro:: GSL_CONST_MKSA_GRAVITATIONAL_CONSTANT
 
 중력 상수, :math:`G` 
 
-.. macro:: GSL_CONST_MKSA_LIGHT_YEAR
+.. c:macro:: GSL_CONST_MKSA_LIGHT_YEAR
 
  :math::`1` 광년 거리, :math:`ly` 
 
-.. macro:: GSL_CONST_MKSA_PASRSEC
+.. c:macro:: GSL_CONST_MKSA_PASRSEC
 
  :math::`1` 파섹 거리, :math:`pc` 
 
-.. macro:: GSL_CONST_MKSA_GRAV_ACCEL
+.. c:macro:: GSL_CONST_MKSA_GRAV_ACCEL
 
 지구 표면에서의 표준 중력 가속도, :math:`g` 
 
-.. macro:: GSL_CONST_MKSA_SOLAR_MASS
+.. c:macro:: GSL_CONST_MKSA_SOLAR_MASS
 
 태양의 질량
 
 입자, 핵물리
 =====================
-.. macro:: GSL_CONST_MKSA_ELECTRON_CHARGE
+.. c:macro:: GSL_CONST_MKSA_ELECTRON_CHARGE
 
 전자의 전하, :math:`e` 
 
-.. macro:: GSL_CONST_MKSA_ELECTORN_VOLT
+.. c:macro:: GSL_CONST_MKSA_ELECTORN_VOLT
 
  :math::`1` 전자 볼트, :math:`eV` 
 
-.. macro:: GSL_CONST_MKSA_UNIFIED_ATOMIC_MASS
+.. c:macro:: GSL_CONST_MKSA_UNIFIED_ATOMIC_MASS
 
 원자 질량 단위, :math:`amu` 
 
-.. macro:: GSL_CONST_MKSA_MASS_ELECTRON
+.. c:macro:: GSL_CONST_MKSA_MASS_ELECTRON
 
 전자의 질량, :math:`m_e` 
 
-.. macro:: GSL_CONST_MKSA_MASS_MUON
+.. c:macro:: GSL_CONST_MKSA_MASS_MUON
 
 뮤온의 질량, :math:`m_\mu` 
 
-.. macro:: GSL_CONST_MKSA_MASS_PROTON
+.. c:macro:: GSL_CONST_MKSA_MASS_PROTON
 
 광자의 질량, :math:`m_p` 
 
-.. macro:: GSL_CONST_MKSA_MASS_NEUTRON
+.. c:macro:: GSL_CONST_MKSA_MASS_NEUTRON
 
 중성자의 질량, :math:`m_n` 
 
-.. macro:: GSL_CONST_NUM_FINE_STRUCTURE
+.. c:macro:: GSL_CONST_NUM_FINE_STRUCTURE
 
 미세 구조 상수, :math:`\alpha` 
 
-.. macro:: GSL_CONST_MKSA_RYDBERG
+.. c:macro:: GSL_CONST_MKSA_RYDBERG
 
 에너지 단위 리드버그 수, :math:`R_y` . 
 리드버그 상수와 다음과 같은 관계를 가집니다. 
 :math:`R_y =hcR_{\infty}`   
 
-.. macro:: GSL_CONST_MKSA_BOHR_RADIUS
+.. c:macro:: GSL_CONST_MKSA_BOHR_RADIUS
 
 보어 반지름, :math:`a_0` 
 
-.. macro:: GSL_CONST_MKSA_ANGSTOM
+.. c:macro:: GSL_CONST_MKSA_ANGSTOM
 
  :math::`1` 옴스트롱, :math:`\text{Å}` 
 
-.. macro:: GSL_CONST_MKSA_BARN
+.. c:macro:: GSL_CONST_MKSA_BARN
 
  :math::`1` 바른, :math:`b` 
 
-.. macro:: GSL_CONST_MKSA_BOHR_MAGNETON
+.. c:macro:: GSL_CONST_MKSA_BOHR_MAGNETON
 
 보어 마그네톤, :math:`\mu_B` 
 
-.. macro:: GSL_CONST_MKSA_NUCLEAR_MAGNERON
+.. c:macro:: GSL_CONST_MKSA_NUCLEAR_MAGNERON
 
 핵 마그네톤, :math:`\mu_N` 
 
-.. macro:: GSL_CONST_MKSA__ELECTRON_MAGNETIC_MOMENT
+.. c:macro:: GSL_CONST_MKSA__ELECTRON_MAGNETIC_MOMENT
 
 전자의 자기 모멘트 절대 값, :math:`\mu_e` . 
 실제 물리적인 전자의 자기 모멘트는 음수 값을 가집니다.
 
-.. macro:: GSL_CONST_MKSA_PROTON_MAFNETIC_MOMENT
+.. c:macro:: GSL_CONST_MKSA_PROTON_MAFNETIC_MOMENT
 
 양성자의 자기 모멘트 값, :math:`\mu_p` 
 
-.. macro:: GSL_CONST_MKSA_THOMSON_CROSS_SECTION
+.. c:macro:: GSL_CONST_MKSA_THOMSON_CROSS_SECTION
 
 톰슨 단면적, :math:`\sigma_T` 
 
-.. macro:: GSL_CONST_MKSA_DEBYE
+.. c:macro:: GSL_CONST_MKSA_DEBYE
 
 전기 쌍극자 모멘트 단위; :math::`1` 디바이, :math:`D` 
 
@@ -178,69 +178,69 @@ CGSM 계로 정의된 상수들은 :code:`gsl_const_cgsm.h` 에 정의되어 있
 
 다음 상수들은 모두 초 단위 값을 가집니다.(*)
 
-.. macro:: GSL_CONST_MKSA_MINUTE
+.. c:macro:: GSL_CONST_MKSA_MINUTE
 
  :math::`1`분; 60초
 
-.. macro:: GSL_CONST_MKSA_HOUR
+.. c:macro:: GSL_CONST_MKSA_HOUR
 
  :math::`1`시간; 360초
 
-.. macro:: GSL_CONST_MKSA_DAY
+.. c:macro:: GSL_CONST_MKSA_DAY
 
  :math::`1`일; 8,640초
 
-.. macro:: GSL_CONST_MKSA_WEEK
+.. c:macro:: GSL_CONST_MKSA_WEEK
 
  :math::`1`주일; 60,480초
 
 야드-파운드 단위
 =====================
-.. macro:: GSL_CONST_MKSA_INCH
+.. c:macro:: GSL_CONST_MKSA_INCH
 
  :math::`1`인치 길이
 
-.. macro:: GSL_CONST_MKSA_FOOT
+.. c:macro:: GSL_CONST_MKSA_FOOT
 
  :math::`1`피트 길이
 
-.. macro:: GSL_CONST_MKSA_YARD
+.. c:macro:: GSL_CONST_MKSA_YARD
 
  :math::`1`야드 길이
 
-.. macro:: GSL_CONST_MKSA_MILE
+.. c:macro:: GSL_CONST_MKSA_MILE
 
  :math::`1` 마일 길이 (인치의 1/10000 배)
 
 속도, 해리 단위
 =====================
-.. macro:: GSL_CONST_MKSA_KILOMETERS_PER_HOUR
+.. c:macro:: GSL_CONST_MKSA_KILOMETERS_PER_HOUR
 
 시속 :math::`1` 킬로미터
 
-.. macro:: GSL_CONST_MKSA_MILES_PER_HOUR
+.. c:macro:: GSL_CONST_MKSA_MILES_PER_HOUR
 
 시속 :math::`1` 마일
 
-.. macro:: GSL_CONST_MKSA_NAUTICAL_MILE
+.. c:macro:: GSL_CONST_MKSA_NAUTICAL_MILE
 
  :math::`1` 해리 길이
 
-.. macro:: GSL_CONST_MKSA_FATHOM
+.. c:macro:: GSL_CONST_MKSA_FATHOM
 
  :math::`1` 패덤 길이
 
-.. macro:: GSL_CONST_MKSA_KNOT
+.. c:macro:: GSL_CONST_MKSA_KNOT
 
  :math::`1` 노트 속도
 
 출력 단위
 =====================
-.. macro:: GSL_CONST_MKSA_POINT
+.. c:macro:: GSL_CONST_MKSA_POINT
 
  :math::`1` 출력 크기 (1/72 인치)
 
-.. macro:: GSL_CONST_MKSA_TEXPOINT
+.. c:macro:: GSL_CONST_MKSA_TEXPOINT
 
  :math::`1` Tex 크기 (1/72.27 인치)
 
@@ -248,274 +248,274 @@ CGSM 계로 정의된 상수들은 :code:`gsl_const_cgsm.h` 에 정의되어 있
 ===========================
 
 
-.. macro:: GSL_CONST_MKSA_MICRON
+.. c:macro:: GSL_CONST_MKSA_MICRON
 
  :math::`1` 마이크론 길이
 
-.. macro:: GSL_CONST_MKSA_HECTARE
+.. c:macro:: GSL_CONST_MKSA_HECTARE
 
  :math::`1` 헥타르 크기
 
-.. macro:: GSL_CONST_MKSA_ACRE
+.. c:macro:: GSL_CONST_MKSA_ACRE
 
  :math::`1` 에이커 크기
 
-.. macro:: GSL_CONST_MKSA_LITER
+.. c:macro:: GSL_CONST_MKSA_LITER
 
  :math::`1` 리터 부피
 
-.. macro:: GSL_CONST_MKSA_US_GALLON
+.. c:macro:: GSL_CONST_MKSA_US_GALLON
 
  :math::`1` US 갤런 부피
 
-.. macro:: GSL_CONST_MKSA_CANADIAN_GALLON
+.. c:macro:: GSL_CONST_MKSA_CANADIAN_GALLON
 
  :math::`1` Canada 갤런 부피
 
-.. macro:: GSL_CONST_MKSA_UK_GALLON
+.. c:macro:: GSL_CONST_MKSA_UK_GALLON
 
  :math::`1` UK 갤런 부피
 
-.. macro:: GSL_CONST_MKSA_QUART
+.. c:macro:: GSL_CONST_MKSA_QUART
 
  :math::`1` 쿼트 부피
 
-.. macro:: GSL_CONST_MKSA_PINT
+.. c:macro:: GSL_CONST_MKSA_PINT
 
  :math::`1` 파인트 부피
 
 질량과 무게
 =====================
-.. macro:: GSL_CONST_MKSA_POUND_MASS
+.. c:macro:: GSL_CONST_MKSA_POUND_MASS
 
  :math::`1` 파운드 질량
 
-.. macro:: GSL_CONST_MKSA_OUNCE_MASS
+.. c:macro:: GSL_CONST_MKSA_OUNCE_MASS
 
  :math::`1` 온스 질량
 
-.. macro:: GSL_CONST_MKSA_TON
+.. c:macro:: GSL_CONST_MKSA_TON
 
  :math::`1` 톤 질량
 
-.. macro:: GSL_CONST_MKSA_METRIC_TON
+.. c:macro:: GSL_CONST_MKSA_METRIC_TON
 
  :math::`1` (metric) 톤 질량
 
-.. macro:: GSL_CONST_MKSA_UK_TON
+.. c:macro:: GSL_CONST_MKSA_UK_TON
 
  :math::`1` UK 톤 질량
 
-.. macro:: GSL_CONST_MKSA_TROY_OUNCE
+.. c:macro:: GSL_CONST_MKSA_TROY_OUNCE
 
  :math::`1` 트로이 온스 질량
 
-.. macro:: GSL_CONST_MKSA_CARAT
+.. c:macro:: GSL_CONST_MKSA_CARAT
 
  :math::`1` 케럿 질량
 
-.. macro:: GSL_CONST_MKSA_GRAM_FORCE
+.. c:macro:: GSL_CONST_MKSA_GRAM_FORCE
 
  :math::`1` 그램 무게
 
-.. macro:: GSL_CONST_MKSA_POUND_FORCE
+.. c:macro:: GSL_CONST_MKSA_POUND_FORCE
 
  :math::`1` 파운드 무게
 
-.. macro:: GSL_CONST_MKSA_KILOPOUND_FORCE
+.. c:macro:: GSL_CONST_MKSA_KILOPOUND_FORCE
 
  :math::`1` 킬로 파운드 무게
 
-.. macro:: GSL_CONST_MKSA_POUNDAL
+.. c:macro:: GSL_CONST_MKSA_POUNDAL
 
  :math::`1` 파운달 크기
 
 열 에너지와 힘
 =====================
-.. macro:: GSL_CONST_MKSA_CALORIE
+.. c:macro:: GSL_CONST_MKSA_CALORIE
 
  :math::`1` 칼로리 에너지량.
 
-.. macro:: GSL_CONST_MKSA_BTU
+.. c:macro:: GSL_CONST_MKSA_BTU
 
  :math::`1` 영국 열 단위, :math:`btu` .
 
-.. macro:: GSL_CONST_MKSA_THERM
+.. c:macro:: GSL_CONST_MKSA_THERM
 
  :math::`1` 섬.
 
-.. macro:: GSL_CONST_MKSA_HORSEPOWER
+.. c:macro:: GSL_CONST_MKSA_HORSEPOWER
 
  :math::`1` 마력.
 
 압력
 =====================
 
-.. macro:: GSL_CONST_MKSA_BAR
+.. c:macro:: GSL_CONST_MKSA_BAR
 
  :math::`1` 바 압력.
 
-.. macro:: GSL_CONST_MKSA_STD_ATOMSPHERE
+.. c:macro:: GSL_CONST_MKSA_STD_ATOMSPHERE
 
  :math::`1` 표준 대기압.
 
-.. macro:: GSL_CONST_MKSA_TORR
+.. c:macro:: GSL_CONST_MKSA_TORR
 
  :math::`1` 토르.
 
-.. macro:: GSL_CONST_MKSA_METER_OF_MERCURT
+.. c:macro:: GSL_CONST_MKSA_METER_OF_MERCURT
 
  :math::`1` 미터 높이 수은의 압력.
 
-.. macro:: GSL_CONST_MKSA_INCH_OF_MERCURY
+.. c:macro:: GSL_CONST_MKSA_INCH_OF_MERCURY
 
  :math::`1` 인치 높이 수은의 압력.
 
-.. macro:: GSL_CONST_MKSA_INCH_OF_WATER
+.. c:macro:: GSL_CONST_MKSA_INCH_OF_WATER
 
  :math::`1` 인치 높이 물의 압력.
 
-.. macro:: GSL_CONST_MKSA__PSI
+.. c:macro:: GSL_CONST_MKSA__PSI
 
  :math::`1` 파운드의 제곱 인치당 압력. 
 
 밀도
 =====================
-.. macro:: GSL_CONST_MKSA_POISE
+.. c:macro:: GSL_CONST_MKSA_POISE
 
  :math::`1` 푸아스.
 
-.. macro:: GSL_CONST_MKSA_STOKES
+.. c:macro:: GSL_CONST_MKSA_STOKES
 
  :math::`1` 스토크스.
 
 빛과 광량
 =====================
-.. macro:: GSL_CONST_MKSA_STILB
+.. c:macro:: GSL_CONST_MKSA_STILB
 
  :math::`1` 스틸브 휘도.
 
-.. macro:: GSL_CONST_MKSA_LUMEN
+.. c:macro:: GSL_CONST_MKSA_LUMEN
 
  :math::`1` 루멘.
 
-.. macro:: GSL_CONST_MKSA_LUX
+.. c:macro:: GSL_CONST_MKSA_LUX
 
  :math::`1` 럭스.
 
 
-.. macro:: GSL_CONST_MKSA_PHOT
+.. c:macro:: GSL_CONST_MKSA_PHOT
 
  :math::`1` 포트.
 
-.. macro:: GSL_CONST_MKSA_FOOTCANDLE
+.. c:macro:: GSL_CONST_MKSA_FOOTCANDLE
 
  :math::`1` 푸트캔들.
 
-.. macro:: GSL_CONST_MKSA_LAMBERT
+.. c:macro:: GSL_CONST_MKSA_LAMBERT
 
  :math::`1` 람베르트.
 
-.. macro:: GSL_CONST_MKSA_FOOTLAMBERT
+.. c:macro:: GSL_CONST_MKSA_FOOTLAMBERT
 
  :math::`1` 푸트 람베르트.
 
 방사능
 =====================
-.. macro:: GSL_CONST_MKSA_CURIE
+.. c:macro:: GSL_CONST_MKSA_CURIE
 
  :math::`1` 퀴리.
 
-.. macro:: GSL_CONST_MKSA_ROENTGEN
+.. c:macro:: GSL_CONST_MKSA_ROENTGEN
 
  :math::`1` 뢴트겐.
 
-.. macro:: GSL_CONST_MKSA_RAD
+.. c:macro:: GSL_CONST_MKSA_RAD
 
  :math::`1` 라디. (방사선 흡수선량; Radiation Absorbed Dose)
 
 
 힘과 에너지
 =====================
-.. macro:: GSL_CONST_MKSA_NEWTON
+.. c:macro:: GSL_CONST_MKSA_NEWTON
 
  :math::`1` 뉴턴.
 
-.. macro:: GSL_CONST_MKSA_DYNE
+.. c:macro:: GSL_CONST_MKSA_DYNE
 
  :math::`1` 다인.
 
-.. macro:: GSL_CONST_MKSA_JOULE
+.. c:macro:: GSL_CONST_MKSA_JOULE
 
  :math::`1` 줄.
 
-.. macro:: GSL_CONST_MKSA_ERG
+.. c:macro:: GSL_CONST_MKSA_ERG
 
  :math::`1` 에르그. (:math::`1` erg = :math:`10^{-7}` 줄)
 
 접두사
 =====================
-.. macro:: GSL_CONST_NUM_YOTTA
+.. c:macro:: GSL_CONST_NUM_YOTTA
 
  :math:`10^{24}` 
 
-.. macro:: GSL_CONST_NUM_ZETTA
+.. c:macro:: GSL_CONST_NUM_ZETTA
 
  :math:`10^{21}` 
 
-.. macro:: GSL_CONST_NUM_EXA
+.. c:macro:: GSL_CONST_NUM_EXA
 
  :math:`10^{18}` 
 
-.. macro:: GSL_CONST_NUM_PETA
+.. c:macro:: GSL_CONST_NUM_PETA
 
  :math:`10^{15}` 
 
-.. macro:: GSL_CONST_NUM_TERA
+.. c:macro:: GSL_CONST_NUM_TERA
 
  :math:`10^{12}` 
 
-.. macro:: GSL_CONST_NUM_GIGA
+.. c:macro:: GSL_CONST_NUM_GIGA
 
  :math:`10^{9}` 
 
-.. macro:: GSL_CONST_NUM_MEGA
+.. c:macro:: GSL_CONST_NUM_MEGA
 
  :math:`10^{6}` 
 
-.. macro:: GSL_CONST_NUM_KILO
+.. c:macro:: GSL_CONST_NUM_KILO
 
  :math:`10^{5}` 
 
-.. macro:: GSL_CONST_NUM_MILLI
+.. c:macro:: GSL_CONST_NUM_MILLI
 
  :math:`10^{-3}` 
 
-.. macro:: GSL_CONST_NUM_MICRO
+.. c:macro:: GSL_CONST_NUM_MICRO
 
  :math:`10^{-6}` 
 
-.. macro:: GSL_CONST_NUM_NANO
+.. c:macro:: GSL_CONST_NUM_NANO
 
  :math:`10^{-9}` 
 
-.. macro:: GSL_CONST_NUM_PICO
+.. c:macro:: GSL_CONST_NUM_PICO
 
  :math:`10^{-12}` 
 
-.. macro:: GSL_CONST_NUM_FEMTO
+.. c:macro:: GSL_CONST_NUM_FEMTO
 
  :math:`10^{-15}` 
 
-.. macro:: GSL_CONST_NUM_ATTO
+.. c:macro:: GSL_CONST_NUM_ATTO
 
  :math:`10^{-18}` 
 
-.. macro:: GSL_CONST_NUM_ZEPTO
+.. c:macro:: GSL_CONST_NUM_ZEPTO
 
  :math:`10^{-21}` 
 
-.. macro:: GSL_CONST_NUM_YOCTO
+.. c:macro:: GSL_CONST_NUM_YOCTO
 
  :math:`10^{-24}` 
 

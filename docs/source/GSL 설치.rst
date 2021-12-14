@@ -209,7 +209,7 @@ Final install
     export LD_LIBRARY_PATH 
 
 
-그러나 이 방법은 새로운 ``bash`` 창을 열 때마다 별도로 입력해 주어야합니다. 때문에, 계정의 홈 디렉토리에 있는 ``.bashrc`` 파일의 끝에 다음의 문구를 추가해줍니다.[^bashrc]
+그러나 이 방법은 새로운 ``bash`` 창을 열 때마다 별도로 입력해 주어야합니다. 때문에, 계정의 홈 디렉토리에 있는 ``.bashrc`` 파일의 끝에 다음의 문구를 추가해줍니다 [#bashrc]_ .
 
 
 .. code-block:: bash

@@ -52,7 +52,7 @@
    각 전이 단계는 주어진 인자 중 난수 생성자  :code:`r` 과 함수  :code:`take_step`  에 의해 결정됩니다.
  
    이 계의 시작 조건 설정은  :code:`x0_p` 에 의해 주어집니다. 
-   이 명령어 집합은 2개의 방법으로 현재 설정을 갱신하는데, **고정 크기 방법** (fixed-size mode)과 **동적 크기 방법**( variable-size mode)이 있습니다.
+   이 명령어 집합은 2개의 방법으로 현재 설정을 갱신하는데, **고정 크기 방법** (fixed-size mode)과 **동적 크기 방법** (variable-size mode)이 있습니다.
    고정 크기 방법에서는 설정이 메모리 상의  :code:`element_size` 크기의 한 공간에 저장되고, 
    C의 표준 함수  :code:`malloc(), memcpy(), free()` 들에 의해 내부에서 
    이 설정의 복사본들의 생성, 복사, 소멸이 진행됩니다. 
@@ -84,7 +84,7 @@
 풀고자하는 문제에 적절한 함수들을 스스로 선택해 알고리즘에 사용할 수 있습니다.
 
 
-.. type:: gsl_siman_Efunc_t
+.. c:type:: gsl_siman_Efunc_t
 
    이 함수는 현재 상태 :code:`xp` 에 대한 에너지를 반환해야합니다.
  
@@ -93,7 +93,7 @@
        double (*gsl_siman_Efunc_t) (void *xp)
 
 
-.. type:: gsl_siman_step_t
+.. c:type:: gsl_siman_step_t
 
    이 함수는 현재 상태 :code:`xp` 를 난수 발생자 :code:`r` 와 
    단계별 최대 이동거리 :code:`step_size` 를 이용해 수정해야합니다.
@@ -103,7 +103,7 @@
      void (*gsl_siman_step_t) (const gsl_rng *r, void *xp, double step_size)
         
 
-.. type:: gsl_siman_metric_t
+.. c:type:: gsl_siman_metric_t
 
    이 함수형은 주어진 두 개의 상태 :code:`xp` 와 :code:`yp` 사이의 거리를 반환해야합니다.
  
@@ -111,7 +111,7 @@
  
      double (*gsl_siman_metric_t) (void * xp, void * yp)
 
-.. type:: gsl_siman_print_t
+.. c:type:: gsl_siman_print_t
 
    이 함수형은 주어진 상태 :code:`xp` 의 설정값을 출력해야합니다.
  
@@ -120,7 +120,7 @@
        void (*gsl_siman_print_t) (void *xp)
 
 
-.. type:: gsl_siman_copy_t
+.. c:type:: gsl_siman_copy_t
 
    이 함수형은 설정 값을 :code:`source` 에서  :code:`dest` 로 복사해야 합니다.
  
@@ -128,7 +128,7 @@
  
        void (*gsl_siman_copy_t) (voi d *souirce, coid *dest)
 
-.. type:: gsl_siman_copy_construct_t 
+.. c:type:: gsl_siman_copy_construct_t 
 
    이 함수형은 설정 :code:`xp` 의 새 복사본을 만들어야 합니다.
  
@@ -136,7 +136,7 @@
    
      void (*gsl_siman_copy_construct_t) (void *xp)
 
-.. type:: gsl_siman_destroy_t
+.. c:type:: gsl_siman_destroy_t
 
    이 함수형은 설정 :code:`xp` 를 삭제해야 합니다. 
    다시말해, :code:`xp`가 들어있는 메모리를 해제해야 합니다.
@@ -146,7 +146,7 @@
      void (*gsl_siman_destroy_t) (void *xp)
 
 
-.. type:: gsl_siman_params_t
+.. c:type:: gsl_siman_params_t
 
    :code:`gsl_siman_solve()` 의 실행을 제어하는 인자들입니다. 
    이 구조체는 탐색, 에너지 함수, 단계 함수와 초기 가정을 제어하는 데 필요한 
@@ -178,76 +178,8 @@ Trivial 예제
 1.0과 1.5사이에 이 값이 존재합니다. 
 초기 추정은 15.5입니다. 전역 최소값으로 부터 사이에 여러 지역적 최소값이 존재하는 지점입니다.
 
-.. code-block:: C
-
-  #include<stdio.h>
-  #include<stdlib.h>
-  #include<string.h>
-  #include<gsl/gsl_siman.h>
-
-  /* set up parameters for this simulated annealing run */
-
-  /* how many points do we try before stepping */
-  #define NTRIES 200
-
-  /* how many iterations for each T? */
-  #define ITERS_FIXED_T 1000
-
-  /* max step size in random walk */
-  #define STEP_SIZE 1.0
-
-  /* Boltzman constant */
-  #define K 1.0
-
-  /* initial temperature */
-  #define T_INITIAL 0.008
-
-  /* damping factor for temperature */
-  #define MU_T 1.003
-  #define T_MIN 2.0e-6
-
-  gsl_siman_params_t params
-      = {N_TRIES, ITERS_FIXED_T, STEP_SIZE,
-         K, T_INITIAL, MU_T, T_MIN};
-  /* now some functions to test in one dimension */
-  double E1(void *xp){
-      double x = * ((double *) xp);
-      return exp(-pow((x-1.0),2.0))*sin(8*x);
-  }
-
-  double M1(void *xp, void *yp){
-      double x = *((double *) xp);
-      double y = *((double *) yp);
-      return fabs(x - y);
-  }
-
-  void S1(const gsl_rng * r, void *xp, double step_size){
-      double old_x = *((double *) xp);
-      double new_x;
-      double u = gsl_rng_uniform(r);
-      new_x = u * 2 * step_size - step_size + old_x;
-      memcpy(xp, &new_x, sizeof(new_x));
-  }
-
-  void P1(void *xp){
-      printf ("%12g", *((double *) xp));
-  }
-
-  int main(void){
-      const gsl_rng_type * T;
-      gsl_rng * r;
-      double x_initial = 15.5;
-      gsl_rng_env_setup();
-      T = gsl_rng_default;
-      r = gsl_rng_alloc(T);
-      gsl_siman_solve(r, &x_initial, E1, S1, M1, P1,
-      NULL, NULL, NULL,
-      sizeof(double), params);
-      gsl_rng_free (r);
-      return 0;
-  }
-
-
+.. include:: examples/siman.c
+   :code:
 
 :numref:`fig_siman-test` 는  :code:`siman_test` 를 다음과 같이 실행한 결과입니다.
 
@@ -268,8 +200,7 @@ Trivial 예제
 
 .. _fig_siman-test:
 
-.. figure:: https://www.gnu.org/software/gsl/doc/html/_images/siman-test.png
-  :align: center
+.. figure:: /images/siman-test.png
   :scale: 60%
   
   담금질 방법 실행 예시: 높은 온도에서(그래프 시작지점)는 
@@ -279,9 +210,8 @@ Trivial 예제
 
 .. _fig_siman-energy:
 
-.. figure:: https://www.gnu.org/software/gsl/doc/html/_images/siman-energy.png
-  :align: center
-  :scale: 60%
+.. figure:: /images/siman-energy.png
+   :scale: 60%
   
   담금질 방법 에너지 vs 시행 횟수
 
@@ -299,330 +229,8 @@ Mark Galassi는 미국 남부 도시 12개의 좌표를 기반으로 아주 간�
 
 전체 코드는 다음과 같습니다.
 
-.. code-block:: C 
-
-  /* siman/siman_tsp.c 
-   * 
-   * Copyright (C) 1996, 1997, 1998, 1999, 2000 Mark Galassi 
-   * 
-   * This program is free software; you can redistribute it and/or modify 
-   * it under the terms of the GNU General Public License as published by 
-   * the Free Software Foundation; either version 3 of the License, or (at 
-   * your option) any later version. 
-   * 
-   * This program is distributed in the hope that it will be useful, but 
-   * WITHOUT ANY WARRANTY; without even the implied warranty of 
-   * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU 
-   * General Public License for more details. 
-   * 
-   * You should have received a copy of the GNU General Public License 
-   * along with this program; if not, write to the Free Software 
-   * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
-   */ 
-  #include <config.h> 
-  #include <math.h> 
-  #include <string.h> 
-  #include <stdio.h> 
-  #include <gsl/gsl_math.h> 
-  #include <gsl/gsl_rng.h> 
-  #include <gsl/gsl_siman.h> 
-  #include <gsl/gsl_ieee_utils.h> 
-  /* set up parameters for this simulated annealing run */ 
-  #define N_TRIES 200             /* how many points do we try before steppin*/ 
-  #define ITERS_FIXED_T 2000      /* how many iterations for each T? */ 
-  #define STEP_SIZE 1.0           /* max step size in random walk */ 
-  #define K 1.0                   /* Boltzmann constant */ 
-  #define T_INITIAL 5000.0        /* initial temperature */ 
-  #define MU_T 1.002              /* damping factor for temperature */ 
-  #define T_MIN 5.0e-1 
-  
-  gsl_siman_params_t params = {N_TRIES, ITERS_FIXED_T, STEP_SIZE, 
-                               K, T_INITIAL, MU_T, T_MIN}; 
-  
-  struct s_tsp_city { 
-      const char * name; 
-    double lat, longitude;        /* coordinates */ 
-  }; 
-  typedef struct s_tsp_city Stsp_city; 
-  
-  void prepare_distance_matrix(void);
-  void exhaustive_search(void);
-  void print_distance_matrix(void);
-  double city_distance(Stsp_city c1, Stsp_city c2);
-  double Etsp(void *xp);
-  double Mtsp(void *xp, void *yp);
-  void Stsp(const gsl_rng * r, void *xp, double step_size);
-  void Ptsp(void *xp);
-  
-  /* in this table, latitude and longitude are obtained from the US
-     Census Bureau, at http://www.census.gov/cgi-bin/gazetteer */
-  
-  Stsp_city cities[] = {
-      {"Santa Fe",    35.68,   105.95},
-      {"Phoenix",     33.54,   112.07},
-      {"Albuquerque", 35.12,   106.62},
-      {"Clovis",      34.41,   103.20},
-      {"Durango",     37.29,   107.87},
-      {"Dallas",      32.79,    96.77},
-      {"Tesuque",     35.77,   105.92},
-      {"Grants",      35.15,   107.84},
-      {"Los Alamos",  35.89,   106.28},
-      {"Las Cruces",  32.34,   106.76},
-      {"Cortez",      37.35,   108.58},
-      {"Gallup",      35.52,   108.74}
-    };
-  
-  #define N_CITIES (sizeof(cities)/sizeof(Stsp_city))
-  
-  double distance_matrix[N_CITIES][N_CITIES];
-  
-  /* distance between two cities */
-  double city_distance(Stsp_city c1, Stsp_city c2){
-    const double earth_radius = 6375.000; /* 6000KM approximately */
-    /* sin and cos of lat and long; must convert to radians */
-    double sla1 = sin(c1.lat*M_PI/180), cla1 = cos(c1.lat*M_PI/180),
-      slo1 = sin(c1.longitude*M_PI/180), clo1 = cos(c1.longitude*M_PI/180);
-    double sla2 = sin(c2.lat*M_PI/180), cla2 = cos(c2.lat*M_PI/180),
-      slo2 = sin(c2.longitude*M_PI/180), clo2 = cos(c2.longitude*M_PI/180);
-  
-    double x1 = cla1*clo1;
-    double x2 = cla2*clo2;
-  
-    double y1 = cla1*slo1;
-    double y2 = cla2*slo2;
-  
-    double z1 = sla1;
-    double z2 = sla2;
-  
-    double dot_product = x1*x2 + y1*y2 + z1*z2;
-  
-    double angle = acos(dot_product);
-  
-    /* distance is the angle (in radians) times the earth radius */
-    return angle*earth_radius;
-  }
-  
-  /* energy for the travelling salesman problem */
-  double Etsp(void *xp){
-    /* an array of N_CITIES integers describing the order */
-    int *route = (int *) xp;
-    double E = 0;
-    unsigned int i;
-
-    for (i = 0; i < N_CITIES; ++i) {
-      /* use the distance_matrix to optimize this calculation; it had
-        better be allocated!! */
-      E += distance_matrix[route[i]][route[(i + 1) % N_CITIES]];
-    }
-
-    return E;
-  }
-
-  double Mtsp(void *xp, void *yp){
-    int *route1 = (int *) xp, *route2 = (int *) yp;
-    double distance = 0;
-    unsigned int i;
-
-    for (i = 0; i < N_CITIES; ++i) {
-      distance += ((route1[i] == route2[i]) ? 0 : 1);
-    }
-
-    return distance;
-  }
-
-  /* take a step through the TSP space */
-  void Stsp(const gsl_rng * r, void *xp, double step_size){
-    int x1, x2, dummy;
-    int *route = (int *) xp;
-
-    step_size = 0 ; /* prevent warnings about unused parameter */
-
-    /* pick the two cities to swap in the matrix; we leave the first
-      city fixed */
-    x1 = (gsl_rng_get (r) % (N_CITIES-1)) + 1;
-    do {
-      x2 = (gsl_rng_get (r) % (N_CITIES-1)) + 1;
-    } while (x2 == x1);
-
-    dummy = route[x1];
-    route[x1] = route[x2];
-    route[x2] = dummy;
-  }
-
-  void Ptsp(void *xp){
-    unsigned int i;
-    int *route = (int *) xp;
-    printf("  [");
-    for (i = 0; i < N_CITIES; ++i) {
-      printf(" %d ", route[i]);
-    }
-    printf("]  ");
-  }
-      
-  int main(void)
-  {
-    int x_initial[N_CITIES];
-    unsigned int i;
-
-    const gsl_rng * r = gsl_rng_alloc (gsl_rng_env_setup()) ;
-
-    gsl_ieee_env_setup ();
-
-    prepare_distance_matrix();
-
-    /* set up a trivial initial route */
-    printf("# initial order of cities:\n");
-    for (i = 0; i < N_CITIES; ++i) {
-      printf("# \"%s\"\n", cities[i].name);
-      x_initial[i] = i;
-    }
-
-    printf("# distance matrix is:\n");
-    print_distance_matrix();
-
-    printf("# initial coordinates of cities (longitude and latitude)\n");
-    /* this can be plotted with */
-    /* ./siman_tsp > hhh ; grep city_coord hhh | awk '{print  :math:`2 "   " ` 3}' xyplot -ps -d "xy" > c.eps */
-    for (i = 0; i < N_CITIES+1; ++i) {
-      printf("###initial_city_coord: %g %g \"%s\"\n",
-            -cities[x_initial[i % N_CITIES]].longitude,
-            cities[x_initial[i % N_CITIES]].lat,
-            cities[x_initial[i % N_CITIES]].name);
-    }
-      
-  /*   exhaustive_search(); */
-
-    gsl_siman_solve(r, x_initial, Etsp, Stsp, Mtsp, Ptsp, NULL, NULL, NULL,
-                    N_CITIES*sizeof(int), params);
-
-    printf("# final order of cities:\n");
-
-    for (i = 0; i < N_CITIES; ++i) {
-      printf("# \"%s\"\n", cities[x_initial[i]].name);
-    }
-
-    printf("# final coordinates of cities (longitude and latitude)\n");
-    /* this can be plotted with */
-    /* ./siman_tsp > hhh ; grep city_coord hhh | awk '{print  :math:`2 "   " ` 3}'xyplot -ps -d "xy" > c.eps */
-
-    for (i = 0; i < N_CITIES+1; ++i) {
-      printf("###final_city_coord: %g %g %s\n",
-            -cities[x_initial[i % N_CITIES]].longitude,
-            cities[x_initial[i % N_CITIES]].lat,
-            cities[x_initial[i % N_CITIES]].name);
-    }
-
-    printf("# ");
-    fflush(stdout);
-  #if 0
-    system("date");
-  #endif /* 0 */
-    fflush(stdout);
-
-    return 0;
-  }
-      
-  void prepare_distance_matrix(){
-    unsigned int i, j;
-    double dist;
-
-    for (i = 0; i < N_CITIES; ++i) {
-      for (j = 0; j < N_CITIES; ++j) {
-        if (i == j) {
-          dist = 0;
-        } else {
-          dist = city_distance(cities[i], cities[j]);
-        }
-        distance_matrix[i][j] = dist;
-      }
-    }
-  }
-
-  void print_distance_matrix(){
-    unsigned int i, j;
-
-    for (i = 0; i < N_CITIES; ++i) {
-      printf("# ");
-      for (j = 0; j < N_CITIES; ++j) {
-        printf("%15.8f   ", distance_matrix[i][j]);
-      }
-      printf("\n");
-    }
-  }
-
-  /* [only works for 12] search the entire space for solutions */
-  static double best_E = 1.0e100, second_E = 1.0e100, third_E = 1.0e100;
-  static int best_route[N_CITIES];
-  static int second_route[N_CITIES];
-  static int third_route[N_CITIES];
-  static void do_all_perms(int *route, int n);
-
-  void exhaustive_search(){
-    static int initial_route[N_CITIES] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
-    printf("\n# ");
-    fflush(stdout);
-  #if 0
-    system("date");
-  #endif
-    fflush(stdout);
-    do_all_perms(initial_route, 1);
-    printf("\n# ");
-    fflush(stdout);
-  #if 0
-    system("date");
-  #endif /* 0 */
-    fflush(stdout);
-
-    printf("# exhaustive best route: ");
-    Ptsp(best_route);
-    printf("\n# its energy is: %g\n", best_E);
-
-    printf("# exhaustive second_best route: ");
-    Ptsp(second_route);
-    printf("\n# its energy is: %g\n", second_E);
-
-    printf("# exhaustive third_best route: ");
-    Ptsp(third_route);
-    printf("\n# its energy is: %g\n", third_E);
-  }
-      
-  /* James Theiler's recursive algorithm for generating all routes */
-  static void do_all_perms(int *route, int n){
-    if (n == (N_CITIES-1)) {
-      /* do it! calculate the energy/cost for that route */
-      double E;
-      E = Etsp(route);            /* TSP energy function */
-      /* now save the best 3 energies and routes */
-      if (E < best_E) {
-        third_E = second_E;
-        memcpy(third_route, second_route, N_CITIES*sizeof(*route));
-        second_E = best_E;
-        memcpy(second_route, best_route, N_CITIES*sizeof(*route));
-        best_E = E;
-        memcpy(best_route, route, N_CITIES*sizeof(*route));
-      } else if (E < second_E) {
-        third_E = second_E;
-        memcpy(third_route, second_route, N_CITIES*sizeof(*route));
-        second_E = E;
-        memcpy(second_route, route, N_CITIES*sizeof(*route));
-      } else if (E < third_E) {
-        third_E = E;
-        memcpy(route, third_route, N_CITIES*sizeof(*route));
-      }
-    } else {
-      int new_route[N_CITIES];
-      unsigned int j;
-      int swap_tmp;
-      memcpy(new_route, route, N_CITIES*sizeof(*route));
-      for (j = n; j < N_CITIES; ++j) {
-        swap_tmp = new_route[j];
-        new_route[j] = new_route[n];
-        new_route[n] = swap_tmp;
-        do_all_perms(new_route, n+1);
-      }
-    }
-  }
-
+.. include:: examples/siman_tsp.c
+   :code:
 
 다음 코드는 시각 그래프를 만들어 줍니다.
 
@@ -686,23 +294,20 @@ Mark Galassi는 미국 남부 도시 12개의 좌표를 기반으로 아주 간�
   ###final_city_coord: -105.95 35.68 Santa Fe
 
 
-.. figure:: https://www.gnu.org/software/gsl/doc/html/_images/siman-initial-route.png
-  :align: center
-  :scale: 60%
+.. figure:: /images/siman-initial-route.png
+   :scale: 60%
   
   12개의 남서부 도시를 방문하는 비행기 외판원 문제의 초기 방문 경로.
 
-.. figure:: https://www.gnu.org/software/gsl/doc/html/_images/siman-final-route.png
-  :align: center
-  :scale: 60%
+.. figure:: /images/siman-final-route.png
+   :scale: 60%
   
   12개의 남서부 도시를 방문하는 비행기 외판원 문제의 최종(최적화 된) 방문 경로.
 
  다음은 비용 함수(에너지) vs 시행 횟수 그래프입니다. (각 지점은 새로운 온도가 설정되는 계산 지점을 의미합니다.)
 
-.. figure:: https://www.gnu.org/software/gsl/doc/html/_images/siman-12-cities.png
-  :align: center
-  :scale: 60%
+.. figure:: /images/siman-12-cities.png
+   :scale: 60%
   
   12개의 남서부 도시를 방문하는 비행기 외판원 문제의 담금질 방법 실행 결과.
 
