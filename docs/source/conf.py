@@ -5,12 +5,12 @@ Babel.language_codes = {'ko':'korean', 'en':'english'}
 
 # -- Project information
 
-project = 'GSL Kor'
+project = 'GNU 과학 계산 라이브러리'
 copyright = '2021, Hyun Seong, Kim'
-author = 'Hyun Seong, Ki'
+author = 'GSL Team'
 translator = 'Hyun Seong, Kim'
 
-release = '2.7'
+release = '2.7.1'
 version = '0.1.0'
 
 # -- General configuration
@@ -20,7 +20,7 @@ extensions = [
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
-    'sphinx.ext.intersphinx',
+    'sphinx.ext.intersphinx'
 ]
 
 source_suffix = {
@@ -54,4 +54,3 @@ latex_elements = {
 \setmonofont{Noto Sans Mono CJK KR}
     '''
 }
-
