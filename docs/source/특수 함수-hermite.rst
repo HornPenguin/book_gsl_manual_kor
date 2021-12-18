@@ -3,7 +3,7 @@
 에르미트 다항식과 함수는 Abramowitz & Stegunm Chapter 22 와 Szego, Gabor (1939, 1957, 1967) Orthogonal Polynomials, American Mathematical Society에 기술되어 있습니다. 본 단원의 함수들은 헤더 파일  ``gsl_sf_hermite.h``  정의 되었습니다.
 
 에르미트 다항식(Hermite Polynomials)
--------------------------
+-------------------------------------------
 
 에르미트 다항식은 두 가지 형태가 존재합니다.  :math:`H_n(x)` 는 물리학에서 사용하는 형태이고,  :math:`H_{e_n}(x)` 는 확률론에서 사용하는 형태입니다. 
 
@@ -51,7 +51,7 @@
 
 
 에르미트 다항식의 도함수 (Derivatives of Hermite Polynomials)
--------------------------
+-------------------------------------------------------------
 
 >double **gsl_sf_hermite_deriv**(const int *m*, const int *n*, const double *x*)<br>
 >int gsl_sf_hermite_deriv_e(const int *m*, const int *n*, const double *x*, gsl_sf_result * *result*)
@@ -84,7 +84,7 @@
 
 
 에르미트 함수 (Hermite Functions)
--------------------------
+----------------------------------
 
 에르미트 함수는 다음과 같이 정의됩니다.
 
@@ -124,7 +124,7 @@
 
 
 에르미트 함수의 도함수 (Derivatives of Hermite Functions)
--------------------------
+-------------------------------------------------------------
 
 >double **gsl_sf_hermite_func_der**(const int *m*, const int *n*, const double *x*)<br>
 >int **gsl_sf_hermite_func_der_e**(const int *m*, const int *n*, const double *x*, gsl_sf_result * *result*)
@@ -133,7 +133,7 @@
 
 
 에르미트 함수와 다항식의 근 (Zeros of Hermite Polynomials and Hermite Functions)
--------------------------
+----------------------------------------------------------------------------------------
 
 이 함수들은 차수  :math:`n` 을 가지는 에르미트 함수와 다항식의  :math:`s`  번째 근을 계산합니다. 각 근들이 원점을 기준으로 대칭이기 때문에, 양수인 근들만 계산됩니다. 인덱스는  :math:`1` 부터 시작해서 오름차순으로 배열됩니다. 홀수 차수의 다항식 만이  :math:`0` 에서  ``0`` 째 근을 가집니다. 해당 값은 항상  :math:`0` 입니다.
 

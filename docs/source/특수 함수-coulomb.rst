@@ -8,12 +8,12 @@
 정규화된 수소의 구속 상태(Normalized Hydrogenic Bound States)
 -------------------------------------------------------------
 
-.. function:: double gsl_sf_hydrogenicR_1 (double Z, double r)
+.. c:function:: double gsl_sf_hydrogenicR_1 (double Z, double r)
               int gsl_sf_hydrogenicR_1_e (double Z, double r, gsl_sf_result * result)
 
     가장 낮은 차수의 정규화 된 수소의 구속 방사형 상태  함수  :math:`R_1 = 2 Z \sqrt{Z} \exp (-Zr)` 를 계산합니다.
 
-.. function:: double gsl_sf_hydrogenicR (int n, int l, double Z, double r)
+.. c:function:: double gsl_sf_hydrogenicR (int n, int l, double Z, double r)
               int gsl_sf_hydrogenicR_e (int n, int l, double Z, double r, gsl_sf_result * result)
 
      ``n`` 차수의 정규화된 수소의 구속 방사형 상태 함수 
@@ -43,7 +43,7 @@
     {F'}\_L(\eta,x)= f_{cp}[k_L] * \exp(exp_F)\\
     {G'}\_L(\eta,x)= g_{cp}[k_L] * \exp(exp_G)
 
-.. function:: int gsl_sf_coulomb_wave_FG_e (double eta, double x, double L_F, int k, gsl_sf_result * F, gsl_sf_result * Fp, gsl_sf_result * G, gsl_sf_result * Gp, double * exp_F, double * exp_G)
+.. c:function:: int gsl_sf_coulomb_wave_FG_e (double eta, double x, double L_F, int k, gsl_sf_result * F, gsl_sf_result * Fp, gsl_sf_result * G, gsl_sf_result * Gp, double * exp_F, double * exp_G)
 
     이 함수는 쿨롱 파동 함수 :math:`F_L(\eta,x), G_{L-k}(\eta,x)` 와 그 도함수  
     :math:`F'_L(\eta,x), G'_{L-k}(\eta,x)` 를 인자  :math:`x` 에 대해 계산합니다. 
@@ -52,14 +52,14 @@
     결과 값들은 인자  ``F`` 와  ``G`` 에 함수 값이 저장되고, 도함수의 값은  ``Fp`` 와  ``Gp`` 에 저장됩니다. 
     오버플로우가 발생하면,  ``GSL_EOVERFLW`` 가 반환되고 조정된 지수값이 수정 가능한 인자  ``exp_F`` 와  ``exp_G`` 에 저장됩니다.
 
-.. function:: int gsl_sf_coulomb_wave_F_array (double L_min, int kmax, double eta, double x, double fc_array[], double * F_exponent)
+.. c:function:: int gsl_sf_coulomb_wave_F_array (double L_min, int kmax, double eta, double x, double fc_array[], double * F_exponent)
 
     이 함수는  :math:`L = Lmin \dots Lmin + kmax` 에 대해, 
     함수  :math:`F_L(\eta,x)` 의 값을 계산합니다.  
     계산 결과값은  ``fc_array`` 배열에 저장됩니다. 
     오버플로우가 발생하면 지수값이  ``F_exponenet`` 에 저장됩니다.
 
-.. function:: int gsl_sf_coulomb_wave_FG_array (double L_min, int kmax, double eta, double x, double fc_array[], double gc_array[], double * F_exponent, double * G_exponent)
+.. c:function:: int gsl_sf_coulomb_wave_FG_array (double L_min, int kmax, double eta, double x, double fc_array[], double gc_array[], double * F_exponent, double * G_exponent)
 
     이 함수는  :math:`L = Lmin \dots Lmin + kmax` 에 대해, 
     함수  :math:`F_L(\eta,x), G_L(\eta,x)` 의 값을 계산합니다.  
@@ -67,7 +67,7 @@
     오버플로우가 발생하면 지수값이 ``F_exponenet`` 와  ``G_exponent`` 에 저장됩니다.
 
 
-.. function:: int gsl_sf_coulomb_wave_FGp_array (double L_min, int kmax, double eta, double x, double fc_array[], double fcp_array[], double gc_array[], double gcp_array[], double * F_exponent, double * G_exponent)
+.. c:function:: int gsl_sf_coulomb_wave_FGp_array (double L_min, int kmax, double eta, double x, double fc_array[], double fcp_array[], double gc_array[], double gcp_array[], double * F_exponent, double * G_exponent)
 
     이 함수는  :math:`L = Lmin \dots Lmin + kmax` 에 대해, 
     함수  :math:`F_L(\eta,x), G_L(\eta,x)` 와 그 도함수  
@@ -75,7 +75,7 @@
     계산 결과값은 각각  ``fc_array`` ,  ``gc_array`` , ``fcp_array`` 그리고  ``gcp_array`` 배열에 저장됩니다.
     오버플로우가 발생하면 지수값이 ``F_exponenet`` 와  ``G_exponent`` 에 저장됩니다.
 
-.. function:: int gsl_sf_coulomb_wave_sphF_array (double L_min, int kmax, double eta, double x, double fc_array[], double F_exponent[])
+.. c:function:: int gsl_sf_coulomb_wave_sphF_array (double L_min, int kmax, double eta, double x, double fc_array[], double F_exponent[])
 
     이 함수는  :math:`L = Lmin \dots Lmin + kmax` 에 대해, 
     인자로 나누어진 쿨롱 함수  :math:`F_L(\eta,x)/x`  값을 계산합니다.  
@@ -88,10 +88,10 @@
 
 쿨롱 파동 함수의 정규화 상수들은 Abramowitz 14.1.7에 정의되어 있습니다.
 
-.. function:: int gsl_sf_coulomb_CL_e (double L, double eta, gsl_sf_result * result)
+.. c:function:: int gsl_sf_coulomb_CL_e (double L, double eta, gsl_sf_result * result)
 
     :math:`L>-1` 에 대해, 쿨롱 파동 함수의 정규화 계수  :math:`C_L (\eta)` 를 계산합니다.
 
-.. function:: int gsl_sf_coulomb_CL_array (double Lmin, int kmax, double eta, double cl[])
+.. c:function:: int gsl_sf_coulomb_CL_array (double Lmin, int kmax, double eta, double cl[])
 
     :math:`L = Lmin \dots Lmin + kmax, Lmin > -1` 에 대해, 쿨롱 파동 함수의 정규화 계수 :math:`C_L(\eta)` 를 계산합니다.

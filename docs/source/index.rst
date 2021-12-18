@@ -31,6 +31,7 @@ gsl 2.7 manual document를 기준으로 해서 번역합니다. GSL 차후 버�
 ======
 
 .. toctree::
+   :maxdepth: 2
    
    GSL 디자인 문서
    소개

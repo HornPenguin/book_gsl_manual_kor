@@ -1,4 +1,5 @@
-# 초기하 함수 (Hypergeometric Functions)
+초기하 함수 (Hypergeometric Functions)
+---------------------------------------------
 
 초기하 함수들은 Abramowitz& Stegun의 13, 15 단원의 기술을 기반으로 작성되었습니다. 이 함수들은 헤더 파일  ``gsl_sf_hyperg.h``  정의 되어있습니다,
 

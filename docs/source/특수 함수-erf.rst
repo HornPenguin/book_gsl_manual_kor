@@ -9,7 +9,7 @@
 오차 함수(Error Functionn)
 ------------------------------
 
-.. function:: double gsl_sf_erf (double x)
+.. c:function:: double gsl_sf_erf (double x)
               int gsl_sf_erf_e (double x, gsl_sf_result * result)
 
     오차함수  :math:`\text{erf}(x)` 의 값을 계산합니다.  
@@ -22,7 +22,7 @@
 상보 오차 함수(Complementary Error Functionn)
 -------------------------------------------------
 
-.. function:: double gsl_sf_erfc (double x)
+.. c:function:: double gsl_sf_erfc (double x)
               int gsl_sf_erfc_e (double x, gsl_sf_result * result)
 
     상보 오차 함수  :math:`\text{erfc}(x) = 1- \text{erf}(x)` 의 값을 계산합니다.  :math:`\text{erfc}(x)` 는 다음과 같이 정의됩니다.
@@ -34,7 +34,7 @@
 로그 상보 오차 함수(Log Complementary Error Functionn)
 -------------------------
 
-.. function:: double gsl_sf_log_erfc (double x)
+.. c:function:: double gsl_sf_log_erfc (double x)
               int gsl_sf_log_erfc_e (double x, gsl_sf_result * result)
 
     상보 오차 함수의 로그값  :math:`\log(\text{erfc}(x))` 를 계산합니다.
@@ -45,13 +45,13 @@
 
 표준/가우스 분포의 확률 함수들은 Abramowitz & Stegun, Section 26.2에 기술되어 있습니다.
 
-.. function:: double gsl_sf_erf_Z (double x)
+.. c:function:: double gsl_sf_erf_Z (double x)
               int gsl_sf_erf_Z_e (double x, gsl_sf_result * result)
 
     가우스 확률 밀도 함수  :math:`Z(x) = \frac{1}{\sqrt{2\pi}} \exp(- \frac{x^2}{2})` 값을 계산합니다.
 
 
-.. function:: double gsl_sf_erf_Q (double x)
+.. c:function:: double gsl_sf_erf_Q (double x)
               int gsl_sf_erf_Q_e (double x, gsl_sf_result * result)
 
     가우스 확률 함수의 :math:`Q(x) = (1/\sqrt{2\pi}) \int_x^\infty dt \exp(-t^2/2)` 값을 계산합니다.
@@ -66,7 +66,7 @@
 
         :math:`x` 가  :math:`-\infty` 에 가까우질 수록 급격히 감소하며,  :math:`x` 가  :math:`+\infty` 에 가까워질 수록  :math:`h(x) \approx` 로 점근합니다.
 
-.. function:: double gsl_sf_hazard (double x)
+.. c:function:: double gsl_sf_hazard (double x)
               int gsl_sf_hazard_e (double x, gsl_sf_result * result)
 
     표준 분포의 하자드 함수(Hazard function)를 계산합니다.
