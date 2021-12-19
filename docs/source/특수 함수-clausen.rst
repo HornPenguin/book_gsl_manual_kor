@@ -12,7 +12,7 @@
     
   Cl_2 (\theta) = \Im[Li_2 (e^{i \theta})]
 
-클라우센 함수들은 헤더 파일 :math:`gsl_sf_clausen.h` 에 정의되어 있습니다.
+클라우센 함수들은 헤더 파일 :code:`gsl_sf_clausen.h` 에 정의되어 있습니다.
 
 .. function:: double gsl_sf_clausen (double x)
               int gsl_sf_clausen_e (double x, gsl_sf_result * result)

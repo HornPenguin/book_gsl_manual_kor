@@ -1,6 +1,6 @@
 
 초기하 함수들은 Abramowitz& Stegun의 13, 15 단원의 기술을 기반으로 작성되었습니다. 
-헤더 파일 :math:`gsl_sf_hyperg.h` 에 정의 되어있습니다,
+헤더 파일 :code:`gsl_sf_hyperg.h` 에 정의 되어있습니다,
 
 
 .. function:: double gsl_sf_hyperg_0F1 (double c, double x)

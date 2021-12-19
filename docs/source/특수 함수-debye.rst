@@ -8,7 +8,7 @@
     D_n(x) = \frac{n}{x^n} \int_0^x \frac{t^n}{e^t -1} \, dt
 
 더 자세한 정보는 Abramowitz & Stegun, Section 27.1을 참고할 수 있습니다. 
-디바이 함수는 헤더 파일 :math:`gsl_sf_debye.h` 에 정의되어 있습니다.
+디바이 함수는 헤더 파일 :code:`gsl_sf_debye.h` 에 정의되어 있습니다.
 
 .. function:: double gsl_sf_debye_1 (double x)
               int gsl_sf_debye_1_e (double x, gsl_sf_result * result)

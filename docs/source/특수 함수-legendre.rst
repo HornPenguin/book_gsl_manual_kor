@@ -1,6 +1,6 @@
 
 르장드르 다항식과 함수들은 Abramowitz & Stegun Chapter 8. 에 기술되어있습니다. 
-    :math:`gsl_sf_legnedre.h`  헤더 파일에 정의되어 있습니다.
+    :code:`gsl_sf_legnedre.h`  헤더 파일에 정의되어 있습니다.
 
 르장드르 다항식(Legendre Polynomials)
 ------------------------------------------
@@ -109,7 +109,7 @@
 아래의 함수에서 :math:`gsl_sf_legendre_t`  인자를 이용해 정규화 방법을 선택할 수 있습니다. 
 가능한 값들은 다음과 같습니다.
 
-.. type:: gsl_sf_legendre_t
+.. c:type:: gsl_sf_legendre_t
 
    ================================== ===============================================================================
    값                                 설명
@@ -175,7 +175,7 @@
     :math:`d^2 P_l^m(\cos(\theta)) / d\theta^2` 의 값은 각각 :math:`result_array` , :math:`result_deriv_array`, 
     그리고 :math:`result_deriv2_array` 에 저장됩니다. 
     :math:`_e` 붇은 함수에서 Condon-Shortly 위상 계수 :math:`(-1)^m` 의 포함 유무를 조정하려면 
-    :math:`csphase` 을 :math:`-1` 이나 :math:`1  로 설정해 주면 됩니다. 
+    :math:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
     이 계수는 기본적으로 비활성화 되어 있습니다.
 
 .. function:: size_t gsl_sf_legendre_nlm(const size_t lmax)

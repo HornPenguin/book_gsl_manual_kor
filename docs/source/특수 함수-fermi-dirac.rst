@@ -1,6 +1,6 @@
 
 
-    헤더 파일 :math:`gsl_sf_fermi_dirac.h` 에 정의되어 있습니다.
+    헤더 파일 :code:`gsl_sf_fermi_dirac.h` 에 정의되어 있습니다.
 
 완비 페르미-디렉 적분 (Complete Fermi-Dirac Integrals)
 -------------------------------------------------------------

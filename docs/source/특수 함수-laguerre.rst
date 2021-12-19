@@ -16,7 +16,7 @@
 
 더 자세한 정보는  Abramowitz & Strgun, Chapter 22를 참조할 수 있습니다.
 
-이 단원에서 기술된 함수들은 헤더 파일 :math:`gsl_sf_laguerre.h` 에 정의되어 있습니다.
+이 단원에서 기술된 함수들은 헤더 파일 :code:`gsl_sf_laguerre.h` 에 정의되어 있습니다.
 
 .. function:: double gsl_sf_laguerre_1 (double a, double x)
               double gsl_sf_laguerre_2 (double a, double x)

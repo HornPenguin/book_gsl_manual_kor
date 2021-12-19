@@ -1,5 +1,5 @@
 다음 함수들은 완전/불완전 감마, 베타 함수를 다양한 팩토리얼에 대해 계산합니다. 
-이 단원의 함수들은 헤더 파일 :math:`gsl_sf_gamma.h` 에 정의되어 있습니다.
+이 단원의 함수들은 헤더 파일 :code:`gsl_sf_gamma.h` 에 정의되어 있습니다.
 
 감마 함수 (Gamma Functions)
 ----------------------------------
@@ -18,7 +18,7 @@
 
     :math:`0` 이나 음의 정수가 아닌 :math:`x` 에 대해, 감마 함수 :math:`\Gamma(x)` 의 값을 계산합니다. 
     실수 Lanczos 방법을 사용합니다. :math:`x` 의 최댓값은 :math:`\Gamma(x)` 가 오버 플로우 되지 않는 범위로 
-    매크로 :macro:`GSL_SF_GAMMA_XMAX` 로 주어져 있습니다. 이 값은 :math:`171.0` 입니다.
+    매크로 :c:macro:`GSL_SF_GAMMA_XMAX` 로 주어져 있습니다. 이 값은 :math:`171.0` 입니다.
 
 .. function:: double gsl_sf_lngamma (double x)
               int gsl_sf_lngamma_e (double x, gsl_sf_result * result)
@@ -63,20 +63,20 @@
 
 양의 정수 :math:`n` 에 대해, 감마 함수를 이용해 :math:`n! = \Gamma(n+1)` 팩토리얼을 계산할 수 있습니다. 
 하지만, 아래의 함수들을 이용하는 것이 작은 :math:`n` 값들에 대해 더 효율적입니다.
- 팩토리얼 값들을 하드 코딩된 테이블에 보관하고 있습니다.
+팩토리얼 값들을 하드 코딩된 테이블에 보관하고 있습니다.
 
 .. function:: double gsl_sf_fact (unsigned int n)
               int gsl_sf_fact_e (unsigned int n, gsl_sf_result * result)
 
     팩토리얼 :math:`n!` 를 계산합니다. 팩토리얼은 감마 함수와 :math:`n! = \Gamma(n+1)` 의 관계를 가지고 있습니다. 
     :math:`n` 의 최댓값은 :math:`n!` 이 오버플로우되지 않는 값으로 정해집니다. 
-    이는 매크로 :macro:`GSL_SF_FACT_NMAX` 정의되어 있고 :math:`170` 입니다.
+    이는 매크로 :c:macro:`GSL_SF_FACT_NMAX` 정의되어 있고 :math:`170` 입니다.
 
 .. function:: double gsl_sf_doublefact (unsigned int n)
               int gsl_sf_doublefact_e (unsigned int n, gsl_sf_result * result)
 
     더블 팩토리얼 :math:`n!! = n(n-2)(n-4)\dots` 을 계산합니다. :math:`n` 의 최댓값은 :math:`n!!` 이 오버플로 되지 않는 값으로 정해집니다. 
-    이는 매크로 :macro:`GSL_SF_DOUBLEFACT_NMAX` 정의되어 있고 :math:`297` 입니다.
+    이는 매크로 :c:macro:`GSL_SF_DOUBLEFACT_NMAX` 정의되어 있고 :math:`297` 입니다.
 
 .. function:: double gsl_sf_lnfact (unsigned int n)
               int gsl_sf_lnfact_e (unsigned int n, gsl_sf_result * result)

@@ -6,7 +6,7 @@
 
     Li_2 (z) = - \int_0^z \frac{\log(1-s)}{s} \, ds
 
-이 함수들은 헤더 파일 :math:`gsl_sf_dilog.h` 에 정의되어 있습니다.
+이 함수들은 헤더 파일 :code:`gsl_sf_dilog.h` 에 정의되어 있습니다.
 
 
 실수 인자 (Real Argument)
@@ -31,7 +31,7 @@
 
 
 복소수 인자 (Complex Argument)
--------------------------
+---------------------------------------
 
 .. function:: int gsl_sf_complex_dilog_e (double r, double theta, gsl_sf_result * result_re, gsl_sf_result * result_im)
 

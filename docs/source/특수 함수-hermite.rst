@@ -1,7 +1,7 @@
 
 에르미트 다항식과 함수는 Abramowitz & Stegunm Chapter 22 와 
 Szego, Gabor (1939, 1957, 1967) Orthogonal Polynomials, American Mathematical Society에 기술되어 있습니다. 
-본 단원의 함수들은 헤더 파일 :math:`gsl_sf_hermite.h` 에 정의되어 있습니다.
+본 단원의 함수들은 헤더 파일 :code:`gsl_sf_hermite.h` 에 정의되어 있습니다.
 
 에르미트 다항식(Hermite Polynomials)
 -------------------------------------------
@@ -28,11 +28,12 @@ Szego, Gabor (1939, 1957, 1967) Orthogonal Polynomials, American Mathematical So
     H_{n}''(x) -2xH_{n}'(x) + 2nH_{n}(x)=0\\
     H_{e_n}''(x) -xH_{e_n}'(x) + nH_{e_n}(x)=0
 
->double **gsl_sf_hermite**(const int *n*, const double *x*)<br>
->int **gsl_sf_hermite_e**(const int *n*, const double *x*, gsl_sf_result * *result*)
 
 .. function:: double gsl_sf_hermite (const int n, const double x)
               int gsl_sf_hermite_e (const int n, const double x, gsl_sf_result * result)
+        
+        이 함수는 :math"`H_n (x)` 형태의 에르미트 다항식을 주어진 차수 :code:`n` 과 변수 :code:`x` 에 대해 계산합니다. 
+        오버플로우가 감지되면, 오류 관리자를 호출하지 않고 :c:macro:`GSL_EOVERFLW` 를 반환합니다.
 
 .. function:: int gsl_sf_hermite_array (const int nmax, const double x, double * result_array)
 

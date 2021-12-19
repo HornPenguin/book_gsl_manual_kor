@@ -187,8 +187,8 @@ Final install
 
 ``LIBDIR = /usr/local/lib`` 
 
-* 실행 중, 환경 변수 :math:`LD_LIBRARY_PATH` 에 :math:`LIBDIR`  추가하기
-* 링크 과정에서 환경 변수 :math:`LD_RUN_PATH` 에 :math:`LIBDIR`  추가하기
+* 실행 중, 환경 변수 :code:`LD_LIBRARY_PA.h` 에 :math:`LIBDIR`  추가하기
+* 링크 과정에서 환경 변수 :code:`LD_RUN_PA.h` 에 :math:`LIBDIR`  추가하기
 * :math:`-Wl, -rpath -Wl, LIBDIR`  옵션을 링크에 넣기
 * 관리자 권한을 얻은 후 :math:`/etc/ld.so.conf/`  디렉토리에 :math:`LIBDIR`  이 있는 파일 추가하기
 
@@ -201,7 +201,7 @@ Final install
 
 **환경 변수에 추가하기**
 
-``bash`` 창에 다음을 입력하면 환경 변수 :math:`LD_LIBRARY_PATH` 에 위치를 추가할 수 있습니다. 
+``bash`` 창에 다음을 입력하면 환경 변수 :code:`LD_LIBRARY_PA.h` 에 위치를 추가할 수 있습니다. 
 
 .. code-block:: console
 
@@ -209,7 +209,7 @@ Final install
     export LD_LIBRARY_PATH 
 
 
-그러나 이 방법은 새로운 :math:`bash` 창을 열 때마다 별도로 입력해 주어야합니다. 때문에, 계정의 홈 디렉토리에 있는 :math:`.bashrc` 파일의 끝에 다음의 문구를 추가해줍니다 [#bashrc]_ .
+그러나 이 방법은 새로운 :code:`ba.h` 창을 열 때마다 별도로 입력해 주어야합니다. 때문에, 계정의 홈 디렉토리에 있는 :math:`.bashrc` 파일의 끝에 다음의 문구를 추가해줍니다 [#bashrc]_ .
 
 
 .. code-block:: console

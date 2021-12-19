@@ -4,7 +4,7 @@
    single: erfc(x)
 
 오차 함수는 Abramowitz & Stegun, Chapter 7.에 기술되어 있습니다. 
-이 단원에서 기술된 함수들은 헤더파일 :math:`gs_sf_erf.h` 에 기술되어 있습니다.
+이 단원에서 기술된 함수들은 헤더파일 :code:`gs_sf_erf.h` 에 기술되어 있습니다.
 
 오차 함수(Error Functionn)
 ------------------------------
@@ -13,7 +13,7 @@
               int gsl_sf_erf_e (double x, gsl_sf_result * result)
 
     오차함수 :math:`\text{erf}(x)` 의 값을 계산합니다.  
-   :math:`\text{erf}(x)` 는 다음과 같이 정의됩니다.
+    :math:`\text{erf}(x)` 는 다음과 같이 정의됩니다.
     
     .. math::
     

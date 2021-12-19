@@ -15,8 +15,8 @@ Spherical Harmonics, Psi(Digamma)함수, Synchrotron 함수, Transport 함수,
 각각의 명령어는 수치적 오류와 함수의 값을 계산해서 반환합니다.
 
 기술된 함수들은 각각 다른 헤더파일에 정의되어 있습니다.
-예를 들어서 :math:`gsl_sf_airy.h` 나 :math:`gsl_sf_bessel.h` 로 각각 나뉘어져 있습니다. 
-모두 포함시켜서 계산하려면, :math:`gsl_sf.h` 을 포함시키면 됩니다.
+예를 들어서 :code:`gsl_sf_airy.h` 나 :code:`gsl_sf_bessel.h` 로 각각 나뉘어져 있습니다. 
+모두 포함시켜서 계산하려면, :code:`gsl_sf.h` 을 포함시키면 됩니다.
 
 
 함수의 사용 (Usage)
@@ -57,7 +57,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 
 이러한 특수 함수들은 결과 값을 계산하는 과정에서 오차를 함께 계산합니다. 
 따라서, 이러한 오차와 결과값을 함께 다룰 수 있는 구조체를 함께 제공합니다. 
-이 구조체는 헤더파일 :math:`gsl_sf_result.h` 정의되어 있습니다.
+이 구조체는 헤더파일 :code:`gsl_sf_result.h` 정의되어 있습니다.
 
 이 구조체는 다음과 같이 함수 값과 오차 값으로 이루어져 있습니다.
 

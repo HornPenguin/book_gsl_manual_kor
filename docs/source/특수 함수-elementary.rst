@@ -2,7 +2,7 @@
 .. index:: multiplication
 
 다음 함수들은 곱셈 과정에서 오차의 전파를 같이 계산합니다. 
-이 함수들은 헤더 파일 :math:`gsl_sf_elementary.h`  에 정의되어 있습니다.
+이 함수들은 헤더 파일 :code:`gsl_sf_elementary.h`  에 정의되어 있습니다.
 
 .. function:: double gsl_sf_multiply (double x, double y)
               int gsl_sf_multiply_e (double x, double y, gsl_sf_result * result)

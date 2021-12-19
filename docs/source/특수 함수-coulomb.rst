@@ -2,7 +2,7 @@
    single: Coulomb wave functions
    single: hydrogen atom
 
-쿨롱 함수의 초안은 헤더 파일 :math:`gsl_sf_coulomb.h`  에 정의되어 있습니다. 
+쿨롱 함수의 초안은 헤더 파일 :code:`gsl_sf_coulomb.h`  에 정의되어 있습니다. 
 구속 상태와 산란해를 모두 포함합니다.
 
 정규화된 수소의 구속 상태(Normalized Hydrogenic Bound States)

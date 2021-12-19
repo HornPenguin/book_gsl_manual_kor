@@ -2,7 +2,7 @@
 
 구겐바우어 다항식은 Abramowitz & Stgun의 22단원에 정의되어 있습니다. 
 이 다항식은 또 Ultraspherical 다항식으로도 알려져있습니다. 
-이 함수들은 헤더 파일 :math:`gsl_sf_gegenbauer.h` 에 정의되어 있습니다.
+이 함수들은 헤더 파일 :code:`gsl_sf_gegenbauer.h` 에 정의되어 있습니다.
 
 .. function:: double gsl_sf_gegenpoly_1 (double lambda, double x)
               double gsl_sf_gegenpoly_2 (double lambda, double x)

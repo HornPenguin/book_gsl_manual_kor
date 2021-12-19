@@ -8,7 +8,7 @@
 그리고, :math:`w_{-1}(x)` 는 또다른 실수 함수로 :math:`x<0` 에 대해, 
 :math:`W<-1` 값을 가집니다. 
 
-람베르트 함수들은 헤더 파일 :math:`gsl_sf_lambert.h` 에 정의되어 있습니다.
+람베르트 함수들은 헤더 파일 :code:`gsl_sf_lambert.h` 에 정의되어 있습니다.
 
 .. function:: double gsl_sf_lambert_W0 (double x)
               int gsl_sf_lambert_W0_e (double x, gsl_sf_result * result)

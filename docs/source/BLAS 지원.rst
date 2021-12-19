@@ -8,7 +8,7 @@ BLAS 지원
 이 라이브러리는 C 언어 BLAS 표준(CBLAS라고 합니다)에 해당하는 저수준의 기능들과 
 고수준의 GSL 벡터, 행렬들을 위한  기능들을 제공합니다. GSL 벡터와 행렬의 연산을 하고자 한다면, 
 여기서 기술하는 고차원 기능들을 사용할 수 있습니다. 
-이 단원에서 서술하는 함수들은 :math:`gsl_blas.h`  헤더 파일에 정의되어 있고 
+이 단원에서 서술하는 함수들은 :code:`gsl_blas.h`  헤더 파일에 정의되어 있고 
 대부분의 사용자들의 요구를 충족시킬 수 있습니다.
 
 
@@ -228,7 +228,7 @@ Level 2 BLAS 인터페이스
               int gsl_blas_zgemv (CBLAS_TRANSPOSE_t TransA, const gsl_complex alpha, const gsl_matrix_complex * A, const gsl_vector_complex * x, const gsl_complex beta, gsl_vector_complex * y)
 
   행렬-벡터 사이의 곱, 덧셈인 :math:`y = \alpha op(A) x + \beta y`  을 계산합니다. 
-  :math:`op(A) = A, A^T, A^H` 이고 :code:`TransA` = :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConjTrans` 가 가능합니다.
+  :code:`op(A) = A, A^T, A.h` 이고 :code:`TransA` = :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConjTrans` 가 가능합니다.
 
 .. function:: int gsl_blas_strmv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix_float * A, gsl_vector_float * x)
               int gsl_blas_dtrmv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix * A, gsl_vector * x)
@@ -236,7 +236,7 @@ Level 2 BLAS 인터페이스
               int gsl_blas_ztrmv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix_complex * A, gsl_vector_complex * x)
 
   행렬-벡터 곱 :math:`x = op(A)x`  를 삼각 행렬 :math:`A` 대해 계산합니다.
-  :math:`op(A) = A, A^T, A^H`  이고 :code:`TransA` = :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConjTrans` 가 가능합니다. 
+  :code:`op(A) = A, A^T, A.h`  이고 :code:`TransA` = :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConjTrans` 가 가능합니다. 
   :code:`Uplo` 가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 의 상삼각 행렬이 사용되고, 
   :code:`CblasLower` 라면, :math:`A` 의 하삼각 행렬이 사용됩니다. 
   만약, :code:`Dig` 가 :code:`CblasNonUnit` 라면 행렬의 대각 성분들이 사용됩니다.
@@ -248,7 +248,7 @@ Level 2 BLAS 인터페이스
               int gsl_blas_ztrsv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix_complex * A, gsl_vector_complex * x)
 
   주어진 벡터 :math:`x` 대해, :math:`inv(op(A))x`  를 계산합니다.  
-  :math:`op(A) = A, A^T, A^H`  이고 :code:`TransA` = :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConjTrans` 가 가능합니다.
+  :code:`op(A) = A, A^T, A.h`  이고 :code:`TransA` = :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConjTrans` 가 가능합니다.
   :code:`Uplo` 가 :code:`CblasUpper`  일 때, 행렬 :math:`A` 의 상삼각 행렬이 사용되고,
   :code:`CblasLower`  라면, 행렬 :math:`A` 의 하삼각 행렬이 사용됩니다. 
   만약, :code:`Dig`가 :code:`CblasNonUnit` 라면 행렬의 대각 성분들이 사용됩니다.
@@ -327,7 +327,7 @@ Level 3 BLAS 인터페이스
               int gsl_blas_zgemm (CBLAS_TRANSPOSE_t TransA, CBLAS_TRANSPOSE_t TransB, const gsl_complex alpha, const gsl_matrix_complex * A, const gsl_matrix_complex * B, const gsl_complex beta, gsl_matrix_complex * C)
 
   행렬-행렬 사이의 곱과 합 :math:`C =\alpha op(A)op(B) + \beta C` 를 계산합니다.
-  :math:`op(A) = A, A^T, A^H` 이고 :code:`TransA` = :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConjTrans` 가 가능합니다.
+  :code:`op(A) = A, A^T, A.h` 이고 :code:`TransA` = :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConjTrans` 가 가능합니다.
   :math:`TransB` 같은 인자를 사용가능합니다.
 
 .. function:: int gsl_blas_ssymm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, float alpha, const gsl_matrix_float * A, const gsl_matrix_float * B, float beta, gsl_matrix_float * C)
@@ -365,7 +365,7 @@ Level 3 BLAS 인터페이스
   :math:`CblasRight` 면 :math:`B = \alpha B op(A)` 를 계산합니다. 
   행렬 :math:`A` 는 삼각행렬이어햐 하고, 
   :code:`TransA` 가 :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConkTrans` 인 경우 
-  각각 :math:`op(A) = A, A^T, A^H` 를 의미합니다. 
+  각각 :code:`op(A) = A, A^T, A.h` 를 의미합니다. 
   :code:`Uplo` 가 :code:`CblasUpper` 인 경우 행렬 :math:`A` 는 상삼각 부분이 사용되고,  
   :code:`CblasLower` 인 경우 :math:`A` 는 하삼각 부분이 사용됩니다.
   만약, :math:`Diag` 가 :code:`CblasNonUnit` 라면 행렬 :math:`A` 는 대각 성분이 사용되고,  
@@ -381,7 +381,7 @@ Level 3 BLAS 인터페이스
   :math:`CblasRight` 경우에는 :math:`B=\alpha B op(inv(A))` 를 계산합니다. 
   행렬 :math:`A` 는 삼각 행렬이어야 하고 
   :code:`TransA` 가 :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConkTrans` 인 경우 
-  각각 :math:`op(A) = A, A^T, A^H` 를 의미합니다.  
+  각각 :code:`op(A) = A, A^T, A.h` 를 의미합니다.  
   :code:`Uplo` 가 :code:`CblasUpper` 인 경우 행렬 :math:`A` 는 상삼각 부분이 사용되고,  
   :code:`CblasLower` 인 경우 :math:`A` 는 하삼각 부분이 사용됩니다. 
   만약, :math:`Diag` 가 :code:`CblasNonUnit` 라면 행렬 :math:`A` 는 대각 성분이 사용되고,  

@@ -1,6 +1,6 @@
 .. index:: elliptic integrals
 
-이 단원에서 기술된 함수들은 헤더 파일 :math:`gsl_sf_ellint.h`  에 정의되어 있습니다. 
+이 단원에서 기술된 함수들은 헤더 파일 :code:`gsl_sf_ellint.h`  에 정의되어 있습니다. 
 타원 적분에 관한 더 자세한 정보들은 Abramowitz & Stegun, Chpater 17를 참고해 볼 수 있습니다.
 
 르장드르 형태 정의 (Definition of Legendre Forms)

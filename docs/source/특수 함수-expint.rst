@@ -1,6 +1,6 @@
 
 
-지수 적분의 자세한 정보는 Abramowitz & Stegun, Chapter 5. 에서 찾아볼 수 있습니다. 이 함수들은 헤더 파일 :math:`gsl_sf_expint.h` 정의되어 있습니다.
+지수 적분의 자세한 정보는 Abramowitz & Stegun, Chapter 5. 에서 찾아볼 수 있습니다. 이 함수들은 헤더 파일 :code:`gsl_sf_expint.h` 정의되어 있습니다.
 
 지수 적분 (Exponential Integral)
 ----------------------------------
@@ -20,9 +20,9 @@
 
     :math:`2` 차 지수 적분 함수 :math:`E_2(x)` 를 계산합니다.
 
-.. math::
+    .. math::
 
-    E_2(x) := \mathfrak{R} \int_1^\infty \frac{\exp(-xt)}{t^2}  dt
+        E_2(x) := \mathfrak{R} \int_1^\infty \frac{\exp(-xt)}{t^2}  dt
 
 .. function:: double gsl_sf_expint_En (int n, double x)
               int gsl_sf_expint_En_e (int n, double x, gsl_sf_result * result)
@@ -71,7 +71,7 @@ Ei(x)
         \text{Chi}(x) := \mathfrak{R} [\gamma_E + \log(x) + \int_0^x \frac{\cosh(t) -1}{t} dt]
 
     :math:`\gamma_E` 는 오일러 상수입니다. 
-    오일러 상수는 :macro:`M_EULER` 매크로로 라이브러리 내에 있습니다.
+    오일러 상수는 :c:macro:`M_EULER` 매크로로 라이브러리 내에 있습니다.
 
 
 Ei_3(x)
