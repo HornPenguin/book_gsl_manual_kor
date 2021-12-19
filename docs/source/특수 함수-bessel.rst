@@ -225,7 +225,7 @@
 1종 변형 구면 베셀 함수(Regular Modified Spherical Bessel Functions)
 ---------------------------------------------------------------------------
 
-1종 변형 구면 베셀함수 :math:`i_l(x)`는 분수 차수의 1종 수정 베셀함수와 다음과 같은 관계를 가집니다.
+1종 변형 구면 베셀함수 :math:`i_l(x)` 는 분수 차수의 1종 수정 베셀함수와 다음과 같은 관계를 가집니다.
 
 .. math:: 
 
@@ -271,7 +271,7 @@
 .. function:: double gsl_sf_bessel_k0_scaled (double x)
               int gsl_sf_bessel_k0_scaled_e (double x, gsl_sf_result * result)
 
-   :math:`x>0` 에 대해, 조정 계수가 곱해진 :math:`0` 차수의 2종 변형 구면 베셀 함수 :math:`\text{exp}(x)k_0(x)`의 값을 계산합니다.
+   :math:`x>0` 에 대해, 조정 계수가 곱해진 :math:`0` 차수의 2종 변형 구면 베셀 함수 :math:`\text{exp}(x)k_0(x)` 의 값을 계산합니다.
 
 .. function:: double gsl_sf_bessel_k1_scaled (double x)
               int gsl_sf_bessel_k1_scaled_e (double x, gsl_sf_result * result)

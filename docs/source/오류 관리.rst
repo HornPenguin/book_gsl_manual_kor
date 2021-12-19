@@ -125,27 +125,28 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :math
 
 .. function:: void handler (const char * reason, const char * file, int line ,int gsl_errno)
 
-사용자 정의 오류 관리자를 사용하기 위해서는 :code:`gsl_set_error_handler()` 함수를 호출해야합니다. 이 함수도 :math:`gsl_errno.h` 에 정의되어 있습니다.
+사용자 정의 오류 관리자를 사용하기 위해서는 :code:`gsl_set_error_handler()` 함수를 호출해야합니다. 
+이 함수도 :math:`gsl_errno.h` 에 정의되어 있습니다.
 
 .. function:: gsl_error_handler_t * gsl_set_error_handler ( gsl_error_handler_t * new_handler)
 
 
-이 함수는 GSL 명령어 집합을 위한 :math:`new_handler` 는 새로운 오류 관리자를 설정합니다. 
-이전 관리자는 반환됩니다(나중에 복구할 수 있습니다.) 
-유의할 점은 사용자 정의 오류 관리자 함수는 스태틱 변수로 저장됩니다. 
-따라서 한 개의 프로그램에 1개의 오류 관리자만이 사용될 수 있습니다. 
-이 함수는 다중 쓰레드 프로그램에서 사용될 수 없습니다. 
-마스터 쓰레드에서 프로그램 전체 오류 관리를 하도록 하는 예외 상황에서는 사용할 수 있습니다. 
-다음 예제는 어떻게 새로운 오류 관리자를 설정하고 복구하는지에 관한 예시를 보여줍니다.
+     이 함수는 GSL 명령어 집합을 위한 :math:`new_handler` 는 새로운 오류 관리자를 설정합니다. 
+     이전 관리자는 반환됩니다(나중에 복구할 수 있습니다.) 
+     유의할 점은 사용자 정의 오류 관리자 함수는 스태틱 변수로 저장됩니다. 
+     따라서 한 개의 프로그램에 1개의 오류 관리자만이 사용될 수 있습니다. 
+     이 함수는 다중 쓰레드 프로그램에서 사용될 수 없습니다. 
+     마스터 쓰레드에서 프로그램 전체 오류 관리를 하도록 하는 예외 상황에서는 사용할 수 있습니다. 
+     다음 예제는 어떻게 새로운 오류 관리자를 설정하고 복구하는지에 관한 예시를 보여줍니다.
 
-.. code-block:: c
+     .. code-block:: c
 
-         /* save original handler, install new handler */
-     old_handler = gsl_set_error_handler (&my_handler);
-     /* code uses new handler */
-     .....
-     /* restore original handler */
-     gsl_set_error_handler (old_handler);
+              /* save original handler, install new handler */
+          old_handler = gsl_set_error_handler (&my_handler);
+          /* code uses new handler */
+          .....
+          /* restore original handler */
+          gsl_set_error_handler (old_handler);
 
 
 기본 오류 관리자(오류 발생시 :math:`abort()` 를 호출) 사용하려면, 오류 관리자에 :math:`NULL` 을 넣어주면 됩니다.
@@ -182,18 +183,18 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :math
 
 .. c:macro:: GSL_ERROR (reason, gsl_errno)
 
-이 매크로는 GSL 규약에 따라 오류를 보고하고 :math:`gsl_errno` 상태 값을 반환합니다. 이는 다음과 같은 함수로 확장해 볼 수 있습니다.
+     이 매크로는 GSL 규약에 따라 오류를 보고하고 :math:`gsl_errno` 상태 값을 반환합니다. 이는 다음과 같은 함수로 확장해 볼 수 있습니다.
 
-.. code-block:: c
+     .. code-block:: c
 
-         gsl_error (reason, __FILE__, __LINE__, gsl_errno);
-     return gsl_errno;
+              gsl_error (reason, __FILE__, __LINE__, gsl_errno);
+          return gsl_errno;
 
 
-이 매크로는 :code:`gsl_errno.h` 에 정의 되어있고, :math:`do {...} while(0)` 로 감싸져 있습니다. 이는 구문 분석 문제를 방지하기 위함입니다.
+     이 매크로는 :code:`gsl_errno.h` 에 정의 되어있고, :math:`do {...} while(0)` 로 감싸져 있습니다. 이는 구문 분석 문제를 방지하기 위함입니다.
 
-다음은 함수가 요구하는 정밀도를 :math:`tolerance` 까지 만족시키지 못했을 때, 매크로를 사용해 오류를 보고하는 예제를 나타냅니다. 
-오류를 보고하기 위해서는 함수에서 오류 코드 :math:`GSL_ETOL` 를 반환해야 합니다.
+     다음은 함수가 요구하는 정밀도를 :math:`tolerance` 까지 만족시키지 못했을 때, 매크로를 사용해 오류를 보고하는 예제를 나타냅니다. 
+     오류를 보고하기 위해서는 함수에서 오류 코드 :math:`GSL_ETOL` 를 반환해야 합니다.
 
 .. code-block:: c
 
@@ -202,18 +203,18 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :math
      }
 
 
-.. c:macro:: GSL_ERROR_VAL (reason, gsl_errno, value*)
+.. c:macro:: GSL_ERROR_VAL (reason, gsl_errno, value)
 
-이 매크로는 :math:`GSL_ERROR` 매크로와 똑같습니다. 하지만 사용자 정의 값 :math:`value` 를 오류 코드 대신에 반환합니다. 
-이는 부동 소수점 값을 반환하는 수치 함수에서 쓰일 수 있습니다.
+     이 매크로는 :math:`GSL_ERROR` 매크로와 똑같습니다. 하지만 사용자 정의 값 :math:`value` 를 오류 코드 대신에 반환합니다. 
+     이는 부동 소수점 값을 반환하는 수치 함수에서 쓰일 수 있습니다.
 
-다음 예제는 :math:`GSL_ERROR_VAL` 사용해 수학적 특이점에서 :math:`NaN` 값을 반환하는 것을 보여줍니다.
+     다음 예제는 :math:`GSL_ERROR_VAL` 사용해 수학적 특이점에서 :math:`NaN` 값을 반환하는 것을 보여줍니다.
 
-.. code-block:: c
+     .. code-block:: c
 
-         if (x == 0){
-     GSL_ERROR_VAL("argument lies on singularity", GSL_ERANGE, GSL_NAN);
-     }
+              if (x == 0){
+          GSL_ERROR_VAL("argument lies on singularity", GSL_ERANGE, GSL_NAN);
+          }
 
 
 예제

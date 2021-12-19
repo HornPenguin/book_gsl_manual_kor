@@ -63,7 +63,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 
 .. c:type:: gsl_sf_result
 
-  ::
+  .. code-block:: c
 
     typedef struct
     {
@@ -72,7 +72,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
     } gsl_sf_result;
 
 
-  :data:`val`는 함수의 값을 저장하고, :data:`err`는 함수 값의 절대 오차를 나타냅니다.
+  :data:`val` 는 함수의 값을 저장하고, :data:`err` 는 함수 값의 절대 오차를 나타냅니다.
 
 몇몇 경우에, 오버플로우나 언더플로우가 함수에 의해 감지될 수 있습니다. 
 그러한 경우에 크기를 나타내는 지수 값을 오차/값 쌍과 함께 반환할 수도 있습니다. 
@@ -98,7 +98,8 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 
 이 라이브러리의 특수 함수 구현체들의 제공 목적은 배정밀도를 가지는 특수 함수 값의 제공을 위함입니다. 
 그러나 몇몇 특수 함수들의 경우, 배정밀도 수준의 정밀도를 얻기 위해서 매우 높은 항이 필요한 경우도 있습니다. 
-이러한 경우에 :type:`gsl_mode_t` 자료형으로 정의된 :code:`mode` 인자를 이용해 요구 정밀도를 낮추어 연산 효율을 높일 수 있습니다. 다음의 정밀도 값들이 :math:`mode`  인자에 들어갈 수 있습니다.
+이러한 경우에 :c:type:`gsl_mode_t` 자료형으로 정의된 :code:`mode` 인자를 이용해 요구 정밀도를 낮추어 연산 효율을 높일 수 있습니다. 
+다음의 정밀도 값들이 :math:`mode` 인자에 들어갈 수 있습니다.
 
 .. c:type:: gsl_mode_t
 
