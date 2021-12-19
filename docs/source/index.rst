@@ -2,7 +2,7 @@
 서문 
 ****************
 
-.. default-domain:: C
+.. default-domain:: c
 
 .. note::
 
