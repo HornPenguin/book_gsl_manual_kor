@@ -58,23 +58,23 @@
 다음은 가장 일반적인 오류 코드입니다.
 
 
-.. var:: int GSL_EDOM
+.. c:var:: int GSL_EDOM
 
 도메인 오류: 인수 값이 함수가 정의된 도메인에 포함되지 않을 때, 수학 함수에 의해 사용됩니다. 
 표준 C 라이브러리의 :math:`EDOM` 와 같은 상황에서 사용됩니다. 
 
-.. var:: int GSL_ERANGE
+.. c:var:: int GSL_ERANGE
 
 범위 오류: 오버플로 또는 언더플로로 인해 결과 값을 나타낼 수 없는 경우, 수학 함수에 의해 사용됩니다.
 표준 C 라이브러리의 :math:`ERANGE` 와 같은 상황에서 사용됩니다. 
 
-.. var:: int GSL_ENOMEM
+.. c:var:: int GSL_ENOMEM
 
 사용 가능한 메모리가 없음: 용량이 꽉 찼기 때문에 시스템이 가상 메모리를 더 할당할 수 없습니다.
 표준 C 라이브러리의 :math:`ENOMEM` 와 같은 상황에서 사용됩니다. 
 이 오류는 :math:`malloc()` 메모리를 할당하려고 할 때 GSL 루틴에 문제가 발생할 때 보고됩니다.
 
-.. var:: int GSL_EINVAL
+.. c:var:: int GSL_EINVAL
 
 잘못된 인수: 이는 잘못된 인수를 라이브러리 함수에 전달하는 데 다양한 종류의 문제를 나타내기 위해 사용됩니다().
 표준 C 라이브러리의 :math:`EINVAL` 와 유사합니다.
@@ -180,7 +180,7 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :math
 :code:`gsl_errno.h` 에서는 이러한 과정을 효율적으로 처리해 줄 수 있는 두 개의 매크로를 제공합니다.
 
 
-.. macro:: GSL_ERROR (reason, gsl_errno)
+.. c:macro:: GSL_ERROR (reason, gsl_errno)
 
 이 매크로는 GSL 규약에 따라 오류를 보고하고 :math:`gsl_errno` 상태 값을 반환합니다. 이는 다음과 같은 함수로 확장해 볼 수 있습니다.
 
@@ -202,7 +202,7 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :math
      }
 
 
-.. macro:: GSL_ERROR_VAL (reason, gsl_errno, value*)
+.. c:macro:: GSL_ERROR_VAL (reason, gsl_errno, value*)
 
 이 매크로는 :math:`GSL_ERROR` 매크로와 똑같습니다. 하지만 사용자 정의 값 :math:`value` 를 오류 코드 대신에 반환합니다. 
 이는 부동 소수점 값을 반환하는 수치 함수에서 쓰일 수 있습니다.

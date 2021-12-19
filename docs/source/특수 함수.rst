@@ -102,15 +102,15 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 
 .. c:type:: gsl_mode_t
 
-  .. macro:: GSL_PREC_DOUBLE
+  .. c:macro:: GSL_PREC_DOUBLE
 
     배정밀도, 근사적으로 :math:`2 \cdot 10^{-16}`  의 상대 정확도를 가짐.
 
-  .. macro:: GSL_PREC_SINGLE
+  .. c:macro:: GSL_PREC_SINGLE
 
     단정밀도, 근사적으로 :math:`1 \cdot 10^{-7}`  의 상대 정확도를 가짐.
 
-  .. macro:: GSL_PREC_APPROX
+  .. c:macro:: GSL_PREC_APPROX
 
     근사 값, 근사적으로 :math:`5 \cdot 10^{-4}`  의 상대 정확도를 가짐.
 
