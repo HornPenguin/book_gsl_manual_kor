@@ -37,7 +37,8 @@
 
 .. function:: gsl_sf_mathieu_workspace * gsl_sf_mathieu_alloc (size_t n, double qmax)
 
-    마티유 함수들의 배열 기반 방법을 위한 작업 공간을 반환합니다. 인자 :math:`n` :math:`qmax` 최대 계수와 공간에서 계산되는 마티유 함수의 :math:`q`  -값을 결정합니다.
+    마티유 함수들의 배열 기반 방법을 위한 작업 공간을 반환합니다. 
+    인자 :math:`n` 는 :math:`qmax` 최대 계수와 공간에서 계산되는 마티유 함수의 :math:`q` -값을 결정합니다.
 
 .. function:: void gsl_sf_mathieu_free (gsl_sf_mathieu_workspace * work)
 
@@ -51,12 +52,14 @@
               int gsl_sf_mathieu_b (int n, double q)
               int gsl_sf_mathieu_b_e (int n, double q, gsl_sf_result * result)
 
-    각각, 마티유 함수 :math:`c e_n (q,x)`  와 :math:`s e_n (q,x)`  의 특성 값 :math:`a_n(q)`  와 :math:`b_n(q)`  을 계산합니다.
+    각각, 마티유 함수 :math:`c e_n (q,x)` 와 :math:`s e_n (q,x)` 의 특성 값 :math:`a_n(q)` 와 :math:`b_n(q)` 을 계산합니다.
 
 .. function:: int gsl_sf_mathieu_a_array (int order_min, int order_max, double q, gsl_sf_mathieu_workspace * work, double result_array[])
               int gsl_sf_mathieu_b_array (int order_min, int order_max, double q, gsl_sf_mathieu_workspace * work, double result_array[])
 
-    마티유 함수의 특성 값 :math:`a_n(q)`  와 :math:`b_n(q)`  을 주어진 :math:`oreder_min` :math:`order_max`  사이 범위에 있는 :math:`n`  에 대해 계산합니다. 계산 결과는 :math:`result_array` 저장됩니다.
+    마티유 함수의 특성 값 :math:`a_n(q)` 와 :math:`b_n(q)` 을 주어진 
+    :math:`oreder_min` 와 :math:`order_max` 사이 범위에 있는 :math:`n` 에 대해 계산합니다. 
+    계산 결과는 :math:`result_array` 에 저장됩니다.
 
 각 운동량 마티유 함수 (Angular Mathieu Functions)
 -------------------------------------------------------------------
@@ -66,12 +69,14 @@
               int gsl_sf_mathieu_se (int n, double q, double x)
               int gsl_sf_mathieu_se_e (int n, double q, double x, gsl_sf_result * result)
 
-    각각, 각 운동량 마티유 함수 :math:`c e_n (q,x)`  와 :math:`s e_n (q,x)`  를 계산합니다.
+    각각, 각 운동량 마티유 함수 :math:`c e_n (q,x)` 와 :math:`s e_n (q,x)` 를 계산합니다.
 
 .. function:: int gsl_sf_mathieu_ce_array (int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
               int gsl_sf_mathieu_se_array (int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
 
-    각각, 각 운동량 마티유 함수 :math:`c e_n (q,x)`  와 :math:`s e_n (q,x)`  의 값을 주어진 :math:`nmin` :math:`nmax`  이 범위에 있는 :math:`n`  에 대해 계산합니다. 계산 결과는 :math:`result_array` 저장됩니다.
+    각각, 각 운동량 마티유 함수 :math:`c e_n (q,x)` 와 :math:`s e_n (q,x)` 의 값을 주어진 
+    :math:`nmin` 와 :math:`nmax` 범위에 있는 :math:`n`  에 대해 계산합니다. 
+    계산 결과는 :math:`result_array` 에 저장됩니다.
 
 
 방사 마티유 함수 (Radial Mathieu Functions)
