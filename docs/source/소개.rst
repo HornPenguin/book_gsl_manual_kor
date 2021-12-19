@@ -169,7 +169,7 @@ GNU C complier와 GNU C Library에서 본 라이브러리는 몇가지 추가 �
 본 메뉴얼에서는 키보드로 작성해야하는 많은 예시들을 포함하고 있습니다. 
 터미널에서 작성해야하는 경우 다음과 같이 작성됩니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ command
 

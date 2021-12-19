@@ -190,7 +190,7 @@ GSL에서는 해당 함수들을 제공해 이를 보완합니다.
      만약, :math:`HAVE_INLINE` 가 정의되어 있다면, :math:`inline` 함수로 작동합니다. 
      따라서 이러한 함수의 사용이 수식을 그대로 사용하는 만큼이나 효율적일 수 있습니다.
 
-.. code-block:: C
+.. code-block:: c
 
      #include<gsl/gsl_math.h>
      double =y = gsl_pow_4(3.141) /* compute 3.141**4 */

@@ -9,7 +9,7 @@ Windows, Linux, Mac에서 사전 컴파일 된 라이브러리가 존재합니�
 Windows에서는 `Cygwin <http://www.cygwin.com/>`_ 의 일부분으로 존재하고 Linux 등에서는 베포판의 패키지 저장소에 있습니다. 
 해당 파일을 사용할 수도 있고 소스코드를 실제 컴파일해서 설치할 수도 있습니다. 유의점은 이러한 사전 컴파일 라이브러리는 공식 베포가 아니라는 점입니다. 예를 들어서 **Ubuntu** 환경에서 :math:`apt search libgsl` 을 사용해 저장소에서 해당 라이브러리를 검색할 경우, 다음과 같은 결과를 볼 수 있습니다. (06-29-2021 확인)
 
-.. code-block:: bash
+.. code-block:: console
 
     libgsl-dbg/focal 2.5+dfsg-6build1 amd64
     GNU Scientific Library (GSL) -- debug symbols package
@@ -39,14 +39,14 @@ GSL은 `Main GNU FTP site <ftp://ftp.gnu.org/gnu/gsl/>`_ 나 가까운 `GNU mirr
 
 현재 가장 최신버전은 2021년 6월 1일에 배포된 :math:`gsl-2.7` 버전 입니다. 가장 최신 버전의 라이브러리를 다운로드 하고 싶다면, 다음과 같이 위의 ftp 링크에서 가장 최신 버전의 파일을 내려받거나.
 
-.. code-block:: bash
+.. code-block:: console
 
     gsl-X.Y.tar.gz
     gsl-X.Y.tar.gz.sig
 
 자동으로 최신 버전으로 업데이트 되는 파일을 내려받을 수도 있습니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     gsl-lastest.tar.gz
 
@@ -77,13 +77,13 @@ Prerequisites
 
 소스코드 형태의 프로젝트를 설치하기 위해서는 먼저 이러한 소스코드들을 컴파일 할 수 있는 컴파일러가 필요합니다. 일반적으로 GNU 프로젝트를 설치할 때에는 GCC(Gnu Compiler Collection)을 기본으로 사용합니다. 다음을 터미널 창에 입력하면 :math:`gcc` 의 설치 유무를 알 수 있습니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ gcc
  
 만약, :math:`gcc`  가 설치되어있다면, 
  
-.. code-block:: bash
+.. code-block:: console
 
     gcc: fatal error: no input files
     compliation terminated
@@ -91,14 +91,14 @@ Prerequisites
 
 의 메세지가 뜰 것입니다. 
 
-.. code-block:: bash
+.. code-block:: console
 
     $ gcc -v
 
 
 를 입력하면 설치된 :math:`gcc` 의 버전을 확인 할 수 있습니다. 일반적으로 최신 버전의 프로그램 사용이 권장되므로 다음을 입력해 :math:`gcc` 의 업그레이드 버전이 있는지 확인하고 이를 업데이트 합니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ sudo apt update
     $ sudo apt upgrade
@@ -108,7 +108,7 @@ Prerequisites
 
 다음을 입력해 :math:`build-essential` 패키지를 설치합니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ sudo apt update
     $ sudo apt install build-essential
@@ -119,14 +119,14 @@ Downloading Source
 
 위에서 설명한 FTP 사이트에서 :math:`.tar.gz` 파일을 다운로드하고, 이를 다음의 명령어를 통해 압축을 해제합니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ tar -xvzf gsl-lastest.tar.gz
 
 
 이제 압축을 해제한 디렉토리로 들어갑시다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ cd ./gsl-lastest
 
@@ -134,7 +134,7 @@ Downloading Source
 Configuration
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: bash
+.. code-block:: console
 
     $ ./configure
 
@@ -145,7 +145,7 @@ Building & Test
 
 ``config``  작업이 끝나면 만들어진 :math:`Makefile` 을 이용해 소스코드를 컴파일 합니다. :math:`build-essential` 에 포함된 :math:`make`  유틸리티가 이 작업을 해줍니다. 다음을 입력합시다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ make
 
@@ -156,14 +156,14 @@ Final install
  
 ``make``  작업이 끝났으면 다음을 입력해 이를 설치합니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ sudo make install
 
 
 6 단계까지 마무리하면 GSL의 설치는 끝납니다. 기본으로 설치된 위치는 :math:`/usr/local/lib` 입니다. 이 폴더 안에는 다음과 같은 :math:`.so`  동적 라이브러리가 담겨있습니다. 컴퓨터 환경에 따라 해당 디렉토리에 담겨있는 라이브러리는 다양할 수 있습니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     User@COMPUTERNNAME:~$ ls -l /usr/local/lib
     total 47072
@@ -194,7 +194,7 @@ Final install
 
 마지막 방법은 :math:`libc.conf` 을 만들어 주면 됩니다. 파일이름은 중요하지 않습니다. :math:`.conf` 파일은 1 줄에 각각 :math:`.so`  동적 라이브러리 파일들이 있는 디렉토리 경로를 작성하면 됩니다. 일반적으로 이 방법이 권장됩니다. 최신 Ubuntu에서는 기본으로 :math:`libc.conf`  파일이 :math:`/etc/ld.so.conf/`  디렉토리에 있어 별도의 설정없이 라이브러리를 활용 가능합니다. :math:`libc.conf`  파일의 내용은 다음과 같습니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     # libc default configuration
     /usr/local/lib
@@ -203,7 +203,7 @@ Final install
 
 ``bash`` 창에 다음을 입력하면 환경 변수 :math:`LD_LIBRARY_PATH` 에 위치를 추가할 수 있습니다. 
 
-.. code-block:: bash
+.. code-block:: console
 
     LD_LIBRARY_PATH=${LD_LIBRARY_PARH}:/usr/local/lib
     export LD_LIBRARY_PATH 
@@ -212,7 +212,7 @@ Final install
 그러나 이 방법은 새로운 :math:`bash` 창을 열 때마다 별도로 입력해 주어야합니다. 때문에, 계정의 홈 디렉토리에 있는 :math:`.bashrc` 파일의 끝에 다음의 문구를 추가해줍니다 [#bashrc]_ .
 
 
-.. code-block:: bash
+.. code-block:: console
 
     LD_LIBRARY_PATH=${LD_LIBRARY_PARH}:/usr/local/lib
     export LD_LIBRARY_PATH 

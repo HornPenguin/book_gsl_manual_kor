@@ -15,7 +15,7 @@
 함수들은 오류 발생시 각각의 오류를 나타내는 0이 아닌 오류값을 반환하고, 
 성공적으로 실행되었을 시 0 값을 반환합니다.
 
-.. code-block:: C
+.. code-block:: c
 
     int status = gsl_function (...)
      
@@ -38,7 +38,7 @@
 이 함수는 다른 라이브러리의 다른 함수들에서 오류를 보고할 때, 호출자에게 값을 반환하기 직전에 호출됩니다. 
 이 오류 관리 함수의 기본 행동은 메세지를 화면에 출력하고 프로그램을 정지 시킵니다.
 
-.. code-block:: bash
+.. code-block:: console
 
      gsl: file.c:67: ERROR: invalid argument supplied by user
      Default GSL error handler invoked.
@@ -81,7 +81,7 @@
 
 각각의 오류 코드들은 함수 :math:`gsl_strerror()` 사용해, 오류 메세지로 바꿀 수 있습니다.
 
-.. code-block:: C
+.. code-block:: c
 
          const char * gsl_strerror(const int gsl_errno)
 
@@ -89,7 +89,7 @@
 이 함수는 각각의 오류 코드 :math:`gsl_errorno` 에 대한 설명을 문자열로 반환합니다. 
 예를 들어서:
 
-.. code-block:: C
+.. code-block:: c
 
          printf ("error: %s\n", gsl_strerror (status));
 
@@ -138,7 +138,7 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :math
 마스터 쓰레드에서 프로그램 전체 오류 관리를 하도록 하는 예외 상황에서는 사용할 수 있습니다. 
 다음 예제는 어떻게 새로운 오류 관리자를 설정하고 복구하는지에 관한 예시를 보여줍니다.
 
-.. code-block:: C
+.. code-block:: c
 
          /* save original handler, install new handler */
      old_handler = gsl_set_error_handler (&my_handler);
@@ -150,7 +150,7 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :math
 
 기본 오류 관리자(오류 발생시 :math:`abort()` 를 호출) 사용하려면, 오류 관리자에 :math:`NULL` 을 넣어주면 됩니다.
 
-.. code-block:: C
+.. code-block:: c
 
          old_handler = gsl_set_error_handler (NULL);
 
@@ -184,7 +184,7 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :math
 
 이 매크로는 GSL 규약에 따라 오류를 보고하고 :math:`gsl_errno` 상태 값을 반환합니다. 이는 다음과 같은 함수로 확장해 볼 수 있습니다.
 
-.. code-block:: C
+.. code-block:: c
 
          gsl_error (reason, __FILE__, __LINE__, gsl_errno);
      return gsl_errno;
@@ -195,7 +195,7 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :math
 다음은 함수가 요구하는 정밀도를 :math:`tolerance` 까지 만족시키지 못했을 때, 매크로를 사용해 오류를 보고하는 예제를 나타냅니다. 
 오류를 보고하기 위해서는 함수에서 오류 코드 :math:`GSL_ETOL` 를 반환해야 합니다.
 
-.. code-block:: C
+.. code-block:: c
 
          if (residual > tolerance){
          GSL_ERROR("residual exceeds tolerance", GSL_ETOL);
@@ -209,7 +209,7 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :math
 
 다음 예제는 :math:`GSL_ERROR_VAL` 사용해 수학적 특이점에서 :math:`NaN` 값을 반환하는 것을 보여줍니다.
 
-.. code-block:: C
+.. code-block:: c
 
          if (x == 0){
      GSL_ERROR_VAL("argument lies on singularity", GSL_ERANGE, GSL_NAN);
@@ -221,7 +221,7 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :math
 
 다음은 오류가 보고될 수 있는 함수의 반환 값을 확인하는 예제 코드입니다.
 
-.. code-block:: C
+.. code-block:: c
 
          #include <stdio.h>
      #include <gsl/gsl_errno.h>

@@ -10,7 +10,7 @@
 
 다음은 간단한 예제입니다.
 
-.. code-block:: C
+.. code-block:: c
 
     #include <gsl/gsl_sf_pow_int.h>
 /* compute 3.0**12 */

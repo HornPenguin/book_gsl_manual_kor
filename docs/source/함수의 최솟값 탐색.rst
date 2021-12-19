@@ -64,7 +64,7 @@ Fig 27.을 참고하십시오.
 
 이 함수는 :math:`T`  형태로 할당된 새 최소화 작업공간의 주소 포인터를 반환합니다. 예를 들어서, 다음 코드는 황금비 최소화 작업 공간을 할당해 반환합니다.
 
-.. code-block:: C
+.. code-block:: c
 
     const gsl_min_fminimizer_type * T = gsl_min_fminimizer_goldensection;
 gsl_min_fminimizer * s = gsl_min_fminimizer_alloc (T);
@@ -90,7 +90,7 @@ gsl_min_fminimizer * s = gsl_min_fminimizer_alloc (T);
 
 이 함수는 최소화 공간의 최소화 기법 이름을 가리키는 포인터를 반환합니다. 예를 들어서,
 
-.. code-block:: C
+.. code-block:: c
 
     printf("s is a '%s' minimizer\n", gsl_min_fminimizer_name(s));
 
@@ -197,7 +197,7 @@ gsl_min_fminimizer * s = gsl_min_fminimizer_alloc (T);
 -------------------------
 다음 코드는 브랜트 알고리즘을 이용해서 함수 :math:`f(x) = \cos(x) +1`  의 최소값을 찾는 프로그램입니다. 해당 함수의 최소값은 :math:`x= \pi` 지점입니다. 시작 구간은 :math:`(0,6)`  , 초기 추정 최소값은 :math:`2`  입니다.
 
-.. code-block:: C
+.. code-block:: c
 
     #include <stdio.h>
 #include <gsl/gsl_errno.h>
@@ -269,7 +269,7 @@ int main (void)
 
 다음은 작성한 최소화 프로그램의 결과입니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     using brent method
  iter [    lower,        upper]       min           err  err(est)

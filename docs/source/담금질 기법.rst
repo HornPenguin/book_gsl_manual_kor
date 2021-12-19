@@ -69,7 +69,7 @@
    디버그 기록이  :code:`stdout` 에 출력될 것입니다. 
    이는 다음과 같은 행을 가집니다:
  
-   .. code-block:: bash
+   .. code-block:: console
  
        #-iter  #-evals  temperature position energy   best_energy  
  
@@ -88,7 +88,7 @@
 
    이 함수는 현재 상태 :code:`xp` 에 대한 에너지를 반환해야합니다.
  
-   .. code-block:: C
+   .. code-block:: c
  
        double (*gsl_siman_Efunc_t) (void *xp)
 
@@ -98,7 +98,7 @@
    이 함수는 현재 상태 :code:`xp` 를 난수 발생자 :code:`r` 와 
    단계별 최대 이동거리 :code:`step_size` 를 이용해 수정해야합니다.
     
-   .. code-block:: C
+   .. code-block:: c
  
      void (*gsl_siman_step_t) (const gsl_rng *r, void *xp, double step_size)
         
@@ -107,7 +107,7 @@
 
    이 함수형은 주어진 두 개의 상태 :code:`xp` 와 :code:`yp` 사이의 거리를 반환해야합니다.
  
-   .. code-block:: C
+   .. code-block:: c
  
      double (*gsl_siman_metric_t) (void * xp, void * yp)
 
@@ -115,7 +115,7 @@
 
    이 함수형은 주어진 상태 :code:`xp` 의 설정값을 출력해야합니다.
  
-   .. code-block:: C
+   .. code-block:: c
  
        void (*gsl_siman_print_t) (void *xp)
 
@@ -124,7 +124,7 @@
 
    이 함수형은 설정 값을 :code:`source` 에서  :code:`dest` 로 복사해야 합니다.
  
-   .. code-block:: C
+   .. code-block:: c
  
        void (*gsl_siman_copy_t) (voi d *souirce, coid *dest)
 
@@ -132,7 +132,7 @@
 
    이 함수형은 설정 :code:`xp` 의 새 복사본을 만들어야 합니다.
  
-   .. code-block:: C
+   .. code-block:: c
    
      void (*gsl_siman_copy_construct_t) (void *xp)
 
@@ -141,7 +141,7 @@
    이 함수형은 설정 :code:`xp` 를 삭제해야 합니다. 
    다시말해, :code:`xp` 가 들어있는 메모리를 해제해야 합니다.
  
-   .. code-block:: C
+   .. code-block:: c
  
      void (*gsl_siman_destroy_t) (void *xp)
 
@@ -183,7 +183,7 @@ Trivial 예제
 
 :numref:`fig_siman-test` 는  :code:`siman_test` 를 다음과 같이 실행한 결과입니다.
 
-.. code-block:: bash
+.. code-block:: console
 
   $ ./siman_test | awk '!/^#/ {print $1, $4}' 
    | graph -y 1.34 1.4 -W0 -X generation -Y position 
@@ -192,7 +192,7 @@ Trivial 예제
 
 :numref:`fig_siman-energy` 는 :code:`siman_test` 다음과 같이 실행한 결과입니다.
 
-.. code-block:: bash
+.. code-block:: console
 
   $ ./siman_test | awk '!/^#/ {print $1, $5}' 
    | graph -y -0.88 -0.83 -W0 -X generation -Y energy 
@@ -234,7 +234,7 @@ Mark Galassi는 미국 남부 도시 12개의 좌표를 기반으로 아주 간�
 
 다음 코드는 시각 그래프를 만들어 줍니다.
 
-.. code-block:: bash
+.. code-block:: console
 
   $ ./siman_tsp > tsp.output
   $ grep -v "^#" tsp.output
@@ -256,7 +256,7 @@ Mark Galassi는 미국 남부 도시 12개의 좌표를 기반으로 아주 간�
 
 다음은 초기 단계에서 방문하는 도시 순서입니다. 경도 값이 음수인 이유는, 서쪽에 위치한 도시들이고, 실제 지도처럼 그래프로 보일 수 있기를 바랬기 때문입니다.
 
-.. code-block:: bash
+.. code-block:: console
 
   # initial coordinates of cities (longitude and latitude)
   ###initial_city_coord: -105.95 35.68 Santa Fe
@@ -276,7 +276,7 @@ Mark Galassi는 미국 남부 도시 12개의 좌표를 기반으로 아주 간�
 
 최적화 된 경로는 다음과 같습니다.
 
-.. code-block:: bash
+.. code-block:: console
 
   # final coordinates of cities (longitude and latitude)
   ###final_city_coord: -105.95 35.68 Santa Fe

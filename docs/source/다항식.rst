@@ -243,7 +243,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
 
 다음 코드는 이 근들을 찾아줍니다.
 
-.. code-block:: C
+.. code-block:: c
 
   #include <stdio.h>
   #include <gsl/gsl_poly.h>
@@ -275,7 +275,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
 
 프로그램의 결과 값은 다음과 같습니다.
 
-.. code-block:: bash
+.. code-block:: console
 
   z0 = -0.809016994374947673 +0.587785252292473359
   z1 = -0.809016994374947673 -0.587785252292473359

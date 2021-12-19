@@ -25,7 +25,7 @@
 
 :code:`gsl_complex` 기본적인 형태는 다음 구조체로 정의됩니다.
 
-.. code-block:: C
+.. code-block:: c
 
     	typedef struct
 	{
@@ -42,7 +42,7 @@
 *먼저* 포함했다면, :code:`gsl_complex` C의 복소수 자료 형으로 
 다음과 같이 정의됩니다.
 
-.. code-block:: C
+.. code-block:: c
 
         typedef double complex gsl_complex
 
@@ -50,7 +50,7 @@
 이 방법은 :code:`gsl_complex` 구조체를 사용자들이 
 일반 연산으로 취급할 수 있게 해줍니다.
 
-.. code-block:: C
+.. code-block:: c
 
     gsl_complex x = 2+ 5*I;
     gsl_complex y = x_ (3-4*I);
@@ -84,7 +84,7 @@
     이 매크로를 이용해서 일반적인 연산을 복소수에 대해, 
     사용할 수 있습니다. 
 
-    .. code-block:: C
+    .. code-block:: c
 
         gsl_complex x, y;
 
@@ -103,7 +103,7 @@
     데카르트 좌표 성분 ( :code:`x`, :code:`y` )을 포인터 :code:`zp` 가 가르키는 
     복소수의 실수, 허수부에 저장합니다. 예를 들어서,
 
-    .. code-block:: C
+    .. code-block:: c
 
         GSL_SET_COMPLEX(&z, 3, 4)
 

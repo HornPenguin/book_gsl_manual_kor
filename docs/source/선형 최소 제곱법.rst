@@ -148,7 +148,7 @@ $1
 
 다음의 프로그램은 선형 최소 제곱법을 사용해 주어진 데이터에 맞는 직선 식을 찾습니다. 그리고 최적의 피팅선과 버금 표준 편차를 출력합니다.
 
-.. code-block:: C
+.. code-block:: c
 
     #include <stdio.h>
 #include <gsl/gsl_fit.h>
@@ -199,7 +199,7 @@ main (void)
 
 다음의 명령어들은 프로그램의 출력값으로부터 데이터를 뽑아내고 GNU plotutils "graph" 도구를 이용해 시각 그래프를 만들어줍니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ ./demo > tmp
 $ more tmp

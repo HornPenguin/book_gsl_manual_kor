@@ -27,7 +27,7 @@
 라이브러리를 사용하려면 전처리기가 :code:`gsl/` 디렉토리를 포함하도록 
 다음과 같이 작성해야합니다. 
 
-.. code-block:: C
+.. code-block:: c
 
   #include <gsl/gsl_math.h>
 
@@ -39,7 +39,7 @@
 전 단락의 프로그램 코드파일을 :code:`example.c` 로 저장했다면 
 :code:`gcc` 에서 다음과 같이 쓸 수 있습니다.
 
-.. code-block:: bash
+.. code-block:: console
 
   $ gcc -Wall -I/usr/local/include -c example.c
 
@@ -59,7 +59,7 @@ include 경로는 기본적으로 :code:`/usr/local/include` 이므로 위 명�
 이 디렉토리가 링커의 표준 검색 경로에  포함되어 있지 않다면, 
 커멘드 라인 명령어로 설정해 주어야 합니다.
 
-.. code-block:: bash
+.. code-block:: console
 
   $ gcc -L/usr/local/lib example.o -lgsl -lgslcblas -lm
 
@@ -87,7 +87,7 @@ GNU C Complier와 관련 프로그램의 튜토리얼을 보고 싶다면
 
 다음의 명령어는 다른 BLAS라이브러리(:code:`libcblas.a`)를 어떻게 프로그램과 링크하는 지 보여줍니다. 
 
-.. code-block:: bash
+.. code-block:: console
 
     $ gcc example.o -lgsl -lcblas -lm
 
@@ -99,7 +99,7 @@ ATLAS 패키지는 고효율의 BLAS 라이브러리를 CBLAS 인터페이스를
 이 패키지는 자유 소프트웨어이고 빠른 벡터와 매트릭스 연산이 필요할 때, 설치되어있어야 합니다. 
 다음 명령줄은 ATLAS 라이브러리와 CBLAS 인터페이스를 링크합니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ gcc example.o -lgsl -lcblas -latlas -lm
 
@@ -117,7 +117,7 @@ BLAS에 대한 더 자세한 정보를 알고 싶다면, :ref:`BLAS 지원` 을 
 파일을 런타임과정에서 제공해야 합니다. 만약 라이브러리를 찾을 수 없다면 
 다음의 오류 메세지가 나옵니다.
 
-.. code-block:: bash
+.. code-block:: console
 
   $ ./a.out
   ./a.out: error while loadinng shared libraries:
@@ -132,7 +132,7 @@ BLAS에 대한 더 자세한 정보를 알고 싶다면, :ref:`BLAS 지원` 을 
 예를 들어서, Bourne shell( :code:`/bin/sh` 이나 :code:`/bin/bash`)의 경우, 
 라이브러리 검색 경로는 다음과 같은 명령어로 설정할 수 있습니다.
 
-.. code-block:: bash
+.. code-block:: console
 
   $ LD_LIBRARY_PATH=/usr/local/lib
   $ export LD_LIBRARY_PATH
@@ -143,7 +143,7 @@ BLAS에 대한 더 자세한 정보를 알고 싶다면, :ref:`BLAS 지원` 을 
 C-shell( :code:`/bin/csh` 이나 :code:`/bin/tcsh`)의 경우 동일한 기능을 하는 
 다음 명령어를 쓸 수 있습니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     % setenv LD_LIBRARY_PATH /usr/local/lib
 
@@ -157,7 +157,7 @@ C-shell의 표준 프롬프트 기호는 :code:`%` 입니다.
 
 프로그램의 정적 링크 버전을 원한다면 :code:`gcc` 에서 :code:`-static` 플래그를 사용하면 됩니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ gcc -static example.o -lgsl -lgslcblas -lm
 
@@ -191,7 +191,7 @@ inline 기능의 사용을 위해, 라이브러리의 외부 헤더 파일에서
 이러한 함수들의 inline 버전은 응용 프로그램을 컴파일 할 때, 
 매크로 :code:`HAVE_INLINE` 을 정의해 포함시킬 수 있습니다. 
 
-.. code-block:: bash
+.. code-block:: console
 
     $ gcc -Wall -c DHAVE_INLINE example.c
 
@@ -230,7 +230,7 @@ IEEE 표준은 각각의 기기들에서 확장된 숫자형들이 가져야 하
 이에 의존하는 특정 GSL 명령어를 제거해서, 정의되지 않거나 잘못된 결과가 나오는 경우를 피할 수 있습니다.
 :code:`long double` 을 지원하지 않을 경우 :code:`configure` 단계에서 출력 결과는 다음과 같습니다.:
 
-.. code-block:: bash
+.. code-block:: console
 
 	 checking whether printf works with long double... no
 
@@ -252,7 +252,7 @@ IEEE 표준은 각각의 기기들에서 확장된 숫자형들이 가져야 하
 가 있다면, 다음의 메크로를 :code:`config.h`
 와 응용 프로그램에 정의할 수 있습니다.
 
-.. code-block:: C
+.. code-block:: c
 
   /* Substitute gsl_hypot for missing system hypot */
 
@@ -286,7 +286,7 @@ IEEE 표준은 각각의 기기들에서 확장된 숫자형들이 가져야 하
 이러한 방법은 사용자가 최적화한 함수를 사용할 때도 이식성을 유지하기에 좋은 방법입니다. 
 다음 줄들은 가우스 분포(Gauss distribution)에서 표본을 뽑아오는 방법을 플래폼 의존 방식으로 구현한 것입니다.
 
-.. code-block:: C
+.. code-block:: c
 
   #ifdef SPARC
   #define gsl_ran_gaussian gsl_ran_gaussian_ratio_method
@@ -314,7 +314,7 @@ IEEE 표준은 각각의 기기들에서 확장된 숫자형들이 가져야 하
 다음 표는 가상의 모듈 :code:`gsl_foo` 자료형으로 정의된 :code:`fn()` 의 모든 수치형 정의를 보여줍니다.
 
 
-.. code-block:: C
+.. code-block:: c
 
   gsl_foo_fn               double
   gsl_foo_long_double_fn   long double
@@ -341,7 +341,7 @@ IEEE 표준은 각각의 기기들에서 확장된 숫자형들이 가져야 하
 예를 들어서 어느 모듈이 :code:`gsl_foo` 라는 자료형을 정의하는 경우, 
 다음과 같은 방법으로 확장할 수 있습니다.
 
-.. code-block:: C
+.. code-block:: c
 
   gsl_foo                  double
   gsl_foo_long_double      long double
@@ -364,7 +364,7 @@ IEEE 표준은 각각의 기기들에서 확장된 숫자형들이 가져야 하
 배정밀도로 정의된 함수만을 가져오거나 다른 특정한 자료형으로 정의된 함수만을 가져오고 싶다면 
 다음의 독립된 헤더 파일들을 포함시키면 됩니다.
 
-.. code-block:: C
+.. code-block:: c
 
   #include <gsl/gsl_foo.h>               All types
   #include <gsl/gsl_foo_double.h>        double

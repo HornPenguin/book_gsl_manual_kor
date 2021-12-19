@@ -92,7 +92,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
     :math:`T`  풀이 방법을 위한 새 풀이 공간을 할당해 포인터를 반환합니다. 
     예를 들어서 다음 코드는 이분법 방법을(Bisection method)을 위한 풀이 공간을 생성합니다.
 
-    .. code-block:: C
+    .. code-block:: c
 
         const gsl_root_fsolver_type * T = gsl_root_fsolver_bisection;
         gsl_root_fsolver * s = gsl_root_fsolver_alloc (T);
@@ -108,7 +108,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
     미분 기반 풀이형 :math:`T` 위한 새 풀이 공간을 할당해 포인터를 반환합니다. 
     예를 들어서 다음 코드는 뉴턴-렙슨 방법(Newton-Raphson method)를 위한 풀이 공간을 생성합니다.
 
-    .. code-block:: C
+    .. code-block:: c
 
         const gsl_root_fdfsolver_type * T = gsl_root_fdfsolver_newton;
         gsl_root_fdfsolver * s = gsl_root_fdfsolver_alloc (T);
@@ -141,7 +141,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
  
     풀이 방법의 이름을 담은 포인터를 반환합니다. 예를 들어서,
 
-    .. code-block:: C
+    .. code-block:: c
 
         printf("s is a '%s' solver\n", gsl_root_fsolver_name(s);
 
@@ -180,7 +180,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 :math:`gsl_function` 로 :math:`F` 를 정의할 수 있습니다. 
 이 :math:`F` 는 근 탐색 공간에 쓸 함수로 함수 포인터로 전달할 수 있습니다.
 
-.. code-block:: C
+.. code-block:: c
 
     struct my_f_params { double a; double b; double c; };
      
@@ -230,7 +230,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 
 다음은 :math:`f(x) = \text{exp}2x)` 인 경우의 예시입니다.
 
-.. code-block:: C
+.. code-block:: c
 
     double my_f (double x, void * params){
             return exp (2 * x);
@@ -558,7 +558,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 
 각각의 반복 시점에서 결과는 다음과 같습니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ ./a.out
     using brent method
@@ -576,7 +576,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 ( :math:`gsl_root_fsolver_brent` 를 :math:`gsl_root_fsolver_bisection` 로 수정하면 됩니다), 
 이분법은 브랜트 방법보다 느리게 수렴하는 것을 관찰할 수 있습니다.
 
-.. code-block:: bash
+.. code-block:: console
 
         $ ./a.out
         using bisection method
@@ -604,7 +604,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 
 다음은 위 프로그램에서 사용한 뉴턴 방법의 결과입니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ ./a.out
     using newton method

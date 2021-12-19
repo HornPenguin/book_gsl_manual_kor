@@ -64,7 +64,7 @@ radix-2 FFT 방법은 :math:`O(n\log_2 n)` 의 복잡도를 가집니다.
 이러한 배열은 실수-허수부가 번갈아 할당된 형태로 사용됩니다. 
 예를 들어서, 다음은 길이 :math:`6` 의 복소 FFT 함수 입력용 배열입니다.
 
-.. code-block:: C
+.. code-block:: c
 
   double x[3*2];
   gsl_compleX_packed_array data = x;
@@ -72,7 +72,7 @@ radix-2 FFT 방법은 :math:`O(n\log_2 n)` 의 복잡도를 가집니다.
 
 이 배열은 길이 :math:`3` 의 복소수 배열 :code:`z[3]` 와 같이 사용할 수 있습니다.
 
-.. code-block:: C
+.. code-block:: c
 
   data[0] = Re(z[0])
   data[1] = Re(z[0])
@@ -93,7 +93,7 @@ radix-2 FFT 방법은 :math:`O(n\log_2 n)` 의 복잡도를 가집니다.
 예를 들어 :code:`gsl_vector_complex * v` 사용하면 다음과 같은 형태로 
 이 단원의 함수들을 사용할 수 있습니다.
 
-.. code-block:: C
+.. code-block:: c
 
   gsl_complex_packed_array data = v -> data;
   size_t *stride* = v->stride;
@@ -107,7 +107,7 @@ radix-2 FFT 방법은 :math:`O(n\log_2 n)` 의 복잡도를 가집니다.
 
 다음은 배열 :code:`data` 자세한 정보와 대응되는 시간-공간의 :math:`z` , 주파수-공간의 :math:`x` 를 나타낸 표입니다.
 
-.. code-block:: bash
+.. code-block:: console
 
   index    z               x = FFT(z)
 
@@ -398,7 +398,7 @@ radix-2 방법은 실수와 허수부가 저장되는 위치를 가능한
     동일한 복소수 배열을 이용해 얻은 결과를 비교한 표입니다. 
     ( :code:`stride` :math:`= 1` 로 가정합니다.)
 
-    .. code-block:: C
+    .. code-block:: c
 
       complex[0].real    =    data[0]
       complex[0].imag    =    0
@@ -441,7 +441,7 @@ radix-2 방법은 실수와 허수부가 저장되는 위치를 가능한
 
   알고리즘은 다음과 같습니다.
 
-  .. code-block:: C
+  .. code-block:: c
 
     complex_coefficient[0].real = halfcomplex_coefficient[0];
     complex_coefficient[0].imag = 0.0;
@@ -472,7 +472,7 @@ radix-2 방법은 실수와 허수부가 저장되는 위치를 가능한
 
 저장 규약은 다음 예시로 보는 것이 가장 정확합니다. 아래의 표는 :math:`n=5` 의 홀수 길이 배열에 대한 계산 결과를 나타냅니다. 각 두 열은 대응되는 반-복소열 값 :math:`5` 개를 나타내고 있습니다. 이 값들은 각각 :code:`gsl_fft_real_transform()` 반환값 :code:`halfcomplex[]` 나태납니다. :code:`complex[]` 동일한 실수열이 :code:`gsl_fft_complex_backward()` 복소수열로 전달 되었을 때 반환됩니다. 이 실수열은 허수부가 :code:`0` 복소수열로 취급됩니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     complex[0].real  =  halfcomplex[0]
     complex[0].imag  =  0
@@ -492,7 +492,7 @@ radix-2 방법은 실수와 허수부가 저장되는 위치를 가능한
 다음 표는 길이가 짝수인 배열의 결과를 나타내줍니다. :math:`n=6` 인 경우입니다. 
 짝수 길이를 가지는 경우 완전히 실수인 성분이 두 개 생기게 됩니다.
 
-.. code-block:: bash
+.. code-block:: console
 
   complex[0].real  =  halfcomplex[0]
   complex[0].imag  =  0
@@ -571,7 +571,7 @@ Mixed-radix 알고리즘은 변환의 중간 단계를 유지하기 위해 추�
 
   다음과 같이 간단하게 구현되어 있습니다.
 
-  .. code-block:: C
+  .. code-block:: c
 
     for (i = 0; i < n; i++)
     {
@@ -588,7 +588,7 @@ Mixed-radix 알고리즘은 변환의 중간 단계를 유지하기 위해 추�
   이 함수는 복소수 배열을 :math:`z_k = z_{n-k}^*` 대칭성을 사용해 중복된 요소들을 재 구성합니다. 
   이 변환에 사용된 알고리즘은 다음과 같습니다.
 
-  .. code-block:: C
+  .. code-block:: c
 
     complex_coefficient[0].real = halfcomplex_coefficient[0];
     complex_coefficient[0].imag = 0.0;

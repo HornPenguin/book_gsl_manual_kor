@@ -110,7 +110,7 @@ GSL 팀은 라이브러리의 기능을 강화해 줄 수 있는 새 기여자�
 GSL의 설계는 라이브러리 안에 존재하는 기능들을 간단하게 연결해, 따로 떼어 사용하게 할 수 있습니다. 
 예로, 추가적인 난수 생성기는 독립된 라이브러리로 제공될 수 있습니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ tar xvfz rngextra-0.1.tar.gz
     $ cd rngextra-0.1
@@ -125,7 +125,7 @@ GSL의 설계는 라이브러리 안에 존재하는 기능들을 간단하게 �
 * 이 문서에서 제공하는 GSL과 GNU 코딩 표준 규약을 준수하십시오. 이는 표준 GNU 패키징 도구들을 이용하는 것으로, *Automake* 나 문서화에 *Texinfo* 를 사용하는 것과 *test suite* 를 의미합니다. *test suite*는 :code:`make check` 를 실행해 검증해야하고, GSL에서 제공하는 검증 함수들을 사용해 결과가 :code:`PASS:/FAIL:` 로 출력되도록 해야합니다. *libtool* 사용은 필수가 아닙니다. 패키지는 충분히 작게 만들 수 있고, 정적 라이브러리는 손쉽게 만들수 있기 때문입니다.
 * 패키지를 위한 새로운 접두사를 만드십시오.(:code:`gsl_` 은 내부 사용을 위한 접두사입니다.) 예로, 추가적인 난수 생성자는 :code:`rngextra` 라는 접두사를 사용할 수 있습니다.
 
-.. code-block:: C
+.. code-block:: c
 
     #include<rngextra.h>
     gsl_rng * r = gsl_rng_alloc (rngextra_lsfr32);
@@ -243,7 +243,7 @@ C 가 매크로 어셈블러라는 사실을 항상 기억하는 것이 좋습�
 탭으로 작성했을 시 이를 스페이스로 바꾸어 주어야 하는데 여러방법이 있습니다. 
 예로 :code:`indent` 명령어를 사용해서:
 
-.. code-block:: bash
+.. code-block:: console
 
     indent -gnu -nut *.c *.h
 
@@ -351,7 +351,7 @@ Abramowitz & Stegun에서는 재귀적 관계와 같이 함수를 정의하는 �
 헤더파일들은 반드시 한 번만 포함되어야 합니다. 이를 idempotent 하다라 부르는데, 
 예를 들어, 헤더파일의 내용을 전처리 문구로 감싸서 이를 가능하게 할 수 있습니다.
 
-.. code-block:: C
+.. code-block:: c
 
     #ifndef __GSL_HISTOGRAM_H__
     #define __GSL_HISTOGRAM_H__
@@ -397,7 +397,7 @@ Abramowitz & Stegun에서는 재귀적 관계와 같이 함수를 정의하는 �
 :math:`X(K, D)` 는 :math:`X(K1, D)`  로 조정될 격자를 의미합니다. 
 이러한 형태는 구조체를 도입해 좀 더 읽기 편한 형태로 만들 수 있습니다.
 
-.. code-block:: C
+.. code-block:: c
 
     struct grid {
         int nd;    /* number of dimensions */
@@ -513,7 +513,7 @@ heap영역에 할당되어야 하는 함수들은 :code:`_alloc` 으로 끝나�
 라이브러리를 개발할 때 메모리 블럭을 사용하는 객체(예: :code:`vector` , :code:`matrix` , :code:`histogram` ) :code:`foo` 를 만든다 칩시다. 
 이 경우 이러한 블럭들을 읽고 쓸 수 있는 함수들을 제공해야 합니다.
 
-.. code-block:: C
+.. code-block:: c
 
     int gsl_foo_fread (FILE * stream, gsl_foo * v);
     int gsl_foo_fwrite (FILE * stream, const gsl_foo * v);
@@ -527,7 +527,7 @@ heap영역에 할당되어야 하는 함수들은 :code:`_alloc` 으로 끝나�
 :code:`fprintf/fscanf`  버전의 함수들은 아키텍처 사이에서 이식 가능하도록 작성되어야 하며, 바이너리 버전은 :code:`raw`  형태의 데이터를 사용해야 합니다. 
 다음과 같이 실제로 읽고 쓰는 함수들을 구현하면 됩니다.
 
-.. code-block:: C
+.. code-block:: c
 
   int gsl_block_fread (FILE * stream, gsl_block * b);
   int gsl_block_fwrite (FILE * stream, const gsl_block * b);
@@ -535,7 +535,7 @@ heap영역에 할당되어야 하는 함수들은 :code:`_alloc` 으로 끝나�
   int gsl_block_fprintf (FILE * stream, const gsl_block * b, const char *format);
 
 
-.. code-block:: C
+.. code-block:: c
 
   int gsl_block_raw_fread (FILE * stream, double * b, size_t n, size_t stride);
   int gsl_block_raw_fwrite (FILE * stream, const double * b, size_t n, size_t stride);
@@ -551,14 +551,14 @@ heap영역에 할당되어야 하는 함수들은 :code:`_alloc` 으로 끝나�
 
 예를 들어서 다음과 같이 쓰기보다는,
 
-.. code-block:: C
+.. code-block:: c
 
     a  = f(g(h(x,y)))
 
 
 중간값을 저장하는 임시 변수들을 사용해 다음과 같이 작성해야 합니다.
 
-.. code-block:: C
+.. code-block:: c
 
     {
         double u = h(x,y);
@@ -627,21 +627,21 @@ size_t
 감소하는 반복문을 사용하고 싶다면 주의해야 하는 데, :code:`size_t`  자료형은 부호가 없는 자료형이기 때문입니다. 
 일반적인 감소 반복문보다는,
 
-.. code-block:: C
+.. code-block:: c
 
     for (i = N - 1; i >= 0; i--) { ... } /* DOESN'T WORK */
 
 
 다음과 같이 쓰는 것을 권장합니다. 이는 :code:`i=0`  근처에서 발생하는 문제를 해결해줍니다.
 
-.. code-block:: C
+.. code-block:: c
 
     for (i = N; i > 0 && i--;) { ... }
 
 
 혼동을 피하고 싶다면 독립적인 변수를 반복문 안에 삽입해 반복 순서를 반대로 바꾸는 것이 좋습니다.
 
-.. code-block:: C
+.. code-block:: c
 
     for (i = 0; i < N; i++) { j = N - i; ... }
 
@@ -655,7 +655,7 @@ size_t
 배열의 수정 여부는 :code:`const` 의 유무에 따릅니다. 
 벡터의 경우 구분 단위가 별도로 필요하지 않고 포인터 형식이 선호됩니다. 
 
-.. code-block:: C
+.. code-block:: c
 
     /* real value, set on output */
     int foo (double * x);
@@ -683,7 +683,7 @@ size_t
 
 다시 말해,
 
-.. code-block:: C
+.. code-block:: c
 
     while (fabs (f) < 0.5)
     {
@@ -693,7 +693,7 @@ size_t
 
 보다는 다음과 같이 작성하는 것이 좋습니다.
 
-.. code-block:: C
+.. code-block:: c
 
     { 
         int p = *e;
@@ -760,7 +760,7 @@ size_t
 
 예를 들어서 다음의 코드를 생각해 봅시다.
 
-.. code-block:: C
+.. code-block:: c
 
     if (residual < 1e-30){
         return 0.0; /* residual is zero within round-off error */
@@ -769,7 +769,7 @@ size_t
 
 이 코드는 다음과 같이 쓰여야 합니다.
 
-.. code-block:: C
+.. code-block:: c
 
     return residual;
 
@@ -827,7 +827,7 @@ Test suites
 모든 컴파일 과정은 명료하게 이루어져야합니다. 
 컴파일 과정에서 엄격한 제약들을 넣어 추가로 검사를 수행해야 합니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     make CFLAGS="-ansi -pedantic -Werror -W -Wall -Wtraditional -Wconversion 
     -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings 

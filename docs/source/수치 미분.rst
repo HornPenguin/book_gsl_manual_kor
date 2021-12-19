@@ -52,7 +52,7 @@ Kor
 -------------------------
 다음 코드는 :math:`x=2`  와 :math:`x=0` 지점에서 함수 :math:`f(x) = x^{3/2}`  의 미분값을 계산합니다. 함수 :math:`f(x)`  는 :math:`x<0`  에서 정의되지 않았기 때문에 :math:`x=0`  에서는 :math:`gsl_derive_forward()` 사용합니다.
 
-.. code-block:: C
+.. code-block:: c
 
     #include <stdio.h>
 #include <gsl/gsl_math.h>
@@ -91,7 +91,7 @@ main (void)
 
 다음은 프로그램의 실행 결과 입니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     f(x) = x^(3/2)
 x = 2.0

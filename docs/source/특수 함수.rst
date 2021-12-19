@@ -34,7 +34,7 @@ Spherical Harmonics, Psi(Digamma)함수, Synchrotron 함수, Transport 함수,
 이는 곧바로 수학 수식 표현에 사용할 수 있습니다. 
 예를 들어서 다음의 함수 호출은 베셀 함수 :math:`J\_0 (x)` 의 값을 계산합니다.
 
-.. code-block:: C
+.. code-block:: c
 
     double y = gsl_sf_bessel_J0(x);
 
@@ -42,7 +42,7 @@ Spherical Harmonics, Psi(Digamma)함수, Synchrotron 함수, Transport 함수,
 이 방법은 오류 코드를 확인하거나 오차 값을 계산할 수 없습니다. 
 이러한 정보를 얻기 위해서는 오류 관리 호출 형태로 대체해서 해당 정보를 저장할 변수를 인자에 하나 더 추가해야 합니다.
 
-.. code-block:: C
+.. code-block:: c
 
     gsl_sf_result result;
     int status = gsl_sf_bessel_J0_e (x, &result);
@@ -246,7 +246,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 다음 예제는 오차 관리 형태의 특수 함수를 사용하는 방법을 보여줍니다. 
 베셀 함수 :math:`J\_0 (5.0)` 을 사용했습니다.
 
-.. code-block:: C
+.. code-block:: c
 
   #include <stdio.h>
   #include <gsl/gsl_errno.h>
@@ -273,7 +273,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 
 다음은 프로그램의 출력 결과입니다.
 
-.. code-block:: bash
+.. code-block:: console
 
   status  = success
   J0(5.0) = -0.    177596771314338264
@@ -284,7 +284,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 다음 프로그램은 같은 함수(베셀 함수)로 똑같은 값(:math:`J\_0 (5.0)`)을 계산합니다. 
 이 때, :math:`result.err` 반환 상태는 존재하지 않습니다.
 
-.. code-block:: C
+.. code-block:: c
 
   #include <stdio.h>
   #include <gsl/   gsl_sf_bessel.h>
@@ -305,7 +305,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 
 출력 결과는 다음과 같습니다.
 
-.. code-block:: bash
+.. code-block:: console
 
     J0(5.0) = -0.177596771314338264
     exact   = -0.177596771314338292
