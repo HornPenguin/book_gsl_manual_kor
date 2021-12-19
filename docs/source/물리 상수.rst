@@ -188,7 +188,7 @@ CGSM 계로 정의된 상수들은 :code:`gsl_const_cgsm.h` 에 정의되어 있
 
 .. c:macro:: GSL_CONST_MKSA_DAY
 
-  :math:`1`일; 8,640초
+  :math:`1` 일; 8,640초
 
 .. c:macro:: GSL_CONST_MKSA_WEEK
 

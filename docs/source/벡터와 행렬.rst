@@ -50,7 +50,7 @@ gsl_block_complex_long_double   complex long double
 :code:`gsl_block` 구조체는 다음과 같이 정의됩니다.
 
 
-.. c:type:: gsl_block
+.. c:c:type:: gsl_block
 
 
   .. code-block:: c
@@ -183,7 +183,7 @@ gsl_block_complex_long_double   complex long double
 그리고 소유 상태를 나타내는 :code:`owner` 가 있습니다. 
 이 구조체는 간단히 다음과 같이 정의되어 있습니다.
 
-.. c:type:: gsl_vector
+.. c:c:type:: gsl_vector
 
    .. code-block:: c
 
@@ -253,7 +253,7 @@ gsl_block_complex_long_double   complex long double
 이를 위해서는 프로그램을 컴파일 할 때, 전처리기에서 매크로 :code:`HAVE_INLINE` 처리 하도록 선언해야합니다.
 
 
-.. c:macro:: GSL_RANGE_CHECK_OFF
+.. c:c:marco:: GSL_RANGE_CHECK_OFF
 
 
   만약 필요한 경우 :code:`GSL_RANGE_CHECK_OFF` 정의해 재컴파일하면 코드의 수정 없이 모든 범위 확인 기능을 무시할 수 있습니다. 
@@ -263,7 +263,7 @@ gsl_block_complex_long_double   complex long double
 
 
 
-.. c:macro:: GSL_C99_INLINE
+.. c:c:marco:: GSL_C99_INLINE
 
 
   C99 컴파일러를 사용한다면 :code:`extern inline` 대신 :code:`inline` 키워드를 사용해 인라인 함수를 정의합니다. 
@@ -327,9 +327,9 @@ gsl_block_complex_long_double   complex long double
 
 .. function:: int gsl_vector_fwrite (FILE * stream, const gsl_vector * v)
 
-  벡터 :code:`v` 의 원소들을 스트림 :code:`stream` 에 이진 형식의 내용으로 작성합니다. 작성에 오류가 없으면
- :math:`0` 값을 반환하고, 작성에서 오류가 발생했을 시 :code:`GSL_EFAILED` 값을 반환합니다. 
-  해당 값들은 작동하는 시스템의 이진 형식을 따르기 때문에, 다른 시스템끼리의 호환성은 보장되지 않습니다.
+   벡터 :code:`v` 의 원소들을 스트림 :code:`stream` 에 이진 형식의 내용으로 작성합니다. 작성에 오류가 없으면
+   :math:`0` 값을 반환하고, 작성에서 오류가 발생했을 시 :code:`GSL_EFAILED` 값을 반환합니다. 
+   해당 값들은 작동하는 시스템의 이진 형식을 따르기 때문에, 다른 시스템끼리의 호환성은 보장되지 않습니다.
 
 .. function:: int gsl_vector_fread (FILE * stream, gsl_vector * v)
 
@@ -359,7 +359,7 @@ gsl_block_complex_long_double   complex long double
 예를 들어, 다른 벡터의 부분 벡터를 벡터 view로 표현할 수 있으며, 
 벡터의 홀수 번째 원소들과 짝수 번째 원소들을 두 개의 벡터 view로 표현할 수도 있습니다.
 
-.. c:type:: gsl_vector_view
+.. c:c:type:: gsl_vector_view
           gsl_vector_const_view
 
   벡터 view는 stack에 저장되는 임시 개체로 벡터 원소들의 부분 집합에 적용할 수 있는 연산입니다. 
@@ -497,7 +497,7 @@ gsl_block_complex_long_double   complex long double
 벡터 복사
 --------------------------
 
-덧셈이나 곱셈 등의 일반적인 벡터 연산들은 BLAS 라이브러리에 구현되어 있습니다(:ref:`BLAS 지원`을 참고할 수 있습니다). 
+덧셈이나 곱셈 등의 일반적인 벡터 연산들은 BLAS 라이브러리에 구현되어 있습니다( :ref:`BLAS 지원` 을 참고할 수 있습니다). 
 하지만, BLAS 전체 코드가 필요 없는 몇몇 유용한 기능들이 있을 수 있습니다. 
 다음의 함수들은 이러한 범주에 드는 기능들을 구현한 함수들입니다.
 
@@ -530,49 +530,49 @@ gsl_block_complex_long_double   complex long double
 
 .. function:: int gsl_vector_add (gsl_vector * a, const gsl_vector * b)
 
-  벡터 :code:`a` 와 벡터 :code:`b` 의 원소를 합합니다.
- :math:`a_i \leftarrow a_i + b_i` 값이 :code:`a` 벡터에 저장되며 :code:`b` 는 변하지 않습니다. 
-  이 두 벡터들은 같은 길이를 가져야합니다.
+   벡터 :code:`a` 와 벡터 :code:`b` 의 원소를 합합니다.
+   :math:`a_i \leftarrow a_i + b_i` 값이 :code:`a` 벡터에 저장되며 :code:`b` 는 변하지 않습니다. 
+   이 두 벡터들은 같은 길이를 가져야합니다.
 
 .. function:: int gsl_vector_sub (gsl_vector * a, const gsl_vector * b)
 
-  벡터 :code:`a` 와 벡터 :code:`b` 의 원소를 뺍니다.
- :math:`a_i \leftarrow a_i - b_i` 값이 :code:`a` 벡터에 저장되며 :code:`b` 는 변하지 않습니다. 
-  이 두 벡터들은 같은 길이를 가져야합니다.
+   벡터 :code:`a` 와 벡터 :code:`b` 의 원소를 뺍니다.
+   :math:`a_i \leftarrow a_i - b_i` 값이 :code:`a` 벡터에 저장되며 :code:`b` 는 변하지 않습니다. 
+   이 두 벡터들은 같은 길이를 가져야합니다.
 
 .. function:: int gsl_vector_mul (gsl_vector * a, const gsl_vector * b)
 
-  벡터 :code:`a` 와 벡터 :code:`b` 의 원소를 곱합니다.
- :math:`a_i \leftarrow a_i * b_i` 값이 :code:`a` 벡터에 저장되며 :code:`b` 는 변하지 않습니다. 
-  이 두 벡터들은 같은 길이를 가져야합니다.
+   벡터 :code:`a` 와 벡터 :code:`b` 의 원소를 곱합니다.
+   :math:`a_i \leftarrow a_i * b_i` 값이 :code:`a` 벡터에 저장되며 :code:`b` 는 변하지 않습니다. 
+   이 두 벡터들은 같은 길이를 가져야합니다.
 
 .. function:: int gsl_vector_div (gsl_vector * a, const gsl_vector * b)
 
-  벡터 :code:`a` 와 벡터 :code:`b` 의 원소를 나눕니다.
- :math:`a_i \leftarrow a_i / b_i` 값이 :code:`a` 벡터에 저장되며 :code:`b` 는 변하지 않습니다. 
-  이 두 벡터들은 같은 길이를 가져야합니다.
+   벡터 :code:`a` 와 벡터 :code:`b` 의 원소를 나눕니다.
+   :math:`a_i \leftarrow a_i / b_i` 값이 :code:`a` 벡터에 저장되며 :code:`b` 는 변하지 않습니다. 
+   이 두 벡터들은 같은 길이를 가져야합니다.
 
 .. function:: int gsl_vector_scale (gsl_vector * a, const double x)
 
-  벡터 :code:`a` 원소들에 상수 계수 :code:`x` 를 곱합니다.
- :math:`a_i \leftarrow x a_i` 값이 :code:`a` 에 저장됩니다.
+   벡터 :code:`a` 원소들에 상수 계수 :code:`x` 를 곱합니다.
+   :math:`a_i \leftarrow x a_i` 값이 :code:`a` 에 저장됩니다.
 
 .. function:: int gsl_vector_add_constant (gsl_vector * a, const double x)
 
-  벡터 :code:`a` 원소들에 상수 :code:`x` 를 더합니다.  
- :math:`a_i \leftarrow a_i + x` 값이 :code:`a` 에 저장됩니다.
+   벡터 :code:`a` 원소들에 상수 :code:`x` 를 더합니다.  
+   :math:`a_i \leftarrow a_i + x` 값이 :code:`a` 에 저장됩니다.
 
 .. function:: double gsl_vector_sum (const gsl_vector * a)
 
-  주어진 벡터 :code:`a` 원소들의 합 :math:`\sum_{i=1}^n a_i` 을 반환합니다.
+   주어진 벡터 :code:`a` 원소들의 합 :math:`\sum_{i=1}^n a_i` 을 반환합니다.
 
 .. function:: int gsl_vector_axpby (const double alpha, const gsl_vector * x, const double beta, gsl_vector * y)
 
- :math:`y \leftarrow \alpha x + \beta y`  연산을 수행합니다. 
-  벡터 :code:`x` 와 :code:`y` 는 반드시 같은 길이를 가져야합니다.
+   :math:`y \leftarrow \alpha x + \beta y`  연산을 수행합니다. 
+   벡터 :code:`x` 와 :code:`y` 는 반드시 같은 길이를 가져야합니다.
 
 벡터의 최대, 최소 원소 찾기
---------------------------
+--------------------------------
 
 다음 연산들은 실수 벡터들에 대해서만 사용 가능합니다.
 
@@ -620,13 +620,13 @@ gsl_block_complex_long_double   complex long double
               int gsl_vector_isneg (const gsl_vector * v)
               int gsl_vector_isnonneg (const gsl_vector * v)
 
-  벡터 :code:`v` 모든 원소들이 :math:`0`  이거나, 양수이거나, 음수이거나, 음수가 아닌 상황들을 판정해 참일 경우 
- :math:`1`  을 반환하고 아니면 :math:`0`  을 반환합니다.
+   벡터 :code:`v` 의 모든 원소들이 :math:`0` 이거나, 양수이거나, 음수이거나, 음수가 아닌 상황들을 판정해 참일 경우 
+   :math:`1` 을 반환하고 아니면 :math:`0` 을 반환합니다.
 
 .. function:: int gsl_vector_equal (const gsl_vector * u, const gsl_vector * v)
 
-주어진 두 벡터 :code:`u` :code:`v`  대해, 원소들을 비교해 
-이 둘이 같으면 :math:`1`  을 아니면 :math:`0`  을 반환합니다.
+   주어진 두 벡터 :code:`u` :code:`v` 에 대해, 원소들을 비교해 
+   이 둘이 같으면 :math:`1` 을 아니면 :math:`0` 을 반환합니다.
 
 벡터 예제
 --------------------------
@@ -634,7 +634,7 @@ gsl_block_complex_long_double   complex long double
 
 다음 프로그램은 어떻게 벡터를 할당, 초기화하고 읽는 지를 보여줍니다. 
 :code:`gsl_vector_alloc()` 와 :code:`gsl_vector_set()` 그리고 
-:code:`gsl_vector_get()`를 사용합니다.
+:code:`gsl_vector_get()` 를 사용합니다.
 
 .. include:: examples/vector.c
    :code:
@@ -678,7 +678,7 @@ Writing
 벡터와 같이 이 구조체는 메모리의 특정 원소 집합을 나타냅니다. 
 그러나 벡터와는 달리 2개의 인덱스를 사용합니다.
 
-.. c:type:: gsl_matrix
+.. c:c:type:: gsl_matrix
 
   :code:`gsl_matrix` 구조체는 여섯개의 변수를 가지고 있습니다. 
   행렬의 두 차원, 물리적 차원, 행렬 원소들이 저장된 메모리를 가르키는 포인터 :code:`data` , 
@@ -708,8 +708,8 @@ Writing
 사용가능한 행 인덱스는 :math:`0`  에서 :code:`size1-1` 까지 입니다. 
 같은 방식으로 열의 갯수는 :code:`size2` 표기됩니다. 
 열 인덱스는 :math:`0`  에서 :code:`size2-1` 지 입니다. 
-물리적인 행 차원은 :code:`tda` 표기됩니다. 
-이는 *trailing dimension*이라고도 불리며, 
+물리적인 행 차원은 :code:`tda` 로 표기됩니다. 
+이는 *trailing dimension* 이라고도 불리며, 
 메모리 내 행렬의 배치에서 행의 크기를 나타냅니다.
 
 예를 들어서 다음 행렬은 :code:`size1` 가 :math:`3` ,
@@ -777,7 +777,7 @@ Writing
 The functions for accessing the elements of a matrix use the same range
 checking system as vectors.  You can turn off range checking by recompiling
 your program with the preprocessor definition
-:macro:`GSL_RANGE_CHECK_OFF`.
+:c:marco:`GSL_RANGE_CHECK_OFF` .
 
 The elements of the matrix are stored in "C-order", where the second
 index moves continuously through memory.  More precisely, the element
@@ -847,7 +847,7 @@ as binary data or formatted text.
 
    This function writes the elements of the matrix :data:`m` to the stream
    :data:`stream` in binary format.  The return value is 0 for success and
-   :macro:`GSL_EFAILED` if there was a problem writing to the file.  Since the
+   :c:marco:`GSL_EFAILED` if there was a problem writing to the file.  Since the
    data is written in the native binary format it may not be portable
    between different architectures.
 
@@ -857,7 +857,7 @@ as binary data or formatted text.
    :data:`stream` in binary format.  The matrix :data:`m` must be preallocated
    with the correct dimensions since the function uses the size of :data:`m` to
    determine how many bytes to read.  The return value is 0 for success and
-   :macro:`GSL_EFAILED` if there was a problem reading from the file.  The
+   :c:marco:`GSL_EFAILED` if there was a problem reading from the file.  The
    data is assumed to have been written in the native binary format on the
    same architecture.
 
@@ -867,7 +867,7 @@ as binary data or formatted text.
    the stream :data:`stream` using the format specifier :data:`format`, which
    should be one of the :code:`%g`, :code:`%e` or :code:`%f` formats for
    floating point numbers and :code:`%d` for integers.  The function returns
-   0 for success and :macro:`GSL_EFAILED` if there was a problem writing to
+   0 for success and :c:marco:`GSL_EFAILED` if there was a problem writing to
    the file.
 
 .. function:: int gsl_matrix_fscanf (FILE * stream, gsl_matrix * m)
@@ -876,7 +876,7 @@ as binary data or formatted text.
    matrix :data:`m`.  The matrix :data:`m` must be preallocated with the correct
    dimensions since the function uses the size of :data:`m` to determine how many
    numbers to read.  The function returns 0 for success and
-   :macro:`GSL_EFAILED` if there was a problem reading from the file.
+   :c:marco:`GSL_EFAILED` if there was a problem reading from the file.
 
 
 행렬 view
@@ -884,15 +884,15 @@ as binary data or formatted text.
 Writing
 {: .label .label-red}
 
-.. c:type:: gsl_matrix_view
+.. c:c:type:: gsl_matrix_view
           gsl_matrix_const_view
 
    A matrix view is a temporary object, stored on the stack, which can be
    used to operate on a subset of matrix elements.  Matrix views can be
    defined for both constant and non-constant matrices using separate types
    that preserve constness.  A matrix view has the type
-   :type:`gsl_matrix_view` and a constant matrix view has the type
-   :type:`gsl_matrix_const_view`.  In both cases the elements of the view
+   :c:type:`gsl_matrix_view` and a constant matrix view has the type
+   :c:type:`gsl_matrix_const_view` .  In both cases the elements of the view
    can by accessed using the :code:`matrix` component of the view object.  A
    pointer :code:`gsl_matrix *` or :code:`const gsl_matrix *` can be obtained
    by taking the address of the :code:`matrix` component with the :code:`&`
@@ -904,7 +904,7 @@ Writing
 
    These functions return a matrix view of a submatrix of the matrix
    :data:`m`.  The upper-left element of the submatrix is the element
-   (:data:`k1`, :data:`k2`) of the original matrix.  The submatrix has :data:`n1`
+   ( :data:`k1`, :data:`k2` ) of the original matrix.  The submatrix has :data:`n1`
    rows and :data:`n2` columns.  The physical number of columns in memory
    given by :data:`tda` is unchanged.  Mathematically, the
   :math:`(i,j)` -th element of the new matrix is given by::
@@ -933,17 +933,17 @@ Writing
 .. function:: gsl_matrix_view gsl_matrix_view_array (double * base, size_t n1, size_t n2)
               gsl_matrix_const_view gsl_matrix_const_view_array (const double * base, size_t n1, size_t n2)
 
-   These functions return a matrix view of the array :data:`base`.  The
+   These functions return a matrix view of the array :data:`base` .  The
    matrix has :data:`n1` rows and :data:`n2` columns.  The physical number of
-   columns in memory is also given by :data:`n2`.  Mathematically, the
-  :math:`(i,j)` -th element of the new matrix is given by::
+   columns in memory is also given by :data:`n2` .  Mathematically, the
+   :math:`(i,j)` -th element of the new matrix is given by::
 
       m'(i,j) = base[i*n2 + j]
 
    where the index :data:`i` runs from 0 to :code:`n1 - 1` and the index :data:`j`
-   runs from 0 to :code:`n2 - 1`.
+   runs from 0 to :code:`n2 - 1` .
 
-   The new matrix is only a view of the array :data:`base`.  When the view
+   The new matrix is only a view of the array :data:`base` .  When the view
    goes out of scope the original array :data:`base` will continue to exist.
    The original memory can only be deallocated by freeing the original
    array.  Of course, the original array should not be deallocated while
@@ -951,7 +951,7 @@ Writing
 
    The function :func:`gsl_matrix_const_view_array` is equivalent to
    :func:`gsl_matrix_view_array` but can be used for matrices which are
-   declared :code:`const`.
+   declared :code:`const` .
 
 .. function:: gsl_matrix_view gsl_matrix_view_array_with_tda (double * base, size_t n1, size_t n2, size_t tda)
               gsl_matrix_const_view gsl_matrix_const_view_array_with_tda (const double * base, size_t n1, size_t n2, size_t tda)
@@ -960,13 +960,13 @@ Writing
    physical number of columns :data:`tda` which may differ from the corresponding
    dimension of the matrix.  The matrix has :data:`n1` rows and :data:`n2`
    columns, and the physical number of columns in memory is given by
-   :data:`tda`.  Mathematically, the :math:`(i,j)`-th element of the new
+   :data:`tda` .  Mathematically, the :math:`(i,j)`-th element of the new
    matrix is given by::
 
       m'(i,j) = base[i*tda + j]
 
    where the index :data:`i` runs from 0 to :code:`n1 - 1` and the index :data:`j`
-   runs from 0 to :code:`n2 - 1`.
+   runs from 0 to :code:`n2 - 1` .
 
    The new matrix is only a view of the array :data:`base`.  When the view
    goes out of scope the original array :data:`base` will continue to exist.
@@ -976,7 +976,7 @@ Writing
 
    The function :func:`gsl_matrix_const_view_array_with_tda` is equivalent
    to :func:`gsl_matrix_view_array_with_tda` but can be used for matrices
-   which are declared :code:`const`.
+   which are declared :code:`const` .
 
 .. function:: gsl_matrix_view gsl_matrix_view_vector (gsl_vector * v, size_t n1, size_t n2)
               gsl_matrix_const_view gsl_matrix_const_view_vector (const gsl_vector * v, size_t n1, size_t n2)
@@ -990,7 +990,7 @@ Writing
       m'(i,j) = v->data[i*n2 + j]
 
    where the index :data:`i` runs from 0 to :code:`n1 - 1` and the index :data:`j`
-   runs from 0 to :code:`n2 - 1`.
+   runs from 0 to :code:`n2 - 1` .
 
    The new matrix is only a view of the vector :data:`v`.  When the view
    goes out of scope the original vector :data:`v` will continue to exist.
@@ -1000,7 +1000,7 @@ Writing
 
    The function :func:`gsl_matrix_const_view_vector` is equivalent to
    :func:`gsl_matrix_view_vector` but can be used for matrices which are
-   declared :code:`const`.
+   declared :code:`const` .
 
 .. function:: gsl_matrix_view gsl_matrix_view_vector_with_tda (gsl_vector * v, size_t n1, size_t n2, size_t tda)
               gsl_matrix_const_view gsl_matrix_const_view_vector_with_tda (const gsl_vector * v, size_t n1, size_t n2, size_t tda)
@@ -1026,6 +1026,7 @@ Writing
    The function :func:`gsl_matrix_const_view_vector_with_tda` is equivalent
    to :func:`gsl_matrix_view_vector_with_tda` but can be used for matrices
    which are declared :code:`const`.
+
 행, 열 view 생성
 --------------------------
 Writing
@@ -1144,6 +1145,7 @@ Writing
 
    This function exchanges the elements of the matrices :data:`m1` and
    :da
+
 행, 열 복사
 --------------------------
 Writing
@@ -1179,6 +1181,7 @@ same effect can be achieved with more generality using
    This function copies the elements of the vector :data:`v` into the
    :data:`j`-th column of the matrix :data:`m`.  The length of the vector must be
    the same as the length of the column.
+
 행과 열 교환하기
 --------------------------
 Writing
@@ -1294,7 +1297,7 @@ The following operations are defined for real and complex matrices.
 
 
 행렬 원소의 최대, 최소 찾기
---------------------------
+-------------------------------
 Writing
 {: .label .label-red}
 
@@ -1338,7 +1341,9 @@ The following operations are only defined for real matrices.
 행렬의 성질
 --------------------------
 
-다음 함수들은 실수와 복소수 행렬 모두 사용할 수 있습니다. 복소수 행렬의 경우 각 함수에서 검사하는 성질이 실수부와 허수부가 모두 일치해야 해당 행렬이 함수의 검사 조건을 만족한다 간주합니다.
+다음 함수들은 실수와 복소수 행렬 모두 사용할 수 있습니다. 
+복소수 행렬의 경우 각 함수에서 검사하는 성질이 실수부와 허수부가 모두 일치해야 
+해당 행렬이 함수의 검사 조건을 만족한다 간주합니다.
 
 .. function:: int gsl_matrix_isnull (const gsl_matrix * m)
               int gsl_matrix_ispos (const gsl_matrix * m)
@@ -1353,22 +1358,23 @@ The following operations are only defined for real matrices.
 .. function:: int gsl_matrix_equal (const gsl_matrix * a, const gsl_matrix * b)
 
   행렬 :code:`a` :code:`b`  원소를 비교해서 같은 행렬이면 
- :math:`1`  을 아니면 :math:`0` 을 반환합니다.
+  :math:`1`  을 아니면 :math:`0` 을 반환합니다.
 
 .. function:: double gsl_matrix_norm1 (const gsl_matrix * A)
 
- :math:`m`  - :math:`n`  행렬 :code:`A` 대해, :math:`1`  -노름값을 반환합니다. 
+  :math:`m`  - :math:`n`  행렬 :code:`A` 대해, :math:`1`  -노름값을 반환합니다. 
   이는 다음과 같이 정의됩니다.
 
   .. math:: 
     
-    ||A||_1 = \text{max}_{1\leq j \leq n} \sum_{i=1}^m |A_{ij}|
+      ||A||_1 = \text{max}_{1\leq j \leq n} \sum_{i=1}^m |A_{ij}|
 
 행렬 예제
 --------------------------
 
 
-아래의 프로그램은 함수 :code:`gsl_matrix_alloc()` 와 :code:`gsl_mtrix_set()` 그리고 :code:`gsl_matrix_get()` 를 이용해 
+아래의 프로그램은 함수 :code:`gsl_matrix_alloc()` 와 :code:`gsl_mtrix_set()` 
+그리고 :code:`gsl_matrix_get()` 를 이용해 
 행렬의 할당, 초기화, 그리고 값을 읽는 방법을 보여줍니다.
 
 .. include:: examples/matrix.c
@@ -1420,7 +1426,7 @@ GNU octave를 이용해 이 결과를 검증해볼 수 있습니다.
 
 .. code-block:: console
 
-  $ octave
+   $ octave
    GNU Octave, version 2.0.16.92
    octave> m = sin(0:9)' * ones(1,10) 
                   + ones(10,1) * cos(0:9); 
@@ -1434,10 +1440,13 @@ GNU octave를 이용해 이 결과를 검증해볼 수 있습니다.
 
 GSL의 블럭, 벡터 그리고 행렬 객체들은 C++의 :code:`valarraay` 모델을 따릅니다. 이 모델의 자세한 기술은 다음을 참조할 수 있습니다.
 
-* B. Stroustrup, The C++ Programming Language (3rd Ed), Section 22.4 Vector Arithmetic. Addison-Wesley 1997, ISBN 0-201-88954-4.
+* B. Stroustrup, The C++ Programming Language (3rd Ed), Section 22.4 Vector Arithmetic. 
+  Addison-Wesley 1997, ISBN 0-201-88954-4.
 
 
 .. rubric:: 각주
 
-  .. [#range] GNC C 컴파일러에서는 확장기능을 통해 범주 확인 기능을 지원합니다. 하지만, GCC의 기본 설치 목록에 포함되어 있지는 않습니다. 메모리 접근은 GCC의 :code:`gcc -fmudflap` 라는 메모리 보호 옵션과 Valgrind로 확인할 수 있습니다.
+  .. [#range] GNC C 컴파일러에서는 확장기능을 통해 범주 확인 기능을 지원합니다. 
+              하지만, GCC의 기본 설치 목록에 포함되어 있지는 않습니다. 
+            메모리 접근은 GCC의 :code:`gcc -fmudflap` 라는 메모리 보호 옵션과 Valgrind로 확인할 수 있습니다.
 

@@ -98,7 +98,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
   에르미트 보간 다항식의 분할 차분 표현을 계산합니다. 
   에르미트 보간법으로 만들어지는 다항식은 :math:`1`  계 도함수 :math:`dy/dx` 의 값을 필요로 합니다. 
   이 값은 길이 :code:`size` 의 배열 :code:`dya` 로 주어져 있습니다.  
- :math:`1`  계 도함수 값들은 새로운 자료 집합 :math:`z= \{ x_0, x_0, x_1, x_1 \dots\}` 를 정의해서, 
+  :math:`1`  계 도함수 값들은 새로운 자료 집합 :math:`z= \{ x_0, x_0, x_1, x_1 \dots\}` 를 정의해서, 
   일반적인 분할 차분법에 통합시킬 수 있습니다. 
   이 값들은 길이 :math:`2 \cdot` :code:`size` 의 배열 :code:`za` 에 저장되어 있습니다. 
   계산 결과들은 :math:`2 \cdot` :code:`size` 길이를 가지는 배열 :code:`dd` 저장됩니다.  
@@ -212,7 +212,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
 
  .. math::
    
-   P(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_{n-1} x^{n-1}
+    P(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_{n-1} x^{n-1}
 
   의 근들을 계산합니다. 동반 행렬(companion matrix)의 균형-QR 차원 감소 [#QR]_ 를 
   이용합니다. 인자 :code:`n` 는 계수 배열의 길이를 나타냅니다. 
