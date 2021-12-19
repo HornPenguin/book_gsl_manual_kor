@@ -382,7 +382,7 @@ gsl_block_complex_long_double   complex long double
 
   .. code-block:: c
 
-      v'(i) = v->data[(offset +i)*v -> stride]]
+      v'(i) = v->data[(offset +i)*v -> stride];
 
 
   :code:`i` 는 :code:`0` 에서 :code:`n-1` 까지 입니다.
@@ -409,7 +409,7 @@ gsl_block_complex_long_double   complex long double
 
   .. code-block:: c
 
-      v'(i) = v->data[(offset + i*stride)*v->stride]
+      v'(i) = v->data[(offset + i*stride)*v->stride];
 
 
   :code:`i` 는 :math:`0` 부터 :code:`n-1` 까지의 범위를 가집니다.
@@ -462,7 +462,7 @@ gsl_block_complex_long_double   complex long double
 
   .. code-block:: c
 
-      v'(i) = base[i]
+      v'(i) = base[i];
 
 
   :code:`i` 는 :math:`0` 부터 :code:`n-1` 까지의 범위를 가집니다.
@@ -482,7 +482,7 @@ gsl_block_complex_long_double   complex long double
 
   .. code-block:: c
 
-      v'(i) = base[i*stride]
+      v'(i) = base[i*stride];
 
 
   :code:`i` 는 :math:`0` 부터 :code:`n-1` 까지 범위를 가집니다.

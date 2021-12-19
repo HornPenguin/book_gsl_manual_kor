@@ -53,7 +53,7 @@ GSL은 `Main GNU FTP site <ftp://ftp.gnu.org/gnu/gsl/>`_ 나 가까운 `GNU mirr
 
 웹 브라우저를 통해 파일을 다운 받거나 터미널에서 받고 싶으면 :math:`wget`  명령어를 사용하면 됩니다. 다음은 :math:`gsl-lastes.tar.gz` 을 다운 받을 수 있는 명령어입니다.
 
-.. code-block:: 
+.. code-block:: console
 
     $ wget https://ftp.gnu.org/gnu/gsl/gsl-lastest.tar.gz
 

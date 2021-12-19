@@ -398,7 +398,7 @@ radix-2 방법은 실수와 허수부가 저장되는 위치를 가능한
     동일한 복소수 배열을 이용해 얻은 결과를 비교한 표입니다. 
     ( :code:`stride` :math:`= 1` 로 가정합니다.)
 
-    .. code-block:: c
+    .. code-block:: 
 
       complex[0].real    =    data[0]
       complex[0].imag    =    0
@@ -411,7 +411,7 @@ radix-2 방법은 실수와 허수부가 저장되는 위치를 가능한
       complex[n/2].real  =    data[n/2]
       complex[n/2].imag  =    0
       ...............         ................
-      complex[k'].real   =    data[k]       \\k' = n - k
+      complex[k'].real   =    data[k]       k' = n - k
       complex[k'].imag   =   -data[n-k]
       ...............         ................
       complex[n-1].real  =    data[1]
