@@ -253,7 +253,7 @@ gsl_block_complex_long_double   complex long double
 이를 위해서는 프로그램을 컴파일 할 때, 전처리기에서 매크로 :code:`HAVE_INLINE` 처리 하도록 선언해야합니다.
 
 
-.. rst:directive:: .. c:marco:: GSL_RANGE_CHECK_OFF
+.. rst:directive:: .. macro:: GSL_RANGE_CHECK_OFF
 
 
   만약 필요한 경우 :code:`GSL_RANGE_CHECK_OFF` 정의해 재컴파일하면 코드의 수정 없이 모든 범위 확인 기능을 무시할 수 있습니다. 
@@ -263,7 +263,7 @@ gsl_block_complex_long_double   complex long double
 
 
 
-.. c:marco:: GSL_C99_INLINE
+.. macro:: GSL_C99_INLINE
 
 
   C99 컴파일러를 사용한다면 :code:`extern inline` 대신 :code:`inline` 키워드를 사용해 인라인 함수를 정의합니다. 
@@ -271,7 +271,7 @@ gsl_block_complex_long_double   complex long double
   GCC의 C99 모드 :code:`-std=c99` 에서는 자동으로 선택됩니다. 
 
 
-.. c:var:: int gsl_check_range
+.. var:: int gsl_check_range
 
   만약 인라인 함수들을 사용하지 않으면, :code:`gsl_vector_get()` 와 :code:`gsl_vector_set()` 
   함수는 라이브러리에 존재하는 컴파일된 버전으로 연결됩니다. 
@@ -777,7 +777,7 @@ Writing
 The functions for accessing the elements of a matrix use the same range
 checking system as vectors.  You can turn off range checking by recompiling
 your program with the preprocessor definition
-:c:marco:`GSL_RANGE_CHECK_OFF` .
+:macro:`GSL_RANGE_CHECK_OFF` .
 
 The elements of the matrix are stored in "C-order", where the second
 index moves continuously through memory.  More precisely, the element
@@ -847,7 +847,7 @@ as binary data or formatted text.
 
    This function writes the elements of the matrix :data:`m` to the stream
    :data:`stream` in binary format.  The return value is 0 for success and
-   :c:marco:`GSL_EFAILED` if there was a problem writing to the file.  Since the
+   :macro:`GSL_EFAILED` if there was a problem writing to the file.  Since the
    data is written in the native binary format it may not be portable
    between different architectures.
 
@@ -857,7 +857,7 @@ as binary data or formatted text.
    :data:`stream` in binary format.  The matrix :data:`m` must be preallocated
    with the correct dimensions since the function uses the size of :data:`m` to
    determine how many bytes to read.  The return value is 0 for success and
-   :c:marco:`GSL_EFAILED` if there was a problem reading from the file.  The
+   :macro:`GSL_EFAILED` if there was a problem reading from the file.  The
    data is assumed to have been written in the native binary format on the
    same architecture.
 
@@ -867,7 +867,7 @@ as binary data or formatted text.
    the stream :data:`stream` using the format specifier :data:`format`, which
    should be one of the :code:`%g`, :code:`%e` or :code:`%f` formats for
    floating point numbers and :code:`%d` for integers.  The function returns
-   0 for success and :c:marco:`GSL_EFAILED` if there was a problem writing to
+   0 for success and :macro:`GSL_EFAILED` if there was a problem writing to
    the file.
 
 .. function:: int gsl_matrix_fscanf (FILE * stream, gsl_matrix * m)
@@ -876,7 +876,7 @@ as binary data or formatted text.
    matrix :data:`m`.  The matrix :data:`m` must be preallocated with the correct
    dimensions since the function uses the size of :data:`m` to determine how many
    numbers to read.  The function returns 0 for success and
-   :c:marco:`GSL_EFAILED` if there was a problem reading from the file.
+   :macro:`GSL_EFAILED` if there was a problem reading from the file.
 
 
 행렬 view

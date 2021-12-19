@@ -410,7 +410,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 
 
  
-   .. c:var:: gsl_root_fsolver_type * gsl_root_fsolver_bisection
+   .. var:: gsl_root_fsolver_type * gsl_root_fsolver_bisection
 
         **이분법** ( *Bisection* ) 알고리즘은 가장 간단한 괄호법 근 탐색 알고리즘입니다. 
         이 라이브러리에서 제공하는 함수중 가장 느린 선형 수렴 알고리즘이기도 합니다.
@@ -422,7 +422,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 
         각 단계에서, 근의 추정치는 현재 구간의 중간점으로 간주됩니다.
 
-   .. c:var:: gsl_root_fsolver_type * gsl_root_fsolver_falsepos
+   .. var:: gsl_root_fsolver_type * gsl_root_fsolver_falsepos
 
         **할선법** ( *false postion algorithm* )은 선형 보간법에 기반해 근을 탐색합니다. 
         똑같이 선형으로 수렴하지만, 이분법보다 빠릅니다.
@@ -436,7 +436,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
         근의 최적 추정치는 현재 반복에 대한 구간의 선형 보간값으로 간주됩니다.
 
  
-   .. c:var:: gsl_root_fsolver_type * gsl_root_fsolver_brent
+   .. var:: gsl_root_fsolver_type * gsl_root_fsolver_brent
 
         **브렌트-데커 방법** ( *Brent-Dekker algorithm* )은 이분법에 보간법을 같이 적용한 방법입니다. 
         이 방법은 강력하면서도 빠른 알고리즘입니다. 
@@ -466,7 +466,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 .. c:type:: gsl_root_fdfsolver_type
 
  
-   .. c:var:: gsl_root_fdfsolver_type * gsl_root_fdfsolver_newton
+   .. var:: gsl_root_fdfsolver_type * gsl_root_fdfsolver_newton
 
  
         이 방법은 **뉴턴 방법(Newton's Method)** 으로 불리는 방법으로 표준적인 기울기 연마 알고리즘입니다. 
@@ -482,7 +482,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
         뉴턴 방법은 단일 근에 대해 2차수의 수렴 속도를 가지며, 
         복수의 근에 대해서는 선형적인 수렴 속도를 가집니다.
 
-   .. c:var:: gsl_root_fdfsolver_type * gsl_root_fdfsolver_secant
+   .. var:: gsl_root_fdfsolver_type * gsl_root_fdfsolver_secant
 
  
         **할선 방법(secant method)** 은 뉴턴 방법과 흡사한 방법으로, 
@@ -514,7 +514,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
         단일근에서 이 방법은 :math:`(1+\sqrt{5})/2` 의 수렴 속도를 가집니다. 
         이는 대략 1.62 정도입니다. 다중근에 대해서는 선형적으로 수렴합니다.
 
-   .. c:var:: gsl_root_fdfsolver_type * gsl_root_fdfsolver_steffenson
+   .. var:: gsl_root_fdfsolver_type * gsl_root_fdfsolver_steffenson
 
         **스테퍼슨 방법(Steffenson Method)**은 라이브러리의 함수 중 가장 빠른 수렴 속도를 제공합니다. 
         이 방법은 기본적인 뉴턴 알고리즘에 아티켄(Aitken)의 **델타-제곱(delta-suared)** 가속을 추가한 방법입니다. 
