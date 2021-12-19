@@ -31,7 +31,7 @@
 배열에 기반한 방법을 통해 계산할 수 있습니다. 
 배열 기반 함수들은 사전 정의된 작업 공간이 필요합니다.
 
-.. c:type:: gsl_sf_mathieu_workspace
+.. type:: gsl_sf_mathieu_workspace
 
     배열 기반 방법을 위한 작업 공간입니다.
 

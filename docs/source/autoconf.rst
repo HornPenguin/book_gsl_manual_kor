@@ -1,6 +1,3 @@
-.. index::
-   single: autoconf, using with GSL
-
 .. _chap_autoconf-macros:
 
 ***************
@@ -11,7 +8,7 @@ Autoconf Macros
 For applications using :code:`autoconf` the standard macro
 :code:`AC_CHECK_LIB` can be used to link with GSL automatically
 from a :code:`configure` script.  The library itself depends on the
-presence of a |cblas| and math library as well, so these must also be
+presence of a CBLAS and math library as well, so these must also be
 located before linking with the main :code:`libgsl` file.  The following
 commands should be placed in the :file:`configure.ac` file to perform
 these tests::
