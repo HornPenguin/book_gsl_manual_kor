@@ -19,7 +19,7 @@ GSL 디자인 문서
 * :code:`autoconf`  와 :code:`automake`  를 사용해, 손쉬운 이식성과 구성.
 * *GNUlitically correct* 인 라이브러리
 
-*GNUlitically correct* 은 GNU 코딩 규약을 따르고 *autoconf* 를 사용하는 프로그램을 뜻합니다.(\*)
+*GNUlitically correct* 은 GNU 코딩 규약을 따르고 *autoconf* 를 사용하는 프로그램을 뜻합니다.(*)
 
 기존의 수치 해석 라이브러리들을 사용할 수도 있지만 해당 라이브러리들은 다음과 같은 장단점이 있습니다.
 

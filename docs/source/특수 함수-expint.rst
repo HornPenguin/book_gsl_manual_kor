@@ -46,7 +46,7 @@ Ei(x)
 
         Ei(x) = - PV (\int_{-x}^\infty \frac{\exp(-t)}{t} dt)
 
-    :math:`PV` 는 적분 주요값(Principal Value of Integral)입니다. 코시 주요값(Cauchy principal value)이라고도 합니다(\*).
+    :math:`PV` 는 적분 주요값(Principal Value of Integral)입니다. 코시 주요값(Cauchy principal value)이라고도 합니다(*).
 
 초기하 적분 (Hyperbolic Integrals)
 -------------------------------------------

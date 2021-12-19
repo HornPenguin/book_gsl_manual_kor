@@ -193,7 +193,7 @@
 
 .. function:: gsl_complex gsl_complex_conjugate(gsl_complex z)
 
-이 함수는 주어진 복소수  :code:`z` 컬레 복소수, :math:`z^\* = x - iy`  를 반환합니다.
+이 함수는 주어진 복소수  :code:`z` 컬레 복소수, :math:`z^* = x - iy`  를 반환합니다.
 
 .. function:: gsl_complex gsl_complex_inverse(gsl_complex z)
 
