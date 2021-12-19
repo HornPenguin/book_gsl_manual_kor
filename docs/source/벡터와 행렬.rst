@@ -253,7 +253,7 @@ gsl_block_complex_long_double   complex long double
 이를 위해서는 프로그램을 컴파일 할 때, 전처리기에서 매크로 :code:`HAVE_INLINE` 처리 하도록 선언해야합니다.
 
 
-.. c:marco:: GSL_RANGE_CHECK_OFF
+.. rst:directive:: .. c:marco:: GSL_RANGE_CHECK_OFF
 
 
   만약 필요한 경우 :code:`GSL_RANGE_CHECK_OFF` 정의해 재컴파일하면 코드의 수정 없이 모든 범위 확인 기능을 무시할 수 있습니다. 
@@ -497,7 +497,7 @@ gsl_block_complex_long_double   complex long double
 벡터 복사
 --------------------------
 
-덧셈이나 곱셈 등의 일반적인 벡터 연산들은 BLAS 라이브러리에 구현되어 있습니다( :ref:`BLAS 지원` 을 참고할 수 있습니다). 
+덧셈이나 곱셈 등의 일반적인 벡터 연산들은 BLAS 라이브러리에 구현되어 있습니다( :ref:`BLAS-지원` 을 참고할 수 있습니다). 
 하지만, BLAS 전체 코드가 필요 없는 몇몇 유용한 기능들이 있을 수 있습니다. 
 다음의 함수들은 이러한 범주에 드는 기능들을 구현한 함수들입니다.
 
