@@ -109,7 +109,7 @@
 아래의 함수에서 :math:`gsl_sf_legendre_t`  인자를 이용해 정규화 방법을 선택할 수 있습니다. 
 가능한 값들은 다음과 같습니다.
 
-.. type:: gsl_sf_legendre_t
+.. c:type:: gsl_sf_legendre_t
     
 
    ================================== ===============================================================================
@@ -195,7 +195,7 @@
     해당 값은 :math:`P_l^m(x)` , :math:`P'_l^m(x)` , 그리고 :math:`P''_l^m(x)` 에 대응되고 
     주어진 :math:`l` :math:`m` 대해, :math:`l(l_1)//2 +m`  으로 정해집니다.
 
- :math:`HAVE_INLINE`  사용하면 인라인 버전의 함수를 사용할 수 있습니다.
+    :math:`HAVE_INLINE` 를 사용하면 인라인 버전의 함수를 사용할 수 있습니다.
 
 .. function:: double gsl_sf_legendre_Plm (int l, int m, double x)
               int gsl_sf_legendre_Plm_e (int l, int m, double x, gsl_sf_result * result)

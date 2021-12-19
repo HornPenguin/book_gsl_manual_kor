@@ -40,23 +40,23 @@ above::
              [action-if-found],
              [action-if-not-found])
 
-The argument :macro:`GSL_VERSION` should be the two or three digit
+The argument :c:macro:`GSL_VERSION` should be the two or three digit
 :code:`major.minor` or :code:`major.minor.micro` version number of the release
 you require. A suitable choice for :code:`action-if-not-found` is::
 
   AC_MSG_ERROR(could not find required version of GSL)
 
-Then you can add the variables :macro:`GSL_LIBS` and :macro:`GSL_CFLAGS` to
+Then you can add the variables :c:macro:`GSL_LIBS` and :c:macro:`GSL_CFLAGS` to
 your Makefile.am files to obtain the correct compiler flags.
-:macro:`GSL_LIBS` is equal to the output of the :code:`gsl-config --libs`
-command and :macro:`GSL_CFLAGS` is equal to :code:`gsl-config --cflags`
+:c:macro:`GSL_LIBS` is equal to the output of the :code:`gsl-config --libs`
+command and :c:macro:`GSL_CFLAGS` is equal to :code:`gsl-config --cflags`
 command. For example::
 
   libfoo_la_LDFLAGS = -lfoo $(GSL_LIBS) -lgslcblas
 
-Note that the macro :macro:`AX_PATH_GSL` needs to use the C compiler so it
+Note that the macro :c:macro:`AX_PATH_GSL` needs to use the C compiler so it
 should appear in the :file:`configure.in` file before the macro
-:macro:`AC_LANG_CPLUSPLUS` for programs that use C++.
+:c:macro:`AC_LANG_CPLUSPLUS` for programs that use C++.
 
 To test for :code:`inline` the following test should be placed in your
 :file:`configure.in` file::
