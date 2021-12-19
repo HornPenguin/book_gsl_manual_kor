@@ -101,7 +101,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 이러한 경우에 :c:type:`gsl_mode_t` 자료형으로 정의된 :code:`mode` 인자를 이용해 요구 정밀도를 낮추어 연산 효율을 높일 수 있습니다. 
 다음의 정밀도 값들이 :math:`mode` 인자에 들어갈 수 있습니다.
 
-.. c:type:: gsl_mode_t
+.. .. c:type:: gsl_mode_t
 
   .. c:macro:: GSL_PREC_DOUBLE
 
