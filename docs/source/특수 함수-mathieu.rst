@@ -31,17 +31,17 @@
 배열에 기반한 방법을 통해 계산할 수 있습니다. 
 배열 기반 함수들은 사전 정의된 작업 공간이 필요합니다.
 
-.. type:: gsl_sf_mathieu_workspace
+.. c:type:: gsl_sf_mathieu_workspace
 
-이 공간은 배열 기반 방법을 위한 작업 공간입니다.
+    배열 기반 방법을 위한 작업 공간입니다.
 
 .. function:: gsl_sf_mathieu_workspace * gsl_sf_mathieu_alloc (size_t n, double qmax)
 
-이 함수는 마티유 함수들의 배열 기반 방법을 위한 작업 공간을 반환합니다. 인자 :math:`n` :math:`qmax` 최대 계수와 공간에서 계산되는 마티유 함수의 :math:`q`  -값을 결정합니다.
+    마티유 함수들의 배열 기반 방법을 위한 작업 공간을 반환합니다. 인자 :math:`n` :math:`qmax` 최대 계수와 공간에서 계산되는 마티유 함수의 :math:`q`  -값을 결정합니다.
 
 .. function:: void gsl_sf_mathieu_free (gsl_sf_mathieu_workspace * work)
 
-이 함수는 주어진 작업 공간 :math:`work` 를 해제합니다.
+    주어진 작업 공간 :math:`work` 를 해제합니다.
 
 마티유 함수 특성 값 (Mathieu Function Characteristic Values)
 -------------------------------------------------------------------

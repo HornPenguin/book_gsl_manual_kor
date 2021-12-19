@@ -100,7 +100,7 @@
 
 .. function:: int gsl_sf_sin_err_e (double x, double dx, gsl_sf_result * result)
 
-    각 :math:`x` 대해, 버금 절대 오차 :math:`dx` 가 포함된 sine 값 :math:`\sin(x \pm dx)`을 계산합니다. 
+    각 :math:`x` 대해, 버금 절대 오차 :math:`dx` 가 포함된 sine 값 :math:`\sin(x \pm dx)` 을 계산합니다. 
     
     .. note::
         

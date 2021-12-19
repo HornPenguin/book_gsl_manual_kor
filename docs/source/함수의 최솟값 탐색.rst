@@ -82,7 +82,7 @@ Fig 27.을 참고하십시오.
 최소화 설정하기
 ==================
 
-.. type:: gsl_min_fminimizer
+.. c:type:: gsl_min_fminimizer
 
   최소화 함수를 위한 작업공간을 나타냅니다.
 
@@ -147,11 +147,11 @@ Fig 27.을 참고하십시오.
 
   최소화 공간 :math:`s` 갱신합니다. 만약, 갱신 도중 예상치 못한 문제가 생긴다면 다음의 오류 코드가 반환됩니다.
 
-  :macro:`GSL_EBADFUNC`
+  .. c:macro:: GSL_EBADFUNC
 
       이 오류 코드는 함수 값이 :math:`Inf` 나 :math:`NaN` 가 되는 특이점이 나올 경우 반환됩니다.
 
-   :macro:`GSL_FAILURE`
+  .. c:macro:: GSL_FAILURE
 
       알고리즘이 현재 최적 근사 값이나 구간을 더 최적화 하지 못할 때 반환됩니다.
 

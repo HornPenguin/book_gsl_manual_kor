@@ -76,7 +76,7 @@
 
     이 함수는 :math:`L = Lmin \dots Lmin + kmax` 에 대해, 
     함수 :math:`F_L(\eta,x), G_L(\eta,x)` 와 그 도함수  
-   :math:`F'_L(\eta,x), G'_L(\eta,x)` 의 값을 계산합니다.  
+    :math:`F'_L(\eta,x), G'_L(\eta,x)` 의 값을 계산합니다.  
     계산 결과값은 각각 :math:`fc_array` , :math:`gc_array` , :math:`fcp_array` 그리고 :math:`gcp_array` 배열에 저장됩니다.
     오버플로우가 발생하면 지수값이 :math:`F_exponenet` 와 :math:`G_exponent` 에 저장됩니다.
 
@@ -86,7 +86,7 @@
     인자로 나누어진 쿨롱 함수 :math:`F_L(\eta,x)/x` 값을 계산합니다.  
     계산 결과값은 :math:`fc_array`  배열에 저장됩니다. 
     오버플로우가 발생하면 지수값이 :math:`F_exponenet` 에 저장됩니다.  
-   :math:`\eta \rightarrow 0` 이 함수는 구면 베셀 함수로 수렴합니다.
+    :math:`\eta \rightarrow 0` 이 함수는 구면 베셀 함수로 수렴합니다.
 
 쿨롱 파동함수의 정규화 계수 (Coulomb Wave Function Normalization Constant)
 -----------------------------------------------------------------------------
