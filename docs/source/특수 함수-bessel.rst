@@ -16,21 +16,21 @@
 .. function:: double gsl_sf_bessel_J0 (double x)
               int gsl_sf_bessel_J0_e (double x, gsl_sf_result * result)
 
-   :math:`0` 차수의 1종 베셀 함수 :math:`J_0(x)`의 값을 계산합니다.
+   :math:`0` 차수의 1종 베셀 함수 :math:`J_0(x)` 의 값을 계산합니다.
 
 .. function:: double gsl_sf_bessel_J1 (double x)
               int gsl_sf_bessel_J1_e (double x, gsl_sf_result * result)
 
-   :math:`1` 차수의 1종 베셀 함수 :math:`J_1(x)`의 값을 계산합니다.
+   :math:`1` 차수의 1종 베셀 함수 :math:`J_1(x)` 의 값을 계산합니다.
 
 .. function:: double gsl_sf_bessel_Jn (int n, double x)
               int gsl_sf_bessel_Jn_e (int n, double x, gsl_sf_result * result)
 
-   주어진 :math:`n` 차수의 1종 베셀 함수 :math:`J_n(x)`의 값을 계산합니다.
+   주어진 :math:`n` 차수의 1종 베셀 함수 :math:`J_n(x)` 의 값을 계산합니다.
 
 .. function:: int gsl_sf_bessel_Jn_array (int nmin, int nmax, double x, double result_array[])
 
-   :math:`nmin`  에서 :math:`nmax` 까지, 1종 베셀 함수 :math:`J_n(x)`의 값을 계산합니다. 
+   :math:`nmin`  에서 :math:`nmax` 까지, 1종 베셀 함수 :math:`J_n(x)` 의 값을 계산합니다. 
    계산 결과값은 :math:`result_array` 배열에 저장됩니다. 재귀식을 이용해 계산 효율을 높여, 
    실제 값과는 조금 다를 수 있습니다.
 
@@ -55,8 +55,8 @@
 
 .. function:: int gsl_sf_bessel_Yn_array (int nmin, int nmax, double x, double result_array[])
 
-   :math:`nmin`  에서 :math:`nmax` 까지, 2종 베셀 함수 :math:`Y_n(x)`의 값을 계산합니다. 
-   계산 결과값은 :math:`result_array` 배열에 저장됩니다. 이 함수의 정의역은 :math:`x>0`입니다. 
+   :math:`nmin`  에서 :math:`nmax` 까지, 2종 베셀 함수 :math:`Y_n(x)` 의 값을 계산합니다. 
+   계산 결과값은 :math:`result_array` 배열에 저장됩니다. 이 함수의 정의역은 :math:`x>0` 입니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 1종 변형 베셀 함수(Regular Modified Cylindrical Bessel Functions)
@@ -65,44 +65,44 @@
 .. function:: double gsl_sf_bessel_I0 (double x)
               int gsl_sf_bessel_I0_e (double x, gsl_sf_result * result)
 
-   :math:`0` 차수의 1종 변형 베셀 함수 :math:`I_0(x)`의 값을 계산합니다.
+   :math:`0` 차수의 1종 변형 베셀 함수 :math:`I_0(x)` 의 값을 계산합니다.
 
 .. function:: double gsl_sf_bessel_I1 (double x)
               int gsl_sf_bessel_I1_e (double x, gsl_sf_result * result)
 
-   :math:`1` 차수의 1종 변형 베셀 함수 :math:`1_0(x)`의 값을 계산합니다.
+   :math:`1` 차수의 1종 변형 베셀 함수 :math:`1_0(x)` 의 값을 계산합니다.
 
 .. function:: double gsl_sf_bessel_In (int n, double x)
               int gsl_sf_bessel_In_e (int n, double x, gsl_sf_result * result)
 
-   주어진 :math:`n` 차수의 1종 변형 베셀 함수 :math:`I_n(x)`의 값을 계산합니다.
+   주어진 :math:`n` 차수의 1종 변형 베셀 함수 :math:`I_n(x)` 의 값을 계산합니다.
 
 .. function:: int gsl_sf_bessel_In_array (int nmin, int nmax, double x, double result_array[])
 
-   :math:`nmin`  에서 :math:`nmax` 까지, 1종 변형 베셀 함수 :math:`I_n(x)`의 값을 계산합니다. 
-   계산 결과값은 :math:`result_array` 배열에 저장됩니다. :math:`nmin` 는 반드시 양수이거나 :math:`0`이어야 합니다. 
+   :math:`nmin` 에서 :math:`nmax` 까지, 1종 변형 베셀 함수 :math:`I_n(x)` 의 값을 계산합니다. 
+   계산 결과값은 :math:`result_array` 배열에 저장됩니다. :math:`nmin` 는 반드시 양수이거나 :math:`0` 이어야 합니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 .. function:: double gsl_sf_bessel_I0_scaled (double x)
               int gsl_sf_bessel_I0_scaled_e (double x, gsl_sf_result * result)
 
-   조정 계수가 곱해진 :math:`0` 차수의 1종 변형 베셀 함수 :math:`\text{exp}(-|x|) I_0(x)`를 계산합니다.
+   조정 계수가 곱해진 :math:`0` 차수의 1종 변형 베셀 함수 :math:`\text{exp}(-|x|) I_0(x)` 를 계산합니다.
 
 .. function:: double gsl_sf_bessel_I1_scaled (double x)
               int gsl_sf_bessel_I1_scaled_e (double x, gsl_sf_result * result)
 
-   조정 계수가 곱해진 :math:`1` 차수의 1종 변형 베셀 함수 :math:`\text{exp}(-|x|) I_1(x)`를 계산합니다.
+   조정 계수가 곱해진 :math:`1` 차수의 1종 변형 베셀 함수 :math:`\text{exp}(-|x|) I_1(x)` 를 계산합니다.
 
 .. function:: double gsl_sf_bessel_In_scaled (int n, double x)
               int gsl_sf_bessel_In_scaled_e (int n, double x, gsl_sf_result * result)
 
-   조정 계수가 곱해진, :math:`n` 차수의 1종 변형 베셀 함수 :math:`\text{exp}(-|x|) I_n(x)`를 계산합니다.
+   조정 계수가 곱해진, :math:`n` 차수의 1종 변형 베셀 함수 :math:`\text{exp}(-|x|) I_n(x)` 를 계산합니다.
 
 .. function:: int gsl_sf_bessel_In_scaled_array (int nmin, int nmax, double x, double result_array[])
 
-   :math:`nmin` 에서 :math:`nmax` 까지, 조정 계수가 곱해진, 1종 변형 베셀 함수 :math:`\text{exp}(-|x|)I_n(x)`의 값을 계산합니다. 
+   :math:`nmin` 에서 :math:`nmax` 까지, 조정 계수가 곱해진, 1종 변형 베셀 함수 :math:`\text{exp}(-|x|)I_n(x)` 의 값을 계산합니다. 
    계산 결과값은 :math:`result_array` 배열에 저장됩니다. 
-   :math:`nmin`  반드시 양수이거나 :math:`0`이어야 합니다. 
+   :math:`nmin`  반드시 양수이거나 :math:`0` 이어야 합니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 2종 변형 베셀 함수(Irregular Modified Cylindrical Bessel Functions)
@@ -259,7 +259,7 @@
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 2종 변형 구면 베셀 함수(Irregular Modified Spherical Bessel Functions)
--------------------------
+----------------------------------------------------------------------------------------------
 
 2종 변형 구면 베셀함수 :math:`k_l(x)`는 분수 차수 2종 구면 베셀 함수와 다음과 같은 관계를 가집니다.
 
@@ -294,7 +294,7 @@
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 1종 베셀 함수-분수 차수(Regular Bessel Function—Fractional Order)
-------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
 
 
 .. function:: double gsl_sf_bessel_Jnu (double nu, double x)
@@ -309,7 +309,7 @@
    :math:`v`  배열을 수정해 :math:`J_\nu (x_i)` 의 값을 덮어 씌웁니다.
 
 2종 베셀 함수-분수 차수(Irregular Bessel Functions—Fractional Order)
----------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 
 
 .. function:: double gsl_sf_bessel_Ynu (double nu, double x)
@@ -318,7 +318,7 @@
     분수 차수 :math:`\nu`에 대해, 2종 베셀함수 :math:`Y_\nu (x)`의 값을 계산합니다.
   
 1종 변형 베셀 함수-분수 차수(Regular Modified Bessel Functions—Fractional Order)
-----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
 
 
 .. function:: double gsl_sf_bessel_Inu (double nu, double x)
@@ -333,7 +333,7 @@
    :math:`x>0, \nu>0` 에 대해, 조정 계수가 곱해진 분수 차수 :math:`\nu`의 2종 변형 베셀 함수 :math:`\text{exp}(-|x|)I_\nu (x)`의 값을 계산합니다.
 
 2종 변형 베셀 함수-분수 차수(Irregular Modified Bessel Functions—Fractional Order)
--------------------------
+---------------------------------------------------------------------------------------------------------------------
 
 .. function:: double gsl_sf_bessel_Knu (double nu, double x)
               int gsl_sf_bessel_Knu_e (double nu, double x, gsl_sf_result * result)
@@ -354,7 +354,7 @@
    :math:`x>0, \nu>0` 에 대해, 조정 계수가 곱해진 분수 차수 :math:`\nu`의 2종 변형 베셀 함수 :math:`\text{exp}(+|x|)K_\nu (x)`의 값을 계산합니다.
 
 1종 베셀 함수의 근(Zeros of Regular Bessel Functions)
--------------------------
+-----------------------------------------------------------------------
 
 .. function:: double gsl_sf_bessel_zero_J0 (unsigned int s)
               int gsl_sf_bessel_zero_J0_e (unsigned int s, gsl_sf_result * result)

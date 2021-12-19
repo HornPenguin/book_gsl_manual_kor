@@ -61,7 +61,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 
 이 구조체는 다음과 같이 함수 값과 오차 값으로 이루어져 있습니다.
 
-.. type:: gsl_sf_result
+.. c:type:: gsl_sf_result
 
   ::
 
@@ -81,7 +81,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 실제 값은 :code:`result * 10^(e10)` 을 계산해야 합니다.
 
 
-.. type:: gsl_sf_result_e10
+.. c:type:: gsl_sf_result_e10
 
   ::
 
@@ -100,7 +100,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 그러나 몇몇 특수 함수들의 경우, 배정밀도 수준의 정밀도를 얻기 위해서 매우 높은 항이 필요한 경우도 있습니다. 
 이러한 경우에 :type:`gsl_mode_t` 자료형으로 정의된 :code:`mode` 인자를 이용해 요구 정밀도를 낮추어 연산 효율을 높일 수 있습니다. 다음의 정밀도 값들이 :math:`mode`  인자에 들어갈 수 있습니다.
 
-.. type:: gsl_mode_t
+.. c:type:: gsl_mode_t
 
   .. macro:: GSL_PREC_DOUBLE
 

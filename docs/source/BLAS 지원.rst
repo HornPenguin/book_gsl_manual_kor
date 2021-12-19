@@ -206,7 +206,7 @@ Level 1 BLAS 인터페이스
 .. function:: int gsl_blas_srot (gsl_vector_float * x, gsl_vector_float * y, float c, float s)
               int gsl_blas_drot (gsl_vector * x, gsl_vector * y, const double c, const double s)
 
-  회전 :math:`(x',y') = (cx+sy, -sx+cy)`  을 주어진 벡터 :math:`x` 와 :math:`y`  에 대해 적용합니다.
+  회전 :math:`(x',y') = (cx+sy, -sx+cy)` 을 주어진 벡터 :math:`x` 와 :math:`y` 에 대해 적용합니다.
 
 .. function:: int gsl_blas_srotmg (float d1[], float d2[], float b1[], float b2, float P[])
               int gsl_blas_drotmg (double d1[], double d2[], double b1[], double b2, double P[])
@@ -237,9 +237,9 @@ Level 2 BLAS 인터페이스
 
   행렬-벡터 곱 :math:`x = op(A)x`  를 삼각 행렬 :math:`A` 대해 계산합니다.
   :math:`op(A) = A, A^T, A^H`  이고 :code:`TransA` = :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConjTrans` 가 가능합니다. 
-  :code:`Uplo` 가 :code:`CblasUpper` 일 때, 행렬 :math:`A`  의 상삼각 행렬이 사용되고, 
+  :code:`Uplo` 가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 의 상삼각 행렬이 사용되고, 
   :code:`CblasLower` 라면, :math:`A` 의 하삼각 행렬이 사용됩니다. 
-  만약, :code:`Dig` 가 :code:`CblasNonUnit`  라면 행렬의 대각 성분들이 사용됩니다.
+  만약, :code:`Dig` 가 :code:`CblasNonUnit` 라면 행렬의 대각 성분들이 사용됩니다.
   :code:`CblasUnit` 라면 행렬 :math:`A` 의 대각 성분들은 유니터리 행렬의 대각성분으로 취급되기 때문에 참조되지 않습니다. 
 
 .. function:: int gsl_blas_strsv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix_float * A, gsl_vector_float * x)
@@ -249,10 +249,10 @@ Level 2 BLAS 인터페이스
 
   주어진 벡터 :math:`x` 대해, :math:`inv(op(A))x`  를 계산합니다.  
   :math:`op(A) = A, A^T, A^H`  이고 :code:`TransA` = :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConjTrans` 가 가능합니다.
-  :code:`Uplo`  가 :code:`CblasUpper`  일 때, 행렬 :math:`A` 의 상삼각 행렬이 사용되고,
+  :code:`Uplo` 가 :code:`CblasUpper`  일 때, 행렬 :math:`A` 의 상삼각 행렬이 사용되고,
   :code:`CblasLower`  라면, 행렬 :math:`A` 의 하삼각 행렬이 사용됩니다. 
-  만약, :code:`Dig` 가 :code:`CblasNonUnit` 라면 행렬의 대각 성분들이 사용됩니다.
-  :code:`CblasUnit`  라면 행렬 :math:`A`  의 대각 성분들은 유니터리 행렬의 대각성분으로 취급되기 때문에 참조되지 않습니다. 
+  만약, :code:`Dig`가 :code:`CblasNonUnit` 라면 행렬의 대각 성분들이 사용됩니다.
+  :code:`CblasUnit` 라면 행렬 :math:`A` 의 대각 성분들은 유니터리 행렬의 대각성분으로 취급되기 때문에 참조되지 않습니다. 
 
 .. function:: int gsl_blas_ssymv (CBLAS_UPLO_t Uplo, float alpha, const gsl_matrix_float * A, const gsl_vector_float * x, float beta, gsl_vector_float * y)
               int gsl_blas_dsymv (CBLAS_UPLO_t Uplo, double alpha, const gsl_matrix * A, const gsl_vector * x, double beta, gsl_vector * y)
@@ -289,8 +289,8 @@ Level 2 BLAS 인터페이스
 
   대칭 행렬 :math:`A` 대해, 대칭 랭크-1 갱신 :math:`A = \alpha xx^T + A` 를 계산합니다. 
   행렬 :math:`A` 는 대칭 행렬이기 때문에, 상삼각 부분이나 하삼각 부분만 저장해도 됩니다.  
-  :code:`Uplo`  가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
-  :code:`CblasLower`  라면, :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다.
+  :code:`Uplo` 가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
+  :code:`CblasLower` 라면, :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다.
 
 
 .. function:: int gsl_blas_cher (CBLAS_UPLO_t Uplo, float alpha, const gsl_vector_complex_float * x, gsl_matrix_complex_float * A)
@@ -298,8 +298,8 @@ Level 2 BLAS 인터페이스
 
   에르미트 행렬 :math:`A` 대해, 에르미트 랭크-1 갱신 :math:`A = \alpha xx^H + A` 를 계산합니다. 
   행렬 :math:`A` 는 에르미트 행렬이기 때문에, 상삼각 부분이나 하삼각 부분만 저장해도 됩니다.  
-  :code:`Uplo`  가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
-  :code:`CblasLower`  라면, :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다. 
+  :code:`Uplo` 가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
+  :code:`CblasLower` 라면, :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다. 
   대각 성분의 복소 성분들은 자동적으로 0으로 가정하고 참조되지 않습니다. 
 
 .. function:: int gsl_blas_ssyr2 (CBLAS_UPLO_t Uplo, float alpha, const gsl_vector_float * x, const gsl_vector_float * y, gsl_matrix_float * A)
@@ -307,16 +307,16 @@ Level 2 BLAS 인터페이스
 
   대칭 행렬 :math:`A` 대해, 대칭 랭크-2 갱신 :math:`A = \alpha xy^T + \alpha yx^T + A` 를 계산합니다. 
   행렬 :math:`A` 는 대칭 행렬이기 때문에, 상삼각 부분이나 하삼각 부분만 저장해도 됩니다.  
-  :code:`Uplo`  가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
-  :code:`CblasLower`  라면, :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다.
+  :code:`Uplo` 가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
+  :code:`CblasLower` 라면, :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다.
 
 .. function:: int gsl_blas_cher2 (CBLAS_UPLO_t Uplo, const gsl_complex_float alpha, const gsl_vector_complex_float * x, const gsl_vector_complex_float * y, gsl_matrix_complex_float * A)
               int gsl_blas_zher2 (CBLAS_UPLO_t Uplo, const gsl_complex alpha, const gsl_vector_complex * x, const gsl_vector_complex * y, gsl_matrix_complex * A)
 
   에르미트 행렬 :math:`A` 대해, 에르미트 랭크-2갱신 :math:`A = \alpha xy^H + \alpha yx^H + A` 를 계산합니다. 
   행렬 :math:`A` 는 에르미트 행렬이기 때문에, 상삼각 부분이나 하삼각 부분만 저장해도 됩니다.  
-  :code:`Uplo`  가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
-  :code:`CblasLower`  라면, :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다. 
+  :code:`Uplo` 가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
+  :code:`CblasLower` 라면, :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다. 
   대각 성분의 복소 성분들은 자동으로 0으로 가정하고 참조되지 않습니다. 
 
 Level 3 BLAS 인터페이스
@@ -339,8 +339,8 @@ Level 3 BLAS 인터페이스
   :code:`Side` 가 :math:`CblasLeft`  일 때 :math:`C =\alpha AB + \beta C` 를,
   :math:`CblsRight` 면 :math:`C =\alpha BA + \beta C` 를 계산합니다. 
   행렬 :math:`A` 는 대칭 행렬이어야 합니다.  
-  :code:`Uplo`  가 :code:`CblasUpper` 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
-  :code:`CblasLower`  때, 행렬 :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다. 
+  :code:`Uplo` 가 :code:`CblasUpper` 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
+  :code:`CblasLower` 때, 행렬 :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다. 
   대각 성분의 복소 성분들은 자동적으로 0으로 가정하고 참조되지 않습니다. 
 
 
@@ -361,15 +361,15 @@ Level 3 BLAS 인터페이스
               int gsl_blas_ztrmm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_complex alpha, const gsl_matrix_complex * A, gsl_matrix_complex * B)
 
   행렬-행렬 곱을 계산합니다.  
-  :code:`Side`  가 :math:`CblasLeft` 일 때 :math:`B = \alpha op(A)B` 를,  
-  :math:`CblasRight`  면 :math:`B = \alpha B op(A)` 를 계산합니다. 
-  행렬 :math:`A` 는 삼각행렬이어햐 하고,  
-  :code:`TransA`  가 :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConkTrans` 인 경우 
-  각각 :math:`op(A) = A, A^T, A^H`  를 의미합니다. 
-  :code:`Uplo`  가 :code:`CblasUpper` 인 경우 행렬 :math:`A` 는 상삼각 부분이 사용되고,  
-  :code:`CblasLower`  인 경우 :math:`A` 는 하삼각 부분이 사용됩니다.
-  만약, :math:`Diag`  가 :code:`CblasNonUnit`  라면 행렬 :math:`A` 는 대각 성분이 사용되고,  
-  :code:`CblasUnit`  라면 유니터리 행렬로 취급하여 대각 성분은 참조되지 않습니다.
+  :code:`Side` 가 :math:`CblasLeft` 일 때 :math:`B = \alpha op(A)B` 를,  
+  :math:`CblasRight` 면 :math:`B = \alpha B op(A)` 를 계산합니다. 
+  행렬 :math:`A` 는 삼각행렬이어햐 하고, 
+  :code:`TransA` 가 :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConkTrans` 인 경우 
+  각각 :math:`op(A) = A, A^T, A^H` 를 의미합니다. 
+  :code:`Uplo` 가 :code:`CblasUpper` 인 경우 행렬 :math:`A` 는 상삼각 부분이 사용되고,  
+  :code:`CblasLower` 인 경우 :math:`A` 는 하삼각 부분이 사용됩니다.
+  만약, :math:`Diag` 가 :code:`CblasNonUnit` 라면 행렬 :math:`A` 는 대각 성분이 사용되고,  
+  :code:`CblasUnit` 라면 유니터리 행렬로 취급하여 대각 성분은 참조되지 않습니다.
 
 .. function:: int gsl_blas_strsm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, float alpha, const gsl_matrix_float * A, gsl_matrix_float * B)
               int gsl_blas_dtrsm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, double alpha, const gsl_matrix * A, gsl_matrix * B)
@@ -378,11 +378,11 @@ Level 3 BLAS 인터페이스
 
   역행렬의 행렬곱을 계산합니다.  
   :code:`Side`  가 :math:`CblasLeft` 일 때 :math:`B=\alpha op(inv(A))B` 를, 
-  :math:`CblasRight` 경우에는 :math:`B=\alpha B op(inv(A))`  를 계산합니다. 
+  :math:`CblasRight` 경우에는 :math:`B=\alpha B op(inv(A))` 를 계산합니다. 
   행렬 :math:`A` 는 삼각 행렬이어야 하고 
-  :code:`TransA`  가 :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConkTrans` 인 경우 
+  :code:`TransA` 가 :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConkTrans` 인 경우 
   각각 :math:`op(A) = A, A^T, A^H` 를 의미합니다.  
-  :code:`Uplo`  가 :code:`CblasUpper` 인 경우 행렬 :math:`A` 는 상삼각 부분이 사용되고,  
+  :code:`Uplo` 가 :code:`CblasUpper` 인 경우 행렬 :math:`A` 는 상삼각 부분이 사용되고,  
   :code:`CblasLower` 인 경우 :math:`A` 는 하삼각 부분이 사용됩니다. 
   만약, :math:`Diag` 가 :code:`CblasNonUnit` 라면 행렬 :math:`A` 는 대각 성분이 사용되고,  
   :code:`CblasUnit` 라면 유니터리 행렬로 취급하여 취급하여 대각 성분은 참조되지 않습니다.
@@ -394,19 +394,19 @@ Level 3 BLAS 인터페이스
               int gsl_blas_zsyrk (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, const gsl_complex alpha, const gsl_matrix_complex * A, const gsl_complex beta, gsl_matrix_complex * C)
 
   대칭 행렬 :math:`C` 랭크-k 갱신을 계산합니다.  
-  :code:`Trans`  가 :code:`CblasNoTrans` 라면 :math:`C = \alpha AA^T  + \beta C`  을,  
-  :code:`CblasTrans`  면 :math:`C = \alpha A^T A + \beta C`  를 계산합니다. 
+  :code:`Trans` 가 :code:`CblasNoTrans` 라면 :math:`C = \alpha AA^T  + \beta C`  을,  
+  :code:`CblasTrans`  면 :math:`C = \alpha A^T A + \beta C` 를 계산합니다. 
   행렬 :math:`C` 대칭 행렬이기 때문에 상삼각이나 하삼각 부분만 저장해도 됩니다.  
-  :code:`Uplo`  가 :code:`CblasUpper` 인 경우  행렬 :math:`C` 상삼각 부분과 대각 부분이 사용되고,  
-  :code:`CblasLower`  라면 :math:`C` 의 하삼각 부분과 대각 부분이 사용됩니다. 
+  :code:`Uplo` 가 :code:`CblasUpper` 인 경우  행렬 :math:`C` 상삼각 부분과 대각 부분이 사용되고,  
+  :code:`CblasLower` 라면 :math:`C` 의 하삼각 부분과 대각 부분이 사용됩니다. 
 
 .. function:: int gsl_blas_cherk (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, float alpha, const gsl_matrix_complex_float * A, float beta, gsl_matrix_complex_float * C)
               int gsl_blas_zherk (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, double alpha, const gsl_matrix_complex * A, double beta, gsl_matrix_complex * C)
 
-  에르미트 행렬 :math:`C` 랭크-k 갱신을 계산합니다. :code:`Trans`  가 :code:`CblasNoTrans` 라면  
-  :math:`C = \alpha AA^H  + \beta C`  을, :code:`CblasTrans`  면 :math:`C = \alpha A^H A + \beta C`  를 계산합니다. 
+  에르미트 행렬 :math:`C` 랭크-k 갱신을 계산합니다. :code:`Trans` 가 :code:`CblasNoTrans` 라면  
+  :math:`C = \alpha AA^H  + \beta C` 을, :code:`CblasTrans` 면 :math:`C = \alpha A^H A + \beta C` 를 계산합니다. 
   행렬 :math:`C` 에르미트 행렬이기 때문에 상삼각이나 하삼각 부분만 저장해도 됩니다. 
-  :code:`Uplo`  가 :code:`CblasUpper` 행렬 :math:`C` 상삼각 부분과 대각 부분이 사용되고,
+  :code:`Uplo` 가 :code:`CblasUpper` 행렬 :math:`C` 상삼각 부분과 대각 부분이 사용되고,
   :code:`CblasLower`  라면 :math:`C` 의 하삼각 부분과 대각 부분이 사용됩니다. 
 
 .. function:: int gsl_blas_ssyr2k (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, float alpha, const gsl_matrix_float * A, const gsl_matrix_float * B, float beta, gsl_matrix_float * C)
@@ -416,22 +416,22 @@ Level 3 BLAS 인터페이스
 
   대칭 행렬 :math:`C` 랭크-2k 갱신을 계산합니다.  
   :code:`Trans` 가 :code:`CblasNoTrans`  라면 :math:`C = \alpha AB^T + \alpha B A^T  + \beta C` 을,  
-  :code:`CblasTrans`  면 :math:`C = \alpha A^T B+\alpha B^T A + \beta C`  를 계산합니다. 
+  :code:`CblasTrans`  면 :math:`C = \alpha A^T B+\alpha B^T A + \beta C` 를 계산합니다. 
   행렬 :math:`C` 대칭 행렬이기 때문에 상삼각이나 하삼각 부분만 저장해도 됩니다.  
-  :code:`Uplo`  가 :code:`CblasUpper` 인 경우 행렬 :math:`C` 상삼각 부분과 대각 부분이 사용되고,  
-  :code:`CblasLower`  라면 :math:`C` 의 하삼각 부분과 대각 부분이 사용됩니다. 
+  :code:`Uplo` 가 :code:`CblasUpper` 인 경우 행렬 :math:`C` 상삼각 부분과 대각 부분이 사용되고,  
+  :code:`CblasLower` 라면 :math:`C` 의 하삼각 부분과 대각 부분이 사용됩니다. 
 
 .. function:: int gsl_blas_cher2k (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, const gsl_matrix_complex_float * B, float beta, gsl_matrix_complex_float * C)
               int gsl_blas_zher2k (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, const gsl_complex alpha, const gsl_matrix_complex * A, const gsl_matrix_complex * B, double beta, gsl_matrix_complex * C)
 
 
     에르미트 행렬 :math:`C` 의 랭크-2k 갱신을 계산합니다.
-   :code:`Trans`  가 :code:`CblasNoTrans`  라면
-   :math:`C = \alpha AB^T + \alpha B A^T  + \beta C`  을, 
-   :code:`CblasTrans`  면 :math:`C = \alpha A^T B+\alpha B^T A + \beta C`  를 계산합니다.
+    :code:`Trans` 가 :code:`CblasNoTrans` 라면
+    :math:`C = \alpha AB^T + \alpha B A^T  + \beta C` 을, 
+    :code:`CblasTrans`  면 :math:`C = \alpha A^T B+\alpha B^T A + \beta C` 를 계산합니다.
     행렬 :math:`C` 에르미트 행렬이기 때문에 상삼각이나 하삼각 부분만 저장해도 됩니다.
-   :code:`Uplo`  가 :code:`CblasUpper` 라면 행렬 :math:`C` 의 상삼각 부분과 대각 부분이 사용되고,
-   :code:`CblasLower`  라면 :math:`C` 의 하삼각 부분과 대각 부분이 사용됩니다. 
+    :code:`Uplo` 가 :code:`CblasUpper` 라면 행렬 :math:`C` 의 상삼각 부분과 대각 부분이 사용되고,
+    :code:`CblasLower` 라면 :math:`C` 의 하삼각 부분과 대각 부분이 사용됩니다. 
 
 예제
 =========
@@ -480,8 +480,8 @@ Level 3 BLAS 인터페이스
 기존 인터페이스 표준과 업데이트 된 인터페이스 표준을 모두 포함한 BLAS 표준에 대한 자료는 
 BLAS 홈페이지 및 BLAS 기술 포럼 웹 사이트에서 온라인으로 확인할 수 있습니다.
 
-- `BLAS Homepage <http://www.netlib.org/blas/>`_ 
-- `BLAS Technical Forum <http://www.netlib.org/blas/blast-forum/>`_ 
+* `BLAS Homepage <http://www.netlib.org/blas/>`_ 
+* `BLAS Technical Forum <http://www.netlib.org/blas/blast-forum/>`_ 
 
 
 BLAS의 Level 1,2,3의 자세한 사양을 확안하고 싶다면 다음 문서를 확인하시길 바랍니다.
