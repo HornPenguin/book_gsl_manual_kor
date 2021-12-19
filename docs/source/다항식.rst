@@ -22,19 +22,19 @@
 inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
 
 
-.. c:function:: double gsl_poly_eval (const double c[], const int len, const double x)
+.. function:: double gsl_poly_eval (const double c[], const int len, const double x)
 
   실수 값 :code:`x` 대해, 실수 계수를 가지는 다항식의 값을 계산합니다. 
 
-.. c:function:: gsl_complex gsl_poly_complex_eval (const double c[], const int len, const gsl_complex z)
+.. function:: gsl_complex gsl_poly_complex_eval (const double c[], const int len, const gsl_complex z)
 
   허수 값 :code:`z` 대해, 실수 계수를 가지는 다항식의 값을 계산합니다.
 
-.. c:function:: gsl_complex gsl_complex_poly_complex_eval (const gsl_complex c[], const int len, const gsl_complex z)
+.. function:: gsl_complex gsl_complex_poly_complex_eval (const gsl_complex c[], const int len, const gsl_complex z)
 
   허수 값 :code:`z` 대해, 허수 계수를 가지는 다항식의 값을 계산합니다.
 
-.. c:function:: int gsl_poly_eval_derivs (const double c[], const size_t lenc, const double x, double res[], const size_t lenres)
+.. function:: int gsl_poly_eval_derivs (const double c[], const size_t lenc, const double x, double res[], const size_t lenres)
 
   다항식과 그 도함수를 계산해 길이 :code:`lenres` 의 배열 :code:`res` 에 저장합니다. 
   이 배열은 주어진 :code:`x` 값에 대한, :math:`d^k P(x)/ d x^k` 값을 
@@ -69,36 +69,36 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
 
 :math:`z = \{ x_0, x_0, x_1, x_1, \dots, x_n, x_n \}` 는  
 :math:`z_{2k} = z_{2k+1} = x_k` 로 정의됩니다. 
-분할 차분  :math:`[z_0, z_1, \dots, z_k]` 는 Burden and Faires의 3.4 단원을 참고할 수 있습니다.
+분할 차분 :math:`[z_0, z_1, \dots, z_k]`  는 Burden and Faires의 3.4 단원을 참고할 수 있습니다.
 
 
-.. c:function:: int gsl_poly_dd_init (double dd[], const double xa[], const double ya[], size_t size)
+.. function:: int gsl_poly_dd_init (double dd[], const double xa[], const double ya[], size_t size)
 
   길이 :code:`size` 의 배열 :code:`xa` 와 :code:`ya` 에 저장된 지점 :math:`(x,y)` 에 대해, 
   보간 다항식의 분할 차분 표현을 계산합니다.  
   ( :code:`xa` :code:`ya` )의  분할 차분 계산 결과는 길이 :code:`size` 배열 :code:`dd` 저장됩니다. 
   개요에서 설명한 서술법을 따라 :math:`dd[k] = [x_0, x_1,\dots, x_k]` 입니다.
 
-.. c:function:: double gsl_poly_dd_eval (const double dd[], const double xa[], const size_t size, const double x)
+.. function:: double gsl_poly_dd_eval (const double dd[], const double xa[], const size_t size, const double x)
 
   길이 :code:`size` 의 배열 :code:`xa` 와 :code:`ya` 에 저장된 분할 차분 표현된 다항식의 값을 
   주어진 변수 :code:`x` 대해 계산합니다. 
   매크로 :code:`HAVE_INLINE` 가 정의되어 있으면 인라인 버전이 사용됩니다.
 
-.. c:function:: int gsl_poly_dd_taylor (double c[], double xp, const double dd[], const double xa[], size_t size, double w[])
+.. function:: int gsl_poly_dd_taylor (double c[], double xp, const double dd[], const double xa[], size_t size, double w[])
 
   분할 차분 표현된 다항식을 테일러 전개로 바꾸어줍니다. 
   분할 차분 표현은 길이 :code:`size` 배열 :code:`dd` 와 :code:`xa` 로 표현됩니다. 
   :code:`xp` 지점의 테일러 계수들은 배열 :code:`c` 에 저장됩니다. :code:`c` 배열도  :code:`size` 크기의 길이를 가집니다. 
   배열  :code:`w` 는 길이가 :code:`size` 로 같습니다. 
 
-.. c:function:: int gsl_poly_dd_hermite_init (double dd[], double za[], const double xa[], const double ya[], const double dya[], const size_t size)
+.. function:: int gsl_poly_dd_hermite_init (double dd[], double za[], const double xa[], const double ya[], const double dya[], const size_t size)
 
   길이 :code:`size` 배열 :code:`xa` 와 :code:`ya` 에 저장된 지점 :math:`(x,y)` 들에 대해, 
   에르미트 보간 다항식의 분할 차분 표현을 계산합니다. 
-  에르미트 보간법으로 만들어지는 다항식은  :math:`1` 계 도함수 :math:`dy/dx` 의 값을 필요로 합니다. 
+  에르미트 보간법으로 만들어지는 다항식은 :math:`1`  계 도함수 :math:`dy/dx` 의 값을 필요로 합니다. 
   이 값은 길이 :code:`size` 의 배열 :code:`dya` 로 주어져 있습니다.  
-  :math:`1` 계 도함수 값들은 새로운 자료 집합 :math:`z= \{ x_0, x_0, x_1, x_1 \dots\}` 를 정의해서, 
+ :math:`1`  계 도함수 값들은 새로운 자료 집합 :math:`z= \{ x_0, x_0, x_1, x_1 \dots\}` 를 정의해서, 
   일반적인 분할 차분법에 통합시킬 수 있습니다. 
   이 값들은 길이 :math:`2 \cdot` :code:`size` 의 배열 :code:`za` 에 저장되어 있습니다. 
   계산 결과들은 :math:`2 \cdot` :code:`size` 길이를 가지는 배열 :code:`dd` 저장됩니다.  
@@ -109,7 +109,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
 :math:`2` 차 다항식 (Quadratic Equations)
 ====================================================
 
-.. c:function:: int gsl_poly_solve_quadratic (double a, double b, double c, double * x0, double * x1)
+.. function:: int gsl_poly_solve_quadratic (double a, double b, double c, double * x0, double * x1)
 
   2차 다항식
   
@@ -120,7 +120,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
   의 실수 근을 찾습니다. 근의 갯수(0,1,2)를 반환하며, 
   각 근의 위치는 :code:`x0` 와 :code:`x` 에 저장됩니다. 
   만약, 실수 근이 존재하지 않는다면 :code:`x0` 와 :code:`x1` 의 값을 수정하지 않습니다. 
-  한 개의 근만이 있는 경우(예를 들어  :math:`a=0` )는 :code:`x0` 에 저장됩니다. 
+  한 개의 근만이 있는 경우(예를 들어 :math:`a=0`  )는 :code:`x0` 에 저장됩니다. 
   두 개의 근이 존재하면 :code:`x0` 와 :code:`x1` 는 각각 오름차순으로 저장됩니다. 
   중근의 경우는 특별히 취급되지 않습니다. 
   예를 들어, :math:`(x-1)^2 = 0` 은 값이 같은 두 개의 근을 가지는 방정식으로 취급됩니다.
@@ -130,7 +130,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
   다항식의 계수가 정확하지 않을 때 비슷한 오류를 가질 수 있습니다. 
   하지만, 작은 정수 계수를 가지는 다항식에서는 정확하게 계산할 수 있습니다.
 
-.. c:function:: int gsl_poly_complex_solve_quadratic (double a, double b, double c, gsl_complex * z0, gsl_complex * z1)
+.. function:: int gsl_poly_complex_solve_quadratic (double a, double b, double c, gsl_complex * z0, gsl_complex * z1)
 
   2차 다항식 
 
@@ -140,12 +140,12 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
   
   의 복소수 근을 계산합니다.
 
-함수의 반환 값은 복소수 근의 숫자를 의미합니다. (  :math:`1`  이거나  :math:`2`  입니다.) 각 근의 위치는 :code:`z0`  :code:`z1`  저장됩니다. 저장되는 순서는 오름차순으로 저장되고, 먼저 실수부를 기준으로 판정하고 그 다음에 허수부의 크기를 기준으로 배열합니다. 만약 한 개의 실수 근만 존재하면 ( 예를 들어  :math:`a=0`  ) :code:`z0` 저장됩니다.
+함수의 반환 값은 복소수 근의 숫자를 의미합니다. ( :math:`1` 이거나 :math:`2` 입니다.) 각 근의 위치는 :code:`z0`  :code:`z1`  저장됩니다. 저장되는 순서는 오름차순으로 저장되고, 먼저 실수부를 기준으로 판정하고 그 다음에 허수부의 크기를 기준으로 배열합니다. 만약 한 개의 실수 근만 존재하면 ( 예를 들어 :math:`a=0` ) :code:`z0` 저장됩니다.
 
 :math:`3` 차 다항식 (Cubic Equations)
 ====================================================
 
-.. c:function:: int gsl_poly_solve_cubic (double a, double b, double c, double * x0, double * x1, double * x2)
+.. function:: int gsl_poly_solve_cubic (double a, double b, double c, double * x0, double * x1, double * x2)
 
   최고 차항의 계수가 1인 3차 다항식
   
@@ -164,7 +164,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
   실수 축에서 복소수 평면으로 이동해 근의 숫자가 달라질 수 있습니다.  
 
 
-.. c:function:: int gsl_poly_complex_solve_cubic (double a, double b, double c, gsl_complex * z0, gsl_complex * z1, gsl_complex * z2)
+.. function:: int gsl_poly_complex_solve_cubic (double a, double b, double c, gsl_complex * z0, gsl_complex * z1, gsl_complex * z2)
 
   3차 다항식
 
@@ -191,7 +191,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
 
 
     
-.. c:function:: gsl_poly_complex_workspace * gsl_poly_complex_workspace_alloc (size_t n)
+.. function:: gsl_poly_complex_workspace * gsl_poly_complex_workspace_alloc (size_t n)
 
   :code:`gsl_poly_complex_workspace` 구조체를 할당합니다. 
   이 작업 공간은 :math:`n` 개의 계수를 가지는 다항식을 푸는 함수
@@ -201,12 +201,12 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
   가르키는 포인터를 반환하고, 오류가 생기면  :code:`NULL` 포인터를 반환합니다.
 
 
-.. c:function:: void gsl_poly_complex_workspace_free (gsl_poly_complex_workspace * w)
+.. function:: void gsl_poly_complex_workspace_free (gsl_poly_complex_workspace * w)
 
   작업 공간 :code:`w` rk 할당된 모든 메모리를 해제합니다.
 
 
-.. c:function:: int gsl_poly_complex_solve (const double * a, size_t n, gsl_poly_complex_workspace * w, gsl_complex_packed_ptr z)
+.. function:: int gsl_poly_complex_solve (const double * a, size_t n, gsl_poly_complex_workspace * w, gsl_complex_packed_ptr z)
 
  일반 다항 함수 
 
@@ -243,7 +243,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
 
 다음 코드는 이 근들을 찾아줍니다.
 
-.. code-block:: c
+.. code-block:: C
 
   #include <stdio.h>
   #include <gsl/gsl_poly.h>

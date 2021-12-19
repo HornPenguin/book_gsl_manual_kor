@@ -15,8 +15,8 @@ Spherical Harmonics, Psi(Digamma)함수, Synchrotron 함수, Transport 함수,
 각각의 명령어는 수치적 오류와 함수의 값을 계산해서 반환합니다.
 
 기술된 함수들은 각각 다른 헤더파일에 정의되어 있습니다.
-예를 들어서 ``gsl_sf_airy.h`` 나 ``gsl_sf_bessel.h`` 로 각각 나뉘어져 있습니다. 
-모두 포함시켜서 계산하려면, ``gsl_sf.h`` 을 포함시키면 됩니다.
+예를 들어서 :math:`gsl_sf_airy.h` 나 :math:`gsl_sf_bessel.h` 로 각각 나뉘어져 있습니다. 
+모두 포함시켜서 계산하려면, :math:`gsl_sf.h` 을 포함시키면 됩니다.
 
 
 함수의 사용 (Usage)
@@ -57,7 +57,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 
 이러한 특수 함수들은 결과 값을 계산하는 과정에서 오차를 함께 계산합니다. 
 따라서, 이러한 오차와 결과값을 함께 다룰 수 있는 구조체를 함께 제공합니다. 
-이 구조체는 헤더파일  ``gsl_sf_result.h``  정의되어 있습니다.
+이 구조체는 헤더파일 :math:`gsl_sf_result.h` 정의되어 있습니다.
 
 이 구조체는 다음과 같이 함수 값과 오차 값으로 이루어져 있습니다.
 
@@ -98,21 +98,21 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 
 이 라이브러리의 특수 함수 구현체들의 제공 목적은 배정밀도를 가지는 특수 함수 값의 제공을 위함입니다. 
 그러나 몇몇 특수 함수들의 경우, 배정밀도 수준의 정밀도를 얻기 위해서 매우 높은 항이 필요한 경우도 있습니다. 
-이러한 경우에 :type:`gsl_mode_t` 자료형으로 정의된 :code:`mode` 인자를 이용해 요구 정밀도를 낮추어 연산 효율을 높일 수 있습니다. 다음의 정밀도 값들이  ``mode`` 인자에 들어갈 수 있습니다.
+이러한 경우에 :type:`gsl_mode_t` 자료형으로 정의된 :code:`mode` 인자를 이용해 요구 정밀도를 낮추어 연산 효율을 높일 수 있습니다. 다음의 정밀도 값들이 :math:`mode`  인자에 들어갈 수 있습니다.
 
 .. type:: gsl_mode_t
 
   .. macro:: GSL_PREC_DOUBLE
 
-    배정밀도, 근사적으로  :math:`2 \cdot 10^{-16}` 의 상대 정확도를 가짐.
+    배정밀도, 근사적으로 :math:`2 \cdot 10^{-16}`  의 상대 정확도를 가짐.
 
   .. macro:: GSL_PREC_SINGLE
 
-    단정밀도, 근사적으로  :math:`1 \cdot 10^{-7}` 의 상대 정확도를 가짐.
+    단정밀도, 근사적으로 :math:`1 \cdot 10^{-7}`  의 상대 정확도를 가짐.
 
   .. macro:: GSL_PREC_APPROX
 
-    근사 값, 근사적으로  :math:`5 \cdot 10^{-4}` 의 상대 정확도를 가짐.
+    근사 값, 근사적으로 :math:`5 \cdot 10^{-4}`  의 상대 정확도를 가짐.
 
 
 근사 상태는 가장 빠른 계산 시간을 보장하지만 가장 낮은 정확도를 가집니다.
@@ -246,7 +246,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 다음 예제는 오차 관리 형태의 특수 함수를 사용하는 방법을 보여줍니다. 
 베셀 함수 :math:`J\_0 (5.0)` 을 사용했습니다.
 
-.. code-block:: c
+.. code-block:: C
 
   #include <stdio.h>
   #include <gsl/gsl_errno.h>
@@ -282,9 +282,9 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 
 
 다음 프로그램은 같은 함수(베셀 함수)로 똑같은 값(:math:`J\_0 (5.0)`)을 계산합니다. 
-이 때, ``result.err`` 반환 상태는 존재하지 않습니다.
+이 때, :math:`result.err` 반환 상태는 존재하지 않습니다.
 
-.. code-block:: c
+.. code-block:: C
 
   #include <stdio.h>
   #include <gsl/   gsl_sf_bessel.h>

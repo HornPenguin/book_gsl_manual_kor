@@ -29,13 +29,13 @@ Writing
 개요
 -------------------------
 
-최소 제곱법은  :math:`\chi^2` 을 최소화 시켜 찾을 수 있습니다. 이 값은 모델  :math:`Y(c,x)` 에 대해,  :math:`n` 개의 실험 값들의 가중 잔차 제곱합(weighted sum of squared residual)을 의미합니다. 
+최소 제곱법은 :math:`\chi^2`  을 최소화 시켜 찾을 수 있습니다. 이 값은 모델 :math:`Y(c,x)`  에 대해, :math:`n`  개의 실험 값들의 가중 잔차 제곱합(weighted sum of squared residual)을 의미합니다. 
 
  :math:`$\chi^2 = \sum_i w_i (y_i - Y(c,x_i))^2` $
 
-모델의  :math:`p`  계수는  :math:`c=\{ c_0, c_1, \dots \}`  입니다. 가중 계수  :math:`w_i` 는  :math:`w_i = 1/\sigma_i^2` 로 주어집니다.  :math:`\sigma_i` 는 지점  :math:`y_i` 의 실험 오차입니다. 이 오차들은 정규 분포(가우스 분포)를 따르고 비상관(uncorrelated) 관계에 있다고 가정합니다. 가중치가 없는 값들에 대해,  :math:`\chi^2` 은 가중치 계수가 없이 계산됩니다.
+모델의 :math:`p` 계수는 :math:`c=\{ c_0, c_1, \dots \}` 입니다. 가중 계수 :math:`w_i`  는 :math:`w_i = 1/\sigma_i^2`  로 주어집니다. :math:`\sigma_i`  는 지점 :math:`y_i`  의 실험 오차입니다. 이 오차들은 정규 분포(가우스 분포)를 따르고 비상관(uncorrelated) 관계에 있다고 가정합니다. 가중치가 없는 값들에 대해, :math:`\chi^2`  은 가중치 계수가 없이 계산됩니다.
 
-피팅 함수들은 가장 잘 맞는 계수  :math:`c` 와  :math:`p\times p`  차원의 공분산 행렬을 반환합니다. 공분산 행렬은 값들에 있는 오차( :math:`\sigma_i` )로 인해 생기는 계수  :math:`c` 의 통계적 오차를 측정합니다. 이 행렬은 다음과 같이 정의됩니다.
+피팅 함수들은 가장 잘 맞는 계수 :math:`c`  와 :math:`p\times p` 차원의 공분산 행렬을 반환합니다. 공분산 행렬은 값들에 있는 오차( :math:`\sigma_i` )로 인해 생기는 계수 :math:`c`  의 통계적 오차를 측정합니다. 이 행렬은 다음과 같이 정의됩니다.
 
  :math:`$C_{ab} = \braket{\delta{c_a} \delta{c_b}}` $
 
@@ -43,7 +43,7 @@ Writing
  :math:`\braket{}` 은 해당 값 아래, 가우스 오차 분포 함수의 평균값을 나타냅니다.
 
 
-공분산 행렬은 각 지점의 오차  :math:`\sigma_i` 의 오차 전파로 계산할 수 있습니다. 값  :math:`\sigma_{y_i}` 의 변화로 생기는 피팅 계수의 변화량  :math:`\delta_{c_a}` 은 다음과 같이 주어집니다.
+공분산 행렬은 각 지점의 오차 :math:`\sigma_i`  의 오차 전파로 계산할 수 있습니다. 값 :math:`\sigma_{y_i}`  의 변화로 생기는 피팅 계수의 변화량 :math:`\delta_{c_a}`  은 다음과 같이 주어집니다.
 
  :math:`$\sigma{c_a} = \sum_i \frac{\partial c_a}{\partial y_i} \delta y_i` $
 
@@ -55,19 +55,19 @@ Writing
 
  :math:`$C_{ab} = \sum_i \frac{1}{w_i} \frac{\partial c_a}{\partial y_i} \frac{\partial c_b}{\partial y_i}` $
 
-가중치가 없는 값들은 공분산 행렬을  계산할때, 급수에서 가중 계수  :math:`w_i` 가 단일한 값  :math:`w = \frac{1}{\sigma^2}` 로 대체됩니다.  :math:`\sigma^2` 는 최적 추정 계수에 대한, 잔차 분포로  :math:`\sigma^2 = \sum (y_i - Y(c,x_i))^2/(n-p)` 와 같이 계산됩니다. 이를 분산-공분산 행렬이라 합니다.
+가중치가 없는 값들은 공분산 행렬을  계산할때, 급수에서 가중 계수 :math:`w_i`  가 단일한 값 :math:`w = \frac{1}{\sigma^2}`  로 대체됩니다. :math:`\sigma^2`  는 최적 추정 계수에 대한, 잔차 분포로 :math:`\sigma^2 = \sum (y_i - Y(c,x_i))^2/(n-p)`  와 같이 계산됩니다. 이를 분산-공분산 행렬이라 합니다.
 
-최적 추정 계수들에 대한 표준 편차는 해당하는 공분산 함수의 대각 성분의 제곱근으로 계산됩니다.  :math:`\sigma_{c_a} = \sqrt{C_{aa}}` . 계수  :math:`c_a` 와  :math:`c_b` 의 상관 계수는  :math:`\rho_{ab} = C_{ab}/\sqrt{C_{aa}C_{bb}}` 로 주어집니다.
+최적 추정 계수들에 대한 표준 편차는 해당하는 공분산 함수의 대각 성분의 제곱근으로 계산됩니다. :math:`\sigma_{c_a} = \sqrt{C_{aa}}`  . 계수 :math:`c_a`  와 :math:`c_b`  의 상관 계수는 :math:`\rho_{ab} = C_{ab}/\sqrt{C_{aa}C_{bb}}`  로 주어집니다.
 
 선형 회귀(Linear regression)
 -------------------------
 
-이 단원의 함수들은 계수가 1, 2개인 간단한 선형 회귀 모델을 계산합니다. 이 단원의 함수들은 헤더 파일  ``gsl_fit.h``  정의되어 있습니다.
+이 단원의 함수들은 계수가 1, 2개인 간단한 선형 회귀 모델을 계산합니다. 이 단원의 함수들은 헤더 파일 :math:`gsl_fit.h` 정의되어 있습니다.
 
 상수항을 가지는 선형 회귀 모델
 ~~~~~~~~~~~~~~~~~~~~~~
 
-이 단원의 함수들은 일직선 형태의 모델  :math:`Y(c,x) = c_o +c_1 x` 에 대한 선형 회귀 분석을 계산합니다.
+이 단원의 함수들은 일직선 형태의 모델 :math:`Y(c,x) = c_o +c_1 x`  에 대한 선형 회귀 분석을 계산합니다.
 
 
 >int **gsl_fit_linear**(const double * *x*, doconst size_t *xstride*, const double * *y*, const size_t *ystride*, size_t *n*, double * *c0*, double * *c1*, double * *cov00*, double * *cov01*, double * *cov11*, double * *sumsq*)
@@ -219,7 +219,7 @@ $ graph -T X -X x -Y y -y 0 20 -m 0 -S 2 -Ie data
 
 결과는 다음과 같습니다.
 
-!(Straight line fit with  :math:`1-\sigma`  error bars)[https://www.gnu.org/software/gsl/doc/html/_images/fit-wlinear.png]
+!(Straight line fit with :math:`1-\sigma` error bars)[https://www.gnu.org/software/gsl/doc/html/_images/fit-wlinear.png]
 
 참고문헌과 추가자료
 -------------------------

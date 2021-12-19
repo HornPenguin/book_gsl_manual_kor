@@ -189,7 +189,7 @@ GNU C complier와 GNU C Library에서 본 라이브러리는 몇가지 추가 �
         Additional sentence (*). 
 
 
-본 문서에서 GNU Scientific Library는 앞으로 ``GSL`` 이란 단어로 쓰입니다.
+본 문서에서 GNU Scientific Library는 앞으로 :math:`GSL` 이란 단어로 쓰입니다.
 
 
 

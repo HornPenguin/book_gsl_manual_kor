@@ -252,7 +252,7 @@ IEEE 표준은 각각의 기기들에서 확장된 숫자형들이 가져야 하
 가 있다면, 다음의 메크로를 :code:`config.h`
 와 응용 프로그램에 정의할 수 있습니다.
 
-.. code-block:: c
+.. code-block:: C
 
   /* Substitute gsl_hypot for missing system hypot */
 
@@ -286,7 +286,7 @@ IEEE 표준은 각각의 기기들에서 확장된 숫자형들이 가져야 하
 이러한 방법은 사용자가 최적화한 함수를 사용할 때도 이식성을 유지하기에 좋은 방법입니다. 
 다음 줄들은 가우스 분포(Gauss distribution)에서 표본을 뽑아오는 방법을 플래폼 의존 방식으로 구현한 것입니다.
 
-.. code-block:: c
+.. code-block:: C
 
   #ifdef SPARC
   #define gsl_ran_gaussian gsl_ran_gaussian_ratio_method
@@ -314,7 +314,7 @@ IEEE 표준은 각각의 기기들에서 확장된 숫자형들이 가져야 하
 다음 표는 가상의 모듈 :code:`gsl_foo` 자료형으로 정의된 :code:`fn()` 의 모든 수치형 정의를 보여줍니다.
 
 
-.. code-block:: c
+.. code-block:: C
 
   gsl_foo_fn               double
   gsl_foo_long_double_fn   long double
@@ -341,7 +341,7 @@ IEEE 표준은 각각의 기기들에서 확장된 숫자형들이 가져야 하
 예를 들어서 어느 모듈이 :code:`gsl_foo` 라는 자료형을 정의하는 경우, 
 다음과 같은 방법으로 확장할 수 있습니다.
 
-.. code-block:: c
+.. code-block:: C
 
   gsl_foo                  double
   gsl_foo_long_double      long double
@@ -364,7 +364,7 @@ IEEE 표준은 각각의 기기들에서 확장된 숫자형들이 가져야 하
 배정밀도로 정의된 함수만을 가져오거나 다른 특정한 자료형으로 정의된 함수만을 가져오고 싶다면 
 다음의 독립된 헤더 파일들을 포함시키면 됩니다.
 
-.. code-block:: c
+.. code-block:: C
 
   #include <gsl/gsl_foo.h>               All types
   #include <gsl/gsl_foo_double.h>        double

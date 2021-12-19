@@ -2,6 +2,8 @@
 서문 
 ****************
 
+.. default-domain:: C
+
 .. note::
 
    이 번역 프로젝트는 현재 진행중에 있습니다.
@@ -22,9 +24,8 @@ gsl 2.7 manual document를 기준으로 해서 번역합니다. GSL 차후 버�
 본 프로젝트의 Git 저장소는 `<https://github.com/HYUNSEONG-KIM/GSL_KOR_MANUAL.git>`_ 입니다.
 문서에서 오류가 발견되거나 번역에 기여하고 싶다면 해당 저장소를 사용하거나 다음 이메일로 알려주길 바랍니다.
 
-.. code:: email
-  
-  qwqwhsnote@gm.gist.ac.kr
+
+    qwqwhsnote@gm.gist.ac.kr
 
 
 .. toctree::
@@ -34,19 +35,25 @@ gsl 2.7 manual document를 기준으로 해서 번역합니다. GSL 차후 버�
    소개
    GSL 설치
    라이브러리 사용
-   다항식
-   고속 푸리에 변환
-   담금질 기법
-   물리 상수
-
-..
-   
    오류 관리
-   수학 함수
+   수학 함수들
    복소수
    다항식
    특수 함수
    벡터와 행렬
+   BLAS 지원
+   고속 푸리에 변환
+   담금질 기법
+   보간법
+   수치 미분
+   함수의 근 탐색
+   함수의 최솟값 탐색
+   선형 최소 제곱법
+   물리 상수
+   GSL의 기여자들
+
+..
+   
    순열
    조합
    중복 집합

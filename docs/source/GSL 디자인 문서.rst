@@ -125,7 +125,7 @@ GSL의 설계는 라이브러리 안에 존재하는 기능들을 간단하게 �
 * 이 문서에서 제공하는 GSL과 GNU 코딩 표준 규약을 준수하십시오. 이는 표준 GNU 패키징 도구들을 이용하는 것으로, *Automake* 나 문서화에 *Texinfo* 를 사용하는 것과 *test suite* 를 의미합니다. *test suite*는 :code:`make check` 를 실행해 검증해야하고, GSL에서 제공하는 검증 함수들을 사용해 결과가 :code:`PASS:/FAIL:` 로 출력되도록 해야합니다. *libtool* 사용은 필수가 아닙니다. 패키지는 충분히 작게 만들 수 있고, 정적 라이브러리는 손쉽게 만들수 있기 때문입니다.
 * 패키지를 위한 새로운 접두사를 만드십시오.(:code:`gsl_` 은 내부 사용을 위한 접두사입니다.) 예로, 추가적인 난수 생성자는 :code:`rngextra` 라는 접두사를 사용할 수 있습니다.
 
-.. code-block:: c
+.. code-block:: C
 
     #include<rngextra.h>
     gsl_rng * r = gsl_rng_alloc (rngextra_lsfr32);
@@ -279,14 +279,14 @@ GSL이 연구 프로젝트가 아님을 명심합시다.
 Abramowitz & Stegun에서는 재귀적 관계와 같이 함수를 정의하는 데  
 :math:`O(n)` 의 시간 복잡도를 가지는 간단한 알고리즘을 많이 사용하고, 
 이를 구현하는 데 사용하고 싶을 수 있습니다. 
-그러나, 이러한 알고리즘은  :math:`n=O(10-100)` 에서는 잘 작동할지 몰라도,  
+그러나, 이러한 알고리즘은 :math:`n=O(10-100)`  에서는 잘 작동할지 몰라도,  
 :math:`n=1000000` 인 경우, 원하는 데로 작동하지 않을 것입니다.
 
 비슷하게, 다변량 자료들이 동일한 크기로 조정된 원소들이나  
 :math:`O(1)` 의 복잡도를 가지고 있다고 가정하지 말아야합니다. 
 알고리즘들은 반드시 내부적으로 필요한 스케일 조정과 균형을 처리해야 하고, 
 이를 위해 적절한 노름들을 사용해야합니다. 
-(예를 들어,  :math:`\|x\|`  보다는  :math:`\|Dx\|` 를 사용하는 것이 좋습니다.  
+(예를 들어, :math:`\|x\|` 보다는 :math:`\|Dx\|`  를 사용하는 것이 좋습니다.  
 :math:`D` 는 스케일 조정을 위한 대각 행렬입니다.)
 
 문서화
@@ -351,7 +351,7 @@ Abramowitz & Stegun에서는 재귀적 관계와 같이 함수를 정의하는 �
 헤더파일들은 반드시 한 번만 포함되어야 합니다. 이를 idempotent 하다라 부르는데, 
 예를 들어, 헤더파일의 내용을 전처리 문구로 감싸서 이를 가능하게 할 수 있습니다.
 
-.. code-block:: c
+.. code-block:: C
 
     #ifndef __GSL_HISTOGRAM_H__
     #define __GSL_HISTOGRAM_H__
@@ -394,10 +394,10 @@ Abramowitz & Stegun에서는 재귀적 관계와 같이 함수를 정의하는 �
     SUBROUTINE RESIZE (X, K, ND, K1)
 
 
-:math:`X(K, D)` 는  :math:`X(K1, D)` 로 조정될 격자를 의미합니다. 
+:math:`X(K, D)` 는 :math:`X(K1, D)`  로 조정될 격자를 의미합니다. 
 이러한 형태는 구조체를 도입해 좀 더 읽기 편한 형태로 만들 수 있습니다.
 
-.. code-block:: c
+.. code-block:: C
 
     struct grid {
         int nd;    /* number of dimensions */
@@ -806,7 +806,7 @@ Test suites
 이 함수는 주어진 기능들의 검증 결과를 독립적으로 각 줄에 :code:`PASS/FAIL` 을 내보냅니다. 
 이를 통해 검증 실패 부분을 명확하게 판정할 수 있습니다.
 
-:math:`1` 나  :math:`0` 과 같은 간단한 값들은 검증 과정에서 버그를 밝혀내지 못할 수도 있습니다. 
+:math:`1` 나 :math:`0`  과 같은 간단한 값들은 검증 과정에서 버그를 밝혀내지 못할 수도 있습니다. 
 예를 들어서, :math:`x=1` 변수를 사용하는 경우 :math:`x`가 곱해지지 않은 코드를 찾을 수 없고,
 :math:`x=0`을 사용할 경우 :math:`x`가 더해지지 않은 코드의 검증이 불가능합니다. 
 :math:`2.385` 와 같이 잠재적 검증 실패를 피할 수 있는 값들을 검증 과정에서 사용해야 합니다.
@@ -909,9 +909,9 @@ DOS는 무시하고, Windows95/Windows 등에서의 사용만을 고려하는 �
 시스템 공급 업체가 제공하는 라이브러리의 장점을 취할 수 있도록 작성하는 것입니다. 
 예를 들어서 :code:`log1p` 는 인텔 x86 시스템에서 기계 명령어를 사용할 수 있습니다.
 라이브러리에서는 :code:`gsl_hypot` 과 같이 필요시 자동으로 이식성있는 구현체들을 자동으로 
-교체하는 기능들을 :code:`autoconf` 를 통해 제공합니다. :code:`gsl/complex/math.c` 에서 ``hypot``가 
+교체하는 기능들을 :code:`autoconf` 를 통해 제공합니다. :code:`gsl/complex/math.c` 에서 :code:`hypot` 가 
 어떻게 사용되고 있는지 참고해볼 수 있습니다. 
-``gsl_hypot``의 구현체와 대응되는 파일들인 :code:`configure.in` 과 :code:`config.h.in` 을 예시로 볼 수 있습니다.
+:code:`gsl_hypot` 의 구현체와 대응되는 파일들인 :code:`configure.in` 과 :code:`config.h.in` 을 예시로 볼 수 있습니다.
 
 
 

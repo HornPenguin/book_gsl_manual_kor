@@ -26,17 +26,17 @@
 
 .. math:: p = e^{-(E_{i+1} - E_i)/(kT)}
 
-:math:`E_{i+1} >E_i` 인 조건에서 성립하며,  :math:`E_{i+1} \leq E_i` 인 경우  :math:`p=1` 로 정의합니다.
+:math:`E_{i+1} >E_i` 인 조건에서 성립하며, :math:`E_{i+1} \leq E_i`  인 경우 :math:`p=1`  로 정의합니다.
 
 다시 말해,새로운 에너지 단계가 낮으면 전이가 일어나고, 
 새로운 에너지 단계가 높으면 확률에 기반해 전이가 결정됩니다. 
-이 확률은 온도  :math:`T` 에 비례하고, 에너지 차이  :math:`E_{i+1}-E_i` 에 반비례합니다.
+이 확률은 온도 :math:`T`  에 비례하고, 에너지 차이 :math:`E_{i+1}-E_i`  에 반비례합니다.
 
 
-온도  :math:`T` 는 초기 단계에서 결정되며 일반적으로 적절한 높은 값을 가집니다. 
+온도 :math:`T`  는 초기 단계에서 결정되며 일반적으로 적절한 높은 값을 가집니다. 
 무작위 전이는 이 온도 값에 의존하게 됩니다. 
 전이 과정에서 온도는 설계된 냉각 절차(cooling schedule)에 따라 천천히 낮아집니다. 
-예를 들어  :math:`T -> T/ \mu_T` 으로  :math:`\mu_T` 를 1보다 조금 더 큰 수로 설정해 볼 수 있습니다.
+예를 들어 :math:`T -> T/ \mu_T`  으로 :math:`\mu_T`  를 1보다 조금 더 큰 수로 설정해 볼 수 있습니다.
 
 이러한 높은 에너지 상태로 전이할 수 있는 확률의 존재는 다양한 상황에서 
 담금질 기법이 지역적 최소값에 빠지지 않도록 해, 
@@ -45,7 +45,7 @@
 담금질 함수
 ========================
 
-.. c:function:: void gsl_siman_solve (const gsl_rng * r, void * x0_p, gsl_siman_Efunc_t Ef, gsl_siman_step_t take_step, gsl_siman_metric_t distance, gsl_siman_print_t print_position, gsl_siman_copy_t copyfunc, gsl_siman_copy_construct_t copy_constructor, gsl_siman_destroy_t destructor, size_t element_size, gsl_siman_params_t params)
+.. function:: void gsl_siman_solve (const gsl_rng * r, void * x0_p, gsl_siman_Efunc_t Ef, gsl_siman_step_t take_step, gsl_siman_metric_t distance, gsl_siman_print_t print_position, gsl_siman_copy_t copyfunc, gsl_siman_copy_construct_t copy_constructor, gsl_siman_destroy_t destructor, size_t element_size, gsl_siman_params_t params)
 
 
    주어진 공간에서 담금질 기법을 이용해 해를 찾습니다. 공간은  :code:`Ef` 와  :code:`distance` 로 정의됩니다. 
@@ -107,7 +107,7 @@
 
    이 함수형은 주어진 두 개의 상태 :code:`xp` 와 :code:`yp` 사이의 거리를 반환해야합니다.
  
-   .. code-block:: c
+   .. code-block:: C
  
      double (*gsl_siman_metric_t) (void * xp, void * yp)
 
@@ -139,7 +139,7 @@
 .. c:type:: gsl_siman_destroy_t
 
    이 함수형은 설정 :code:`xp` 를 삭제해야 합니다. 
-   다시말해, :code:`xp`가 들어있는 메모리를 해제해야 합니다.
+   다시말해, :code:`xp` 가 들어있는 메모리를 해제해야 합니다.
  
    .. code-block:: C
  
@@ -201,11 +201,11 @@ Trivial 예제
 .. _fig_siman-test:
 
 .. figure:: /images/siman-test.png
-  :scale: 60%
+   :scale: 60%
   
-  담금질 방법 실행 예시: 높은 온도에서(그래프 시작지점)는 
-  해가 여러 값으로 발산하는 것을 볼 수 있습니다. 
-  하지만 낮은 온도에서는 수렴합니다.
+   담금질 방법 실행 예시: 높은 온도에서(그래프 시작지점)는 
+   해가 여러 값으로 발산하는 것을 볼 수 있습니다. 
+   하지만 낮은 온도에서는 수렴합니다.
 
 
 .. _fig_siman-energy:
@@ -213,7 +213,7 @@ Trivial 예제
 .. figure:: /images/siman-energy.png
    :scale: 60%
   
-  담금질 방법 에너지 vs 시행 횟수
+   담금질 방법 에너지 vs 시행 횟수
 
 
 외판원 문제
@@ -238,17 +238,17 @@ Mark Galassi는 미국 남부 도시 12개의 좌표를 기반으로 아주 간�
 
   $ ./siman_tsp > tsp.output
   $ grep -v "^#" tsp.output
-   | awk '{print  :math:`1, ` NF}'
+   | awk '{print :math:`1, `  NF}'
    | graph -y 3300 6500 -W0 -X generation -Y distance
       -L "TSP - 12 southwest cities"
    | plot -Tps > 12-cities.eps
   $ grep initial_city_coord tsp.output
-    | awk '{print  :math:`2, ` 3}'
+    | awk '{print :math:`2, `  3}'
     | graph -X "longitude (- means west)" -Y "latitude"
        -L "TSP - initial-order" -f 0.03 -S 1 0.1
     | plot -Tps > initial-route.eps
   $ grep final_city_coord tsp.output
-    | awk '{print  :math:`2, ` 3}'
+    | awk '{print :math:`2, `  3}'
     | graph -X "longitude (- means west)" -Y "latitude"
        -L "TSP - final-order" -f 0.03 -S 1 0.1
     | plot -Tps > final-route.eps
@@ -297,19 +297,19 @@ Mark Galassi는 미국 남부 도시 12개의 좌표를 기반으로 아주 간�
 .. figure:: /images/siman-initial-route.png
    :scale: 60%
   
-  12개의 남서부 도시를 방문하는 비행기 외판원 문제의 초기 방문 경로.
+   12개의 남서부 도시를 방문하는 비행기 외판원 문제의 초기 방문 경로.
 
 .. figure:: /images/siman-final-route.png
    :scale: 60%
   
-  12개의 남서부 도시를 방문하는 비행기 외판원 문제의 최종(최적화 된) 방문 경로.
+   12개의 남서부 도시를 방문하는 비행기 외판원 문제의 최종(최적화 된) 방문 경로.
 
- 다음은 비용 함수(에너지) vs 시행 횟수 그래프입니다. (각 지점은 새로운 온도가 설정되는 계산 지점을 의미합니다.)
+다음은 비용 함수(에너지) vs 시행 횟수 그래프입니다. (각 지점은 새로운 온도가 설정되는 계산 지점을 의미합니다.)
 
 .. figure:: /images/siman-12-cities.png
    :scale: 60%
   
-  12개의 남서부 도시를 방문하는 비행기 외판원 문제의 담금질 방법 실행 결과.
+   12개의 남서부 도시를 방문하는 비행기 외판원 문제의 담금질 방법 실행 결과.
 
 
 

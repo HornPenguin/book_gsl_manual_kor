@@ -11,7 +11,7 @@
 >double **gsl_sf_zeta_int**(int *n*)<br>
 >int **gsl_sf_zeta_int_e**(int *n*, gsl_sf_result * *result*)
 
-이 함수는 정수  ``n``  대한 리만 제타 함수  :math:`\zeta(n)` 의 값을 계산합니다. ( :math:`n \neq 1`  이어야 합니다.)
+이 함수는 정수 :math:`n` 대한 리만 제타 함수 :math:`\zeta(n)`  의 값을 계산합니다. ( :math:`n \neq 1`  이어야 합니다.)
 
 
 >double **gsl_sf_zeta**(double *s*)<br>
@@ -19,7 +19,7 @@
 
 
 
-이 함수는 임의의 수  ``s``  대해 리만 제타 함수  :math:`\zeta(s)`  값을 계산합니다. 위 함수와 마찬가지로  :math:`s \neq 1` 이어야 합니다.
+이 함수는 임의의 수 :math:`s` 대해 리만 제타 함수 :math:`\zeta(s)` 값을 계산합니다. 위 함수와 마찬가지로 :math:`s \neq 1`  이어야 합니다.
 
 리만 제타 함수 -1 (Riemann Zeta Function Minus One)
 -------------------------
@@ -31,13 +31,13 @@
 >int **gsl_sf_zetam1_int_e**(int *n*, gsl_sf_result * *result*)
 
 
-이 함수는 정수  ``n``  대한  :math:`\zeta(n)-1` 의 값을 계산합니다. ( :math:`n \neq 1`  이어야 합니다.)
+이 함수는 정수 :math:`n` 대한 :math:`\zeta(n)-1`  의 값을 계산합니다. ( :math:`n \neq 1`  이어야 합니다.)
 
 >double **gsl_sf_zetam1**(double *s*)<br>
 >int **gsl_sf_zetam1_e**(double *s*, gsl_sf_result * *result*)
 
 
-이 함수는 임의의 수  ``s``  대해  :math:`\zeta(s)-1`  값을 계산합니다. 위 함수와 마찬가지로  :math:`s \neq 1` 이어야 합니다.
+이 함수는 임의의 수 :math:`s` 대해 :math:`\zeta(s)-1` 값을 계산합니다. 위 함수와 마찬가지로 :math:`s \neq 1`  이어야 합니다.
 
 후르비츠(Hurwitz) 제타 함수 (Hurwitz Zeta Function)
 -------------------------
@@ -50,7 +50,7 @@
 >int **gsl_sf_hzeta_e**(double *s, double *q*, gsl_sf_result * *result*)
 
 
-이 명령어는 후르비츠 제타 함수  :math:`\zeta (s,q)` 의 값을 계산합니다.  :math:`s>1, q>0`  이어야 합니다.
+이 명령어는 후르비츠 제타 함수 :math:`\zeta (s,q)`  의 값을 계산합니다. :math:`s>1, q>0` 이어야 합니다.
 
 에타(Eta) 함수 (Eta Function)
 -------------------------
@@ -63,11 +63,11 @@
 >double **gsl_sf_eta_int** (int *n*)<br>
 >int **gsl_sf_eta_int_e** (int *n*, gsl_sf_result * *result*)
 
-이 명령어는 정수  ``n``  대해 에타 함수  :math:`\eta(n)` 의 값을 계산합니다.
+이 명령어는 정수 :math:`n` 대해 에타 함수 :math:`\eta(n)`  의 값을 계산합니다.
 
 
 >double **gsl_sf_eta**(double *s*)<br>
 >int **gsl_sf_eta_e**(double *s*, gsl_sf_result * *result*)
 
 
-이 명령어는 임의의 수  ``s``  대해 에타 함수  :math:`\eta(s)` 의 값을 계산합니다.
+이 명령어는 임의의 수 :math:`s` 대해 에타 함수 :math:`\eta(s)`  의 값을 계산합니다.

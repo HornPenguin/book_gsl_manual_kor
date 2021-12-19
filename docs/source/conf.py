@@ -24,9 +24,7 @@ extensions = [
 ]
 
 source_suffix = {
-    '.rst': 'restructuredtext',
-    '.txt': 'markdown',
-    '.md': 'markdown',
+    '.rst': 'restructuredtext'
 }
 
 intersphinx_mapping = {
@@ -36,6 +34,8 @@ intersphinx_mapping = {
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
+
+numfig = True
 
 # -- Options for HTML output
 
