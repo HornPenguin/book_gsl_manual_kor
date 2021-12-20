@@ -26,7 +26,7 @@
 :code:`gsl_complex` 기본적인 형태는 다음 구조체로 정의됩니다.
 
 .. c:type:: gsl_complex
-  
+
   .. code-block:: c
 
       	typedef struct
@@ -77,9 +77,8 @@
 
 다음의 C 매크로들은 복소수를 편하게 조작할 수 있게 해줍니다.
 
-.. c:macro::
-   GSL_REAL (z)
-   GSL_IMAG (z)
+.. c:macro::   GSL_REAL (z)
+               GSL_IMAG (z)
 
     이 두 매크로는 각각 복소수  :code:`z` 실수, 허수부의 
     **메모리 위치** 를 반환합니다. 
