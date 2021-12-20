@@ -137,7 +137,7 @@ gsl_block_complex_long_double   complex long double
 
 
 
-.. c:function:: int gsl_block_fread (FILE * stream, gsl_block * b)
+.. c:function:: int gsl_block_fprintf (FILE * stream, const gsl_block * b, const char * format)
 
   블럭 :code:`b` 원소들을 줄마다 스트림 :code:`stream` 작성합니다. 
   이때, 형 결정자 :code:`format` 로 값들이 작성됩니다. 
