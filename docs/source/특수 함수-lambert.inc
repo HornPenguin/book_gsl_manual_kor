@@ -11,12 +11,12 @@
 람베르트 함수들은 헤더 파일 :code:`gsl_sf_lambert.h` 에 정의되어 있습니다.
 
 .. c:function:: double gsl_sf_lambert_W0 (double x)
-              int gsl_sf_lambert_W0_e (double x, gsl_sf_result * result)
+                int gsl_sf_lambert_W0_e (double x, gsl_sf_result * result)
 
     주 람베르트 :math:`W` 함수 :math:`W_0(x)` 값을 계산합니다.
 
 
 .. c:function:: double gsl_sf_lambert_Wm1 (double x)
-              int gsl_sf_lambert_Wm1_e (double x, gsl_sf_result * result)
+                int gsl_sf_lambert_Wm1_e (double x, gsl_sf_result * result)
 
     두 번째 실수 람베르트 :math:`W` 함수 :math:`W_{-1](x)` 값을 계산합니다.

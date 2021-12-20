@@ -8,7 +8,7 @@
 -------------------------------------
 
 .. c:function:: double gsl_sf_exp (double x)
-              int gsl_sf_exp_e (double x, gsl_sf_result * result)
+                int gsl_sf_exp_e (double x, gsl_sf_result * result)
 
     지수 함수 :math:`\exp(x)` 의 값을 계산합니다.
     GSL semantics와 오차 검사를 함께 진행합니다.
@@ -19,7 +19,7 @@
     이 함수는 :math:`double` 자료형의 범주를 초과한 :math:`\exp(x)` 값을 구할 때, 사용할 수 있습니다.
 
 .. c:function:: double gsl_sf_exp_mult (double x, double y)
-              int gsl_sf_exp_mult_e (double x, double y, gsl_sf_result * result)
+                int gsl_sf_exp_mult_e (double x, double y, gsl_sf_result * result)
 
     주어진 실수 :math:`x` 지수 함수 값에 계수 :math:`y` 곱한 값 :math:`y \exp(x)`  를 계산합니다.
 
@@ -31,12 +31,12 @@
 -------------------------------------------------
 
 .. c:function:: double gsl_sf_expm1 (double x)
-              int gsl_sf_expm1_e (double x, gsl_sf_result * result)
+                int gsl_sf_expm1_e (double x, gsl_sf_result * result)
 
    :math:`\exp(x)-1`  를 계산합니다. 이 함수에 사용된 알고리즘은 작은 :math:`x` 에서만 정확합니다.
 
 .. c:function:: double gsl_sf_exprel (double x)
-              int gsl_sf_exprel_e (double x, gsl_sf_result * result)
+                int gsl_sf_exprel_e (double x, gsl_sf_result * result)
 
     작은 :math:`x` 값에서 정확한 알고리즘을 이용해 :math:`(\exp(x)-1) /x`  값을 계산합니다. 
     작은 :math:`x` 값에 대해, 알고리즘은 다음과 같은 확장을 이용합니다.
@@ -46,7 +46,7 @@
         (\exp(x)-1) /x = 1 + x/2 + x^2/(2 \cdot 3) + x^3/(2 \cdot 3 \cdot 4) + \dots
 
 .. c:function:: double gsl_sf_exprel_2 (double x)
-              int gsl_sf_exprel_2_e (double x, gsl_sf_result * result)
+                int gsl_sf_exprel_2_e (double x, gsl_sf_result * result)
 
     작은 :math:`x` 값에서 정확한 알고리즘을 이용해 :math:`2(\exp(x)-1 -x) /x^2`  값을 계산합니다. 
     작은 :math:`x` 값에 대해, 알고리즘은 다음과 같은 확장을 이용합니다.
@@ -57,7 +57,7 @@
 
 
 .. c:function:: double gsl_sf_exprel_n (int n, double x)
-              int gsl_sf_exprel_n_e (int n, double x, gsl_sf_result * result)
+                int gsl_sf_exprel_n_e (int n, double x, gsl_sf_result * result)
 
    :math:`N-`  상대 지수 함수 값을 계산합니다. 이 함수는 :math:`gsl_sf_exprel()` 와 :math:`gsl_sf_exprel_2()` 의 :math:`n` 차 일반화 함수입니다. 
     다음과 같이 주어집니다.

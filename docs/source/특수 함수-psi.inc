@@ -12,18 +12,18 @@ Digamma 함수 (Digamma Function)
 ----------------------------------------
 
 .. c:function:: double gsl_sf_psi_int (int n)
-              int gsl_sf_psi_int_e (int n, gsl_sf_result * result)
+                int gsl_sf_psi_int_e (int n, gsl_sf_result * result)
 
     digamma 함수 :math:`\psi(n)` 값을 주어진 양의 정수 :math:`n` 대해 계산합니다. digamma 함수는 프사이(Psi) 함수라고도 불립니다.
 
 
 .. c:function:: double gsl_sf_psi (double x)
-              int gsl_sf_psi_e (double x, gsl_sf_result * result)
+                int gsl_sf_psi_e (double x, gsl_sf_result * result)
 
     digamma 함수 :math:`\psi(x)`  를 주어진 값 :math:`x` 대해 계산합니다. 이때, :math:`x \neq 0` 입니다.
 
 .. c:function:: double gsl_sf_psi_1piy (double y)
-              int gsl_sf_psi_1piy_e (double y, gsl_sf_result * result)
+                int gsl_sf_psi_1piy_e (double y, gsl_sf_result * result)
 
     :math:`1+iy` 선 위에서의 digamma 함수의 실수부 :math:`\mathfrak{R}[\psi(1+iy)]`  를 계산합니다.
 
@@ -31,13 +31,13 @@ Trigamma 함수 (Trigamma Function)
 ----------------------------------------
 
 .. c:function:: double gsl_sf_psi_1_int (int n)
-              int gsl_sf_psi_1_int_e (int n, gsl_sf_result * result)
+                int gsl_sf_psi_1_int_e (int n, gsl_sf_result * result)
 
     Trigamma 함수 :math:`\psi'(n)`  을 주어진 양의 정수 :math:`n` 대해 계산합니다.
 
 
 .. c:function:: double gsl_sf_psi_1 (double x)
-              int gsl_sf_psi_1_e (double x, gsl_sf_result * result)
+                int gsl_sf_psi_1_e (double x, gsl_sf_result * result)
 
     Trigamma 함수 :math:`\psi'(x)`  를 주어진 값 :math:`x` 대해 계산합니다.
 
@@ -45,6 +45,6 @@ Polygamma 함수 (Polygamma Function)
 ----------------------------------------
 
 .. c:function:: double gsl_sf_psi_n (int n, double x)
-              int gsl_sf_psi_n_e (int n, double x, gsl_sf_result * result)
+                int gsl_sf_psi_n_e (int n, double x, gsl_sf_result * result)
 
     :math:`n \geq 0, x>0`  인 :math:`n,x`  에 대해, polygamma 함수 :math:`\psi^{(n)}(x)`  를 계산합니다. 

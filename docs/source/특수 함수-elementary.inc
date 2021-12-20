@@ -5,7 +5,7 @@
 이 함수들은 헤더 파일 :code:`gsl_sf_elementary.h`  에 정의되어 있습니다.
 
 .. c:function:: double gsl_sf_multiply (double x, double y)
-              int gsl_sf_multiply_e (double x, double y, gsl_sf_result * result)
+                int gsl_sf_multiply_e (double x, double y, gsl_sf_result * result)
 
    :math:`x` 와 :math:`y`의 곱셈을 계산하고, 계산 결과와 오차를 :math:`result` 에 저장합니다.
 

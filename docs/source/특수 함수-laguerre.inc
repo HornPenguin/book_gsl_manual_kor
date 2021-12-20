@@ -19,11 +19,11 @@
 이 단원에서 기술된 함수들은 헤더 파일 :code:`gsl_sf_laguerre.h` 에 정의되어 있습니다.
 
 .. c:function:: double gsl_sf_laguerre_1 (double a, double x)
-              double gsl_sf_laguerre_2 (double a, double x)
-              double gsl_sf_laguerre_3 (double a, double x)
-              int gsl_sf_laguerre_1_e (double a, double x, gsl_sf_result * result)
-              int gsl_sf_laguerre_2_e (double a, double x, gsl_sf_result * result)
-              int gsl_sf_laguerre_3_e (double a, double x, gsl_sf_result * result)
+                double gsl_sf_laguerre_3 (double a, double x)
+                double gsl_sf_laguerre_2 (double a, double x)
+                int gsl_sf_laguerre_1_e (double a, double x, gsl_sf_result * result)
+                int gsl_sf_laguerre_2_e (double a, double x, gsl_sf_result * result)
+                int gsl_sf_laguerre_3_e (double a, double x, gsl_sf_result * result)
 
     일반화된 라게르 다항식 :math:`L_1^a (x), L_2^a (x), L_3^a (x)` 을 수학 정의식을 이용해 계산합니다.
 

@@ -6,22 +6,22 @@
 -----------------------------------------------------------
 
 .. c:function:: double gsl_sf_sin (double x)
-              int gsl_sf_sin_e (double x, gsl_sf_result * result)
+                int gsl_sf_sin_e (double x, gsl_sf_result * result)
 
     sine 함수 :math:`\sin(x)`  를 계산합니다.
 
 .. c:function:: double gsl_sf_cos (double x)
-              int gsl_sf_cos_e (double x, gsl_sf_result * result)
+                int gsl_sf_cos_e (double x, gsl_sf_result * result)
 
     cosine 함수 :math:`\cos(x)`  를 계산합니다.
 
 .. c:function:: double gsl_sf_hypot (double x, double y)
-              int gsl_sf_hypot_e (double x, double y, gsl_sf_result * result)
+                int gsl_sf_hypot_e (double x, double y, gsl_sf_result * result)
 
     오버 플로우와 언더 플로우 없는 :math:`\sqrt{x^2+y^2}` 값을 계산합니다.
 
 .. c:function:: double gsl_sf_sinc (double x)
-              int gsl_sf_sinc_e (double x, gsl_sf_result * result)
+                int gsl_sf_sinc_e (double x, gsl_sf_result * result)
 
     :math:`x` 에 대해, :math:`\text{sinc}(x) = \sin(\pi x)/(\pi x)` 값을 계산합니다.
 
@@ -48,12 +48,12 @@
 ---------------------------------------------------------
 
 .. c:function:: double gsl_sf_lnsinh (double x)
-              int gsl_sf_lnsinh_e (double x, gsl_sf_result * result)
+                int gsl_sf_lnsinh_e (double x, gsl_sf_result * result)
 
     :math:`\log(\text{sinh}(x))` 값을, :math:`x>0` 에 대해 계산합니다.
 
 .. c:function:: double gsl_sf_lncosh (double x)
-              int gsl_sf_lncosh_e (double x, gsl_sf_result * result)
+                int gsl_sf_lncosh_e (double x, gsl_sf_result * result)
 
     주어진 값 :math:`x` 대해, :math:`\log(\text{cosh}(x))` 값을 계산합니다.
 
@@ -76,7 +76,7 @@
 -----------------------------------------
 
 .. c:function:: double gsl_sf_angle_restrict_symm (double theta)
-              int gsl_sf_angle_restrict_symm_e (double * theta)
+                int gsl_sf_angle_restrict_symm_e (double * theta)
 
     각 :math:`theta`  값을 :math:`(-\pi, pi]` 범위 내에 있도록 변환합니다.
 
@@ -86,7 +86,7 @@
 
 
 .. c:function:: double gsl_sf_angle_restrict_pos (double theta)
-              int gsl_sf_angle_restrict_pos_e (double * theta)
+                int gsl_sf_angle_restrict_pos_e (double * theta)
 
 
     각 :math:`theta`  값을 :math:`(0, 2pi]` 범위 내에 있도록 변환합니다.

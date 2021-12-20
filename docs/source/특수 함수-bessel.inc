@@ -14,17 +14,17 @@
 
 
 .. c:function:: double gsl_sf_bessel_J0 (double x)
-              int gsl_sf_bessel_J0_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_J0_e (double x, gsl_sf_result * result)
 
    :math:`0` 차수의 1종 베셀 함수 :math:`J_0(x)` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_J1 (double x)
-              int gsl_sf_bessel_J1_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_J1_e (double x, gsl_sf_result * result)
 
    :math:`1` 차수의 1종 베셀 함수 :math:`J_1(x)` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_Jn (int n, double x)
-              int gsl_sf_bessel_Jn_e (int n, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_Jn_e (int n, double x, gsl_sf_result * result)
 
    주어진 :math:`n` 차수의 1종 베셀 함수 :math:`J_n(x)` 의 값을 계산합니다.
 
@@ -39,17 +39,17 @@
 ---------------------------------------------------------------------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_bessel_Y0 (double x)
-              int gsl_sf_bessel_Y0_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_Y0_e (double x, gsl_sf_result * result)
 
    :math:`x>0` 에 대해, :math:`0` 차수의 2종 베셀 함수 :math:`Y_0(x)` 값을 계산합니다. 
 
 .. c:function:: double gsl_sf_bessel_Y1 (double x)
-              int gsl_sf_bessel_Y1_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_Y1_e (double x, gsl_sf_result * result)
 
    :math:`x>0` 에 대해, :math:`1` 차수의 2종 베셀 함수 :math:`Y_1(x)` 값을 계산합니다. 
 
 .. c:function:: double gsl_sf_bessel_Yn (int n, double x)
-              int gsl_sf_bessel_Yn_e (int n, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_Yn_e (int n, double x, gsl_sf_result * result)
 
    :math:`x>0` 에 대해, 주어진 :math:`n` 차수의 2종 베셀 함수 :math:`Y_1(x)` 값을 계산합니다. 
 
@@ -63,17 +63,17 @@
 ---------------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_bessel_I0 (double x)
-              int gsl_sf_bessel_I0_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_I0_e (double x, gsl_sf_result * result)
 
    :math:`0` 차수의 1종 변형 베셀 함수 :math:`I_0(x)` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_I1 (double x)
-              int gsl_sf_bessel_I1_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_I1_e (double x, gsl_sf_result * result)
 
    :math:`1` 차수의 1종 변형 베셀 함수 :math:`1_0(x)` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_In (int n, double x)
-              int gsl_sf_bessel_In_e (int n, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_In_e (int n, double x, gsl_sf_result * result)
 
    주어진 :math:`n` 차수의 1종 변형 베셀 함수 :math:`I_n(x)` 의 값을 계산합니다.
 
@@ -84,17 +84,17 @@
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 .. c:function:: double gsl_sf_bessel_I0_scaled (double x)
-              int gsl_sf_bessel_I0_scaled_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_I0_scaled_e (double x, gsl_sf_result * result)
 
    조정 계수가 곱해진 :math:`0` 차수의 1종 변형 베셀 함수 :math:`\text{exp}(-|x|) I_0(x)` 를 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_I1_scaled (double x)
-              int gsl_sf_bessel_I1_scaled_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_I1_scaled_e (double x, gsl_sf_result * result)
 
    조정 계수가 곱해진 :math:`1` 차수의 1종 변형 베셀 함수 :math:`\text{exp}(-|x|) I_1(x)` 를 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_In_scaled (int n, double x)
-              int gsl_sf_bessel_In_scaled_e (int n, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_In_scaled_e (int n, double x, gsl_sf_result * result)
 
    조정 계수가 곱해진, :math:`n` 차수의 1종 변형 베셀 함수 :math:`\text{exp}(-|x|) I_n(x)` 를 계산합니다.
 
@@ -109,17 +109,17 @@
 ---------------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_bessel_K0 (double x)
-              int gsl_sf_bessel_K0_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_K0_e (double x, gsl_sf_result * result)
 
    :math:`x>0` 에 대해, :math:`0` 차수의 2종 변형 베셀 함수 :math:`K_0(x)` 값을 계산합니다. 
 
 .. c:function:: double gsl_sf_bessel_K1 (double x)
-              int gsl_sf_bessel_K1_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_K1_e (double x, gsl_sf_result * result)
 
    :math:`x>0`에 대해, :math:`1` 차수의 2종 변형 베셀 함수 :math:`K_1(x)` 값을 계산합니다. 
 
 .. c:function:: double gsl_sf_bessel_Kn (int n, double x)
-              int gsl_sf_bessel_Kn_e (int n, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_Kn_e (int n, double x, gsl_sf_result * result)
 
    :math:`x>0`에 대해, :math:`n` 차수의 2종 변형 베셀 함수 :math:`K_n(x)` 값을 계산합니다. 
 
@@ -130,19 +130,19 @@
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 .. c:function:: double gsl_sf_bessel_K0_scaled (double x)
-              int gsl_sf_bessel_K0_scaled_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_K0_scaled_e (double x, gsl_sf_result * result)
 
    :math:`x>0` 에 대해, 조정 계수가 곱해진 :math:`0` 차수의 2종 변형 베셀 함수 :math:`\text{exp}(x) K_0(x)` 를 계산합니다.
 
 
 .. c:function:: double gsl_sf_bessel_K1_scaled (double x) 
-              int gsl_sf_bessel_K1_scaled_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_K1_scaled_e (double x, gsl_sf_result * result)
 
 :math:`x>0` 에 대해, 조정 계수가 곱해진 :math:`1` 차수의 2종 변형 베셀 함수 :math:`\text{exp}(x) K_1(x)` 를 계산합니다.
 
 
 .. c:function:: double gsl_sf_bessel_Kn_scaled (int n, double x)
-              int gsl_sf_bessel_Kn_scaled_e (int n, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_Kn_scaled_e (int n, double x, gsl_sf_result * result)
 
 
 :math:`x>0`에 대해, 조정 계수가 곱해진 :math:`n` 차수의 2종 변형 베셀 함수 :math:`\text{exp}(x) K_n(x)` 를 계산합니다.
@@ -159,23 +159,23 @@
 ---------------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_bessel_j0 (double x)
-              int gsl_sf_bessel_j0_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_j0_e (double x, gsl_sf_result * result)
 
    :math:`0` 차수의 1종 구면 베셀 함수 :math:`j_0 (x) = \sin (x) /x` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_j1 (double x)
-              int gsl_sf_bessel_j1_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_j1_e (double x, gsl_sf_result * result)
 
    :math:`1` 차수의 1종 구면 베셀 함수 :math:`j_1 (x) = (\sin (x) /x - \cos(x)) /x` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_j2 (double x)
-              int gsl_sf_bessel_j2_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_j2_e (double x, gsl_sf_result * result)
 
 
    :math:`2` 차수의 1종 구면 베셀 함수 :math:`j_2 (x) = ((3/x^2 -1)\sin(x) -3 \cos(x)/x) /x` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_jl (int l, double x)
-              int gsl_sf_bessel_jl_e (int l, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_jl_e (int l, double x, gsl_sf_result * result)
 
    :math:`l` 차수의 1종 구면 베셀 함수 :math:`j_l (x)` 의 값을 계산합니다. 
    :math:`x,l` 은 :math:`l \geq 0, x \geq 0` 이어야 합니다. 
@@ -198,22 +198,22 @@
 ---------------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_bessel_y0 (double x)
-              int gsl_sf_bessel_y0_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_y0_e (double x, gsl_sf_result * result)
 
    :math:`0`  차수의 2종 구면 베셀 함수 :math:`y_0 (x) = -\cos (x) /x` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_y1 (double x)
-              int gsl_sf_bessel_y1_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_y1_e (double x, gsl_sf_result * result)
 
    :math:`1`  차수의 2종 구면 베셀 함수 :math:`y_1 (x) = -(\cos (x) /x + \sin (x))/x` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_y2 (double x)
-              int gsl_sf_bessel_y2_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_y2_e (double x, gsl_sf_result * result)
 
    :math:`2`  차수의 2종 구면 베셀 함수 :math:`y_2 (x) = (-3/x^3 + 1/x)\cos(x) - (3/x^2)\sin(x)` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_yl (int l, double x)
-              int gsl_sf_bessel_yl_e (int l, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_yl_e (int l, double x, gsl_sf_result * result)
 
    :math:`l \geq 0` 에 대해, :math:`l` 차수의 2종 구면 베셀 함수 :math:`y_l (x)` 의 값을 계산합니다.
 
@@ -232,22 +232,22 @@
     i_l(x) = \sqrt{\pi/(2x)}I_{l + 1/2}(x)
 
 .. c:function:: double gsl_sf_bessel_i0_scaled (double x)
-              int gsl_sf_bessel_i0_scaled_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_i0_scaled_e (double x, gsl_sf_result * result)
 
     조정 계수가 곱해진, :math:`0` 차수의 1종 변형 구면 베셀 함수 :math:`\text{exp}(-|x|) i_0 (x)` 를 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_i1_scaled (double x)
-              int gsl_sf_bessel_i1_scaled_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_i1_scaled_e (double x, gsl_sf_result * result)
 
     조정 계수가 곱해진, :math:`1` 차수의 1종 변형 구면 베셀 함수 :math:`\text{exp}(-|x|) i_1 (x)` 를 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_i2_scaled (double x)
-              int gsl_sf_bessel_i2_scaled_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_i2_scaled_e (double x, gsl_sf_result * result)
 
     조정 계수가 곱해진, :math:`2` 차수의 1종 변형 구면 베셀 함수 :math:`\text{exp}(-|x|) i_2 (x)` 를 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_il_scaled (int l, double x)
-              int gsl_sf_bessel_il_scaled_e (int l, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_il_scaled_e (int l, double x, gsl_sf_result * result)
 
 
     조정 계수가 곱해진, :math:`l` 차수의 1종 변형 구면 베셀 함수 :math:`\text{exp}(-|x|) i_2 (x)` 를 계산합니다.
@@ -269,22 +269,22 @@
     k_l(x) = \sqrt{\pi / (2x) K_{l+1/2}(x)}
 
 .. c:function:: double gsl_sf_bessel_k0_scaled (double x)
-              int gsl_sf_bessel_k0_scaled_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_k0_scaled_e (double x, gsl_sf_result * result)
 
    :math:`x>0` 에 대해, 조정 계수가 곱해진 :math:`0` 차수의 2종 변형 구면 베셀 함수 :math:`\text{exp}(x)k_0(x)` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_k1_scaled (double x)
-              int gsl_sf_bessel_k1_scaled_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_k1_scaled_e (double x, gsl_sf_result * result)
 
    :math:`x>0` 에 대해, 조정 계수가 곱해진 :math:`1` 차수의 2종 변형 구면 베셀 함수 :math:`\text{exp}(x)k_1(x)` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_k2_scaled (double x)
-              int gsl_sf_bessel_k2_scaled_e (double x, gsl_sf_result * result)
+                int gsl_sf_bessel_k2_scaled_e (double x, gsl_sf_result * result)
 
    :math:`x>0` 에 대해, 조정 계수가 곱해진 :math:`2` 차수의 2종 변형 구면 베셀 함수 :math:`\text{exp}(x)k_2(x)` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_kl_scaled (int l, double x)
-              int gsl_sf_bessel_kl_scaled_e (int l, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_kl_scaled_e (int l, double x, gsl_sf_result * result)
 
    :math:`x>0` 에 대해, 조정 계수가 곱해진 :math:`l` 차수의 2종 변형 구면 베셀 함수 :math:`\text{exp}(x)k_l(x)` 의 값을 계산합니다.
 
@@ -300,7 +300,7 @@
 
 
 .. c:function:: double gsl_sf_bessel_Jnu (double nu, double x)
-              int gsl_sf_bessel_Jnu_e (double nu, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_Jnu_e (double nu, double x, gsl_sf_result * result)
 
    분수 차수 :math:`\nu` 에 대해, 1종 베셀함수 :math:`J_\nu (x)` 의 값을 계산합니다.
 
@@ -315,7 +315,7 @@
 
 
 .. c:function:: double gsl_sf_bessel_Ynu (double nu, double x)
-              int gsl_sf_bessel_Ynu_e (double nu, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_Ynu_e (double nu, double x, gsl_sf_result * result)
 
     분수 차수 :math:`\nu` 에 대해, 2종 베셀함수 :math:`Y_\nu (x)` 의 값을 계산합니다.
   
@@ -324,12 +324,12 @@
 
 
 .. c:function:: double gsl_sf_bessel_Inu (double nu, double x)
-              int gsl_sf_bessel_Inu_e (double nu, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_Inu_e (double nu, double x, gsl_sf_result * result)
 
    :math:`x>0, \nu>0` 에 대해, 분수 차수 :math:`\nu` 의 1종 변형 베셀 함수 :math:`I_\nu(x)` 를 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_Inu_scaled (double nu, double x)
-              int gsl_sf_bessel_Inu_scaled_e (double nu, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_Inu_scaled_e (double nu, double x, gsl_sf_result * result)
 
  
    :math:`x>0, \nu>0` 에 대해, 조정 계수가 곱해진 분수 차수 :math:`\nu` 의 2종 변형 베셀 함수 :math:`\text{exp}(-|x|)I_\nu (x)` 의 값을 계산합니다.
@@ -338,19 +338,19 @@
 ---------------------------------------------------------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_bessel_Knu (double nu, double x)
-              int gsl_sf_bessel_Knu_e (double nu, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_Knu_e (double nu, double x, gsl_sf_result * result)
 
 
    :math:`x>0, \nu>0` 에 대해, 분수 차수 :math:`\nu` 의 2종 변형 베셀 함수 :math:`K_\nu (x)` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_lnKnu (double nu, double x)
-              int gsl_sf_bessel_lnKnu_e (double nu, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_lnKnu_e (double nu, double x, gsl_sf_result * result)
 
 
    :math:`x>0, \nu>0` 에 대해, 로그가 씌워진, 분수 차수 :math:`\nu` 의 2종 변형 베셀 함수 :math:`\ln(K_\nu (x))` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_bessel_Knu_scaled (double nu, double x)
-              int gsl_sf_bessel_Knu_scaled_e (double nu, double x, gsl_sf_result * result)
+                int gsl_sf_bessel_Knu_scaled_e (double nu, double x, gsl_sf_result * result)
 
 
    :math:`x>0, \nu>0` 에 대해, 조정 계수가 곱해진 분수 차수 :math:`\nu`의 2종 변형 베셀 함수 :math:`\text{exp}(+|x|)K_\nu (x)`의 값을 계산합니다.
@@ -359,17 +359,17 @@
 -----------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_bessel_zero_J0 (unsigned int s)
-              int gsl_sf_bessel_zero_J0_e (unsigned int s, gsl_sf_result * result)
+                int gsl_sf_bessel_zero_J0_e (unsigned int s, gsl_sf_result * result)
 
    :math:`0`  차수의 베셀 함수 :math:`J_0(x)`의 :math:`s` 번째, 양수 근의 위치를 찾습니다.
 
 .. c:function:: double gsl_sf_bessel_zero_J1 (unsigned int s)
-              int gsl_sf_bessel_zero_J1_e (unsigned int s, gsl_sf_result * result)
+                int gsl_sf_bessel_zero_J1_e (unsigned int s, gsl_sf_result * result)
 
    :math:`1`  차수의 베셀 함수 :math:`J_1(x)`의 :math:`s` 번째, 양수 근의 위치를 찾습니다.
 
 .. c:function:: double gsl_sf_bessel_zero_Jnu (double nu, unsigned int s)
-              int gsl_sf_bessel_zero_Jnu_e (double nu, unsigned int s, gsl_sf_result * result)
+                int gsl_sf_bessel_zero_Jnu_e (double nu, unsigned int s, gsl_sf_result * result)
 
 
    베셀함수 :math:`J_\nu (x)`에 대해, :math:`s` 번째, 양수 근의 위치를 찾습니다. 

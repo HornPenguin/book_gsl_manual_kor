@@ -37,20 +37,20 @@
 ----------------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_ellint_Kcomp (double k, gsl_mode_t mode)
-              int gsl_sf_ellint_Kcomp_e (double k, gsl_mode_t mode, gsl_sf_result * result)
+                int gsl_sf_ellint_Kcomp_e (double k, gsl_mode_t mode, gsl_sf_result * result)
 
     완전 타원 적분의 르장드르 형태 :math:`K(k)` 를 :math:`mode` 변수의 값에 따라 
     정확도를 결정해 계산합니다. Abramowitz & Stegun에서 이 함수는 :math:`m=k^2` 이라는 점에 
     유의해야 합니다.
 
 .. c:function:: double gsl_sf_ellint_Ecomp (double k, gsl_mode_t mode)
-              int gsl_sf_ellint_Ecomp_e (double k, gsl_mode_t mode, gsl_sf_result * result)
+                int gsl_sf_ellint_Ecomp_e (double k, gsl_mode_t mode, gsl_sf_result * result)
 
     완전 타원 적분의 르장드르 형태 :math:`E(k)` 를 :math:`mode` 변수의 값에 따라 정확도를 결정해 계산합니다. 
     Abramowitz & Stegun에서 이 함수는 :math:`m=k^2` 이라는 점에 유의해야 합니다.
 
 .. c:function:: double gsl_sf_ellint_Pcomp (double k, double n, gsl_mode_t mode)
-              int gsl_sf_ellint_Pcomp_e (double k, double n,  gsl_mode_t mode, gsl_sf_result * result)
+                int gsl_sf_ellint_Pcomp_e (double k, double n,  gsl_mode_t mode, gsl_sf_result * result)
 
     완전 타원 적분의 르장드르 형태 :math:`\Pi(k, n)` 를 :math:`mode`  변수의 값에 따라 정확도를 결정해 계산합니다. 
     Abramowitz & Stegun에서 이 함수는 :math:`m=k^2` 이고 :math:`\sin^2(\alpha) = k^2` 이고, :math:`n` 의 부호를 :math:`-n` 으로 바뀌었다는 점에 유의해야 합니다.
@@ -60,25 +60,25 @@
 -----------------------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_ellint_F (double phi, double k, gsl_mode_t mode)
-              int gsl_sf_ellint_F_e (double phi, double k, gsl_mode_t mode, gsl_sf_result * result)
+                int gsl_sf_ellint_F_e (double phi, double k, gsl_mode_t mode, gsl_sf_result * result)
 
     타원 적분의 르장드르 형태 :math:`K(\phi, k)` 를 :math:`mode` 변수의 값에 따라 정확도를 결정해 계산합니다. 
     Abramowitz & Stegun에서 이 함수는 :math:`m=k^2`  이라는 점에 유의해야 합니다.
 
 .. c:function:: double gsl_sf_ellint_E (double phi, double k, gsl_mode_t mode)
-              int gsl_sf_ellint_E_e (double phi, double k, gsl_mode_t mode, gsl_sf_result * result)
+                int gsl_sf_ellint_E_e (double phi, double k, gsl_mode_t mode, gsl_sf_result * result)
 
     완전 타원 적분의 르장드르 형태 :math:`E(\phi, k)` 를 :math:`mode`  변수의 값에 따라 정확도를 결정해 계산합니다. 
     Abramowitz & Stegun에서 이 함수는 :math:`m=k^2` 이라는 점에 유의해야 합니다.
 
 .. c:function:: double gsl_sf_ellint_P (double phi, double k, double n, gsl_mode_t mode)
-              int gsl_sf_ellint_P_e (double phi, double k, double n, gsl_mode_t mode, gsl_sf_result * result)
+                int gsl_sf_ellint_P_e (double phi, double k, double n, gsl_mode_t mode, gsl_sf_result * result)
 
     완전 타원 적분의 르장드르 형태 :math:`\Pi(\phi, k, n)` 를 :math:`mode` 변수의 값에 따라 정확도를 결정해 계산합니다. 
     Abramowitz & Stegun에서 이 함수는 :math:`m=k^2`  이고 :math:`\sin^2(\alpha) = k^2` 이고, :math:`n` 의 부호를 :math:`-n` 으로 바뀌었다는 점에 유의해야 합니다.
 
 .. c:function:: double gsl_sf_ellint_D (double phi, double k, gsl_mode_t mode)
-              int gsl_sf_ellint_D_e (double phi, double k, gsl_mode_t mode, gsl_sf_result * result)
+                int gsl_sf_ellint_D_e (double phi, double k, gsl_mode_t mode, gsl_sf_result * result)
 
     타원 적분 :math:`D(\phi, k)` 을 계산합니다. 이 함수는 칼슨 형태 타원 함수 :math:` RD(x,y,z)` 와 다음의 관계로 정의되어 있습니다.
 
@@ -90,22 +90,22 @@
 -------------------------
 
 .. c:function:: double gsl_sf_ellint_RC (double x, double y, gsl_mode_t mode)
-              int gsl_sf_ellint_RC_e (double x, double y, gsl_mode_t mode, gsl_sf_result * result)
+                int gsl_sf_ellint_RC_e (double x, double y, gsl_mode_t mode, gsl_sf_result * result)
 
     타원적분 :math:`RC(x, y)` 를 :math:`mode` 변수의 값에 따라 정확도를 결정해 계산합니다.
 
 .. c:function:: double gsl_sf_ellint_RD (double x, double y, double z, gsl_mode_t mode)
-              int gsl_sf_ellint_RD_e (double x, double y, double z, gsl_mode_t mode, gsl_sf_result * result)
+                int gsl_sf_ellint_RD_e (double x, double y, double z, gsl_mode_t mode, gsl_sf_result * result)
 
     타원적분 :math:`RD(x ,y, z)` 를 :math:`mode` 변수의 값에 따라 정확도를 결정해 계산합니다.
 
 .. c:function:: double gsl_sf_ellint_RF (double x, double y, double z, gsl_mode_t mode)
-              int gsl_sf_ellint_RF_e (double x, double y, double z, gsl_mode_t mode, gsl_sf_result * result)
+                int gsl_sf_ellint_RF_e (double x, double y, double z, gsl_mode_t mode, gsl_sf_result * result)
 
     타원적분 :math:`RF(x, y, z)` 를 :math:`mode` 변수의 값에 따라 정확도를 결정해 계산합니다.
 
 .. c:function:: double gsl_sf_ellint_RJ (double x, double y, double z, double p, gsl_mode_t mode)
-              int gsl_sf_ellint_RJ_e (double x, double y, double z, double p, gsl_mode_t mode, gsl_sf_result * result)
+                int gsl_sf_ellint_RJ_e (double x, double y, double z, double p, gsl_mode_t mode, gsl_sf_result * result)
 
     타원적분 :math:`RJ(x, y, z, p)` 를 :math:`mode` 변수의 값에 따라 정확도를 결정해 계산합니다.
 

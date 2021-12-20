@@ -4,7 +4,7 @@
 
 
 .. c:function:: double gsl_sf_pow_int (double x, int n)
-              int gsl_sf_pow_int_e (double x, int n, gsl_sf_result * result)
+                  int gsl_sf_pow_int_e (double x, int n, gsl_sf_result * result)
 
     정수 :math:`n` 대해 :math:`x^n` 의 값을 계산합니다. 
     이 때, 거듭 제곱은 곱셈 횟수를 최소화해 계산됩니다. 

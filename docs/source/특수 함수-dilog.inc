@@ -12,7 +12,7 @@
 실수 인자 (Real Argument)
 ----------------------------
 .. c:function:: double gsl_sf_dilog (double x)
-              int gsl_sf_dilog_e (double x, gsl_sf_result * result)
+                int gsl_sf_dilog_e (double x, gsl_sf_result * result)
 
 
     이 함수들은 실수 값에 대한 다이 로그값을 계산합니다. 

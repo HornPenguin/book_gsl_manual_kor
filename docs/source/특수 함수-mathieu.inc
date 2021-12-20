@@ -48,14 +48,14 @@
 -------------------------------------------------------------------
 
 .. c:function:: int gsl_sf_mathieu_a (int n, double q)
-              int gsl_sf_mathieu_a_e (int n, double q, gsl_sf_result * result)
-              int gsl_sf_mathieu_b (int n, double q)
-              int gsl_sf_mathieu_b_e (int n, double q, gsl_sf_result * result)
+                int gsl_sf_mathieu_a_e (int n, double q, gsl_sf_result * result)
+                int gsl_sf_mathieu_b (int n, double q)
+                int gsl_sf_mathieu_b_e (int n, double q, gsl_sf_result * result)
 
     각각, 마티유 함수 :math:`c e_n (q,x)` 와 :math:`s e_n (q,x)` 의 특성 값 :math:`a_n(q)` 와 :math:`b_n(q)` 을 계산합니다.
 
 .. c:function:: int gsl_sf_mathieu_a_array (int order_min, int order_max, double q, gsl_sf_mathieu_workspace * work, double result_array[])
-              int gsl_sf_mathieu_b_array (int order_min, int order_max, double q, gsl_sf_mathieu_workspace * work, double result_array[])
+                int gsl_sf_mathieu_b_array (int order_min, int order_max, double q, gsl_sf_mathieu_workspace * work, double result_array[])
 
     마티유 함수의 특성 값 :math:`a_n(q)` 와 :math:`b_n(q)` 을 주어진 
     :math:`oreder_min` 와 :math:`order_max` 사이 범위에 있는 :math:`n` 에 대해 계산합니다. 
@@ -65,14 +65,14 @@
 -------------------------------------------------------------------
 
 .. c:function:: int gsl_sf_mathieu_ce (int n, double q, double x)
-              int gsl_sf_mathieu_ce_e (int n, double q, double x, gsl_sf_result * result)
-              int gsl_sf_mathieu_se (int n, double q, double x)
-              int gsl_sf_mathieu_se_e (int n, double q, double x, gsl_sf_result * result)
+                int gsl_sf_mathieu_ce_e (int n, double q, double x, gsl_sf_result * result)
+                int gsl_sf_mathieu_se (int n, double q, double x)
+                int gsl_sf_mathieu_se_e (int n, double q, double x, gsl_sf_result * result)
 
     각각, 각 운동량 마티유 함수 :math:`c e_n (q,x)` 와 :math:`s e_n (q,x)` 를 계산합니다.
 
 .. c:function:: int gsl_sf_mathieu_ce_array (int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
-              int gsl_sf_mathieu_se_array (int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
+                int gsl_sf_mathieu_se_array (int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
 
     각각, 각 운동량 마티유 함수 :math:`c e_n (q,x)` 와 :math:`s e_n (q,x)` 의 값을 주어진 
     :math:`nmin` 와 :math:`nmax` 범위에 있는 :math:`n`  에 대해 계산합니다. 
@@ -83,9 +83,9 @@
 -------------------------------------------------
 
 .. c:function:: int gsl_sf_mathieu_Mc (int j, int n, double q, double x)
-              int gsl_sf_mathieu_Mc_e (int j, int n, double q, double x, gsl_sf_result * result)
-              int gsl_sf_mathieu_Ms (int j, int n, double q, double x)
-              int gsl_sf_mathieu_Ms_e (int j, int n, double q, double x, gsl_sf_result * result)
+                int gsl_sf_mathieu_Mc_e (int j, int n, double q, double x, gsl_sf_result * result)
+                int gsl_sf_mathieu_Ms (int j, int n, double q, double x)
+                int gsl_sf_mathieu_Ms_e (int j, int n, double q, double x, gsl_sf_result * result)
 
     각각, :math:`j` 종 :math:`n` 차수의 마티유 함수 :math:`M c_n^{(j)} (q,x)` 와 
     :math:`M s_n^{(j)} (q,x)` 를 계산합니다.
@@ -96,7 +96,7 @@
     :math:`M_n^{(3)} = M_n^{(1)} + i M_n^{(2)}` 와 :math:`M_n^{(4)} = M_n^{(1)} - i M_n^{(2)}` .
 
 .. c:function:: int gsl_sf_mathieu_Mc_array (int j, int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
-              int gsl_sf_mathieu_Ms_array (int j, int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
+                int gsl_sf_mathieu_Ms_array (int j, int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
 
     :math:`j` 메티유 함수의 값을 주어진 :math:`nmin` 와 :math:`nmax` 범위에 있는 
     :math:`n` 에 대해 계산합니다. 계산 결과는 :math:`result_array` 에 저장됩니다.

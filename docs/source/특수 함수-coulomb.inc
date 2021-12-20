@@ -9,12 +9,12 @@
 -------------------------------------------------------------
 
 .. c:function:: double gsl_sf_hydrogenicR_1 (double Z, double r)
-              int gsl_sf_hydrogenicR_1_e (double Z, double r, gsl_sf_result * result)
+                int gsl_sf_hydrogenicR_1_e (double Z, double r, gsl_sf_result * result)
 
     가장 낮은 차수의 정규화 된 수소의 구속 방사형 상태  함수 :math:`R_1 = 2 Z \sqrt{Z} \exp (-Zr)`  를 계산합니다.
 
 .. c:function:: double gsl_sf_hydrogenicR (int n, int l, double Z, double r)
-              int gsl_sf_hydrogenicR_e (int n, int l, double Z, double r, gsl_sf_result * result)
+                int gsl_sf_hydrogenicR_e (int n, int l, double Z, double r, gsl_sf_result * result)
 
     :math:`n`  차수의 정규화된 수소의 구속 방사형 상태 함수 
 

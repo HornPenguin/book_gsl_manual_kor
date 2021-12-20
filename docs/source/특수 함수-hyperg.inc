@@ -4,7 +4,7 @@
 
 
 .. c:function:: double gsl_sf_hyperg_0F1 (double c, double x)
-              int gsl_sf_hyperg_0F1_e (double c, double x, gsl_sf_result * result)
+                int gsl_sf_hyperg_0F1_e (double c, double x, gsl_sf_result * result)
 
 
     초기하 함수 
@@ -19,7 +19,7 @@
 
 
 .. c:function:: double gsl_sf_hyperg_1F1_int (int m, int n, double x)
-              int gsl_sf_hyperg_1F1_int_e (int m, int n, double x, gsl_sf_result * result)
+                int gsl_sf_hyperg_1F1_int_e (int m, int n, double x, gsl_sf_result * result)
 
 
     합류 초기하 함수(confluent hypergeometric)
@@ -32,7 +32,7 @@
 
 
 .. c:function:: double gsl_sf_hyperg_1F1 (double a, double b, double x)
-              int gsl_sf_hyperg_1F1_e (double a, double b, double x, gsl_sf_result * result)
+                int gsl_sf_hyperg_1F1_e (double a, double b, double x, gsl_sf_result * result)
 
 합류 초기하 함수
 
@@ -44,7 +44,7 @@
 
 
 .. c:function:: double gsl_sf_hyperg_U_int (int m, int n, double x)
-              int gsl_sf_hyperg_U_int_e (int m, int n, double x, gsl_sf_result * result)
+                int gsl_sf_hyperg_U_int_e (int m, int n, double x, gsl_sf_result * result)
 
 
     합류 초기하 함수 :math:`U(m,n,x)` 를 정수 인자 :math:`m` 과 :math:`n` 에 대해 계산합니다.
@@ -56,7 +56,7 @@
     :math:`gsl_sf_result_e10`  형의 값을 반환합니다.
 
 .. c:function:: double gsl_sf_hyperg_U (double a, double b, double x)
-              int gsl_sf_hyperg_U_e (double a, double b, double x, gsl_sf_result * result)
+                int gsl_sf_hyperg_U_e (double a, double b, double x, gsl_sf_result * result)
 
 
     합류 초기하 함수 :math:`U(a,b,x)` 를 계산합니다.
@@ -68,7 +68,7 @@
 
 
 .. c:function:: double gsl_sf_hyperg_2F1 (double a, double b, double c, double x)
-              int gsl_sf_hyperg_2F1_e (double a, double b, double c, double x, gsl_sf_result * result)
+                int gsl_sf_hyperg_2F1_e (double a, double b, double c, double x, gsl_sf_result * result)
 
     구간 :math:`\|x\|<1` 에 대해, 가우스 초기하 함수
 
@@ -82,7 +82,7 @@
 
 
 .. c:function:: double gsl_sf_hyperg_2F1_conj (double aR, double aI, double c, double x)
-              int gsl_sf_hyperg_2F1_conj_e (double aR, double aI, double c, double x, gsl_sf_result * result)
+                int gsl_sf_hyperg_2F1_conj_e (double aR, double aI, double c, double x, gsl_sf_result * result)
 
     구간 :math:`\|x\|<1` 에 대해, 가우스 초기하 함수
 
@@ -93,7 +93,7 @@
     의 복소수 인자 값을 계산합니다.
 
 .. c:function:: double gsl_sf_hyperg_2F1_renorm (double a, double b, double c, double x)
-              int gsl_sf_hyperg_2F1_renorm_e (double a, double b, double c, double x, gsl_sf_result * result)
+                int gsl_sf_hyperg_2F1_renorm_e (double a, double b, double c, double x, gsl_sf_result * result)
 
     구간 :math:`\|x\|<1` 에 대해, 재규격화 된 가우스 초기하 함수 
 
@@ -105,7 +105,7 @@
 
  
 .. c:function:: double gsl_sf_hyperg_2F1_conj_renorm (double aR, double aI, double c, double x)
-              int gsl_sf_hyperg_2F1_conj_renorm_e (double aR, double aI, double c, double x, gsl_sf_result * result)
+                int gsl_sf_hyperg_2F1_conj_renorm_e (double aR, double aI, double c, double x, gsl_sf_result * result)
 
  
     구간 :math:`\|x\|<1` 에 대해, 재규격화 된 가우스 초기하 함수 
@@ -117,7 +117,7 @@
     의 값을 계산합니다.
  
 .. c:function:: double gsl_sf_hyperg_2F0 (double a, double b, double x)
-              int gsl_sf_hyperg_2F0_e (double a, double b, double x, gsl_sf_result * result)
+                int gsl_sf_hyperg_2F0_e (double a, double b, double x, gsl_sf_result * result)
 
     초기하 함수
 
