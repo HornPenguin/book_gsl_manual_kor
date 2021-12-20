@@ -86,7 +86,7 @@ Fig 27.을 참고하십시오.
 
   최소화 함수를 위한 작업공간을 나타냅니다.
 
-.. function:: gsl_min_fminimizer * gsl_min_fminimizer_alloc (const gsl_min_fminimizer_type * T)
+.. c:function:: gsl_min_fminimizer * gsl_min_fminimizer_alloc (const gsl_min_fminimizer_type * T)
 
   :math:`T` 형태로 할당된 새 최소화 작업공간의 주소 포인터를 반환합니다. 
   예를 들어서, 다음 코드는 황금비 최소화 작업 공간을 할당해 반환합니다.
@@ -100,7 +100,7 @@ Fig 27.을 참고하십시오.
   만약, 메모리 환경으로 인해 새로운 최소화 공간 할당이 불가능하다면, :code:`NULL` 포인터를 반환하고, 
   오류 관리자가 호출되어 :math:`GSL_ENOMEM` 코드를 전달합니다.
 
-.. function:: int gsl_min_fminimizer_set (gsl_min_fminimizer * s, gsl_function * f, double x_minimum, double x_lower, double x_upper)
+.. c:function:: int gsl_min_fminimizer_set (gsl_min_fminimizer * s, gsl_function * f, double x_minimum, double x_lower, double x_upper)
 
   최소화 공간 :math:`s` 를 초기화 하거나 재설정합니다. 
   주어진 함수 :math:`f` 초기 탐색 범위 [ :math:`x_lower` :math:`x_upper` ] 를 사용하도록 설정하며, 
@@ -108,17 +108,17 @@ Fig 27.을 참고하십시오.
 
   만약, 주어진 범위가 최소 지점을 포함하고 있지 않다면, 함수는 :math:`GSLL_EINVAL` 오류 코드를 반환합니다.
 
-.. function:: int gsl_min_fminimizer_set_with_values (gsl_min_fminimizer * s, gsl_function * f, double x_minimum, double f_minimum, double x_lower, double f_lower, double x_upper, double f_upper)
+.. c:function:: int gsl_min_fminimizer_set_with_values (gsl_min_fminimizer * s, gsl_function * f, double x_minimum, double f_minimum, double x_lower, double f_lower, double x_upper, double f_upper)
 
   :math:`gsl_minn_fminimizer_set()` 함수와 같습니다. 
   하지만, :math:`f_minimum` , :math:`f_lower` , 그리고 :math:`f_upper` 를 
   :math:`f(x_minimum)` , :math:`f(x_lower)` , 그리고 :math:`f(x_upper)` 대신 사용해 계산합니다.
 
-.. function:: void gsl_min_fminimizer_free (gsl_min_fminimizer * s)
+.. c:function:: void gsl_min_fminimizer_free (gsl_min_fminimizer * s)
 
   최소화 공간 :math:`s` 메모리를 해제합니다.
 
-.. function:: const char * gsl_min_fminimizer_name (const gsl_min_fminimizer * s)
+.. c:function:: const char * gsl_min_fminimizer_name (const gsl_min_fminimizer * s)
 
   최소화 공간의 최소화 방법 이름을 가리키는 포인터를 반환합니다. 예를 들어서,
 
@@ -143,7 +143,7 @@ Fig 27.을 참고하십시오.
 모든 최소화 방법에 대해, 같은 함수를 사용가능합니다. 
 때문에, 별도의 코드 수정 없이 실행 도중에 다른 방법들을 선택할 수 있습니다.
 
-.. function:: int gsl_min_fminimizer_iterate (gsl_min_fminimizer * s)
+.. c:function:: int gsl_min_fminimizer_iterate (gsl_min_fminimizer * s)
 
   최소화 공간 :math:`s` 갱신합니다. 만약, 갱신 도중 예상치 못한 문제가 생긴다면 다음의 오류 코드가 반환됩니다.
 
@@ -160,16 +160,16 @@ Fig 27.을 참고하십시오.
 이 정보들은 다음의 보조 함수들로 접근할 수 있습니다.
 
 
-.. function:: double gsl_min_fminimizer_x_minimum (const gsl_min_fminimizer * s)
+.. c:function:: double gsl_min_fminimizer_x_minimum (const gsl_min_fminimizer * s)
 
   최소화 공간 :math:`s` 의 현재 최적 추정치를 반환합니다.
 
-.. function:: double gsl_min_fminimizer_x_upper (const gsl_min_fminimizer * s)
+.. c:function:: double gsl_min_fminimizer_x_upper (const gsl_min_fminimizer * s)
               double gsl_min_fminimizer_x_lower (const gsl_min_fminimizer * s)
 
   최소화 공간 :math:`s` 의 현재 구간 양 끝 값을 반환합니다.
 
-.. function:: double gsl_min_fminimizer_f_minimum (const gsl_min_fminimizer * s)
+.. c:function:: double gsl_min_fminimizer_f_minimum (const gsl_min_fminimizer * s)
               double gsl_min_fminimizer_f_upper (const gsl_min_fminimizer * s)
               double gsl_min_fminimizer_f_lower (const gsl_min_fminimizer * s)
 
@@ -186,7 +186,7 @@ Fig 27.을 참고하십시오.
 
 이러한 조건들은 사용자가 직접 설정할 수 있습니다. 아래의 함수는 현재 결과의 정밀도를 측정할 수 있게 해 줍니다.
 
-.. function:: int gsl_min_test_interval (double x_lower, double x_upper,  double epsabs, double epsrel)
+.. c:function:: int gsl_min_test_interval (double x_lower, double x_upper,  double epsabs, double epsrel)
 
 이 함수는 구간 [ :math:`x_lower` :math:`x_upper`  의 수렴을 절대 오차 :math:`epsabs` 상대 오차 :math:`epsrel` 판별합니다. 판정 결과는 다음의 조건을 만족했을 때, :math:`GSL_SUCESS` 반환합니다.
 

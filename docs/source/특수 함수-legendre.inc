@@ -5,7 +5,7 @@
 르장드르 다항식(Legendre Polynomials)
 ------------------------------------------
 
-.. function:: double gsl_sf_legendre_P1 (double x)
+.. c:function:: double gsl_sf_legendre_P1 (double x)
               double gsl_sf_legendre_P2 (double x)
               double gsl_sf_legendre_P3 (double x)
               int gsl_sf_legendre_P1_e (double x, gsl_sf_result * result)
@@ -15,31 +15,31 @@
     르장드르 다항식 :math:`P_l (x)` 을 :math:`l= 1, 2, 3` 에 대해 계산합니다. 
     이 계산은 해당 함수들의 수학적 정의식을 사용합니다.
 
-.. function:: double gsl_sf_legendre_Pl (int l, double x)
+.. c:function:: double gsl_sf_legendre_Pl (int l, double x)
               int gsl_sf_legendre_Pl_e (int l, double x, gsl_sf_result * result)
 
     르장드르 다항식 :math:`P_l(x)` 을 주어진 :math:`l` 과 :math:`x` 에 대해 계산합니다. 
     이때, :math:`l` 과 :math:`x` 는 :math:`l \geq 0` 과 :math:`|x| \leq 1` 을 만족해야 합니다.
 
 
-.. function:: int gsl_sf_legendre_Pl_array (int lmax, double x, double result_array[])
+.. c:function:: int gsl_sf_legendre_Pl_array (int lmax, double x, double result_array[])
               int gsl_sf_legendre_Pl_deriv_array (int lmax, double x, double result_array[], double result_deriv_array[])
 
     :math:`l= 0, \dots lmax` 와 :math:`|x| \leq 1` 에 대해, 
     르장드르 다항식 :math:`P_l(x)` 과 그 도함수 :math:`dP_l (x)/dx` 를 
     주어진 배열 :math:`result_array[]` 에 계산합니다.
 
-.. function:: double gsl_sf_legendre_Q0 (double x)
+.. c:function:: double gsl_sf_legendre_Q0 (double x)
               int gsl_sf_legendre_Q0_e (double x, gsl_sf_result * result)
 
     :math:`x>-1` 과 :math:`x \neq 1` 에 대해, 르장드르 함수 :math:`Q_0(x)` 를 계산합니다.
 
-.. function:: double gsl_sf_legendre_Q1 (double x)
+.. c:function:: double gsl_sf_legendre_Q1 (double x)
               int gsl_sf_legendre_Q1_e (double x, gsl_sf_result * result)
 
     :math:`x>-1` 과 :math:`x \neq 1` 에 대해, 르장드르 함수 :math:`Q_1(x)` 를 계산합니다.
 
-.. function:: double gsl_sf_legendre_Ql (int l, double x)
+.. c:function:: double gsl_sf_legendre_Ql (int l, double x)
               int gsl_sf_legendre_Ql_e (int l, double x, gsl_sf_result * result)
 
   :math:`x>-1` , :math:`x \neq 1` 과 :math:`l \geq 0` 에 대해 ,르장드르 함수 :math:`Q_l(x)` 를 계산합니다.
@@ -122,7 +122,7 @@
 
 
 
-.. function:: int gsl_sf_legendre_array (const gsl_sf_legendre_t norm, const size_t lmax, const double x, double result_array[])
+.. c:function:: int gsl_sf_legendre_array (const gsl_sf_legendre_t norm, const size_t lmax, const double x, double result_array[])
               int gsl_sf_legendre_array_e (const gsl_sf_legendre_t norm, const size_t lmax, const double x, const double csphase, double result_array[])
 
     정규화된 버금 르장드르 다항식들을, :math:`0 \leq l \leq lmax` , :math:`0 \geq m \geq l` 그리고 :math:`|x| \leq 1` 에 대해 계산합니다. 
@@ -135,7 +135,7 @@
     :math:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
     이 계수는 기본적으로 비활성화 되어 있습니다.
 
-.. function:: int gsl_sf_legendre_deriv_array (const gsl_sf_legendre_t norm, const size_t lmax, const double x, double result_array[], double result_deriv_array[])
+.. c:function:: int gsl_sf_legendre_deriv_array (const gsl_sf_legendre_t norm, const size_t lmax, const double x, double result_array[], double result_deriv_array[])
               int gsl_sf_legendre_deriv_array_e (const gsl_sf_legendre_t norm, const size_t lmax, const double x, const double csphase, double result_array[], double result_deriv_array[])
 
     :math:`|x| \leq 1` 값에 대해, 정규화된 버금 르장드르 함수들의 :math:`1` 차에서 :math:`lmax` 차 까지의 도함수 값을 계산합니다. 
@@ -145,7 +145,7 @@
     :math:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
     이 계수는 기본적으로 비활성화 되어 있습니다.
 
-.. function:: int gsl_sf_legendre_deriv_alt_array (const gsl_sf_legendre_t norm, const size_t lmax, const double x, double result_array[], double result_deriv_array[])
+.. c:function:: int gsl_sf_legendre_deriv_alt_array (const gsl_sf_legendre_t norm, const size_t lmax, const double x, double result_array[], double result_deriv_array[])
               int gsl_sf_legendre_deriv_alt_array_e (const gsl_sf_legendre_t norm, const size_t lmax, const double x, const double csphase, double result_array[], double result_deriv_array[])
 
     :math:`|x| \leq 1` 값에 대해, :math:`1` 차에서 :math:`lmax` 까지의 정규화된 버금 르장드르 함수의 값과 대체된 도함수 값을 계산합니다. 
@@ -155,7 +155,7 @@
     :math:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
     이 계수는 기본적으로 비활성화 되어 있습니다.
 
-.. function:: int gsl_sf_legendre_deriv2_array (const gsl_sf_legendre_t norm, const size_t lmax, const double x, double result_array[], double result_deriv_array[], double result_deriv2_array[])
+.. c:function:: int gsl_sf_legendre_deriv2_array (const gsl_sf_legendre_t norm, const size_t lmax, const double x, double result_array[], double result_deriv_array[], double result_deriv2_array[])
               int gsl_sf_legendre_deriv2_array_e (const gsl_sf_legendre_t norm, const size_t lmax, const double x, const double csphase, double result_array[], double result_deriv_array[], double result_deriv2_array[])
 
     :math:`|x| \leq 1` 값에 대해, :math:`1` 차에서 :math:`lmax` 까지의 정규화된 버금 르장드르 함수들, 그 도함수들과 :math:`2` 계 도함수 값들을 계산합니다. 
@@ -166,7 +166,7 @@
     이 계수는 기본적으로 비활성화 되어 있습니다.
 
 
-.. function:: int gsl_sf_legendre_deriv2_alt_array (const gsl_sf_legendre_t norm, const size_t lmax, const double x, double result_array[], double result_deriv_array[], double result_deriv2_array[])
+.. c:function:: int gsl_sf_legendre_deriv2_alt_array (const gsl_sf_legendre_t norm, const size_t lmax, const double x, double result_array[], double result_deriv_array[], double result_deriv2_array[])
               int gsl_sf_legendre_deriv2_alt_array_e (const gsl_sf_legendre_t norm, const size_t lmax, const double x, const double csphase, double result_array[], double result_deriv_array[], double result_deriv2_array[])
 
     :math:`|x| \leq 1`  값에 대해, :math:`1` 차에서 :math:`lmax` 까지의 정규화된 버금 르장드르 함수들, 
@@ -178,17 +178,17 @@
     :math:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
     이 계수는 기본적으로 비활성화 되어 있습니다.
 
-.. function:: size_t gsl_sf_legendre_nlm(const size_t lmax)
+.. c:function:: size_t gsl_sf_legendre_nlm(const size_t lmax)
 
     :math:`lmax` 까지의 버금 르장드르 함수 :math:`P_l^m(x)` 의 갯수를 반환합니다. 
     해당 값은 :math:`(lmax_1)* (lmax+2)/2` 입니다.
 
-.. function:: size_t gsl_sf_legendre_array_n (const size_t lmax)
+.. c:function:: size_t gsl_sf_legendre_array_n (const size_t lmax)
 
     최대 차수 :math:`lmax` 까지의 배열 버전 버금 르장드르 함수에 필요한 최소 배열의 크기를 반환합니다. 
     이 값은 :math:`P_l^m(x)` 의 최댓값과 재귀식을 계산할 때 필요한, 곱 계수 계산을 위한 공간을 더한 값입니다.
 
-.. function:: size_t gsl_sf_legendre_array_index (const size_t l, const size_t m)
+.. c:function:: size_t gsl_sf_legendre_array_index (const size_t l, const size_t m)
 
     :math:`result_array` :math:`result_deriv_array` 그리고 :math:`result_deriv2_array` 배열의 색인 값을 반환합니다. 
     해당 값은 :math:`P_l^m(x)` , :math:`P'_l^m(x)` , 그리고 :math:`P''_l^m(x)` 에 대응되고 
@@ -196,14 +196,14 @@
 
     :math:`HAVE_INLINE` 를 사용하면 인라인 버전의 함수를 사용할 수 있습니다.
 
-.. function:: double gsl_sf_legendre_Plm (int l, int m, double x)
+.. c:function:: double gsl_sf_legendre_Plm (int l, int m, double x)
               int gsl_sf_legendre_Plm_e (int l, int m, double x, gsl_sf_result * result)
 
     :math:`m \geq 0, l \geq m` 그리고 :math:`|x| \leq 1` 에 대해, 
     버금 르장드르 함수 :math:`P_l^m(x)` 의 값을 계산합니다.
 
 
-.. function:: double gsl_sf_legendre_sphPlm (int l, int m, double x)
+.. c:function:: double gsl_sf_legendre_sphPlm (int l, int m, double x)
               int gsl_sf_legendre_sphPlm_e (int l, int m, double x, gsl_sf_result * result)
 
     구면 조화 함수에서 사용하기 위한, 정규회된 버금 르장드르 다항식 
@@ -211,20 +211,20 @@
     앞의 계수는 :math:`m \geq 0, l \geq m` 그리고 :math:`|x| \leq 1` 를 만족해야합니다.
     표준 정규화과정에서 일어나는 오버플로우를 피할 수 있습니다.
 
-.. function:: int gsl_sf_legendre_Plm_array (int lmax, int m, double x, double result_array[])
+.. c:function:: int gsl_sf_legendre_Plm_array (int lmax, int m, double x, double result_array[])
               int gsl_sf_legendre_Plm_deriv_array (int lmax, int m, double x, double result_array[], double result_deriv_array[])
 
     현재 비활성화 되어 있고 차후 버전에서 삭제될 예정입니다. 
     :math:`gsl_sf_legendre_array()` 와 :math:`gsl_sf_legendre_deriv_array()` 를 참고하길 바랍니다.
 
 
-.. function:: int gsl_sf_legendre_sphPlm_array (int lmax, int m, double x, double result_array[])
+.. c:function:: int gsl_sf_legendre_sphPlm_array (int lmax, int m, double x, double result_array[])
               int gsl_sf_legendre_sphPlm_deriv_array (int lmax, int m, double x, double result_array[], double result_deriv_array[])
 
     현재 비활성화 되어 있고 차후 버전에서 삭제될 예정입니다. 
     :math:`gsl_sf_legendre_array()` 와 :math:`gsl_sf_legendre_deriv_array()` 를 참고하길 바랍니다.
 
-.. function:: int gsl_sf_legendre_array_size (const int lmax, const int m)
+.. c:function:: int gsl_sf_legendre_array_size (const int lmax, const int m)
 
   현재 비활성화 되어 있고 차후 버전에서 삭제될 예정입니다.
 
@@ -234,34 +234,34 @@
 원통 함수 :math:`P_{-(1/2)+i\lambda}^\mu` 와 :math:`Q^{\mu}_{-(1/2)+i\lambda}` 는 
 Abramowitz & Stegun 8.12 단원에 기술되어 있습니다.
 
-.. function:: double gsl_sf_conicalP_half (double lambda, double x)
+.. c:function:: double gsl_sf_conicalP_half (double lambda, double x)
               int gsl_sf_conicalP_half_e (double lambda, double x, gsl_sf_result * result)
 
     :math:`x>-1` 에 대해, 비정칙 구면 원뿔 함수 :math:`P_{-1/2+i\lambda}^{1/2} (x)` 값을 계산합니다.
 
-.. function:: double gsl_sf_conicalP_mhalf (double lambda, double x)
+.. c:function:: double gsl_sf_conicalP_mhalf (double lambda, double x)
               int gsl_sf_conicalP_mhalf_e (double lambda, double x, gsl_sf_result * result)
 
     :math:`x>-1` 에 대해, 정칙 구면 원뿔 함수 :math:`P_{-1/2+i\lambda}^{1/2} (x)` 값을 계산합니다.
 
 
-.. function:: double gsl_sf_conicalP_0 (double lambda, double x)
+.. c:function:: double gsl_sf_conicalP_0 (double lambda, double x)
               int gsl_sf_conicalP_0_e (double lambda, double x, gsl_sf_result * result)
 
     :math:`x>-1` 에 대해, 원뿔 함수 :math:`P_{-1/2+i\lambda}^{0} (x)` 값을 계산합니다.
 
-.. function:: double gsl_sf_conicalP_1 (double lambda, double x)
+.. c:function:: double gsl_sf_conicalP_1 (double lambda, double x)
               int gsl_sf_conicalP_1_e (double lambda, double x, gsl_sf_result * result)
 
     :math:`x>-1` 에 대해, 원뿔 함수 :math:`P_{-1/2+i\lambda}^{1} (x)` 값을 계산합니다.
 
-.. function:: double gsl_sf_conicalP_sph_reg (int l, double lambda, double x)
+.. c:function:: double gsl_sf_conicalP_sph_reg (int l, double lambda, double x)
               int gsl_sf_conicalP_sph_reg_e (int l, double lambda, double x, gsl_sf_result * result)
 
     :math:`x>-1` , :math:`l \geq -1` 에 대해, 
     정칙 구면 원뿔 함수 :math:`P_{1/2+i\lambda}^{-1/2-l} (x)` 값을 계산합니다.
 
-.. function:: double gsl_sf_conicalP_cyl_reg (int m, double lambda, double x)
+.. c:function:: double gsl_sf_conicalP_cyl_reg (int m, double lambda, double x)
               int gsl_sf_conicalP_cyl_reg_e (int m, double lambda, double x, gsl_sf_result * result)
 
     :math:`x>-1` , :math:`m \geq -1` 에 대해, 
@@ -275,7 +275,7 @@ Abramowitz & Stegun 8.12 단원에 기술되어 있습니다.
 특히 중점으로 다루는 부분은 평평한 극한(flat limit)으로 :math:`\lambda \rightarrow \infty, \eta \rightarrow 0` 이고, 
 :math:`\lambda \eta` 가 상수로 고정된 상황입니다.
 
-.. function:: double gsl_sf_legendre_H3d_0 (double lambda, double eta)
+.. c:function:: double gsl_sf_legendre_H3d_0 (double lambda, double eta)
               int gsl_sf_legendre_H3d_0_e (double lambda, double eta, gsl_sf_result * result)
 
     :math:`3` 차원 쌍곡 공간 라플라시안의 :math:`0` 차 고유 함수를 계산합니다.
@@ -287,7 +287,7 @@ Abramowitz & Stegun 8.12 단원에 기술되어 있습니다.
 
     평평한 극한값은 :math:`L_0^{H 3d} (\lambda ,\eta) = j_0(\lambda \eta)` 의 형태를 가집니다.
 
-.. function:: double gsl_sf_legendre_H3d_1 (double lambda, double eta)
+.. c:function:: double gsl_sf_legendre_H3d_1 (double lambda, double eta)
               int gsl_sf_legendre_H3d_1_e (double lambda, double eta, gsl_sf_result * result)
 
     :math:`3` 차원 쌍곡 공간 라플라시안의 :math:`1` 차 고유 함수를 계산합니다.
@@ -299,14 +299,14 @@ Abramowitz & Stegun 8.12 단원에 기술되어 있습니다.
 
     평평한 극한값은 :math:`L_1^{H 3d} (\lambda ,\eta) = j_1(\lambda \eta)` 의 형태를 가집니다.
 
-.. function:: double gsl_sf_legendre_H3d (int l, double lambda, double eta)
+.. c:function:: double gsl_sf_legendre_H3d (int l, double lambda, double eta)
               int gsl_sf_legendre_H3d_e (int l, double lambda, double eta, gsl_sf_result * result)
 
     :math:`\eta \geq 0, l \geq 0` 에 대해, :math:`l` 차수의 방사 고유 함수값을 계산합니다. 
     이 고유 함수들은 :math:`3` 차원 쌍곡 공간 속 라플라시안의 고유 함수들입니다. 
     평평한 극한값은 :math:`L_l^{H 3d} (\lambda ,\eta) = j_l (\lambda \eta)` 형태를 가집니다.
 
-.. function:: int gsl_sf_legendre_H3d_array (int lmax, double lambda, double eta, double result_array[])
+.. c:function:: int gsl_sf_legendre_H3d_array (int lmax, double lambda, double eta, double result_array[])
 
     :math:`0 \leq l \leq lmax` 방사 고유 함수 :math:`L_l^{H 3d} (\lambda, \eta)` 의 값을 계산합니다.
 

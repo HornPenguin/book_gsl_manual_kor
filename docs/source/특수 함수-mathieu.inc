@@ -35,26 +35,26 @@
 
     배열 기반 방법을 위한 작업 공간입니다.
 
-.. function:: gsl_sf_mathieu_workspace * gsl_sf_mathieu_alloc (size_t n, double qmax)
+.. c:function:: gsl_sf_mathieu_workspace * gsl_sf_mathieu_alloc (size_t n, double qmax)
 
     마티유 함수들의 배열 기반 방법을 위한 작업 공간을 반환합니다. 
     인자 :math:`n` 는 :math:`qmax` 최대 계수와 공간에서 계산되는 마티유 함수의 :math:`q` -값을 결정합니다.
 
-.. function:: void gsl_sf_mathieu_free (gsl_sf_mathieu_workspace * work)
+.. c:function:: void gsl_sf_mathieu_free (gsl_sf_mathieu_workspace * work)
 
     주어진 작업 공간 :math:`work` 를 해제합니다.
 
 마티유 함수 특성 값 (Mathieu Function Characteristic Values)
 -------------------------------------------------------------------
 
-.. function:: int gsl_sf_mathieu_a (int n, double q)
+.. c:function:: int gsl_sf_mathieu_a (int n, double q)
               int gsl_sf_mathieu_a_e (int n, double q, gsl_sf_result * result)
               int gsl_sf_mathieu_b (int n, double q)
               int gsl_sf_mathieu_b_e (int n, double q, gsl_sf_result * result)
 
     각각, 마티유 함수 :math:`c e_n (q,x)` 와 :math:`s e_n (q,x)` 의 특성 값 :math:`a_n(q)` 와 :math:`b_n(q)` 을 계산합니다.
 
-.. function:: int gsl_sf_mathieu_a_array (int order_min, int order_max, double q, gsl_sf_mathieu_workspace * work, double result_array[])
+.. c:function:: int gsl_sf_mathieu_a_array (int order_min, int order_max, double q, gsl_sf_mathieu_workspace * work, double result_array[])
               int gsl_sf_mathieu_b_array (int order_min, int order_max, double q, gsl_sf_mathieu_workspace * work, double result_array[])
 
     마티유 함수의 특성 값 :math:`a_n(q)` 와 :math:`b_n(q)` 을 주어진 
@@ -64,14 +64,14 @@
 각 운동량 마티유 함수 (Angular Mathieu Functions)
 -------------------------------------------------------------------
 
-.. function:: int gsl_sf_mathieu_ce (int n, double q, double x)
+.. c:function:: int gsl_sf_mathieu_ce (int n, double q, double x)
               int gsl_sf_mathieu_ce_e (int n, double q, double x, gsl_sf_result * result)
               int gsl_sf_mathieu_se (int n, double q, double x)
               int gsl_sf_mathieu_se_e (int n, double q, double x, gsl_sf_result * result)
 
     각각, 각 운동량 마티유 함수 :math:`c e_n (q,x)` 와 :math:`s e_n (q,x)` 를 계산합니다.
 
-.. function:: int gsl_sf_mathieu_ce_array (int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
+.. c:function:: int gsl_sf_mathieu_ce_array (int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
               int gsl_sf_mathieu_se_array (int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
 
     각각, 각 운동량 마티유 함수 :math:`c e_n (q,x)` 와 :math:`s e_n (q,x)` 의 값을 주어진 
@@ -82,7 +82,7 @@
 방사 마티유 함수 (Radial Mathieu Functions)
 -------------------------------------------------
 
-.. function:: int gsl_sf_mathieu_Mc (int j, int n, double q, double x)
+.. c:function:: int gsl_sf_mathieu_Mc (int j, int n, double q, double x)
               int gsl_sf_mathieu_Mc_e (int j, int n, double q, double x, gsl_sf_result * result)
               int gsl_sf_mathieu_Ms (int j, int n, double q, double x)
               int gsl_sf_mathieu_Ms_e (int j, int n, double q, double x, gsl_sf_result * result)
@@ -95,7 +95,7 @@
     :math:`M_n^{(j)} =` :math:`Mc_n^{(j)}` 나 :math:`Ms_n^{(j)}` 에 대해, 
     :math:`M_n^{(3)} = M_n^{(1)} + i M_n^{(2)}` 와 :math:`M_n^{(4)} = M_n^{(1)} - i M_n^{(2)}` .
 
-.. function:: int gsl_sf_mathieu_Mc_array (int j, int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
+.. c:function:: int gsl_sf_mathieu_Mc_array (int j, int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
               int gsl_sf_mathieu_Ms_array (int j, int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
 
     :math:`j` 메티유 함수의 값을 주어진 :math:`nmin` 와 :math:`nmax` 범위에 있는 

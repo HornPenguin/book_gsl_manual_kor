@@ -3,7 +3,7 @@
 이 함수들은 헤더 파일 :math:`gsl_sf_pow_int.h` 에 정의되어 있습니다.
 
 
-.. function:: double gsl_sf_pow_int (double x, int n)
+.. c:function:: double gsl_sf_pow_int (double x, int n)
               int gsl_sf_pow_int_e (double x, int n, gsl_sf_result * result)
 
     정수 :math:`n` 대해 :math:`x^n` 의 값을 계산합니다. 

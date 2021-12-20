@@ -14,7 +14,7 @@
 
 클라우센 함수들은 헤더 파일 :code:`gsl_sf_clausen.h` 에 정의되어 있습니다.
 
-.. function:: double gsl_sf_clausen (double x)
+.. c:function:: double gsl_sf_clausen (double x)
               int gsl_sf_clausen_e (double x, gsl_sf_result * result)
 
     이 함수들은 클라우센 적분 :math:`Cl_2(x)` 의 값을 계산합니다.

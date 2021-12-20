@@ -29,35 +29,35 @@ Szego, Gabor (1939, 1957, 1967) Orthogonal Polynomials, American Mathematical So
     H_{e_n}''(x) -xH_{e_n}'(x) + nH_{e_n}(x)=0
 
 
-.. function:: double gsl_sf_hermite (const int n, const double x)
+.. c:function:: double gsl_sf_hermite (const int n, const double x)
               int gsl_sf_hermite_e (const int n, const double x, gsl_sf_result * result)
         
         이 함수는 :math"`H_n (x)` 형태의 에르미트 다항식을 주어진 차수 :code:`n` 과 변수 :code:`x` 에 대해 계산합니다. 
         오버플로우가 감지되면, 오류 관리자를 호출하지 않고 :c:macro:`GSL_EOVERFLW` 를 반환합니다.
 
-.. function:: int gsl_sf_hermite_array (const int nmax, const double x, double * result_array)
+.. c:function:: int gsl_sf_hermite_array (const int nmax, const double x, double * result_array)
 
     :math:`nmax` 이하의 차수를 가지는 모든 :math:`H_n(x)` 형태의 에르미트 다항식을 주어진 변수 
     :math:`x` 에 대해 계산합니다. 결과는 :math:`result_array` 에 저장됩니다.
 
-.. function:: double gsl_sf_hermite_series (const int n, const double x, const double * a)
+.. c:function:: double gsl_sf_hermite_series (const int n, const double x, const double * a)
               int gsl_sf_hermite_series_e (const int n, const double x, const double * a, gsl_sf_result * result)
 
     :math:`\sum_{j=0}^n a_j H_j (x)` 급수 값을 Clenshaw 알고리즘을 이용해 계산합니다.
 
-.. function:: double gsl_sf_hermite_prob (const int n, const double x)
+.. c:function:: double gsl_sf_hermite_prob (const int n, const double x)
               int gsl_sf_hermite_prob_e (const int n, const double x, gsl_sf_result * result)
 
     :math:`H_{e_n}(x)` 형태의 에르미트 다항식을 주어진 차수 :math:`n` 변수 :math:`x` 대해 계산합니다. 
     오버플로우가 감지되면, 오류 관리자를 호출하지 않고 :math:`GSL_EOVERFLW` 를 반환합니다.
 
-.. function:: int gsl_sf_hermite_prob_array (const int nmax, const double x, double * result_array)
+.. c:function:: int gsl_sf_hermite_prob_array (const int nmax, const double x, double * result_array)
 
     :math:`nmax`  이하의 차수를 가지는 모든 :math:`H_{e_n}(x)` 형태의 에르미트 다항식을 주어진 변수 
     :math:`x` 에 대해 계산합니다. 결과는 :math:`result_array` 에 저장됩니다.
 
 
-.. function:: double gsl_sf_hermite_prob_series (const int n, const double x, const double * a)
+.. c:function:: double gsl_sf_hermite_prob_series (const int n, const double x, const double * a)
               int gsl_sf_hermite_prob_series_e (const int n, const double x, const double * a, gsl_sf_result * result)
 
     :math:`\sum_{j=0}^n a_j H_{e_j} (x)` 급수 값을 Clenshaw 알고리즘을 이용해 계산합니다.
@@ -66,20 +66,20 @@ Szego, Gabor (1939, 1957, 1967) Orthogonal Polynomials, American Mathematical So
 에르미트 다항식의 도함수 (Derivatives of Hermite Polynomials)
 -------------------------------------------------------------
 
-.. function:: double gsl_sf_hermite_deriv (const int m, const int n, const double x)
+.. c:function:: double gsl_sf_hermite_deriv (const int m, const int n, const double x)
               int gsl_sf_hermite_deriv_e (const int m, const int n, const double x, gsl_sf_result * result)
 
     :math:`n`  차수의 에르미트 다항식 :math:`H_n(x)` 의 :math:`m` 차 도함수 값을 주어진 변수 
     :math:`x`  대해 계산합니다.
 
-.. function::  int gsl_sf_hermite_array_deriv (const int m, const int nmax, const double x, double * result_array)
+.. c:function::  int gsl_sf_hermite_array_deriv (const int m, const int nmax, const double x, double * result_array)
 
      :math:`0, \dots, nmax` 차수의 모든 에르미트 다항식 :math:`H_n(x)` 의 :math:`m` 차 도함수 값을 
      주어진 변수 :math:`x` 대해 계산합니다.  
      :math:`d^m / dx^m H_n(x)`  의 값은 :math:`result_array[n]` 에 저장됩니다. 
      계산 결과가 저장되는 :math:`result_array` 는 최소 :math:`nmax+1` 이상의 길이를 가져야 합니다.
 
-.. function:: int gsl_sf_hermite_deriv_array (const int mmax, const int n, const double x, double * result_array)
+.. c:function:: int gsl_sf_hermite_deriv_array (const int mmax, const int n, const double x, double * result_array)
 
      :math:`n` 차수를 가지는 에르미트 다항식 :math:`H_n(x)` 의 모든 :math:`0, \dots, mmax` 차 
      도함수 값을 주어진 변수 :math:`x` 대해 계산합니다.  
@@ -87,20 +87,20 @@ Szego, Gabor (1939, 1957, 1967) Orthogonal Polynomials, American Mathematical So
      계산 결과가 저장되는 :math:`result_array` 는 최소 :math:`mmax+1` 이상의 길이를 가져야 합니다.
 
 
-.. function:: double gsl_sf_hermite_prob_deriv (const int m, const  int n, const double x)
+.. c:function:: double gsl_sf_hermite_prob_deriv (const int m, const  int n, const double x)
               int gsl_sf_hermite_prob_deriv_e (const int m, const  int n, const double x, gsl_sf_result * result)
 
     :math:`n`  차수의 에르미트 다항식 :math:`H_{e_n}(x)` 의 :math:`m` 차 도함수 값을 
     주어진 변수 :math:`x`  대해 계산합니다.
 
-.. function:: int gsl_sf_hermite_prob_array_deriv (const int m, const int nmax, const double x, double * result_array)
+.. c:function:: int gsl_sf_hermite_prob_array_deriv (const int m, const int nmax, const double x, double * result_array)
 
      :math:`n` 차수를 가지는 에르미트 다항식 :math:`H_{e_n}(x)` 의 
      모든 :math:`0, \dots, mmax` 차 도함수 값을 주어진 변수 :math:`x` 대해 계산합니다.  
      :math:`d^m / dx^m H_{e_n}(x)` 의 값은 :math:`result_array[m]]` 에 저장됩니다. 
      계산 결과가 저장되는 :math:`result_array` 는 최소 :math:`mmax+1` 이상의 길이를 가져야 합니다.
 
-.. function:: int gsl_sf_hermite_prob_deriv_array (const int mmax, const int n, const double x, double * result_array)
+.. c:function:: int gsl_sf_hermite_prob_deriv_array (const int mmax, const int n, const double x, double * result_array)
 
      :math:`n` 차수를 가지는 에르미트 다항식 :math:`H_{e_n}(x)` 의 
      모든 :math:`0, \dots, mmax` 차 도함수 값을 주어진 변수 :math:`x` 대해 계산합니다.
@@ -138,7 +138,7 @@ GSL은 에르미트 함수를 계산하는 두 가지 방법을 제공합니다.
 :math:`O(\sqrt{n})` 의 계산복잡도를 가집니다. 
 정확도를 조금 희생하지만 :math:`n` 값이 클 수록, 기존 방법에 비해 속도에 큰 이점이 있습니다.
 
-.. function:: double gsl_sf_hermite_func (const int n, const double x)
+.. c:function:: double gsl_sf_hermite_func (const int n, const double x)
               int gsl_sf_hermite_func_e (const int n, const double x, gsl_sf_result * result)
 
 
@@ -146,20 +146,20 @@ GSL은 에르미트 함수를 계산하는 두 가지 방법을 제공합니다.
     이 방법은 재귀 관계를 이용하며, :math:`O(n)` 의 계산 복잡도를 가집니다.
 
 
-.. function:: double gsl_sf_hermite_func_fast (const int n, const double x)
+.. c:function:: double gsl_sf_hermite_func_fast (const int n, const double x)
               int gsl_sf_hermite_func_fast_e (const int n, const double x, gsl_sf_result * result)
 
     차수 :math:`n` 에르미트 함수 :math:`\psi_n(x)` 를 주어진 변수 :math:`x` 에 대해 계산합니다. 
     이 방법은 (Bunck, 2009)의 코시 적분을 이용하며, :math:`O(\sqrt{n})` 의 계산 복잡도를 가집니다.
 
 
-.. function:: int gsl_sf_hermite_func_array (const int nmax, const double x, double * result_array)
+.. c:function:: int gsl_sf_hermite_func_array (const int nmax, const double x, double * result_array)
 
     :math:`n=0, \dots ,nmax` 의 차수를 가지는 에르미트 함수 :math:`\psi_n(x)` 를 주어진 변수 
     :math:`x` 대해, 재귀적 방법을 이용해 계산합니다. 
     계산 결과는 :math:`result_array` 저장되며 최소 :math:`nmax+1` 이상의 길이를 가져야 합니다.
 
-.. function:: double gsl_sf_hermite_func_series (const int n, const double x, const double * a)
+.. c:function:: double gsl_sf_hermite_func_series (const int n, const double x, const double * a)
               int gsl_sf_hermite_func_series_e (const int n, const double x, const double * a, gsl_sf_result * result)
 
     :math:`\sum_{j=0}^n a_j \psi_j (x)` 급수를 계산합니다. 
@@ -170,7 +170,7 @@ GSL은 에르미트 함수를 계산하는 두 가지 방법을 제공합니다.
 에르미트 함수의 도함수 (Derivatives of Hermite Functions)
 -------------------------------------------------------------
 
-.. function:: double gsl_sf_hermite_func_der (const int m, const int n, const double x)
+.. c:function:: double gsl_sf_hermite_func_der (const int m, const int n, const double x)
               int gsl_sf_hermite_func_der_e (const int m, const int n, const double x, gsl_sf_result * result)
 
     :math:`n` 차수의 에르미트 함수 :math:`\psi_n(x)` 의 :math:`m` 차 도함수를 주어진 
@@ -186,18 +186,18 @@ GSL은 에르미트 함수를 계산하는 두 가지 방법을 제공합니다.
 홀수 차수의 다항식 만이 :math:`0` 에서 :math:`0`  번째 근을 가집니다. 
 해당 값은 항상 :math:`0` 입니다.
 
-.. function:: double gsl_sf_hermite_zero (const int n, const int s)
+.. c:function:: double gsl_sf_hermite_zero (const int n, const int s)
               int gsl_sf_hermite_zero_e (const int n, const int s, gsl_sf_result * result)
 
     :math:`n` 차수의 에르미트 다항식 :math:`H_n(x)` 의 :math:`s` 번째 근을 계산합니다.
 
 
-.. function:: double gsl_sf_hermite_prob_zero (const int n, const int s)
+.. c:function:: double gsl_sf_hermite_prob_zero (const int n, const int s)
               int gsl_sf_hermite_prob_zero_e (const int n, const int s, gsl_sf_result * result)
 
     :math:`n` 차수의 에르미트 다항식 :math:`H_{e_n}(x)` 의 :math:`s` 번째 근을 계산합니다.
 
-.. function:: double gsl_sf_hermite_func_zero (const int n, const int s)
+.. c:function:: double gsl_sf_hermite_func_zero (const int n, const int s)
               int gsl_sf_hermite_func_zero_e (const int n, const int s, gsl_sf_result * result)
 
     :math:`n` 차수의 에르미트 함수 :math:`\psi_n(x)` 의 :math:`s` 번째 근을 계산합니다.
