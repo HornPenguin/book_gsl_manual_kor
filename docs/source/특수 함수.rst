@@ -101,7 +101,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 이러한 경우에 :c:type:`gsl_mode_t` 자료형으로 정의된 :code:`mode` 인자를 이용해 요구 정밀도를 낮추어 연산 효율을 높일 수 있습니다. 
 다음의 정밀도 값들이 :math:`mode` 인자에 들어갈 수 있습니다.
 
-.. .. c:type:: gsl_mode_t
+.. c:type:: gsl_mode_t
 
   .. c:macro:: GSL_PREC_DOUBLE
 
@@ -121,124 +121,124 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 
 에어리 함수와 도함수(Airy function & Derivative)
 ================================================
-.. include:: 특수 함수-airy.rst
+.. include:: 특수 함수-airy.inc
 
 베셀 함수(Bessel function)
 ================================
-.. include:: 특수 함수-bessel.rst
+.. include:: 특수 함수-bessel.inc
 
 클라우센 함수 (Clausen Functions)
 ==================================
-.. include:: 특수 함수-clausen.rst
+.. include:: 특수 함수-clausen.inc
 
 쿨롱 함수 (Coulomb Functions)
 ==================================
-.. include:: 특수 함수-coulomb.rst
+.. include:: 특수 함수-coulomb.inc
 
 상호작용 계수 (Coupling Coefficients)
 ==========================================
-.. include:: 특수 함수-coupling.rst
+.. include:: 특수 함수-coupling.inc
 
 도슨 함수 (Dawson Function)
 ================================
-.. include:: 특수 함수-dawson.rst
+.. include:: 특수 함수-dawson.inc
 
 디바이 함수 (Debye Functions)
 ================================
-.. include:: 특수 함수-debye.rst
+.. include:: 특수 함수-debye.inc
 
 다이로그 함수 (Dilogarithm)
 ============================
-.. include:: 특수 함수-dilog.rst
+.. include:: 특수 함수-dilog.inc
 
 기초 연산 (Elementary Operations)
 ======================================
-.. include:: 특수 함수-elementary.rst
+.. include:: 특수 함수-elementary.inc
 
 타원 적분 (Elliptic Integrals)
 ===================================
-.. include:: 특수 함수-ellint.rst
+.. include:: 특수 함수-ellint.inc
 
 자코비 타원 적분 (Elliptic Functions (Jacobi))
 ==============================================
-.. include:: 특수 함수-elljac.rst
+.. include:: 특수 함수-elljac.inc
 
 오차 함수 (Error Functions)
 ================================
-.. include:: 특수 함수-erf.rst
+.. include:: 특수 함수-erf.inc
 
 지수 함수 (Exponential Functions)
 ======================================
-.. include:: 특수 함수-exp.rst
+.. include:: 특수 함수-exp.inc
 
 지수 적분 함수 (Exponential Integrals)
 ======================================
-.. include:: 특수 함수-expint.rst
+.. include:: 특수 함수-expint.inc
 
 페르미 디렉 함수 (Fermi-Dirac Function)
 =======================================
-.. include:: 특수 함수-fermi-dirac.rst
+.. include:: 특수 함수-fermi-dirac.inc
 
 감마와 베타 함수 (Gamma and Beta Functions)
 =============================================
-.. include:: 특수 함수-gamma.rst
+.. include:: 특수 함수-gamma.inc
 
 구겐바우어 함수 (Gegenbauer Functions)
 =========================================
-.. include:: 특수 함수-gegenbauer.rst
+.. include:: 특수 함수-gegenbauer.inc
 
 에르미트 다항식과 함수 (Hermite Polynomials and Functions)
 ============================================================
-.. include:: 특수 함수-hermite.rst
+.. include:: 특수 함수-hermite.inc
 
 초기하 함수 (Hypergeometric Functions)
 ===============================================
-.. include:: 특수 함수-hyperg.rst
+.. include:: 특수 함수-hyperg.inc
 
 
 라게르 함수 (Laguerre Functions)
 =========================================
-.. include:: 특수 함수-laguerre.rst
+.. include:: 특수 함수-laguerre.inc
 
 람베르트 W 함수 (Lambert W Functions)
 ==========================================
-.. include:: 특수 함수-lambert.rst
+.. include:: 특수 함수-lambert.inc
 
 르장드르 함수와 구면조화 함수 (Legendre Functions and Spherical Harmonics)
 ===============================================================================
-.. include:: 특수 함수-legendre.rst
+.. include:: 특수 함수-legendre.inc
 
 로그 함수 (Logarithm and Related Functions)
 =============================================
-.. include:: 특수 함수-log.rst
+.. include:: 특수 함수-log.inc
 
 마티유 함수 (Mathieu Functions)
 ===============================
-.. include:: 특수 함수-mathieu.rst
+.. include:: 특수 함수-mathieu.inc
 
 멱함수 (Power Function)
 ========================
-.. include:: 특수 함수-pow-int.rst
+.. include:: 특수 함수-pow-int.inc
 
 프사이(디감마) 함수 (Psi (Digamma) Function)
 ==================================================
-.. include:: 특수 함수-psi.rst
+.. include:: 특수 함수-psi.inc
 
 싱크트론 함수 (Synchrotron Functions)
 =================================================
-.. include:: 특수 함수-synchrotron.rst
+.. include:: 특수 함수-synchrotron.inc
 
 운송 함수 (Transport Functions)
 =================================
-.. include:: 특수 함수-transport.rst
+.. include:: 특수 함수-transport.inc
 
 삼각 함수 (Trigonometric Functions)
 =====================================
-.. include:: 특수 함수-trig.rst
+.. include:: 특수 함수-trig.inc
 
 제타 함수 (Zeta Functions)
 ============================
-.. include:: 특수 함수-zeta.rst
+.. include:: 특수 함수-zeta.inc
 
 
 예제 (Examples)
