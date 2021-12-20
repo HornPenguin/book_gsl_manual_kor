@@ -25,12 +25,14 @@
 
 :code:`gsl_complex` 기본적인 형태는 다음 구조체로 정의됩니다.
 
-.. code-block:: c
+.. c:type:: gsl_complex
+  
+  .. code-block:: c
 
-    	typedef struct
-	{
-		double dat[2];
-	} gsl_complex;
+      	typedef struct
+  	{
+  		double dat[2];
+  	} gsl_complex;
 
 
 

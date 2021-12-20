@@ -121,7 +121,7 @@ GSL의 설계는 라이브러리 안에 존재하는 기능들을 간단하게 �
 실 사용자들이 사용하기 쉽고, 향후 GSL에 포함될 잘 검증되고 인기 있는 패키지를 해당 패키지만으로 베포할 수 있게하기 위함입니다.
 
 * 이 문서에서 제공하는 GSL과 GNU 코딩 표준 규약을 준수해야합니다. 이는 표준 GNU 패키징 도구들을 이용하는 것으로, *Automake* 의 사용, 문서화에 *Texinfo* 를 사용하는 것과 *test suite* 를 제공함을 의미합니다. 
-  *test suite*는 :code:`make check` 를 실행해 검증해야하고, GSL에서 제공하는 검증 함수들을 사용해 결과가 :code:`PASS:/FAIL:` 로 출력되도록 해야합니다. 
+  *test suite* 는 :code:`make check` 를 실행해 검증해야하고, GSL에서 제공하는 검증 함수들을 사용해 결과가 :code:`PASS:/FAIL:` 로 출력되도록 해야합니다. 
   *libtool* 사용은 필수가 아닙니다. 패키지는 충분히 작게 만들 수 있고, 정적 라이브러리는 손쉽게 만들수 있기 때문입니다.
 * 패키지를 위한 새로운 접두사를 만들어야 합니다. :code:`gsl_` 은 내부 사용을 위한 접두사입니다. 예로, 추가적인 난수 생성자는 :code:`rngextra` 라는 접두사를 사용할 수 있습니다.
 
@@ -136,7 +136,8 @@ GSL의 설계는 라이브러리 안에 존재하는 기능들을 간단하게 �
 
 만드는 패키지의 갱신 소식 정보를 :code:`sources.redhat.com` 의 :code:`gsl-discuss` 에 올리면, GSL 웹사이트에 추가시킬 수 있습니다.
 
-예시 패키지 :code:`rngextra` 는 두 개의 난수 발생기를 가지고 있습니다. 이 둘은 (http://www.network-theory.co.uk/download/rngextra/)에서 찾을 수 있습니다.
+예시 패키지 :code:`rngextra` 는 두 개의 난수 발생기를 가지고 있습니다. 
+이 들은 http://www.network-theory.co.uk/download/rngextra/ 에서 찾을 수 있습니다.
 
 GSL의 디자인
 ===============
