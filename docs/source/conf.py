@@ -48,6 +48,7 @@ epub_publisher = 'OFPublisher'
 
 latex_engine = 'xelatex'
 latex_elements = {
+    'pointsize': '9pt',
     'fontpkg': r'''
 \setmainfont{Noto Serif CJK KR}
 \setsansfont{Noto Sans CJK KR}
