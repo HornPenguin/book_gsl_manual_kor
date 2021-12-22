@@ -11,3 +11,4 @@
 * 별칭: Alias
 * 보어 반지름: Bohr radius
 * 바른: Barn
+* 분산-공분산 행렬: variance-covariance matrix
