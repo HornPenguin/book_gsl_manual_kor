@@ -105,7 +105,7 @@ Autoconf Macros
   fi
 
 :code:`autoconf` 를 사용하면 대체 함수들을 자동으로 적용 되도록 할 수 있습니다. 
-예를 들어, BSD 함수 c::function:`hypot` 이 사용가능한지 아닌지 확인하기 위해서
+예를 들어, BSD 함수 :c:function:`hypot` 이 사용가능한지 아닌지 확인하기 위해서
 작성하는 응용프로그램의 설정파일 :file:`configure.in` 에 다음 명령어를 넣을 수 있습니다.
 
 .. code-block:: console
