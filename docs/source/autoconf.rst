@@ -4,63 +4,75 @@
 Autoconf Macros
 ***************
 
+:code:`autoconf` 를 사용하는 응용 프로그램들은 표준 매크로 :code:`AC_CHECK_LIB` 를 사용해  
+:code:`configure` 스크립트에서 GSL를 자동으로 링크할 수 있습니다. 라이브러리는 CBLAS와 
+수학 라이브러리들에 대해서도 자체적으로 의존하고 있기 때문에 이 의존 라이브러리들을 :code:`libgsl` 을
+링크하기 전에 가져오도록 해야합니다. 이를 수행할 수 있는 명령어는 다음과 같습니다.
+명령어들은 :file:`configure.ac` 에 작성되어야합니다. 
 
-For applications using :code:`autoconf` the standard macro
-:code:`AC_CHECK_LIB` can be used to link with GSL automatically
-from a :code:`configure` script.  The library itself depends on the
-presence of a CBLAS and math library as well, so these must also be
-located before linking with the main :code:`libgsl` file.  The following
-commands should be placed in the :file:`configure.ac` file to perform
-these tests::
+.. code-block:: 
 
   AC_CHECK_LIB([m],[cos])
   AC_CHECK_LIB([gslcblas],[cblas_dgemm])
   AC_CHECK_LIB([gsl],[gsl_blas_dgemm])
 
-It is important to check for :code:`libm` and :code:`libgslcblas` before
-:code:`libgsl`, otherwise the tests will fail.  Assuming the libraries
-are found the output during the configure stage looks like this::
+:code:`libm` 와 :code:`libgslcblas` 를 :code:`libgsl` 이전에 배치시켜야 함을 기억해야합니다.
+다른 순서로 배열하면 작동하지 않을 것입니다. 구성(configure) 단계에서 라이브러리를 찾을 수 있다면
+다음과 같은 출력을 내보냅니다.
+
+.. code-block:: console
 
   checking for cos in -lm... yes
   checking for cblas_dgemm in -lgslcblas... yes
   checking for gsl_blas_dgemm in -lgsl... yes
 
-If the library is found then the tests will define the macros
-:code:`HAVE_LIBGSL`, :code:`HAVE_LIBGSLCBLAS`, :code:`HAVE_LIBM` and add
-the options :code:`-lgsl -lgslcblas -lm` to the variable :code:`LIBS`.
+라이브러리를 찾을 수 있다면 검증 프로그램이 
+매크로 :code:`HAVE_LIBGSL`, :code:`HAVE_LIBGSLCBLAS`, :code:`HAVE_LIBM` 를 정의하고
+변수 :code:`LIBS` 에 :code:`-lgsl -lgslcblas -lm` 옵션들을 추가합니다.
 
-The tests above will find any version of the library.  They are suitable
-for general use, where the versions of the functions are not important.
-An alternative macro is available in the file :file:`gsl.m4` to test for
-a specific version of the library.  To use this macro simply add the
-following line to your :file:`configure.in` file instead of the tests
-above::
+위의 검증 과정은 어느 버전의 라이브러리에서도 사용 가능합니다.
+이 과정은 보편적으로 사용할 수 있고, 함수의 버전은 중요하지 않습니다.
+파일 내에는 대체 매크로 :file:`gsl.m4` 가 있어 특정 라이브러리의 버전을 검사할 수도 있습니다.
+이 매크로를 사용하기 위해서는 위의 검증 과정을 기술하는 명령어들 대신
+다음의 명령어들을 :file:`configure.in` 에 추가하면 됩니다.
+
+.. code-block:: console
 
   AX_PATH_GSL(GSL_VERSION,
              [action-if-found],
              [action-if-not-found])
 
-The argument :c:macro:`GSL_VERSION` should be the two or three digit
-:code:`major.minor` or :code:`major.minor.micro` version number of the release
-you require. A suitable choice for :code:`action-if-not-found` is::
+
+:c:macro:`GSL_VERSION` 인자는 :code:`major.minor` 나 :code:`major.minor.micro` 형식의 
+2-3 자리 정수 값을 가져야 합니다. 이는 필요한 라이브러리 베포판의 버전 숫자를 가르킵니다.
+
+:code:`action-if-not-found` 에 대해 일반적으로 많이 쓰이는 설정은
+
+.. code-block:: console
 
   AC_MSG_ERROR(could not find required version of GSL)
 
-Then you can add the variables :c:macro:`GSL_LIBS` and :c:macro:`GSL_CFLAGS` to
-your Makefile.am files to obtain the correct compiler flags.
-:c:macro:`GSL_LIBS` is equal to the output of the :code:`gsl-config --libs`
-command and :c:macro:`GSL_CFLAGS` is equal to :code:`gsl-config --cflags`
-command. For example::
+:file:`Makefile.am` 파일에 변수 :c:macro:`GSL_LIBS` 와 :c:macro:`GSL_CFLAGS` 를 추가해
+제대로 된 컴파일러 옵션들을 얻을 수 있습니다. :c:macro:`GSL_LIBS` 는 :code:`gsl-config --libs` 를
+만들고, :c:macro:`GSL_CFLAGS` 는 :code:`gsl-config --cflags` 를 만들어줍니다. 
+예를 들어서
+
+.. code-block:: console
 
   libfoo_la_LDFLAGS = -lfoo $(GSL_LIBS) -lgslcblas
 
-Note that the macro :c:macro:`AX_PATH_GSL` needs to use the C compiler so it
-should appear in the :file:`configure.in` file before the macro
-:c:macro:`AC_LANG_CPLUSPLUS` for programs that use C++.
+.. note::
 
-To test for :code:`inline` the following test should be placed in your
-:file:`configure.in` file::
+  매크로 :c:macro:`AX_PATH_GSL` 는 C 컴파일러를 필요로 함을 유의해야 합니다.
+  따라서 이 매크로는 :file:`configure.in` 파일 내에 
+  매크로 :c:macro:`AC_LANG_CPLUSPLUS` 전에 기술되어야 합니다.
+  이 매크로는 C++로 쓰인 프로그램에 쓰입니다.
 
+:code:`inline` 기능을 검사하기 위해서는 다음의 명령어들을 :file:`configure.in` 에 
+작성하고,
+
+.. code-block:: console
+  
   AC_C_INLINE
 
   if test "$ac_cv_c_inline" != no ; then
@@ -68,10 +80,12 @@ To test for :code:`inline` the following test should be placed in your
     AC_SUBST(HAVE_INLINE)
   fi
 
-and the macro will then be defined in the compilation flags or by
-including the file :file:`config.h` before any library headers.  
+이러면 매크로가 컴파일 옵션에 정의됩니다 아니면 다른 라이브러리 헤더들 
+보다 :file:`config.h` 를 먼저 포함하는 형식으로 검사할 수도 있습니다.
 
-The following autoconf test will check for :code:`extern inline`::
+다음 :code:`autoconf` 검증 명령어들은 :code:`extern inline` 를 검사합니다.
+
+.. code-block:: console
 
   dnl Check for "extern inline", using a modified version
   dnl of the test for AC_C_INLINE from acspecific.mt
@@ -90,15 +104,17 @@ The following autoconf test will check for :code:`extern inline`::
     AC_SUBST(HAVE_INLINE)
   fi
 
-The substitution of portability functions can be made automatically if
-you use :code:`autoconf`. For example, to test whether the BSD function
-:func:`hypot` is available you can include the following line in the
-configure file :file:`configure.in` for your application::
+:code:`autoconf` 를 사용하면 대체 함수들을 자동으로 적용 되도록 할 수 있습니다. 
+예를 들어, BSD 함수 c::function:`hypot` 이 사용가능한지 아닌지 확인하기 위해서
+작성하는 응용프로그램의 설정파일 :file:`configure.in` 에 다음 명령어를 넣을 수 있습니다.
+
+.. code-block:: console
 
   AC_CHECK_FUNCS(hypot)
 
-and place the following macro definitions in the file
-:file:`config.h.in`::
+그리고 파일 :file:`config.h.in` 에 다음 매크로를 정의해 줍시다.
+
+.. code-block:: c
 
   /* Substitute gsl_hypot for missing system hypot */
 
@@ -106,6 +122,6 @@ and place the following macro definitions in the file
   #define hypot gsl_hypot
   #endif
 
-The application source files can then use the include command
-:code:`#include <config.h>` to substitute :func:`gsl_hypot` for each
-occurrence of :func:`hypot` when :func:`hypot` is not available.
+이 과정을 거치면 응용 프로그램 소스 파일들에서 :code:`#include <config.h>` 를 사용해
+:func:`hypot` 를 사용할 수 없는 상황에서 :func:`gsl_hypot` 로 :func:`hypot` 를 대체할 수 있습니다. 
+
