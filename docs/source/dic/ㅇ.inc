@@ -1,4 +1,4 @@
-
+* 에어리 함수: Airy function
 * 역 변환: Inverse transformation
 * 알고리즘: Algorithm
 * 외판원 문제: Salesman problem
@@ -10,6 +10,7 @@
 * 옴스트롱: Angstrom
 * 인치: Inch
 * 야드: Yard
+* 원통형 베셀 함수: 
 
 이
 ---------------------

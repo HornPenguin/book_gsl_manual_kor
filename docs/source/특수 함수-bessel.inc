@@ -1,4 +1,5 @@
 .. index:: 베셀 함수
+.. index:: Bessel function
 
 이 단원은 
 원통형 베셀 함수 :math:`J_ (x), Y_(x)`, 
@@ -6,12 +7,17 @@
 구면 베셀 함수 :math:`j_l(x), y_l(x)` 그리고 
 수정 구면 베셀 함수 :math:`i_(x), k_l(x)`를 계산하는 함수들을 서술합니다. 
 더 자세한 정보는 Abramowitz & Stegun Chapter 9, 10 단원을 참조할 수 있습니다. 
-이 베셀함수들은 헤더 파일 :code:`gsl_sf_bessel.h` 에 정의되어 있습니다.
+이 베셀 함수들은 헤더 파일 :code:`gsl_sf_bessel.h` 에 정의되어 있습니다.
 
 
-1종 베셀 함수(Regular Bessel function, Bessel function of the first kind)
+.. index:: Regular Bessel function
+.. index:: Bessel function of the first kind
+.. index:: 1종 베셀 함수
+
+1종 베셀 함수
 ---------------------------------------------------------------------------
 
+동의어: Regular Bessel function
 
 .. c:function:: double gsl_sf_bessel_J0 (double x)
                 int gsl_sf_bessel_J0_e (double x, gsl_sf_result * result)
@@ -35,8 +41,16 @@
    실제 값과는 조금 다를 수 있습니다.
 
 
-2종 베셀 함수/ 노이먼 함수(Irregular Bessel function, Bessel function of the second kind, Neumann function)
+.. index:: Neumann function
+.. index:: 노이먼 함수
+.. index:: Irregular Bessel function
+.. index:: Bessel function of the second kind
+.. index:: 2종 베셀 함수
+
+2종 베셀 함수
 ---------------------------------------------------------------------------------------------------------------------------------
+
+동의어: 노이먼 함수(Neumann funtion), Irregular Bessel function
 
 .. c:function:: double gsl_sf_bessel_Y0 (double x)
                 int gsl_sf_bessel_Y0_e (double x, gsl_sf_result * result)
@@ -58,6 +72,10 @@
    :math:`nmin`  에서 :math:`nmax` 까지, 2종 베셀 함수 :math:`Y_n(x)` 의 값을 계산합니다. 
    계산 결과값은 :math:`result_array` 배열에 저장됩니다. 이 함수의 정의역은 :math:`x>0` 입니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
+
+
+.. index:: Regular Modified Cylindrical Bessel Functions
+.. index:: 1종 변형 베셀 함수
 
 1종 변형 베셀 함수(Regular Modified Cylindrical Bessel Functions)
 ---------------------------------------------------------------------------
@@ -105,7 +123,11 @@
    :math:`nmin`  반드시 양수이거나 :math:`0` 이어야 합니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
-2종 변형 베셀 함수(Irregular Modified Cylindrical Bessel Functions)
+
+.. index:: Irregular Modified Cylindrical Bessel Functions
+.. index:: 2종 변형 베셀 함수
+
+2종 변형 베셀 함수
 ---------------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_bessel_K0 (double x)
@@ -138,14 +160,14 @@
 .. c:function:: double gsl_sf_bessel_K1_scaled (double x) 
                 int gsl_sf_bessel_K1_scaled_e (double x, gsl_sf_result * result)
 
-:math:`x>0` 에 대해, 조정 계수가 곱해진 :math:`1` 차수의 2종 변형 베셀 함수 :math:`\text{exp}(x) K_1(x)` 를 계산합니다.
+   :math:`x>0` 에 대해, 조정 계수가 곱해진 :math:`1` 차수의 2종 변형 베셀 함수 :math:`\text{exp}(x) K_1(x)` 를 계산합니다.
 
 
 .. c:function:: double gsl_sf_bessel_Kn_scaled (int n, double x)
                 int gsl_sf_bessel_Kn_scaled_e (int n, double x, gsl_sf_result * result)
 
 
-:math:`x>0`에 대해, 조정 계수가 곱해진 :math:`n` 차수의 2종 변형 베셀 함수 :math:`\text{exp}(x) K_n(x)` 를 계산합니다.
+   :math:`x>0`에 대해, 조정 계수가 곱해진 :math:`n` 차수의 2종 변형 베셀 함수 :math:`\text{exp}(x) K_n(x)` 를 계산합니다.
 
 .. c:function:: int gsl_sf_bessel_Kn_scaled_array (int nmin, int nmax, double x, double result_array[])
 
@@ -155,7 +177,10 @@
    함수의 정의역은 :math:`x>0` 입니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
-1종 구면 베셀 함수(Regular Spherical Bessel Functions)
+.. index:: Regular Spherical Bessel Function
+.. index:: 1종 구면 베셀 함수
+
+1종 구면 베셀 함수
 ---------------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_bessel_j0 (double x)
@@ -170,7 +195,6 @@
 
 .. c:function:: double gsl_sf_bessel_j2 (double x)
                 int gsl_sf_bessel_j2_e (double x, gsl_sf_result * result)
-
 
    :math:`2` 차수의 1종 구면 베셀 함수 :math:`j_2 (x) = ((3/x^2 -1)\sin(x) -3 \cos(x)/x) /x` 의 값을 계산합니다.
 
@@ -194,7 +218,10 @@
    Steed/Barnett 알고리즘은 Comp. Phys. Comm. 21, 297(1981)에 기술되어 있습니다. 
    Steed 방법은 다른 함수의 재귀적 방법보다 더 안정적이지만, 그 대신 더 느립니다.
 
-2종 구면 베셀 함수(Irregular Spherical Bessel Functions)
+.. index:: Irregular Spherical Bessel Function
+.. index:: 2종 구면 베셀 함수
+
+2종 구면 베셀 함수
 ---------------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_bessel_y0 (double x)
@@ -222,10 +249,13 @@
    :math:`lmax \geq 0` 에 대해, 2종 구면 베셀 함수 :math:`y_l(x)` 의 값을 :math:`l=0` 에서 :math:`l=lmax` 까지 계산합니다. 
    계산 결과값은 :math:`result_array` 배열에 저장됩니다. 재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
-1종 변형 구면 베셀 함수(Regular Modified Spherical Bessel Functions)
+.. index:: Regular Modified Spherical Bessel Function
+.. index:: 1종 변형 구면 베셀 함수
+
+1종 변형 구면 베셀 함수
 ---------------------------------------------------------------------------
 
-1종 변형 구면 베셀함수 :math:`i_l(x)` 는 분수 차수의 1종 수정 베셀함수와 다음과 같은 관계를 가집니다.
+1종 변형 구면 베셀 함수 :math:`i_l(x)` 는 분수 차수의 1종 수정 베셀 함수와 다음과 같은 관계를 가집니다.
 
 .. math:: 
 
@@ -259,10 +289,15 @@
    계산 결과값은 :math:`result_array` 배열에 저장됩니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
-2종 변형 구면 베셀 함수(Irregular Modified Spherical Bessel Functions)
+
+.. index:: Irregular Modified Spherical Bessel Function
+.. index:: 2종 변형 구면 베셀 함수
+
+
+2종 변형 구면 베셀 함수
 ----------------------------------------------------------------------------------------------
 
-2종 변형 구면 베셀함수 :math:`k_l(x)` 는 분수 차수 2종 구면 베셀 함수와 다음과 같은 관계를 가집니다.
+2종 변형 구면 베셀 함수 :math:`k_l(x)` 는 분수 차수 2종 구면 베셀 함수와 다음과 같은 관계를 가집니다.
 
 .. math::
     
@@ -295,14 +330,19 @@
    계산 결과값은 :math:`result_array` 배열에 저장됩니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
-1종 베셀 함수-분수 차수(Regular Bessel Function—Fractional Order)
+
+.. index:: Regular Bessel Function—Fractional Order
+.. index:: 1종 베셀 함수-분수 차수
+
+
+1종 베셀 함수-분수 차수
 -----------------------------------------------------------------------------------------
 
 
 .. c:function:: double gsl_sf_bessel_Jnu (double nu, double x)
                 int gsl_sf_bessel_Jnu_e (double nu, double x, gsl_sf_result * result)
 
-   분수 차수 :math:`\nu` 에 대해, 1종 베셀함수 :math:`J_\nu (x)` 의 값을 계산합니다.
+   분수 차수 :math:`\nu` 에 대해, 1종 베셀 함수 :math:`J_\nu (x)` 의 값을 계산합니다.
 
 .. c:function:: int gsl_sf_bessel_sequence_Jnu_e (double nu, gsl_mode_t mode, size_t size, double v[])
 
@@ -310,16 +350,25 @@
    :math:`size` 길이의 배열 :math:`v` 은 :math:`x` 값들을 담고있습니다. 함수는 이 배열이 양수가 순차적으로 배열되어 있다 가정합니다. 
    :math:`v`  배열을 수정해 :math:`J_\nu (x_i)` 의 값을 덮어 씌웁니다.
 
-2종 베셀 함수-분수 차수(Irregular Bessel Functions—Fractional Order)
+
+.. index:: Irregular Bessel Functions—Fractional Order
+.. index:: 2종 베셀 함수-분수 차수
+
+2종 베셀 함수-분수 차수
 --------------------------------------------------------------------------------------------
 
 
 .. c:function:: double gsl_sf_bessel_Ynu (double nu, double x)
                 int gsl_sf_bessel_Ynu_e (double nu, double x, gsl_sf_result * result)
 
-    분수 차수 :math:`\nu` 에 대해, 2종 베셀함수 :math:`Y_\nu (x)` 의 값을 계산합니다.
+    분수 차수 :math:`\nu` 에 대해, 2종 베셀 함수 :math:`Y_\nu (x)` 의 값을 계산합니다.
   
-1종 변형 베셀 함수-분수 차수(Regular Modified Bessel Functions—Fractional Order)
+
+.. index:: Regular Modified Bessel Functions—Fractional Order  
+.. index:: 1종 변형 베셀 함수-분수 차수
+
+
+1종 변형 베셀 함수-분수 차수
 ---------------------------------------------------------------------------------------------------------
 
 
@@ -334,7 +383,10 @@
  
    :math:`x>0, \nu>0` 에 대해, 조정 계수가 곱해진 분수 차수 :math:`\nu` 의 2종 변형 베셀 함수 :math:`\text{exp}(-|x|)I_\nu (x)` 의 값을 계산합니다.
 
-2종 변형 베셀 함수-분수 차수(Irregular Modified Bessel Functions—Fractional Order)
+.. index:: Irregular Modified Bessel Functions—Fractional Order
+.. index:: 2종 변형 베셀 함수-분수 차수
+
+2종 변형 베셀 함수-분수 차수
 ---------------------------------------------------------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_bessel_Knu (double nu, double x)
@@ -355,7 +407,7 @@
 
    :math:`x>0, \nu>0` 에 대해, 조정 계수가 곱해진 분수 차수 :math:`\nu`의 2종 변형 베셀 함수 :math:`\text{exp}(+|x|)K_\nu (x)`의 값을 계산합니다.
 
-1종 베셀 함수의 근(Zeros of Regular Bessel Functions)
+1종 베셀 함수의 근
 -----------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_bessel_zero_J0 (unsigned int s)
@@ -372,5 +424,5 @@
                 int gsl_sf_bessel_zero_Jnu_e (double nu, unsigned int s, gsl_sf_result * result)
 
 
-   베셀함수 :math:`J_\nu (x)`에 대해, :math:`s` 번째, 양수 근의 위치를 찾습니다. 
+   베셀 함수 :math:`J_\nu (x)`에 대해, :math:`s` 번째, 양수 근의 위치를 찾습니다. 
    현재 구현체는 :math:`nu` 가 음수일 때를 지원하지 않습니다.

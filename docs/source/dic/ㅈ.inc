@@ -9,3 +9,4 @@
 
 * 조정 계수 없는 역 변환: 
 * 조합적 최적화: Combinatorial optimization
+* 조정된 에어리 함수: Scaled version of Airy function
