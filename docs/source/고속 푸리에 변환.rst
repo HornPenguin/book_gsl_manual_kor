@@ -1,5 +1,5 @@
 ************************************************
-고속 푸리에 변환 (Fast Fourier Transforms)
+고속 푸리에 변환
 ************************************************
 
 
@@ -253,7 +253,7 @@ Mixed-radix의 초기화 함수 :code:`gsl_fft_complex_wavetable_alloc` 는 주�
 
 .. c:function:: void gsl_fft_complex_wavetable_free (gsl_fft_complex_wavetable * wavetable)
 
-   파동 참조표:code:`wavetable` 가 할당된 메모리를 해제합니다.
+   파동 참조표 :code:`wavetable` 가 할당된 메모리를 해제합니다.
    이 파동 참조표는 해당하는 길이의 고속 푸리에 변환이 더 이상 필요 없을 때 해제될 수 있습니다.
 
 
@@ -262,7 +262,8 @@ Mixed-radix의 초기화 함수 :code:`gsl_fft_complex_wavetable_alloc` 는 주�
 고속 푸리에 변환을 위한 내부 계수들을 가지고 있습니다. 해당 구조체의 내부 변수들을
 직접 설정하는 것이 필수적이지는 않으나 해당 값들을 알고 있으면 몇몇 상황에서 
 유용할 수 있습니다. 예를 들어서 고속 푸리에 변환 길이에 대한 소인수 분해가 주어져 있으면,
-실행 시간으 추정치나 수치적 오차를 계산하는 데 사용할 수 있습니다. 
+실행 시간의 추정치나 수치적 오차를 계산하는 데 사용할 수 있습니다. 
+
 파동 참조표 구조체는 헤더 파일 :code:`gsl_fft_complex.h` 에 정의되어 있습니다.
 
 
@@ -301,9 +302,9 @@ Mixed-radix의 초기화 함수 :code:`gsl_fft_complex_wavetable_alloc` 는 주�
 다음 함수들은 실제 변환을 계산합니다.
 
 .. c:function:: int gsl_fft_complex_forward (gsl_complex_packed_array data, size_t stride, size_t n, const gsl_fft_complex_wavetable * wavetable, gsl_fft_complex_workspace * work)
-              int gsl_fft_complex_transform (gsl_complex_packed_array data, size_t stride, size_t n, const gsl_fft_complex_wavetable * wavetable, gsl_fft_complex_workspace * work, gsl_fft_direction sign)
-              int gsl_fft_complex_backward (gsl_complex_packed_array data, size_t stride, size_t n, const gsl_fft_complex_wavetable * wavetable, gsl_fft_complex_workspace * work)
-              int gsl_fft_complex_inverse (gsl_complex_packed_array data, size_t stride, size_t n, const gsl_fft_complex_wavetable * wavetable, gsl_fft_complex_workspace * work)
+                int gsl_fft_complex_transform (gsl_complex_packed_array data, size_t stride, size_t n, const gsl_fft_complex_wavetable * wavetable, gsl_fft_complex_workspace * work, gsl_fft_direction sign)
+                int gsl_fft_complex_backward (gsl_complex_packed_array data, size_t stride, size_t n, const gsl_fft_complex_wavetable * wavetable, gsl_fft_complex_workspace * work)
+                int gsl_fft_complex_inverse (gsl_complex_packed_array data, size_t stride, size_t n, const gsl_fft_complex_wavetable * wavetable, gsl_fft_complex_workspace * work)
 
    이 함수들은 각각 고속 푸리에 변환, 역변환 그리고 조정 계수 없는 역변환을 주어진
    길이 :data:`n` 과 :data:`stride` 걸음 크기를 가지는 복소수 값들 :data:`data` 에 대해 계산합니다. 
@@ -311,9 +312,10 @@ Mixed-radix의 초기화 함수 :code:`gsl_fft_complex_wavetable_alloc` 는 주�
    길이 :data:`n` 에 대한 제약은 존재하지 않습니다. 
    길이 2, 3, 4, 5, 6 그리고 7 에 대해 최적화된 부분 변환 모듈이 있습니다.
    나머지 길이들은 :math:`O(n^2)` 의 시간 복잡도를 가지는 상대적으로 느린 방법으로 계산됩니다.
-   호출 과정에서 변환하는 값들의 길이에 맞는 파동 참조표 :data:`wavetable` 와 작업 공간 :data:`work`를 
+   호출 과정에서 변환하는 값들의 길이에 맞는 파동 참조표 :data:`wavetable` 와 작업 공간 :data:`work` 를 
    인자로 제공해야합니다. :data:`wavetable` 에는 참조용 삼각 함수 계수들을 포함하고 있습니다.
-   :code:`transform` 이 붙은 함수에 관해, :code:`sign` 인자는 :code:`forward` (:math:`+1`) 나 :code:`backward` (:math:`-1`)가 될 수 있습니다.
+   :code:`transform` 이 붙은 함수에 관해, :code:`sign` 인자는 :code:`forward` ( :math:`+1` ) 나 
+   :code:`backward` ( :math:`-1` )가 될 수 있습니다.
 
    오류가 없으면 :code:`0` 값을 반환합니다.
    다음은 이 함수를 위해 정의된 :code:`gsl_errno` 의 오류 조건 입니다.
@@ -343,9 +345,10 @@ Mixed-radix의 초기화 함수 :code:`gsl_fft_complex_wavetable_alloc` 는 주�
 
 .. math:: z_k = z_{n-k}^*
 
-이러한 대칭성을 가지는 수열을 **컬례 복소** (conjugage-complex)나 반 복소성(half-complex)을 가지고 있다고 부릅니다. 
-이러한 결과물의 구조적 차이점은 변환(실수->반 복소), 역변환(반 복소 -> 실수)에 대해 이전의 복소 푸리에 변환과 다른 설계를 필요로 합니다. 
-이에 따라, 실수 푸리에 변환의 함수들은 두 개의 범주로 나뉘어 집니다. 
+이러한 대칭성을 가지는 수열을 **컬례 복소** 나 반 복소성을 가지고 있다고 부릅니다. 
+이러한 구조적 차이점은 변환(실수->반 복소), 역변환(반 복소 -> 실수)에 대해 
+이전의 복소 푸리에 변환과 다른 설계를 필요로 합니다. 
+이를 위해, 실수 푸리에 변환의 함수들은 두 개의 범주로 나뉘어 집니다. 
 실수 배열을 처리하는 :code:`gsl_fft_real` 함수들과 반 복소 배열을 처리하는 :code:`gsl_fft_halfcomplex` 함수들입니다.
 
 :code:`gsl_fft_real` 함수들은 실수 배열의 주파수 계수를 계산합니다. 
@@ -466,11 +469,24 @@ radix-2 방법은 실수와 허수부가 저장되는 위치를 가능한
 실수 mixed-radix FFTs
 ========================
 
-이 단원에서는 실수 값들을 위한 mixed-radix 고속 푸리에 알고리즘을 기술합니다. 고속 푸리에 변환을 위한 mixed-radix 함수들은 모든 크기의 값에 대해 적용할 수 있습니다. 이 함수들은 Paul Swarztrauber가 포트란 FFRPACK 라이브러리에 작성한 실수 고속 푸리에 변환 기능들을 재구현한 형태입니다. 이 알고리즘에 사용된 이론들은 Clive Temperton이 작성한 "Fast Mixed-Radix Real Fourier Transforms"을 참고할 수 있습니다. 이 단원에 작성된 함수들은 FFTPACK에 있는 기반 알고리즘과 같은 인덱스 규약을 가집니다.
+이 단원에서는 실수 값들을 위한 mixed-radix 고속 푸리에 알고리즘을 기술합니다. 
+고속 푸리에 변환을 위한 mixed-radix 함수들은 모든 크기의 값에 대해 적용할 수 있습니다. 
+이 함수들은 Paul Swarztrauber가 포트란 FFRPACK 라이브러리에 작성한 실수 고속 푸리에 변환 기능들을 재구현한 형태입니다. 
+이 알고리즘에 사용된 이론들은 Clive Temperton이 작성한 "Fast Mixed-Radix Real Fourier Transforms"을 참고할 수 있습니다. 
+이 단원에 작성된 함수들은 FFTPACK에 있는 기반 알고리즘과 같은 인덱스 규약을 가집니다.
 
-이 단원의 함수들은 FFTPACK의 반 복소 배열 저장 규약을 사용합니다. 이 규약에서 실수 배열의 반 복소 변환은 :math:`0` 에서 증가하는 순서로, 실수-허수부가 번갈아 이웃해 가며 저장됩니다. 실수로 확인된 값에 대해서는 허수부가 저장되지 않습니다. :math:`0` 의 주파수를 가지는 부분에는 허수부가 저장되지 않습니다(). 크기가 짝수인 입력 배열에서는, :math:`n/2` 의 허수바가 저장되지 않습니다. 이는 :math:`z_k = z_{n-k}^*` 로 인해 자명하게 실수이기 때문입니다.
+이 단원의 함수들은 FFTPACK의 반 복소 배열 저장 규약을 사용합니다. 
+이 규약에서 실수 배열의 반 복소 변환은 :math:`0` 에서 증가하는 순서로, 
+실수-허수부가 번갈아 이웃해 가며 저장됩니다. 
+실수로 확인된 값에 대해서는 허수부가 저장되지 않습니다. 
+:math:`0` 의 주파수를 가지는 부분에는 허수부가 저장되지 않습니다(). 
+크기가 짝수인 입력 배열에서는, :math:`n/2` 의 허수부가 저장되지 않습니다. 
+이는 :math:`z_k = z_{n-k}^*` 로 인해 자명하게 실수이기 때문입니다.
 
-저장 규약은 다음 예시로 보는 것이 가장 정확합니다. 아래의 표는 :math:`n=5` 의 홀수 길이 배열에 대한 계산 결과를 나타냅니다. 각 두 열은 대응되는 반-복소열 값 :math:`5` 개를 나타내고 있습니다. 이 값들은 각각 :code:`gsl_fft_real_transform()` 반환값 :code:`halfcomplex[]` 나태납니다. :code:`complex[]` 동일한 실수열이 :code:`gsl_fft_complex_backward()` 복소수열로 전달 되었을 때 반환됩니다. 이 실수열은 허수부가 :code:`0` 복소수열로 취급됩니다.
+저장 규약은 다음 예시로 보는 것이 가장 정확합니다. 
+아래의 표는 :math:`n=5` 의 홀수 길이 배열에 대한 계산 결과를 나타냅니다. 
+각 두 열은 대응되는 반-복소열 값 :math:`5` 개를 나타내고 있습니다. 
+이 값들은 각각 :code:`gsl_fft_real_transform()` 반환값 :code:`halfcomplex[]` 나태납니다. :code:`complex[]` 동일한 실수열이 :code:`gsl_fft_complex_backward()` 복소수열로 전달 되었을 때 반환됩니다. 이 실수열은 허수부가 :code:`0` 복소수열로 취급됩니다.
 
 .. code-block:: console
 
@@ -486,7 +502,7 @@ radix-2 방법은 실수와 허수부가 저장되는 위치를 가능한
     complex[4].imag  = -halfcomplex[2]
 
 
-:code:`complex` 배열의 뒷 부분 , :code:`complex[3]` :code:`complex[4]` 대칭 조건으로 채워집니다. 
+:code:`complex` 배열의 뒷 부분 , :code:`complex[3]` :code:`complex[4]` 는 대칭 조건으로 채워집니다. 
 대칭성에 의해 주파수 성분이 :code:`0` 부분의 허수부 :code:`complex[0].imag` :math:`0` 으로 정해집니다.
 
 다음 표는 길이가 짝수인 배열의 결과를 나타내줍니다. :math:`n=6` 인 경우입니다. 
@@ -514,17 +530,24 @@ radix-2 방법은 실수와 허수부가 저장되는 위치를 가능한
 이 함수들은 헤더 파일 :code:`gsl_fft_real.h` :code:`gsl_fft_halfcomplex.h` 정의되어 있습니다.
 
 .. c:type:: gsl_fft_real_wavetable
-          gsl_fft_halfcomplex_wavetable
+            gsl_fft_halfcomplex_wavetable
 
-이 구조체들은 FFT를 위한 고정된 크기의 파동 자료표를 가지고 있습니다.
+  FFT를 위한 고정된 크기의 파동 자료표를 위한 구조체입니다.
 
 .. c:function:: gsl_fft_real_wavetable * gsl_fft_real_wavetable_alloc (size_t n)
               gsl_fft_halfcomplex_wavetable * gsl_fft_halfcomplex_wavetable_alloc (size_t n)
 
-이 함수들은 :math:`n` 길이의 실수 원소들에 대한 FFT에 쓰이는 고정된 크기의 삼각함수 파동 자료표를 제공합니다. 이 함수들은 새로 할당된 구조체를 가르키는 포인터를 반환하고 오류가 발견되면 :code:`Null` 인터를 반환합니다.
-길이 :code:`n` 부분 변환들의 곱으로 분해되며, 인자와 삼각함수 계수들은 파동 자료표에 저장됩니다. 삼각함수 계수들은 정확도를 위해 :code:`sin` :code:`cos` 호출해 직접 계산됩니다. 속도를 위해 재귀적 관계를 사용해 계산할 수도 있습니다. 하지만, 응용 프로그램에서 많은 횟수의 FFT를 같은 길이의 자료들에 대해 계산한다면 이 파동 자료표는 최종 결과에 영향을 미치지 않습니다.
+  math:`n` 길이의 실수 원소들에 대한 FFT에 쓰이는 고정된 크기의 삼각함수 파동 자료표를 제공합니다. 
+  이 함수들은 새로 할당된 구조체를 가르키는 포인터를 반환하고 오류가 발견되면 :code:`Null` 인터를 반환합니다.
+  길이 :code:`n` 부분 변환들의 곱으로 분해되며, 인자와 삼각함수 계수들은 파동 자료표에 저장됩니다. 
+  삼각함수 계수들은 정확도를 위해 :code:`sin` :code:`cos` 호출해 직접 계산됩니다. 
+  속도를 위해 재귀적 관계를 사용해 계산할 수도 있습니다. 
+  하지만, 응용 프로그램에서 많은 횟수의 FFT를 같은 길이의 자료들에 대해 계산한다면 
+  이 파동 자료표는 최종 결과에 영향을 미치지 않습니다.
 
-파동 자료표 구조체는 같은 크기의 자료를 변환하는데 반복적으로 사용될 수 있습니다. 이 표는 다른 FFT 함수들의 호출에서 변하지 않습니다. 순방향의 실수, 반복소 변환에 대해 적절한 유형의 파동 자료표를 사용해야 합니다.
+파동 자료표 구조체는 같은 크기의 자료를 변환하는데 반복적으로 사용될 수 있습니다. 
+이 표는 다른 FFT 함수들의 호출에서 변하지 않습니다. 
+순방향의 실수, 반복소 변환에 대해 적절한 유형의 파동 자료표를 사용해야 합니다.
 
 .. c:function:: void gsl_fft_real_wavetable_free (gsl_fft_real_wavetable * wavetable)
               void gsl_fft_halfcomplex_wavetable_free (gsl_fft_halfcomplex_wavetable * wavetable)
@@ -536,7 +559,7 @@ Mixed-radix 알고리즘은 변환의 중간 단계를 유지하기 위해 추�
 
 .. c:type:: gsl_fft_real_workspace
 
-  이 작업 공간은 실수 FFT를 계산하기 위한 계수들을 가지고 있습니다. 
+  실수 FFT를 계산하기 위한 계수들을 가지고 있는 작업 공간입니다.
 
 .. c:function:: gsl_fft_real_workspace * gsl_fft_real_workspace_alloc (size_t n)
 
@@ -553,7 +576,7 @@ Mixed-radix 알고리즘은 변환의 중간 단계를 유지하기 위해 추�
 .. c:function:: int gsl_fft_real_transform (double data[], size_t stride, size_t n, const gsl_fft_real_wavetable * wavetable, gsl_fft_real_workspace * work)
               int gsl_fft_halfcomplex_transform (double data[], size_t stride, size_t n, const gsl_fft_halfcomplex_wavetable * wavetable, gsl_fft_real_workspace * work)
 
-  이 함수들은 주어진 길이 :code:`n` 의 실수나 반복소 배열 값 :code:`data` 대한 FFT를 계산합니다. 
+  주어진 길이 :code:`n` 의 실수나 반복소 배열 값 :code:`data` 대한 FFT를 계산합니다. 
   mixed-radix decimation-in-frequency 알고리즘을 사용합니다. 
   :code:`gsl_fft_real_transform()` 에 대해, :code:`data` 시간 순으로 배열된 실수 자료로 취급됩니다. 
   :code:`gsl_fft_halfcomplex_transform()` 에 대해, :code:`data` 는 위에 서술한 반-복소 순서로 배열된 푸리에 계수를 가지고 있습니다. 

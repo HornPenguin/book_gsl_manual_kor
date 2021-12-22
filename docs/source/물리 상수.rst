@@ -10,7 +10,7 @@ CGSM 계 (centimeters, grams, seconds, gauss)가 있습니다
 MKSA 계로 정의된 함수들은 :code:`gsl_const_mksa.h` 에 정의되어 있습니다. 
 CGSM 계로 정의된 상수들은 :code:`gsl_const_cgsm.h` 에 정의되어 있습니다. 
 
-차원이 없는 단위, 예를 들어서 구조 상수와 같은 순수한 숫자들은 :code:`gsl_const_num.h` 에 정의되어 있습니다
+차원이 없는 단위, 예를 들어서 미세 구조 상수와 같은 순수한 숫자들은 :code:`gsl_const_num.h` 에 정의되어 있습니다
 
 상수들의 완전한 목록은 다음 소단원들에 간단하게 기술되어있습니다. 
 라이브러리에서 사용되는 상수 값들은 헤더 파일을 참조할 수 있습니다
@@ -62,7 +62,7 @@ CGSM 계로 정의된 상수들은 :code:`gsl_const_cgsm.h` 에 정의되어 있
 
 .. c:macro:: GSL_CONST_MKSA_STEFAN_BOLTZMANN_CONSTANT
 
-  슈테판 볼츠만 상수 :math:`\sigma` 
+  슈테판 볼츠만 방사 상수 :math:`\sigma` 
 
 .. c:macro:: GSL_CONST_MKSA_GAUSS
 
@@ -210,7 +210,11 @@ CGSM 계로 정의된 상수들은 :code:`gsl_const_cgsm.h` 에 정의되어 있
 
 .. c:macro:: GSL_CONST_MKSA_MILE
 
-  :math:`1` 마일 길이 (인치의 1/10000 배)
+  :math:`1` 마일 길이
+
+.. c:macro:: GSL_CONST_MKSA_MIL
+
+  :math:`1` 밀 길이 (인치의 1/10000 배)
 
 속도, 해리 단위
 =====================
