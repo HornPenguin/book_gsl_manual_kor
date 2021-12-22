@@ -13,7 +13,7 @@
 
 .. c:function:: int gsl_sf_complex_log_e (double zr, double zi, gsl_sf_result * lnr, gsl_sf_result * theta)
 
-    복소수 :math:`z= z_r + i z_i` 의 로그값을 계산합니다. 결과 값은 :math:`lnr` 와 :math:`theta` 에 각각 저장되며, 다음과 같은 관계를 가집니다. :math:`\exp(lnr + i \theta) = z_r + i z_i`  , :math:`\theta`  는 :math:`[-\pi, \pi]`  의 범위를 가집니다.
+    복소수 :math:`z= z_r + i z_i` 의 로그값을 계산합니다. 결과 값은 :code:`lnr` 와 :code:`theta` 에 각각 저장되며, 다음과 같은 관계를 가집니다. :math:`\exp(lnr + i \theta) = z_r + i z_i`  , :math:`\theta`  는 :math:`[-\pi, \pi]`  의 범위를 가집니다.
 
 .. c:function:: double gsl_sf_log_1plusx (double x)
                 int gsl_sf_log_1plusx_e (double x, gsl_sf_result * result)

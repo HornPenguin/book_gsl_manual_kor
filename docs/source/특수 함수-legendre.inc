@@ -1,6 +1,6 @@
 
 르장드르 다항식과 함수들은 Abramowitz & Stegun Chapter 8. 에 기술되어있습니다. 
-    :code:`gsl_sf_legnedre.h`  헤더 파일에 정의되어 있습니다.
+:code:`gsl_sf_legnedre.h` 헤더 파일에 정의되어 있습니다.
 
 르장드르 다항식(Legendre Polynomials)
 ------------------------------------------
@@ -27,7 +27,7 @@
 
     :math:`l= 0, \dots lmax` 와 :math:`|x| \leq 1` 에 대해, 
     르장드르 다항식 :math:`P_l(x)` 과 그 도함수 :math:`dP_l (x)/dx` 를 
-    주어진 배열 :math:`result_array[]` 에 계산합니다.
+    주어진 배열 :code:`result_array[]` 에 계산합니다.
 
 .. c:function:: double gsl_sf_legendre_Q0 (double x)
                 int gsl_sf_legendre_Q0_e (double x, gsl_sf_result * result)
@@ -126,23 +126,23 @@
                 int gsl_sf_legendre_array_e (const gsl_sf_legendre_t norm, const size_t lmax, const double x, const double csphase, double result_array[])
 
     정규화된 버금 르장드르 다항식들을, :math:`0 \leq l \leq lmax` , :math:`0 \geq m \geq l` 그리고 :math:`|x| \leq 1` 에 대해 계산합니다. 
-    :math:`norm`  인자는 어느 정규화 방법을 사용할지 결정합니다. 
-    정규화된 :math:`P_l^m(x)` 값들은 :math:`result_array` 에 저장됩니다. 
+    :code:`norm`  인자는 어느 정규화 방법을 사용할지 결정합니다. 
+    정규화된 :math:`P_l^m(x)` 값들은 :code:`result_array` 에 저장됩니다. 
     이 값은 :math:`gsl_sf_lengendre_array_n()` 를 호출해 최소 크기를 결정할 수 있습니다.
 
-    배열 :math:`P_l^m(x)` 의 지수는 :math:`gsl_sf_legendre_array_index(l, m)` 를 호출해 얻을 수 있습니다. 
-    :math:`_e` 붇은 함수에서 Condon-Shortly 위상 계수 :math:`(-1)^m` 의 포함 유무를 조정하려면 
-    :math:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
+    배열 :math:`P_l^m(x)` 의 지수는 :code:`gsl_sf_legendre_array_index(l, m)` 를 호출해 얻을 수 있습니다. 
+    :code:`_e` 붇은 함수에서 Condon-Shortly 위상 계수 :math:`(-1)^m` 의 포함 유무를 조정하려면 
+    :code:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
     이 계수는 기본적으로 비활성화 되어 있습니다.
 
 .. c:function:: int gsl_sf_legendre_deriv_array (const gsl_sf_legendre_t norm, const size_t lmax, const double x, double result_array[], double result_deriv_array[])
                 int gsl_sf_legendre_deriv_array_e (const gsl_sf_legendre_t norm, const size_t lmax, const double x, const double csphase, double result_array[], double result_deriv_array[])
 
     :math:`|x| \leq 1` 값에 대해, 정규화된 버금 르장드르 함수들의 :math:`1` 차에서 :math:`lmax` 차 까지의 도함수 값을 계산합니다. 
-    :math:`norm` 인자는 어느 정규화 방법을 사용할지 결정합니다. 
-    르장드르 함수 :math:`P_l^m(x)` 와 :math:`d P_l^m(x)/ dx` 값은 각각 :math:`result_array` 와 :math:`result_deriv_array` 에 저장됩니다. 
-    :math:`_e` 붇은 함수에서 Condon-Shortly 위상 계수 :math:`(-1)^m` 의 포함 유무를 조정하려면 
-    :math:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
+    :code:`norm` 인자는 어느 정규화 방법을 사용할지 결정합니다. 
+    르장드르 함수 :math:`P_l^m(x)` 와 :math:`d P_l^m(x)/ dx` 값은 각각 :code:`result_array` 와 :code:`result_deriv_array` 에 저장됩니다. 
+    :code:`_e` 붇은 함수에서 Condon-Shortly 위상 계수 :math:`(-1)^m` 의 포함 유무를 조정하려면 
+    :code:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
     이 계수는 기본적으로 비활성화 되어 있습니다.
 
 .. c:function:: int gsl_sf_legendre_deriv_alt_array (const gsl_sf_legendre_t norm, const size_t lmax, const double x, double result_array[], double result_deriv_array[])
@@ -150,19 +150,19 @@
 
     :math:`|x| \leq 1` 값에 대해, :math:`1` 차에서 :math:`lmax` 까지의 정규화된 버금 르장드르 함수의 값과 대체된 도함수 값을 계산합니다. 
     르장드르 함수 :math:`P_l^m(x)` 와 :math:`d P_l^m(\cos(\theta))/ d\theta` 의 값들은 
-    각각 :math:`result_array` 와 :math:`result_deriv_array` 에 저장됩니다. 
-    :math:`_e` 붇은 함수에서 Condon-Shortly 위상 계수 :math:`(-1)^m` 의 포함 유무를 조정하려면 
-    :math:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
+    각각 :code:`result_array` 와 :code:`result_deriv_array` 에 저장됩니다. 
+    :code:`_e` 붇은 함수에서 Condon-Shortly 위상 계수 :math:`(-1)^m` 의 포함 유무를 조정하려면 
+    :code:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
     이 계수는 기본적으로 비활성화 되어 있습니다.
 
 .. c:function:: int gsl_sf_legendre_deriv2_array (const gsl_sf_legendre_t norm, const size_t lmax, const double x, double result_array[], double result_deriv_array[], double result_deriv2_array[])
                 int gsl_sf_legendre_deriv2_array_e (const gsl_sf_legendre_t norm, const size_t lmax, const double x, const double csphase, double result_array[], double result_deriv_array[], double result_deriv2_array[])
 
     :math:`|x| \leq 1` 값에 대해, :math:`1` 차에서 :math:`lmax` 까지의 정규화된 버금 르장드르 함수들, 그 도함수들과 :math:`2` 계 도함수 값들을 계산합니다. 
-    :math:`norm` 인자는 어느 정규화 방법을 사용할지 결정합니다. 르장드르 함수 :math:`P_l^m(x)` 와 :math:`d P_l^m(x)/ dx` , 그리고 :math:`2` 계 도함수 :math:`d^2 P_l^m(x) / dx^2` 의 값은 
-    각각 :math:`result_array` , :math:`result_deriv_array` , 그리고 :math:`result_deriv2_array` 에 저장됩니다. 
-    :math:`_e` 붇은 함수에서 Condon-Shortly 위상 계수 :math:`(-1)^m` 의 포함 유무를 조정하려면 
-    :math:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
+    :code:`norm` 인자는 어느 정규화 방법을 사용할지 결정합니다. 르장드르 함수 :math:`P_l^m(x)` 와 :math:`d P_l^m(x)/ dx` , 그리고 :math:`2` 계 도함수 :math:`d^2 P_l^m(x) / dx^2` 의 값은 
+    각각 :code:`result_array` , :code:`result_deriv_array` , 그리고 :code:`result_deriv2_array` 에 저장됩니다. 
+    :code:`_e` 붇은 함수에서 Condon-Shortly 위상 계수 :math:`(-1)^m` 의 포함 유무를 조정하려면 
+    :code:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
     이 계수는 기본적으로 비활성화 되어 있습니다.
 
 
@@ -170,12 +170,12 @@
                 int gsl_sf_legendre_deriv2_alt_array_e (const gsl_sf_legendre_t norm, const size_t lmax, const double x, const double csphase, double result_array[], double result_deriv_array[], double result_deriv2_array[])
 
     :math:`|x| \leq 1`  값에 대해, :math:`1` 차에서 :math:`lmax` 까지의 정규화된 버금 르장드르 함수들, 
-    그 대체 도함수들과 :math:`2` 계 도함수 값들을 계산합니다. :math:`norm` 인자는 어느 정규화 방법을 사용할지 결정합니다. 
+    그 대체 도함수들과 :math:`2` 계 도함수 값들을 계산합니다. :code:`norm` 인자는 어느 정규화 방법을 사용할지 결정합니다. 
     르장드르 함수 :math:`P_l^m(x)` 와 :math:`d P_l^m(\cos(\theta))/ d\theta` , 그리고 :math:`2` 계 도함수 
-    :math:`d^2 P_l^m(\cos(\theta)) / d\theta^2` 의 값은 각각 :math:`result_array` , :math:`result_deriv_array`, 
-    그리고 :math:`result_deriv2_array` 에 저장됩니다. 
-    :math:`_e` 붇은 함수에서 Condon-Shortly 위상 계수 :math:`(-1)^m` 의 포함 유무를 조정하려면 
-    :math:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
+    :math:`d^2 P_l^m(\cos(\theta)) / d\theta^2` 의 값은 각각 :code:`result_array` , :code:`result_deriv_array`, 
+    그리고 :code:`result_deriv2_array` 에 저장됩니다. 
+    :code:`_e` 붇은 함수에서 Condon-Shortly 위상 계수 :math:`(-1)^m` 의 포함 유무를 조정하려면 
+    :code:`csphase` 을 :math:`-1` 이나 :math:`1` 로 설정해 주면 됩니다. 
     이 계수는 기본적으로 비활성화 되어 있습니다.
 
 .. c:function:: size_t gsl_sf_legendre_nlm(const size_t lmax)
@@ -190,8 +190,8 @@
 
 .. c:function:: size_t gsl_sf_legendre_array_index (const size_t l, const size_t m)
 
-    :math:`result_array` :math:`result_deriv_array` 그리고 :math:`result_deriv2_array` 배열의 색인 값을 반환합니다. 
-    해당 값은 :math:`P_l^m(x)` , :math:`P'_l^m(x)` , 그리고 :math:`P''_l^m(x)` 에 대응되고 
+    :code:`result_array` :code:`result_deriv_array` 그리고 :code:`result_deriv2_array` 배열의 색인 값을 반환합니다. 
+    해당 값은 :math:`P_l^m(x)` , :math:`P_l^{'m}(x)` , 그리고 :math:`P_l^{''m}(x)` 에 대응되고 
     주어진 :math:`l` :math:`m` 대해, :math:`l(l_1)//2 +m`  으로 정해집니다.
 
     :math:`HAVE_INLINE` 를 사용하면 인라인 버전의 함수를 사용할 수 있습니다.
@@ -215,14 +215,14 @@
                 int gsl_sf_legendre_Plm_deriv_array (int lmax, int m, double x, double result_array[], double result_deriv_array[])
 
     현재 비활성화 되어 있고 차후 버전에서 삭제될 예정입니다. 
-    :math:`gsl_sf_legendre_array()` 와 :math:`gsl_sf_legendre_deriv_array()` 를 참고하길 바랍니다.
+    :code:`gsl_sf_legendre_array()` 와 :code:`gsl_sf_legendre_deriv_array()` 를 참고하길 바랍니다.
 
 
 .. c:function:: int gsl_sf_legendre_sphPlm_array (int lmax, int m, double x, double result_array[])
                 int gsl_sf_legendre_sphPlm_deriv_array (int lmax, int m, double x, double result_array[], double result_deriv_array[])
 
     현재 비활성화 되어 있고 차후 버전에서 삭제될 예정입니다. 
-    :math:`gsl_sf_legendre_array()` 와 :math:`gsl_sf_legendre_deriv_array()` 를 참고하길 바랍니다.
+    :code:`gsl_sf_legendre_array()` 와 :code:`gsl_sf_legendre_deriv_array()` 를 참고하길 바랍니다.
 
 .. c:function:: int gsl_sf_legendre_array_size (const int lmax, const int m)
 
@@ -283,7 +283,7 @@ Abramowitz & Stegun 8.12 단원에 기술되어 있습니다.
 
     .. math::
     
-        L_0^{H 3d} (\lambda, \eta) := \frac{\sinn(\lambda \eta)}{\lambda \sinh(\eta)}
+        L_0^{H 3d} (\lambda, \eta) := \frac{\sin(\lambda \eta)}{\lambda \sinh(\eta)}
 
     평평한 극한값은 :math:`L_0^{H 3d} (\lambda ,\eta) = j_0(\lambda \eta)` 의 형태를 가집니다.
 
@@ -295,7 +295,7 @@ Abramowitz & Stegun 8.12 단원에 기술되어 있습니다.
 
     .. math::
     
-        L_1^{H 3d} (\lambda, \eta) := \frac{1}{\sqrt{\lambda^2 +1}}(\frac{\sinn(\lambda \eta)}{\lambda \sinh(\eta)}) (\coth(\eta) - \lambda \cot(\lambda \eta))
+        L_1^{H 3d} (\lambda, \eta) := \frac{1}{\sqrt{\lambda^2 +1}}(\frac{\sin(\lambda \eta)}{\lambda \sinh(\eta)}) (\coth(\eta) - \lambda \cot(\lambda \eta))
 
     평평한 극한값은 :math:`L_1^{H 3d} (\lambda ,\eta) = j_1(\lambda \eta)` 의 형태를 가집니다.
 

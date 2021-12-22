@@ -6,7 +6,7 @@
 
 .. math::
     
-    \zeta (s) = \sum\_{k=1}^\infty k^{-s}
+    \zeta (s) = \sum_{k=1}^\infty k^{-s}
 
 .. c:function:: double gsl_sf_zeta_int (int n)
                 int gsl_sf_zeta_int_e (int n, gsl_sf_result * result)

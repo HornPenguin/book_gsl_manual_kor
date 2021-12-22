@@ -3,6 +3,7 @@
 * 정적 변수: static variable
 * 중성자: Neutron
 * 전자 볼트: Electron Voltage
+* 적분 주요값: Principal Value of Integral
 
 조
 ----------------

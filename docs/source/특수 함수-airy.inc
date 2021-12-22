@@ -35,7 +35,7 @@
 .. c:function:: double gsl_sf_airy_Bi_scaled (double x, gsl_mode_t mode)
                 int gsl_sf_airy_Bi_scaled_e (double x, gsl_mode_t mode, gsl_sf_result * result)
 
-    조정된 에어리 함수 :math:`S_A(x) Bi ((x)` 의 값을 계산합니다. 
+    조정된 에어리 함수 :math:`S_A(x) Bi (x)` 의 값을 계산합니다. 
     :math:`x>0` 일 때, 조정 계수 :math:`S_A(x)` 의 값은 :math:`exp{(\frac{2}{3} x^\frac{3}{2})}` 이고, 
     :math:`x<0` 일 때는 :math:`1` 입니다.
 
@@ -45,7 +45,7 @@
 .. c:function:: double gsl_sf_airy_Ai_deriv (double x, gsl_mode_t mode)
                 int gsl_sf_airy_Ai_deriv_e (double x, gsl_mode_t mode, gsl_sf_result * result)
 
-    에어리 함수의 도함수 :math:`Ai'(x)` 의 값을 주어진 :math:`mode` 정밀도에 따라 계산합니다.
+    에어리 함수의 도함수 :math:`Ai'(x)` 의 값을 주어진 :code:`mode` 정밀도에 따라 계산합니다.
 
 .. c:function:: double gsl_sf_airy_Bi_deriv (double x, gsl_mode_t mode)
                 int gsl_sf_airy_Bi_deriv_e (double x, gsl_mode_t mode, gsl_sf_result * result)
@@ -55,14 +55,14 @@
 .. c:function:: double gsl_sf_airy_Ai_deriv_scaled (double x, gsl_mode_t mode)
                 int gsl_sf_airy_Ai_deriv_scaled_e (double x, gsl_mode_t mode, gsl_sf_result * result)
 
-    조정된 에어리 도함수 :math:`S_A(x) Ai' ((x)`의 값을 계산합니다. 
+    조정된 에어리 도함수 :math:`S_A(x) Ai' (x)`의 값을 계산합니다. 
     :math:`x>0`일 때, 조정 계수 :math:`S_A(x)` 의 값은 :math:`exp{(\frac{2}{3} x^\frac{3}{2})}` 이고, 
     :math:`x<0` 일 때는 :math:`1` 입니다.
 
 .. c:function:: double gsl_sf_airy_Bi_deriv_scaled (double x, gsl_mode_t mode)
                 int gsl_sf_airy_Bi_deriv_scaled_e (double x, gsl_mode_t mode, gsl_sf_result * result)
 
-    조정된 에어리 도함수 :math:`S_A(x) Bi' ((x)` 의 값을 계산합니다. 
+    조정된 에어리 도함수 :math:`S_A(x) Bi' (x)` 의 값을 계산합니다. 
     :math:`x>0`일 때, 조정 계수 :math:`S_A(x)` 의 값은 :math:`exp{(\frac{2}{3} x^\frac{3}{2})}` 이고, 
     :math:`x<0` 일 때는 :math:`1` 입니다.
 

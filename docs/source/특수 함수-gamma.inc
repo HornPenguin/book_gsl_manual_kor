@@ -30,8 +30,8 @@
 .. c:function:: int gsl_sf_lngamma_sgn_e (double x, gsl_sf_result * result_lg, double * sgn)
 
     :math:`0` 이나 음의 정수가 아닌 :math:`x` 에 대해, 감마 함수의 부호와 그 크기의 로그 값을 계산합니다. 
-    실수 Lanczos 방법을 사용합니다. 감마 함수의 값과 그 오차는 :math:`result_lg` 두 요소와 다음의 관계를 사용해 계산합니다. 
-    :math:`\Gamma(x) = sgn * \exp(result_lg)` .
+    실수 Lanczos 방법을 사용합니다. 감마 함수의 값과 그 오차는 :code:`result_lg` 두 요소와 다음의 관계를 사용해 계산합니다. 
+    :math:`\Gamma(x) = sgn * \exp(result_{lg})` .
 
 .. c:function:: double gsl_sf_gammastar (double x)
                 int gsl_sf_gammastar_e (double x, gsl_sf_result * result)
@@ -55,7 +55,7 @@
     이때, :math:`z` 는 :math:`0` 과 음의 정수가 아닌 복소수입니다. :math:`lnr = \log|\Gamma(z)|` , :math:`arg = \text{arg}(\Gamma(z))` 이고, 
     :math:`arg` 는 :math:`(-\pi, \pi]` 범위의 값을 가집니다. :math:`|z|` 가 매우 클 때, :math:`arg` 값이 정확히 정해지지 않을 수 있습니다. 
     이는 :math:`(-\pi, \pi]` 로 범위를 제약함으로써 생기는 절단점으로 인해 필연적으로 발생합니다. 
-    이러한 상황은 :math:`GSL_ELOSS` 오류에 속하는 상황입니다. 
+    이러한 상황은 :code:`GSL_ELOSS` 오류에 속하는 상황입니다. 
     절대값 :math:`lnr` 부분은 이러한 정밀도 저하를 격지 않습니다.
 
 팩토리얼
@@ -70,19 +70,19 @@
 
     팩토리얼 :math:`n!` 를 계산합니다. 팩토리얼은 감마 함수와 :math:`n! = \Gamma(n+1)` 의 관계를 가지고 있습니다. 
     :math:`n` 의 최댓값은 :math:`n!` 이 오버플로우되지 않는 값으로 정해집니다. 
-    이는 매크로 :c:macro:`GSL_SF_FACT_NMAX` 정의되어 있고 :math:`170` 입니다.
+    이는 매크로 :c:macro:`GSL_SF_FACT_NMAX` 에 정의되어 있고 :math:`170` 입니다.
 
 .. c:function:: double gsl_sf_doublefact (unsigned int n)
                 int gsl_sf_doublefact_e (unsigned int n, gsl_sf_result * result)
 
     더블 팩토리얼 :math:`n!! = n(n-2)(n-4)\dots` 을 계산합니다. :math:`n` 의 최댓값은 :math:`n!!` 이 오버플로 되지 않는 값으로 정해집니다. 
-    이는 매크로 :c:macro:`GSL_SF_DOUBLEFACT_NMAX` 정의되어 있고 :math:`297` 입니다.
+    이는 매크로 :c:macro:`GSL_SF_DOUBLEFACT_NMAX` 에 정의되어 있고 :math:`297` 입니다.
 
 .. c:function:: double gsl_sf_lnfact (unsigned int n)
                 int gsl_sf_lnfact_e (unsigned int n, gsl_sf_result * result)
 
     :math:`n` 팩토리얼의 로그 값, :math:`\log(n!)` 값을 계산합니다. 
-    이 알고리즘은 :math:`n <170` 에서 :math:`\ln(\Gamma(n+1))` 값을 계산하는 :math:`gsl_sf_lngamma` 다 빠릅니다. 
+    이 알고리즘은 :math:`n <170` 에서 :math:`\ln(\Gamma(n+1))` 값을 계산하는 :code:`gsl_sf_lngamma` 보다 빠릅니다. 
     하지만 큰 :math:`n` 대해서는 빠르지 않습니다.
 
 .. c:function:: double gsl_sf_lndoublefact (unsigned int n)
@@ -93,7 +93,7 @@
 .. c:function:: double gsl_sf_choose (unsigned int n, unsigned int m)
                 int gsl_sf_choose_e (unsigned int n, unsigned int m, gsl_sf_result * result)
 
-    조합 계수 :math:`n choose m` :math:`= n!/(m!(n-m!))` 의 값을 계산합니다.
+    조합 계수 :code:`n choose m` :math:`= n!/(m!(n-m!))` 의 값을 계산합니다.
 
 .. c:function:: double gsl_sf_lnchoose (unsigned int n, unsigned int m)
                 int gsl_sf_lnchoose_e (unsigned int n, unsigned int m, gsl_sf_result * result)
@@ -121,7 +121,8 @@
 
 .. c:function:: int gsl_sf_lnpoch_sgn_e (double a, double x, gsl_sf_result * result, double * sgn)
 
-    포흐하머 기호의 부호와 그 크기의 로그값을 계산합니다. 계산되는 계수들은 :math:`result = \log(|(a)_x|)` 가 오차 값과 함께 계산되고, :math:`(a)_x = \Gamma(a+x)/\Gamma(a)` 에 대해, :math:`sgn = \text{sgn})(a)_x)` 을 계산합니다.
+    포흐하머 기호의 부호와 그 크기의 로그값을 계산합니다. 계산되는 계수들은 :math:`result = \log(|(a)_x|)` 가 오차 값과 함께 계산되고, 
+    :math:`(a)_x = \Gamma(a+x)/\Gamma(a)` 에 대해, :math:`sgn = \text{sgn}((a)_x)` 을 계산합니다.
 
 
 .. c:function:: double gsl_sf_pochrel (double a, double x)

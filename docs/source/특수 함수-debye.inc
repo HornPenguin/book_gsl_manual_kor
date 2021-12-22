@@ -1,7 +1,7 @@
 .. index:: Debye functions
+.. index:: 디바이 함수
 
-
-디바이 함수 :math:`D_n(x)`  는 다음과 같이 정의됩니다.
+디바이 함수 :math:`D_n(x)` 는 다음과 같이 정의됩니다.
 
 .. math::
 

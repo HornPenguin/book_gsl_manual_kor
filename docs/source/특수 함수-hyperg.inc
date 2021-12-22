@@ -53,7 +53,7 @@
 .. c:function:: int gsl_sf_hyperg_U_int_e10_e (int m, int n, double x, gsl_sf_result_e10 * result)
 
     류 초기하 함수 :math:`U(m,n,x)` 를 정수 인자 :math:`m` 과 :math:`n` 에 대해 계산하고 확장된 구간에 대해, 
-    :math:`gsl_sf_result_e10`  형의 값을 반환합니다.
+    :code:`gsl_sf_result_e10`  형의 값을 반환합니다.
 
 .. c:function:: double gsl_sf_hyperg_U (double a, double b, double x)
                 int gsl_sf_hyperg_U_e (double a, double b, double x, gsl_sf_result * result)
@@ -64,7 +64,7 @@
 .. c:function:: int gsl_sf_hyperg_U_e10_e (double a, double b, double x, gsl_sf_result_e10 * result)
 
 
-    합류 초기하 함수 :math:`U(a,b,x)` 를 계산하고 확장된 구간에 대해 :math:`gsl_sf_result_e10`  형의 값을 반환합니다.
+    합류 초기하 함수 :math:`U(a,b,x)` 를 계산하고 확장된 구간에 대해 :code:`gsl_sf_result_e10`  형의 값을 반환합니다.
 
 
 .. c:function:: double gsl_sf_hyperg_2F1 (double a, double b, double c, double x)
@@ -77,7 +77,7 @@
         _2F_1(a,b,c,x) = F(a,b,c,x)
 
     의 값을 계산합니다. 만약, 인자 :math:`(a,b,c,x)` 가 특이점(singular point)에 너무 가깝다면, 
-    급수 근사가 너무 느려지게 되고 함수는 오류 값 :math:`GSL_EMAXITER` 반환합니다. 
+    급수 근사가 너무 느려지게 되고 함수는 오류 값 :code:`GSL_EMAXITER` 반환합니다. 
     이러한 지점은 :math:`x=1` , :math:`c-a-b=m, m \in \mathbf{Z}` 구간에서 발생합니다.  
 
 

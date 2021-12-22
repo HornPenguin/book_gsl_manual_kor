@@ -20,7 +20,7 @@
                 int gsl_sf_gegenpoly_n_e (int n, double lambda, double x, gsl_sf_result * result)
 
     구겐바우어 다항식 :math:`C_n^{(\lambda)}(x)` 
-    을 주어진 :math:`n` , :math:`lambda` , 그리고 :math:`x` 에 대해 
+    을 주어진 :math:`n` , :code:`lambda` , 그리고 :math:`x` 에 대해 
     계산합니다. 이때, :math:`\lambda > - \frac{1}{2}. n \geq 0` 이어야 합니다.
 
 

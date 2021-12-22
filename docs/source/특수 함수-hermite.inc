@@ -38,7 +38,7 @@ Szego, Gabor (1939, 1957, 1967) Orthogonal Polynomials, American Mathematical So
 .. c:function:: int gsl_sf_hermite_array (const int nmax, const double x, double * result_array)
 
     :math:`nmax` 이하의 차수를 가지는 모든 :math:`H_n(x)` 형태의 에르미트 다항식을 주어진 변수 
-    :math:`x` 에 대해 계산합니다. 결과는 :math:`result_array` 에 저장됩니다.
+    :math:`x` 에 대해 계산합니다. 결과는 :code:`result_array` 에 저장됩니다.
 
 .. c:function:: double gsl_sf_hermite_series (const int n, const double x, const double * a)
                 int gsl_sf_hermite_series_e (const int n, const double x, const double * a, gsl_sf_result * result)
@@ -49,12 +49,12 @@ Szego, Gabor (1939, 1957, 1967) Orthogonal Polynomials, American Mathematical So
                 int gsl_sf_hermite_prob_e (const int n, const double x, gsl_sf_result * result)
 
     :math:`H_{e_n}(x)` 형태의 에르미트 다항식을 주어진 차수 :math:`n` 변수 :math:`x` 대해 계산합니다. 
-    오버플로우가 감지되면, 오류 관리자를 호출하지 않고 :math:`GSL_EOVERFLW` 를 반환합니다.
+    오버플로우가 감지되면, 오류 관리자를 호출하지 않고 :code:`GSL_EOVERFLW` 를 반환합니다.
 
 .. c:function:: int gsl_sf_hermite_prob_array (const int nmax, const double x, double * result_array)
 
     :math:`nmax`  이하의 차수를 가지는 모든 :math:`H_{e_n}(x)` 형태의 에르미트 다항식을 주어진 변수 
-    :math:`x` 에 대해 계산합니다. 결과는 :math:`result_array` 에 저장됩니다.
+    :math:`x` 에 대해 계산합니다. 결과는 :code:`result_array` 에 저장됩니다.
 
 
 .. c:function:: double gsl_sf_hermite_prob_series (const int n, const double x, const double * a)
@@ -76,15 +76,15 @@ Szego, Gabor (1939, 1957, 1967) Orthogonal Polynomials, American Mathematical So
 
      :math:`0, \dots, nmax` 차수의 모든 에르미트 다항식 :math:`H_n(x)` 의 :math:`m` 차 도함수 값을 
      주어진 변수 :math:`x` 대해 계산합니다.  
-     :math:`d^m / dx^m H_n(x)`  의 값은 :math:`result_array[n]` 에 저장됩니다. 
-     계산 결과가 저장되는 :math:`result_array` 는 최소 :math:`nmax+1` 이상의 길이를 가져야 합니다.
+     :math:`d^m / dx^m H_n(x)`  의 값은 :code:`result_array[n]` 에 저장됩니다. 
+     계산 결과가 저장되는 :code:`result_array` 는 최소 :math:`nmax+1` 이상의 길이를 가져야 합니다.
 
 .. c:function:: int gsl_sf_hermite_deriv_array (const int mmax, const int n, const double x, double * result_array)
 
      :math:`n` 차수를 가지는 에르미트 다항식 :math:`H_n(x)` 의 모든 :math:`0, \dots, mmax` 차 
      도함수 값을 주어진 변수 :math:`x` 대해 계산합니다.  
-     :math:`d^m / dx^m H_n(x)` 의 값은 :math:`result_array[m]]` 에 저장됩니다. 
-     계산 결과가 저장되는 :math:`result_array` 는 최소 :math:`mmax+1` 이상의 길이를 가져야 합니다.
+     :math:`d^m / dx^m H_n(x)` 의 값은 :code:`result_array[m]` 에 저장됩니다. 
+     계산 결과가 저장되는 :code:`result_array` 는 최소 :code:`mmax+1` 이상의 길이를 가져야 합니다.
 
 
 .. c:function:: double gsl_sf_hermite_prob_deriv (const int m, const  int n, const double x)
@@ -97,15 +97,15 @@ Szego, Gabor (1939, 1957, 1967) Orthogonal Polynomials, American Mathematical So
 
      :math:`n` 차수를 가지는 에르미트 다항식 :math:`H_{e_n}(x)` 의 
      모든 :math:`0, \dots, mmax` 차 도함수 값을 주어진 변수 :math:`x` 대해 계산합니다.  
-     :math:`d^m / dx^m H_{e_n}(x)` 의 값은 :math:`result_array[m]]` 에 저장됩니다. 
-     계산 결과가 저장되는 :math:`result_array` 는 최소 :math:`mmax+1` 이상의 길이를 가져야 합니다.
+     :math:`d^m / dx^m H_{e_n}(x)` 의 값은 :code:`result_array[m]` 에 저장됩니다. 
+     계산 결과가 저장되는 :code:`result_array` 는 최소 :code:`mmax+1` 이상의 길이를 가져야 합니다.
 
 .. c:function:: int gsl_sf_hermite_prob_deriv_array (const int mmax, const int n, const double x, double * result_array)
 
      :math:`n` 차수를 가지는 에르미트 다항식 :math:`H_{e_n}(x)` 의 
      모든 :math:`0, \dots, mmax` 차 도함수 값을 주어진 변수 :math:`x` 대해 계산합니다.
-     :math:`d^m / dx^m H_{e_n}(x)` 의 값은 :math:`result_array[m]]` 저장됩니다. 
-     계산 결과가 저장되는 :math:`result_array` 는 최소 :math:`mmax+1` 이상의 길이를 가져야 합니다.
+     :math:`d^m / dx^m H_{e_n}(x)` 의 값은 :code:`result_array[m]` 저장됩니다. 
+     계산 결과가 저장되는 :code:`result_array` 는 최소 :code:`mmax+1` 이상의 길이를 가져야 합니다.
 
 
 에르미트 함수 (Hermite Functions)
@@ -157,7 +157,7 @@ GSL은 에르미트 함수를 계산하는 두 가지 방법을 제공합니다.
 
     :math:`n=0, \dots ,nmax` 의 차수를 가지는 에르미트 함수 :math:`\psi_n(x)` 를 주어진 변수 
     :math:`x` 대해, 재귀적 방법을 이용해 계산합니다. 
-    계산 결과는 :math:`result_array` 저장되며 최소 :math:`nmax+1` 이상의 길이를 가져야 합니다.
+    계산 결과는 :code:`result_array` 저장되며 최소 :math:`nmax+1` 이상의 길이를 가져야 합니다.
 
 .. c:function:: double gsl_sf_hermite_func_series (const int n, const double x, const double * a)
                 int gsl_sf_hermite_func_series_e (const int n, const double x, const double * a, gsl_sf_result * result)

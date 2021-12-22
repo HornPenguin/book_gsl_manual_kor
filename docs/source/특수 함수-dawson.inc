@@ -1,4 +1,5 @@
 .. index:: Dawson function
+.. index:: 도슨 함수
 
 도슨 적분은 다음의 적분을 의미합니다.
 

@@ -59,15 +59,15 @@
 .. c:function:: double gsl_sf_exprel_n (int n, double x)
                 int gsl_sf_exprel_n_e (int n, double x, gsl_sf_result * result)
 
-   :math:`N-`  상대 지수 함수 값을 계산합니다. 이 함수는 :math:`gsl_sf_exprel()` 와 :math:`gsl_sf_exprel_2()` 의 :math:`n` 차 일반화 함수입니다. 
+    :math:`N-`  상대 지수 함수 값을 계산합니다. 이 함수는 :code:`gsl_sf_exprel()` 와 :code:`gsl_sf_exprel_2()` 의 :math:`n` 차 일반화 함수입니다. 
     다음과 같이 주어집니다.
 
     .. math::
 
         \begin{flalign}
-        \text{exprel}\_N (x) &= N!/x^N (\exp(x) - \sum\_{k=0}^{N-1} x^k/k!) \\\\ 
+        \text{exprel}_N (x) &= N!/x^N (\exp(x) - \sum_{k=0}^{N-1} x^k/k!) \\\\ 
         &= 1+x/(N+1) + x^2/((N+1)(N+2)) + \dots \\\\
-        &=  {}\_1F\_1(1,1+N,x)
+        &=  {}_1F_1(1,1+N,x)
         \end{flalign}
 
 오차 평가가 있는 지수 함수 (Exponentiation With Error Estimate)
@@ -88,5 +88,5 @@
 
 .. c:function:: int gsl_sf_exp_mult_err_e10_e (double x, double dx, double y, double dy, gsl_sf_result_e10 * result)
 
-   :math:`x` 와 :math:`y` 대해, :math:`y \exp(x)` 값을 절대 오차 :math:`dx` 와 :math:`dy` 함께 계산합니다. 
-    이때, 반환 값의 자료형을 :math:`gsl_sf_result_e10` 을 사용해 확장된 범위의 결과를 계산할 수 있습니다.
+    :math:`x` 와 :math:`y` 대해, :math:`y \exp(x)` 값을 절대 오차 :math:`dx` 와 :math:`dy` 함께 계산합니다. 
+    이때, 반환 값의 자료형을 :code:`gsl_sf_result_e10` 을 사용해 확장된 범위의 결과를 계산할 수 있습니다.

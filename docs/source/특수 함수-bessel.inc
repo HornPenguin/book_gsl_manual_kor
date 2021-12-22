@@ -2,10 +2,10 @@
 .. index:: Bessel function
 
 이 단원은 
-원통형 베셀 함수 :math:`J_ (x), Y_(x)`, 
-수정 베셀 함수 :math:`I_(x), K_(x)`, 
+원통형 베셀 함수 :math:`J_n(x), Y_n(x)`, 
+수정 베셀 함수 :math:`I_n(x), K_n(x)`, 
 구면 베셀 함수 :math:`j_l(x), y_l(x)` 그리고 
-수정 구면 베셀 함수 :math:`i_(x), k_l(x)`를 계산하는 함수들을 서술합니다. 
+수정 구면 베셀 함수 :math:`i_l(x), k_l(x)`를 계산하는 함수들을 서술합니다. 
 더 자세한 정보는 Abramowitz & Stegun Chapter 9, 10 단원을 참조할 수 있습니다. 
 이 베셀 함수들은 헤더 파일 :code:`gsl_sf_bessel.h` 에 정의되어 있습니다.
 
@@ -36,8 +36,8 @@
 
 .. c:function:: int gsl_sf_bessel_Jn_array (int nmin, int nmax, double x, double result_array[])
 
-   :math:`nmin`  에서 :math:`nmax` 까지, 1종 베셀 함수 :math:`J_n(x)` 의 값을 계산합니다. 
-   계산 결과값은 :math:`result_array` 배열에 저장됩니다. 재귀식을 이용해 계산 효율을 높여, 
+   :code:`nmin`  에서 :code:`nmax` 까지, 1종 베셀 함수 :math:`J_n(x)` 의 값을 계산합니다. 
+   계산 결과값은 :code:`result_array` 배열에 저장됩니다. 재귀식을 이용해 계산 효율을 높여, 
    실제 값과는 조금 다를 수 있습니다.
 
 
@@ -69,8 +69,8 @@
 
 .. c:function:: int gsl_sf_bessel_Yn_array (int nmin, int nmax, double x, double result_array[])
 
-   :math:`nmin`  에서 :math:`nmax` 까지, 2종 베셀 함수 :math:`Y_n(x)` 의 값을 계산합니다. 
-   계산 결과값은 :math:`result_array` 배열에 저장됩니다. 이 함수의 정의역은 :math:`x>0` 입니다. 
+   :code:`nmin`  에서 :code:`nmax` 까지, 2종 베셀 함수 :math:`Y_n(x)` 의 값을 계산합니다. 
+   계산 결과값은 :code:`result_array` 배열에 저장됩니다. 이 함수의 정의역은 :math:`x>0` 입니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 
@@ -97,8 +97,8 @@
 
 .. c:function:: int gsl_sf_bessel_In_array (int nmin, int nmax, double x, double result_array[])
 
-   :math:`nmin` 에서 :math:`nmax` 까지, 1종 변형 베셀 함수 :math:`I_n(x)` 의 값을 계산합니다. 
-   계산 결과값은 :math:`result_array` 배열에 저장됩니다. :math:`nmin` 는 반드시 양수이거나 :math:`0` 이어야 합니다. 
+   :code:`nmin` 에서 :code:`nmax` 까지, 1종 변형 베셀 함수 :math:`I_n(x)` 의 값을 계산합니다. 
+   계산 결과값은 :code:`result_array` 배열에 저장됩니다. :code:`nmin` 는 반드시 양수이거나 :math:`0` 이어야 합니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 .. c:function:: double gsl_sf_bessel_I0_scaled (double x)
@@ -118,9 +118,9 @@
 
 .. c:function:: int gsl_sf_bessel_In_scaled_array (int nmin, int nmax, double x, double result_array[])
 
-   :math:`nmin` 에서 :math:`nmax` 까지, 조정 계수가 곱해진, 1종 변형 베셀 함수 :math:`\text{exp}(-|x|)I_n(x)` 의 값을 계산합니다. 
-   계산 결과값은 :math:`result_array` 배열에 저장됩니다. 
-   :math:`nmin`  반드시 양수이거나 :math:`0` 이어야 합니다. 
+   :code:`nmin` 에서 :code:`nmax` 까지, 조정 계수가 곱해진, 1종 변형 베셀 함수 :math:`\text{exp}(-|x|)I_n(x)` 의 값을 계산합니다. 
+   계산 결과값은 :code:`result_array` 배열에 저장됩니다. 
+   :code:`nmin`  반드시 양수이거나 :math:`0` 이어야 합니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 
@@ -147,8 +147,8 @@
 
 .. c:function:: int gsl_sf_bessel_Kn_array (int nmin, int nmax, double x, double result_array[])
 
-   :math:`nmin` 에서 :math:`nmax` 까지, 2종 변형 베셀 함수 :math:`K_n(x)` 의 값을 계산합니다. 계산 결과값은 :math:`result_array` 배열에 저장됩니다. 
-   :math:`nmin`  반드시 양수이거나 :math:`0` 이어야 합니다. 함수의 정의역은 :math:`x>0` 입니다.
+   :code:`nmin` 에서 :code:`nmax` 까지, 2종 변형 베셀 함수 :math:`K_n(x)` 의 값을 계산합니다. 계산 결과값은 :code:`result_array` 배열에 저장됩니다. 
+   :code:`nmin`  반드시 양수이거나 :math:`0` 이어야 합니다. 함수의 정의역은 :math:`x>0` 입니다.
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 .. c:function:: double gsl_sf_bessel_K0_scaled (double x)
@@ -171,9 +171,9 @@
 
 .. c:function:: int gsl_sf_bessel_Kn_scaled_array (int nmin, int nmax, double x, double result_array[])
 
-   :math:`nmin` 에서 :math:`nmax` 까지, 조정 계수가 곱해진 2종 변형 베셀 함수 :math:`\text{exp}(x) K_n(x)` 의 값을 계산합니다. 
-   계산 결과값은 :math:`result_array` 배열에 저장됩니다. 
-   :math:`nmin` 는 반드시 양수이거나 :math:`0` 이어야 합니다. 
+   :code:`nmin` 에서 :code:`nmax` 까지, 조정 계수가 곱해진 2종 변형 베셀 함수 :math:`\text{exp}(x) K_n(x)` 의 값을 계산합니다. 
+   계산 결과값은 :code:`result_array` 배열에 저장됩니다. 
+   :code:`nmin` 는 반드시 양수이거나 :math:`0` 이어야 합니다. 
    함수의 정의역은 :math:`x>0` 입니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
@@ -207,14 +207,14 @@
 .. c:function:: int gsl_sf_bessel_jl_array (int lmax, double x, double result_array[])
 
    :math:`lmax \geq 0, x \geq 0` 에 대해, 1종 구면 베셀 함수 :math:`j_l(x)` 의 값을 :math:`l=0` 에서 :math:`l=lmax` 까지 계산합니다. 
-   계산 결과값은 :math:`result_array` 배열에 저장됩니다. 
+   계산 결과값은 :code:`result_array` 배열에 저장됩니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 .. c:function:: int gsl_sf_bessel_jl_steed_array (int lmax, double x, double * result_array)
 
    Steed 방법을 이용해 1종 구면 베셀 함수 :math:`j_l(x)` 의 값을 :math:`l=0` 에서 :math:`l=lmax` 까지 계산합니다. 
    :math:`lmax, x` 는 :math:`lmax \geq 0, x \geq 0` 이어야 합니다. 
-   계산 결과값은 :math:`result_array` 배열에 저장됩니다. 
+   계산 결과값은 :code:`result_array` 배열에 저장됩니다. 
    Steed/Barnett 알고리즘은 Comp. Phys. Comm. 21, 297(1981)에 기술되어 있습니다. 
    Steed 방법은 다른 함수의 재귀적 방법보다 더 안정적이지만, 그 대신 더 느립니다.
 
@@ -247,7 +247,7 @@
 .. c:function:: int gsl_sf_bessel_yl_array (int lmax, double x, double result_array[])
 
    :math:`lmax \geq 0` 에 대해, 2종 구면 베셀 함수 :math:`y_l(x)` 의 값을 :math:`l=0` 에서 :math:`l=lmax` 까지 계산합니다. 
-   계산 결과값은 :math:`result_array` 배열에 저장됩니다. 재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
+   계산 결과값은 :code:`result_array` 배열에 저장됩니다. 재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 .. index:: Regular Modified Spherical Bessel Function
 .. index:: 1종 변형 구면 베셀 함수
@@ -286,7 +286,7 @@
 
    :math:`lmax \geq 0, x \geq 0` 에 대해, 조정 계수가 곱해진 1종 변형 구면 베셀 함수 :math:`\text{exp}(-|x|) i_l(x)` 의 값을 
    :math:`l=0` 에서 :math:`l=lmax` 까지 계산합니다. 
-   계산 결과값은 :math:`result_array` 배열에 저장됩니다. 
+   계산 결과값은 :code:`result_array` 배열에 저장됩니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 
@@ -327,7 +327,7 @@
 
    :math:`lmax \geq 0, x \geq 0` 에 대해, 조정 계수가 곱해진 1종 변형 구면 베셀 함수 :math:`\text{exp}(x) k_l(x)` 의 값을 
    :math:`l=0` 에서 :math:`l=lmax` 까지 계산합니다. 
-   계산 결과값은 :math:`result_array` 배열에 저장됩니다. 
+   계산 결과값은 :code:`result_array` 배열에 저장됩니다. 
    재귀식을 이용해 계산 효율을 높여, 실제 값과는 조금 다를 수 있습니다.
 
 
@@ -405,7 +405,8 @@
                 int gsl_sf_bessel_Knu_scaled_e (double nu, double x, gsl_sf_result * result)
 
 
-   :math:`x>0, \nu>0` 에 대해, 조정 계수가 곱해진 분수 차수 :math:`\nu`의 2종 변형 베셀 함수 :math:`\text{exp}(+|x|)K_\nu (x)`의 값을 계산합니다.
+   :math:`x>0, \nu>0` 에 대해, 조정 계수가 곱해진 분수 차수 :math:`\nu` 의 2종 변형 베셀 함수 
+   :math:`\text{exp}(+|x|) K_\nu (x)`의 값을 계산합니다.
 
 1종 베셀 함수의 근
 -----------------------------------------------------------------------
@@ -425,4 +426,4 @@
 
 
    베셀 함수 :math:`J_\nu (x)`에 대해, :math:`s` 번째, 양수 근의 위치를 찾습니다. 
-   현재 구현체는 :math:`nu` 가 음수일 때를 지원하지 않습니다.
+   현재 구현체는 :code:`nu` 가 음수일 때를 지원하지 않습니다.

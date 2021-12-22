@@ -38,11 +38,11 @@
 .. c:function:: gsl_sf_mathieu_workspace * gsl_sf_mathieu_alloc (size_t n, double qmax)
 
     마티유 함수들의 배열 기반 방법을 위한 작업 공간을 반환합니다. 
-    인자 :math:`n` 는 :math:`qmax` 최대 계수와 공간에서 계산되는 마티유 함수의 :math:`q` -값을 결정합니다.
+    인자 :code:`n` 는 :code:`qmax` 최대 계수와 공간에서 계산되는 마티유 함수의 :math:`q` -값을 결정합니다.
 
 .. c:function:: void gsl_sf_mathieu_free (gsl_sf_mathieu_workspace * work)
 
-    주어진 작업 공간 :math:`work` 를 해제합니다.
+    주어진 작업 공간 :code:`work` 를 해제합니다.
 
 마티유 함수 특성 값 (Mathieu Function Characteristic Values)
 -------------------------------------------------------------------
@@ -58,8 +58,8 @@
                 int gsl_sf_mathieu_b_array (int order_min, int order_max, double q, gsl_sf_mathieu_workspace * work, double result_array[])
 
     마티유 함수의 특성 값 :math:`a_n(q)` 와 :math:`b_n(q)` 을 주어진 
-    :math:`oreder_min` 와 :math:`order_max` 사이 범위에 있는 :math:`n` 에 대해 계산합니다. 
-    계산 결과는 :math:`result_array` 에 저장됩니다.
+    :code:`oreder_min` 와 :code:`order_max` 사이 범위에 있는 :code:`n` 에 대해 계산합니다. 
+    계산 결과는 :code:`result_array` 에 저장됩니다.
 
 각 운동량 마티유 함수 (Angular Mathieu Functions)
 -------------------------------------------------------------------
@@ -75,8 +75,8 @@
                 int gsl_sf_mathieu_se_array (int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
 
     각각, 각 운동량 마티유 함수 :math:`c e_n (q,x)` 와 :math:`s e_n (q,x)` 의 값을 주어진 
-    :math:`nmin` 와 :math:`nmax` 범위에 있는 :math:`n`  에 대해 계산합니다. 
-    계산 결과는 :math:`result_array` 에 저장됩니다.
+    :code:`nmin` 와 :code:`nmax` 범위에 있는 :code:`n`  에 대해 계산합니다. 
+    계산 결과는 :code:`result_array` 에 저장됩니다.
 
 
 방사 마티유 함수 (Radial Mathieu Functions)
@@ -98,5 +98,5 @@
 .. c:function:: int gsl_sf_mathieu_Mc_array (int j, int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
                 int gsl_sf_mathieu_Ms_array (int j, int nmin, int nmax, double q, double x, gsl_sf_mathieu_workspace * work, double result_array[])
 
-    :math:`j` 메티유 함수의 값을 주어진 :math:`nmin` 와 :math:`nmax` 범위에 있는 
-    :math:`n` 에 대해 계산합니다. 계산 결과는 :math:`result_array` 에 저장됩니다.
+    :math:`j` 메티유 함수의 값을 주어진 :code:`nmin` 와 :code:`nmax` 범위에 있는 
+    :code:`n` 에 대해 계산합니다. 계산 결과는 :code:`result_array` 에 저장됩니다.

@@ -1,4 +1,6 @@
-# 라게르 함수 (Laguerre Functions)
+.. index:: Laguerre function
+.. index:: 라게르 다항식
+
 
 일반화 된 라게르 다항식(다른 이름으로 버금 라게르 다항식이 있습니다)은 합류 초기하 함수(confluent hypergeometric function)로 정의됩니다.
 

@@ -1,4 +1,6 @@
 .. index:: dilogarithm
+.. index:: 다이 로그
+
 
 다이 로그는 다음과 같이 정의됩니다.
 
@@ -36,4 +38,4 @@
 .. c:function:: int gsl_sf_complex_dilog_e (double r, double theta, gsl_sf_result * result_re, gsl_sf_result * result_im)
 
     복소수 인자 :math:`z = r \exp(i\theta)` 에 대해, 
-    복소수 값을 가지는 완전한 다이 로그 값을 계산합니다. 실수, 허수 값은 각각 :math:`result_re` 와 :math:`result_im` 에 반환됩니다.
+    복소수 값을 가지는 완전한 다이 로그 값을 계산합니다. 실수, 허수 값은 각각 :code:`result_re` 와 :code:`result_im` 에 반환됩니다.
