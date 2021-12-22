@@ -51,6 +51,7 @@ gsl 2.7 manual document를 기준으로 해서 번역합니다. GSL 차후 버�
    물리 상수
    autoconf
    GSL의 기여자들
+   영문 용어
 
 ..
    
