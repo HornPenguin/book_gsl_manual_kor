@@ -5,8 +5,8 @@
 쿨롱 함수의 초안은 헤더 파일 :code:`gsl_sf_coulomb.h`  에 정의되어 있습니다. 
 구속 상태와 산란해를 모두 포함합니다.
 
-정규화 된 수소의 구속 상태(Normalized Hydrogenic Bound States)
--------------------------------------------------------------
+정규화 된 수소의 구속 상태
+--------------------------------------------------------------------
 
 .. c:function:: double gsl_sf_hydrogenicR_1 (double Z, double r)
                 int gsl_sf_hydrogenicR_1_e (double Z, double r, gsl_sf_result * result)
@@ -25,7 +25,7 @@
     를 계산합니다. :math:`L_b^a(x)` 는 일반화 된 르장드르 다항식입니다. 
     이 정규화 방법은 수소의 파동 함수 :math:`\psi` 가 :math:`\psi(n,l,r) = R_n Y_{lm}` 로 주어지도록 정해졌습니다.
 
-쿨롱 파동 함수(Coulomb Wave Functions)
+쿨롱 파동 함수
 ----------------------------------------
 
 쿨롱 파동함수 :math:`F_L(\eta,x), G_L (\eta,x)`  들은 Abramowitz & Stegun Chapter 14에 기술되어 있습니다. 
@@ -89,7 +89,7 @@
     오버플로우가 발생하면 지수값이 :code:`F_exponenet` 에 저장됩니다.  
     :math:`\eta \rightarrow 0` 이 함수는 구면 베셀 함수로 수렴합니다.
 
-쿨롱 파동함수의 정규화 계수 (Coulomb Wave Function Normalization Constant)
+쿨롱 파동함수의 정규화 계수
 -----------------------------------------------------------------------------
 
 쿨롱 파동 함수의 정규화 상수들은 Abramowitz 14.1.7에 정의되어 있습니다.

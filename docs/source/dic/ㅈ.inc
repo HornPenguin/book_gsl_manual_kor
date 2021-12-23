@@ -4,6 +4,7 @@
 * 중성자: Neutron
 * 전자 볼트: Electron Voltage
 * 적분 주요값: Principal Value of Integral
+* 정규화 된 수소의 구속 상태: Normalized Hydrogenic Bound States
 
 조
 ----------------
