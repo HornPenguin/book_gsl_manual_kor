@@ -106,7 +106,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
   계산된 에르미트 다항식은 :code:`gsl_poly_dd_eval()` 함수를 호출해 
   :code:`xa` 에 대한  :code:`za` 값을 넘겨 계산될 수 있습니다.
 
-:math:`2` 차 다항식 (Quadratic Equations)
+2 차 다항식 (Quadratic Equations)
 ====================================================
 
 .. c:function:: int gsl_poly_solve_quadratic (double a, double b, double c, double * x0, double * x1)
@@ -142,7 +142,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
 
 함수의 반환 값은 복소수 근의 숫자를 의미합니다. ( :math:`1` 이거나 :math:`2` 입니다.) 각 근의 위치는 :code:`z0`  :code:`z1`  저장됩니다. 저장되는 순서는 오름차순으로 저장되고, 먼저 실수부를 기준으로 판정하고 그 다음에 허수부의 크기를 기준으로 배열합니다. 만약 한 개의 실수 근만 존재하면 ( 예를 들어 :math:`a=0` ) :code:`z0` 저장됩니다.
 
-:math:`3` 차 다항식 (Cubic Equations)
+3 차 다항식 (Cubic Equations)
 ====================================================
 
 .. c:function:: int gsl_poly_solve_cubic (double a, double b, double c, double * x0, double * x1, double * x2)

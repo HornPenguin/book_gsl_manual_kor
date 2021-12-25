@@ -55,3 +55,6 @@ latex_elements = {
 \setmonofont{Noto Sans Mono CJK KR}
     '''
 }
+
+def setup(app):
+        app.add_stylesheet('custom.css')

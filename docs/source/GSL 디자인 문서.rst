@@ -210,7 +210,7 @@ GSL 라이브러리는 **C 언어 하나** 만을 사용합니다. 이는 이미
 이러한 표준을 위한 참고문헌으로 *GNU Coding Standards* 문서, 
 Harbison and Steels *C: A Reerence Manual*, *GNU, C Library Manual* 그리고 Glib 소스 파일을 볼 수 있습니다.
 
-수학 수식은 Abramowitz & Stegun의 *Handbook of Mathematical Functions* 를 따릅니다. 
+수학 수식은 Abramowitz & Stegun의 *Handbook of Mathematical Functions* 를 따릅니다 [#AS]_ . 
 이 책은 수학계에서 자명한 참조 문헌이며, 퍼블릭 도메인으로 사용할 수 있습니다.
 
 본 프로젝트에서 공유하는 정신은 "C로 생각하라" 입니다. 프로젝트가 C로 이루어지기 때문에, 
@@ -718,7 +718,7 @@ size_t
 이러한 작성방법은 컴파일러의 최적화에도 도움을 줍니다. 
 :code:`const` 키워드는 함수로 전달되는 인자가 중요한 의미를 가질 때도 사용할 수 있습니다.
 
-의사 템플릿(Pesudo template)
+의사 템플릿
 ------------------------------------
 
 몇몇 의사 템플릿 매크로들이 :code:`templates_on.h` 와 :code:`templates_off.h` 에 있습니다. 
@@ -941,8 +941,10 @@ DOS는 무시하고, Windows95/Windows 등에서의 사용만을 고려하는 �
 
 .. rubric:: 각주
 
+
 .. [#gnulitically] *GNUlitically correct* 은 GNU 코딩 규약을 따르고 *autoconf* 를 사용하는 프로그램을 뜻합니다.(*)
 .. [#closed] 이러한 표현은 수학에서 대수 구조를 정의할 때, 연산에 대해 닫혀 있다라는 정의에서 왔습니다. 수학적으로는 집합 위에 정의된 연산의 결과가 정의된 집합에 있을 때 이를 닫혀 있다라 합니다. 여기서 닫혀 있다는 뜻은 라이브러리에서 제공하는 객체와 기능들이 충분이 방대해 어떠한 연산을 수행하든지 해당 연산의 결과가 표현하는 수학적 구조가 라이브러리 내부의 기능과 객체들에 이미 구현되어 있음을 의미합니다. (*)
+.. [#AS] 미국 표준 기술 연구소에서 Milton Abramowitz와 Irene Stegun이 편집한 수학 문헌으로 수식, 그래프 및 수학표를 포함하는 수학 함수 핸드북입니다.(*)
 .. [#int_size] int 자료형은 구동 플랫폼의 기본 데이터 처리 타입을 따릅니다. 이는 실행 환경에서 가장 빠른 동작을 보장하기 위함입니다. 
                short 같은 자료형이 고정된 byte 크기를 가진 반면, int는 플랫폼에 따라서 다양한데, 어떤 플랫폼에서는 32bit, 64bit 크기를 가지고 어떤 플랫폼에서는 16bit의 크기를 가질 수도 있습니다. 
                대표적으로 아두이노와 같은 AVR 시스템에서 16bit 크기를 가진 경우가 흔합니다. 
