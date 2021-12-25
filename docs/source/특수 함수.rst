@@ -315,7 +315,7 @@ gsl_sf_result 구조체 (The gsl_sf_result struct)
 참고문헌과 추가자료
 ==============================
 
-이 라이브러리는 다음 책의 규약을 따릅니다 [#AS]_ .
+이 라이브러리는 다음 책의 규약을 따릅니다.
 
 - Handbook of Mathematical Functions, edited by Abramowitz & Stegun, Dover, ISBN 0486612724.
 
