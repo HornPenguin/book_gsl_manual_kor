@@ -161,8 +161,9 @@ GSL에서는 해당 함수들을 제공해 이를 보완합니다.
 효율성을 위해서 오버플로나 언더플로 조건을 계산하지 않습니다.
 
 
-.. c:function:: double gsl_pow_int (double x, int n)
-                double gsl_pow_uint (double x, unsigned int n)
+.. c:function:: 
+     double gsl_pow_int (double x, int n)
+     double gsl_pow_uint (double x, unsigned int n)
 
    :math:`n` 값에 대해 :math:`x^n` 의 값을 계산해줍니다.
    이 지수 계산은 효율적으로 설계되었습니다. 예를 들어 :math:`x^8` 을 계산하고자 하면, 
@@ -172,14 +173,15 @@ GSL에서는 해당 함수들을 제공해 이를 보완합니다.
 
 
 
-.. c:function:: double gsl_pow_2 (const double x)
-                double gsl_pow_3 (const double x)
-                double gsl_pow_4 (const double x)
-                double gsl_pow_5 (const double x)
-                double gsl_pow_6 (const double x)
-                double gsl_pow_7 (const double x)
-                double gsl_pow_8 (const double x)
-                double gsl_pow_9 (const double x)
+.. c:function:: 
+     double gsl_pow_2 (const double x)
+     double gsl_pow_3 (const double x)
+     double gsl_pow_4 (const double x)
+     double gsl_pow_5 (const double x)
+     double gsl_pow_6 (const double x)
+     double gsl_pow_7 (const double x)
+     double gsl_pow_8 (const double x)
+     double gsl_pow_9 (const double x)
   
 
    작은 정수 지수 :math:`x^2, x^3, \dots` 값들을 효율적으로 계산해줍니다. 
