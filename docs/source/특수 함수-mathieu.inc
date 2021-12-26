@@ -21,7 +21,7 @@
 1, 2, 3, 그리고 4차 방사 마티유 함수들은 계수 :math:`j` 로 표현됩니다. 
 :math:`j` 는 1, 2, 3, 4 값을 가집니다.
 
-마티유 함수에 대한 더 자세한 정보를 얻고 싶다면 Abramowitz and Stegunn, Chapter 20을 참조하길 바랍니다.
+마티유 함수에 대한 더 자세한 정보를 얻고 싶다면 Abramowitz and Stegunn, Chapter 20을 참고하길 바랍니다.
 이 함수들은 헤더 파일 :code:`gsl_sf_mathieu.h` 에 정의되어 있습니다.
 
 마티유 함수 작업 공간 (Mathieu Function Workspace)

@@ -6,7 +6,7 @@
 수정 베셀 함수 :math:`I_n(x), K_n(x)`, 
 구면 베셀 함수 :math:`j_l(x), y_l(x)` 그리고 
 수정 구면 베셀 함수 :math:`i_l(x), k_l(x)`를 계산하는 함수들을 서술합니다. 
-더 자세한 정보는 Abramowitz & Stegun Chapter 9, 10 단원을 참조할 수 있습니다. 
+더 자세한 정보는 Abramowitz & Stegun Chapter 9, 10 단원을 참고할 수 있습니다. 
 이 베셀 함수들은 헤더 파일 :code:`gsl_sf_bessel.h` 에 정의되어 있습니다.
 
 

@@ -10,7 +10,7 @@ Mixed-radix 함수들은 FFTPACK 라이브러리를 재구현한 형태입니다
 FFTPACK의 포트란 코드는 Netlib에서 확인할 수 있습니다(FFTPACK에는 sine, cosine 변환 기능도 제공하지만 
 :code:`GSL` 에서 더이상 제공하지 않습니다.). 
 본 문서에서 기술되는 알고리즘들에 대한 더 자세한 정보와 파생사항들은 
-"GSL FFT Algorithms" 문서를 참고할 수 있습니다. (:ref:`참조문헌과 추가자료` 참고)
+"GSL FFT Algorithms" 문서를 참고할 수 있습니다. (:ref:`참고문헌과 추가자료` 참고)
 
 수학적 정의
 ========================
@@ -219,7 +219,7 @@ Mixed-radix 알고리즘은 부분 변환 모듈에 기반해 있습니다.
 분해할 수 있습니다. 큰 소수를 인수로 가질 때가 가장 피해야하는 경우입니다. 예로,
 :math:`2*3*99991` 등이 있습니다. 이러한 경우 :math:`O(n^2)` 복잡도를 가지는 알고리즘의
 연산에 대부분의 구동 시간을 소모하게 됩니다. 이러한 상황에 빠졌다면 GSL 베포 파일에 들어있는
-"GSL FFT Algorithms" 문서를 참조하십시오.   
+"GSL FFT Algorithms" 문서를 참고하십시오.   
 
 
 Mixed-radix의 초기화 함수 :code:`gsl_fft_complex_wavetable_alloc` 는 주어진 길이 :math:`n`에
@@ -230,31 +230,31 @@ Mixed-radix의 초기화 함수 :code:`gsl_fft_complex_wavetable_alloc` 는 주�
 사용자가 작성한 프로그램에서 이러한 분해가 잘 이루어지지 않았을 때, 
 변환의 속도 저하를 경고하고 싶을 수도 있습니다.
 라이브러리 내부에 있는 작은 규모의 소인수 분해 모듈에서 분해할 수 없는 길이의 모듈을
-자주 사용한다면, "GSL FFT Algorithms" 문서를 참조해서 다른 인자들에 대한 지원을 추가할 수 있습니다. 
+자주 사용한다면, "GSL FFT Algorithms" 문서를 참고해서 다른 인자들에 대한 지원을 추가할 수 있습니다. 
 
 이 단원에 기술된 함수들은 :code:`gsl_fft_complex.h` 에 기술되어 있습니다.
 
 .. c:function:: gsl_fft_complex_wavetable * gsl_fft_complex_wavetable_alloc (size_t n)
 
-   길이 :data:`n` 의 복소수 고속 푸리에 변환을 위한 삼각 함수 참조표를 생성합니다.
+   길이 :data:`n` 의 복소수 고속 푸리에 변환을 위한 삼각 함수 참고표를 생성합니다.
    오류가 없다면 새로 할당된 :c:type:`gsl_fft_complex_wavetable` 의 포인터를 반환합니다.
    오류가 발생하면 :code:`Null` 포인터를 반환합니다. 길이 :data:`n` 은 여러 
-   부분 변환들로 분해되고, 파동 참조표에 대응되는 삼각 함수 계수들이 저장됩니다. 
+   부분 변환들로 분해되고, 파동 참고표에 대응되는 삼각 함수 계수들이 저장됩니다. 
    삼각 함수 계수들은 정확도를 위해 :code:`sin` 와 :code:`cos` 를 사용해 직접 계산됩니다. 
-   빠른 계산을 위해 재귀적 방법을 사용해 참조표를 작성할 수도 있습니다. 하지만,
+   빠른 계산을 위해 재귀적 방법을 사용해 참고표를 작성할 수도 있습니다. 하지만,
    프로그램에서 동일한 길이의 고속 푸리에 변환을 반복해서 수행한다면, 이 계산은 한번만
    수행해도 최종 결과에 영향을 미치지 않습니다.
 
-   파동 참조표 구조체는 같은 길이를 사용하는 모든 변환에 반복적으로 사용할 수 있습니다.
+   파동 참고표 구조체는 같은 길이를 사용하는 모든 변환에 반복적으로 사용할 수 있습니다.
    이 표는 다른 고속 푸리에 변환 함수에 사용된다고 해서 값들이 변하지 않습니다.
-   같은 파동 참조표를 같은 길이를 가지는 값들의 변환, 역변환, 그리고 조정 계수가 없는 역변환
+   같은 파동 참고표를 같은 길이를 가지는 값들의 변환, 역변환, 그리고 조정 계수가 없는 역변환
    에 모두 사용할 수 있습니다.
 
 
 .. c:function:: void gsl_fft_complex_wavetable_free (gsl_fft_complex_wavetable * wavetable)
 
-   파동 참조표 :code:`wavetable` 가 할당된 메모리를 해제합니다.
-   이 파동 참조표는 해당하는 길이의 고속 푸리에 변환이 더 이상 필요 없을 때 해제될 수 있습니다.
+   파동 참고표 :code:`wavetable` 가 할당된 메모리를 해제합니다.
+   이 파동 참고표는 해당하는 길이의 고속 푸리에 변환이 더 이상 필요 없을 때 해제될 수 있습니다.
 
 
 
@@ -264,19 +264,19 @@ Mixed-radix의 초기화 함수 :code:`gsl_fft_complex_wavetable_alloc` 는 주�
 유용할 수 있습니다. 예를 들어서 고속 푸리에 변환 길이에 대한 소인수 분해가 주어져 있으면,
 실행 시간의 추정치나 수치적 오차를 계산하는 데 사용할 수 있습니다. 
 
-파동 참조표 구조체는 헤더 파일 :code:`gsl_fft_complex.h` 에 정의되어 있습니다.
+파동 참고표 구조체는 헤더 파일 :code:`gsl_fft_complex.h` 에 정의되어 있습니다.
 
 
 .. c:type:: gsl_fft_complex_wavetable
 
-   이 구조체는 mixed-radix fft 알고리즘을 위한 인수 분해와 삼각 함수 참조표를 담고 있습니다.
+   이 구조체는 mixed-radix fft 알고리즘을 위한 인수 분해와 삼각 함수 참고표를 담고 있습니다.
    다음의 구성으로 이루어져 있습니다.
 
    ================================= ==============================================================================================
    :code:`size_t n`                  복소수 지점들의 갯수
    :code:`size_t nf`                 길이:code:`n` 이 분해된 인수들의 갯수
    :code:`size_t factor[64]`         인수들의 배열. 첫번째 :code:`nf` 원소만이 사용됩니다.
-   :code:`gsl_complex * trig`        길이 :code:`n` 변환에 대해 사전 할당된 삼각 함수 참조표를 가르키는 포인터
+   :code:`gsl_complex * trig`        길이 :code:`n` 변환에 대해 사전 할당된 삼각 함수 참고표를 가르키는 포인터
    :code:`gsl_complex * twiddle[64]` This is an array of pointers into :code:`trig` , giving the twiddle factors for each pass.
    ================================= ==============================================================================================
 
@@ -312,8 +312,8 @@ Mixed-radix의 초기화 함수 :code:`gsl_fft_complex_wavetable_alloc` 는 주�
    길이 :data:`n` 에 대한 제약은 존재하지 않습니다. 
    길이 2, 3, 4, 5, 6 그리고 7 에 대해 최적화된 부분 변환 모듈이 있습니다.
    나머지 길이들은 :math:`O(n^2)` 의 시간 복잡도를 가지는 상대적으로 느린 방법으로 계산됩니다.
-   호출 과정에서 변환하는 값들의 길이에 맞는 파동 참조표 :data:`wavetable` 와 작업 공간 :data:`work` 를 
-   인자로 제공해야합니다. :data:`wavetable` 에는 참조용 삼각 함수 계수들을 포함하고 있습니다.
+   호출 과정에서 변환하는 값들의 길이에 맞는 파동 참고표 :data:`wavetable` 와 작업 공간 :data:`work` 를 
+   인자로 제공해야합니다. :data:`wavetable` 에는 참고용 삼각 함수 계수들을 포함하고 있습니다.
    :code:`transform` 이 붙은 함수에 관해, :code:`sign` 인자는 :code:`forward` ( :math:`+1` ) 나 
    :code:`backward` ( :math:`-1` )가 될 수 있습니다.
 
@@ -322,7 +322,7 @@ Mixed-radix의 초기화 함수 :code:`gsl_fft_complex_wavetable_alloc` 는 주�
 
    =================================== =========================================================================================================
    :c:macro:`GSL_EDOM`                 자료의 길이 :data:`n` 이 양의 정수가 아닐 때, (예 :data:`n=0`).
-   :c:macro:`GSL_EINVAL`               자료의 길이 :data:`n` 와 계산을 위해 사용하는 파동 참조표 :code:`wavetable` 가 맞지 않을 때.
+   :c:macro:`GSL_EINVAL`               자료의 길이 :data:`n` 와 계산을 위해 사용하는 파동 참고표 :code:`wavetable` 가 맞지 않을 때.
    =================================== =========================================================================================================
 
 다음 프로그램은 Mixed-radix 알고리즘을 이용해 짧은 펄스에 대해, 
@@ -655,9 +655,9 @@ Mixed-radix 알고리즘은 변환의 중간 단계를 유지하기 위해 추�
    실수 펄스 신호의 저주파 통과 필터의 적용, 예제 프로그램의 결과.
 
 
-.. _참조문헌과 추가자료:
+.. _참고문헌과 추가자료:
 
-참조문헌과 추가자료
+참고문헌과 추가자료
 ========================
 
 FFT 입문에 다음의 리뷰 논문을 추천합니다.
@@ -666,10 +666,10 @@ FFT 입문에 다음의 리뷰 논문을 추천합니다.
   Fast Fourier transforms: A tutorial review and a state of the art. 
   Signal Processing, 19:259-299, 1990.
 
-:code:`GSL` 구현체에 쓰인 알고리즘을 참고하기 위해서 "GSL FFT Algorithms" 문서를 참조할 수 있습니다 [#GSLFFT]_ . 
+:code:`GSL` 구현체에 쓰인 알고리즘을 참고하기 위해서 "GSL FFT Algorithms" 문서를 참고할 수 있습니다 [#GSLFFT]_ . 
 이 문서는 FFT에 관한 일반적인 정보들과 각각의 구현체와 그 알고리즘에 관한 여러 파생 정보들을 기술하고 있습니다. 
-이에 더해, 관련 참조 문헌들도 함께 제공하고 있습니다. 
-편의를 위해 중요한 참조문헌들을 이곳에 함께 제공합니다.
+이에 더해, 관련 참고 문헌들도 함께 제공하고 있습니다. 
+편의를 위해 중요한 참고문헌들을 이곳에 함께 제공합니다.
 
 FFT를 예시 프로그램과 함께 제공하는 몇몇 입문 서적들이 있습니다. 
 Brigham 저 "The Fast Fourier Transform"과 Burrus and Parks 저 
@@ -695,7 +695,7 @@ FFTPACK 구현체의 핵심 알고리즘인 Mixed-radix 알고리즘은 Clive Te
 
 1979년도에, IEEE에서는 포트란 FFT 프로그램을 중점적으로 리뷰한 개괄 문서을 출판했습니다. 
 해당 문서는 "Programs for Digital Sigal Processinng"이란 제목으로 여러 다른 FFT 알고리즘들의 구현에 
-좋은 참조 문헌이 되어줍니다.
+좋은 참고 문헌이 되어줍니다.
 
 * Digital Signal Processing Committee and IEEE Acoustics, Speech, and Signal Processing Committee, 
   editors. Programs for Digital Signal Processing. IEEE Press, 1979.

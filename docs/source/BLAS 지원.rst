@@ -242,7 +242,7 @@ Level 2 BLAS 인터페이스
   :code:`Uplo` 가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 의 상삼각 행렬이 사용되고, 
   :code:`CblasLower` 라면, :math:`A` 의 하삼각 행렬이 사용됩니다. 
   만약, :code:`Dig` 가 :code:`CblasNonUnit` 라면 행렬의 대각 성분들이 사용됩니다.
-  :code:`CblasUnit` 라면 행렬 :math:`A` 의 대각 성분들은 유니터리 행렬의 대각성분으로 취급되기 때문에 참조되지 않습니다. 
+  :code:`CblasUnit` 라면 행렬 :math:`A` 의 대각 성분들은 유니터리 행렬의 대각성분으로 취급되기 때문에 참고되지 않습니다. 
 
 .. c:function:: int gsl_blas_strsv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix_float * A, gsl_vector_float * x)
               int gsl_blas_dtrsv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix * A, gsl_vector * x)
@@ -254,7 +254,7 @@ Level 2 BLAS 인터페이스
   :code:`Uplo` 가 :code:`CblasUpper`  일 때, 행렬 :math:`A` 의 상삼각 행렬이 사용되고,
   :code:`CblasLower`  라면, 행렬 :math:`A` 의 하삼각 행렬이 사용됩니다. 
   만약, :code:`Dig`가 :code:`CblasNonUnit` 라면 행렬의 대각 성분들이 사용됩니다.
-  :code:`CblasUnit` 라면 행렬 :math:`A` 의 대각 성분들은 유니터리 행렬의 대각성분으로 취급되기 때문에 참조되지 않습니다. 
+  :code:`CblasUnit` 라면 행렬 :math:`A` 의 대각 성분들은 유니터리 행렬의 대각성분으로 취급되기 때문에 참고되지 않습니다. 
 
 .. c:function:: int gsl_blas_ssymv (CBLAS_UPLO_t Uplo, float alpha, const gsl_matrix_float * A, const gsl_vector_float * x, float beta, gsl_vector_float * y)
               int gsl_blas_dsymv (CBLAS_UPLO_t Uplo, double alpha, const gsl_matrix * A, const gsl_vector * x, double beta, gsl_vector * y)
@@ -271,7 +271,7 @@ Level 2 BLAS 인터페이스
   행렬 :math:`A` 는  대칭 행렬이기 때문에, 상삼각 부분이나 하삼각 부분만 저장해도 됩니다.  
   :code:`Uplo`  가 :code:`CblasUpper`  일 때, 행렬 :math:`A` 의 상삼각 행렬이 사용되고,
   :code:`CblasLower`  라면, 행렬 :math:`A` 의 하삼각 행렬이 사용됩니다. 
-  대각 성분의 복소 성분들은 자동적으로 0으로 가정하고 참조되지 않습니다. 
+  대각 성분의 복소 성분들은 자동적으로 0으로 가정하고 참고되지 않습니다. 
 
 
 .. c:function:: int gsl_blas_sger (float alpha, const gsl_vector_float * x, const gsl_vector_float * y, gsl_matrix_float * A)
@@ -302,7 +302,7 @@ Level 2 BLAS 인터페이스
   행렬 :math:`A` 는 에르미트 행렬이기 때문에, 상삼각 부분이나 하삼각 부분만 저장해도 됩니다.  
   :code:`Uplo` 가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
   :code:`CblasLower` 라면, :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다. 
-  대각 성분의 복소 성분들은 자동적으로 0으로 가정하고 참조되지 않습니다. 
+  대각 성분의 복소 성분들은 자동적으로 0으로 가정하고 참고되지 않습니다. 
 
 .. c:function:: int gsl_blas_ssyr2 (CBLAS_UPLO_t Uplo, float alpha, const gsl_vector_float * x, const gsl_vector_float * y, gsl_matrix_float * A)
               int gsl_blas_dsyr2 (CBLAS_UPLO_t Uplo, double alpha, const gsl_vector * x, const gsl_vector * y, gsl_matrix * A)
@@ -319,7 +319,7 @@ Level 2 BLAS 인터페이스
   행렬 :math:`A` 는 에르미트 행렬이기 때문에, 상삼각 부분이나 하삼각 부분만 저장해도 됩니다.  
   :code:`Uplo` 가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
   :code:`CblasLower` 라면, :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다. 
-  대각 성분의 복소 성분들은 자동으로 0으로 가정하고 참조되지 않습니다. 
+  대각 성분의 복소 성분들은 자동으로 0으로 가정하고 참고되지 않습니다. 
 
 Level 3 BLAS 인터페이스
 -------------------------
@@ -343,7 +343,7 @@ Level 3 BLAS 인터페이스
   행렬 :math:`A` 는 대칭 행렬이어야 합니다.  
   :code:`Uplo` 가 :code:`CblasUpper` 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
   :code:`CblasLower` 때, 행렬 :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다. 
-  대각 성분의 복소 성분들은 자동적으로 0으로 가정하고 참조되지 않습니다. 
+  대각 성분의 복소 성분들은 자동적으로 0으로 가정하고 참고되지 않습니다. 
 
 
 .. c:function:: int gsl_blas_chemm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, const gsl_matrix_complex_float * B, const gsl_complex_float beta, gsl_matrix_complex_float * C)
@@ -371,7 +371,7 @@ Level 3 BLAS 인터페이스
   :code:`Uplo` 가 :code:`CblasUpper` 인 경우 행렬 :math:`A` 는 상삼각 부분이 사용되고,  
   :code:`CblasLower` 인 경우 :math:`A` 는 하삼각 부분이 사용됩니다.
   만약, :math:`Diag` 가 :code:`CblasNonUnit` 라면 행렬 :math:`A` 는 대각 성분이 사용되고,  
-  :code:`CblasUnit` 라면 유니터리 행렬로 취급하여 대각 성분은 참조되지 않습니다.
+  :code:`CblasUnit` 라면 유니터리 행렬로 취급하여 대각 성분은 참고되지 않습니다.
 
 .. c:function:: int gsl_blas_strsm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, float alpha, const gsl_matrix_float * A, gsl_matrix_float * B)
               int gsl_blas_dtrsm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, double alpha, const gsl_matrix * A, gsl_matrix * B)
@@ -387,7 +387,7 @@ Level 3 BLAS 인터페이스
   :code:`Uplo` 가 :code:`CblasUpper` 인 경우 행렬 :math:`A` 는 상삼각 부분이 사용되고,  
   :code:`CblasLower` 인 경우 :math:`A` 는 하삼각 부분이 사용됩니다. 
   만약, :math:`Diag` 가 :code:`CblasNonUnit` 라면 행렬 :math:`A` 는 대각 성분이 사용되고,  
-  :code:`CblasUnit` 라면 유니터리 행렬로 취급하여 취급하여 대각 성분은 참조되지 않습니다.
+  :code:`CblasUnit` 라면 유니터리 행렬로 취급하여 취급하여 대각 성분은 참고되지 않습니다.
 
 
 .. c:function:: int gsl_blas_ssyrk (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, float alpha, const gsl_matrix_float * A, float beta, gsl_matrix_float * C)

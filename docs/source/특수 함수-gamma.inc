@@ -11,7 +11,7 @@
     \Gamma (x) = \int_0^\infty t^{x-1} \exp(-t) dt
 
 양의 정수 :math:`n` 에 대해,     팩토리얼과 :math:`\Gamma (n) = (n-1)!` 의 관계를 가집니다. 
-감마 함수에 관한 더 자세한 설명은 Abramowitz & Stegun, Chapter 6를 참조할 수 있습니다.
+감마 함수에 관한 더 자세한 설명은 Abramowitz & Stegun, Chapter 6를 참고할 수 있습니다.
 
 .. c:function:: double gsl_sf_gamma (double x)
                 int gsl_sf_gamma_e (double x, gsl_sf_result * result)

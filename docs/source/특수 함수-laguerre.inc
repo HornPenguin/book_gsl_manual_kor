@@ -16,7 +16,7 @@
     L_n^0(x) = L_n(x)\\  
     L_n^k(x) = (-1)^k (d^k /d x^k)L_{(n+k)}(x)
 
-더 자세한 정보는  Abramowitz & Strgun, Chapter 22를 참조할 수 있습니다.
+더 자세한 정보는  Abramowitz & Strgun, Chapter 22를 참고할 수 있습니다.
 
 이 단원에서 기술된 함수들은 헤더 파일 :code:`gsl_sf_laguerre.h` 에 정의되어 있습니다.
 

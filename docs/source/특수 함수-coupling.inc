@@ -11,7 +11,7 @@
 표준 상호작용 계수 함수들의 인자가 정수거나 반-정수(half-integer)이기 때문에, 
 이를 계산하는 함수들의 인자들도 이와 같습니다. 
 이 정수들은 실제 스핀 값들의 두 배를 의미합니다.  
-:math:`3-j`  계수들에 대한 더 자세한 정보는 Abramowitz & Stegun, Section 27.9를 참조할 수 있습니다. 
+:math:`3-j`  계수들에 대한 더 자세한 정보는 Abramowitz & Stegun, Section 27.9를 참고할 수 있습니다. 
 이 단원의 함수들은 헤더 파일 :code:`gsl_sf_coupling.h`  에 기술되어 있습니다.
 
 3-j 기호
