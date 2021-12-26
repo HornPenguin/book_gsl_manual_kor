@@ -179,7 +179,7 @@ Trivial 예제
 초기 추정은 15.5입니다. 전역 최소값으로 부터 사이에 여러 지역적 최소값이 존재하는 지점입니다.
 
 .. include:: examples/siman.c
-   :code:
+   :code: c
 
 :numref:`fig_siman-test` 는  :code:`siman_test` 를 다음과 같이 실행한 결과입니다.
 
@@ -230,7 +230,7 @@ Mark Galassi는 미국 남부 도시 12개의 좌표를 기반으로 아주 간�
 전체 코드는 다음과 같습니다.
 
 .. include:: examples/siman_tsp.c
-   :code:
+   :code: c
 
 다음 코드는 시각 그래프를 만들어 줍니다.
 
