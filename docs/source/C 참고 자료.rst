@@ -3,6 +3,23 @@ C 참고 자료
 *****************
 
 
+
+서적
+---------------------------
+
+시중에 다양한 C 입문, 학습서들이 나와있지만 표준적으로 쓰이는 C 서적은 두 가지가 있습니다.
+
+하나는 데니스 리치와 브라이언 커니핸이 작성한 책으로 ANSI C 표준을 기반으로한 책입니다. 
+이 둘은 C 언어 자체를 개발한 사람들이기도 합니다 [#KR]_ . 
+
+Kernighan, B.W. & Ritchie, D.M., The C Programming Language, 2nd ANSI, Pearson Educación, 1988, isbn:9789688802052.
+
+다른 하나는 K.N.King 의 저서로 C99 표준을 따릅니다.
+
+King, K.N., C Programming: A Modern Approach. 2nd, W.W. Norton, 2008, isbn:9780393979503.
+
+
+
 .. index:: ASCII code
 
 ASCII 코드표 [#ASCII]_
@@ -24,7 +41,7 @@ OCT: 8진수
 C 표준
 --------------------------
 
-ANSI C 는 미국 국립 표준 협회 [#ANSI]_ 에서 지정한 C 표준을 말합니다. 이는 C89와 동치입니다.
+ANSI C 는 미국 국립 표준 협회 [#ANSI]_ 에서 지정한 C 표준을 말합니다. 이는 C89와 동치입니다. 
 C89:
 C99:
 C 11:
@@ -35,6 +52,7 @@ C 11:
 .. [#ASCII] Gorn, S., Bemer, R. W., & Green, J. (1963). American standard code for information interchange. Communications of the ACM, 6(8), 422-426.
 .. [#ASCIICODE] American Standard Code for Information Interchange, ASCII
 .. [#ANSI] Americal National Standards Institute, ANSI
+.. [#KR] K&R이나 TCPL(The C Programming Language)로 축약해 부르기도 합니다. 간혹 K&R이 2nd 판이 아닌 1st 판본을 의미하는 경우도 있으니 조심해야합니다.
 
 
 
