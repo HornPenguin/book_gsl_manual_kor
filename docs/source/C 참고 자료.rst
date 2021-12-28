@@ -32,9 +32,9 @@ C 11:
 
 .. rubric:: 각주
 
-    [#ASCII] Gorn, S., Bemer, R. W., & Green, J. (1963). American standard code for information interchange. Communications of the ACM, 6(8), 422-426.
-    [#ASCIICODE] American Standard Code for Information Interchange, ASCII
-    [#ANSI] Americal National Standards Institute, ANSI
+    .. [#ASCII] Gorn, S., Bemer, R. W., & Green, J. (1963). American standard code for information interchange. Communications of the ACM, 6(8), 422-426.
+    .. [#ASCIICODE] American Standard Code for Information Interchange, ASCII
+    .. [#ANSI] Americal National Standards Institute, ANSI
 
 
 
