@@ -150,8 +150,8 @@ column-vectors, when permuting the elements of a vector.
 .. c:function:: int gsl_permutation_next (gsl_permutation * p)
 
    This function advances the permutation :data:`p` to the next permutation
-   in lexicographic order and returns :c:marco:`GSL_SUCCESS`.  If no further
-   permutations are available it returns :c:marco:`GSL_FAILURE` and leaves
+   in lexicographic order and returns :c:macro:`GSL_SUCCESS`.  If no further
+   permutations are available it returns :c:macro:`GSL_FAILURE` and leaves
    :data:`p` unmodified.  Starting with the identity permutation and
    repeatedly applying this function will iterate through all possible
    permutations of a given order.
@@ -160,8 +160,8 @@ column-vectors, when permuting the elements of a vector.
 
    This function steps backwards from the permutation :data:`p` to the
    previous permutation in lexicographic order, returning
-   :c:marco:`GSL_SUCCESS`.  If no previous permutation is available it returns
-   :c:marco:`GSL_FAILURE` and leaves :data:`p` unmodified.
+   :c:macro:`GSL_SUCCESS`.  If no previous permutation is available it returns
+   :c:macro:`GSL_FAILURE` and leaves :data:`p` unmodified.
 
 순열 적용
 ===========================
@@ -223,7 +223,7 @@ column-vectors, when permuting the elements of a vector.
 
    This function writes the elements of the permutation :data:`p` to the
    stream :data:`stream` in binary format.  The function returns
-   :c:marco:`GSL_EFAILED` if there was a problem writing to the file.  Since the
+   :c:macro:`GSL_EFAILED` if there was a problem writing to the file.  Since the
    data is written in the native binary format it may not be portable
    between different architectures.
 
@@ -233,7 +233,7 @@ column-vectors, when permuting the elements of a vector.
    :data:`stream` in binary format.  The permutation :data:`p` must be
    preallocated with the correct length since the function uses the size of
    :data:`p` to determine how many bytes to read.  The function returns
-   :c:marco:`GSL_EFAILED` if there was a problem reading from the file.  The
+   :c:macro:`GSL_EFAILED` if there was a problem reading from the file.  The
    data is assumed to have been written in the native binary format on the
    same architecture.
 
@@ -244,7 +244,7 @@ column-vectors, when permuting the elements of a vector.
    :data:`format`, which should be suitable for a type of :data:`size_t`. 
    In ISO C99 the type modifier :code:`z` represents :code:`size_t`, so
    :code:`"%zu\n"` is a suitable format [#f1]_.
-   The function returns :c:marco:`GSL_EFAILED` if there was a problem writing
+   The function returns :c:macro:`GSL_EFAILED` if there was a problem writing
    to the file.
 
 .. c:function:: int gsl_permutation_fscanf (FILE * stream, gsl_permutation * p)
@@ -253,7 +253,7 @@ column-vectors, when permuting the elements of a vector.
    permutation :data:`p`.  The permutation :data:`p` must be preallocated with
    the correct length since the function uses the size of :data:`p` to
    determine how many numbers to read.  The function returns
-   :c:marco:`GSL_EFAILED` if there was a problem reading from the file.
+   :c:macro:`GSL_EFAILED` if there was a problem reading from the file.
 
 
 원순열
