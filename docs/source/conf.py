@@ -67,7 +67,7 @@ latex_elements = {
     'preamble': r'''
 \usepackage{pdfpages}
 \begin{document}
-\includepdf[pages=1]{Cover.pdf}
+\includepdf[pages=1]{docs/source/_static/Cover.pdf}
     ''',
     'releasename': ''
 }
