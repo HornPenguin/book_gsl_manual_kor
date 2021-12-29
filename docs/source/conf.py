@@ -63,7 +63,11 @@ latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '10pt',
     'preamble': r'''
-    \usepackage{pdfpages}
+    \usepackage[dvipsnames]{xcolor}
+    \usepackage{graphicx}
+
+    \definecolor{coverbackground}{RGB}{209, 198, 161}
+    \definecolor{coverbelt}{RGB}{209, 198, 161}
     ''',
     'fontpkg': r'''
     \setmainfont{Noto Serif CJK KR}
@@ -72,9 +76,12 @@ latex_elements = {
     ''',
     'releasename': ' ',
     'maketitle':r'''
-    \vspace*{0pt}
-
+    \clearpage
+    \pagestyle{empty}
+    \pagecolor{coverbackground}
+    \includegraphics[width=0.4\textwidth]{logo_design.svg}
     \newpage
+    \pagecolor{white}
     \sphinxmaketitle
     '''
 }
