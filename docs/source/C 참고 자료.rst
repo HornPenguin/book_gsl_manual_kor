@@ -46,14 +46,16 @@ OCT: 8진수
     :file: examples/ASCII_1963.csv
     :header-rows: 1
 
-    --
+1965년도 개정에서는 알파벳 소문자들이 추가되었고 제어 문자들의 이름이 바뀌었습니다.
 
 
 .. csv-table:: ASCII Table 1965
     :file: examples/ASCII_1965.csv
     :header-rows: 1
 
-    --
+
+1967년도 개정은 가장 많이 쓰이는 ASCII 코드표입니다. 대부분의 ASCII 코드를 사용하는 
+시스템에서 이 개정을 기준으로 코드를 제공합니다.
 
 
 .. csv-table:: ASCII Table 1967
