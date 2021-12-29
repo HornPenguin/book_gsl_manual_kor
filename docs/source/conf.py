@@ -52,8 +52,6 @@ epub_show_urls = 'footnote'
 epub_author ='Hyun Seong, Kim'
 epub_publisher = 'OFPublisher'
 
-release = ''
-latex_elements = { 'releasename': '' }
 
 latex_engine = 'xelatex'
 latex_elements = {
@@ -68,6 +66,10 @@ latex_elements = {
 \includepdf[pages={1}]{./_static/Cover.pdf}
     '''
 }
+
+release = ''
+latex_elements = { 'releasename': '' }
+
 
 def setup(app):
         app.add_css_file('custom.css')
