@@ -21,7 +21,7 @@ extensions = [
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
-    'sphinx.ext.intersphinx'
+    'sphinx.ext.intersphinx',
 ]
 
 source_suffix = {
@@ -35,6 +35,7 @@ intersphinx_mapping = {
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
+static_path = ['_static']
 
 numfig = True
 
@@ -54,9 +55,10 @@ epub_author ='Hyun Seong, Kim'
 epub_publisher = 'OFPublisher'
 
 
-release = ''
+release = ' '
 
 latex_engine = 'xelatex'
+
 latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '10pt',
@@ -68,10 +70,10 @@ latex_elements = {
     \setsansfont{Noto Sans CJK KR}
     \setmonofont{Noto Sans Mono CJK KR}
     ''',
-    'releasename': '',
+    'releasename': ' ',
     'maketitle':r'''
     \vspace*{0pt}
-    \includepdf[pages={1}]{Cover.pdf}
+
     \newpage
     \sphinxmaketitle
     '''
