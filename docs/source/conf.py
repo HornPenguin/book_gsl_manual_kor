@@ -70,8 +70,8 @@ latex_elements = {
     ''',
     'releasename': '',
     'maketitle':r'''
-    \includepdf[pages={1}]{../../source/_static/Cover.pdf}
-
+    \includepdf[pages={1}]{Cover.pdf}
+    \newpage
     \sphinxmaketitle
     '''
 }
