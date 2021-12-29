@@ -66,7 +66,7 @@ latex_elements = {
     'preamble': r'''
 \usepackage{pdfpages}
 \includepdf[pages={1}]{./_static/Cover.pdf}
-''',
+    '''
 }
 
 def setup(app):
