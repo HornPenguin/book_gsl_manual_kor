@@ -57,6 +57,7 @@ release = ''
 
 latex_engine = 'xelatex'
 latex_elements = {
+    'papersize': 'a4paper',
     'pointsize': '9pt',
     'fontpkg': r'''
 \setmainfont{Noto Serif CJK KR}
@@ -65,6 +66,7 @@ latex_elements = {
     ''',
     'preamble': r'''
 \usepackage{pdfpages}
+\begin{document}
 \includepdf[pages=1]{_static/Cover.pdf}
     ''',
     'releasename': ''
