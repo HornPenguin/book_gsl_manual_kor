@@ -59,7 +59,7 @@ release = ''
 latex_engine = 'xelatex'
 latex_elements = {
     'papersize': 'a4paper',
-    'pointsize': '9pt',
+    'pointsize': '10pt',
     'preamble': r'''
     \usepackage{pdfpages}
     ''',
@@ -70,6 +70,7 @@ latex_elements = {
     ''',
     'releasename': '',
     'maketitle':r'''
+    \vspace*{0pt}
     \includepdf[pages={1}]{Cover.pdf}
     \newpage
     \sphinxmaketitle
