@@ -53,6 +53,9 @@ epub_author ='Hyun Seong, Kim'
 epub_publisher = 'OFPublisher'
 
 
+release = ''
+chpater = ''
+
 latex_engine = 'xelatex'
 latex_elements = {
     'pointsize': '9pt',
@@ -64,11 +67,11 @@ latex_elements = {
     'preamble': r'''
 \usepackage{pdfpages}
 \includepdf[pages={1}]{./_static/Cover.pdf}
-    '''
+    ''',
+    'releasename': ''
 }
 
-release = ''
-latex_elements = { 'releasename': '' }
+
 
 
 def setup(app):
