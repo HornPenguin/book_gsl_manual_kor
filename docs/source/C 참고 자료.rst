@@ -43,17 +43,17 @@ HEX: 16진수
 OCT: 8진수
 
 .. csv-table:: ASCII Table 1963
-    :file: examples/ASCII_1963.csv
+    :file: /examples/ASCII_1963.csv
     :header-rows: 1
 
 
 .. csv-table:: ASCII Table 1965
-    :file: examples/ASCII_1965.csv
+    :file: /examples/ASCII_1965.csv
     :header-rows: 1
 
 
 .. csv-table:: ASCII Table 1967
-    :file: examples/ASCII_1967.csv
+    :file: /examples/ASCII_1967.csv
     :header-rows: 1
 
 
@@ -76,6 +76,12 @@ ANSI C 는 미국 국립 표준 협회 [#ANSI]_ 에서 지정한 C 표준을 말
 C89:
 C99:
 C 11:
+
+
+표준 수학 라이브러리
+-----------------------------
+
+
 
 
 .. rubric:: 각주
