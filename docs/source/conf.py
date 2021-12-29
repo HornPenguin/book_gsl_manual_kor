@@ -76,10 +76,10 @@ latex_elements = {
     ''',
     'releasename': ' ',
     'maketitle':r'''
-    \clearpage
-    \pagestyle{empty}
     \pagecolor{coverbackground}
-    \includegraphics[width=0.4\textwidth]{logo_design.svg}
+    The universe is immense and it seems to be homogeneous, 
+in a large scale, everywhere we look at.
+    \includegraphics[width=0.5\textwidth]{logo_design.svg}
     \newpage
     \pagecolor{white}
     \sphinxmaketitle
