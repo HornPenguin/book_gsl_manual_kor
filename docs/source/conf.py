@@ -63,11 +63,14 @@ latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '10pt',
     'preamble': r'''
-    \usepackage[dvipsnames]{xcolor}
-    \usepackage{graphicx}
+    \usepackage{svg}
+    \usepackage{afterpage}
+    \usepackage[pagecolor=none]{pagecolor}
+    \usepackage{tikz}
+    \usepackage{tikzpagenodes}
 
     \definecolor{coverbackground}{RGB}{209, 198, 161}
-    \definecolor{coverbelt}{RGB}{209, 198, 161}
+    \definecolor{coverband}{RGB}{239, 190, 84}
     ''',
     'fontpkg': r'''
     \setmainfont{Noto Serif CJK KR}
@@ -77,12 +80,14 @@ latex_elements = {
     'releasename': ' ',
     'maketitle':r'''
     \newpage
-    \pagecolor{coverbackground}
-    The universe is immense and it seems to be homogeneous, 
-in a large scale, everywhere we look at.
-    \includegraphics[width=0.5\textwidth]{logo_design.svg}
+    \pagecolor{coverbackground}\afterpage{\nopagecolor}
+    \begin{tikzpicture}[remember picture,overlay,shift={(current page.north west)}]
+    \fill[coverband,yshift=-120mm] rectangle(\paperwidth,85mm);
+    \end{tikzpicture}
+    \includegraphics[width=0.5\textwidth]{A Slick GNU Logo}
+    \pagebreak
+
     \sphinxmaketitle
-    \pagecolor{white}
     '''
 }
 
