@@ -1,4 +1,5 @@
 from docutils.writers.latex2e import Babel
+
 Babel.language_codes = {'ko':'korean', 'en':'english'}
 
 # Configuration file for the Sphinx documentation builder.
@@ -41,7 +42,7 @@ numfig = True
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
-html_logo = "_static/logo_design.gif"
+html_logo = "_static/logo_design.svg"
 html_theme_options = {
     'logo_only': True,
     'display_version': False,
@@ -59,20 +60,18 @@ latex_engine = 'xelatex'
 latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '9pt',
-    'fontpkg': r'''
-\setmainfont{Noto Serif CJK KR}
-\setsansfont{Noto Sans CJK KR}
-\setmonofont{Noto Sans Mono CJK KR}
-    ''',
     'preamble': r'''
-\usepackage{pdfpages}
-\begin{document}
-\includepdf[pages=1]{docs/source/_static/Cover.pdf}
+    \usepackage{pdfpages}
     ''',
-    'releasename': ''
+    'releasename': '',
+    'maketitle':r'''
+    \includepdf[pages=1]{../../source/_static/Cover.pdf}
+
+    \sphinxmaketitle
+    '''
 }
 
-
+#latex_logo = '_static/logo_design.svg'
 
 
 def setup(app):
