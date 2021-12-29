@@ -40,13 +40,6 @@ ASCII 표는 1963년도 처음 표준안이 발표된 이후로 몇몇 개정이
 
 DEC: 10진수, HEX: 16진수, OCT: 8진수
 
-.. csv-table:: ASCII Table 1963-1967
-    :file: examples/ASCII.csv
-    :header-rows: 1
-
-
-
-
 
 1965년도 개정에서는 알파벳 소문자들이 추가되었고, 일부 문자들의 위치와 제어 문자들의 이름이 바뀌었습니다.
 
