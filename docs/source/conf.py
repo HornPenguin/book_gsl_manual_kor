@@ -54,7 +54,6 @@ epub_publisher = 'OFPublisher'
 
 
 release = ''
-chpater = ''
 
 latex_engine = 'xelatex'
 latex_elements = {
@@ -66,7 +65,7 @@ latex_elements = {
     ''',
     'preamble': r'''
 \usepackage{pdfpages}
-\includepdf[pages={1}]{./_static/Cover.pdf}
+\includepdf[pages=1]{_static/Cover.pdf}
     ''',
     'releasename': ''
 }
