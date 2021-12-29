@@ -46,13 +46,16 @@ OCT: 8진수
     :file: examples/ASCII_1963.csv
     :header-rows: 1
 
+
 .. csv-table:: ASCII Table 1965
     :file: examples/ASCII_1965.csv
     :header-rows: 1
 
+
 .. csv-table:: ASCII Table 1967
     :file: examples/ASCII_1967.csv
     :header-rows: 1
+
 
 0-31, 127에 할당된 제어 문자들은 프린터 같은 기기를 제어하거나 자기 테이프와 같은 저장 장치에서
 값을 읽어올 때 구분을 위한 메타 정보 제공을 위함입니다. 
