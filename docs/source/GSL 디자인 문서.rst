@@ -23,6 +23,7 @@ GSL 디자인 문서
 
 
 .. list-table:: 여러 수치해석 라이브러리
+    :widths: 30 70
     :header-rows: 1
 
     * - 라이브러리
