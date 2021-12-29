@@ -52,6 +52,9 @@ epub_show_urls = 'footnote'
 epub_author ='Hyun Seong, Kim'
 epub_publisher = 'OFPublisher'
 
+release = ''
+latex_elements = { 'releasename': '' }
+
 latex_engine = 'xelatex'
 latex_elements = {
     'pointsize': '9pt',
@@ -59,7 +62,11 @@ latex_elements = {
 \setmainfont{Noto Serif CJK KR}
 \setsansfont{Noto Sans CJK KR}
 \setmonofont{Noto Sans Mono CJK KR}
-    '''
+    ''',
+    'preamble': r'''
+\usepackage{pdfpages}
+\includepdf[pages={1}]{./_static/Cover.pdf}
+''',
 }
 
 def setup(app):

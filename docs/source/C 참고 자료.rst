@@ -30,7 +30,7 @@ ASCII는 정보 교환을 위한 미국 표준 문자표를 의미합니다 [#AS
 
 .. math::
 
-    b_7 b_6 b_5 b_4 b_3 b_2 b_1 = print or contorl character
+    b_7 b_6 b_5 b_4 b_3 b_2 b_1 = \text{print or contorl character}
 
 0-31, 127에 제어 문자가 할당되어 있고 나머지는 출력 문자가 할당되어 있습니다.
 
@@ -38,8 +38,11 @@ ASCII 표는 1963년도 처음 표준안이 발표된 이후로 몇몇 개정이
 하지만, 1967년도 개정판이 가장 일반적으로 많이 쓰입니다. 다음은 1963, 1965, 1967년도 
 발표된 ASCII 표입니다.
 
-DEC: 10진수, HEX: 16진수, OCT: 8진수
+DEC: 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
 
+.. csv-table:: ASCII Table 1963-1967
+    :file: examples/ASCII.csv
+    :header-rows: 1
 
 1965년도 개정에서는 알파벳 소문자들이 추가되었고, 일부 문자들의 위치와 제어 문자들의 이름이 바뀌었습니다.
 
