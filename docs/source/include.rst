@@ -1,0 +1,1 @@
+.. |inlinefn| replace:: :code:`HAVE_INLINE` 이 정의된 경우, 인라인 함수가 사용됩니다. 

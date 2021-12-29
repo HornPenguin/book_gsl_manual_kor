@@ -4,3 +4,4 @@
 * 확률적 탐색 기법: Stochastic search techiques
 * 행렬: Matrix
 * 해리: Nautical mile
+* 항등 순열: identity permutation
