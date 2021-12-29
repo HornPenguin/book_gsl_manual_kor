@@ -63,9 +63,14 @@ latex_elements = {
     'preamble': r'''
     \usepackage{pdfpages}
     ''',
+    'fontpkg': r'''
+    \setmainfont{Noto Serif CJK KR}
+    \setsansfont{Noto Sans CJK KR}
+    \setmonofont{Noto Sans Mono CJK KR}
+    ''',
     'releasename': '',
     'maketitle':r'''
-    \includepdf[pages=1]{../../source/_static/Cover.pdf}
+    \includepdf[pages={1}]{../../source/_static/Cover.pdf}
 
     \sphinxmaketitle
     '''
