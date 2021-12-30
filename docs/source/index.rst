@@ -4,15 +4,19 @@
 
 .. default-domain:: c
 
-.. image:: images/A_Slick_GNU_Logo.png
-   :width: 200
+.. |gnulogo| image:: images/A_Slick_GNU_Logo.png 
+   :width: 200px
+
+|gnulogo| 과학 계산 라이브러리
+
+   
 
 
 .. note::
 
    이 번역 프로젝트는 현재 진행중에 있습니다.
 
-본 책은 GNU Scientific Library(GSL) 2.7 manual과 관련 자료들을 한글로 번역한 책입니다.
+본 서적은 GNU Scientific Library(GSL) 2.7 manual과 관련 자료들을 한글로 번역한 책입니다.
 
 python api를 제공하는 라이브러리(예: :code:`numpy`, :code:`scipy` 등)들은 한글로 된 자료들도 많지만, 
 C의 경우 많은 입문서에도 불구하고 과학 계산 라이브러리 쪽에서 한글 자료들이 빈약해 번역을 시작하게 되었습니다.
