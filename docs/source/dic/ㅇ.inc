@@ -11,7 +11,4 @@
 * 야드: Yard
 * 원통형 베셀 함수: regular Bessel function
 * 의사 템플릿: Pesudo template
-
-이
----------------------
 * 이산 푸리에 변환: Discrete Fourier Transform

@@ -4,8 +4,6 @@
 
 .. default-domain:: c
 
-.. image:: images/A_Slick_GNU_Logo.png
-   :align: center
 
 .. note::
 
@@ -16,41 +14,51 @@
 python api를 제공하는 라이브러리(예: :code:`numpy`, :code:`scipy` 등)들은 한글로 된 자료들도 많지만, 
 C의 경우 많은 입문서에도 불구하고 과학 계산 라이브러리 쪽에서 한글 자료들이 빈약해 번역을 시작하게 되었습니다.
 
-gsl 2.7 manual document를 기준으로 해서 번역합니다. GSL 차후 버전업이 발생할 시 
-해당 버전의 메뉴얼들도 같이 번역할 예정입니다.
+gsl 2.7 manual document를 기준으로 해서 번역합니다. GSL의 차후 버전 갱신될 시 
+해당 버전의 사용 설명서들도 같이 번역할 예정입니다.
 최대한 한글로 풀어쓰는 것을 목적으로 합니다. 
+
+원본 문서가 GNU 자유 문서 사용 허가서 아래에서 베포됨에 따라 해당 허가서 조항에 의거해
+이 번역서의 모든 내용 또한 GNU 자유 문서 사용 허가서를 따릅니다. 
+
+해당 허가서에 관한 자세한 내용은 
 
 .. only:: html
 
-   원문 문서는 `GNU Scientific Library Manual  <https://www.gnu.org/software/gsl/doc/html/index.html>`_  로 보거나, 
+   이 번역서의 원문은 `GNU Scientific Library Manual  <https://www.gnu.org/software/gsl/doc/html/index.html>`_  로 보거나, 
    `pdf <https://www.gnu.org/software/gsl/doc/latex/gsl-ref.pdf>`_ 로 다운받을 수도 있습니다. 
 
-   
 
 .. only:: latexpdf
 
-   원본 메뉴얼은 <https://www.gnu.org/software/gsl/doc/html/index.html> 에서 확인할 수 있습니다. 
+   이 번역서의 원문은 <https://www.gnu.org/software/gsl/doc/html/index.html> 에서 확인할 수 있습니다. 
    <https://www.gnu.org/software/gsl/doc/latex/gsl-ref.pdf> 에서 pdf로 다운로드할 수 도 있습니다.
 
 
-해당 문서들은 rst 포멧으로 GSL 베포 파일 내부 :code:`/doc/` 디렉토리에 
-예제 코드, 그림 등과 함께 저장되어 있습니다.
+해당 html과 pdf 문서들은 sphinx 프로그램을 이용해 만들어졌습니다. 
+sphinx를 위한 설명서의 원본 문서들은 rst [#ReS]_ 파일 형식으로으로 
+GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그림 등과 함께 저장되어 있습니다.
 
-..
+.. only:: html
 
-본 번역서의 원본은 
+   해당 프로그램과 파일 형식에 관한 자세한 내용은 `Sphinx <https://www.sphinx-doc.org/en/master/>`_ 와 
+   `A ReStructuredText Primer <https://docutils.sourceforge.io/rst.html>`_ 문서를 참고할 수 있습니다.
 
-.. code-block:: html
+.. only:: latexpdf
 
-   https://github.com/HYUNSEONG-KIM/GSL_KOR_MANUAL.git
+   Sphinx에 관한 자세한 내용은 공식 홈페이지인 https://www.sphinx-doc.org/en/master/ 를 참고할 수 있습니다.
+   해당 프로그램에서 쓰는 rst 파일 형식은 https://docutils.sourceforge.io/rst.html 를 참고하길 바랍니다.
 
-에서 찾을 수 있고,
+.. code-block:: latexpdf
 
-GNU
-문서에서 오류가 발견되거나 번역에 기여하고 싶다면 해당 저장소를 사용하거나 다음 이메일로 알려주길 바랍니다.
+   본 번역서의 원본은 https://github.com/HYUNSEONG-KIM/GSL_KOR_MANUAL.git 에서 찾을 수 있습니다.
 
 
-    qwqwhsnote@gm.gist.ac.kr
+문서에서 오류가 발견되거나 번역에 기여하고 싶다면 해당 번역서의 Git 저장소에 branch로 만들어 수정을 하거나 
+다음 이메일로 알려주길 바랍니다.
+
+
+   qwqwhsnote@gm.gist.ac.kr
 
 
 .. toctree::
@@ -128,3 +136,7 @@ GNU
    C 표준 라이브러리
    GNU 일반 공중 사용 허가서
    GNU 자유 문서 사용 허가서
+
+.. rubric:: 각주
+
+.. [#ReS] ReStructuredText의 약자입니다.

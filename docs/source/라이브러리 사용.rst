@@ -75,12 +75,21 @@ include 경로는 기본적으로 :code:`/usr/local/include` 이므로 위 명�
 GNU C Complier와 관련 프로그램의 튜토리얼을 보고 싶다면 
 `An Introduction to GCC <http://www.network-theory.co.uk/gcc/intro>`_ (ISBN:0954161793)를 참고 하시기를 바랍니다.
 
+.. only:: html
 
-.. note::
+  .. note::
 
-  해당 GCC 문서는 2004년도에 작성된 문서입니다. 큰 틀은 비슷하지만 GCC 또한 18여년 동안 많은 발전이 있어왔습니다.
-  최신 GCC 메뉴얼과 문서는 `GCC 온라인 문서 <https://gcc.gnu.org/onlinedocs/>`_ 의 문서들을 참고할 수 있습니다(*).
+    해당 GCC 문서는 2004년도에 작성된 문서입니다. 큰 틀은 비슷하지만 GCC 또한 18여년 동안 많은 발전이 있어왔습니다.
+    최신 GCC 사용 설명서와 문서는 `GCC 온라인 문서 <https://gcc.gnu.org/onlinedocs/>`_ 의 문서들을 참고할 수 있습니다(*).
 
+.. only:: latexpdf
+
+  .. note::
+
+    해당 GCC 문서는 2004년도에 작성된 문서입니다. 큰 틀은 비슷하지만 GCC 또한 18여년 동안 많은 발전이 있어왔습니다.
+    최신 GCC 사용 설명서와 문서는 **GCC 온라인 문서** 의 문서들을 참고할 수 있습니다(*).
+
+    <https://gcc.gnu.org/onlinedocs/>
 
 
 대체 BLAS 라이브러리 링킹
