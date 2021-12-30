@@ -16,12 +16,34 @@ C의 경우 많은 입문서에도 불구하고 과학 계산 라이브러리 �
 gsl 2.7 manual document를 기준으로 해서 번역합니다. GSL 차후 버전업이 발생할 시 
 해당 버전의 메뉴얼들도 같이 번역할 예정입니다.
 최대한 한글로 풀어쓰는 것을 목적으로 합니다. 
-원문 문서는 `GNU Scientific Library Manual  <https://www.gnu.org/software/gsl/doc/html/index.html>`_  로 보거나, 
-`pdf <https://www.gnu.org/software/gsl/doc/latex/gsl-ref.pdf>`_ 로 다운받을 수도 있습니다. 
 
-해당 문서들은 rst 포멧으로 GSL 베포 파일 내부 :code:`/doc/` 디렉토리 내부에 저장되어 있습니다.
+.. only:: html
 
-본 프로젝트의 Git 저장소는 `<https://github.com/HYUNSEONG-KIM/GSL_KOR_MANUAL.git>`_ 입니다.
+   원문 문서는 `GNU Scientific Library Manual  <https://www.gnu.org/software/gsl/doc/html/index.html>`_  로 보거나, 
+   `pdf <https://www.gnu.org/software/gsl/doc/latex/gsl-ref.pdf>`_ 로 다운받을 수도 있습니다. 
+
+   
+
+.. only:: latexpdf
+
+   원본 메뉴얼은 <https://www.gnu.org/software/gsl/doc/html/index.html> 에서 확인할 수 있습니다. 
+   <https://www.gnu.org/software/gsl/doc/latex/gsl-ref.pdf> 에서 pdf로 다운로드할 수 도 있습니다.
+
+
+해당 문서들은 rst 포멧으로 GSL 베포 파일 내부 :code:`/doc/` 디렉토리에 
+예제 코드, 그림 등과 함께 저장되어 있습니다.
+
+..
+
+본 번역서의 원본은 
+
+.. code-block:: html
+
+   https://github.com/HYUNSEONG-KIM/GSL_KOR_MANUAL.git
+
+에서 찾을 수 있고,
+
+GNU
 문서에서 오류가 발견되거나 번역에 기여하고 싶다면 해당 저장소를 사용하거나 다음 이메일로 알려주길 바랍니다.
 
 

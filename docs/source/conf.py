@@ -6,13 +6,13 @@ Babel.language_codes = {'ko':'korean', 'en':'english'}
 
 # -- Project information
 
-project = 'GNU 과학 계산 라이브러리'
-copyright = '2021, Hyun Seong, Kim'
+project = 'GSL'
+copyright = '1996-2021 The GSL Team'
 author = 'GSL Team'
-translator = 'Hyun Seong, Kim'
+title= u'GNU 과학 계산 라이브러리'
 
-release = '2.7.1'
-version = '0.1.0'
+release = u'2.7'
+version = u'2.7'
 
 # -- General configuration
 
@@ -28,6 +28,9 @@ source_suffix = {
     '.rst': 'restructuredtext'
 }
 
+# The master toctree document.
+master_doc = 'index'
+
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
@@ -37,61 +40,83 @@ intersphinx_disabled_domains = ['std']
 templates_path = ['_templates']
 static_path = ['_static']
 
+primary_domain = 'c'
 numfig = True
 
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
-html_logo = "_static/logo_design.svg"
+html_logo = "images/logo_design.svg"
 html_theme_options = {
     'logo_only': True,
     'display_version': False,
 }
 
-# -- Options for EPUB output
-epub_show_urls = 'footnote'
-epub_author ='Hyun Seong, Kim'
-epub_publisher = 'OFPublisher'
+htmlhelp_basename = 'GSLdoc'
 
-
-release = ' '
-
+# -- Options for LaTex output--------------------------------------
 latex_engine = 'xelatex'
 
-latex_elements = {
-    'papersize': 'a4paper',
-    'pointsize': '10pt',
-    'preamble': r'''
-    \usepackage{svg}
-    \usepackage{afterpage}
-    \usepackage[pagecolor=none]{pagecolor}
-    \usepackage{tikz}
-    \usepackage{tikzpagenodes}
+my_preamble = r'''
+    \usepackage{svg}                            # Svg image include support
+    \usepackage{afterpage}                      # Provides setting adopted space constraints by page  
+    \usepackage[pagecolor=none]{pagecolor}      # For page color setting
+    \usepackage{tikz}                           # -
+    \usepackage{tikzpagenodes}                  # ^ Draw specific 2D polygon for cover page 
 
-    \definecolor{coverbackground}{RGB}{209, 198, 161}
+    \definecolor{coverbackground}{RGB}{209, 198, 161} # Color definition for Cover page
     \definecolor{coverband}{RGB}{239, 190, 84}
-    ''',
-    'fontpkg': r'''
+
+    '''
+
+my_font_setting =r'''
     \setmainfont{Noto Serif CJK KR}
     \setsansfont{Noto Sans CJK KR}
     \setmonofont{Noto Sans Mono CJK KR}
-    ''',
-    'releasename': ' ',
-    'maketitle':r'''
+    '''
+
+my_cover_design = r'''
     \newpage
     \pagecolor{coverbackground}\afterpage{\nopagecolor}
     \begin{tikzpicture}[remember picture,overlay,shift={(current page.north west)}]
     \fill[coverband,yshift=-120mm] rectangle(\paperwidth,85mm);
     \end{tikzpicture}
-    \includegraphics[width=0.5\textwidth]{A Slick GNU Logo}
-    \pagebreak
+    \includegraphics[width=0.5\textwidth]{A_Slick_GNU_Logo.svg}
+    \newpage
+
+    '''
+
+my_title = my_cover_design + r'''
 
     \sphinxmaketitle
     '''
+my_latex_authors = 'Mark Galassi \\\\ \
+                    Jim Davies \\\\ \
+                    James Theiler \\\\ \
+                    Brian Gough \\\\ \
+                    Gerard Jungman \\\\ \
+                    Patrick Alken \\\\ \
+                    Michael Booth \\\\ \
+                    Fabrice Rossi \\\\ \
+                    Rhys Ulerich'
+
+
+
+latex_elements = {
+    'papersize': 'Letterpapaer',
+    'pointsize': '10pt',
+    'preamble': my_preamble,
+    'fontpkg': my_font_setting,
+    'releasename': ' ',
+    'maketitle': my_title
 }
 
-#latex_logo = '_static/logo_design.svg'
+latex_documents = [
+    (master_doc, 'gsl-kor-manual.tex', title, my_latex_authors, 'manual')
+]
+
+#latex_logo = 'logo_design.svg'
 
 
 def setup(app):
