@@ -65,6 +65,7 @@ my_preamble = r'''
     \usepackage{tikz}                           
     \usepackage{tikzpagenodes}                   
     \usepackage{fix-cm}
+    \usepackage[absolute,overlay]{textpos}
 
     \definecolor{coverbackground}{RGB}{209, 198, 161} 
     \definecolor{coverband}{RGB}{239, 190, 84}
