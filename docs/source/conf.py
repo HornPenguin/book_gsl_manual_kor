@@ -59,14 +59,14 @@ htmlhelp_basename = 'GSLdoc'
 latex_engine = 'xelatex'
 
 my_preamble = r'''
-    \usepackage{svg}                            # Svg image include support
-    \usepackage{afterpage}                      # Provides setting adopted space constraints by page  
-    \usepackage[pagecolor=none]{pagecolor}      # For page color setting
-    \usepackage{tikz}                           # -
-    \usepackage{tikzpagenodes}                  # ^ Draw specific 2D polygon for cover page 
+    \usepackage{svg}                            
+    \usepackage{afterpage}                      
+    \usepackage[pagecolor=none]{pagecolor}      
+    \usepackage{tikz}                           
+    \usepackage{tikzpagenodes}                   
     \usepackage{fix-cm}
 
-    \definecolor{coverbackground}{RGB}{209, 198, 161} # Color definition for Cover page
+    \definecolor{coverbackground}{RGB}{209, 198, 161} 
     \definecolor{coverband}{RGB}{239, 190, 84}
 
     '''
@@ -80,6 +80,7 @@ my_font_setting =r'''
 my_cover_design = r'''
     \newpage
     \pagecolor{coverbackground}\afterpage{\nopagecolor}
+
     \begin{tikzpicture}[remember picture,overlay,shift={(current page.north west)}]
         \fill[coverband,yshift=-120mm] rectangle(\paperwidth,85mm);
     \end{tikzpicture}
