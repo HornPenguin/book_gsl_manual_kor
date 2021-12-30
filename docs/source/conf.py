@@ -96,13 +96,11 @@ my_cover_design = r'''
     \end{textblock*}
 
     \newpage
-
-    '''
-
-my_title = my_cover_design + r'''
-
     \sphinxmaketitle
     '''
+
+my_title = my_cover_design 
+
 my_latex_authors = 'Mark Galassi \\\\ \
                     Jim Davies \\\\ \
                     James Theiler \\\\ \
