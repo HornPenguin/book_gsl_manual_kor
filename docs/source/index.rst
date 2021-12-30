@@ -4,7 +4,7 @@
 
 .. default-domain:: c
 
-.. image:: images/A_Slick_GNU_Logo.svg
+.. image:: images/A_Slick_GNU_Logo.png
    :align: center
 
 .. note::
