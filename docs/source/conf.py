@@ -58,8 +58,7 @@ htmlhelp_basename = 'GSLdoc'
 # -- Options for LaTex output--------------------------------------
 latex_engine = 'xelatex'
 
-my_preamble = r'''
-    \usepackage{svg}                            
+my_preamble = r'''                          
     \usepackage{afterpage}                      
     \usepackage[pagecolor=none]{pagecolor}      
     \usepackage{tikz}                           
@@ -86,7 +85,7 @@ my_cover_design = r'''
         \fill[coverband,yshift=-120mm] rectangle(\paperwidth,85mm);
     \end{tikzpicture}
 
-    \vspace{-0.5cm}\hspace{4.5cm}\includegraphic[width=0.6\textwidth]{A_Slick_GNU_Logo.png}
+    \vspace{-0.5cm}\hspace{4.5cm}\includegraphics[width=0.6\textwidth]{A_Slick_GNU_Logo.png}
 
     \begin{textblock*}{5cm}(15cm,6.4cm) % {block width} (coords) 
         \raggedleft \huge\textbf{과학계산}
