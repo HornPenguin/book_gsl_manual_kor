@@ -85,7 +85,7 @@ my_cover_design = r'''
         \fill[coverband,yshift=-120mm] rectangle(\paperwidth,85mm);
     \end{tikzpicture}
 
-    \vspace{-0.5cm}\hspace{4.5cm}\includegraphics[width=0.6\textwidth]{A_Slick_GNU_Logo.png}
+    \vspace{0.5cm}\hspace{4.3cm}\includegraphics[width=0.6\textwidth]{A_Slick_GNU_Logo.png}
 
     \begin{textblock*}{5cm}(15cm,6.4cm) % {block width} (coords) 
         \raggedleft \huge\textbf{과학계산}
@@ -123,7 +123,6 @@ latex_elements = {
     'maketitle': my_title
 }
 
-latex_logo = 'images/A_Slick_GNU_Logo.png'
 
 latex_documents = [
     (master_doc, 'gsl-kor-manual.tex', title, my_latex_authors, 'manual')
