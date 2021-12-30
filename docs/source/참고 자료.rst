@@ -105,7 +105,7 @@ C 표준 수학 라이브러리
 1964년도에 NBS [#NBS]_ 에서 처음 출판된 이레로 1974년도에 마지막 10판이 출판되었고 더 이상 갱신되지 않고 있습니다.
 여기서는 참고 문헌으로 사용 가능한 몇몇 수학 문헌을 소개합니다. 모두 디지털 형태로 제공되고 있으며 출판본 또한 시중에서 구할 수 있습니다. 
 
-A&S를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIST]_ 에서 `DLMF <https://dlmf.nist.gov/>`_ 프로젝트를 시작했습니다. 
+A&S를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS]_ 에서 `DLMF <https://dlmf.nist.gov/>`_ 프로젝트를 시작했습니다. 
 이 프로젝트는 **D** gitial **L** ibrary of **M** athematical **F** unctions 의 약자로 수학 함수들에 대한 참고 문헌을 핸드북 형태의 디지털 문서로 제공함을 목적으로 합니다.
 해당 문헌은 A&S의 마지막 출간 이후 출판된 여러 새로운 함수와, 기존 함수들의 새 성질들을 포함하고 있으며 지속적으로 갱신되고 있습니다.
 Cambridge University Press에서 2010년도에 출판된 서적 또한 판매하고 있습니다. 
@@ -196,7 +196,7 @@ C를 위한 api를 제공하기도 하므로 특정 함수의 기능을 C로 구
 .. [#ANSI] Americal National Standards Institute, ANSI
 .. [#KR] K&R이나 TCPL(The C Programming Language)로 축약해 부르기도 합니다. 간혹 K&R이 2nd 판이 아닌 1st 판본을 의미하는 경우도 있으니 조심해야합니다.
 .. [#NBS] National Bureau of Standards
-.. [#NIST] National Institute of Standards and Technology
+.. [#NIS] National Institute of Standards and Technology
 .. [#Griff] 대표적인 예시가 Griffith, Introduction to Quantum Mechanics 3rd edition 입니다. 
             해당 서적은 2nd 판본의 수식들이 대거 개편되었고 Wolfram language 를 사용한 문제들이 추가되었습니다.
 
