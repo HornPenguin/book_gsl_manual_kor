@@ -4,6 +4,9 @@
 
 .. default-domain:: c
 
+.. image:: images/A_Slick_GNU_Logo.svg
+   :align: center
+
 .. note::
 
    이 번역 프로젝트는 현재 진행중에 있습니다.

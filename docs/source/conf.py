@@ -40,7 +40,7 @@ intersphinx_disabled_domains = ['std']
 templates_path = ['_templates']
 static_path = ['_static']
 
-primary_domain = 'c'
+
 numfig = True
 
 # -- Options for HTML output
@@ -64,6 +64,7 @@ my_preamble = r'''
     \usepackage[pagecolor=none]{pagecolor}      # For page color setting
     \usepackage{tikz}                           # -
     \usepackage{tikzpagenodes}                  # ^ Draw specific 2D polygon for cover page 
+    \usepackage{fix-cm}
 
     \definecolor{coverbackground}{RGB}{209, 198, 161} # Color definition for Cover page
     \definecolor{coverband}{RGB}{239, 190, 84}
@@ -80,9 +81,20 @@ my_cover_design = r'''
     \newpage
     \pagecolor{coverbackground}\afterpage{\nopagecolor}
     \begin{tikzpicture}[remember picture,overlay,shift={(current page.north west)}]
-    \fill[coverband,yshift=-120mm] rectangle(\paperwidth,85mm);
+        \fill[coverband,yshift=-120mm] rectangle(\paperwidth,85mm);
     \end{tikzpicture}
-    \includegraphics[width=0.5\textwidth]{A_Slick_GNU_Logo.svg}
+
+    \vspace{-0.5cm}\hspace{4.5cm}\includesvg[width=0.6\textwidth]{A_Slick_GNU_Logo.svg}
+
+    \begin{textblock*}{5cm}(15cm,6.4cm) % {block width} (coords) 
+        \raggedleft \huge\textbf{과학계산}
+    \end{textblock*}
+
+    \begin{textblock*}{10cm}(10cm,7.8cm)
+        \raggedleft\Huge\textbf{라이브러리}\\
+        \fontsize{35}{60}\selectfont \textbf{사용 설명서}
+    \end{textblock*}
+
     \newpage
 
     '''
@@ -104,7 +116,7 @@ my_latex_authors = 'Mark Galassi \\\\ \
 
 
 latex_elements = {
-    'papersize': 'Letterpapaer',
+    'papersize': 'a4papaer',
     'pointsize': '10pt',
     'preamble': my_preamble,
     'fontpkg': my_font_setting,
