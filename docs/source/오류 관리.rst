@@ -40,7 +40,7 @@
 
 .. code-block:: console
 
-     gsl: file.c:67: ERROR: invalid argument supplied by user
+     gsl: file.67: ERROR: invalid argument supplied by user
      Default GSL error handler invoked.
      Aborted
 
@@ -58,23 +58,23 @@
 다음은 가장 일반적인 오류 코드입니다.
 
 
-.. c:var:: int GSL_EDOM
+.. var:: int GSL_EDOM
 
      도메인 오류: 인수 값이 함수가 정의된 도메인에 포함되지 않을 때, 수학 함수에 의해 사용됩니다. 
      표준 C 라이브러리의 :code:`EDOM` 와 같은 상황에서 사용됩니다. 
 
-.. c:var:: int GSL_ERANGE
+.. var:: int GSL_ERANGE
 
      범위 오류: 오버플로 또는 언더플로로 인해 결과 값을 나타낼 수 없는 경우, 수학 함수에 의해 사용됩니다.
      표준 C 라이브러리의 :code:`ERANGE` 와 같은 상황에서 사용됩니다. 
 
-.. c:var:: int GSL_ENOMEM
+.. var:: int GSL_ENOMEM
 
      사용 가능한 메모리가 없음: 용량이 꽉 찼기 때문에 시스템이 가상 메모리를 더 할당할 수 없습니다.
      표준 C 라이브러리의 :code:`ENOMEM` 와 같은 상황에서 사용됩니다. 
      이 오류는 :code:`malloc()` 메모리를 할당하려고 할 때 GSL 루틴에 문제가 발생할 때 보고됩니다.
 
-.. c:var:: int GSL_EINVAL
+.. var:: int GSL_EINVAL
 
      잘못된 인수: 이는 잘못된 인수를 라이브러리 함수에 전달하는 데 다양한 종류의 문제를 나타내기 위해 사용됩니다().
      표준 C 라이브러리의 :code:`EINVAL` 와 유사합니다.
@@ -114,7 +114,7 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :code
 모든 GSL 오류 관리자들은 :code:`gsl_error_handler_t` 형으로 정의됩니다. 이는 :code:`gsl_errno.h` 에 정의되어 있습니다.
 
 
-.. c:type:: gsl_error_handler_t
+.. type:: gsl_error_handler_t
 
      이는 GSL 오류 관리자 함수의 자료형입니다. 오류 관리자는 4개의 인자를 넘겨 받습니다. 이 인자들은 오류의 이유(문자열), 
      오류가 발생한 소스 파일의 이름(문자열), 그 파일에서 오류가 발생한 줄 숫자(정수), 그리고 오류 코드(정수)입니다. 
@@ -123,12 +123,12 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :code
 
 오류 관리자는 다음과 같이 정의되어야 합니다.
 
-.. c:function:: void handler (const char * reason, const char * file, int line ,int gsl_errno)
+.. function:: void handler (const char * reason, const char * file, int line ,int gsl_errno)
 
      사용자 정의 오류 관리자를 사용하기 위해서는 :code:`gsl_set_error_handler()` 함수를 호출해야합니다. 
      이 함수도 :code:`gsl_errno.h` 에 정의되어 있습니다.
 
-.. c:function:: gsl_error_handler_t * gsl_set_error_handler ( gsl_error_handler_t * new_handler)
+.. function:: gsl_error_handler_t * gsl_set_error_handler ( gsl_error_handler_t * new_handler)
 
 
      이 함수는 GSL 명령어 집합을 위한 :code:`new_handler` 는 새로운 오류 관리자를 설정합니다. 
@@ -156,7 +156,7 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :code
      old_handler = gsl_set_error_handler (NULL);
 
 
-.. c:function:: gsl_error_handler_t * gsl_set_error_handler_off()
+.. function:: gsl_error_handler_t * gsl_set_error_handler_off()
 
      오류 관리자 기능을 아무것도 하지 않도록 설정해 꺼버립니다. 
      이는 어떤 오류가 발생해도 프로그램이 계속 작동하도록 하기 때문에, 
@@ -180,7 +180,7 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :code
 :code:`gsl_errno.h` 에서는 이러한 과정을 효율적으로 처리해 줄 수 있는 두 개의 매크로를 제공합니다.
 
 
-.. c:macro:: GSL_ERROR (reason, gsl_errno)
+.. macro:: GSL_ERROR (reason, gsl_errno)
 
      이 매크로는 GSL 규약에 따라 오류를 보고하고 :code:`gsl_errno` 상태 값을 반환합니다. 이는 다음과 같은 함수로 확장해 볼 수 있습니다.
 
@@ -202,7 +202,7 @@ GSL 오류 관리자의 기본 행동은 짧은 메세지를 출력하고, :code
           }
 
 
-.. c:macro:: GSL_ERROR_VAL (reason, gsl_errno, value)
+.. macro:: GSL_ERROR_VAL (reason, gsl_errno, value)
 
      이 매크로는 :code:`GSL_ERROR` 매크로와 똑같습니다. 하지만 사용자 정의 값 :code:`value` 를 오류 코드 대신에 반환합니다. 
      이는 부동 소수점 값을 반환하는 수치 함수에서 쓰일 수 있습니다.

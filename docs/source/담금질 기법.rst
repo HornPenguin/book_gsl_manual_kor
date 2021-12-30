@@ -45,7 +45,7 @@
 담금질 함수
 ========================
 
-.. c:function:: void gsl_siman_solve (const gsl_rng * r, void * x0_p, gsl_siman_Efunc_t Ef, gsl_siman_step_t take_step, gsl_siman_metric_t distance, gsl_siman_print_t print_position, gsl_siman_copy_t copyfunc, gsl_siman_copy_construct_t copy_constructor, gsl_siman_destroy_t destructor, size_t element_size, gsl_siman_params_t params)
+.. function:: void gsl_siman_solve (const gsl_rng * r, void * x0_p, gsl_siman_Efunc_t Ef, gsl_siman_step_t take_step, gsl_siman_metric_t distance, gsl_siman_print_t print_position, gsl_siman_copy_t copyfunc, gsl_siman_copy_construct_t copy_constructor, gsl_siman_destroy_t destructor, size_t element_size, gsl_siman_params_t params)
 
 
    주어진 공간에서 담금질 기법을 이용해 해를 찾습니다. 공간은  :code:`Ef` 와  :code:`distance` 로 정의됩니다. 
@@ -84,7 +84,7 @@
 풀고자하는 문제에 적절한 함수들을 스스로 선택해 알고리즘에 사용할 수 있습니다.
 
 
-.. c:type:: gsl_siman_Efunc_t
+.. type:: gsl_siman_Efunc_t
 
    현재 상태 :code:`xp` 에 대한 에너지를 반환해야 합니다.
  
@@ -93,7 +93,7 @@
        double (*gsl_siman_Efunc_t) (void *xp)
 
 
-.. c:type:: gsl_siman_step_t
+.. type:: gsl_siman_step_t
 
    현재 상태 :code:`xp` 를 난수 발생자 :code:`r` 와 
    단계별 최대 이동거리 :code:`step_size` 를 이용해 수정해야 합니다.
@@ -103,7 +103,7 @@
      void (*gsl_siman_step_t) (const gsl_rng *r, void *xp, double step_size)
         
 
-.. c:type:: gsl_siman_metric_t
+.. type:: gsl_siman_metric_t
 
    주어진 두 개의 상태 :code:`xp` 와 :code:`yp` 사이의 거리를 반환해야 합니다.
  
@@ -111,7 +111,7 @@
  
      double (*gsl_siman_metric_t) (void * xp, void * yp)
 
-.. c:type:: gsl_siman_print_t
+.. type:: gsl_siman_print_t
 
    주어진 상태 :code:`xp` 의 설정값을 출력해야 합니다.
  
@@ -120,7 +120,7 @@
        void (*gsl_siman_print_t) (void *xp)
 
 
-.. c:type:: gsl_siman_copy_t
+.. type:: gsl_siman_copy_t
 
    설정 값을 :code:`source` 에서  :code:`dest` 로 복사해야 합니다.
  
@@ -128,7 +128,7 @@
  
        void (*gsl_siman_copy_t) (voi d *souirce, coid *dest)
 
-.. c:type:: gsl_siman_copy_construct_t 
+.. type:: gsl_siman_copy_construct_t 
 
    설정 :code:`xp` 의 새 복사본을 만들어야 합니다.
  
@@ -136,7 +136,7 @@
    
      void (*gsl_siman_copy_construct_t) (void *xp)
 
-.. c:type:: gsl_siman_destroy_t
+.. type:: gsl_siman_destroy_t
 
    설정 :code:`xp` 를 삭제해야 합니다. 
    다시말해, :code:`xp` 가 들어있는 메모리를 해제해야 합니다.
@@ -146,7 +146,7 @@
      void (*gsl_siman_destroy_t) (void *xp)
 
 
-.. c:type:: gsl_siman_params_t
+.. type:: gsl_siman_params_t
 
    :code:`gsl_siman_solve()` 의 실행을 제어하는 인자들입니다. 
    이 구조체는 탐색, 에너지 함수, 단계 함수와 초기 가정을 제어하는 데 필요한 
@@ -322,6 +322,6 @@ Mark Galassi는 미국 남부 도시 12개의 좌표를 기반으로 아주 간�
 - Modern Heuristic Techniques for Combinatorial Problems, Colin R. Reeves (ed.), McGraw-Hill, 1995 (ISBN 0-07-709239-2).
 
 
-.. rubric:: 각주
+.. rubri: 각주
 
 .. [#Geoid] 해발고도를 재는 기준이 되는 지구의 구형 높이 입니다(*).

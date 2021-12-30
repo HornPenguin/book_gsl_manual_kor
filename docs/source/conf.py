@@ -40,7 +40,7 @@ intersphinx_disabled_domains = ['std']
 templates_path = ['_templates']
 static_path = ['_static']
 
-
+primary_domain = 'c'
 numfig = True
 
 # -- Options for HTML output

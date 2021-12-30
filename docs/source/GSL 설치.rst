@@ -93,7 +93,7 @@ Prerequisites
  
 .. code-block:: console
 
-    gcc: fatal error: no input files
+    gc fatal error: no input files
     compliation terminated
 
 
@@ -236,6 +236,6 @@ Final install
 
 재부팅 후나 :code:`$ source ~/.bashrc` 를 입력하면 정상적으로 사용이 가능합니다.
 
-.. rubric:: 각주
+.. rubri: 각주
 
 .. [#bashrc] 해당 파일은 bash가 시작할 때 실행되는 명령어를 기술하고 있습니다.

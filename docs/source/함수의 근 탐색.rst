@@ -74,19 +74,19 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 풀이 시작하기
 ==================
  
-.. c:type:: gsl_root_fsolver
+.. type:: gsl_root_fsolver
 
  
     괄호법을 사용하는 근 탐색 알고리즘을 위한 풀이 공간입니다.
 
  
-.. c:type:: gsl_root_fdfsolver
+.. type:: gsl_root_fdfsolver
 
  
     도함수가 필요한 근 탐색 알고리즘(기울기 연마 방법)을 위한 풀이 공간입니다.
 
  
-.. c:function:: gsl_root_fsolver * gsl_root_fsolver_alloc (const gsl_root_fsolver_type * T)
+.. function:: gsl_root_fsolver * gsl_root_fsolver_alloc (const gsl_root_fsolver_type * T)
 
  
     :math:`T`  풀이 방법을 위한 새 풀이 공간을 할당해 포인터를 반환합니다. 
@@ -102,7 +102,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
     오류 관리자가 :math:`GSL_ENOMEM` 코드의 오류를 보고합니다.
 
  
-.. c:function:: gsl_root_fdfsolver * gsl_root_fdfsolver_alloc (const gsl_root_fdfsolver_type * T)
+.. function:: gsl_root_fdfsolver * gsl_root_fdfsolver_alloc (const gsl_root_fdfsolver_type * T)
 
  
     미분 기반 풀이형 :math:`T` 위한 새 풀이 공간을 할당해 포인터를 반환합니다. 
@@ -117,25 +117,25 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
     함수는 :math:`NULL` 포인터를 반환하고 오류 관리자가 :math:`GSL_ENOMEM` 코드의 오류를 보고합니다.
 
  
-.. c:function:: int gsl_root_fsolver_set (gsl_root_fsolver * s, gsl_function * f, double x_lower, double x_upper)
+.. function:: int gsl_root_fsolver_set (gsl_root_fsolver * s, gsl_function * f, double x_lower, double x_upper)
 
  
     함수 :math:`f` 를 이용해 해를 찾는 풀이 공간 :math:`s` 에 대해 
     초기 탐색 구간을 [ :math:`x_lower`  :math:`x_upper` ] 로 잡고 풀이를 시작/재시작 시킵니다.
 
-.. c:function:: int gsl_root_fdfsolver_set (gsl_root_fdfsolver * s, gsl_function_fdf * fdf, double root)
+.. function:: int gsl_root_fdfsolver_set (gsl_root_fdfsolver * s, gsl_function_fdf * fdf, double root)
 
     함수 :math:`f` 와 그 도함수 :math:`fdf` 를 이용해 해를 찾는 풀이 공간 :math:`s` 에 대해 
     초기 추정 위치를 :math:`root` 로 잡고 풀이를 시작/재시작 시킵니다.
 
-.. c:function:: void gsl_root_fsolver_free (gsl_root_fsolver * s)
+.. function:: void gsl_root_fsolver_free (gsl_root_fsolver * s)
               void gsl_root_fdfsolver_free (gsl_root_fdfsolver * s)
 
  
     풀이 공간 :math:`s` 할당된 메모리 영역을 해제합니다.
 
  
-.. c:function:: const char * gsl_root_fsolver_name (const gsl_root_fsolver * s)
+.. function:: const char * gsl_root_fsolver_name (const gsl_root_fsolver * s)
               const char * gsl_root_fdfsolver_name (const gsl_root_fdfsolver * s)
 
  
@@ -158,7 +158,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 
 다음과 같이 함수를 정의하면, 일반적인 함수의 계수처럼 함수를 쓸 수 있습니다.
 
-.. c:type:: gsl_function 
+.. type:: gsl_function 
 
     이 자료형은 계수를 갖는 일반적인 함수를 정의합니다.
 
@@ -207,7 +207,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 함수 :math:`f(x)` 는 매크로 :math:`GSL_FN_EVAL(&F, x)` 를 이용해 평가해 볼 수 있습니다. 
 이는 :code:`gsl_math.h` 에 정의되어 있습니다.
 
-.. c:type:: gsl_function_fdf
+.. type:: gsl_function_fdf
 
     이 자료형은 계수를 갖는 일반적인 함수와 이 함수의 1계 도함수를 정의합니다.
 
@@ -291,7 +291,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 다른 방법을 대체할 수 있습니다.
 
  
-.. c:function:: int gsl_root_fsolver_iterate (gsl_root_fsolver * s)
+.. function:: int gsl_root_fsolver_iterate (gsl_root_fsolver * s)
               int gsl_root_fdfsolver_iterate (gsl_root_fdfsolver * s)
 
  
@@ -313,14 +313,14 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 이 정보는 다음과 같은, 보조 함수들을 이용해 접근할 수 있습니다.
 
  
-.. c:function:: double gsl_root_fsolver_root (const gsl_root_fsolver * s)
+.. function:: double gsl_root_fsolver_root (const gsl_root_fsolver * s)
               double gsl_root_fdfsolver_root (const gsl_root_fdfsolver * s)
 
  
     호출시점에 풀이 공간 :math:`s` 현재 저장된 근의 근사 값을 반환합니다.
 
  
-.. c:function:: double gsl_root_fsolver_x_lower (const gsl_root_fsolver * s)
+.. function:: double gsl_root_fsolver_x_lower (const gsl_root_fsolver * s)
               double gsl_root_fsolver_x_upper (const gsl_root_fsolver * s)
 
     호출시점에 풀이 공간 :math:`s` 현재 탐색 구간의 하한, 상한 값을 반환합니다.
@@ -339,7 +339,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 정확도를 검증해 볼 수 있게 해줍니다.
 
  
-.. c:function:: int gsl_root_test_interval (double x_lower, double x_upper, double epsabs, double epsrel)
+.. function:: int gsl_root_test_interval (double x_lower, double x_upper, double epsabs, double epsrel)
 
     구간 [ :math:`x_lower`  :math:`x_upper` ] 의 수렴을 
     절대 오차 :math:`epsabs` 와 상대 오차 :math:`epsrel` 를 이용해 검증합니다. 
@@ -364,7 +364,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
     이때, 실제 근 :math:`r^*` 이 구간에 포함되어 있어야 합니다.
 
  
-.. c:function:: int gsl_root_test_delta (double x1, double x0, double epsabs, double epsrel)
+.. function:: int gsl_root_test_delta (double x1, double x0, double epsabs, double epsrel)
 
 
     수열 :math:`x0` :math:`x1` 수렴을 
@@ -378,7 +378,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
     다른 경우에는 :math:`GSL_CONTINUE` 를 반환합니다.
 
  
-.. c:function:: int gsl_root_test_residual (double f, double epsabs)
+.. function:: int gsl_root_test_residual (double f, double epsabs)
 
     잔존값(residual value) :math:`f`를 
     절대 오차 한계 :math:`epsab` 에 대해 검증합니다. 
@@ -406,11 +406,11 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 이 경우 근이 :math:`x` 축을 지나지 않고 접하기 때문입니다.
 
 
-.. c:type:: gsl_root_fsolver_type
+.. type:: gsl_root_fsolver_type
 
 
  
-   .. c:var:: gsl_root_fsolver_type * gsl_root_fsolver_bisection
+   .. var:: gsl_root_fsolver_type * gsl_root_fsolver_bisection
 
         **이분법** ( *Bisection* ) 알고리즘은 가장 간단한 괄호법 근 탐색 알고리즘입니다. 
         이 라이브러리에서 제공하는 함수중 가장 느린 선형 수렴 알고리즘이기도 합니다.
@@ -422,7 +422,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 
         각 단계에서, 근의 추정치는 현재 구간의 중간점으로 간주됩니다.
 
-   .. c:var:: gsl_root_fsolver_type * gsl_root_fsolver_falsepos
+   .. var:: gsl_root_fsolver_type * gsl_root_fsolver_falsepos
 
         **할선법** ( *false postion algorithm* )은 선형 보간법에 기반해 근을 탐색합니다. 
         똑같이 선형으로 수렴하지만, 이분법보다 빠릅니다.
@@ -436,7 +436,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
         근의 최적 추정치는 현재 반복에 대한 구간의 선형 보간값으로 간주됩니다.
 
  
-   .. c:var:: gsl_root_fsolver_type * gsl_root_fsolver_brent
+   .. var:: gsl_root_fsolver_type * gsl_root_fsolver_brent
 
         **브렌트-데커 방법** ( *Brent-Dekker algorithm* )은 이분법에 보간법을 같이 적용한 방법입니다. 
         이 방법은 강력하면서도 빠른 알고리즘입니다. 
@@ -463,10 +463,10 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 
 이 알고리즘은 함수와 그 도함수를 필요로 합니다.
 
-.. c:type:: gsl_root_fdfsolver_type
+.. type:: gsl_root_fdfsolver_type
 
  
-   .. c:var:: gsl_root_fdfsolver_type * gsl_root_fdfsolver_newton
+   .. var:: gsl_root_fdfsolver_type * gsl_root_fdfsolver_newton
 
  
         이 방법은 **뉴턴 방법(Newton's Method)** 으로 불리는 방법으로 표준적인 기울기 연마 알고리즘입니다. 
@@ -482,7 +482,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
         뉴턴 방법은 단일 근에 대해 2차수의 수렴 속도를 가지며, 
         복수의 근에 대해서는 선형적인 수렴 속도를 가집니다.
 
-   .. c:var:: gsl_root_fdfsolver_type * gsl_root_fdfsolver_secant
+   .. var:: gsl_root_fdfsolver_type * gsl_root_fdfsolver_secant
 
  
         **할선 방법(secant method)** 은 뉴턴 방법과 흡사한 방법으로, 
@@ -514,7 +514,7 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
         단일근에서 이 방법은 :math:`(1+\sqrt{5})/2` 의 수렴 속도를 가집니다. 
         이는 대략 1.62 정도입니다. 다중근에 대해서는 선형적으로 수렴합니다.
 
-   .. c:var:: gsl_root_fdfsolver_type * gsl_root_fdfsolver_steffenson
+   .. var:: gsl_root_fdfsolver_type * gsl_root_fdfsolver_steffenson
 
         **스테퍼슨 방법(Steffenson Method)**은 라이브러리의 함수 중 가장 빠른 수렴 속도를 제공합니다. 
         이 방법은 기본적인 뉴턴 알고리즘에 아티켄(Aitken)의 **델타-제곱(delta-suared)** 가속을 추가한 방법입니다. 
@@ -632,6 +632,6 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 * J. C. P. Bus and T. J. Dekker, “Two Efficient Algorithms with Guaranteed Convergence for 
   Finding a Zero of a Function”, ACM Transactions of Mathematical Software, Vol.: 1 No.: 4 (1975) 330–345
 
-.. rubric:: 각주
+.. rubri: 각주
 
 .. [#괄호법] 근의 존재 구간이 주어진 경우(*)

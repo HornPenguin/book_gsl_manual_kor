@@ -96,48 +96,48 @@ GSL은 관련된 자료형에 기반한 밀집 벡터, 행렬 객체들을 제�
 Level 1 BLAS 인터페이스
 -------------------------
 
-.. c:function:: int gsl_blas_sdsdot (float alpha, const gsl_vector_float * x, const gsl_vector_float * y, float * result)
+.. function:: int gsl_blas_sdsdot (float alpha, const gsl_vector_float * x, const gsl_vector_float * y, float * result)
 
  :math:`\alpha + x^T y` 값을 주어진 벡터 :math:`x` 와 :math:`y`  대해 계산하고 결과를 :math:`result` 에 반환합니다.
 
-.. c:function:: int gsl_blas_sdot (const gsl_vector_float * x, const gsl_vector_float * y, float * result)
+.. function:: int gsl_blas_sdot (const gsl_vector_float * x, const gsl_vector_float * y, float * result)
               int gsl_blas_dsdot (const gsl_vector_float * x, const gsl_vector_float * y, double * result)
               int gsl_blas_ddot (const gsl_vector * x, const gsl_vector * y, double * result)
 
   스칼라 곱 :math:`x^T y` 를 주어진 벡터 :math:`x` 와 :math:`y`  대해 계산하고 결과를 :math:`result` 에 반환합니다.
 
-.. c:function:: int gsl_blas_cdotu (const gsl_vector_complex_float * x, const gsl_vector_complex_float * y, gsl_complex_float * dotu)
+.. function:: int gsl_blas_cdotu (const gsl_vector_complex_float * x, const gsl_vector_complex_float * y, gsl_complex_float * dotu)
               int gsl_blas_zdotu (const gsl_vector_complex * x, const gsl_vector_complex * y, gsl_complex * dotu)
 
   복소수 스칼라 곱 :math:`x^T y`  를 주어진 벡터 :math:`x` 와 :math:`y`  대해 계산하고 결과를 :math:`result` 에 반환합니다.
 
-.. c:function:: int gsl_blas_cdotc (const gsl_vector_complex_float * x, const gsl_vector_complex_float * y, gsl_complex_float * dotc)
+.. function:: int gsl_blas_cdotc (const gsl_vector_complex_float * x, const gsl_vector_complex_float * y, gsl_complex_float * dotc)
               int gsl_blas_zdotc (const gsl_vector_complex * x, const gsl_vector_complex * y, gsl_complex * dotc)
 
   켤레 복소 스클라 곱 :math:`x^Hy`  를 주어진 벡터 :math:`x` 와 :math:`y`  대해 계산하고 결과를 :math:`dotc` 에 반환합니다.
 
-.. c:function:: float gsl_blas_snrm2 (const gsl_vector_float * x)
+.. function:: float gsl_blas_snrm2 (const gsl_vector_float * x)
               double gsl_blas_dnrm2 (const gsl_vector * x)
 
   유클리드 노름 :math:`\|x\|_2 = \sqrt{\sum x_i^2}`  의 값을 주어진 벡터 :math:`x` 에 대해 계산합니다.
 
-.. c:function:: float gsl_blas_scnrm2 (const gsl_vector_complex_float * x)
+.. function:: float gsl_blas_scnrm2 (const gsl_vector_complex_float * x)
               double gsl_blas_dznrm2 (const gsl_vector_complex * x)
 
   유클리드 노름 :math:`\|x\|_2 = \sqrt{\sum \Re(x_i)^2+\Im(x_i)^2}`  의 값을 주어진 복소수 벡터 :math:`x` 에 대해 계산합니다.
 
-.. c:function:: float gsl_blas_sasum (const gsl_vector_float * x)
+.. function:: float gsl_blas_sasum (const gsl_vector_float * x)
               double gsl_blas_dasum (const gsl_vector * x)
 
   절대값 급수 :math:`\sum |x_i|`  의 값을 주어진 벡터 :math:`x` 에 대해 계산합니다.
 
-.. c:function:: float gsl_blas_scasum (const gsl_vector_complex_float * x)
+.. function:: float gsl_blas_scasum (const gsl_vector_complex_float * x)
               double gsl_blas_dzasum (const gsl_vector_complex * x)
 
   실수, 허수의 크기 급수 :math:`\sum (|\Re(x_i)|+|\Im(x_i)|)`  의 값을 주어진 복소수 벡터 :math:`x` 에 대해 계산합니다.
 
 
-.. c:function:: CBLAS_INDEX_t gsl_blas_isamax (const gsl_vector_float * x)
+.. function:: CBLAS_INDEX_t gsl_blas_isamax (const gsl_vector_float * x)
               CBLAS_INDEX_t gsl_blas_idamax (const gsl_vector * x)
               CBLAS_INDEX_t gsl_blas_icamax (const gsl_vector_complex_float * x)
               CBLAS_INDEX_t gsl_blas_izamax (const gsl_vector_complex * x)
@@ -147,28 +147,28 @@ Level 1 BLAS 인터페이스
   복소수 벡터의 경우 실, 허수 부분의 크기의 합 :math:`|\Re(x_i)| + |\Im(x_i)|` 이 가장 큰 원소로 결정됩니다. 
   만약ㅡ 가장 큰 원소가 여러개 있다면, 그 중 첫번째 원소가 반환됩니다.
 
-.. c:function:: int gsl_blas_sswap (gsl_vector_float * x, gsl_vector_float * y)
+.. function:: int gsl_blas_sswap (gsl_vector_float * x, gsl_vector_float * y)
               int gsl_blas_dswap (gsl_vector * x, gsl_vector * y)
               int gsl_blas_cswap (gsl_vector_complex_float * x, gsl_vector_complex_float * y)
               int gsl_blas_zswap (gsl_vector_complex * x, gsl_vector_complex * y)
 
   주어진 벡터 :math:`x` 와 :math:`y`  의 원소들을 교환합니다.
 
-.. c:function:: int gsl_blas_scopy (const gsl_vector_float * x, gsl_vector_float * y)
+.. function:: int gsl_blas_scopy (const gsl_vector_float * x, gsl_vector_float * y)
               int gsl_blas_dcopy (const gsl_vector * x, gsl_vector * y)
               int gsl_blas_ccopy (const gsl_vector_complex_float * x, gsl_vector_complex_float * y)
               int gsl_blas_zcopy (const gsl_vector_complex * x, gsl_vector_complex * y)
 
   주어진 벡터 :math:`x` 원소들을 :math:`y`  로 복사합니다.
 
-.. c:function:: int gsl_blas_saxpy (float alpha, const gsl_vector_float * x, gsl_vector_float * y)
+.. function:: int gsl_blas_saxpy (float alpha, const gsl_vector_float * x, gsl_vector_float * y)
               int gsl_blas_daxpy (double alpha, const gsl_vector * x, gsl_vector * y)
               int gsl_blas_caxpy (const gsl_complex_float alpha, const gsl_vector_complex_float * x, gsl_vector_complex_float * y)
               int gsl_blas_zaxpy (const gsl_complex alpha, const gsl_vector_complex * x, gsl_vector_complex * y)
 
  :math:`y=\alpha x + y`  의 값을 주어진 벡터 :math:`x` 와 :math:`y`  에 대해 계산합니다.
 
-.. c:function:: void gsl_blas_sscal (float alpha, gsl_vector_float * x)
+.. function:: void gsl_blas_sscal (float alpha, gsl_vector_float * x)
               void gsl_blas_dscal (double alpha, gsl_vector * x)
               void gsl_blas_cscal (const gsl_complex_float alpha, gsl_vector_complex_float * x)
               void gsl_blas_zscal (const gsl_complex alpha, gsl_vector_complex * x)
@@ -177,7 +177,7 @@ Level 1 BLAS 인터페이스
 
   벡터 :math:`x` 원소들의 크기를 주어진 값 :math:`alpha` 를 곱해 변경합니다.
 
-.. c:function:: int gsl_blas_srotg (float a[], float b[], float c[], float s[])
+.. function:: int gsl_blas_srotg (float a[], float b[], float c[], float s[])
               int gsl_blas_drotg (double a[], double b[], double c[], double s[])
 
   벡터 :math:`(a,b)` 를 0으로 만드는 기븐스(Givens) 회전 :math:`(c,s)` 를 계산합니다.
@@ -205,17 +205,17 @@ Level 1 BLAS 인터페이스
 
   변수 :math:`a`  와 :math:`b` 는 명령어에 의해 계산과정에서 여러번 초기화됩니다.
 
-.. c:function:: int gsl_blas_srot (gsl_vector_float * x, gsl_vector_float * y, float c, float s)
+.. function:: int gsl_blas_srot (gsl_vector_float * x, gsl_vector_float * y, float c, float s)
               int gsl_blas_drot (gsl_vector * x, gsl_vector * y, const double c, const double s)
 
   회전 :math:`(x',y') = (cx+sy, -sx+cy)` 을 주어진 벡터 :math:`x` 와 :math:`y` 에 대해 적용합니다.
 
-.. c:function:: int gsl_blas_srotmg (float d1[], float d2[], float b1[], float b2, float P[])
+.. function:: int gsl_blas_srotmg (float d1[], float d2[], float b1[], float b2, float P[])
               int gsl_blas_drotmg (double d1[], double d2[], double b1[], double b2, double P[])
 
   수정 기븐스 변환을 계산합니다. 수정 기븐스 변환은 Level-1 BLAS specification에 정의되어 있습니다.
 
-.. c:function:: int gsl_blas_srotm (gsl_vector_float * x, gsl_vector_float * y, const float P[])
+.. function:: int gsl_blas_srotm (gsl_vector_float * x, gsl_vector_float * y, const float P[])
               int gsl_blas_drotm (gsl_vector * x, gsl_vector * y, const double P[])
 
   수정 기븐슨 변환을 적용합니다.
@@ -224,7 +224,7 @@ Level 1 BLAS 인터페이스
 Level 2 BLAS 인터페이스
 -------------------------
 
-.. c:function:: int gsl_blas_sgemv (CBLAS_TRANSPOSE_t TransA, float alpha, const gsl_matrix_float * A, const gsl_vector_float * x, float beta, gsl_vector_float * y)
+.. function:: int gsl_blas_sgemv (CBLAS_TRANSPOSE_t TransA, float alpha, const gsl_matrix_float * A, const gsl_vector_float * x, float beta, gsl_vector_float * y)
               int gsl_blas_dgemv (CBLAS_TRANSPOSE_t TransA, double alpha, const gsl_matrix * A, const gsl_vector * x, double beta, gsl_vector * y)
               int gsl_blas_cgemv (CBLAS_TRANSPOSE_t TransA, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, const gsl_vector_complex_float * x, const gsl_complex_float beta, gsl_vector_complex_float * y)
               int gsl_blas_zgemv (CBLAS_TRANSPOSE_t TransA, const gsl_complex alpha, const gsl_matrix_complex * A, const gsl_vector_complex * x, const gsl_complex beta, gsl_vector_complex * y)
@@ -232,7 +232,7 @@ Level 2 BLAS 인터페이스
   행렬-벡터 사이의 곱, 덧셈인 :math:`y = \alpha op(A) x + \beta y`  을 계산합니다. 
   :code:`op(A) = A, A^T, A.h` 이고 :code:`TransA` = :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConjTrans` 가 가능합니다.
 
-.. c:function:: int gsl_blas_strmv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix_float * A, gsl_vector_float * x)
+.. function:: int gsl_blas_strmv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix_float * A, gsl_vector_float * x)
               int gsl_blas_dtrmv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix * A, gsl_vector * x)
               int gsl_blas_ctrmv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix_complex_float * A, gsl_vector_complex_float * x)
               int gsl_blas_ztrmv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix_complex * A, gsl_vector_complex * x)
@@ -244,7 +244,7 @@ Level 2 BLAS 인터페이스
   만약, :code:`Dig` 가 :code:`CblasNonUnit` 라면 행렬의 대각 성분들이 사용됩니다.
   :code:`CblasUnit` 라면 행렬 :math:`A` 의 대각 성분들은 유니터리 행렬의 대각성분으로 취급되기 때문에 참고되지 않습니다. 
 
-.. c:function:: int gsl_blas_strsv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix_float * A, gsl_vector_float * x)
+.. function:: int gsl_blas_strsv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix_float * A, gsl_vector_float * x)
               int gsl_blas_dtrsv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix * A, gsl_vector * x)
               int gsl_blas_ctrsv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix_complex_float * A, gsl_vector_complex_float * x)
               int gsl_blas_ztrsv (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_matrix_complex * A, gsl_vector_complex * x)
@@ -256,7 +256,7 @@ Level 2 BLAS 인터페이스
   만약, :code:`Dig`가 :code:`CblasNonUnit` 라면 행렬의 대각 성분들이 사용됩니다.
   :code:`CblasUnit` 라면 행렬 :math:`A` 의 대각 성분들은 유니터리 행렬의 대각성분으로 취급되기 때문에 참고되지 않습니다. 
 
-.. c:function:: int gsl_blas_ssymv (CBLAS_UPLO_t Uplo, float alpha, const gsl_matrix_float * A, const gsl_vector_float * x, float beta, gsl_vector_float * y)
+.. function:: int gsl_blas_ssymv (CBLAS_UPLO_t Uplo, float alpha, const gsl_matrix_float * A, const gsl_vector_float * x, float beta, gsl_vector_float * y)
               int gsl_blas_dsymv (CBLAS_UPLO_t Uplo, double alpha, const gsl_matrix * A, const gsl_vector * x, double beta, gsl_vector * y)
 
   행렬-벡터 곱과 합 :math:`y = \alpha Ax + \beta y` 을 대칭 행렬 :math:`A` 에 대해 계산합니다. 
@@ -264,7 +264,7 @@ Level 2 BLAS 인터페이스
   :code:`Uplo`  가 :code:`CblasUpper`  일 때, 행렬 :math:`A` 의 상삼각 행렬이 사용되고,
   :code:`CblasLower`  라면, 행렬 :math:`A` 의 하삼각 행렬이 사용됩니다. 
 
-.. c:function:: int gsl_blas_chemv (CBLAS_UPLO_t Uplo, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, const gsl_vector_complex_float * x, const gsl_complex_float beta, gsl_vector_complex_float * y)
+.. function:: int gsl_blas_chemv (CBLAS_UPLO_t Uplo, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, const gsl_vector_complex_float * x, const gsl_complex_float beta, gsl_vector_complex_float * y)
               int gsl_blas_zhemv (CBLAS_UPLO_t Uplo, const gsl_complex alpha, const gsl_matrix_complex * A, const gsl_vector_complex * x, const gsl_complex beta, gsl_vector_complex * y)
 
   행렬-벡터 곱과 합 :math:`y = \alpha Ax + \beta y`  을 에르미트 행렬 :math:`A` 에 대해 계산합니다. 
@@ -274,19 +274,19 @@ Level 2 BLAS 인터페이스
   대각 성분의 복소 성분들은 자동적으로 0으로 가정하고 참고되지 않습니다. 
 
 
-.. c:function:: int gsl_blas_sger (float alpha, const gsl_vector_float * x, const gsl_vector_float * y, gsl_matrix_float * A)
+.. function:: int gsl_blas_sger (float alpha, const gsl_vector_float * x, const gsl_vector_float * y, gsl_matrix_float * A)
               int gsl_blas_dger (double alpha, const gsl_vector * x, const gsl_vector * y, gsl_matrix * A)
               int gsl_blas_cgeru (const gsl_complex_float alpha, const gsl_vector_complex_float * x, const gsl_vector_complex_float * y, gsl_matrix_complex_float * A)
               int gsl_blas_zgeru (const gsl_complex alpha, const gsl_vector_complex * x, const gsl_vector_complex * y, gsl_matrix_complex * A)
 
   행렬 :math:`A` 대해, 랭크-1 갱신 :math:`A = \alpha xy^T + A`  를 계산합니다.
 
-.. c:function:: int gsl_blas_cgerc (const gsl_complex_float alpha, const gsl_vector_complex_float * x, const gsl_vector_complex_float * y, gsl_matrix_complex_float * A)
+.. function:: int gsl_blas_cgerc (const gsl_complex_float alpha, const gsl_vector_complex_float * x, const gsl_vector_complex_float * y, gsl_matrix_complex_float * A)
               int gsl_blas_zgerc (const gsl_complex alpha, const gsl_vector_complex * x, const gsl_vector_complex * y, gsl_matrix_complex * A)
 
   행렬 :math:`A` 대해, 컬례 랭크-1 갱신 :math:`A = \alpha xy^H + A` 를 계산합니다.
 
-.. c:function:: int gsl_blas_ssyr (CBLAS_UPLO_t Uplo, float alpha, const gsl_vector_float * x, gsl_matrix_float * A)
+.. function:: int gsl_blas_ssyr (CBLAS_UPLO_t Uplo, float alpha, const gsl_vector_float * x, gsl_matrix_float * A)
               int gsl_blas_dsyr (CBLAS_UPLO_t Uplo, double alpha, const gsl_vector * x, gsl_matrix * A)
 
   대칭 행렬 :math:`A` 대해, 대칭 랭크-1 갱신 :math:`A = \alpha xx^T + A` 를 계산합니다. 
@@ -295,7 +295,7 @@ Level 2 BLAS 인터페이스
   :code:`CblasLower` 라면, :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다.
 
 
-.. c:function:: int gsl_blas_cher (CBLAS_UPLO_t Uplo, float alpha, const gsl_vector_complex_float * x, gsl_matrix_complex_float * A)
+.. function:: int gsl_blas_cher (CBLAS_UPLO_t Uplo, float alpha, const gsl_vector_complex_float * x, gsl_matrix_complex_float * A)
               int gsl_blas_zher (CBLAS_UPLO_t Uplo, double alpha, const gsl_vector_complex * x, gsl_matrix_complex * A)
 
   에르미트 행렬 :math:`A` 대해, 에르미트 랭크-1 갱신 :math:`A = \alpha xx^H + A` 를 계산합니다. 
@@ -304,7 +304,7 @@ Level 2 BLAS 인터페이스
   :code:`CblasLower` 라면, :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다. 
   대각 성분의 복소 성분들은 자동적으로 0으로 가정하고 참고되지 않습니다. 
 
-.. c:function:: int gsl_blas_ssyr2 (CBLAS_UPLO_t Uplo, float alpha, const gsl_vector_float * x, const gsl_vector_float * y, gsl_matrix_float * A)
+.. function:: int gsl_blas_ssyr2 (CBLAS_UPLO_t Uplo, float alpha, const gsl_vector_float * x, const gsl_vector_float * y, gsl_matrix_float * A)
               int gsl_blas_dsyr2 (CBLAS_UPLO_t Uplo, double alpha, const gsl_vector * x, const gsl_vector * y, gsl_matrix * A)
 
   대칭 행렬 :math:`A` 대해, 대칭 랭크-2 갱신 :math:`A = \alpha xy^T + \alpha yx^T + A` 를 계산합니다. 
@@ -312,7 +312,7 @@ Level 2 BLAS 인터페이스
   :code:`Uplo` 가 :code:`CblasUpper` 일 때, 행렬 :math:`A` 는 상삼각 행렬과 대각 성분들이 사용되고,  
   :code:`CblasLower` 라면, :math:`A` 는 하삼각 행렬과 대각 성분들이 사용됩니다.
 
-.. c:function:: int gsl_blas_cher2 (CBLAS_UPLO_t Uplo, const gsl_complex_float alpha, const gsl_vector_complex_float * x, const gsl_vector_complex_float * y, gsl_matrix_complex_float * A)
+.. function:: int gsl_blas_cher2 (CBLAS_UPLO_t Uplo, const gsl_complex_float alpha, const gsl_vector_complex_float * x, const gsl_vector_complex_float * y, gsl_matrix_complex_float * A)
               int gsl_blas_zher2 (CBLAS_UPLO_t Uplo, const gsl_complex alpha, const gsl_vector_complex * x, const gsl_vector_complex * y, gsl_matrix_complex * A)
 
   에르미트 행렬 :math:`A` 대해, 에르미트 랭크-2갱신 :math:`A = \alpha xy^H + \alpha yx^H + A` 를 계산합니다. 
@@ -323,7 +323,7 @@ Level 2 BLAS 인터페이스
 
 Level 3 BLAS 인터페이스
 -------------------------
-.. c:function:: int gsl_blas_sgemm (CBLAS_TRANSPOSE_t TransA, CBLAS_TRANSPOSE_t TransB, float alpha, const gsl_matrix_float * A, const gsl_matrix_float * B, float beta, gsl_matrix_float * C)
+.. function:: int gsl_blas_sgemm (CBLAS_TRANSPOSE_t TransA, CBLAS_TRANSPOSE_t TransB, float alpha, const gsl_matrix_float * A, const gsl_matrix_float * B, float beta, gsl_matrix_float * C)
               int gsl_blas_dgemm (CBLAS_TRANSPOSE_t TransA, CBLAS_TRANSPOSE_t TransB, double alpha, const gsl_matrix * A, const gsl_matrix * B, double beta, gsl_matrix * C)
               int gsl_blas_cgemm (CBLAS_TRANSPOSE_t TransA, CBLAS_TRANSPOSE_t TransB, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, const gsl_matrix_complex_float * B, const gsl_complex_float beta, gsl_matrix_complex_float * C)
               int gsl_blas_zgemm (CBLAS_TRANSPOSE_t TransA, CBLAS_TRANSPOSE_t TransB, const gsl_complex alpha, const gsl_matrix_complex * A, const gsl_matrix_complex * B, const gsl_complex beta, gsl_matrix_complex * C)
@@ -332,7 +332,7 @@ Level 3 BLAS 인터페이스
   :code:`op(A) = A, A^T, A.h` 이고 :code:`TransA` = :code:`CblasNoTrans` , :code:`CblasTrans` , :code:`CblasConjTrans` 가 가능합니다.
   :math:`TransB` 같은 인자를 사용가능합니다.
 
-.. c:function:: int gsl_blas_ssymm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, float alpha, const gsl_matrix_float * A, const gsl_matrix_float * B, float beta, gsl_matrix_float * C)
+.. function:: int gsl_blas_ssymm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, float alpha, const gsl_matrix_float * A, const gsl_matrix_float * B, float beta, gsl_matrix_float * C)
               int gsl_blas_dsymm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, double alpha, const gsl_matrix * A, const gsl_matrix * B, double beta, gsl_matrix * C)
               int gsl_blas_csymm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, const gsl_matrix_complex_float * B, const gsl_complex_float beta, gsl_matrix_complex_float * C)
               int gsl_blas_zsymm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, const gsl_complex alpha, const gsl_matrix_complex * A, const gsl_matrix_complex * B, const gsl_complex beta, gsl_matrix_complex * C)
@@ -346,7 +346,7 @@ Level 3 BLAS 인터페이스
   대각 성분의 복소 성분들은 자동적으로 0으로 가정하고 참고되지 않습니다. 
 
 
-.. c:function:: int gsl_blas_chemm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, const gsl_matrix_complex_float * B, const gsl_complex_float beta, gsl_matrix_complex_float * C)
+.. function:: int gsl_blas_chemm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, const gsl_matrix_complex_float * B, const gsl_complex_float beta, gsl_matrix_complex_float * C)
               int gsl_blas_zhemm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, const gsl_complex alpha, const gsl_matrix_complex * A, const gsl_matrix_complex * B, const gsl_complex beta, gsl_matrix_complex * C)
 
   행렬-행렬 곱을 계산합니다.  
@@ -357,7 +357,7 @@ Level 3 BLAS 인터페이스
   :code:`CblasLower` 때, 하삼각 부분과 대각 부분이 사용됩니다. 
   허수 성분의 대각 성분은 자동으로 0으로 취급됩니다.
 
-.. c:function:: int gsl_blas_strmm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, float alpha, const gsl_matrix_float * A, gsl_matrix_float * B)
+.. function:: int gsl_blas_strmm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, float alpha, const gsl_matrix_float * A, gsl_matrix_float * B)
               int gsl_blas_dtrmm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, double alpha, const gsl_matrix * A, gsl_matrix * B)
               int gsl_blas_ctrmm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, gsl_matrix_complex_float * B)
               int gsl_blas_ztrmm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_complex alpha, const gsl_matrix_complex * A, gsl_matrix_complex * B)
@@ -373,7 +373,7 @@ Level 3 BLAS 인터페이스
   만약, :math:`Diag` 가 :code:`CblasNonUnit` 라면 행렬 :math:`A` 는 대각 성분이 사용되고,  
   :code:`CblasUnit` 라면 유니터리 행렬로 취급하여 대각 성분은 참고되지 않습니다.
 
-.. c:function:: int gsl_blas_strsm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, float alpha, const gsl_matrix_float * A, gsl_matrix_float * B)
+.. function:: int gsl_blas_strsm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, float alpha, const gsl_matrix_float * A, gsl_matrix_float * B)
               int gsl_blas_dtrsm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, double alpha, const gsl_matrix * A, gsl_matrix * B)
               int gsl_blas_ctrsm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, gsl_matrix_complex_float * B)
               int gsl_blas_ztrsm (CBLAS_SIDE_t Side, CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t TransA, CBLAS_DIAG_t Diag, const gsl_complex alpha, const gsl_matrix_complex * A, gsl_matrix_complex * B)
@@ -390,7 +390,7 @@ Level 3 BLAS 인터페이스
   :code:`CblasUnit` 라면 유니터리 행렬로 취급하여 취급하여 대각 성분은 참고되지 않습니다.
 
 
-.. c:function:: int gsl_blas_ssyrk (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, float alpha, const gsl_matrix_float * A, float beta, gsl_matrix_float * C)
+.. function:: int gsl_blas_ssyrk (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, float alpha, const gsl_matrix_float * A, float beta, gsl_matrix_float * C)
               int gsl_blas_dsyrk (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, double alpha, const gsl_matrix * A, double beta, gsl_matrix * C)
               int gsl_blas_csyrk (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, const gsl_complex_float beta, gsl_matrix_complex_float * C)
               int gsl_blas_zsyrk (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, const gsl_complex alpha, const gsl_matrix_complex * A, const gsl_complex beta, gsl_matrix_complex * C)
@@ -402,7 +402,7 @@ Level 3 BLAS 인터페이스
   :code:`Uplo` 가 :code:`CblasUpper` 인 경우  행렬 :math:`C` 상삼각 부분과 대각 부분이 사용되고,  
   :code:`CblasLower` 라면 :math:`C` 의 하삼각 부분과 대각 부분이 사용됩니다. 
 
-.. c:function:: int gsl_blas_cherk (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, float alpha, const gsl_matrix_complex_float * A, float beta, gsl_matrix_complex_float * C)
+.. function:: int gsl_blas_cherk (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, float alpha, const gsl_matrix_complex_float * A, float beta, gsl_matrix_complex_float * C)
               int gsl_blas_zherk (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, double alpha, const gsl_matrix_complex * A, double beta, gsl_matrix_complex * C)
 
   에르미트 행렬 :math:`C` 랭크-k 갱신을 계산합니다. :code:`Trans` 가 :code:`CblasNoTrans` 라면  
@@ -411,7 +411,7 @@ Level 3 BLAS 인터페이스
   :code:`Uplo` 가 :code:`CblasUpper` 행렬 :math:`C` 상삼각 부분과 대각 부분이 사용되고,
   :code:`CblasLower`  라면 :math:`C` 의 하삼각 부분과 대각 부분이 사용됩니다. 
 
-.. c:function:: int gsl_blas_ssyr2k (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, float alpha, const gsl_matrix_float * A, const gsl_matrix_float * B, float beta, gsl_matrix_float * C)
+.. function:: int gsl_blas_ssyr2k (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, float alpha, const gsl_matrix_float * A, const gsl_matrix_float * B, float beta, gsl_matrix_float * C)
               int gsl_blas_dsyr2k (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, double alpha, const gsl_matrix * A, const gsl_matrix * B, double beta, gsl_matrix * C)
               int gsl_blas_csyr2k (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, const gsl_matrix_complex_float * B, const gsl_complex_float beta, gsl_matrix_complex_float * C)
               int gsl_blas_zsyr2k (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, const gsl_complex alpha, const gsl_matrix_complex * A, const gsl_matrix_complex * B, const gsl_complex beta, gsl_matrix_complex * C)
@@ -423,7 +423,7 @@ Level 3 BLAS 인터페이스
   :code:`Uplo` 가 :code:`CblasUpper` 인 경우 행렬 :math:`C` 상삼각 부분과 대각 부분이 사용되고,  
   :code:`CblasLower` 라면 :math:`C` 의 하삼각 부분과 대각 부분이 사용됩니다. 
 
-.. c:function:: int gsl_blas_cher2k (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, const gsl_matrix_complex_float * B, float beta, gsl_matrix_complex_float * C)
+.. function:: int gsl_blas_cher2k (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, const gsl_complex_float alpha, const gsl_matrix_complex_float * A, const gsl_matrix_complex_float * B, float beta, gsl_matrix_complex_float * C)
               int gsl_blas_zher2k (CBLAS_UPLO_t Uplo, CBLAS_TRANSPOSE_t Trans, const gsl_complex alpha, const gsl_matrix_complex * A, const gsl_matrix_complex * B, double beta, gsl_matrix_complex * C)
 
 

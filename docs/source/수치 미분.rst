@@ -9,7 +9,7 @@
 함수
 ===========================
 
-.. c:function:: int gsl_deriv_central (const gsl_function * f, double x, double h, double * result, double * abserr)
+.. function:: int gsl_deriv_central (const gsl_function * f, double x, double h, double * result, double * abserr)
 
 
 이 함수는 :math:`x` 점에서 함수 :math:`f` 중간 미분 계수를 계산합니다. 
@@ -25,7 +25,7 @@
 따라서 실제로는 4개 지점만이 사용됩니다.
 
 
-.. c:function:: int gsl_deriv_forward (const gsl_function * f, double x, double h, double * result, double * abserr)
+.. function:: int gsl_deriv_forward (const gsl_function * f, double x, double h, double * result, double * abserr)
 
 이 함수는 지점 :math:`x`  서의 함수 :math:`f` 우미분 계수를 계산합니다. 
 이 방법은 구간의 크기를 나타내는 :math:`h` 이용합니다. 
@@ -40,7 +40,7 @@
 공간에서 :code:`x+\frac{h}{4}, x+\frac{h}{2}, x+\frac{3h}{4}, x.h` 지점을 의미합니다. 
 각각의 미분 과정에서 오차의 계산은 4개 지점 방법과 2개 지점 :code:`x+\frac{3h}{4}, x.h` 방법의 차이를 이용해 계산합니다. 
 
-.. c:function:: int gsl_deriv_backward (const gsl_function * f, double x, double h, double * result, double * abserr)
+.. function:: int gsl_deriv_backward (const gsl_function * f, double x, double h, double * result, double * abserr)
 
 이 함수는 지점 :math:`x`  서의 함수 :math:`f` 좌미분 계수를 계산합니다. 
 이 방법은 구간의 크기를 나타내는 :math:`h` 이용합니다. 

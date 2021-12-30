@@ -43,7 +43,7 @@ Autoconf Macros
              [action-if-not-found])
 
 
-:c:macro:`GSL_VERSION` 인자는 :code:`major.minor` 나 :code:`major.minor.micro` 형식의 
+:macro:`GSL_VERSION` 인자는 :code:`major.minor` 나 :code:`major.minor.micro` 형식의 
 2-3 자리 정수 값을 가져야 합니다. 이는 필요한 라이브러리 베포판의 버전 숫자를 가르킵니다.
 
 :code:`action-if-not-found` 에 대해 일반적으로 많이 쓰이는 설정은
@@ -52,9 +52,9 @@ Autoconf Macros
 
   AC_MSG_ERROR(could not find required version of GSL)
 
-:file:`Makefile.am` 파일에 변수 :c:macro:`GSL_LIBS` 와 :c:macro:`GSL_CFLAGS` 를 추가해
-제대로 된 컴파일러 옵션들을 얻을 수 있습니다. :c:macro:`GSL_LIBS` 는 :code:`gsl-config --libs` 를
-만들고, :c:macro:`GSL_CFLAGS` 는 :code:`gsl-config --cflags` 를 만들어줍니다. 
+:file:`Makefile.am` 파일에 변수 :macro:`GSL_LIBS` 와 :macro:`GSL_CFLAGS` 를 추가해
+제대로 된 컴파일러 옵션들을 얻을 수 있습니다. :macro:`GSL_LIBS` 는 :code:`gsl-config --libs` 를
+만들고, :macro:`GSL_CFLAGS` 는 :code:`gsl-config --cflags` 를 만들어줍니다. 
 예를 들어서
 
 .. code-block:: console
@@ -63,9 +63,9 @@ Autoconf Macros
 
 .. note::
 
-  매크로 :c:macro:`AX_PATH_GSL` 는 C 컴파일러를 필요로 함을 유의해야 합니다.
+  매크로 :macro:`AX_PATH_GSL` 는 C 컴파일러를 필요로 함을 유의해야 합니다.
   따라서 이 매크로는 :file:`configure.in` 파일 내에 
-  매크로 :c:macro:`AC_LANG_CPLUSPLUS` 전에 기술되어야 합니다.
+  매크로 :macro:`AC_LANG_CPLUSPLUS` 전에 기술되어야 합니다.
   이 매크로는 C++로 쓰인 프로그램에 쓰입니다.
 
 :code:`inline` 기능을 검사하기 위해서는 다음의 명령어들을 :file:`configure.in` 에 
@@ -123,5 +123,5 @@ Autoconf Macros
   #endif
 
 이 과정을 거치면 응용 프로그램 소스 파일들에서 :code:`#include <config.h>` 를 사용해
-:func:`hypot` 를 사용할 수 없는 상황에서 :func:`gsl_hypot` 로 :func:`hypot` 를 대체할 수 있습니다. 
+:fun`hypot` 를 사용할 수 없는 상황에서 :fun`gsl_hypot` 로 :fun`hypot` 를 대체할 수 있습니다. 
 

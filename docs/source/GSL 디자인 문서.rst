@@ -209,7 +209,7 @@ GSL 라이브러리는 **C 언어 하나** 만을 사용합니다. 이는 이미
 * glib GTK 지원 라이브러리 규약
 
 이러한 표준을 위한 참고문헌으로 *GNU Coding Standards* 문서, 
-Harbison and Steels *C: A Reerence Manual*, *GNU, C Library Manual* 그리고 Glib 소스 파일을 볼 수 있습니다.
+Harbison and Steels * A Reerence Manual*, *GNU, C Library Manual* 그리고 Glib 소스 파일을 볼 수 있습니다.
 
 수학 수식은 Abramowitz & Stegun의 *Handbook of Mathematical Functions* 를 따릅니다 [#AS]_ . 
 이 책은 수학계에서 자명한 참고 문헌이며, 퍼블릭 도메인으로 사용할 수 있습니다.
@@ -236,7 +236,7 @@ C 가 매크로 어셈블러라는 사실을 항상 기억하는 것이 좋습�
 
 포터블 C 라이브러리 디자인에 관련한 Vmalloc, SFIO 그리고 CDT 논문들이 있습니다.
 
-* Kiem-Phong Vo, "Vmalloc: A General and Efficient Memory Allocator". Software Practice & Experience, 26:1--18, 1996. http://www.research.att.com/sw/tools/vmalloc/vmalloc.ps
+* Kiem-Phong Vo, "Vmallo A General and Efficient Memory Allocator". Software Practice & Experience, 26:1--18, 1996. http://www.research.att.com/sw/tools/vmalloc/vmalloc.ps
 * iem-Phong Vo. "Cdt: A Container Data Type Library". Soft. Prac. & Exp., 27:1177--1197, 1997 http://www.research.att.com/sw/tools/cdt/cdt.ps
 * David G. Korn and Kiem-Phong Vo, "Sfio: Safe/Fast String/File IO", Proceedings of the Summer '91 Usenix Conference, pp. 235-256, 1991. http://citeseer.nj.nec.com/korn91sfio.html
 
@@ -940,7 +940,7 @@ DOS는 무시하고, Windows95/Windows 등에서의 사용만을 고려하는 �
 마지막 사항: 하나의 완벽한 구현체가 오류 있는 많은 구현체보다 낫습니다.
 
 
-.. rubric:: 각주
+.. rubri: 각주
 
 
 .. [#gnulitically] *GNUlitically correct* 은 GNU 코딩 규약을 따르고 *autoconf* 를 사용하는 프로그램을 뜻합니다(*).

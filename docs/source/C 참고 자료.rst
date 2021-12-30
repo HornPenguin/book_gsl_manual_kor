@@ -38,7 +38,7 @@ ASCII 표는 1963년도 처음 표준안이 발표된 이후로 몇몇 개정이
 하지만, 1967년도 개정판이 가장 일반적으로 많이 쓰입니다. 다음은 1963, 1965, 1967년도 
 발표된 ASCII 표입니다.
 
-DEC: 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
+DE 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
 
 
 
@@ -79,7 +79,7 @@ C 11:
 
 
 
-.. rubric:: 각주
+.. rubri: 각주
 
 .. [#ASCII] Gorn, S., Bemer, R. W., & Green, J. (1963). American standard code for information interchange. Communications of the ACM, 6(8), 422-426.
 .. [#ASCIICODE] American Standard Code for Information Interchange, ASCII
