@@ -96,6 +96,14 @@ my_cover_design = r'''
         \fontsize{35}{60}\selectfont \textbf{사용 설명서}
     \end{textblock*}
 
+    \begin{center}
+    \vfill
+    \large \textbf{Mark Galassi et al} \\
+    역: 김현성 \\
+    \vspace{1.2cm}
+    \Large \textbf{GNU Publication}
+    \end{center}
+
     \newpage
     \sphinxmaketitle
     '''
@@ -110,7 +118,8 @@ my_latex_authors = 'Mark Galassi \\\\ \
                     Patrick Alken \\\\ \
                     Michael Booth \\\\ \
                     Fabrice Rossi \\\\ \
-                    Rhys Ulerich'
+                    Rhys Ulerich \\\\ \
+                    '
 
 
 
@@ -122,6 +131,7 @@ latex_elements = {
     'releasename': ' ',
     'maketitle': my_title
 }
+
 
 
 latex_documents = [
