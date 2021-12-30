@@ -124,6 +124,8 @@ latex_elements = {
     'maketitle': my_title
 }
 
+latex_logo = '_static/A_Slick_GNU_Logo.svg'
+
 latex_documents = [
     (master_doc, 'gsl-kor-manual.tex', title, my_latex_authors, 'manual')
 ]
