@@ -4,6 +4,9 @@
 
 .. default-domain:: c
 
+.. image:: image/A_Slick_GNU_Logo.png
+   :width: 200
+
 
 .. note::
 
