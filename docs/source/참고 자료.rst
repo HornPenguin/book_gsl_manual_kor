@@ -189,7 +189,7 @@ C를 위한 api를 제공하기도 하므로 특정 함수의 기능을 C로 구
 `**Maple** <https://www.maplesoft.com/>`_
 
 
-.. rubri:: 각주
+.. rubric:: 각주
 
 .. [#ASCII] Gorn, S., Bemer, R. W., & Green, J. (1963). American standard code for information interchange. Communications of the ACM, 6(8), 422-426.
 .. [#ASCIICODE] American Standard Code for Information Interchange, ASCII
