@@ -8,7 +8,7 @@ GSL 디자인 문서(*)
   `GNU Scientific Library -- Design document <https://www.gnu.org/software/gsl/design/gsl-design_toc.html>`_ 
   의 번역본 입니다(*). 
 
-.. only:: latexpdf
+.. only:: pdf
 
   본 문서는 Mark Galassi, James Theiler 와 Brian Gough 가 저술한 **GNU Scientific Library -- Design document** 
   의 번역본 입니다. 
