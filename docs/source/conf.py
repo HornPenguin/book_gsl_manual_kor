@@ -72,7 +72,6 @@ my_font_setting =r'''
     '''
 
 my_title = r'''
-    \newpage
     {0}
     \newpage
     {1}
