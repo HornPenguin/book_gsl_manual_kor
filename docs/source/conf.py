@@ -1,4 +1,5 @@
 from docutils.writers.latex2e import Babel
+from latex_setting import *
 
 Babel.language_codes = {'ko':'korean', 'en':'english'}
 

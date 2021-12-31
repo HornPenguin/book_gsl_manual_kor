@@ -1,8 +1,8 @@
 .. _chap_autoconf-macros:
 
-***************
-Autoconf Macros
-***************
+****************
+Autoconf 매크로
+****************
 
 :code:`autoconf` 를 사용하는 응용 프로그램들은 표준 매크로 :code:`AC_CHECK_LIB` 를 사용해  
 :code:`configure` 스크립트에서 GSL를 자동으로 링크할 수 있습니다. 라이브러리는 CBLAS와 

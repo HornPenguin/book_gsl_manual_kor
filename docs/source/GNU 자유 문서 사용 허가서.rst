@@ -556,7 +556,7 @@ GNU 자유 문서 사용 허가서
 제목 페이지 바로 다음에 다음의 저작권과 허가서 통지를 명시하면 됩니다.
 
 ::
-   
+
   Copyright (c)  YEAR  YOUR NAME.
   Permission is granted to copy, distribute and/or modify this document under 
   the terms of the GNU Free Documentation License, Version 1.3 or any later 
@@ -572,7 +572,7 @@ GNU 자유 문서 사용 허가서
    with the Invariant sections being LIST THEIR TITILES, with the Front-Cover 
    Texts being LIST, and with the Back-Cover Texts being LIST.
   
-만약, 변경 불가 부분만 있고 표기자 없거나, 이 세가지 경우중 여러가지가 같이 있다면, 
+만약, 변경 불가 부분만 있고 표지가 없거나, 이 세가지 경우중 여러가지가 같이 있다면, 
 상황에 맞게 두 대안을 병합해 사용하면 됩니다.
 
 만약, 문서가 프로그램 코드 예시들을 포함하고 있다면, 해당 예제들을 GPL과 같은 자유 소프트웨어 허가서 아래에서 베포해, 
