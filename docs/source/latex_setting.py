@@ -24,7 +24,7 @@ cover_page = r'''
         \fill[coverband,yshift=-120mm] rectangle(\paperwidth,85mm);
     \end{tikzpicture}
 
-    \vspace{-0.5cm}\hspace{2.5cm}\includegraphics[width=0.6\textwidth]{A_Slick_GNU_Logo.png}
+    \vspace{-0.5cm}\hspace{2.5cm}\includegraphics[width=0.45\textwidth]{A_Slick_GNU_Logo.png}
 
     \begin{textblock*}{4.25cm}(15cm,5.4cm) % {block width} (coords) 
         \raggedright{
