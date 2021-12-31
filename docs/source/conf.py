@@ -73,9 +73,13 @@ my_font_setting =r'''
 
 my_title = r'''
     {0}
+
     \newpage
+
     {1}
+
     \newpage
+    
     \sphinxmaketitle
     '''.format(cover_page,license_page)
 
