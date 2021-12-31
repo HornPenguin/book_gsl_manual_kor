@@ -1,5 +1,4 @@
 from docutils.writers.latex2e import Babel
-from latex_setting import *
 
 Babel.language_codes = {'ko':'korean', 'en':'english'}
 
@@ -86,7 +85,7 @@ my_cover_design = r'''
         \fill[coverband,yshift=-120mm] rectangle(\paperwidth,85mm);
     \end{tikzpicture}
 
-    \vspace{-0.5cm}\hspace{2.5cm}\includesvg[width=0.6\textwidth]{A_Slick_GNU_Logo.svg}
+    \vspace{-0.5cm}\hspace{2.5cm}\includesvg[width=0.6\textwidth]{A_Slick_GNU_Logo.png}
 
     \begin{textblock*}{4.25cm}(15cm,5.4cm) % {block width} (coords) 
             \raggedright{
@@ -110,8 +109,8 @@ my_cover_design = r'''
         \Large \textbf{GNU Publication}
     \end{center}
 
-    
     \newpage
+
     \sphinxmaketitle
     
     '''
