@@ -110,8 +110,9 @@ my_cover_design = r'''
         \Large \textbf{GNU Publication}
     \end{center}
 
-    \sphinxmaketitle
+    
     \newpage
+    \sphinxmaketitle
     
     '''
 
