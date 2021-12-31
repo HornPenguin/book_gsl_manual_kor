@@ -4,12 +4,19 @@
 
 .. default-domain:: c
 
+.. |gnulogo| image:: images/A_Slick_GNU_Logo.png 
+   :width: 200px
+
+|gnulogo| **과학 계산 라이브러리**
+
+   
+
 
 .. note::
 
    이 번역 프로젝트는 현재 진행중에 있습니다.
 
-본 책은 GNU Scientific Library(GSL) 2.7 manual과 관련 자료들을 한글로 번역한 책입니다.
+본 서적은 GNU Scientific Library(GSL) 2.7 manual과 관련 자료들을 한글로 번역한 책입니다.
 
 python api를 제공하는 라이브러리(예: :code:`numpy`, :code:`scipy` 등)들은 한글로 된 자료들도 많지만, 
 C의 경우 많은 입문서에도 불구하고 과학 계산 라이브러리 쪽에서 한글 자료들이 빈약해 번역을 시작하게 되었습니다.
@@ -29,7 +36,7 @@ gsl 2.7 manual document를 기준으로 해서 번역합니다. GSL의 차후 �
    `pdf <https://www.gnu.org/software/gsl/doc/latex/gsl-ref.pdf>`_ 로 다운받을 수도 있습니다. 
 
 
-.. only:: latexpdf
+.. only:: pdf
 
    이 번역서의 원문은 <https://www.gnu.org/software/gsl/doc/html/index.html> 에서 확인할 수 있습니다. 
    <https://www.gnu.org/software/gsl/doc/latex/gsl-ref.pdf> 에서 pdf로 다운로드할 수 도 있습니다.
@@ -44,13 +51,13 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
    해당 프로그램과 파일 형식에 관한 자세한 내용은 `Sphinx <https://www.sphinx-doc.org/en/master/>`_ 와 
    `A ReStructuredText Primer <https://docutils.sourceforge.io/rst.html>`_ 문서를 참고할 수 있습니다.
 
-.. only:: latexpdf
+.. only:: pdf
 
    Sphinx에 관한 자세한 내용은 공식 홈페이지인 https://www.sphinx-doc.org/en/master/ 를 참고할 수 있습니다.
    해당 프로그램에서 쓰는 rst 파일 형식은 https://docutils.sourceforge.io/rst.html 를 참고하길 바랍니다.
 
 
-.. only:: latexpdf
+.. only:: pdf
 
    본 번역서의 원본은 https://github.com/HYUNSEONG-KIM/GSL_KOR_MANUAL.git 에서 찾을 수 있습니다.
 
