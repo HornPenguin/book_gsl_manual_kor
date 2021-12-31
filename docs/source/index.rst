@@ -55,13 +55,12 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
    Sphinx에 관한 자세한 내용은 공식 홈페이지인 https://www.sphinx-doc.org/en/master/ 를 참고할 수 있습니다.
    해당 프로그램에서 쓰는 rst 파일 형식은 https://docutils.sourceforge.io/rst.html 를 참고하길 바랍니다.
 
-
 .. only:: latex
 
    본 번역서의 원본은 https://github.com/HYUNSEONG-KIM/GSL_KOR_MANUAL.git 에서 찾을 수 있습니다.
 
 
-문서에서 오류가 발견되거나 번역에 기여하고 싶다면 해당 번역서의 Git 저장소에 branch로 만들어 수정을 하거나 
+문서에서 오류가 발견되거나 번역에 기여하고 싶다면 번역서의 Git 저장소에 branch로 만들어 수정을 하거나 
 다음 이메일로 알려주길 바랍니다.
 
 
