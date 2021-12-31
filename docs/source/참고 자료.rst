@@ -103,6 +103,8 @@ C 표준 수학 라이브러리
 수학 참고 문헌으로 본 라이브러리에서 Abramwotiz & Stegun, Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables 를 표준으로 사용하고 있습니다.
 해당 문헌은 수학계에서 자명한 표준 문헌이고 공공재로 사용가능한 서적이지만, 새로운 갱신이 중단되었습니다. 
 1964년도에 NBS [#NBS]_ 에서 처음 출판된 이레로 1974년도에 마지막 10판이 출판되었고 더 이상 갱신되지 않고 있습니다.
+
+
 여기서는 참고 문헌으로 사용 가능한 몇몇 수학 문헌을 소개합니다. 모두 디지털 형태로 제공되고 있으며 출판본 또한 시중에서 구할 수 있습니다. 
 
 A&S를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS]_ 에서 `DLMF <https://dlmf.nist.gov/>`_ 프로젝트를 시작했습니다. 

@@ -1,4 +1,5 @@
 from docutils.writers.latex2e import Babel
+from latex_setting import *
 
 Babel.language_codes = {'ko':'korean', 'en':'english'}
 
@@ -58,18 +59,11 @@ htmlhelp_basename = 'GSLdoc'
 # -- Options for LaTex output--------------------------------------
 latex_engine = 'xelatex'
 
-my_preamble = r'''                          
-    \usepackage{afterpage}                      
-    \usepackage[pagecolor=none]{pagecolor}      
-    \usepackage{tikz}                           
-    \usepackage{tikzpagenodes}                   
-    \usepackage{fix-cm}
-    \usepackage[absolute,overlay]{textpos}
+my_preamble = r'''  
+    {0}
 
-    \definecolor{coverbackground}{RGB}{209, 198, 161} 
-    \definecolor{coverband}{RGB}{239, 190, 84}
-
-    '''
+    {1}                        
+    '''.format(packages, custom_setting)
 
 my_font_setting =r'''
     \setmainfont{Noto Serif CJK KR}
@@ -77,45 +71,15 @@ my_font_setting =r'''
     \setmonofont{Noto Sans Mono CJK KR}
     '''
 
-my_cover_design = r'''
+my_title = r'''
     \newpage
-    \pagecolor{coverbackground}\afterpage{\nopagecolor}
-    
-    \begin{tikzpicture}[remember picture,overlay,shift={(current page.north west)}]
-        \fill[coverband,yshift=-120mm] rectangle(\paperwidth,85mm);
-    \end{tikzpicture}
-
-    \vspace{-0.5cm}\hspace{2.5cm}\includesvg[width=0.6\textwidth]{A_Slick_GNU_Logo.png}
-
-    \begin{textblock*}{4.25cm}(15cm,5.4cm) % {block width} (coords) 
-            \raggedright{
-            \Huge\textbf{과학계산}\\
-            \Huge\textbf{라이브러리}
-            }\\
-            \raggedleft\Large\textbf{v2.7}
-        \end{textblock*}
-
-        \begin{textblock*}{10cm}(9.1cm,9.3cm)
-            \raggedleft
-            \fontsize{32}{60}\selectfont \textbf{사용 설명서}
-    \end{textblock*}
-
-    \begin{center}
-        \vfill
-        \large \textbf{Mark Galassi \\ et al} \\
-        \vspace{0.5cm}
-        역: 김현성 \\
-        \vspace{1.2cm}
-        \Large \textbf{GNU Publication}
-    \end{center}
-
+    {0}
     \newpage
-
+    {1}
+    \newpage
     \sphinxmaketitle
-    
-    '''
+    '''.format(cover_page,license_page)
 
-my_title = my_cover_design 
 
 my_latex_authors = 'Mark Galassi \\\\ \
                     Jim Davies \\\\ \

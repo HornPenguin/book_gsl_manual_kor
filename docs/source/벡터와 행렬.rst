@@ -670,8 +670,10 @@ gsl_block_complex_long_double   complex long double
 
 행렬 (Matrices)
 ======================
-Writing
-{: .label .label-red}
+
+.. note::
+
+    번역중
 
 행렬은 :code:`gsl_matrix` 구조체로 정의됩니다. 
 이 구조체는 일반화된 블록들의 분할체 입니다. 
@@ -736,8 +738,7 @@ Writing
 
 행렬 할당
 --------------------------
-Writing
-{: .label .label-red}
+
 
 메모리에 행렬을 할당하는 함수들은 :code:`malloc` 과 :code:`free` 형식을 따릅니다. 
 그 자체로 오류 검증 기능을 가지고 있습니다. 
@@ -771,8 +772,7 @@ Writing
 
 행렬 원소 접근
 --------------------------
-Writing
-{: .label .label-red}
+
 
 The functions for accessing the elements of a matrix use the same range
 checking system as vectors.  You can turn off range checking by recompiling
@@ -813,8 +813,8 @@ where :data:`tda` is the physical row-length of the matrix.
 
 행렬 원소 초기화
 --------------------------
-Writing
-{: .label .label-red}
+
+
 
 
 .. function:: void gsl_matrix_set_all (gsl_matrix * m, double x)
@@ -837,8 +837,7 @@ Writing
 
 행렬 읽고 쓰기
 --------------------------
-Writing
-{: .label .label-red}
+
 
 The library provides functions for reading and writing matrices to a file
 as binary data or formatted text.
