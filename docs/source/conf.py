@@ -96,7 +96,7 @@ my_latex_authors = 'Mark Galassi \\\\ \
                     '
 
 
-'''
+
 latex_elements = {
     'papersize': 'a4papaer',
     'pointsize': '10pt',
@@ -105,11 +105,13 @@ latex_elements = {
     'releasename': ' ',
     'maketitle': my_title
 }
+
 '''
 latex_elements = {
     'papersize': 'a4papaer',
     'pointsize': '10pt'
 }
+'''
 
 latex_documents = [
     (master_doc, 'gsl-kor-manual.tex', title, my_latex_authors, 'manual')
