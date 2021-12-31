@@ -1,6 +1,6 @@
-*****************
+*****
 참고 자료
-*****************
+*****
 
 본 단원은 번역가가 독자들을 위해 추천하는 몇몇 추가 자료들을 설명하는 단원입니다.
 참고할 만한 서적과 자료 그리고 몇가지 팁들을 제공합니다.
@@ -108,7 +108,7 @@ C 표준 수학 라이브러리
 여기서는 참고 문헌으로 사용 가능한 몇몇 수학 문헌을 소개합니다. 모두 디지털 형태로 제공되고 있으며 출판본 또한 시중에서 구할 수 있습니다. 
 
 A&S를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS]_ 에서 `DLMF <https://dlmf.nist.gov/>`_ 프로젝트를 시작했습니다. 
-이 프로젝트는 **D** gitial **L** ibrary of **M** athematical **F** unctions 의 약자로 수학 함수들에 대한 참고 문헌을 핸드북 형태의 디지털 문서로 제공함을 목적으로 합니다.
+이 프로젝트는 D gitial L ibrary of M athematical F unctions 의 약자로 수학 함수들에 대한 참고 문헌을 핸드북 형태의 디지털 문서로 제공함을 목적으로 합니다.
 해당 문헌은 A&S의 마지막 출간 이후 출판된 여러 새로운 함수와, 기존 함수들의 새 성질들을 포함하고 있으며 지속적으로 갱신되고 있습니다.
 Cambridge University Press에서 2010년도에 출판된 서적 또한 판매하고 있습니다. 
 출판본은 `NIST Handbook of Mathematical Functions`_ 으로 명명되어 있습니다.
@@ -137,25 +137,25 @@ GSL은 수치 해석을 위한 C 라이브러리입니다. 이 라이브러리�
 라이브러리
 -------------
 
-**`GMPAL <https://gmplib.org/>`_** 는 GNU Multiple Precision Arithmetic Library의 약자입니다.  
+`GMPAL <https://gmplib.org/>`_ 는 GNU Multiple Precision Arithmetic Library의 약자입니다.  
 정밀한 수학 계산을 할 때 많은 경우 double, float 형의 유효 숫자의 한계가 생깁니다. 
 GMPAL는 이러한 고정밀 대수 연산을 위한 라이브러리로 메모리의 제한을 무시한다면 정밀도의 한계 없이 계산을 할 수 있습니다. 
 GMPAL 라이브러리의 주된 활용 분야는 암호, 인터넷 보안, 대수학과 계산 대수학 등이 있습니다
 
-**`Libmatheval <https://www.gnu.org/software/libmatheval/>`_** 는 심볼릭 연산을 위한 C, Fortran 라이브러리 입니다.
+`Libmatheval <https://www.gnu.org/software/libmatheval/>`_ 는 심볼릭 연산을 위한 C, Fortran 라이브러리 입니다.
 
-**`GTK+ https://www.gtk.org/`_** 는 Gimp의 그래픽 인터페이스를 위해 시작된 그래픽 라이브러리로 본격적인 소프트웨어의 GUI를 만드는 데 유용하며, 
+`GTK+ https://www.gtk.org/`_ 는 Gimp의 그래픽 인터페이스를 위해 시작된 그래픽 라이브러리로 본격적인 소프트웨어의 GUI를 만드는 데 유용하며, 
 이를 이용해 사용자 정의 플롯 라이브러리를 짤 수도 있습니다.
 
-**`GLPK <https://www.gnu.org/software/glpk/>`_** 는 GNU Linear Programming Kit의 약자입니다. 
+`GLPK <https://www.gnu.org/software/glpk/>`_ 는 GNU Linear Programming Kit의 약자입니다. 
 선형 프로그래밍을 위한 여러 기능들을 제공합니다. 
 
-**`NLopt <https://nlopt.readthedocs.io/en/latest/>`_** 은 Nonlinear optimization을 위한 라이브러리입니다. 
+`NLopt <https://nlopt.readthedocs.io/en/latest/>`_ 은 Nonlinear optimization을 위한 라이브러리입니다. 
 여러가지 최적화 방법들을 적은 인터페이스로 사용할 수 있는 기능을 제공하며, 
 C, C++, Fortran, Matlab, GNU Octave, Python, GNU Cuile, Juliaa, R, Lia, OCaml 그리고 Rust에 대한 api를 지원합니다. 
 
 
-**`FFTW <https://www.fftw.org/>`_** 는 Fastest Fourier Transform in the West의 약자로 Fast Fourier Transform 기능을 구현한 라이브러리입니다.
+`FFTW <https://www.fftw.org/>`_ 는 Fastest Fourier Transform in the West의 약자로 Fast Fourier Transform 기능을 구현한 라이브러리입니다.
 GSL 내부 구현체와의 차이점은 GSL 구현체에서 제공하는 함수가 처리할 수 있는 크기 이상의 대규모 데이터들에 대해 
 고속 푸리에 변환을 수행할 수 있다는 점입니다.
 
@@ -164,31 +164,32 @@ GSL 내부 구현체와의 차이점은 GSL 구현체에서 제공하는 함수�
 소프트웨어
 -------------
 
-**`Gnuplot <http://www.gnuplot.info/>`_** 은 오픈소스 그래픽 소프트웨어입니다. 
+`Gnuplot <http://www.gnuplot.info/>`_ 은 오픈소스 그래픽 소프트웨어입니다. 
 C api를 제공해 C에서 여러 그래프와 3D 플롯을 그리는 데 사용할 수 있습니다.
 
-**`GNU Octave`_** 는 수치 해석을 위한 고수준의 과학 계산 언어이자 소프트웨어입니다. 
+`GNU Octave`_ 는 수치 해석을 위한 고수준의 과학 계산 언어이자 소프트웨어입니다. 
 자체 언어가 있지만, C, C++, FOTRAN, Python 등으로 쓰인 모듈을 불러오거나 C++ 등에서 Octave 함수를 사용할 수도 있습니다. C는 C++ 함수를 호출하는 형태로 사용 가능합니다.
 
 .. _GNU Octave: https://www.gnu.org/software/octave/index
 
-**`HDF5 <https://www.hdfgroup.org/solutions/hdf5/>`_** HDF5는 대용량 데이터 처리를 위한 계층적 파일 형식입니다. 개발 집단인 HDF5 Group에서 공식적으로
+`HDF5 <https://www.hdfgroup.org/solutions/hdf5/>`_ HDF5는 대용량 데이터 처리를 위한 계층적 파일 형식입니다. 개발 집단인 HDF5 Group에서 공식적으로
 C, FOTRANm C++, Java, Python 에 대한 api를 제공합니다. 막대한 데이터를 다루고자 할때, 이러한 전문 파일 형식의 사용은 크게 유용합니다.
 
-**`Mathematica <https://www.wolfram.com/mathematica/>`_** 는 기호 계산을 위한 프로그램 중 가장 광범위 하게 쓰이는 소프트웨어입니다.
+`Mathematica <https://www.wolfram.com/mathematica/>`_ 는 기호 계산을 위한 프로그램 중 가장 광범위 하게 쓰이는 소프트웨어입니다.
 많은 자연과학, 공학자들의 사용으로 몇몇 전공서들은 신규 개정판에서 Wolfram Language를 이용하는 문제들을 추가하거나
 서적의 수학 표기를 Wolfram Math World 와 Mathmatica에서 사용가능한 형태로 바뀌어 가고 있기도 합니다 [#Griff]_ . 
 
-근레, Wolfram 사는 개인 연구가와 프로그래머들을 위한 **`Wolfram Engine`_** 을 무료로 공개했습니다.
+근레, Wolfram Inc는 개인 연구가와 프로그래머들을 위해 `Wolfram Engine`_ 을 무료로 공개했습니다.
 해당 엔진은 Mathematica 및 관련 제품들의 핵심 엔진으로 다양한 Wolfram 사의 제공 서비스를 이용할 수 있습니다.
-Wolfram 사의 핵심 기능은 기호 계산 소프트웨어이나 수치적 해석 기능 또한 매우 다양한 기능들을 제공하고 있습니다.
-C를 위한 api를 제공하기도 하므로 특정 함수의 기능을 C로 구현하기 전에 함수 값을 활용할 때 사용할 수도 있습니다. 
+Wolfram 사의 핵심 기능은 기호 계산 소프트웨어이나 수치적 해석 분야의 기능 또한 풍부하게 제공하고 있습니다.
+C를 위한 api를 제공하기도 하므로 다른 C 라이브러리에 없는 특정 함수의 기능을 C로 구현하기 전에,
+검증용으로 사용해 볼 수도 있습니다.  
 
 .. _Wolfram Engine: https://www.wolfram.com/engine
 
-`**Matlab** <https://www.mathworks.com/products/matlab.html>`_
+`Matlab <https://www.mathworks.com/products/matlab.html>`_
 
-`**Maple** <https://www.maplesoft.com/>`_
+`Maple <https://www.maplesoft.com/>`_
 
 
 .. rubric:: 각주
