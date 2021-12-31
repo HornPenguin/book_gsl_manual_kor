@@ -66,9 +66,7 @@ my_preamble = r'''
     '''.format(packages, custom_setting)
 
 my_font_setting =r'''
-    \setmainfont{Noto Serif CJK KR}
-    \setsansfont{Noto Sans CJK KR}
-    \setmonofont{Noto Sans Mono CJK KR}
+    \setCJKmainfont[Hangul]{NanumMyeongjo}
     '''
 
 my_title = r'''
