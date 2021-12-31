@@ -71,7 +71,7 @@ GSL의 저작권은 여러 기여자들의 협동과 같은 긍정적인 행위�
     `GNU General Public License <https://www.gnu.org/software/gsl/doc/html/#GNU-General-Public-License>`_ 에서 찾을 수 있습니다. 
     좀 더 자세한 정보를 얻고 싶다면 GNU 프로젝트의 웹페이지에서 `GNU GPL에 자주 묻는 질문들 <https://www.gnu.org/software/gsl/doc/html/#GNU-General-Public-License>`_ 을 참고할 수 있습니다.
 
-.. only:: pdf
+.. only:: latex
 
     GNU Scientific Library와 관련된 소프트웨어의 배포에 관한 자세한 조건은 
     **GNU General Public License** 의 원문을 참고할 수 있습니다. 
@@ -124,7 +124,7 @@ GNU C complier와 GNU C Library에서 본 라이브러리는 몇몇 추가 기�
     
     자세한 내용은 `GNU 공중 사용 허가서 <https://www.gnu.org/software/gsl/manual/html_node/GNU-General-Public-License.html#GNU-General-Public-License>`_ 를 확인할 수 있습니다.
 
-.. only:: pdf
+.. only:: latex
 
     자세한 내용은 **GNU 공중 사용 허가서** 를 참고하길 바랍니다.
 

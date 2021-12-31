@@ -13,7 +13,7 @@
     수학 용어의 경우 대한 수학회에서 제공하는 `수학 용어집 <https://www.kms.or.kr/mathdict/list.html>`_ 을 참고했으며
     물리 용어는 대한 물리학회에서 제공하는 `물리학 용어집 <https://www.kps.or.kr/content/voca/search.php>`_ 에 기반했습니다.
 
-.. only:: pdf
+.. only:: latex
 
     수학 용어의 경우 대한 수학회에서 제공하는 **수학 용어집** 을 참고했으며
     물리 용어는 대한 물리학회에서 제공하는 **물리학 용어집** 에 기반했습니다.
