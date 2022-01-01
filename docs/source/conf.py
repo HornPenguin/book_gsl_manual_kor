@@ -97,10 +97,14 @@ latex_elements = {
     \setmainfont{Noto Serif CJK KR}
     \setsansfont{Noto Sans CJK KR}
     \setmonofont{Noto Sans Mono CJK KR}
-    ''',
-    "maketitle": my_cover_and_license
+    '''
 }
 
+'''
+,
+    "maketitle": my_cover_and_license
+
+'''
 latex_documents = [
     (master_doc, 
     'gsl-kor-manual.tex',
