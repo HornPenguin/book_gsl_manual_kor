@@ -69,23 +69,44 @@ my_latex_authors = 'Mark Galassi \\\\ \
                     Fabrice Rossi \\\\ \
                     Rhys Ulerich \\\\ \
                     '
+translator = '\\small{{{translator}}}: 김현성 \\small{translator}: \\\\ '
+my_preamble = r'''  
+    {0}
 
+    {1}                        
+    '''.format(packages, custom_setting)
+
+my_cover_and_license = r'''
+    {0}
+
+    \newpage
+
+    {1}
+
+    \newpage
+
+    \sphinxmaketitle
+    '''.format(cover_page,license_page)
 
 latex_elements = {
     'papersize': 'a4papaer',
     'pointsize': '10pt',
-    'preamble': r'''
-    \usepackage[CJKspace]{xeCJK}
-    '''
+    'preamble': my_preamble,
     'fontpkg' : r'''
     \setmainfont{Noto Serif CJK KR}
     \setsansfont{Noto Sans CJK KR}
     \setmonofont{Noto Sans Mono CJK KR}
-    '''
+    ''',
+    "maketitle":my_cover_and_license
 }
 
 latex_documents = [
-    (master_doc, 'gsl-kor-manual.tex', title, my_latex_authors, 'manual')
+    (master_doc, 
+    'gsl-kor-manual.tex',
+     title, 
+     my_latex_authors, 
+     translator,
+     'manual')
 ]
 
 #latex_logo = 'logo_design.svg'

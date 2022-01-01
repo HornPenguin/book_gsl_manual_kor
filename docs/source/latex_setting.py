@@ -26,11 +26,11 @@ cover_page = r'''
         \fill[coverband,yshift=-120mm] rectangle(\paperwidth,85mm);
     \end{tikzpicture}
 
-    \hspace{3cm}\includegraphics[width=0.45\textwidth]{A_Slick_GNU_Logo.png}
+    \hspace{4cm}\includegraphics[width=0.45\textwidth]{A_Slick_GNU_Logo.png}
 
     \begin{textblock*}{4.25cm}(15cm,5.4cm) % {block width} (coords) 
         \raggedright{
-        \Huge\textbf{과학계산ss}\\
+        \Huge\textbf{과학계산  }\\
         \Huge\textbf{라이브러리}
         }\\
         \raggedleft\Large\textbf{v2.7}
@@ -53,8 +53,9 @@ cover_page = r'''
 # 15, 5.4
 # 9.1, 9.3
 license_page = r'''
-    원 영문 원서의 저작권 Copyright of the Original English Version:
-    \noindent\textbf{Copyright (c)} Copyright © 1996-2021 The GSL Team.\\
+    \textbf{원 영문 원서의 저작권 Copyright of the Original English Version:}\\~\\
+
+    \noindent\textbf{Copyright ©} Copyright © 1996-2021 The GSL Team.\\
     Permission is granted to copy, distribute and/or modify this document under the terms of the
     GNU Free Documentation License, Version 1.3 or any later version published by the Free Software
     Foundation; with the Invariant Sections being “GNU General Public License” and “Free Software
@@ -66,7 +67,8 @@ license_page = r'''
     http://www.network-theory.co.uk/gsl/manual/.
     The money raised from sales of the manual helps support the development of GSL
 
-    \noindent\textbf{Copyright (c)}  2022  김현성. \\
+    \textbf{번역서의 저작권 Copyright of the Translated Kroeann Version:}\\
+    \noindent\textbf{Copyright ©}  2022  김현성. \\
     Permission is granted to copy, distribute and/or modify this document under 
     the terms of the GNU Free Documentation License, Version 1.3 or any later
     version published by the Free Software Foundation; with no  
@@ -74,7 +76,7 @@ license_page = r'''
     A copy of the license is included in the section entitled 
     "GNU 자유 문서 사용 허가서". \\~\\
     
-    \noindent\textbf{Copyright (c)}  2022  김현성. \\
+    \noindent\textbf{Copyright ©}  2022  김현성. \\
     GNU 자유 문서 사용 허가서 1.3판과 자유 소프트웨어 재단에서 발행한 이후의 갱신본의
     규정에 따라, 본 저작물의 복제, 베포 및 수정을 허가합니다. 변경 불가 부분, 앞 표지 구절과
     뒷 표지 구절은 없습니다. 이 허가서의 복사본은 "GNU 자유 문서 사용 허가서"로 지어진 단락에
