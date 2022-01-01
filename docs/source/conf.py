@@ -95,14 +95,14 @@ my_latex_authors = 'Mark Galassi \\\\ \
 latex_elements = {
     'papersize': 'a4papaer',
     'pointsize': '10pt',
-    'preamble': my_preamble,
-    'releasename': ' ',
-    'maketitle': my_title,
     'fontpkg' : r'''
     \setmainfont{Noto Serif CJK KR}
     \setsansfont{Noto Sans CJK KR}
     \setmonofont{Noto Sans Mono CJK KR}
-    '''
+    ''',
+    'preamble': my_preamble,
+    'releasename': ' ',
+    'maketitle': my_title
 }
 
 latex_documents = [
@@ -110,7 +110,3 @@ latex_documents = [
 ]
 
 #latex_logo = 'logo_design.svg'
-
-
-def setup(app):
-        app.add_css_file('custom.css')
