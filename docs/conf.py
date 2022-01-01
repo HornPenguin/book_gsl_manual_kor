@@ -59,6 +59,26 @@ htmlhelp_basename = 'GSLdoc'
 # -- Options for LaTex output--------------------------------------
 latex_engine = 'xelatex'
 
+my_preamble = r'''  
+    {0}
+
+    {1}                        
+    '''.format(packages, custom_setting)
+
+
+my_title = r'''
+    {0}
+
+    \newpage
+
+    {1}
+
+    \newpage
+
+    \sphinxmaketitle
+    '''.format(cover_page,license_page)
+
+
 my_latex_authors = 'Mark Galassi \\\\ \
                     Jim Davies \\\\ \
                     James Theiler \\\\ \
@@ -71,17 +91,18 @@ my_latex_authors = 'Mark Galassi \\\\ \
                     '
 
 
+
 latex_elements = {
     'papersize': 'a4papaer',
     'pointsize': '10pt',
-    'preamble': r'''
-    \usepackage[CJKspace]{xeCJK}
-    '''
     'fontpkg' : r'''
     \setmainfont{Noto Serif CJK KR}
     \setsansfont{Noto Sans CJK KR}
     \setmonofont{Noto Sans Mono CJK KR}
-    '''
+    ''',
+    'preamble': my_preamble,
+    'releasename': ' ',
+    'maketitle': my_title
 }
 
 latex_documents = [
