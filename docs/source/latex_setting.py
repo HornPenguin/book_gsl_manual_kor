@@ -1,6 +1,6 @@
 
 packagelist= {
-    "xeCJK" : "CJKspace",
+    "kotex" : "",
     "afterpage" : "",
     "pagecolor" : "pagecolor=none",
     "tikz" : "",
@@ -18,8 +18,7 @@ custom_setting = r'''
     \definecolor{coverbackground}{RGB}{209, 198, 161} 
     \definecolor{coverband}{RGB}{239, 190, 84}
 
-    \setCJKmainfont{NanumMyeongjo}  
-    \setCJKsansfont{NanumGothic}
+    \setmainhangulfont{NanumMyeongjo}  
     '''
 
 cover_page = r'''
