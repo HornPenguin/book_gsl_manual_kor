@@ -77,6 +77,7 @@ my_preamble = r'''
     '''.format(packages, custom_setting)
 
 my_cover_and_license = r'''
+    \newpage
     {0}
 
     \newpage
@@ -97,14 +98,14 @@ latex_elements = {
     \setsansfont{Noto Sans CJK KR}
     \setmonofont{Noto Sans Mono CJK KR}
     ''',
-    "maketitle":my_cover_and_license
+    "maketitle": my_cover_and_license
 }
 
 latex_documents = [
     (master_doc, 
     'gsl-kor-manual.tex',
      title, 
-     my_latex_authors + "\\" + translator, 
+     my_latex_authors, 
      'manual')
 ]
 
