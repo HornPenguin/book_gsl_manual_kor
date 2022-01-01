@@ -17,6 +17,8 @@ custom_setting = r'''
 
     \definecolor{coverbackground}{RGB}{209, 198, 161} 
     \definecolor{coverband}{RGB}{239, 190, 84}
+
+    \newfontfamily\hangulfont{나눔명조}
     '''
 
 cover_page = r'''
