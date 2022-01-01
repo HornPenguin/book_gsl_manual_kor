@@ -1,6 +1,6 @@
 
 packagelist= {
-    "kotex" : "",
+    "xeCJK" : "CJKspace",
     "afterpage" : "",
     "pagecolor" : "pagecolor=none",
     "tikz" : "",
