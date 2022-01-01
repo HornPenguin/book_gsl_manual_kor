@@ -104,8 +104,7 @@ latex_documents = [
     (master_doc, 
     'gsl-kor-manual.tex',
      title, 
-     my_latex_authors, 
-     translator,
+     my_latex_authors + "\\" + translator, 
      'manual')
 ]
 
