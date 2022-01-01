@@ -103,19 +103,32 @@ C 표준 수학 라이브러리
 서적과 문헌
 ---------------------------
 
-수학 참고 문헌으로 본 라이브러리에서 Abramwotiz & Stegun, Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables 를 표준으로 사용하고 있습니다.
+수학 참고 문헌으로 본 라이브러리에서 Abramwotiz & Stegun을 표준으로 사용하고 있습니다.
 해당 문헌은 수학계에서 자명한 표준 문헌이고 퍼블릭 도메인로 사용가능한 서적이지만, 새로운 갱신이 중단되었습니다. 
-1964년도에 NBS [#NBS]_ 에서 처음 출판된 이레로 1974년도에 마지막 10판이 출판되었고 더 이상 갱신되지 않고 있습니다.
+1964년도에 NBS [#NBS]_ 에서 처음 출판된 이레로 1972년도에 마지막 "10th printing, December 1972, with corrections" 판이 출판되었고 
+더 이상 갱신되지 않고 있습니다.
 
+:: 
+
+  Abramowitz, M., Stegun, I.A.: Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables. US Government Printing Office, Washington, 10th printing, with corrections (December 1972)
+
+
+퍼블릭 도메인이므로 자유롭게 재출판, 변형등이 가능하고 접근도 가능하지만 온라인에 풀려있는 대부분의 PDF는 뒤틀리거나 잘린 스캔본이 대다수입니다.
+2012년도 Birmingham 대학의 Alan P. Sexton 박사는 `A Resource for Scientific Document Analysis`_ [#ASRMDA]_ 란 프로젝트로 
+
+.. _A Resource for Scientific Document Analysis: https://www.cs.bham.ac.uk/~aps/research/projects/as/project.php
 
 여기서는 참고 문헌으로 사용 가능한 몇몇 수학 문헌을 소개합니다. 모두 디지털 형태로 제공되고 있으며 출판본 또한 시중에서 구할 수 있습니다. 
 
 A&S를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS]_ 에서 `DLMF <https://dlmf.nist.gov/>`_ 프로젝트를 시작했습니다. 
-이 프로젝트는 D gitial L ibrary of M athematical F unctions 의 약자로 수학 함수들에 대한 참고 문헌을 핸드북 형태의 디지털 문서로 제공함을 목적으로 합니다.
-해당 문헌은 A&S의 마지막 출간 이후 출판된 여러 새로운 함수와, 기존 함수들의 새 성질들을 포함하고 있으며 지속적으로 갱신되고 있습니다.
-Cambridge University Press에서 2010년도에 출판된 서적 또한 판매하고 있습니다. 
+이 프로젝트는 Dgitial Library of Mathematical Functions 의 약자로 수학 함수들에 대한 참고 문헌을 
+핸드북 형태의 디지털 문서로 제공함을 목적으로 합니다.
+해당 문헌은 A&S의 마지막 출간 이후 출판된 여러 새로운 함수와, 기존 함수들의 
+새 성질들을 포함하고 있으며 지속적으로 갱신되고 있습니다.
+`Cambridge University Press`에서 2010년도에 출판된 서적 또한 판매하고 있습니다. 
 출판본은 `NIST Handbook of Mathematical Functions`_ 으로 명명되어 있습니다.
 
+.. _Cambridge University Press: https://www.cambridge.org/
 .. _NIST Handbook of Mathematical Functions: https://www.cambridge.org/de/academic/subjects/mathematics/abstract-analysis/nist-handbook-mathematical-functions?format=WW&isbn=9780521140638
 
 `Encyclopedia of Mathematics`_ 는 `유럽 수학회`_ 에서 관리하는 온라인 수학 백과입니다.
@@ -134,14 +147,15 @@ Cambridge University Press에서 2010년도에 출판된 서적 또한 판매하
 프로그램과 라이브러리
 ==========================
 
-GSL은 수치 해석을 위한 C 라이브러리입니다. 이 라이브러리를 사용해 다양한 수학 기능들을 C에서 사용할 수 있습니다. 하지만 GSL 외에도 과학 계산을 위한 많은
-라이브러리와 소프트웨어들이 존재합니다. 이 단락에서는 해당 C에서 사용할 수 있는 라이브러리와 api를 제공하는 소프트웨어들을 간단하게 서술하고자 합니다.
+GSL은 수치 해석을 위한 C 라이브러리입니다. 이 라이브러리를 사용해 다양한 수학 기능들을 C에서 사용할 수 있습니다. 
+하지만 GSL 외에도 과학 계산을 위한 많은 라이브러리와 소프트웨어들이 존재합니다. 
+이 단락에서는 해당 C에서 사용할 수 있는 라이브러리와 api를 제공하는 소프트웨어들을 간단하게 서술하고자 합니다.
 
 라이브러리
 -------------
 
 `GMPAL <https://gmplib.org/>`_ 는 GNU Multiple Precision Arithmetic Library의 약자입니다.  
-정밀한 수학 계산을 할 때 많은 경우 double, float 형의 유효 숫자의 한계가 생깁니다. 
+정밀한 수학 계산을 할 때 많은 경우 double, float 자료형에서 유효 숫자의 한계가 생깁니다. 
 GMPAL는 이러한 고정밀 대수 연산을 위한 라이브러리로 메모리의 제한을 무시한다면 정밀도의 한계 없이 계산을 할 수 있습니다. 
 GMPAL 라이브러리의 주된 활용 분야는 암호, 인터넷 보안, 대수학과 계산 대수학 등이 있습니다
 
@@ -202,6 +216,7 @@ C를 위한 api를 제공하기도 하므로 다른 C 라이브러리에 없는 
 .. [#ANSI] Americal National Standards Institute, ANSI
 .. [#KR] K&R이나 TCPL(The C Programming Language)로 축약해 부르기도 합니다. 간혹 K&R이 2nd 판이 아닌 1st 판본을 의미하는 경우도 있으니 조심해야합니다.
 .. [#NBS] National Bureau of Standards
+.. [#ARMDA] Sexton, A. P. (2012). Abramowitz and Stegun - A Resource for Mathematical Document Analysis. Intelligent Computer Mathematics, 159-168. doi:10.1007/978-3-642-31374-5_11
 .. [#NIS] National Institute of Standards and Technology
 .. [#Griff] 대표적인 예시가 Griffith, Introduction to Quantum Mechanics 3rd edition 입니다. 
             해당 서적은 2nd 판본의 수식들이 대거 개편되었고 Wolfram language 를 사용한 문제들이 추가되었습니다.

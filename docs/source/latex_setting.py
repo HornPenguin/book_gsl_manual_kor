@@ -1,6 +1,6 @@
 
 packagelist= {
-    "xeCJK" : "CJKspace",
+    "kotex" : "",
     "afterpage" : "",
     "pagecolor" : "pagecolor=none",
     "tikz" : "",
@@ -8,6 +8,8 @@ packagelist= {
     "fix-cm" : "",
     "textpos" : "absolute, overlay",
 }
+
+#    "xeCJK" : "CJKspace",
 
 packages = "\n".join(["\\usepackage[{}]{{{}}}".format(v, k) for k, v in packagelist.items()])
 
