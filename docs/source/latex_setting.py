@@ -1,7 +1,6 @@
 
 packagelist= {
-    "hangulfontset" : "default",
-    "kotex" : "",
+    "xeCJK" : "CJKspace",
     "afterpage" : "",
     "pagecolor" : "pagecolor=none",
     "tikz" : "",
@@ -19,7 +18,8 @@ custom_setting = r'''
     \definecolor{coverbackground}{RGB}{209, 198, 161} 
     \definecolor{coverband}{RGB}{239, 190, 84}
 
-    \newfontfamily\hangulfont{나눔명조}
+    \setCJKmainfont{NanumMyeongjo}  
+    \setCJKsansfont{NanumGothic}
     '''
 
 cover_page = r'''
