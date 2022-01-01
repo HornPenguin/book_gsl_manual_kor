@@ -100,15 +100,22 @@ latex_elements = {
     'pointsize': '10pt',
     'preamble': my_preamble,
     'releasename': ' ',
-    'maketitle': my_title
-}
+    'maketitle': my_title,
+    'fontpkg': r'''
 
-'''
-latex_elements = {
-    'papersize': 'a4papaer',
-    'pointsize': '10pt'
+    % 영문 폰트 설정
+    \setmainfont[Mapping=tex-text]{나눔고딕}
+    \setsansfont[Mapping=tex-text]{나눔명조}
+    \setmonofont{나눔고딕코딩}
+
+    % 한글 폰트 설정
+    \setmainhangulfont[Mapping=tex-text]{나눔고딕}
+    \setsanshangulfont[Mapping=tex-text]{나눔명조}
+    \setmonohangulfont{나눔고딕코딩}
+    }
+
+    '''
 }
-'''
 
 latex_documents = [
     (master_doc, 'gsl-kor-manual.tex', title, my_latex_authors, 'manual')

@@ -113,14 +113,22 @@ C 표준 수학 라이브러리
   Abramowitz, M., Stegun, I.A.: Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables. US Government Printing Office, Washington, 10th printing, with corrections (December 1972)
 
 
-퍼블릭 도메인이므로 자유롭게 재출판, 변형등이 가능하고 접근도 가능하지만 온라인에 풀려있는 대부분의 PDF는 뒤틀리거나 잘린 스캔본이 대다수입니다.
-2012년도 Birmingham 대학의 Alan P. Sexton 박사는 `A Resource for Scientific Document Analysis`_ [#ASRMDA]_ 란 프로젝트로 
+퍼블릭 도메인이므로 자유롭게 재출판, 변형등이 가능하고 접근도 가능합니다. 일반적으로 대학 도서관에서 찾을 수 있습니다.
+온라인에서 html 버전으로 서적의 출판본을 볼 수도 있습니다. `Colin B. Macdonald`_ 박사의 `홈페이지 <https://personal.math.ubc.ca/~cbm/aands/>`_ 에서 제공합니다. 
 
+.. Colin B. Macdonald: https://personal.math.ubc.ca/~cbm/aands/
+
+온라인에 풀려있는 대부분의 PDF는 뒤틀리거나 잘린 스캔본이 대다수입니다.
+2012년도 `Birmingham <https://www.birmingham.ac.uk/index.aspx>`_ 대학의 `Alan P. Sexton`_ 박사는 
+`A Resource for Scientific Document Analysis`_ [#ASRMDA]_ 란 프로젝트로 Abramwotiz & Stegun의 고품질 스캔본을 
+
+
+.. _Alan P. Sexton: https://www.cs.bham.ac.uk/~aps/
 .. _A Resource for Scientific Document Analysis: https://www.cs.bham.ac.uk/~aps/research/projects/as/project.php
 
 여기서는 참고 문헌으로 사용 가능한 몇몇 수학 문헌을 소개합니다. 모두 디지털 형태로 제공되고 있으며 출판본 또한 시중에서 구할 수 있습니다. 
 
-A&S를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS]_ 에서 `DLMF <https://dlmf.nist.gov/>`_ 프로젝트를 시작했습니다. 
+Abramwotiz & Stegun를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS]_ 에서 `DLMF <https://dlmf.nist.gov/>`_ 프로젝트를 시작했습니다. 
 이 프로젝트는 Dgitial Library of Mathematical Functions 의 약자로 수학 함수들에 대한 참고 문헌을 
 핸드북 형태의 디지털 문서로 제공함을 목적으로 합니다.
 해당 문헌은 A&S의 마지막 출간 이후 출판된 여러 새로운 함수와, 기존 함수들의 
