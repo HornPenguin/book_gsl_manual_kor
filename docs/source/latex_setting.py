@@ -51,11 +51,31 @@ cover_page = r'''
 # 15, 5.4
 # 9.1, 9.3
 license_page = r'''
+    원 영문 원서의 저작권 Copyright of the Original English Version:
+    \noindent\textbf{Copyright (c)} Copyright © 1996-2021 The GSL Team.\\
+    Permission is granted to copy, distribute and/or modify this document under the terms of the
+    GNU Free Documentation License, Version 1.3 or any later version published by the Free Software
+    Foundation; with the Invariant Sections being “GNU General Public License” and “Free Software
+    Needs Free Documentation”, the Front-Cover text being “A GNU Manual”, and with the Back-
+    Cover Text being (a) (see below). A copy of the license is included in the section entitled “GNU
+    Free Documentation License”.
+    (a) The Back-Cover Text is: “You have freedom to copy and modify this GNU Manual, like
+    GNU software.” Printed copies of this manual can be purchased from Network Theory Ltd at
+    http://www.network-theory.co.uk/gsl/manual/.
+    The money raised from sales of the manual helps support the development of GSL
+
     \noindent\textbf{Copyright (c)}  2022  김현성. \\
     Permission is granted to copy, distribute and/or modify this document under 
     the terms of the GNU Free Documentation License, Version 1.3 or any later
     version published by the Free Software Foundation; with no  
     Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. 
     A copy of the license is included in the section entitled 
-    "GNU Free Documentation License". 
+    "GNU 자유 문서 사용 허가서". \\~\\
+    
+    \noindent\textbf{Copyright (c)}  2022  김현성. \\
+    GNU 자유 문서 사용 허가서 1.3판과 자유 소프트웨어 재단에서 발행한 이후의 갱신본의
+    규정에 따라, 본 저작물의 복제, 베포 및 수정을 허가합니다. 변경 불가 부분, 앞 표지 구절과
+    뒷 표지 구절은 없습니다. 이 허가서의 복사본은 "GNU 자유 문서 사용 허가서"로 지어진 단락에
+    포함되어 있습니다.
+    
     '''

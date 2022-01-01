@@ -99,7 +99,7 @@ latex_elements = {
     'papersize': 'a4papaer',
     'pointsize': '10pt',
     'preamble': my_preamble,
-    'fontpkg': my_font_setting,
+    'fontenc' : r'\usepackage{kotex}',
     'releasename': ' ',
     'maketitle': my_title
 }
