@@ -17,10 +17,6 @@ custom_setting = r'''
 
     \definecolor{coverbackground}{RGB}{209, 198, 161} 
     \definecolor{coverband}{RGB}{239, 190, 84}
-    
-    \setCJKmainfont{Noto Serif CJK KR}
-    \setCJKsansfont{Noto Sans CJK KR}
-    \setCJKmonofont{Noto Sans Mono CJK KR}
     '''
 
 cover_page = r'''

@@ -97,7 +97,12 @@ latex_elements = {
     'pointsize': '10pt',
     'preamble': my_preamble,
     'releasename': ' ',
-    'maketitle': my_title
+    'maketitle': my_title,
+    'fontpkg' : r'''
+    \setCJKmainfont{Noto Serif CJK KR}
+    \setCJKsansfont{Noto Sans CJK KR}
+    \setCJKmonofont{Noto Sans Mono CJK KR}
+    '''
 }
 
 latex_documents = [
