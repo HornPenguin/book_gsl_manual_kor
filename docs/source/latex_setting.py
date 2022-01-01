@@ -1,5 +1,6 @@
 
 packagelist= {
+    "hangulfontset" : "default",
     "kotex" : "",
     "afterpage" : "",
     "pagecolor" : "pagecolor=none",
