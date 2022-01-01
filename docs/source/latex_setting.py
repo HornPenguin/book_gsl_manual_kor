@@ -17,8 +17,8 @@ custom_setting = r'''
 
     \definecolor{coverbackground}{RGB}{209, 198, 161} 
     \definecolor{coverband}{RGB}{239, 190, 84}
-
-    \setmainhangulfont{NanumMyeongjo}  
+    
+    \setCJKmainfont[Hangul]{NanumMyeongjo}
     '''
 
 cover_page = r'''

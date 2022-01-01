@@ -65,9 +65,6 @@ my_preamble = r'''
     {1}                        
     '''.format(packages, custom_setting)
 
-my_font_setting =r'''
-    \setCJKmainfont[Hangul]{NanumMyeongjo}
-    '''
 
 my_title = r'''
     {0}
@@ -100,21 +97,7 @@ latex_elements = {
     'pointsize': '10pt',
     'preamble': my_preamble,
     'releasename': ' ',
-    'maketitle': my_title,
-    'fontpkg': r'''
-
-    % 영문 폰트 설정
-    \setmainfont[Mapping=tex-text]{나눔고딕}
-    \setsansfont[Mapping=tex-text]{나눔명조}
-    \setmonofont{나눔고딕코딩}
-
-    % 한글 폰트 설정
-    \setmainhangulfont[Mapping=tex-text]{나눔고딕}
-    \setsanshangulfont[Mapping=tex-text]{나눔명조}
-    \setmonohangulfont{나눔고딕코딩}
-    }
-
-    '''
+    'maketitle': my_title
 }
 
 latex_documents = [
