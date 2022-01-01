@@ -99,10 +99,9 @@ latex_elements = {
     'releasename': ' ',
     'maketitle': my_title,
     'fontpkg' : r'''
-    \setmainfonnt{Noto Serif CJK KR}
-    \setCJKmainfont{Noto Serif CJK KR}
-    \setCJKsansfont{Noto Sans CJK KR}
-    \setCJKmonofont{Noto Sans Mono CJK KR}
+    \setmainfont{Noto Serif CJK KR}
+    \setsansfont{Noto Sans CJK KR}
+    \setmonofont{Noto Sans Mono CJK KR}
     '''
 }
 
