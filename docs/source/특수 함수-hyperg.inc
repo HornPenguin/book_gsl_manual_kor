@@ -30,6 +30,8 @@
 
     를 정수 인자 :math:`m` 과 :math:`n` 에 따라 계산합니다.
 
+.. index::    singe: 합류 초기하 함수 
+    single: Confluent hypergeometric
 
 .. c:function:: double gsl_sf_hyperg_1F1 (double a, double b, double x)
                 int gsl_sf_hyperg_1F1_e (double a, double b, double x, gsl_sf_result * result)
@@ -52,7 +54,7 @@
 
 .. c:function:: int gsl_sf_hyperg_U_int_e10_e (int m, int n, double x, gsl_sf_result_e10 * result)
 
-    류 초기하 함수 :math:`U(m,n,x)` 를 정수 인자 :math:`m` 과 :math:`n` 에 대해 계산하고 확장된 구간에 대해, 
+    합류 초기하 함수 :math:`U(m,n,x)` 를 정수 인자 :math:`m` 과 :math:`n` 에 대해 계산하고 확장된 구간에 대해, 
     :code:`gsl_sf_result_e10`  형의 값을 반환합니다.
 
 .. c:function:: double gsl_sf_hyperg_U (double a, double b, double x)

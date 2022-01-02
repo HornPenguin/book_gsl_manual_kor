@@ -46,7 +46,7 @@ Ei(x)
 
         Ei(x) = - PV (\int_{-x}^\infty \frac{\exp(-t)}{t} dt)
 
-    :math:`PV` 는 적분 주요값(Principal Value of Integral)입니다. 코시 주요값(Cauchy principal value)이라고도 합니다(*).
+    :math:`PV` 는 적분 주요값(Principal Value of Integral)입니다 [#PV]_ . 
 
 초기하 적분 (Hyperbolic Integrals)
 -------------------------------------------
@@ -71,7 +71,7 @@ Ei(x)
         \text{Chi}(x) := \mathfrak{R} [\gamma_E + \log(x) + \int_0^x \frac{\cosh(t) -1}{t} dt]
 
     :math:`\gamma_E` 는 오일러 상수입니다. 
-    오일러 상수는 :c:macro:`M_EULER` 매크로로 라이브러리 내에 있습니다.
+    오일러 상수는 매크로 :c:macro:`M_EULER` 로 라이브러리 내에 있습니다.
 
 
 Ei_3(x)
@@ -120,3 +120,8 @@ Ei_3(x)
     .. math::
     
         \text{AtanInt}(x) := \int_0^x \frac{\text{arctan}}{t} dt
+
+
+.. rubric:: 각주
+
+.. [#PV] 코시 주요값(Cauchy principal value)이라고도 합니다(*).

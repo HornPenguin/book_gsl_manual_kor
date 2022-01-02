@@ -15,7 +15,7 @@
 
 .. c:function:: int gsl_sf_exp_e10_e (double x, gsl_sf_result_e10 * result)
 
-    지수 함수 :math:`\exp(x)` 의 값을 계산하는 데, 반환값의 자료형으로 :math:`gsl_sf_result_e10` 을 사용해 확장된 크기의 반환값을 계산합니다. 
+    지수 함수 :math:`\exp(x)` 의 값을 계산하는 데, 반환값의 자료형으로 :code:`gsl_sf_result_e10` 을 사용해 확장된 크기의 반환값을 계산합니다. 
     이 함수는 :math:`double` 자료형의 범주를 초과한 :math:`\exp(x)` 값을 구할 때, 사용할 수 있습니다.
 
 .. c:function:: double gsl_sf_exp_mult (double x, double y)
@@ -25,7 +25,7 @@
 
 .. c:function:: int gsl_sf_exp_mult_e10_e (const double x, const double y, gsl_sf_result_e10 * result)
 
-    확장된 범위를 가지는 :math:`gsl_sf_result_e10` 자료형을 반환 값에 사용해 :math:`y \exp(x)` 값을 계산합니다.
+    확장된 범위를 가지는 :code:`gsl_sf_result_e10` 자료형을 반환 값에 사용해 :math:`y \exp(x)` 값을 계산합니다.
 
 상대 지수 함수 (Relative Exponential Functions)
 -------------------------------------------------
@@ -80,7 +80,7 @@
 .. c:function:: int gsl_sf_exp_err_e10_e (double x, double dx, gsl_sf_result_e10 * result)
 
     주어진 :math:`x` 의 지수함수 값을 절대 오차 :math:`dx` 와 함께 반환합니다. 
-    이때, 반환 값의 자료형을 :math:`gsl_sf_result_e10` 을 사용해 확장된 범위의 결과를 계산할 수 있습니다.
+    이때, 반환 값의 자료형을 :code:`gsl_sf_result_e10` 을 사용해 확장된 범위의 결과를 계산할 수 있습니다.
 
 .. c:function:: int gsl_sf_exp_mult_err_e (double x, double dx, double y, double dy, gsl_sf_result * result)
 

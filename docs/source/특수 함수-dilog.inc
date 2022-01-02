@@ -13,13 +13,20 @@
 
 실수 인자 (Real Argument)
 ----------------------------
+
+.. index::
+    single: 르윈
+    single: Lewin
+    single: 스펜스 적분
+    single: Spence integral
+
 .. c:function:: double gsl_sf_dilog (double x)
                 int gsl_sf_dilog_e (double x, gsl_sf_result * result)
 
 
     이 함수들은 실수 값에 대한 다이 로그값을 계산합니다. 
-    르윈(Lewin)의 표기법으로 :math:`Li_2(x)`  로 표기되며, 
-    이는 실수 값 :math:`x`  의 다이 로그 값을 나타냅니다. 
+    르윈의 표기법으로 :math:`Li_2(x)` 로 표기되며, 
+    이는 실수 값 :math:`x` 의 다이 로그 값을 나타냅니다. 
     이 값은 다음과 같이 적분형 표현으로 정의됩니다.
 
     .. math:: 
@@ -29,7 +36,7 @@
     .. note::
 
         * :math:`\mathfrak{I}(Li_2(x))` 는 :math:`x \leq 1` 에서 :math:`0` , :math:`x>1` 에서 :math:`- \pi \log(x)` 입니다.
-        * Abramowitz & Stegun에서는 스펜스 적분(Spence integral)을 :math:`Li_2(x)` 대신 :math:`S(x) = Li_2(1-x)` 로 정의합니다.
+        * Abramowitz & Stegun에서는 스펜스 적분을 :math:`Li_2(x)` 대신 :math:`S(x) = Li_2(1-x)` 로 정의합니다.
 
 
 복소수 인자 (Complex Argument)

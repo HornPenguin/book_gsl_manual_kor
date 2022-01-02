@@ -52,11 +52,11 @@
 .. c:function:: int gsl_sf_lngamma_complex_e (double zr, double zi, gsl_sf_result * lnr, gsl_sf_result * arg)
 
     복소수 Lanczos 방법을 사용해, 주어진 복소수 :math:`z= z_r + i z_i` 에 대해, :math:`\log(\Gamma(z))` 값을 계산합니다. 
-    이때, :math:`z` 는 :math:`0` 과 음의 정수가 아닌 복소수입니다. :math:`lnr = \log|\Gamma(z)|` , :math:`arg = \text{arg}(\Gamma(z))` 이고, 
-    :math:`arg` 는 :math:`(-\pi, \pi]` 범위의 값을 가집니다. :math:`|z|` 가 매우 클 때, :math:`arg` 값이 정확히 정해지지 않을 수 있습니다. 
+    이때, :math:`z` 는 :math:`0` 과 음의 정수가 아닌 복소수입니다. :code:`lnr` :math:` = \log|\Gamma(z)|` , :code:`arg` :math:` = \text{arg}(\Gamma(z))` 이고, 
+    :code:`arg` 는 :math:`(-\pi, \pi]` 범위의 값을 가집니다. :math:`|z|` 가 매우 클 때, :code:`arg` 값이 정확히 정해지지 않을 수 있습니다. 
     이는 :math:`(-\pi, \pi]` 로 범위를 제약함으로써 생기는 절단점으로 인해 필연적으로 발생합니다. 
     이러한 상황은 :code:`GSL_ELOSS` 오류에 속하는 상황입니다. 
-    절대값 :math:`lnr` 부분은 이러한 정밀도 저하를 격지 않습니다.
+    절대값 :code:`lnr` 부분은 이러한 정밀도 저하를 격지 않습니다.
 
 팩토리얼
 -------------------------
@@ -83,7 +83,7 @@
 
     :math:`n` 팩토리얼의 로그 값, :math:`\log(n!)` 값을 계산합니다. 
     이 알고리즘은 :math:`n <170` 에서 :math:`\ln(\Gamma(n+1))` 값을 계산하는 :code:`gsl_sf_lngamma` 보다 빠릅니다. 
-    하지만 큰 :math:`n` 대해서는 빠르지 않습니다.
+    하지만 큰 :math:`n` 에 대해서는 빠르지 않습니다.
 
 .. c:function:: double gsl_sf_lndoublefact (unsigned int n)
                 int gsl_sf_lndoublefact_e (unsigned int n, gsl_sf_result * result)
@@ -109,10 +109,17 @@
 포흐하머 기호
 -------------------------
 
+.. index:: 
+    single: 포흐하머 기호
+    single: Pochhammer symbol
+    single: 아펠 기호
+    single: Apell symbol
+
 .. c:function:: double gsl_sf_poch (double a, double x)
                 int gsl_sf_poch_e (double a, double x, gsl_sf_result * result)
 
-    포흐하머 기호 :math:`(a)_x = \Gamma(a_x)/\Gamma(a)` 를 계산합니다. 포흐하머 기호는 아펠(Apell) 기호로도 알려져있으며, :math:`(a,x)` 로 표기하기도 합니다. :math:`a` 와 :math:`a+x` 가 음의 정수나 :math:`0` 일때, 해당 비의 극한 값이 반환됩니다.
+    포흐하머 기호 :math:`(a)_x = \Gamma(a_x)/\Gamma(a)` 를 계산합니다. 포흐하머 기호는 아펠 기호로도 알려져있으며, :math:`(a,x)` 로 표기하기도 합니다. 
+    :math:`a` 와 :math:`a+x` 가 음의 정수나 :math:`0` 일때, 해당 비의 극한 값이 반환됩니다.
 
 .. c:function:: double gsl_sf_lnpoch (double a, double x)
                 int gsl_sf_lnpoch_e (double a, double x, gsl_sf_result * result)
@@ -121,8 +128,8 @@
 
 .. c:function:: int gsl_sf_lnpoch_sgn_e (double a, double x, gsl_sf_result * result, double * sgn)
 
-    포흐하머 기호의 부호와 그 크기의 로그값을 계산합니다. 계산되는 계수들은 :math:`result = \log(|(a)_x|)` 가 오차 값과 함께 계산되고, 
-    :math:`(a)_x = \Gamma(a+x)/\Gamma(a)` 에 대해, :math:`sgn = \text{sgn}((a)_x)` 을 계산합니다.
+    포흐하머 기호의 부호와 그 크기의 로그값을 계산합니다. 계산되는 계수들은 :code:`result` :math:` = \log(|(a)_x|)` 가 오차 값과 함께 계산되고, 
+    :math:`(a)_x = \Gamma(a+x)/\Gamma(a)` 에 대해, :code:`sgn` :math:` = \text{sgn}((a)_x)` 을 계산합니다.
 
 
 .. c:function:: double gsl_sf_pochrel (double a, double x)

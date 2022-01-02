@@ -60,14 +60,14 @@
 
 .. c:function:: int gsl_sf_coulomb_wave_F_array (double L_min, int kmax, double eta, double x, double fc_array[], double * F_exponent)
 
-    이 함수는 :math:`L = Lmin \dots Lmin + kmax` 에 대해, 
+    이 함수는 :math:`L = L_{min} \dots L_{min} + k_{max}` 에 대해, 
     함수 :math:`F_L(\eta,x)` 의 값을 계산합니다.
     계산 결과값은 :code:`fc_array`  배열에 저장됩니다. 
     오버플로우가 발생하면 지수값이 :code:`F_exponenet` 에 저장됩니다.
 
 .. c:function:: int gsl_sf_coulomb_wave_FG_array (double L_min, int kmax, double eta, double x, double fc_array[], double gc_array[], double * F_exponent, double * G_exponent)
 
-    이 함수는 :math:`L = Lmin \dots Lmin + kmax`  에 대해, 
+    이 함수는 :math:`L = L_{min} \dots L_{min} + k_{max}`  에 대해, 
     함수 :math:`F_L(\eta,x), G_L(\eta,x)` 의 값을 계산합니다.  
     계산 결과값은 각각 :code:`fc_array` 와 :code:`gc_array` 배열에 저장됩니다. 
     오버플로우가 발생하면 지수값이 :code:`F_exponenet` 와 :code:`G_exponent` 에 저장됩니다.
@@ -75,7 +75,7 @@
 
 .. c:function:: int gsl_sf_coulomb_wave_FGp_array (double L_min, int kmax, double eta, double x, double fc_array[], double fcp_array[], double gc_array[], double gcp_array[], double * F_exponent, double * G_exponent)
 
-    이 함수는 :math:`L = Lmin \dots Lmin + kmax` 에 대해, 
+    이 함수는 :math:`L = L_{min} \dots L_{min} + k_{max}` 에 대해, 
     함수 :math:`F_L(\eta,x), G_L(\eta,x)` 와 그 도함수  
     :math:`F'_L(\eta,x), G'_L(\eta,x)` 의 값을 계산합니다.  
     계산 결과값은 각각 :code:`fc_array` , :code:`gc_array` , :code:`fcp_array` 그리고 :code:`gcp_array` 배열에 저장됩니다.
@@ -83,7 +83,7 @@
 
 .. c:function:: int gsl_sf_coulomb_wave_sphF_array (double L_min, int kmax, double eta, double x, double fc_array[], double F_exponent[])
 
-    이 함수는 :math:`L = Lmin \dots Lmin + kmax` 에 대해, 
+    이 함수는 :math:`L = L_{min} \dots L_{min} + k_{max}` 에 대해, 
     인자로 나누어진 쿨롱 함수 :math:`F_L(\eta,x)/x` 값을 계산합니다.  
     계산 결과값은 :code:`fc_array`  배열에 저장됩니다. 
     오버플로우가 발생하면 지수값이 :code:`F_exponenet` 에 저장됩니다.  
@@ -100,4 +100,4 @@
 
 .. c:function:: int gsl_sf_coulomb_CL_array (double Lmin, int kmax, double eta, double cl[])
 
-   :math:`L = Lmin \dots Lmin + kmax, Lmin > -1`  에 대해, 쿨롱 파동 함수의 정규화 계수 :math:`C_L(\eta)` 를 계산합니다.
+   :math:`L = L_{min} \dots L_{min} + k_{max}, L_{min} > -1`  에 대해, 쿨롱 파동 함수의 정규화 계수 :math:`C_L(\eta)` 를 계산합니다.

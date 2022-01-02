@@ -50,7 +50,9 @@
 
     가우스 확률 밀도 함수 :math:`Z(x) = \frac{1}{\sqrt{2\pi}} \exp(- \frac{x^2}{2})` 값을 계산합니다.
 
-
+.. index::
+    single: 하자드 함수
+    single: Hazard function
 .. c:function:: double gsl_sf_erf_Q (double x)
                 int gsl_sf_erf_Q_e (double x, gsl_sf_result * result)
 
@@ -69,4 +71,4 @@
 .. c:function:: double gsl_sf_hazard (double x)
                 int gsl_sf_hazard_e (double x, gsl_sf_result * result)
 
-    표준 분포의 하자드 함수(Hazard function)를 계산합니다.
+    표준 분포의 하자드 함수를 계산합니다.

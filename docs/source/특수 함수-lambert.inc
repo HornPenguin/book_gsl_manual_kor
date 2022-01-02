@@ -1,4 +1,6 @@
-# 람베르트 :math:`W` 함수 (Lambert :math:`W` Functions)
+.. index::
+    single: 람베르트 W 함수
+    single: Lambert W Functions
 
 람베르트 :math:`W` 함수 :math:`W(x)` 는 :math:`W(x)\exp(W(x)) = x` 방정식의 해로 정의됩니다. 
 이 함수는 :math:`x<0`  에서 다양한 부분 함수들로 나뉘어 집니다. 

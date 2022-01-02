@@ -2,3 +2,5 @@
 * 리드버그 수: Rydberg constant
 * 르장드르 다항식: Legendre polynomial
 * 란덴 변환: Landen transform
+* 르윈: Lewin
+* 람베르트 W 함수: Lambert W Functions

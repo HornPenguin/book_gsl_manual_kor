@@ -1,6 +1,8 @@
 .. index::
    single: Jacobi elliptic functions
    single: elliptic functions (Jacobi)
+   single: 란덴 변환
+   single: Landen transform
 
 
 자코비 타원 함수들은 Abramowitz & Stegun, 16 단원의 정의를 따릅니다. 

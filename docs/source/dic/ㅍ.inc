@@ -7,3 +7,4 @@
 * 플랑크 상수: Plank's constant
 * 파섹: Parsec
 * 패덤: Fathom
+* 포흐하머 기호: Pochhammer symbol
