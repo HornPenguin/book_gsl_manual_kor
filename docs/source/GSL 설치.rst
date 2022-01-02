@@ -3,14 +3,22 @@
 GSL 설치(*)
 **********************************
 
-많은 GNU 프로젝트의 결과물들이 source code 형태로 배포 되고 있습니다. 
-어떤 프로젝트들의 경우 release된 설치 파일(.exe, .msi, .deb, .rpm)을 통한 배포도 하고 있지만, 
+
+이 단원에서는 GSL 라이브러리의 설치에 관해 다룹니다. 
+먼저, 라이브러리를 설치한다는 것은 정적이나 공유/동적 라이브러리 파일을 다른 프로그램이나
+컴파일 과정에서 사용할 수 있는 환경을 구축하는 행위를 말합니다.
+그냥 단순히 베포하고 있는 :code:`.c` :code:`.h` 파일들을 복사해서
+프로젝트 디렉토리에 포함시켜도 됩니다. 
+하지만 매우 번거롭고 프로그램이 공유/동적 라이브러리를
+사용할 수 없어 실행 파일의 크기가 커집니다. 
+
+이러한 라이브러리의 설치는 소스 코드를 개발환경에서 컴파일해 구성하는 방안과
+사전 컴파일된 라이브러리를 설치하는 두가지 방법입니다. 
 GSL 라이브러리의 경우는 공식적으로 소스코드를 이용한 베포를 사용하고 있습니다. 
 
-GSL 또한 Windows, Linux, Mac에서 사전 컴파일 된 라이브러리가 존재합니다.
+비공식적으로 Windows, Linux, Mac에서 사전 컴파일 된 라이브러리가 존재합니다.
 Windows에서는 `Cygwin <http://www.cygwin.com/>`_ 의 일부분으로 존재하고 
-Linux 등에서는 각 베포판의 패키지 저장소에 있습니다. 
-
+Linux, Mac 등에서는 각 베포판의 패키지 저장소에 있습니다. 
 
 .. note::
 
@@ -51,6 +59,9 @@ OSX에서는 `Homwbrew <https://brew.sh/index_ko>`_ 를 통해 설치할 수 있
 Windows
 -----------------------
 
+Windows에서의 설치는 복잡합니다. 
+소스코드 설치부에서 후술합니다.
+
 
 소스코드 설치
 ====================
@@ -89,39 +100,14 @@ Windows
 소스코드를 이용한 설치 방법을 알아두어야 할 필요가 있습니다.
 
 상기한 설치파일을 제공하지 않는 프로젝트들도 존재하는 만큼 이러한 설치 방법을 알아두면, 
-나중에 다른 GNU 프로젝트들을 사용할 때 되리라 생각합니다.
+나중에 다른 GNU 프로젝트들을 사용할 때 유용하리라 생각합니다.
 
-GSL 다운로드 
------------------
+크게 2가지로 나뉩니다.
 
-GSL은 `Main GNU FTP site <ftp://ftp.gnu.org/gnu/gsl/>`_ 나 가까운 
-`GNU mirror site <http://ftpmirror.gnu.org/gsl/>`_  에서 소스코드를 내려받을 수 있습니다.
-
-현재 가장 최신버전은 2021년 6월 1일에 배포된 :code:`gsl-2.7` 버전 입니다. 
-가장 최신 버전의 라이브러리를 다운로드 하고 싶다면, 
-다음과 같이 위의 ftp 링크에서 가장 최신 버전의 파일을 내려받거나.
-
-.. code-block:: console
-
-    gsl-X.Y.tar.gz
-    gsl-X.Y.tar.gz.sig
-
-자동으로 최신 버전으로 업데이트 되는 파일을 내려받을 수도 있습니다.
-
-.. code-block:: console
-
-    gsl-lastest.tar.gz
-
-
-웹 브라우저를 통해 파일을 다운 받을 수 있고 터미널을 이용해 받고 싶다면 
-:code:`wget` 나 :code:`curl` 명령어를 사용하면 됩니다.
-
-다음은 :code:`gsl-lastes.tar.gz` 을 다운 받을 수 있는 명령어입니다.
-
-.. code-block:: console
-
-    $wget https://ftp.gnu.org/gnu/gsl/gsl-lastest.tar.gz
-
+1. 소스 코드를 컴파일해 라이브러리 파일 생성 
+    Linux/Mac : :code:`.a` , :code:`.la` , :code:`.so` 
+    Windows: :code:`.lib` , :code:`.dll` , 
+2. 컴파일러와 링크 프로그램의 검색 경로에 해당 파일들의 경로 등록
 
 GSL 설치(Linux & Mac)
 -----------------------
@@ -134,7 +120,7 @@ GSL의 설치는 다운로드 받은 압축 파일 내의 :code:`INSTALL` 파일
 표준 GNU 설치 절차는 다음의 6가지 단계로 이루어져있습니다.
 
 1. Prerequisites
-2. Downnloading the source
+2. Downloading the source
 3. Configuration
 4. Building
 5. Testing(optional)
@@ -169,7 +155,7 @@ Windows에서는 별도로 호환되는 Shell을 먼저 설치해 주어야합�
 하지만 소개에서 말했다시피 굳이 GCC를 쓸 필요는 없습니다. 
 Clang이나 ICC, AOCC [#iccaocc]_ 등의 다른 C 컴파일러를 사용할 수도 있습니다.
 
-여기서는 Linux에서 Ubuntu 환경에서 Bash를 기준으로 설명을 진행합니다. 
+여기서는 GNU/Linux 중 Ubuntu 환경에서 Bash를 기준으로 설명을 진행합니다. 
 Fedora 계열과 Mac은 별도로 같이 기술합니다.
 
 컴파일러 설치
@@ -214,19 +200,35 @@ Fedora 계열과 Mac은 별도로 같이 기술합니다.
     $dnf
 
 만약 설치되어있지 않다면, :code:`gcc` 를 설치해 주어야합니다. 
+후술할 :code:`build-essential` 을 이용해 다른 개발 도구들과 함께 한꺼번에 설치해도 됩니다.
 
-make도 같이
 
 Ubuntu와 같은 Debian 계열의 기본 저장소에서 이는 :code:`build-essential` 패키지 내에 포함되어 있습니다. 
+이 패키지는 메타 패키지의 일종으로 다른 여러 패키지의 묶어서 한번에 설치하기 위한 패키지입니다.
+
 다음을 입력해 :code:`build-essential`  를 설치하면 필요한 
-:code:`gcc` ,``g++`` ,``make`` 등의 여러 컴파일러와 유틸리티를 설치 할 수 있습니다.
+:code:`gcc` , :code:`g++` , :code:`make` 등의 여러 컴파일러와 유틸리티를 설치 할 수 있습니다.
+
+**build-essential** 패키지
+
+.. list-table:: build-essential 패키지의 포함 목록 []
+    :header-rows: 1
+
+    * - Package 
+      - Description
+    * - libc-dev
+      - 표준 ISO C 라이브러리
+    * - gcc, g++
+      - gnu complier collection 과 gnu C++ Compiler
+    * - make
+      - make 
 
 ::
 
     List of Build-Essential packages
                     as of 2017-09-17, Debian sid
 
-    이 패키지는 메타 패키지로 다른 여러 패키지의 묶음 패키지입니다.
+    .
 
     libc6-dev [!alpha !ia64 !hurd-i386] | libc0.3-dev [hurd-i386] | libc6.1-dev [alpha ia64] | libc-dev
     Provides the ISO C standard library
@@ -280,8 +282,44 @@ Fedora/RHEL 계열에서 비슷한 역할을 하는 패키지 묶음으로는
 
     $sudo dnf groupinstall "Development Tools" "Development Libraries"
 
-Downloading Source
+GSL 다운로드 
 ~~~~~~~~~~~~~~~~~~~~~~
+
+GSL은 `Main GNU FTP site <ftp://ftp.gnu.org/gnu/gsl/>`_ 나 가까운 
+`GNU mirror site <http://ftpmirror.gnu.org/gsl/>`_  에서 소스코드를 내려받을 수 있습니다.
+
+현재 가장 최신버전은 2021년 6월 1일에 배포된 :code:`gsl-2.7` 버전 입니다. 
+가장 최신 버전의 라이브러리를 다운로드 하고 싶다면, 
+다음과 같이 위의 ftp 링크에서 가장 최신 버전의 파일을 내려받거나.
+
+.. code-block:: console
+
+    gsl-X.Y.tar.gz
+    gsl-X.Y.tar.gz.sig
+
+자동으로 최신 버전으로 업데이트 되는 파일을 내려받을 수도 있습니다.
+
+.. code-block:: console
+
+    gsl-lastest.tar.gz
+
+
+웹 브라우저를 통해 파일을 내려 받을 수 있고 터미널을 이용해 받고 싶다면 
+:code:`wget` 나 :code:`curl` 명령어를 사용하면 됩니다.
+
+다음은 :code:`gsl-lastes.tar.gz` 을 다운 받을 수 있는 명령어입니다.
+
+.. code-block:: console
+
+    $wget https://ftp.gnu.org/gnu/gsl/gsl-latest.tar.gz
+    $curl curl https://ftp.gnu.org/gnu/gsl/gsl-latest.tar.gz --output gsl_latest.tar.gz
+
+Windows 에서는 :code:`wget` 을 Unix 계열의 :code:`wget` 을 쓰지 않고 자체 기능인 :code:`Invoke-WebRequest` 의 별칭으로
+정의했기 때문에 :code:`curl` 과 같이 저장할 파일의 이름을 지정해 주어야 파일을 저장합니다.
+
+.. code-block:: console
+    
+    >wget https://ftp.gnu.org/gnu/gsl/gsl-latest.tar.gz -O gsl_latest.tar.gz
 
 위에서 설명한 FTP 사이트에서 :code:`.tar.gz` 파일을 다운로드하고, 이를 다음의 명령어를 통해 압축을 해제합니다.
 
@@ -313,8 +351,7 @@ Configuration
 
 clang과 icc에 대해 다음과 같이 설정할 수 있습니다.
 
-./configure CC=clang CPP="clang -E" CFLAGS="-O4" LD="llvm-ld" OTOOL=llvm-ld 
-AR=llvm-ar RANLIB=llvm-ranlib NM=llvm-nm MC=llvmc PROF=llvm-prof AS=llvm-as
+./configure CC=clang CPP="clang -E" CFLAGS="-O4" LD="llvm-ld" OTOOL=llvm-ld AR=llvm-ar RANLIB=llvm-ranlib NM=llvm-nm MC=llvmc PROF=llvm-prof AS=llvm-as
 
 
 이 과정은 시간이 조금 걸립니다. 
@@ -346,7 +383,7 @@ Final install
 
 
 6 단계까지 마무리하면 GSL의 설치는 끝납니다. 기본으로 설치된 위치는 :code:`/usr/local/lib` 입니다. 
-이 폴더 안에는 다음과 같은 :code:`.so`  동적 라이브러리가 담겨있습니다. 
+이 폴더 안에는 다음과 같이 :code:`.a` 와 :code:`.so` 확장자로 정적/동적 라이브러리가 담겨있습니다. 
 컴퓨터 환경에 따라 해당 디렉토리에 담겨있는 라이브러리는 다양할 수 있습니다.
 
 .. code-block:: console
@@ -387,27 +424,27 @@ Final install
     # libc default configuration
     /usr/local/lib
 
-**환경 변수에 추가하기**
+* 환경 변수에 추가하기
 
-:code:`bash` 창에 다음을 입력하면 환경 변수 :code:`LD_LIBRARY_PATH` 에 위치를 추가할 수 있습니다. 
+    :code:`bash` 창에 다음을 입력하면 환경 변수 :code:`LD_LIBRARY_PATH` 에 위치를 추가할 수 있습니다. 
 
-.. code-block:: console
+    .. code-block:: console
 
-    LD_LIBRARY_PATH=${LD_LIBRARY_PARH}:/usr/local/lib
-    export LD_LIBRARY_PATH 
-
-
-그러나 이 방법은 새로운 :code:`bash` 창을 열 때마다 별도로 입력해 주어야합니다. 
-때문에, 계정의 홈 디렉토리에 있는 :code:`.bashrc` 파일의 끝에 다음의 문구를 추가해줍니다 [#bashrc]_ .
+        LD_LIBRARY_PATH=${LD_LIBRARY_PARH}:/usr/local/lib
+        export LD_LIBRARY_PATH 
 
 
-.. code-block:: console
-
-    LD_LIBRARY_PATH=${LD_LIBRARY_PARH}:/usr/local/lib
-    export LD_LIBRARY_PATH 
+    그러나 이 방법은 새로운 :code:`bash` 창을 열 때마다 별도로 입력해 주어야합니다. 
+    때문에, 계정의 홈 디렉토리에 있는 :code:`.bashrc` 파일의 끝에 다음의 문구를 추가해줍니다 [#bashrc]_ .
 
 
-재부팅 후나 :code:`$source ~/.bashrc` 를 입력하면 정상적으로 사용이 가능합니다.
+    .. code-block:: console
+
+        LD_LIBRARY_PATH=${LD_LIBRARY_PARH}:/usr/local/lib
+        export LD_LIBRARY_PATH 
+
+
+    재부팅 후나 :code:`$source ~/.bashrc` 를 입력하면 정상적으로 사용이 가능합니다.
 
 참고 문헌
 ==============
