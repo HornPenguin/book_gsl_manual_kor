@@ -114,6 +114,14 @@ C 표준 수학 라이브러리
 서적과 문헌
 ---------------------------
 
+참고 문헌으로 사용 가능한 몇몇 수학과 과학 문헌을 소개합니다. 
+퍼블릭 도메인이거나 GDPL 등과 같은 자유 문서 허가서에 속하는 문서들은
+공식 홈페이지거나 고품질의 디지털 문서 베포 사이트를 함께 기술합니다.
+
+
+Abramwotiz & Stegun
+~~~~~~~~~~~~~~~~~~~~~~
+
 수학 참고 문헌으로 본 라이브러리에서 Abramwotiz & Stegun을 표준으로 사용하고 있습니다.
 해당 문헌은 수학계에서 자명한 표준 문헌이고 퍼블릭 도메인로 사용가능한 서적이지만, 새로운 갱신이 중단되었습니다. 
 1964년도에 NBS [#NBS]_ 에서 처음 출판된 이레로 1972년도에 마지막 "10th printing, December 1972, with corrections" 판이 출판되었고 
@@ -129,15 +137,20 @@ C 표준 수학 라이브러리
 
 .. _Colin B. Macdonald: https://personal.math.ubc.ca/~cbm/aands/
 
-온라인에 풀려있는 대부분의 PDF는 뒤틀리거나 잘린 스캔본이 대다수입니다.
+온라인에 풀려있는 대부분의 PDF는 뒤틀리거나 잘린 스캔본이 대다수입니다. 
+실제 국내에서 구입가능한 재 출간서도 이러한 스캔본에 기반해 만들어진 경우가 있습니다.
 2012년도 `Birmingham <https://www.birmingham.ac.uk/index.aspx>`_ 대학의 `Alan P. Sexton`_ 박사는 
-`A Resource for Scientific Document Analysis`_ [#ASRMDA]_ 란 프로젝트로 Abramwotiz & Stegun의 고품질 스캔본을 
+`A Resource for Scientific Document Analysis`_ [#ASRMDA]_ 란 프로젝트로 Abramwotiz & Stegun의 고품질 스캔본을 만들어 베포했습니다.
+해당 프로젝트에서는 600dpi 이상의 고품질 스캔과 몇가지 이미지 처리를 사용해 참고에 유용한 품질의 디지털 문서로 사용할 수 있습니다.
+
 
 
 .. _Alan P. Sexton: https://www.cs.bham.ac.uk/~aps/
 .. _A Resource for Scientific Document Analysis: https://www.cs.bham.ac.uk/~aps/research/projects/as/project.php
 
-여기서는 참고 문헌으로 사용 가능한 몇몇 수학 문헌을 소개합니다. 모두 디지털 형태로 제공되고 있으며 출판본 또한 시중에서 구할 수 있습니다. 
+
+DLMF
+~~~~~~~~~~~~~~~~~~~~~~
 
 Abramwotiz & Stegun를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS]_ 에서 `DLMF <https://dlmf.nist.gov/>`_ 프로젝트를 시작했습니다. 
 이 프로젝트는 Dgitial Library of Mathematical Functions 의 약자로 수학 함수들에 대한 참고 문헌을 
@@ -150,6 +163,9 @@ Abramwotiz & Stegun를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS
 .. _Cambridge University Press: https://www.cambridge.org/
 .. _NIST Handbook of Mathematical Functions: https://www.cambridge.org/de/academic/subjects/mathematics/abstract-analysis/nist-handbook-mathematical-functions?format=WW&isbn=9780521140638
 
+Encyclopedia of Mathematics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 `Encyclopedia of Mathematics`_ 는 `유럽 수학회`_ 에서 관리하는 온라인 수학 백과입니다.
 `Springer <https://www.springer.com/kr>`_ 출판사에서 `Book series Encyclopaedia of Mathematics`_ 로 출판본을 판매하고 있습니다.
 
@@ -157,7 +173,10 @@ Abramwotiz & Stegun를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS
 .. _유럽 수학회: https://euromathsoc.org/
 .. _Book series Encyclopaedia of Mathematics: https://www.springer.com/series/5920
 
-또 다른 문헌으로 `Wolfram Math World`_ 가 있습니다.
+Wolfram Math World
+~~~~~~~~~~~~~~~~~~
+
+`Wolfram Math World`_ 는  Wolfram Research, Inc. 에서 Eric Weisstein의 프로젝트를 후원해 만들어진 온라인 수학 참고 문헌입니다.
 `The CRC Encyclopedia of Mathematics`_ 란 이름으로 `CRC <https://www.routledge.com/>`_ 에서 2009년도에 출판한 서적이 있습니다.
 
 .. _Wolfram Math World: https://mathworld.wolfram.com
@@ -168,10 +187,23 @@ Abramwotiz & Stegun를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS
 
 GSL은 수치 해석을 위한 C 라이브러리입니다. 이 라이브러리를 사용해 다양한 수학 기능들을 C에서 사용할 수 있습니다. 
 하지만 GSL 외에도 과학 계산을 위한 많은 라이브러리와 소프트웨어들이 존재합니다. 
-이 단락에서는 해당 C에서 사용할 수 있는 라이브러리와 api를 제공하는 소프트웨어들을 간단하게 서술하고자 합니다.
+이 단락에서는 과학 계산 분야에서 사용할 수 있는 C 라이브러리와 관련 api를 제공하는 소프트웨어들을 간단하게 서술하고자 합니다.
+GSL과의 확장 기능을 제공하는 프로그램들은 별도로 표기합니다.
 
 라이브러리
 -------------
+
+`GLPK <https://www.gnu.org/software/glpk/>`_ 는 GNU Linear Programming Kit의 약자입니다. 
+선형 프로그래밍을 위한 여러 기능들을 제공합니다. 
+
+`NLopt <https://nlopt.readthedocs.io/en/latest/>`_ 은 Nonlinear optimization을 위한 라이브러리입니다. 
+여러가지 최적화 방법들을 적은 인터페이스로 사용할 수 있는 기능을 제공하며, 
+C, C++, Fortran, Matlab, GNU Octave, Python, GNU Cuile, Juliaa, R, Lia, OCaml 그리고 Rust에 대한 api를 지원합니다. 
+
+`FFTW <https://www.fftw.org/>`_ 는 Fastest Fourier Transform in the West의 약자로 Fast Fourier Transform 기능을 구현한 라이브러리입니다.
+GSL 내부 구현체와의 차이점은 GSL 구현체에서 제공하는 함수가 처리할 수 있는 크기 이상의 대규모 데이터들에 대해 
+고속 푸리에 변환을 수행할 수 있다는 점입니다.
+
 
 `GMPAL <https://gmplib.org/>`_ 는 GNU Multiple Precision Arithmetic Library의 약자입니다.  
 정밀한 수학 계산을 할 때 많은 경우 double, float 자료형에서 유효 숫자의 한계가 생깁니다. 
@@ -182,19 +214,6 @@ GMPAL 라이브러리의 주된 활용 분야는 암호, 인터넷 보안, 대�
 
 `GTK+ <https://www.gtk.org/>`_ 는 Gimp의 그래픽 인터페이스를 위해 시작된 그래픽 라이브러리로 본격적인 소프트웨어의 GUI를 만드는 데 유용하며, 
 이를 이용해 사용자 정의 플롯 라이브러리를 짤 수도 있습니다.
-
-`GLPK <https://www.gnu.org/software/glpk/>`_ 는 GNU Linear Programming Kit의 약자입니다. 
-선형 프로그래밍을 위한 여러 기능들을 제공합니다. 
-
-`NLopt <https://nlopt.readthedocs.io/en/latest/>`_ 은 Nonlinear optimization을 위한 라이브러리입니다. 
-여러가지 최적화 방법들을 적은 인터페이스로 사용할 수 있는 기능을 제공하며, 
-C, C++, Fortran, Matlab, GNU Octave, Python, GNU Cuile, Juliaa, R, Lia, OCaml 그리고 Rust에 대한 api를 지원합니다. 
-
-
-`FFTW <https://www.fftw.org/>`_ 는 Fastest Fourier Transform in the West의 약자로 Fast Fourier Transform 기능을 구현한 라이브러리입니다.
-GSL 내부 구현체와의 차이점은 GSL 구현체에서 제공하는 함수가 처리할 수 있는 크기 이상의 대규모 데이터들에 대해 
-고속 푸리에 변환을 수행할 수 있다는 점입니다.
-
 
 
 소프트웨어
@@ -222,10 +241,6 @@ C를 위한 api를 제공하기도 하므로 다른 C 라이브러리에 없는 
 검증용으로 사용해 볼 수도 있습니다.  
 
 .. _Wolfram Engine: https://www.wolfram.com/engine
-
-`Matlab <https://www.mathworks.com/products/matlab.html>`_
-
-`Maple <https://www.maplesoft.com/>`_
 
 
 .. rubric:: 각주
