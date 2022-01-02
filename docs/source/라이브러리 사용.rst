@@ -56,7 +56,7 @@ include 경로는 기본적으로 :code:`/usr/local/include` 이므로 위 명�
 
 라이브러리는 :code:`libgsl.a` 라는 한개의 파일로 설치되어있습니다. 
 공유 버전의 경우 :code:`libgsl.so` 로 같이 설치되었있습니다. 
-이 파일들의 기본 위치는 :code:`usr/local/lib` 입니다. 
+이 파일들의 기본 위치는 :code:`/usr/local/lib` 입니다. 
 이 디렉토리가 링커의 표준 검색 경로에  포함되어 있지 않다면, 
 커멘드 라인 명령어로 설정해 주어야 합니다.
 
