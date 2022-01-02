@@ -163,7 +163,7 @@ Abramwotiz & Stegun를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS
 `Cambridge University Press`_ 에서 2010년도에 출판된 서적 또한 판매하고 있습니다. 
 출판본은 `NIST Handbook of Mathematical Functions`_ 으로 명명되어 있습니다.
 
-.. only::
+.. only:: latex
 
   * https://dlmf.nist.gov/
 
