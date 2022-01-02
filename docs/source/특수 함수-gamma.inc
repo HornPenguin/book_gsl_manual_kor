@@ -128,8 +128,8 @@
 
 .. c:function:: int gsl_sf_lnpoch_sgn_e (double a, double x, gsl_sf_result * result, double * sgn)
 
-    포흐하머 기호의 부호와 그 크기의 로그값을 계산합니다. 계산되는 계수들은 :code:`result` :math:` = \log(|(a)_x|)` 가 오차 값과 함께 계산되고, 
-    :math:`(a)_x = \Gamma(a+x)/\Gamma(a)` 에 대해, :code:`sgn` :math:` = \text{sgn}((a)_x)` 을 계산합니다.
+    포흐하머 기호의 부호와 그 크기의 로그값을 계산합니다. 계산되는 계수들은 :code:`result` :math:`{}= \log(|(a)_x|)` 가 오차 값과 함께 계산되고, 
+    :math:`(a)_x = \Gamma(a+x)/\Gamma(a)` 에 대해, :code:`sgn` :math:`{}= \text{sgn}((a)_x)` 을 계산합니다.
 
 
 .. c:function:: double gsl_sf_pochrel (double a, double x)
