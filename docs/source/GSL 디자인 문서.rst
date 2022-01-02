@@ -124,11 +124,11 @@ GSL의 설계는 라이브러리 안에 존재하는 기능들을 간단하게 �
 
 .. code-block:: console
 
-    $ tar xvfz rngextra-0.1.tar.gz
-    $ cd rngextra-0.1
-    $ ./configure; make; make check; make install
-    $ ...
-    $ gcc -Wall main.c -lrngextra -lgsl -lgslcblas -lm
+    $tar xvfz rngextra-0.1.tar.gz
+    $cd rngextra-0.1
+    $./configure; make; make check; make install
+    $...
+    $gcc -Wall main.c -lrngextra -lgsl -lgslcblas -lm
 
 
 아래 내용의 요점은 패키지 디자인 방법에 관한 것입니다. 해당 방법은 GSL 스스로 패키지들의 일관성을 보장해, 

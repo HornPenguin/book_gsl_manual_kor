@@ -24,25 +24,19 @@ Denis Ritchie는 C 언어를 설계하고 개발한 사람이기도 합니다 [#
     single: Brian Kernighan
     single: K.N. King
 
-:: 
-
-  Kernighan, B.W. & Ritchie, D.M., The C Programming Language, 2nd ANSI, Pearson Educación, 1988, isbn:9789688802052.
+* Kernighan, B.W. & Ritchie, D.M., The C Programming Language, 2nd ANSI, Pearson Educación, 1988, isbn:9789688802052.
 
 다른 하나는 K.N.King 의 저서로 C99 표준을 따릅니다. 실제 우리가 배우는 많은 편리한 C의 기능들은
 ANSI C 이후 C99에서 도입된 기능들이 많습니다. TCPL이 좋은 책이고 C를 공부할 때 한번은 참고해 봐야할 책이지만 
 현대적인 코딩 규약들과 프로그래밍 방법들에 관한 내용은 아래 책이 더 좋은 정보를 제공해 줄 것입니다.
 
-::
-
-  King, K.N., C Programming: A Modern Approach. 2nd, W.W. Norton, 2008, isbn:9780393979503.
+* King, K.N., C Programming: A Modern Approach. 2nd, W.W. Norton, 2008, isbn:9780393979503.
 
 Richard Stallman과 몇몇 GNU 프로젝트의 참여자들은 관리, 참여하는 GNU 프로젝트의 일관성, 유지 보수성 그리고 설치 용의성의 확보를
 위해 GNU 프로젝트에 관한 코딩 규약을 만들었습니다. GNU 프로젝트가 C를 통해 개발되는 대규모 오픈소스 프로젝트인 만큼
 C의 개발 과정에서 사용가능한 여러 유용한 정보들을 담고 있습니다.
 
-::
-
-  https://www.gnu.org/prep/standards/
+* https://www.gnu.org/prep/standards/
 
 .. index:: ASCII code
 
@@ -118,6 +112,12 @@ C 표준 수학 라이브러리
 퍼블릭 도메인이거나 GDPL 등과 같은 자유 문서 허가서에 속하는 문서들은
 공식 홈페이지거나 고품질의 디지털 문서 베포 사이트를 함께 기술합니다.
 
+.. warning::
+
+  별도의 서술이 없는 이상 디지털 문서가 퍼블릭 도메인인 경우는 많지 않습니다.
+  아래 문헌의 디지털 판본을 복사, 베포, 수정할 때는 항상 공식 홈페이지의 
+  저작권 문항을 주의 깊게 읽어야합니다. 
+
 
 Abramwotiz & Stegun
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -127,9 +127,7 @@ Abramwotiz & Stegun
 1964년도에 NBS [#NBS]_ 에서 처음 출판된 이레로 1972년도에 마지막 "10th printing, December 1972, with corrections" 판이 출판되었고 
 더 이상 갱신되지 않고 있습니다.
 
-:: 
-
-  Abramowitz, M., Stegun, I.A.: Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables. US Government Printing Office, Washington, 10th printing, with corrections (December 1972)
+* Abramowitz, M., Stegun, I.A.: Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables. US Government Printing Office, Washington, 10th printing, with corrections (December 1972)
 
 
 퍼블릭 도메인이므로 자유롭게 재출판, 변형등이 가능하고 접근도 가능합니다. 일반적으로 대학 도서관에서 찾을 수 있습니다.
@@ -139,10 +137,14 @@ Abramwotiz & Stegun
 
 온라인에 풀려있는 대부분의 PDF는 뒤틀리거나 잘린 스캔본이 대다수입니다. 
 실제 국내에서 구입가능한 재 출간서도 이러한 스캔본에 기반해 만들어진 경우가 있습니다.
-2012년도 `Birmingham <https://www.birmingham.ac.uk/index.aspx>`_ 대학의 `Alan P. Sexton`_ 박사는 
+2012년도 `버밍엄(Birmingham) <https://www.birmingham.ac.uk/index.aspx>`_ 대학의 `Alan P. Sexton`_ 박사는 
 `A Resource for Scientific Document Analysis`_ [#ASRMDA]_ 란 프로젝트로 Abramwotiz & Stegun의 고품질 스캔본을 만들어 베포했습니다.
 해당 프로젝트에서는 600dpi 이상의 고품질 스캔과 몇가지 이미지 처리를 사용해 참고에 유용한 품질의 디지털 문서로 사용할 수 있습니다.
 
+.. only:: latex
+
+  * Abramwotiz & Stegun html 문서 : https://personal.math.ubc.ca/~cbm/aands/
+  * A Resource for Scientific Document Analysis: https://www.cs.bham.ac.uk/~aps/research/projects/as/project.php
 
 
 .. _Alan P. Sexton: https://www.cs.bham.ac.uk/~aps/
@@ -152,13 +154,18 @@ Abramwotiz & Stegun
 DLMF
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Abramwotiz & Stegun를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS]_ 에서 `DLMF <https://dlmf.nist.gov/>`_ 프로젝트를 시작했습니다. 
+Abramwotiz & Stegun를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS]_ 에서 
+`DLMF <https://dlmf.nist.gov/>`_ 프로젝트를 시작했습니다. 
 이 프로젝트는 Dgitial Library of Mathematical Functions 의 약자로 수학 함수들에 대한 참고 문헌을 
 핸드북 형태의 디지털 문서로 제공함을 목적으로 합니다.
 해당 문헌은 A&S의 마지막 출간 이후 출판된 여러 새로운 함수와, 기존 함수들의 
 새 성질들을 포함하고 있으며 지속적으로 갱신되고 있습니다.
 `Cambridge University Press`_ 에서 2010년도에 출판된 서적 또한 판매하고 있습니다. 
 출판본은 `NIST Handbook of Mathematical Functions`_ 으로 명명되어 있습니다.
+
+.. only::
+
+  * https://dlmf.nist.gov/
 
 .. _Cambridge University Press: https://www.cambridge.org/
 .. _NIST Handbook of Mathematical Functions: https://www.cambridge.org/de/academic/subjects/mathematics/abstract-analysis/nist-handbook-mathematical-functions?format=WW&isbn=9780521140638
@@ -168,6 +175,10 @@ Encyclopedia of Mathematics
 
 `Encyclopedia of Mathematics`_ 는 `유럽 수학회`_ 에서 관리하는 온라인 수학 백과입니다.
 `Springer <https://www.springer.com/kr>`_ 출판사에서 `Book series Encyclopaedia of Mathematics`_ 로 출판본을 판매하고 있습니다.
+
+.. only:: latex
+
+  * https://encyclopediaofmath.org/wiki/Main_Page
 
 .. _Encyclopedia of Mathematics: https://encyclopediaofmath.org/wiki/Main_Page
 .. _유럽 수학회: https://euromathsoc.org/
@@ -179,6 +190,10 @@ Wolfram Math World
 `Wolfram Math World`_ 는  Wolfram Research, Inc. 에서 Eric Weisstein의 프로젝트를 후원해 만들어진 온라인 수학 참고 문헌입니다.
 `The CRC Encyclopedia of Mathematics`_ 란 이름으로 `CRC <https://www.routledge.com/>`_ 에서 2009년도에 출판한 서적이 있습니다.
 
+.. only:: latex
+
+  * https://mathworld.wolfram.com
+
 .. _Wolfram Math World: https://mathworld.wolfram.com
 .. _The CRC Encyclopedia of Mathematics: https://www.routledge.com/The-CRC-Encyclopedia-of-Mathematics-Third-Edition---3-Volume-Set/Weisstein/p/book/9781420072211
 
@@ -188,33 +203,71 @@ Wolfram Math World
 GSL은 수치 해석을 위한 C 라이브러리입니다. 이 라이브러리를 사용해 다양한 수학 기능들을 C에서 사용할 수 있습니다. 
 하지만 GSL 외에도 과학 계산을 위한 많은 라이브러리와 소프트웨어들이 존재합니다. 
 이 단락에서는 과학 계산 분야에서 사용할 수 있는 C 라이브러리와 관련 api를 제공하는 소프트웨어들을 간단하게 서술하고자 합니다.
-GSL과의 확장 기능을 제공하는 프로그램들은 별도로 표기합니다.
+GSL의 확장 기능인 라이브러리들은 별도로 **GSL Extension** 으로 표기합니다.
 
 라이브러리
 -------------
 
+
+
 `GLPK <https://www.gnu.org/software/glpk/>`_ 는 GNU Linear Programming Kit의 약자입니다. 
 선형 프로그래밍을 위한 여러 기능들을 제공합니다. 
+
+.. only:: latex
+  
+  * https://www.gnu.org/software/glpk/
 
 `NLopt <https://nlopt.readthedocs.io/en/latest/>`_ 은 Nonlinear optimization을 위한 라이브러리입니다. 
 여러가지 최적화 방법들을 적은 인터페이스로 사용할 수 있는 기능을 제공하며, 
 C, C++, Fortran, Matlab, GNU Octave, Python, GNU Cuile, Juliaa, R, Lia, OCaml 그리고 Rust에 대한 api를 지원합니다. 
 
+.. only:: latex
+  
+  * https://nlopt.readthedocs.io/en/latest/
+
 `FFTW <https://www.fftw.org/>`_ 는 Fastest Fourier Transform in the West의 약자로 Fast Fourier Transform 기능을 구현한 라이브러리입니다.
 GSL 내부 구현체와의 차이점은 GSL 구현체에서 제공하는 함수가 처리할 수 있는 크기 이상의 대규모 데이터들에 대해 
 고속 푸리에 변환을 수행할 수 있다는 점입니다.
 
+.. only:: latex
+  
+  * https://www.fftw.org/
 
 `GMPAL <https://gmplib.org/>`_ 는 GNU Multiple Precision Arithmetic Library의 약자입니다.  
 정밀한 수학 계산을 할 때 많은 경우 double, float 자료형에서 유효 숫자의 한계가 생깁니다. 
 GMPAL는 이러한 고정밀 대수 연산을 위한 라이브러리로 메모리의 제한을 무시한다면 정밀도의 한계 없이 계산을 할 수 있습니다. 
 GMPAL 라이브러리의 주된 활용 분야는 암호, 인터넷 보안, 대수학과 계산 대수학 등이 있습니다
 
+.. only:: latex
+  
+  * https://gmplib.org/
+  
 `Libmatheval <https://www.gnu.org/software/libmatheval/>`_ 는 심볼릭 연산을 위한 C, Fortran 라이브러리 입니다.
+
+.. only:: latex
+  
+  * https://www.gnu.org/software/libmatheval/
 
 `GTK+ <https://www.gtk.org/>`_ 는 Gimp의 그래픽 인터페이스를 위해 시작된 그래픽 라이브러리로 본격적인 소프트웨어의 GUI를 만드는 데 유용하며, 
 이를 이용해 사용자 정의 플롯 라이브러리를 짤 수도 있습니다.
 
+.. only:: latex
+  
+  * https://www.gtk.org/
+
+CPU 의존 라이브러리
+~~~~~~~~~~~~~~~~~~~~
+
+GSL 설치 단원에서 ICC와 AOCC를 언급했습니다. Intel과 AMD에서는 
+각자 CPU 플랫폼에서 더 높은 성능과 정확도를 가지는 수학 라이브러리를 제공합니다.
+
+* Intel@oneMKL: Mathe Kernel Library: https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl.html
+* AMD Optimizing CPU Library: https://developer.amd.com/amd-aocl/
+
+GSL Extension
+~~~~~~~~~~~~~~~~~~
+
+`Tensor <https://github.com/zhtvk/tensor>`_ 다차원 배열 표현과 처리를 위한 텐서(Tensor) 라이브러리입니다.
 
 소프트웨어
 -------------
@@ -222,13 +275,25 @@ GMPAL 라이브러리의 주된 활용 분야는 암호, 인터넷 보안, 대�
 `Gnuplot <http://www.gnuplot.info/>`_ 은 오픈소스 그래픽 소프트웨어입니다. 
 C api를 제공해 C에서 여러 그래프와 3D 플롯을 그리는 데 사용할 수 있습니다.
 
+.. only:: latex
+  
+  * http://www.gnuplot.info/
+
 `GNU Octave`_ 는 수치 해석을 위한 고수준의 과학 계산 언어이자 소프트웨어입니다. 
 자체 언어가 있지만, C, C++, FOTRAN, Python 등으로 쓰인 모듈을 불러오거나 C++ 등에서 Octave 함수를 사용할 수도 있습니다. C는 C++ 함수를 호출하는 형태로 사용 가능합니다.
+
+.. only:: latex
+  
+  * https://www.gnu.org/software/octave/index
 
 .. _GNU Octave: https://www.gnu.org/software/octave/index
 
 `HDF5 <https://www.hdfgroup.org/solutions/hdf5/>`_ HDF5는 대용량 데이터 처리를 위한 계층적 파일 형식입니다. 개발 집단인 HDF5 Group에서 공식적으로
 C, FOTRANm C++, Java, Python 에 대한 api를 제공합니다. 막대한 데이터를 다루고자 할때, 이러한 전문 파일 형식의 사용은 크게 유용합니다.
+
+.. only:: latex
+  
+  * https://www.hdfgroup.org/solutions/hdf5/
 
 `Mathematica <https://www.wolfram.com/mathematica/>`_ 는 기호 계산을 위한 프로그램 중 가장 광범위 하게 쓰이는 소프트웨어입니다.
 많은 자연과학, 공학자들의 사용으로 몇몇 전공서들은 신규 개정판에서 Wolfram Language를 이용하는 문제들을 추가하거나
@@ -242,6 +307,10 @@ C를 위한 api를 제공하기도 하므로 다른 C 라이브러리에 없는 
 
 .. _Wolfram Engine: https://www.wolfram.com/engine
 
+.. only:: latex
+  
+  * https://www.wolfram.com/mathematica/
+  * https://www.wolfram.com/engine
 
 .. rubric:: 각주
 

@@ -165,19 +165,19 @@
 
 .. code-block:: console
 
-    $ ./demo > tmp
-    $ more tmp
+    $./demo > tmp
+    $more tmp
     # best fit: Y = -106.6 + 0.06 X
     # covariance matrix:
     # [ 39602, -19.9
     #   -19.9, 0.01]
     # chisq = 0.8
 
-    $ for n in data fit hi lo ;
+    $for n in data fit hi lo ;
        do
          grep "^ :math:`n" tmp | cut -d: -f2 > ` n ;
        done
-    $ graph -T X -X x -Y y -y 0 20 -m 0 -S 2 -Ie data
+    $graph -T X -X x -Y y -y 0 20 -m 0 -S 2 -Ie data
          -S 0 -I a -m 1 fit -m 2 hi -m 2 lo
 
 

@@ -42,7 +42,7 @@
 
 .. code-block:: console
 
-  $ gcc -Wall -I/usr/local/include -c example.c
+  $gcc -Wall -I/usr/local/include -c example.c
 
 
 
@@ -62,7 +62,7 @@ include 경로는 기본적으로 :code:`/usr/local/include` 이므로 위 명�
 
 .. code-block:: console
 
-  $ gcc -L/usr/local/lib example.o -lgsl -lgslcblas -lm
+  $gcc -L/usr/local/lib example.o -lgsl -lgslcblas -lm
 
 
 :code:`gcc` 의 기본 검색 경로는 :code:`/usr/local/lib` 입니다. 
@@ -99,7 +99,7 @@ GNU C Complier와 관련 프로그램의 튜토리얼을 보고 싶다면
 
 .. code-block:: console
 
-    $ gcc example.o -lgsl -lcblas -lm
+    $gcc example.o -lgsl -lcblas -lm
 
 
 
@@ -111,7 +111,7 @@ ATLAS 패키지는 고효율의 BLAS 라이브러리를 CBLAS 인터페이스를
 
 .. code-block:: console
 
-    $ gcc example.o -lgsl -lcblas -latlas -lm
+    $gcc example.o -lgsl -lcblas -latlas -lm
 
 
 
@@ -129,7 +129,7 @@ BLAS에 대한 더 자세한 정보를 알고 싶다면, :ref:`BLAS-지원` 을 
 
 .. code-block:: console
 
-  $ ./a.out
+  $./a.out
   ./a.out: error while loadinng shared libraries:
   libgsl.so.0: canot open shared object file: No such file or directory
 
@@ -144,9 +144,9 @@ BLAS에 대한 더 자세한 정보를 알고 싶다면, :ref:`BLAS-지원` 을 
 
 .. code-block:: console
 
-  $ LD_LIBRARY_PATH=/usr/local/lib
-  $ export LD_LIBRARY_PATH
-  $ ./example
+  $LD_LIBRARY_PATH=/usr/local/lib
+  $export LD_LIBRARY_PATH
+  $./example
 
 
 
@@ -169,7 +169,7 @@ C-shell의 표준 프롬프트 기호는 :code:`%` 입니다.
 
 .. code-block:: console
 
-    $ gcc -static example.o -lgsl -lgslcblas -lm
+    $gcc -static example.o -lgsl -lgslcblas -lm
 
 
 ANSI C 규격
@@ -203,7 +203,7 @@ inline 기능의 사용을 위해, 라이브러리의 외부 헤더 파일에서
 
 .. code-block:: console
 
-    $ gcc -Wall -c DHAVE_INLINE example.c
+    $gcc -Wall -c DHAVE_INLINE example.c
 
 
 

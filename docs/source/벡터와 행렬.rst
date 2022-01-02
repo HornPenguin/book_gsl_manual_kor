@@ -644,7 +644,7 @@ gsl_block_complex_long_double   complex long double
 
 .. code-block:: console
 
-  $ ./a.out
+  $./a.out
   v_0 = 1.23
   v_1 = 2.23
   v_2 = 3.23
@@ -1387,7 +1387,7 @@ The following operations are only defined for real matrices.
 
 .. code-block:: console
 
-  $ ./a.out
+  $./a.out
    m(0,0) = 0.23
    m(0,1) = 1.23
    m(0,2) = 2.23
@@ -1426,7 +1426,7 @@ GNU octave를 이용해 이 결과를 검증해볼 수 있습니다.
 
 .. code-block:: console
 
-   $ octave
+   $octave
    GNU Octave, version 2.0.16.92
    octave> m = sin(0:9)' * ones(1,10) 
                   + ones(10,1) * cos(0:9); 

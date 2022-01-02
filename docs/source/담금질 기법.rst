@@ -186,7 +186,7 @@ Trivial 예제
 
 .. code-block:: console
 
-  $ ./siman_test | awk '!/^#/ {print $1, $4}' 
+  $./siman_test | awk '!/^#/ {print $1, $4}' 
    | graph -y 1.34 1.4 -W0 -X generation -Y position 
    | plot -Tps > siman-test.eps
 
@@ -195,7 +195,7 @@ Trivial 예제
 
 .. code-block:: console
 
-  $ ./siman_test | awk '!/^#/ {print $1, $5}' 
+  $./siman_test | awk '!/^#/ {print $1, $5}' 
    | graph -y -0.88 -0.83 -W0 -X generation -Y energy 
    | plot -Tps > siman-energy.eps
 
@@ -237,18 +237,18 @@ Mark Galassi는 미국 남부 도시 12개의 좌표를 기반으로 아주 간�
 
 .. code-block:: console
 
-  $ ./siman_tsp > tsp.output
-  $ grep -v "^#" tsp.output
+  $./siman_tsp > tsp.output
+  $grep -v "^#" tsp.output
    | awk '{print :math:`1, `  NF}'
    | graph -y 3300 6500 -W0 -X generation -Y distance
       -L "TSP - 12 southwest cities"
    | plot -Tps > 12-cities.eps
-  $ grep initial_city_coord tsp.output
+  $grep initial_city_coord tsp.output
     | awk '{print :math:`2, `  3}'
     | graph -X "longitude (- means west)" -Y "latitude"
        -L "TSP - initial-order" -f 0.03 -S 1 0.1
     | plot -Tps > initial-route.eps
-  $ grep final_city_coord tsp.output
+  $grep final_city_coord tsp.output
     | awk '{print :math:`2, `  3}'
     | graph -X "longitude (- means west)" -Y "latitude"
        -L "TSP - final-order" -f 0.03 -S 1 0.1
