@@ -112,9 +112,14 @@ Windows에서는 OS 자체적으로 저장소를 활용한 프로그램 설치�
 크게 2가지로 나뉩니다.
 
 1. 소스 코드를 컴파일해 라이브러리 파일 생성 
-    Linux/Mac : :code:`.a` , :code:`.la` , :code:`.so` 
-    Windows: :code:`.lib` , :code:`.dll` , 
-2. 컴파일러와 링크 프로그램의 검색 경로에 해당 파일들의 경로 등록
+     Linux/Mac : :code:`.a` , :code:`.la` , :code:`.so`
+    
+     Windows: :code:`.lib` , :code:`.dll`
+
+2. 컴파일러와 링크 프로그램의 검색 경로에 해당 파일들의 경로 등록 
+     Linux, Mac의 경우 사용자 정의 및 시스템 라이브러리 폴더가 있고
+     Windows 의 경우 IDE 등에서 Linker에게 별도로 설정을 해주어야합니다.
+     (시스템 라이브러리 폴더에 동적 라이브러리를 넣는 경우는 많이 없습니다.) 
 
 GSL 설치(Linux & Mac)
 -----------------------
@@ -356,15 +361,22 @@ Configuration
 이때, 컴파일러마다 주어진 설정 이름이 다를 수 있습니다. 
 해당 설정을 별도로 정해주어야 합니다.
 
-clang과 icc에 대해 다음과 같이 설정할 수 있습니다.
+clang과 icc등과 같이 다른 컴파일러를 사용한다면 별도로
+이를 configure 스크립트에 변수로 넣어주어야 합니다.
 
-./configure CC=clang CPP="clang -E" CFLAGS="-O4" LD="llvm-ld" OTOOL=llvm-ld AR=llvm-ar RANLIB=llvm-ranlib NM=llvm-nm MC=llvmc PROF=llvm-prof AS=llvm-as
+예로 clang을 이용하면 다음과 같이 넣어줄 수 있습니다.
 
+.. code-block:: console
 
-이 과정은 시간이 조금 걸립니다. 
+    $./configure CC=clang CPP="clang -E" CFLAGS="-O3" LD="llvm-ld" OTOOL=llvm-ld AR=llvm-ar RANLIB=llvm-ranlib NM=llvm-nm MC=llvmc PROF=llvm-prof AS=llvm-as
+
+:macro:`CC` , :macro:`CPP` 는 실행 가능한 C, C++ 컴파일러의 이름을 말합니다.
+
+이 과정은 시간이 조금 걸립니다. 주어진 시스템과 컴파일러의 기능 지원 여부를 확인해
+환경에 맞춘 Makefile을 구성하기 때문입니다.
 
 Windows를 Linuex/Mac과 별개로 서술하는 이유는 이 단계 때문입니다. 해당 파일은 Unix/Linux 시스템에서 사용하는 여러
-bash
+Shell-script를 사용하기 때문에 사용할 수 없습니다.
 
 Building & Test
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -476,9 +488,66 @@ Prerequisites에서 필요한 컴파일러, make 도구는 Windows에서도 설�
 시스템을 검사해 실제 설치에 사용할 Makefile을 만드는 :code:`configure` 파일이 Shell-script이기 때문에
 Windows의 CMD나 Powershell에서 사용할 수 없다는 점입니다. 
 
-만들어진 library 파일중 .dll 파일은 그대로 사용가능합니다. 
-.a 파일은 mingw 에서 사용하는 static library인데 
+때문에 bash 환경 설치가 필요합니다. 다양한 방법이 있지만 (Gitbash를 사용할 수도 있습니다)
+MinGw와 make까지 한번에 설치 가능한 방법을 사용하도록 합시다. 
+이 문서에서는 `MSYS2 <https://www.msys2.org/>`_ 를 사용할 것입니다.
 
+MSYS2는 총 6개의 하위 시스템을 가집니다.
+기본 디렉토리는 :code:`C:\mysy64`로 이 안에 다음 6개의 하위 시스템이 있습니다.
+크게 2개의 Tool-chain을 제공합니다. GCC와 LLVM/Clang입니다.
+
+.. list-table:: MSYS2 Subsystems
+    :header-rows: 1
+
+    * - Subsystem
+      - Architecture
+      - Description
+    * - MSYS
+      - x86_64
+      - Main
+    * - MINGW64
+      - x86_64
+      - Main
+    * - UCRT64
+      - x86_64
+      - Main
+    * - CLANG64
+      - x86_64
+      - Main
+    * - CLANG32
+      - i686
+      - Main
+
+첫 실행시 먼저 패키지 데이터 베이스를 업데이트 해야합니다. 
+다음을 입력해 데이터 베이스를 업데이트합시다.
+
+.. code-block:: console
+
+    $pacman -Syu
+
+다음을 입력해 패키지와 시스템 갱신을 완료합니다.
+
+.. code-block:: console
+
+    $pacman -Su
+
+
+base-devel에 make가 포함되어 있습니다. 
+GCC 나 Clang을 설치하고 싶다면 각각 base-devel과 함께
+다음의 명령어로 한꺼번에 설치할 수 있습니다.
+
+각각
+.. code-block:: console
+
+    $pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+    $pacman -S --needed base-devel mingw-w64-clang-x86_64-toolchain
+
+이제 라이브러리를 빌드하기 위한 준비과정은 끝났습니다. 
+GCC를 선택했다면, MSYS2 MinGW x64를 
+Clang을 설치했다면 MSYS2 MinGW Clang x64를 열고 리눅스, Mac에서의 빌드 과정을
+그대로 따라하면 됩니다.
+
+Clang을 선택했을 시 
 MinGW:
 
  * gendef 유틸로 dll -> def 생성
@@ -492,7 +561,11 @@ def -> lib
 
 dlltool
 ^^^^^^^^^^^^^^^^
-MinGW에 포함된 dll 관리도구입니다.
+
+GNU binary 도구에 포함된 Dill 관리 도구 입니다.
+
+
+
 
 llvm-dlltool
 ^^^^^^^^^^^^^^^^
@@ -518,6 +591,8 @@ Windows 에서의 설치에 관한 내용은 다음을 참고할 수 있습니�
      https://www.gnu.org/software/gsl/extras/native_win_builds.html
 * How to compile GSL for Windows
      https://titanwolf.org/Network/Articles/Article?AID=02d574bd-a867-4ebf-acab-34baf0146445
+* GNU Binary Utils Manual- dlltool
+     https://sourceware.org/binutils/docs/binutils/dlltool.html
 * Microsoft technical documentation, Additional MSVC build tools - LIB Reference
      https://docs.microsoft.com/en-us/cpp/build/reference/lib-reference?view=msvc-170
 
