@@ -10,7 +10,7 @@ GSL 설치(*)
 그냥 단순히 베포하고 있는 :code:`.c` :code:`.h` 파일들을 복사해서
 프로젝트 디렉토리에 포함시켜도 됩니다. 
 하지만 매우 번거롭고 프로그램이 공유/동적 라이브러리를
-사용할 수 없어 실행 파일의 크기가 커집니다. 
+사용할 수 없어 실행 파일의 크기가 커집니다 [#lib]_ . 
 
 이러한 라이브러리의 설치는 소스 코드를 개발환경에서 컴파일해 구성하는 방안과
 사전 컴파일된 라이브러리를 설치하는 두가지 방법입니다. 
@@ -325,7 +325,7 @@ Windows 에서는 :code:`wget` 을 Unix 계열의 :code:`wget` 을 쓰지 않고
 
 .. code-block:: console
 
-    $tar -xvzf gsl-lastest.tar.gz
+    $tar -xvzf gsl-latest.tar.gz
 
 
 이제 압축을 해제한 디렉토리로 들어갑시다.
@@ -446,13 +446,36 @@ Final install
 
     재부팅 후나 :code:`$source ~/.bashrc` 를 입력하면 정상적으로 사용이 가능합니다.
 
+Windows
+==================
+
+Windows 에서의 설치는 복잡합니다. 사실 1가지로 제약하면 의외로 쉽게 해결할 수 있는데 
+(VS studio 에서만 사용, Mingw에서만 사용 등과 같이) 설치된 모든 컴파일러에서 사용가능하게
+구현하려면 결국은 소스코드를 컴파일해서 Windows의 정적/동적 라이브러리 파일을 만들어야합니다.
+gcc 자체가 크로스 컴파일을 지원하므로 Linux에서 Windows 라이브러리 파일을 만드는게 가능합니다.
+
+Build GSL on Windows Using Native Tools https://www.gnu.org/software/gsl/extras/native_win_builds.html
+의 GSL-on-Windows 도 사용가능해 보이고 (검증전)
+
+괜찮은 사례가 있어 검증 중입니다. https://titanwolf.org/Network/Articles/Article?AID=02d574bd-a867-4ebf-acab-34baf0146445
+
+
+만들어진 library 파일중 .dll 파일은 그대로 사용가능합니다. 
+.a 파일은 mingw 에서 사용하는 static library인데 
+
 참고 문헌
 ==============
 
-Windows 에서의 설치
+라이브러에 관한 자세한 내용은 다음 문헌을 추천합니다.
 
-* GNU Official Website: GSL project page https://www.gnu.org/software/gsl/
-* Build GSL on Windows Using Native Tools https://www.gnu.org/software/gsl/extras/native_win_builds.html
+* David A. Wheeler, Program Library HOWTO, version 1.20, 11 April 2003, URL:https://tldp.org/HOWTO/Program-Library-HOWTO/index.html, Checked: 3. Janurary. 2022. 
+
+Windows 에서의 설치에 관한 내용은 다음을 참고할 수 있습니다.
+
+* GNU Official Website: GSL project page: https://www.gnu.org/software/gsl/
+* Build GSL on Windows Using Native Tools: https://www.gnu.org/software/gsl/extras/native_win_builds.html
+* How to compile GSL for Windows: https://titanwolf.org/Network/Articles/Article?AID=02d574bd-a867-4ebf-acab-34baf0146445
+
 
 .. rubri: 각주
 

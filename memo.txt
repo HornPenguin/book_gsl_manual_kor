@@ -1,0 +1,45 @@
+(6) After completing the compilation, in the MSYS installation directory
+
+# MSYS2 기준 "C:/msys64/mingw64/"
+
+local/bin has compiled gsl dynamic library file libgsl-0.dll libgslcblas-0.dll
+
+#"C:/msys64/mingw64/bin",
+#   libgsl-27.dll
+#   libgslcvvlas-0.dll
+#   gsl-config
+#   gsl-histogram
+#   gsl-randist
+
+local/lib has compiled static library files libgsl.a libgsl.dll.a libgslcblas.a libgslcblas.dll.a
+
+#"C:/msys64/mingw64/lib", 
+#   * libgsl.a 
+#   * libgsl.la
+#   * libgsl.dll.a
+#   * libgslcblas.a
+#   * libgslcblas.la
+#   * libgslcblas.dll.a
+
+
+local/include has gsl header files needed for programming
+
+#"C:/msys64/mingw64/include/gsl" <- directory
+
+(7) At this point you will find that the lib file is missing from the compilation result, now let's generate the lib file
+
+cd/usr/local/bin
+
+pexports libgsl-0.dll> libgsl-0.def
+
+pexports libgslcblas-0.dll> libgslcblas-0.def
+
+    At this time, two def files were produced
+
+    (8) Use the lib command of VC6 or above to generate the lib file, as follows:
+
+lib/machine: i386/def:libgsl-0.def
+
+lib/machine: i386/def:libgslcblas-0.defv
+
+--------------------------------------------------------------
