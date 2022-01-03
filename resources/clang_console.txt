@@ -9,19 +9,19 @@ checking for a sed that does not truncate output... /usr/bin/sed
 checking whether make sets $(MAKE)... (cached) yes
 checking build system type... x86_64-unknown-linux-gnu
 checking host system type... x86_64-unknown-linux-gnu
-checking for gcc... clang
+checking for gcc... gcc
 checking whether the C compiler works... yes
 checking for C compiler default output file name... a.out
 checking for suffix of executables...
 checking whether we are cross compiling... no
 checking for suffix of object files... o
 checking whether the compiler supports GNU C... yes
-checking whether clang accepts -g... yes
-checking for clang option to enable C11 features... none needed
-checking whether clang understands -c and -o together... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
 checking whether make supports the include directive... yes (GNU style)
-checking dependency style of clang... gcc3
-checking how to run the C preprocessor... clang -E
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
 checking whether ln -s works... yes
 configure: WARNING: Libtool does not cope well with whitespace in `pwd`
 checking how to print strings... printf
@@ -29,7 +29,7 @@ checking for a sed that does not truncate output... (cached) /usr/bin/sed
 checking for grep that handles long lines and -e... /usr/bin/grep
 checking for egrep... /usr/bin/grep -E
 checking for fgrep... /usr/bin/grep -F
-checking for ld used by clang... /usr/bin/ld
+checking for ld used by gcc... /usr/bin/ld
 checking if the linker (/usr/bin/ld) is GNU ld... yes
 checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
 checking the name lister (/usr/bin/nm -B) interface... BSD nm
@@ -45,7 +45,7 @@ checking for ar... ar
 checking for archiver @FILE support... @
 checking for strip... strip
 checking for ranlib... ranlib
-checking command to parse /usr/bin/nm -B output from clang object... ok
+checking command to parse /usr/bin/nm -B output from gcc object... ok
 checking for sysroot... no
 checking for a working dd... /usr/bin/dd
 checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
@@ -62,13 +62,13 @@ checking for sys/types.h... yes
 checking for unistd.h... yes
 checking for dlfcn.h... yes
 checking for objdir... .libs
-checking if clang supports -fno-rtti -fno-exceptions... yes
-checking for clang option to produce PIC... -fPIC -DPIC
-checking if clang PIC flag -fPIC -DPIC works... yes
-checking if clang static flag -static works... yes
-checking if clang supports -c -o file.o... yes
-checking if clang supports -c -o file.o... (cached) yes
-checking whether the clang linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
 checking whether -lc should be explicitly linked in... no
 checking dynamic linker characteristics... GNU/Linux ld.so
 checking how to hardcode library paths into programs... immediate
@@ -93,7 +93,7 @@ checking for strtol... yes
 checking for strtoul... yes
 checking for EXIT_SUCCESS and EXIT_FAILURE... yes
 checking for cos in -lm... (cached) yes
-checking for clang options needed to detect all undeclared functions... -fno-builtin
+checking for gcc options needed to detect all undeclared functions... none needed
 checking whether feenableexcept is declared... yes
 checking whether fesettrapenable is declared... no
 checking whether hypot is declared... yes
@@ -183,5 +183,6 @@ config.status: creating utils/Makefile
 config.status: creating vector/Makefile
 config.status: creating wavelet/Makefile
 config.status: creating config.h
+config.status: config.h is unchanged
 config.status: executing depfiles commands
 config.status: executing libtool commands

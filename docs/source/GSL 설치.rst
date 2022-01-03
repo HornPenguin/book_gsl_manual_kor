@@ -30,7 +30,7 @@ Linux, Mac 등에서는 각 베포판의 패키지 저장소에 있습니다.
 패키지 설치
 =================
 
-Linux
+Linux&Mac
 -----------------------
 
 각각 베포판의 저장소에 있는 패키지를 pacakage manager를 이용해 설치하면 됩니다.
@@ -47,20 +47,27 @@ Linux
     
     $sudo dnf install gsl-devel
 
-Mac
------------------------
-
 OSX에서는 `Homwbrew <https://brew.sh/index_ko>`_ 를 통해 설치할 수 있습니다.
 
 .. code-block:: console
     
     $brew install gsl
 
+
 Windows
 -----------------------
 
-Windows에서의 설치는 복잡합니다. 
-소스코드 설치부에서 후술합니다.
+Windows에서는 OS 자체적으로 저장소를 활용한 프로그램 설치를 적극적으로 활용하지 않고
+사용자가 개별 파일을 알아서 설치하는 방식이 주가 되어 Linux&Mac과 같은 방법을 사용하려면
+별도의 관리 프로그램에서 설치를 해야합니다.
+
+`Cygwin <https://cygwin.com/>`_ 의 사전 컴파일된 라이브러리를 설치하는 형식으로 사용할 수 있습니다. 
+아니면 `Nuget <https://www.nuget.org/>`_ 이라는 패키지 관리 프로그램에서 컴파일된 라이브러리를 설치할 수도 있습니다.
+
+`Cygwin gsl pacakage <https://cygwin.com/packages/summary/gsl.html>`
+
+`Nuget gsl pacakage <https://www.nuget.org/packages/gsl-msvc-x64/>_`
+
 
 
 소스코드 설치
@@ -454,27 +461,65 @@ Windows 에서의 설치는 복잡합니다. 사실 1가지로 제약하면 의�
 구현하려면 결국은 소스코드를 컴파일해서 Windows의 정적/동적 라이브러리 파일을 만들어야합니다.
 gcc 자체가 크로스 컴파일을 지원하므로 Linux에서 Windows 라이브러리 파일을 만드는게 가능합니다.
 
-Build GSL on Windows Using Native Tools https://www.gnu.org/software/gsl/extras/native_win_builds.html
-의 GSL-on-Windows 도 사용가능해 보이고 (검증전)
+근래에 나온 Windows Subsystem for Linux(`WSL <https://docs.microsoft.com/ko-kr/windows/wsl/about>`_ )를 사용하면
+굳이 Windows에서 사용할 목적으로 GSL을 설치하지 않고 Windows 내의 Linux 환경에서 개발을 할 수도 있습니다.
 
-괜찮은 사례가 있어 검증 중입니다. https://titanwolf.org/Network/Articles/Article?AID=02d574bd-a867-4ebf-acab-34baf0146445
+하지만 Windows에서 사용할 어플리케이션에 과학계산이 필요할 때 GSL을 사용해서 직접 프로그램을 짜고 싶을 수도 있습니다.
+이 단원은 그러한 사용자들을 위한 단원으로 Windows에서 직접 Source 파일을 컴파일해 정적/동적 라이브러리 파일을
+만드는 예제를 보일 것입니다.
 
+GNU 공식 웹사이트에서는 Visual Studio 나 Cmake를 이용한 방법에 대해 소개하고 있습니다.
+
+`Building GSL on Windows Using Native Tools <https://www.gnu.org/software/gsl/extras/native_win_builds.html>`_
+
+Prerequisites에서 필요한 컴파일러, make 도구는 Windows에서도 설치가 가능합니다. 가장 큰 문제는
+시스템을 검사해 실제 설치에 사용할 Makefile을 만드는 :code:`configure` 파일이 Shell-script이기 때문에
+Windows의 CMD나 Powershell에서 사용할 수 없다는 점입니다. 
 
 만들어진 library 파일중 .dll 파일은 그대로 사용가능합니다. 
 .a 파일은 mingw 에서 사용하는 static library인데 
+
+MinGW:
+
+ * gendef 유틸로 dll -> def 생성
+ * dlltool or llvm-dlltool 로 def -> lib 파일 생성
+ * 
+
+def -> lib
+~~~~~~~~~~~~~~~~~~~
+
+몇가지 선택 사항이 있습니다.
+
+dlltool
+^^^^^^^^^^^^^^^^
+MinGW에 포함된 dll 관리도구입니다.
+
+llvm-dlltool
+^^^^^^^^^^^^^^^^
+
+LLVM/Clang 도구 모움에 포함된 dll 관리 도구 입니다.
+
+LIB
+^^^^^^^^^^^^^^^^
+
+Visual Studio의 라이브러리 관리 도구입니다. 이를 사용하려면 Visual Studio의 개발자 터미널을 열어 그곳에서 사용해야 합니다.
+일반 CMD에서도 사용이 불가능하지는 않지만 몇가지 설정을 변경해야합니다.
 
 참고 문헌
 ==============
 
 라이브러에 관한 자세한 내용은 다음 문헌을 추천합니다.
 
-* David A. Wheeler, Program Library HOWTO, version 1.20, 11 April 2003, URL:https://tldp.org/HOWTO/Program-Library-HOWTO/index.html, Checked: 3. Janurary. 2022. 
+* David A. Wheeler, Program Library HOWTO, version 1.20, 11 April 2003, URL:https://tldp.org/HOWTO/Program-Library-HOWTO/index.html, Checked: 3.Janurary.2022. 
 
 Windows 에서의 설치에 관한 내용은 다음을 참고할 수 있습니다.
 
-* GNU Official Website: GSL project page: https://www.gnu.org/software/gsl/
-* Build GSL on Windows Using Native Tools: https://www.gnu.org/software/gsl/extras/native_win_builds.html
-* How to compile GSL for Windows: https://titanwolf.org/Network/Articles/Article?AID=02d574bd-a867-4ebf-acab-34baf0146445
+* Build GSL on Windows Using Native Tools
+     https://www.gnu.org/software/gsl/extras/native_win_builds.html
+* How to compile GSL for Windows
+     https://titanwolf.org/Network/Articles/Article?AID=02d574bd-a867-4ebf-acab-34baf0146445
+* Microsoft technical documentation, Additional MSVC build tools - LIB Reference
+     https://docs.microsoft.com/en-us/cpp/build/reference/lib-reference?view=msvc-170
 
 
 .. rubri: 각주
