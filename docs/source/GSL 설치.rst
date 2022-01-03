@@ -17,7 +17,7 @@ GSL 설치(*)
 GSL 라이브러리의 경우는 공식적으로 소스코드를 이용한 베포를 사용하고 있습니다. 
 
 비공식적으로 Windows, Linux, Mac에서 사전 컴파일 된 라이브러리가 존재합니다.
-Windows에서는 `Cygwin <http://www.cygwin.com/>`_ 의 일부분으로 존재하고 
+Windows에서는 `Cygwin`_ 의 일부분으로 존재하고 
 Linux, Mac 등에서는 각 베포판의 패키지 저장소에 있습니다. 
 
 .. note::
@@ -61,13 +61,14 @@ Windows에서는 OS 자체적으로 저장소를 활용한 프로그램 설치�
 사용자가 개별 파일을 알아서 설치하는 방식이 주가 되어 Linux&Mac과 같은 방법을 사용하려면
 별도의 관리 프로그램에서 설치를 해야합니다.
 
-`Cygwin <https://cygwin.com/>`_ 의 사전 컴파일된 라이브러리를 설치하는 형식으로 사용할 수 있습니다. 
+`Cygwin`_ 의 사전 컴파일된 라이브러리를 설치하는 형식으로 사용할 수 있습니다. 
 아니면 `Nuget <https://www.nuget.org/>`_ 이라는 패키지 관리 프로그램에서 컴파일된 라이브러리를 설치할 수도 있습니다.
 
 `Cygwin gsl pacakage <https://cygwin.com/packages/summary/gsl.html>`
 
 `Nuget gsl pacakage <https://www.nuget.org/packages/gsl-msvc-x64/>_`
 
+.. _Cygwin: http://www.cygwin.com/
 
 
 소스코드 설치
