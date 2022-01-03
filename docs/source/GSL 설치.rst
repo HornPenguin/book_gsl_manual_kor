@@ -113,11 +113,13 @@ Windows에서는 OS 자체적으로 저장소를 활용한 프로그램 설치�
 크게 2가지로 나뉩니다.
 
 1. 소스 코드를 컴파일해 라이브러리 파일 생성 
+
      Linux/Mac : :code:`.a` , :code:`.la` , :code:`.so`
     
      Windows: :code:`.lib` , :code:`.dll`
 
 2. 컴파일러와 링크 프로그램의 검색 경로에 해당 파일들의 경로 등록 
+
      Linux, Mac의 경우 사용자 정의 및 시스템 라이브러리 폴더가 있고
      Windows 의 경우 IDE 등에서 Linker에게 별도로 설정을 해주어야합니다.
      (시스템 라이브러리 폴더에 동적 라이브러리를 넣는 경우는 많이 없습니다.) 
@@ -556,17 +558,22 @@ Clang을 설치했다면 MSYS2 MinGW Clang x64를 열고 리눅스, Mac에서의
 그대로 따라하면 됩니다. 이때, 각각의 tool-chain은 :code:`C:\mysy64` 아래의 독립된 디렉토리
 :code:`mingw64` 와 :code:`clang64` 에서 각각 관리됩니다.
 
-컴파일된 파일들이 각각 빌드 환경; mingw64, clang64 내의 :code:`bin, lib, include` 에 존재합니다.
+컴파일된 파일들이 각각 빌드 환경; :code:`mingw64` , :code:`clang64` 내의 :code:`bin, lib, include` 에 존재합니다.
 
 ::
-    C:\mysy
-         └Build Environment
-             └bin
-             └lib
-             └include
 
-이 상황에서 Windows IDE에 MYSY의 MinGW, LLVM/Clang을 컴파일러로 사용해
+    \mysy
+        └Build Environment
+            └bin
+            └lib
+            └include
+
+이 단계에서 Windows IDE에 MYSY의 MinGW, LLVM/Clang을 컴파일러로 사용해
 바로 GSL 라이브러리를 사용하는 환경으로 컴파일할 수 있습니다. 
+해당 컴파일러의 :code:`bin, lib, include` 디렉토리에 컴파일 된 GSL 정적/동적 라이브러리들과 헤더 파일들이
+들어있기 때문입니다.
+
+이 과정을 통해 나온 라이브러리 파일들은 :code:`.dll` , :code:`.dll.a` , :code:`.a` , :code:`.la` 파일들입니다. 
 해당 컴파일러들이 아닌 Windows 내의 다른 컴파일러 예를 들어 MSVS 등에서 사용하려면
 :code:`.dll` 파일외에 :code:`.lib` 파일들이 필요합니다. 
 
@@ -587,7 +594,9 @@ def 파일 생성
 --------------------
 
 GCC: gendef, dlltool
+
 LLVM/Clang: llvm-dlltool
+
 MSVS:
 
 lib 파일 생성
@@ -623,17 +632,17 @@ LLVM/Clang 도구 모움에 포함된 dll 관리 도구 입니다.
 LIB
 ^^^^^^^^^^^^^^^^
 
-Visual Studio의 라이브러리 관리 도구입니다. 이를 사용하려면 Visual Studio의 개발자 터미널을 열어 그곳에서 사용해야 합니다.
+Visual Studio의 라이브러리 관리 도구입니다. 이를 사용하려면 Visual Studio의 개발자 터미널 내에서 사용해야 합니다.
 일반 CMD에서도 사용이 불가능하지는 않지만 몇가지 설정을 변경해야합니다.
 
 참고 문헌
 ==============
 
-라이브러에 관한 자세한 내용은 다음 문헌을 추천합니다.
+라이브러리에 관한 자세한 내용은 다음 문헌을 추천합니다.
 
 * David A. Wheeler, Program Library HOWTO, version 1.20, 11 April 2003, URL:https://tldp.org/HOWTO/Program-Library-HOWTO/index.html, Checked: 3.Janurary.2022. 
 
-Windows 에서의 설치에 관한 내용은 다음을 참고할 수 있습니다.
+Windows 에서의 설치에 사용한 도구들과 관련 내용은 다음을 참고할 수 있습니다.
 
 * Build GSL on Windows Using Native Tools
      https://www.gnu.org/software/gsl/extras/native_win_builds.html
