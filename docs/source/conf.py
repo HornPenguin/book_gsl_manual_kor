@@ -117,12 +117,3 @@ latex_documents = [
 #latex_logo = 'logo_design.svg'
 latex_show_urls = 'inline'
 latex_use_xindy =True
-latex_appendices = [
-    "autoconf.rst",
-    "GSL의 기여자들.rst",
-    "GNU 일반 공중 사용 허가서.rst",
-    "GNU 자유 문서 사용 허가서",
-    "GSL 디자인 문서",
-    "역자와 참고 자료.rst",
-    "영문 용어.rst",
-]
