@@ -111,7 +111,9 @@ latex_documents = [
     'gsl-kor-manual.tex',
      title, 
      my_latex_authors, 
-     'manual')
+     'howto')
 ]
 
 #latex_logo = 'logo_design.svg'
+latex_show_urls = 'inline'
+latex_use_xindy =True
