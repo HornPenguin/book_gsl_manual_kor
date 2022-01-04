@@ -81,9 +81,13 @@ GSL의 저작권은 여러 기여자들의 협동과 같은 긍정적인 행위�
     좀 더 자세한 정보를 얻고 싶다면 GNU 프로젝트의 웹페이지에서 **GNU GPL에 자주 묻는 질문들** 을 참고할 수 있습니다.
     다음의 주소로 이 둘에 대한 자세한 정보를 얻을 수 있습니다.
 
-    **GNU General Public License**: <https://www.gnu.org/software/gsl/doc/html/#GNU-General-Public-License>
+    * **GNU General Public License** 
+    
+        https://www.gnu.org/software/gsl/doc/html/#GNU-General-Public-License
 
-    **GNU GPL에 자주 묻는 질문들** : <https://www.gnu.org/licenses/gpl-faq.html>
+    * **GNU GPL에 자주 묻는 질문들** 
+        
+        https://www.gnu.org/licenses/gpl-faq.html
 
 .. only:: html
 
@@ -103,6 +107,7 @@ GSL 얻기
 
 라이브러리의 소스코드는 다양한 방법으로 얻을 수 있습니다. 친구로부터 복사하거나, 
 CDROM을 구입, 아니면 인터넷에서 다운로드 할 수도 있습니다. 
+
 .. only:: html
 
     GNU 홈페이지에서 이러한 소스코드들을 다운 받을 수 있는 `FTP <http://www.gnu.org/software/gsl/>`_ 서버들의 목록을 제공하고 있습니다.
@@ -111,7 +116,7 @@ CDROM을 구입, 아니면 인터넷에서 다운로드 할 수도 있습니다.
 
     GNU 홈페이지에서 이러한 소스코드들을 다운 받을 수 있는 **FTP** 서버들의 목록을 제공하고 있습니다. 
     
-    <http://www.gnu.org/software/gsl/>
+    http://www.gnu.org/software/gsl/
 
 
 라이브러리를 사용할 때, GNU 시스템을 이용하는 것을 권장합니다. 
