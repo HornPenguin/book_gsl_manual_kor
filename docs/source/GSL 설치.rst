@@ -64,9 +64,17 @@ Windows에서는 OS 자체적으로 저장소를 활용한 프로그램 설치�
 `Cygwin`_ 의 사전 컴파일된 라이브러리를 설치하는 형식으로 사용할 수 있습니다. 
 아니면 `Nuget <https://www.nuget.org/>`_ 이라는 패키지 관리 프로그램에서 컴파일된 라이브러리를 설치할 수도 있습니다.
 
-`Cygwin gsl pacakage <https://cygwin.com/packages/summary/gsl.html>`
+.. only:: html
 
-`Nuget gsl pacakage <https://www.nuget.org/packages/gsl-msvc-x64/>_`
+    `Cygwin gsl pacakage <https://cygwin.com/packages/summary/gsl.html>`_
+
+    `Nuget gsl pacakage <https://www.nuget.org/packages/gsl-msvc-x64/>`_
+
+.. only:: latex
+    
+    * Cygwin gsl pacakage: https://cygwin.com/packages/summary/gsl.html
+
+    * Nuget gsl pacakage: https://www.nuget.org/packages/gsl-msvc-x64/
 
 .. _Cygwin: http://www.cygwin.com/
 
@@ -110,7 +118,7 @@ Windows에서는 OS 자체적으로 저장소를 활용한 프로그램 설치�
 상기한 설치파일을 제공하지 않는 프로젝트들도 존재하는 만큼 이러한 설치 방법을 알아두면, 
 나중에 다른 GNU 프로젝트들을 사용할 때 유용하리라 생각합니다.
 
-크게 2가지로 나뉩니다.
+소스 코드를 컴파일해 환경을 구성하는 과정은 크게 2가지로 나뉩니다.
 
 1. 소스 코드를 컴파일해 라이브러리 파일 생성 
 
@@ -120,9 +128,13 @@ Windows에서는 OS 자체적으로 저장소를 활용한 프로그램 설치�
 
 2. 컴파일러와 링크 프로그램의 검색 경로에 해당 파일들의 경로 등록 
 
-     Linux, Mac의 경우 사용자 정의 및 시스템 라이브러리 폴더가 있고
-     Windows 의 경우 IDE 등에서 Linker에게 별도로 설정을 해주어야합니다.
-     (시스템 라이브러리 폴더에 동적 라이브러리를 넣는 경우는 많이 없습니다.) 
+     Linux, Mac, Windows 모두 컴파일러와 링커에 라이브러리가 있는
+     폴더의 정보를 주어야 합니다. 공유/동적 라이브러리를 사용하는 프로그램은
+     시스템 PATH 등에 라이브러리 검색 경로를 입력해 주어야 합니다.
+     여기서는 Linux의 경우를 주로 설명합니다.
+     Windows의 경우 `Microsoft Tech Document-동적 연결 라이브러리 검색 순서`_
+
+.. _Microsoft Tech Document-동적 연결 라이브러리 검색 순서: https://docs.microsoft.com/ko-kr/windows/win32/dlls/dynamic-link-library-search-order
 
 GSL 설치(Linux & Mac)
 -----------------------
@@ -155,7 +167,7 @@ Prerequisites
 따라서 소스 코드 설치전 다음 두 가지를 사용할수 있는지 확인해야 합니다.
 
 1. 컴파일러
-2. make
+2. `make <https://www.gnu.org/software/make/>`_
 
 
 일반적으로 GNU 프로젝트를 설치할 때에는 GCC(Gnu Compiler Collection)을 기본으로 사용합니다. 
@@ -587,7 +599,7 @@ Clang을 설치했다면 MSYS2 MinGW Clang x64를 열고 리눅스, Mac에서의
 1. :code:`.dll` 파일에서 :code:`.def` 파일 생성
 2. :code:`.def` 파일에서 :code:`.lib` 파일 생성
 
-MSVS를 사용해 개발하고자 한다면 MSVS 도구를 사용하는 게 간편합니다.
+MSVS [#MSVS]_ 를 사용해 개발하고자 한다면 MSVS 도구를 사용하는 게 간편합니다.
 MSVS를 사용하지 않아도, 빌드를 위해 설치한 Tool-chain에서 관련 도구들을 제공합니다.
 
 def 파일 생성
@@ -597,7 +609,7 @@ GCC: gendef, dlltool
 
 LLVM/Clang: llvm-dlltool
 
-MSVS:
+MSVC [#MSVC]_ :
 
 lib 파일 생성
 -------------------
@@ -639,23 +651,61 @@ Visual Studio의 라이브러리 관리 도구입니다. 이를 사용하려면 
 ==============
 
 라이브러리에 관한 자세한 내용은 다음 문헌을 추천합니다.
+정적(static), 공유(shared), 그리고 동적(Dynamic) 라이브러리에 관한 
+내용을 참고할 수 있습니다.
 
 * David A. Wheeler, Program Library HOWTO, version 1.20, 11 April 2003, URL:https://tldp.org/HOWTO/Program-Library-HOWTO/index.html, Checked: 3.Janurary.2022. 
 
+이 문서에서 설명한 도구들의 공식 사용 설명서들을 첨부합니다.
+
+.. only:: html
+
+    * `Bash <https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html>`_
+    * `GNU/Make <https://www.gnu.org/software/make/manual/make.html>`_
+    * `GNU/GCC <https://gcc.gnu.org/onlinedocs/>`_
+    * `LLVM/Clang <https://clang.llvm.org/docs/index.html>`_
+    * `Visual Studio and MSVC <https://docs.microsoft.com/ko-kr/visualstudio/windows/?view=vs-2022>`_
+
+.. only:: latex
+
+    * Bash 
+         https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html
+    * GNU/Make 
+         https://www.gnu.org/software/make/manual/make.html
+    * GNU/GCC 
+         https://gcc.gnu.org/onlinedocs/
+    * LLVM/Clang 
+         https://clang.llvm.org/docs/index.html
+    * Visual Studio and MSVC 
+         https://docs.microsoft.com/ko-kr/visualstudio/windows/?view=vs-2022
+
 Windows 에서의 설치에 사용한 도구들과 관련 내용은 다음을 참고할 수 있습니다.
 
-* Build GSL on Windows Using Native Tools
-     https://www.gnu.org/software/gsl/extras/native_win_builds.html
-* How to compile GSL for Windows
-     https://titanwolf.org/Network/Articles/Article?AID=02d574bd-a867-4ebf-acab-34baf0146445
-* GNU Binary Utils Manual- dlltool
-     https://sourceware.org/binutils/docs/binutils/dlltool.html
-* Microsoft technical documentation, Additional MSVC build tools - LIB Reference
-     https://docs.microsoft.com/en-us/cpp/build/reference/lib-reference?view=msvc-170
+.. only:: html
+
+    * `Build GSL on Windows Using Native Tools: MSVC <https://www.gnu.org/software/gsl/extras/native_win_builds.html>`_
+    * `How to compile GSL for Windows <https://titanwolf.org/Network/Articles/Article?AID=02d574bd-a867-4ebf-acab-34baf0146445>`_
+    * `GNU Binary Utils Manual- dlltool <https://sourceware.org/binutils/docs/binutils/dlltool.html>`_
+    * `Microsoft technical documentation, Additional MSVC build tools - LIB Reference <https://docs.microsoft.com/en-us/cpp/build/reference/lib-reference?view=msvc-170>`_
+
+.. only:: latex
+    
+    * Build GSL on Windows Using Native Tools: MSVC
+         https://www.gnu.org/software/gsl/extras/native_win_builds.html
+    * How to compile GSL for Windows
+         https://titanwolf.org/Network/Articles/Article?AID=02d574bd-a867-4ebf-acab-34baf0146445
+    * GNU Binary Utils Manual- dlltool
+         https://sourceware.org/binutils/docs/binutils/dlltool.html
+    * Microsoft technical documentation, Additional MSVC build tools - LIB Reference
+         https://docs.microsoft.com/en-us/cpp/build/reference/lib-reference?view=msvc-170
 
 
 .. rubri: 각주
 
+.. [#MSVS] Microsoft Visual Studio
+.. [#MSVC] Microsoft Visual C++: Microsofot 사의 MSVC는 C++ 컴파일러로 지원하는 C 표준은 
+           `Microsoft C/C++ 언어 규칙 | Microsoft Docs https://docs.microsoft.com/ko-kr/cpp/overview/visual-cpp-language-conformance`_
+           를 참고할 수 있습니다.
 .. [#bashrc] 해당 파일은 bash가 시작할 때 실행되는 명령어를 기술하고 있습니다.
 .. [#iccaocc] 각각 Intel C/C++ Compiler, AMD Optimized C/C++ Compiler를 의미합니다. 
               GNU/Linux, Mac, Windows 모두 지원합니다. 
