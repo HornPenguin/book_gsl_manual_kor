@@ -164,7 +164,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
       영문 용어
       역자와 참고 자료
 
-.. only:: html
+.. only:: latex
 
    .. toctree::
       :maxdepth: 2
