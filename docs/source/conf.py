@@ -68,8 +68,8 @@ my_latex_authors = 'Mark Galassi \\\\ \
                     Michael Booth \\\\ \
                     Fabrice Rossi \\\\ \
                     Rhys Ulerich \\\\~\\\\ \
-                    저\\\\ \
-                    \\small{{{translator}}}: 김현성 \\small{번역}: \\\\'
+                    저\\\\~\\\\ \
+                    \\small{번역}:  김현성 \\\\'
 
 my_preamble = r'''  
     {0}

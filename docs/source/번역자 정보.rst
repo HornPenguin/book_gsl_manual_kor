@@ -2,9 +2,11 @@
 번역자 정보(*)
 ******************
 
-이름: 김현성
+* 김현성
 
-이메일: qwqwhsnote@gm.gist.ac.kr
-홈페이지: https://hyunseong-kim.github.io/
+    * 물리 광학과 물리학부 과정중
+    * 광주과학기술원(`GIST <https://www.gist.ac.kr/kr/main.html>`_ )
+    * 이메일: qwqwhsnote@gm.gist.ac.kr
+    * 홈페이지: https://hyunseong-kim.github.io/
 
 
