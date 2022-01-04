@@ -133,10 +133,8 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
    the body of the sidebar, and are
    interpreted as body elements.
 
-.. only:: html
-
-   .. toctree::
-      :maxdepth: 2
+.. toctree::
+   :maxdepth: 2
 
       소개
       GSL 설치
