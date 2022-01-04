@@ -47,7 +47,7 @@ Linux&Mac
     
     $sudo dnf install gsl-devel
 
-OSX에서는 `Homwbrew <https://brew.sh/index_ko>`_ 를 통해 설치할 수 있습니다.
+**OSX** : `Homwbrew <https://brew.sh/index_ko>`_ 
 
 .. code-block:: console
     
@@ -132,7 +132,8 @@ Windows에서는 OS 자체적으로 저장소를 활용한 프로그램 설치�
      폴더의 정보를 주어야 합니다. 공유/동적 라이브러리를 사용하는 프로그램은
      시스템 PATH 등에 라이브러리 검색 경로를 입력해 주어야 합니다.
      여기서는 Linux의 경우를 주로 설명합니다.
-     Windows의 경우 `Microsoft Tech Document-동적 연결 라이브러리 검색 순서`_
+     Windows의 경우 `Microsoft Tech Document-동적 연결 라이브러리 검색 순서`_ 를
+     참고해 볼 수 있습니다.
 
 .. _Microsoft Tech Document-동적 연결 라이브러리 검색 순서: https://docs.microsoft.com/ko-kr/windows/win32/dlls/dynamic-link-library-search-order
 
@@ -140,8 +141,6 @@ GSL 설치(Linux & Mac)
 -----------------------
 
 GSL의 설치는 다운로드 받은 압축 파일 내의 :code:`INSTALL` 파일에 잘 기술 되어 있습니다. 
-본 내용은 :code:`INSTALL` 파일의 일부를 기술한 것입니다. 추가적인 선택 사항이나 
-다른 OS에서의 설치는 :code:`INSTALL` 파일을 참고할 수 있습니다.
 
 본 라이브러리는 표준 GNU 설치 절차(GNU installation procedure)를 따릅니다. 
 표준 GNU 설치 절차는 다음의 6가지 단계로 이루어져있습니다.
@@ -362,7 +361,17 @@ Configuration
     $./configure
 
 를 입력하면 자동으로 시스템 설치 환경을 위한 :code:`Makefile` 을 만들어 냅니다. 
-기본 컴파일러의 설정은 컴파일러는 gcc로 되어있습니다.
+이 과정은 시간이 조금 걸립니다. 주어진 시스템과 컴파일러의 기능 지원 여부를 확인해
+환경에 맞춘 Makefile을 구성하기 때문입니다.
+
+상황에 따라 사용자 환경에 의존하는 변수들을 담은 
+:code:`.h` 확장자의 헤더 파일을 추가로 생성할 수도 있습니다.
+
+모든 작업이 끝나면 :code:`config.status` 파일을 생성합니다.
+이 파일은 shell 스크립트로 차후에 현재 빌드 환경과 같은 
+설정으로 프로젝트를 빌드할 수 있습니다.
+
+기본 컴파일러는 gcc로 되어있습니다.
 
 실행 할때 컴파일러를 별도로 지정해줄 수 있습니다.
 이때, 컴파일러마다 주어진 설정 이름이 다를 수 있습니다. 
@@ -379,8 +388,7 @@ clang과 icc등과 같이 다른 컴파일러를 사용한다면 별도로
 
 :macro:`CC`  , :macro:`CPP` 는 실행 가능한 C, C++ 컴파일러의 이름을 말합니다.
 
-이 과정은 시간이 조금 걸립니다. 주어진 시스템과 컴파일러의 기능 지원 여부를 확인해
-환경에 맞춘 Makefile을 구성하기 때문입니다.
+더 자세한 정보는 라이브러리 베포 파일내의 
 
 Windows를 Linuex/Mac과 별개로 서술하는 이유는 이 단계 때문입니다. 
 해당 파일은  Shell-script를 사용하기 때문에 Windows CMD나 PowerShell에서 사용할 수 없습니다.
@@ -406,6 +414,13 @@ Final install
 .. code-block:: console
 
     $sudo make install
+
+
+Configre - Final Install 단계를 한번에 진행하도록 할 수도 있습니다.
+
+.. code-block:: console
+
+    $./configure && make && make install
 
 프로그래밍 환경 구성
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -655,6 +670,11 @@ Visual Studio의 라이브러리 관리 도구입니다. 이를 사용하려면 
 내용을 참고할 수 있습니다.
 
 * David A. Wheeler, Program Library HOWTO, version 1.20, 11 April 2003, URL:https://tldp.org/HOWTO/Program-Library-HOWTO/index.html, Checked: 3.Janurary.2022. 
+
+GSL 설치 과정에서 configure 스크립트의 여러 설정 사항들은 다음을 참고할 수 있습니다.
+
+* 베포 라이브러리 파일 내의 :code:`INSTALL` 파일
+* configure 설명 :code:`./configure -h` 로 볼 수 있습니다.
 
 이 문서에서 설명한 도구들의 공식 사용 설명서들을 첨부합니다.
 

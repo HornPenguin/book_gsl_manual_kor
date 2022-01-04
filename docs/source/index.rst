@@ -92,6 +92,35 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
    qwqwhsnote@gm.gist.ac.kr
 
 
+**원 영문 원서의 저작권 Copyright of the Original English Version:**
+
+.. centered:: Copyright © 1996-2021 The GSL Team.
+
+    Permission is granted to copy, distribute and/or modify this document under the terms of the
+    GNU Free Documentation License, Version 1.3 or any later version published by the Free Software
+    Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. 
+    A copy of the license is included in the section entitled “GNU Free Documentation License”
+
+**번역서의 저작권 Copyright of the Translated Korean Version:**
+
+.. centered:: Copyright © 2022  Hyung Seong, Kim.
+
+   Permission is granted to copy, distribute and/or modify this document under 
+   the terms of the GNU Free Documentation License, Version 1.3 or any later
+   version published by the Free Software Foundation; with Invariant Sections "번역자 정보(*)", 
+   no Front-Cover Texts, and no Back-Cover Texts. 
+   A copy of the license is included in the section entitled 
+   "GNU 자유 문서 사용 허가서". 
+   Note: in which a surname preceds a given name.
+
+.. centered:: Copyright © 2022  김현성.
+
+    GNU 자유 문서 사용 허가서 1.3판과 자유 소프트웨어 재단에서 발행한 이후의 갱신본의
+    규정에 따라, 본 저작물의 복제, 베포 및 수정을 허가합니다. 변경 불가 부분은 "번역자 정보(*)" 단원입니다. 
+    앞 표지 구절과 뒷 표지 구절은 없습니다. 이 허가서의 복사본은 "GNU 자유 문서 사용 허가서"로 지어진 단락에
+    포함되어 있습니다.
+
+
 .. toctree::
    :maxdepth: 2
    
@@ -120,6 +149,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
    GSL 디자인 문서
    참고 자료
    영문 용어
+   번역자 정보
 
 ..
    
