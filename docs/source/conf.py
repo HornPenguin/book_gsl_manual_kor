@@ -115,8 +115,6 @@ latex_documents = [
 ]
 
 #latex_logo = 'logo_design.svg'
-<<<<<<< HEAD
+
 latex_show_urls = 'inline'
 latex_use_xindy =True
-=======
->>>>>>> parent of e26ce97 (Style setting for latex)
