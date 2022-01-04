@@ -724,7 +724,7 @@ Windows 에서의 설치에 사용한 도구들과 관련 내용은 다음을 �
 
 .. [#MSVS] Microsoft Visual Studio
 .. [#MSVC] Microsoft Visual C++: Microsofot 사의 MSVC는 C++ 컴파일러로 지원하는 C 표준은 
-           `Microsoft C/C++ 언어 규칙 | Microsoft Docs https://docs.microsoft.com/ko-kr/cpp/overview/visual-cpp-language-conformance`_
+           `Microsoft C/C++ 언어 규칙 | Microsoft Docs`_
            를 참고할 수 있습니다.
 .. [#bashrc] 해당 파일은 bash가 시작할 때 실행되는 명령어를 기술하고 있습니다.
 .. [#iccaocc] 각각 Intel C/C++ Compiler, AMD Optimized C/C++ Compiler를 의미합니다. 
@@ -733,3 +733,5 @@ Windows 에서의 설치에 사용한 도구들과 관련 내용은 다음을 �
               AOCC는 LLVM/Clang의 포크로 만들어졌습니다.
 .. [#makealt] make는 빌드 과정을 편리하게 만드는 도구일 뿐이므로 대체 불가능하다는 어폐가 있는 표현이기는 합니다만, 
               하지만 대규모 프로젝트를 굳이 별도의 빌드 도구로(ninja 같은) 새로 만들거나 손수 따라할 이유가 없습니다.
+
+.. _Microsoft C/C++ 언어 규칙 | Microsoft Docs: https://docs.microsoft.com/ko-kr/cpp/overview/visual-cpp-language-conformance
