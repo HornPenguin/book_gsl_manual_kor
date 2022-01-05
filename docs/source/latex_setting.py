@@ -1,5 +1,6 @@
 
 packagelist= {
+    "pdfpages" :"",
     "xeCJK" : "CJKspace",
     "afterpage" : "",
     "pagecolor" : "pagecolor=none",
