@@ -79,17 +79,9 @@ my_preamble = r'''
 
 my_cover_and_license = r'''
     \newpage
-    {0}
-
+    \includepdf[pages=-]{Cover.pdf}
     \newpage
-
-    {1}
-
-    \newpage
-
-    \sphinxmaketitle
-    '''.format(cover_page,license_page)
-
+    '''
 latex_elements = {
     'papersize': 'a4papaer',
     'pointsize': '10pt',
@@ -98,14 +90,10 @@ latex_elements = {
     \setmainfont{Noto Serif CJK KR}
     \setsansfont{Noto Sans CJK KR}
     \setmonofont{Noto Sans Mono CJK KR}
-    '''
+    ''',
+    'maketitle' : my_cover_and_license
 }
 
-'''
-,
-    "maketitle": my_cover_and_license
-
-'''
 latex_documents = [
     (master_doc, 
     'gsl-kor-manual.tex',
@@ -117,3 +105,4 @@ latex_documents = [
 #latex_logo = 'logo_design.svg'
 latex_show_urls = 'inline'
 latex_use_xindy =True
+latex_additional_files = ["Cover.pdf"]
