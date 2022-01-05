@@ -90,7 +90,10 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
    .. raw:: latex
       
       \newpage
-      
+
+저작권 고지
+============
+
 .. only:: html
 
    **원 영문 원서의 저작권 Copyright of the Original English Version:**
@@ -124,8 +127,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
 
 .. only:: latex
 
-   .. sidebar:: 저작권 고지
-       :subtitle: 원 영문 원서의 저작권 Copyright of the Original English Version
+   .. topic:: 원 영문 원서의 저작권 Copyright of the Original English Version
 
        Copyright © 1996-2021 The GSL Team.
        Permission is granted to copy, distribute and/or modify this document under the terms of the
@@ -133,8 +135,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
        Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. 
        A copy of the license is included in the section entitled “GNU Free Documentation License”
 
-   .. sidebar:: 저작권 고지
-       :subtitle: 번역서의 저작권 Copyright of the Translated Korean Version
+   .. topic:: 번역서의 저작권 Copyright of the Translated Korean Version
 
        Copyright © 2022  Hyung Seong, Kim.
 

@@ -676,7 +676,6 @@ Brigham 저 "The Fast Fourier Transform"과 Burrus and Parks 저
 "DFT/FFT and Convolution Algorithms"이 있습니다.
 
 * E. Oran Brigham. “The Fast Fourier Transform”. Prentice Hall, 1974.
-
 * C. S. Burrus and T. W. Parks. “DFT/FFT and Convolution Algorithms”, Wiley, 1984.
 
 이 입문 서적들은 radix-2 FFT 방법을 자세히 서술하고 있습니다. 
@@ -708,7 +707,6 @@ FFTPACK 구현체의 핵심 알고리즘인 Mixed-radix 알고리즘은 Clive Te
 
 FFTPACK의 소스 코드는 `<http://www.netlib.org/fftpack/>`_ 에서 확인할 수 있습니다.
 
----
 
 .. rubri: 각주
 
