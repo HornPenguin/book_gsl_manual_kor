@@ -2,23 +2,13 @@
 packagelist= {
     "pdfpages" :"",
     "xeCJK" : "CJKspace",
-    "afterpage" : "",
-    "pagecolor" : "pagecolor=none",
-    "tikz" : "",
-    "tikzpagenodes" : "",
-    "fix-cm" : "",
-    "textpos" : "absolute, overlay",
 }
 
 #    "xeCJK" : "CJKspace",
 
 packages = "\n".join(["\\usepackage[{}]{{{}}}".format(v, k) for k, v in packagelist.items()])
 
-custom_setting = r'''
-
-    \definecolor{coverbackground}{RGB}{209, 198, 161} 
-    \definecolor{coverband}{RGB}{239, 190, 84}
-    '''
+custom_setting = r''' '''
 
 cover_page = r'''
     \pagecolor{coverbackground}\afterpage{\nopagecolor}
@@ -81,3 +71,36 @@ license_page = r'''
     포함되어 있습니다.
     
     '''
+
+r'''
+\newpage
+\pagecolor{coverbackground}
+\begin{tikzpicture}[remember picture,overlay,shift={(current page.north west)}]
+    \fill[coverband,yshift=-120mm] rectangle(\paperwidth,85mm);
+\end{tikzpicture}
+
+\vspace{3.65cm}\hspace{6.8cm}\includegraphics[height=2.85cm]{A_Slick_GNU_Logo.png}
+
+\begin{textblock*}{4.25cm}(15cm,5.4cm) % {block width} (coords) 
+        \raggedright{
+        \Huge\textbf{과학계산}\\
+        \Huge\textbf{라이브러리}
+        }\\
+        \raggedleft\Large\textbf{v2.7}
+    \end{textblock*}
+
+    \begin{textblock*}{10cm}(9.1cm,9.3cm)
+        \raggedleft
+        \fontsize{32}{60}\selectfont \textbf{사용 설명서}
+\end{textblock*}
+
+\begin{center}
+    \vfill
+    \large \textbf{Mark Galassi \\ et al} \\
+    \vspace{0.5cm}
+    역: 김현성 \\
+    \vspace{1.2cm}
+    \Large \textbf{GNU Publication}
+    \vspace{3cm}
+\end{center}
+'''

@@ -83,7 +83,7 @@ my_cover_and_license = r'''
     \newpage
     '''
 latex_elements = {
-    'papersize': 'a4papaer',
+    'papersize': 'a4paper',
     'pointsize': '10pt',
     'preamble': my_preamble,
     'fontpkg' : r'''
@@ -91,7 +91,7 @@ latex_elements = {
     \setsansfont{Noto Sans CJK KR}
     \setmonofont{Noto Sans Mono CJK KR}
     ''',
-    'maketitle' : my_cover_and_license
+    'maketitle' : r'\sphinxmaketitle'
 }
 
 latex_documents = [
@@ -105,4 +105,9 @@ latex_documents = [
 #latex_logo = 'logo_design.svg'
 latex_show_urls = 'inline'
 latex_use_xindy =True
-latex_additional_files = ["Cover.pdf"]
+latex_additional_files = [
+    "./_static/Cover.pdf",
+    "./fonts/NanumMyeongjo.ttf",
+    "./fonts/NanumMyeongjoBold.ttf",
+    "./fonts/NanumMyeongjoExtraBold.ttf"
+    ]
