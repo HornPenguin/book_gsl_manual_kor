@@ -16,6 +16,14 @@
 ===========================
 참고할 만한 서적과 자료 그리고 몇가지 팁들을 제공합니다.
 
+GSL을 사용한 연구와 프로젝트
+--------------------------------
+
+국내
+~~~~~~~~~~~~~~~
+
+* Park et al, Training and Research on Computational Science and Cyber-Infrastructure, Government White paper, KISTI, Dec. 2011. ReNum: TRKO201200010737, URL: https://repository.kisti.re.kr/handle/10580/11076. 
+
 C 프로그래밍
 --------------------
 
@@ -68,7 +76,6 @@ ASCII 표는 1963년도 처음 표준안이 발표된 이후로 몇몇 개정이
 발표된 ASCII 표입니다.
 
 DE 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
-
 
 
 1965년도 개정에서는 알파벳 소문자들이 추가되었고, 일부 문자들의 위치와 제어 문자들의 이름이 바뀌었습니다.
@@ -202,12 +209,14 @@ C 표준 수학 라이브러리
 .. _Wolfram Math World: https://mathworld.wolfram.com
 .. _The CRC Encyclopedia of Mathematics: https://www.routledge.com/The-CRC-Encyclopedia-of-Mathematics-Third-Edition---3-Volume-Set/Weisstein/p/book/9781420072211
 
-프로그램과 라이브러리
------------------------------
+과학 계산 프로그램과 라이브러리
+----------------------------------
 
 GSL은 수치 해석을 위한 C 라이브러리입니다. 이 라이브러리를 사용해 다양한 수학 기능들을 C에서 사용할 수 있습니다. 
 하지만 GSL 외에도 과학 계산을 위한 많은 라이브러리와 소프트웨어들이 존재합니다. 
-이 단락에서는 과학 계산 분야에서 사용할 수 있는 C 라이브러리와 관련 api를 제공하는 소프트웨어들을 간단하게 서술하고자 합니다.
+이 단락에서는 과학 계산 분야에서 사용할 수 있는 C 라이브러리들과 
+관련 소프트웨어들을 간단하게 서술하고자 합니다.
+
 GSL의 확장 기능인 라이브러리들은 별도로 **GSL Extension** 으로 표기합니다.
 
 라이브러리
@@ -330,7 +339,9 @@ GSL 설치 단원에서 ICC와 AOCC를 언급했습니다. Intel과 AMD에서는
    해당 엔진은 Mathematica 및 관련 제품들의 핵심 엔진으로 다양한 Wolfram 사의 제공 서비스를 이용할 수 있습니다.
    Wolfram 사의 핵심 기능은 기호 계산 소프트웨어이나 수치적 해석 분야의 기능 또한 풍부하게 제공하고 있습니다.
    C를 위한 api를 제공하기도 하므로 다른 C 라이브러리에 없는 특정 함수의 기능을 C로 구현하기 전에,
-   검증용으로 사용해 볼 수도 있습니다.  
+   검증용으로 사용해 볼 수도 있습니다. C-api는 Wolfram Language & System Document Center의 
+   `C/C++ Language Interface`_ 문서를 참고할 수 있습니다. 
+   Wolfram 엔진을 서버에서 설치해 사용하는 방법은 `Wolfram Language on Research Server`_ 를 참고할 수 있습니다.
    
    .. only:: latex
      
@@ -338,6 +349,29 @@ GSL 설치 단원에서 ICC와 AOCC를 언급했습니다. Intel과 AMD에서는
      * https://www.wolfram.com/engine
 
 .. _Wolfram Engine: https://www.wolfram.com/engine
+.. _C/C++ Language Interface: https://reference.wolfram.com/language/guide/CLanguageInterface.html
+.. _Wolfram Language on Research Server: https://hyunseong-kim.github.io/docs/Miscellaneous/RE_Wolfram_Engine
+
+
+* `PHOEBE <http://phoebe-project.org/>`_ 
+ 
+     천체물리에서 식 현상 계산을 위한 모델링 소프트웨어 패키지 입니다.
+     NASA의 지원을 받고 있습니다.
+
+
+GSL 지원 HPC 서비스
+---------------------------
+
+HPC Service on University
+
+* Sheffield 대학 : https://docs.hpc.shef.ac.uk/en/latest/sharc/software/libs/gsl.html?highlight=GSL
+* Honkong 대학 : https://hpc.hku.hk/hpc/software/gsl/
+* Queen Merry 대학(QMUL) : https://docs.hpc.qmul.ac.uk/apps/dev/numerical/gsl/
+* Livermore Computing Center HPC service: https://hpc.llnl.gov/software/mathematical-software/gnu-scientific-library
+* Maryland 대학 : https://www.glue.umd.edu/hpcc/help/software/gsl.html
+* Cambridge 대학: https://www.maths.cam.ac.uk/computing/software/gsl
+* Case Western Reserve 대학: https://sites.google.com/a/case.edu/hpcc/home
+* Louisiana 주립대: http://www.hpc.lsu.edu/docs/guides/software.php?software=gsl
 
 .. rubric:: 각주
 
