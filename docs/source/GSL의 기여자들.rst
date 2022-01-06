@@ -137,6 +137,3 @@ LAPACK은 다음의 허가서 아래에 베포됩니다.
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-.. raw:: latex
-
-    \appendix

@@ -103,26 +103,34 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
       Copyright © 1996-2021 The GSL Team.
       Permission is granted to copy, distribute and/or modify this document under the terms of the
       GNU Free Documentation License, Version 1.3 or any later version published by the Free Software
-      Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. 
-      A copy of the license is included in the section entitled “GNU Free Documentation License”
+      Foundation; with the Invariant Sections being “GNU General Public License” and “Free Software
+      Needs Free Documentation”, the Front-Cover text being “A GNU Manual”, and with the Back-
+      Cover Text being (a) (see below). A copy of the license is included in the section entitled “GNU
+      Free Documentation License”.
+      (a) The Back-Cover Text is: “You have freedom to copy and modify this GNU Manual, like
+      GNU software.”
+      Printed copies of this manual can be purchased from Network Theory Ltd at
+      http://www.network-theory.co.uk/gsl/manual/.
+      The money raised from sales of the manual helps support the development of GSL.
 
    **번역서의 저작권 Copyright of the Translated Korean Version:**
 
    :: 
 
-      Copyright © 2022  Hyung Seong, Kim.
+      Copyright © 2022  Hyung Seong, Kim
 
       Permission is granted to copy, distribute and/or modify this document under 
-      the terms of the GNU Free Documentation License, Version 1.3 or any later
-      version published by the Free Software Foundation; with Invariant Sections "역자와 참고 자료(*)", 
-      no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included 
-      in the section entitled "GNU 자유 문서 사용 허가서". 
+      the terms of the GNU Free Documentation License, Version 1.3 or any later version 
+      published by the Free Software Foundation as same as the original English version of the text (shown above); 
+      with additional Invariant Sections "역자와 참고 자료(*)", 
+      A copy of the license is included in the section entitled "GNU 자유 문서 사용 허가서". 
 
-      Copyright © 2022  김현성.
+      Copyright © 2022  김현성 Hyung Seong, Kim
 
       GNU 자유 문서 사용 허가서 1.3판과 자유 소프트웨어 재단에서 발행한 이후의 갱신본의
-      규정에 따라, 본 저작물의 복제, 베포 및 수정을 허가합니다. 변경 불가 부분은 "역자와 참고 자료(*)" 단원입니다. 
-      앞 표지 구절과 뒷 표지 구절은 없습니다. 이 허가서의 복사본은 "GNU 자유 문서 사용 허가서"로 지어진 단락에
+      규정에 따라, 본 저작물의 복제, 베포 및 수정을 허가합니다. 상기한 영어 원서와 똑같은 규약을 
+      추가 변경 불가 부분 "역자와 참고 자료(*)" 단원을 포함해 따릅니다.
+      이 허가서의 복사본은 "GNU 자유 문서 사용 허가서"로 지어진 단락에
       포함되어 있습니다.
 
 .. only:: latex
@@ -137,81 +145,84 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
 
    .. topic:: 번역서의 저작권 Copyright of the Translated Korean Version
 
-       Copyright © 2022  Hyung Seong, Kim.
+       Copyright © 2022  김현성 Hyung Seong, Kim
 
        Permission is granted to copy, distribute and/or modify this document under 
-       the terms of the GNU Free Documentation License, Version 1.3 or any later
-       version published by the Free Software Foundation; with Invariant Sections "역자와 참고 자료(*)", 
-       no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included 
-       in the section entitled "GNU 자유 문서 사용 허가서". 
+       the terms of the GNU Free Documentation License, Version 1.3 or any later version 
+       published by the Free Software Foundation as same as the original English version of the text (shown above); 
+       with additional Invariant Sections "역자와 참고 자료(*)", 
+       A copy of the license is included in the section entitled "GNU 자유 문서 사용 허가서". 
  
-       Copyright © 2022  김현성.
+       Copyright © 2022  김현성
  
        GNU 자유 문서 사용 허가서 1.3판과 자유 소프트웨어 재단에서 발행한 이후의 갱신본의
-       규정에 따라, 본 저작물의 복제, 베포 및 수정을 허가합니다. 변경 불가 부분은 "역자와 참고 자료(*)" 단원입니다. 
-       앞 표지 구절과 뒷 표지 구절은 없습니다. 이 허가서의 복사본은 "GNU 자유 문서 사용 허가서"로 지어진 단락에
+       규정에 따라, 본 저작물의 복제, 베포 및 수정을 허가합니다. 상기한 영어 원서와 똑같은 규약을 
+       추가 변경 불가 부분 "역자와 참고 자료(*)" 단원을 포함해 따릅니다.
+       이 허가서의 복사본은 "GNU 자유 문서 사용 허가서"로 지어진 단락에
        포함되어 있습니다.
+
 
 
 .. toctree::
    :maxdepth: 2
 
-   소개
-   GSL 설치
-   라이브러리 사용
-   오류 관리
-   수학 함수들
-   복소수
-   다항식
-   특수 함수
-   벡터와 행렬
-   순열
-   조합
-   중복 집합
-   배열
-   BLAS 지원
-   선형 대수학
-   고유 공간
-   고속 푸리에 변환
-   수치 적분
-   난수 생성기
-   Quasi-연속 난수
-   난수 분포
-   통계
-   통계 실행
-   디지털 필터링
-   히스토그램
-   N-튜플
-   몬테카를로 적분
-   담금질 기법
-   상미분 방정식
-   보간법
-   수치 미분
-   체비쇼프 근사
-   급수 가속
+   소개.rst
+   add_docs/GSL 설치.rst
+   라이브러리 사용.rst
+   오류 관리.rst
+   수학 함수들.rst
+   복소수.rst
+   다항식.rst
+   특수 함수.rst
+   벡터와 행렬.rst
+   순열.rst
+   조합.rst
+   중복 집합.rst
+   배열.rst
+   BLAS 지원.rst
+   선형 대수학.rst
+   고유 공간.rst
+   고속 푸리에 변환.rst
+   수치 적분.rst
+   난수 생성기.rst
+   Quasi-연속 난수.rst
+   난수 분포.rst
+   통계.rst
+   통계 실행.rst
+   디지털 필터링.rst
+   히스토그램.rst
+   N-튜플.rst
+   몬테카를로 적분.rst
+   담금질 기법.rst
+   상미분 방정식.rst
+   보간법.rst
+   체비쇼프 근사.rst
+   급수 가속.rst
    웨이블렛 변환
-   이산 한켈 변환
-   함수의 근 탐색
-   함수의 최솟값 탐색
-   다변수 함수의 근 탐색
-   다변수 함수의 최솟값 탐색
-   선형 최소 제곱법
-   비선형 최소 제곱법
-   B-스플라인
-   희소 행렬
-   희소 BLAS 지원
-   희소 선형 대수
-   물리 상수
-   IEEE 부동 소수점 대수
-   수치 해석 프로그램의 디버깅
-   autoconf
-   GSL의 기여자들
-   GSL CBLAS 라이브러리
-   GNU 일반 공중 사용 허가서
-   GNU 자유 문서 사용 허가서
-   GSL 디자인 문서
-   영문 용어
-   역자와 참고 자료
+   이산 한켈 변환.rst
+   함수의 근 탐색.rst
+   함수의 최솟값 탐색.rst
+   다변수 함수의 근 탐색.rst
+   다변수 함수의 최솟값 탐색.rst
+   선형 최소 제곱법.rst
+   비선형 최소 제곱법.rst
+   B-스플라인.rst
+   희소 행렬.rst
+   희소 BLAS 지원.rst
+   희소 선형 대수.rst
+   물리 상수.rst
+   IEEE 부동 소수점 대수.rst
+
+   수치 해석 프로그램의 디버깅.rst
+   autoconf.rst
+   GSL의 기여자들.rst
+   GSL CBLAS 라이브러리.rst
+   GNU 일반 공중 사용 허가서.rst
+   GNU 자유 문서 사용 허가서.rst
+   GSL 디자인 문서.rst
+   add_docs/이력.rst
+   add_docs/역자와 참고 자료.rst
+   add_docs/영문 용어.rst
 
 .. rubric:: 각주
 

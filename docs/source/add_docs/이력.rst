@@ -1,0 +1,217 @@
+***********************
+이력
+***********************
+
+
+
+.. topic:: GSL 프로젝트 이력
+
+    
+    gsl-2.7 was released in June 2021.
+    gsl-2.6 was released in August 2019.
+    gsl-2.5 was released in June 2018.
+    gsl-2.4 was released in June 2017.
+    gsl-2.3 was released in December 2016.
+    gsl-2.2.1 was released in August 2016.
+    gsl-2.2 was released in August 2016.
+    gsl-2.1 was released in November 2015.
+    gsl-2.0 was released in October 2015.
+    gsl-1.16 was released in July 2013.
+    gsl-1.15 was released in May 2011.
+    gsl-1.14 was released in March 2010.
+    gsl-1.13 was released in September 2009.
+    gsl-1.12 was released in December 2008.
+    gsl-1.11 was released in March 2008.
+    gsl-1.10 was released in September 2007.
+    gsl-1.9 was released in February 2007.
+    gsl-1.8 was released in April 2006.
+    gsl-1.7 was released in September 2005.
+    gsl-1.6 was released in December 2004.
+    gsl-1.5 was released in June 2004.
+    gsl-1.4 was released in August 2003.
+    gsl-1.3 was released in December 2002.
+    gsl-1.2 was released in July 2002.
+    gsl-1.1.1 was released in March 2002.
+    gsl-1.1 was released in February 2002.
+    gsl-1.0 was released in November 2001.
+    gsl-0.9.4 was released in October 2001 (fifth beta-test release).
+    gsl-0.9.3 was released in September 2001 (fourth beta-test release).
+    gsl-0.9.2 was released in September 2001 (third beta-test release).
+    gsl-0.9.1 was released in August 2001 (second beta-test release).
+    gsl-0.9 was released in July 2001 (first beta-test release).
+    gsl-0.8 was released in May 2001.
+    gsl-0.7 was released in October 2000.
+    gsl-0.6 was released in June 2000.
+    gsl-0.5 was released in December 1999.
+    gsl-0.4.1 was released in February 1999.
+    gsl-0.4 was released in August 1998.
+    gsl-0.3f was released in May 1998.
+    gsl-0.3b was released in February 1998.
+    gsl-0.2 was released in October 1996.
+    gsl-0.1 was released in sometime in 1996.
+    gsl-0.0 was released in sometime in 1996.
+    The gsl project was started in May 1996 (earliest recorded changelog entry).
+
+
+**Network Theory Ltd**
+
+라이브러리 내부 문서에 자주 등장하는 출판사가 Network Theory Ltd 입니다.
+
+아래의 내용은 영국 정부의 Companies House 서비스에 기반한 내용입니다.
+
+https://find-and-update.company-information.service.gov.uk/company/03732949
+
+.. topic:: 출판사 정보
+
+    * 회사명: Network Tehory Limited
+    * 회사 번호: 03732949
+    * Nature of Business (SIC): 62012 - Business and domestic software development 
+    * 유형: 사기업
+    * 대표: Brian James Gough, 75% 이상 지분 소유
+    * 설립-폐업: 1999.04.15 - 2019.7.23
+    
+
+.. list-table:: Publication History of NTL
+    :header-rows: 1
+
+    * - Name
+      - Author
+      - Month/Year
+      - ISBN
+    * - The Guile 2.0 Reference Manual
+      -
+      -
+      -
+    * - R Reference Manual - Volume 4 - Methods and Tools - for R Version 2.13
+      -
+      -
+      -
+    * - R Reference Manual - Volume 3 - Statistics - for R Version 2.13
+      -
+      -
+      -
+    * - R Reference Manual - Volume 2 - Graphics - for R Version 2.13
+      -
+      -
+      -
+    * - R Reference Manual - Volume 1 - Base Package - for R Version 2.13
+      -
+      -
+      -
+    * - An Introduction to Python
+      -
+      -
+      -
+    * - The Python Language Reference Manual
+      -
+      -
+      -
+    * - Apache HTTP Server Reference Manual - for Apache Version 2.2.17
+      -
+      -
+      -
+    * - The Org Mode 7 Reference Manual (for Org Version 7.3)
+      -
+      -
+      -
+    * - PostgreSQL 9.0 Reference Manual: Server Administration Guide v. 3
+      -
+      -
+      -
+    * - PostgreSQL 9.0 Reference Manual: Programming Guide v. 2
+      -
+      -
+      -
+    * - PostgreSQL 9.0 Reference Manual: SQL Command Reference 1B
+      -
+      -
+      -
+    * - PostgreSQL 9.0 Reference Manual: The SQL Language 1A
+      -
+      -
+      -
+    * - Perl Language Reference Manual - for Perl Version 5.12.1
+      -
+      -
+      -
+    * - XML Path Language (XPath) 2.0 Standard
+      - XML Query and Xsl Working W3c XML Query and Xsl Working Groups
+      - Jul 2010
+      - 9781906966010
+    * - The XML 1.0 Standard : With XML Namespaces and Information Set
+      - W3C XML Working Group
+      - Mar 2010
+      - 9780954612092
+    * - An Introduction to R
+      - William N. Venables and David M. Smith
+      - May 2009
+      - 9780954612085
+    * - GNU Scientific Library Reference Manual 3rd
+      - Mark Galassi et al
+      - Jan 2009
+      - 9780954612078
+    * - GNU Octave Manual Version 3
+      -  John W. Eaton,  David Bateman and Soren Hauberg
+      - Oct 2008
+      - 9780954612061
+    * - Valgrind 3.3 - Advanced Debugging and Profiling for GNU/Linux Applications
+      - N. Nethercote,  J. Weidendorfer and Julian Seward
+      - Mar 2008
+      - 9780954612054
+    * - The PostgreSQL Reference Manual: Server Administration Guide v. 3
+      - Postgresql Development Group
+      - Jun 2007
+      - 9780954612047
+    * - The PostgreSQL Reference Manual: Programming Guide v. 2
+      - Postgresql Global Development Group
+      - Jun 2007
+      - 9780954612030
+    * - The PostgreSQL Reference Manual: SQL Language Reference v. 1
+      - Postgresql Global Development Group
+      - Jun 2007
+      - 9780954612023
+    * - An Introduction to GCC
+      -
+      -
+      -
+    * - R Reference Manual: vol.2
+      -
+      -
+      -
+    * - R Reference Manual: vol.1
+      -
+      -
+      -
+    * - An Introduction to Python
+      -
+      -
+      -
+    * - GNU Scientific Library Reference Manual 2nd
+      -
+      -
+      -
+    * - Comparing and Merging Files with GNU Diff and Patch
+      -
+      -
+      -
+    * - GNU Bash Reference Manual
+      - Brian Fox and Chet Ramey 
+      - Jan 2003
+      - 9780954161774
+    * - Version Management with CVS
+      - Per Cederqvist
+      - Dec 2002
+      - 9780954161712
+    * - An Introduction to R
+      - William N. Venables and David M. Smith 
+      - May 2002
+      - 9780954161743
+    * - GNU Octave Manual
+      - John W. Eaton
+      - 01 Mar 2002
+      - 9780954161729
+    * - GNU Scientific Library Reference Manual
+      - Mark Galassi et al
+      - Dec 2001
+      - 9780954161705
+            
