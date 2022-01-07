@@ -32,11 +32,6 @@ C 프로그래밍
 
 시중에 다양한 C 입문, 학습서들이 나와있지만 표준적으로 쓰이는 C 서적은 두 가지가 있습니다.
 
-하나는 Denis Ritchie와 Brian Kernighan이 작성한 책으로 ANSI C 표준을 기반으로한 책입니다. 
-이 라이브러리 내에서 쓰이는 표준이 ANSI C를 기반하므로 표준을 참고하기에 충분합니다.
-
-Denis Ritchie는 C 언어를 설계하고 개발한 사람이기도 합니다 [#KR]_ . 
-
 .. index:: 
     single: K&R
     single: Denis Ritchie
@@ -44,18 +39,28 @@ Denis Ritchie는 C 언어를 설계하고 개발한 사람이기도 합니다 [#
     single: K.N. King
 
 * Kernighan, B.W. & Ritchie, D.M., The C Programming Language, 2nd ANSI, Pearson Educación, 1988, isbn:9789688802052.
-
-다른 하나는 K.N.King 의 저서로 C99 표준을 따릅니다. 실제 우리가 배우는 많은 편리한 C의 기능들은
-ANSI C 이후 C99에서 도입된 기능들이 많습니다. TCPL이 좋은 책이고 C를 공부할 때 한번은 참고해 봐야할 책이지만 
-현대적인 코딩 규약들과 프로그래밍 방법들에 관한 내용은 아래 책이 더 좋은 정보를 제공해 줄 것입니다.
+   
+   Denis Ritchie와 Brian Kernighan이 작성한 책으로 ANSI C 표준을 기반으로한 책입니다. 
+   이 라이브러리 내에서 쓰이는 표준이 ANSI C를 기반하므로 표준을 참고하기에 충분합니다.
+   Denis Ritchie는 C 언어를 설계하고 개발한 사람이기도 합니다 [#KR]_ . 
+   
+   몇가지 주의할 점은 이 책의 예제 프로그램 코드 스타일 중 일부는 
+   현재 프로그래밍에서 사용하기에 적절치 않습니다. 
+   C에 대해 참고하되 코드의 스타일까지 따라할 필요는 없습니다.
+   현대적인 프로그래밍 규약과 스타일은 다른 서적들이 더 좋은 자료들을
+   제공해 줄 수 있습니다.
 
 * King, K.N., C Programming: A Modern Approach. 2nd, W.W. Norton, 2008, isbn:9780393979503.
 
-Richard Stallman과 몇몇 GNU 프로젝트의 참여자들은 관리, 참여하는 GNU 프로젝트의 일관성, 유지 보수성 그리고 설치 용의성의 확보를
-위해 GNU 프로젝트에 관한 코딩 규약을 만들었습니다. GNU 프로젝트가 C를 통해 개발되는 대규모 오픈소스 프로젝트인 만큼
-C의 개발 과정에서 사용가능한 여러 유용한 정보들을 담고 있습니다.
+   K.N.King 의 저서로 C99 표준을 따릅니다. 실제 우리가 배우는 많은 편리한 C의 기능들은
+   ANSI C 이후 C99에서 도입된 기능들이 많습니다. TCPL이 좋은 책이고 C를 공부할 때 한번은 참고해 봐야할 책이지만 
+   현대적인 코딩 규약들과 프로그래밍 방법들에 관한 내용은 이 책이 더 좋은 정보를 제공해 줄 것입니다.
 
-* https://www.gnu.org/prep/standards/
+* `GNU 표준 코딩 규약 <https://www.gnu.org/prep/standards/>`_
+
+   Richard Stallman과 몇몇 GNU 프로젝트의 참여자들은 관리, 참여하는 GNU 프로젝트의 일관성, 유지 보수성 그리고 설치 용의성의 확보를
+   위해 GNU 프로젝트에 관한 코딩 규약을 만들었습니다. GNU 프로젝트가 C를 통해 개발되는 대규모 오픈소스 프로젝트인 만큼
+   C의 개발 과정에서 사용가능한 여러 유용한 정보들을 담고 있습니다. 
 
 .. index:: ASCII code
 

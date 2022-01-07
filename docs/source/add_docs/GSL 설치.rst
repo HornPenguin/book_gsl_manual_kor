@@ -662,6 +662,8 @@ LIB
 Visual Studio의 라이브러리 관리 도구입니다. 이를 사용하려면 Visual Studio의 개발자 터미널 내에서 사용해야 합니다.
 일반 CMD에서도 사용이 불가능하지는 않지만 몇가지 설정을 변경해야합니다.
 
+.. _common_library_document:
+
 참고 문헌
 ==============
 
