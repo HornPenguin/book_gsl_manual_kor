@@ -223,6 +223,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
    add_docs/GSL 디자인 문서.rst
    add_docs/이력.rst
    add_docs/역자와 참고 자료.rst
+   add_docs/병렬화.rst
    add_docs/영문 용어.rst
 
 .. rubric:: 각주
