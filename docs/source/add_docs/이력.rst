@@ -67,6 +67,7 @@ https://find-and-update.company-information.service.gov.uk/company/03732949
     * 회사 번호: 03732949
     * Nature of Business (SIC): 62012 - Business and domestic software development 
     * 유형: 사기업
+    * 상태: 폐업
     * 대표: Brian James Gough, 75% 이상 지분 소유
     * 설립-폐업: 1999.04.15 - 2019.7.23
     
@@ -79,61 +80,61 @@ https://find-and-update.company-information.service.gov.uk/company/03732949
       - Month/Year
       - ISBN
     * - The Guile 2.0 Reference Manual
-      -
-      -
-      -
+      - The Guile Developers
+      - Nov 2011
+      -  9781906966157
     * - R Reference Manual - Volume 4 - Methods and Tools - for R Version 2.13
-      -
-      -
-      -
+      - R Development Core Team
+      - Aug 2011
+      - 9781906966126
     * - R Reference Manual - Volume 3 - Statistics - for R Version 2.13
-      -
-      -
-      -
+      - R Development Core Team
+      - Aug 2011
+      - 9781906966119
     * - R Reference Manual - Volume 2 - Graphics - for R Version 2.13
-      -
-      -
-      -
+      - R Development Core Team
+      - Aug 2011
+      - 9781906966102
     * - R Reference Manual - Volume 1 - Base Package - for R Version 2.13
-      -
-      -
-      -
+      - R Development Core Team
+      - Aug 2011
+      - 9781906966096
     * - An Introduction to Python
-      -
-      -
-      -
+      - Guido. Van. Rossum, and Fred. L. Drake Jr
+      - Mar 2011
+      - 9781906966133
     * - The Python Language Reference Manual
-      -
-      -
-      -
+      - Guido. Van. Rossum, and Fred. L. Drake Jr
+      - Mar 2011
+      - 9781906966140
     * - Apache HTTP Server Reference Manual - for Apache Version 2.2.17
-      -
-      -
-      -
+      - Apache Software Foundation 
+      - Dec 2010
+      - 9781906966034
     * - The Org Mode 7 Reference Manual (for Org Version 7.3)
-      -
-      -
-      -
+      - Dominik Carsten
+      - Dec 2010
+      - 9781906966089
     * - PostgreSQL 9.0 Reference Manual: Server Administration Guide v. 3
-      -
-      -
-      -
+      - PostgreSQL Development Group  
+      - Nov 2010
+      - 9781906966072
     * - PostgreSQL 9.0 Reference Manual: Programming Guide v. 2
-      -
-      -
-      -
+      - PostgreSQL Development Group 
+      - Nov 2010
+      - 9781906966065
     * - PostgreSQL 9.0 Reference Manual: SQL Command Reference 1B
-      -
-      -
-      -
+      - PostgreSQL Development Group 
+      - Nov 2010
+      - 9781906966058
     * - PostgreSQL 9.0 Reference Manual: The SQL Language 1A
-      -
-      -
-      -
+      - PostgreSQL Development Group 
+      - Nov 2010
+      - 9781906966041
     * - Perl Language Reference Manual - for Perl Version 5.12.1
-      -
-      -
-      -
+      - Larry Wall et al
+      - Jul 2010
+      - 9781906966027
     * - XML Path Language (XPath) 2.0 Standard
       - XML Query and Xsl Working W3c XML Query and Xsl Working Groups
       - Jul 2010
@@ -171,31 +172,35 @@ https://find-and-update.company-information.service.gov.uk/company/03732949
       - Jun 2007
       - 9780954612023
     * - An Introduction to GCC
-      -
-      -
-      -
-    * - R Reference Manual: vol.2
-      -
-      -
-      -
-    * - R Reference Manual: vol.1
-      -
-      -
-      -
+      - Brian J. Gough, Foreword by  Richard M. Stallman 
+      - Mar 2004
+      - 9780954161798
+    * - R Reference Manual: vol.2 : Base Package
+      - The R Development Core Team
+      - Dec 2003
+      - 9780954612016
+    * - R Reference Manual: vol.1 : Base Package
+      - The R Development Core Team
+      - Dec 2003
+      - 9780954612009
+    * - The Python Language Reference Manual
+      - Guido Van Rossum , and Fred Drake 
+      - Sep 2003
+      - 9780954161781
     * - An Introduction to Python
-      -
-      -
-      -
+      - Guido Van Rossum , and Fred Drake 
+      - Apr 2003
+      - 9780954161767
     * - GNU Scientific Library Reference Manual 2nd
-      -
-      -
-      -
+      - Mark Galassi et al
+      - Feb 2003
+      - 9780954161736
     * - Comparing and Merging Files with GNU Diff and Patch
-      -
-      -
-      -
+      - Paul Eggert, David MacKenzie, and Richard Stallman 
+      - Jan 2003
+      - 9780954161750
     * - GNU Bash Reference Manual
-      - Brian Fox and Chet Ramey 
+      - Brian Fox, and Chet Ramey 
       - Jan 2003
       - 9780954161774
     * - Version Management with CVS
@@ -203,7 +208,7 @@ https://find-and-update.company-information.service.gov.uk/company/03732949
       - Dec 2002
       - 9780954161712
     * - An Introduction to R
-      - William N. Venables and David M. Smith 
+      - William N. Venables, and David M. Smith 
       - May 2002
       - 9780954161743
     * - GNU Octave Manual
