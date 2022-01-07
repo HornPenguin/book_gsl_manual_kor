@@ -367,11 +367,16 @@ HPC Service on University
 * Sheffield 대학 : https://docs.hpc.shef.ac.uk/en/latest/sharc/software/libs/gsl.html?highlight=GSL
 * Honkong 대학 : https://hpc.hku.hk/hpc/software/gsl/
 * Queen Merry 대학(QMUL) : https://docs.hpc.qmul.ac.uk/apps/dev/numerical/gsl/
-* Livermore Computing Center HPC service: https://hpc.llnl.gov/software/mathematical-software/gnu-scientific-library
 * Maryland 대학 : https://www.glue.umd.edu/hpcc/help/software/gsl.html
 * Cambridge 대학: https://www.maths.cam.ac.uk/computing/software/gsl
 * Case Western Reserve 대학: https://sites.google.com/a/case.edu/hpcc/home
-* Louisiana 주립대: http://www.hpc.lsu.edu/docs/guides/software.php?software=gsl
+* Louisiana 주립대 : http://www.hpc.lsu.edu/docs/guides/software.php?software=gsl
+* Siegen 대학 : https://cluster.uni-siegen.de/omni/application-software/gnu-scientific-library/?lang=en
+
+상용
+
+* Livermore Computing Center : https://hpc.llnl.gov/software/mathematical-software/gnu-scientific-library
+* : http://hpc.iucaa.in/?q=pleiadesBeginnersGuide
 
 .. rubric:: 각주
 
