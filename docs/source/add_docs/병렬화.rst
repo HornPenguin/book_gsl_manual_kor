@@ -1,0 +1,21 @@
+***********************
+병렬화
+***********************
+
+
+디자인 문서에서 밝혔다시피 이 라이브러리는 병렬 처리를 고려하지 않습니다.
+이 단원은 기초적인 병렬 컴퓨팅의 Overview를 서술합니다. 
+따라서 간결한 라이브러리 구현에서 병렬화를 왜 고려하지 않는지, 
+어떠한 사항을 추가로 고려해야 하는지 
+에 대해 간단히 알아봅시다.
+
+
+참고 문헌
+
+* Blaise Barney, Livermore Computing (retired), Donald Frederick, LLNL, Introduction to Parallel Computing Tutorial, URL: https://hpc.llnl.gov/training/tutorials/introduction-parallel-computing-tutorial#Whatis, CHECKED: Jan 2022
+* Ian Foster, Designing and Building Parallel Programs, 
+* Victor Eijkhout with Robert van de Geijn and Edmond Chow, Introduction to High Performance Scientific Computing, lulu, 2011, ISBN: 978-1-257-99254-6.
+* Selim G. Aki, The Design and Analysis of Parallel Algortihms, Prentice Hall Publication, 1989, ISBM: 0-13-200056-3.
+* Alhubail, Maitham Makki, A thread-based parallel programming library for numerical algorithms, MIT PhD Thesis, 2014, URI: http://hdl.handle.net/1721.1/90080
+   
+     C++ 기반으로 짜인 스레드 기반 병렬 처리 라이브러리에 관한 논문입니다.

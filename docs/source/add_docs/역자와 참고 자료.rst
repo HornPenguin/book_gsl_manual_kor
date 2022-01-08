@@ -19,10 +19,9 @@
 GSL을 사용한 연구와 프로젝트
 --------------------------------
 
-국내
-~~~~~~~~~~~~~~~
-
 * Park et al, Training and Research on Computational Science and Cyber-Infrastructure, Government White paper, KISTI, Dec. 2011. ReNum: TRKO201200010737, URL: https://repository.kisti.re.kr/handle/10580/11076. 
+
+
 
 C 프로그래밍
 --------------------
@@ -32,11 +31,6 @@ C 프로그래밍
 
 시중에 다양한 C 입문, 학습서들이 나와있지만 표준적으로 쓰이는 C 서적은 두 가지가 있습니다.
 
-하나는 Denis Ritchie와 Brian Kernighan이 작성한 책으로 ANSI C 표준을 기반으로한 책입니다. 
-이 라이브러리 내에서 쓰이는 표준이 ANSI C를 기반하므로 표준을 참고하기에 충분합니다.
-
-Denis Ritchie는 C 언어를 설계하고 개발한 사람이기도 합니다 [#KR]_ . 
-
 .. index:: 
     single: K&R
     single: Denis Ritchie
@@ -44,18 +38,48 @@ Denis Ritchie는 C 언어를 설계하고 개발한 사람이기도 합니다 [#
     single: K.N. King
 
 * Kernighan, B.W. & Ritchie, D.M., The C Programming Language, 2nd ANSI, Pearson Educación, 1988, isbn:9789688802052.
-
-다른 하나는 K.N.King 의 저서로 C99 표준을 따릅니다. 실제 우리가 배우는 많은 편리한 C의 기능들은
-ANSI C 이후 C99에서 도입된 기능들이 많습니다. TCPL이 좋은 책이고 C를 공부할 때 한번은 참고해 봐야할 책이지만 
-현대적인 코딩 규약들과 프로그래밍 방법들에 관한 내용은 아래 책이 더 좋은 정보를 제공해 줄 것입니다.
+   
+   Denis Ritchie와 Brian Kernighan이 작성한 책으로 ANSI C 표준을 기반으로한 책입니다. 
+   이 라이브러리 내에서 쓰이는 표준이 ANSI C를 기반하므로 표준을 참고하기에 충분합니다.
+   Denis Ritchie는 C 언어를 설계하고 개발한 사람이기도 합니다 [#KR]_ . 
+   
+   몇가지 주의할 점은 이 책의 예제 프로그램 코드 스타일 중 일부는 
+   현재 프로그래밍에서 사용하기에 적절치 않습니다. 
+   C에 대해 참고하되 코드의 스타일까지 따라할 필요는 없습니다.
+   현대적인 프로그래밍 규약과 스타일은 다른 서적들이 더 좋은 자료들을
+   제공해 줄 수 있습니다.
 
 * King, K.N., C Programming: A Modern Approach. 2nd, W.W. Norton, 2008, isbn:9780393979503.
 
-Richard Stallman과 몇몇 GNU 프로젝트의 참여자들은 관리, 참여하는 GNU 프로젝트의 일관성, 유지 보수성 그리고 설치 용의성의 확보를
-위해 GNU 프로젝트에 관한 코딩 규약을 만들었습니다. GNU 프로젝트가 C를 통해 개발되는 대규모 오픈소스 프로젝트인 만큼
-C의 개발 과정에서 사용가능한 여러 유용한 정보들을 담고 있습니다.
+   K.N.King 의 저서로 C99 표준을 따릅니다. 실제 우리가 배우는 많은 편리한 C의 기능들은
+   ANSI C 이후 C99에서 도입된 기능들이 많습니다. TCPL이 좋은 책이고 C를 공부할 때 한번은 참고해 봐야할 책이지만 
+   현대적인 코딩 규약들과 프로그래밍 방법들에 관한 내용은 이 책이 더 좋은 정보를 제공해 줄 것입니다.
 
-* https://www.gnu.org/prep/standards/
+* `GNU 표준 코딩 규약 <https://www.gnu.org/prep/standards/>`_
+
+   Richard Stallman과 몇몇 GNU 프로젝트의 참여자들은 관리, 참여하는 GNU 프로젝트의 일관성, 유지 보수성 그리고 설치 용의성의 확보를
+   위해 GNU 프로젝트에 관한 코딩 규약을 만들었습니다. GNU 프로젝트가 C를 통해 개발되는 대규모 오픈소스 프로젝트인 만큼
+   C의 개발 과정에서 사용가능한 여러 유용한 정보들을 담고 있습니다. 
+
+
+
+C 표준
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ANSI C 는 미국 국립 표준 협회 [#ANSI]_ 에서 지정한 C 표준을 말합니다. 이는 C89와 동치입니다. 
+
+C89:
+
+C99:
+
+C 11:
+
+
+C 표준 수학 라이브러리
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+위에 서술한 ISO C 표준에 따른 C 라이브러리를 서술합니다. 
+기초적인 수학 라이브러리와 연관 기능들을 소개합니다.
 
 .. index:: ASCII code
 
@@ -100,31 +124,8 @@ DE 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
 
 
 
-C 표준
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-ANSI C 는 미국 국립 표준 협회 [#ANSI]_ 에서 지정한 C 표준을 말합니다. 이는 C89와 동치입니다. 
-
-C89:
-
-C99:
-
-C 11:
-
-
-C 표준 수학 라이브러리
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-위에 서술한 ISO C 표준에 따른 C 라이브러리를 서술합니다. 
-기초적인 수학 라이브러리와 연관 기능들을 소개합니다.
-
-
-
-수학 및 물리학
---------------------
-
 서적과 문헌
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 참고 문헌으로 사용 가능한 몇몇 수학과 과학 문헌을 소개합니다. 
 퍼블릭 도메인이거나 GDPL 등과 같은 자유 문서 허가서에 속하는 문서들은
@@ -134,18 +135,18 @@ C 표준 수학 라이브러리
 
   별도의 서술이 없는 이상 디지털 문서가 퍼블릭 도메인인 경우는 많지 않습니다.
   아래 문헌의 디지털 판본을 복사, 베포, 수정할 때는 항상 공식 홈페이지의 
-  저작권 문항을 주의 깊게 읽어야합니다. 
+  저작권 문항을 주의 깊게 읽어야합니다. 일반 출판본은 자명하므로 언급하지 않겠습니다.
 
 
 * Abramwotiz & Stegun
+
+   * Abramowitz, M., Stegun, I.A.: Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables. US Government Printing Office, 
+     Washington, 10th printing, with corrections (December 1972)
 
    수학 참고 문헌으로 본 라이브러리에서 Abramwotiz & Stegun을 표준으로 사용하고 있습니다.
    해당 문헌은 수학계에서 자명한 표준 문헌이고 퍼블릭 도메인로 사용가능한 서적이지만, 새로운 갱신이 중단되었습니다. 
    1964년도에 NBS [#NBS]_ 에서 처음 출판된 이레로 1972년도에 마지막 "10th printing, December 1972, with corrections" 판이 출판되었고 
    더 이상 갱신되지 않고 있습니다.
-   
-   * Abramowitz, M., Stegun, I.A.: Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables. US Government Printing Office, Washington, 10th printing, with corrections (December 1972)
-  
    
    퍼블릭 도메인이므로 자유롭게 재출판, 변형등이 가능하고 접근도 가능합니다. 일반적으로 대학 도서관에서 찾을 수 있습니다.
    온라인에서 html 버전으로 서적의 출판본을 볼 수도 있습니다. `Colin B. Macdonald`_ 박사의 `홈페이지 <https://personal.math.ubc.ca/~cbm/aands/>`_ 에서 제공합니다. 
@@ -208,6 +209,7 @@ C 표준 수학 라이브러리
 
 .. _Wolfram Math World: https://mathworld.wolfram.com
 .. _The CRC Encyclopedia of Mathematics: https://www.routledge.com/The-CRC-Encyclopedia-of-Mathematics-Third-Edition---3-Volume-Set/Weisstein/p/book/9781420072211
+
 
 과학 계산 프로그램과 라이브러리
 ----------------------------------
@@ -367,11 +369,16 @@ HPC Service on University
 * Sheffield 대학 : https://docs.hpc.shef.ac.uk/en/latest/sharc/software/libs/gsl.html?highlight=GSL
 * Honkong 대학 : https://hpc.hku.hk/hpc/software/gsl/
 * Queen Merry 대학(QMUL) : https://docs.hpc.qmul.ac.uk/apps/dev/numerical/gsl/
-* Livermore Computing Center HPC service: https://hpc.llnl.gov/software/mathematical-software/gnu-scientific-library
 * Maryland 대학 : https://www.glue.umd.edu/hpcc/help/software/gsl.html
 * Cambridge 대학: https://www.maths.cam.ac.uk/computing/software/gsl
 * Case Western Reserve 대학: https://sites.google.com/a/case.edu/hpcc/home
-* Louisiana 주립대: http://www.hpc.lsu.edu/docs/guides/software.php?software=gsl
+* Louisiana 주립대 : http://www.hpc.lsu.edu/docs/guides/software.php?software=gsl
+* Siegen 대학 : https://cluster.uni-siegen.de/omni/application-software/gnu-scientific-library/?lang=en
+
+상용
+
+* Livermore Computing Center : https://hpc.llnl.gov/software/mathematical-software/gnu-scientific-library
+* : http://hpc.iucaa.in/?q=pleiadesBeginnersGuide
 
 .. rubric:: 각주
 

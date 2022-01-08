@@ -196,6 +196,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
    담금질 기법.rst
    상미분 방정식.rst
    보간법.rst
+   수치 미분.rst
    체비쇼프 근사.rst
    급수 가속.rst
    웨이블렛 변환
@@ -219,9 +220,10 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
    GSL CBLAS 라이브러리.rst
    GNU 일반 공중 사용 허가서.rst
    GNU 자유 문서 사용 허가서.rst
-   GSL 디자인 문서.rst
+   add_docs/GSL 디자인 문서.rst
    add_docs/이력.rst
    add_docs/역자와 참고 자료.rst
+   add_docs/병렬화.rst
    add_docs/영문 용어.rst
 
 .. rubric:: 각주
