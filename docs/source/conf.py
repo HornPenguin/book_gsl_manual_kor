@@ -111,3 +111,7 @@ latex_additional_files = [
     "./fonts/NanumMyeongjoBold.ttf",
     "./fonts/NanumMyeongjoExtraBold.ttf"
     ]
+
+
+def setup(app):
+   app.add_stylesheet('custom.css')
