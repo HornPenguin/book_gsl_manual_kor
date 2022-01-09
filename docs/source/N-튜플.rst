@@ -10,7 +10,7 @@ N-튜플
 
     번역중
 This chapter describes functions for creating and manipulating
-*ntuples*, sets of values associated with events.  The ntuples
+*ntuples* , sets of values associated with events.  The ntuples
 are stored in files. Their values can be extracted in any combination
 and *booked* in a histogram using a selection function.
 

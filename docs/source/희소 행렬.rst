@@ -10,6 +10,7 @@
 .. note::
 
     번역중
+    
 This chapter describes functions for the construction and
 manipulation of sparse matrices, matrices which are populated
 primarily with zeros and contain only a few non-zero elements.
