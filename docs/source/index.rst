@@ -178,7 +178,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
    순열.rst
    조합.rst
    중복 집합.rst
-   배열.rst
+   정렬.rst
    BLAS 지원.rst
    선형 대수학.rst
    고유 공간.rst
