@@ -1,4 +1,4 @@
-.. index:: chap_ieee
+.. _chap_ieee:
 
 **************************
 IEEE  부동 소수점 대수
