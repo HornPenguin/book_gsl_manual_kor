@@ -1,8 +1,6 @@
 TODO
 
-
-<<<<<<< HEAD
-1. 각종 링크들에 대해 조건부 rst 문을 사용해 tex를 통한 pdf 에서는 링크를 보여주기
+1. 각종 링크들에 대해 조건부 rst 문을 사용해 tex를 통한 pdf 에서는 링크를 보여주기 <- footnote?
 2. C 함수 및 매크로들에 대해 적절한 폰트 찾기
 3. 색인에서 한글의 경우 구분이 표식이 깨지고 표기가 안됨 + 자음 순서의 의미가 없음 찾아서 수정
 
@@ -10,7 +8,7 @@ TODO
 https://www.bookdepository.com/publishers/Network-Theory-Limited?searchPublisher=Network%20Theory%20Limited&searchSortBy=pubdate_high_low&page=2
  
 NTL 책 목록 확인
-=======
+
 Sphinx-Latex==============================================================
 
 1. Latex에서 폰트 변경법 찾고 적용
@@ -46,4 +44,3 @@ Sphinx-Latex==============================================================
    결정 용어가 너무 적다는 것도 있고 영 별로인듯
 2. 영문 용어 인트로가 내용이 좀 이상한 거 같은데 확인
 3. 이부분 단을 나누고 싶은데 latex multi column으로 나뉘어질지 모르겠음
->>>>>>> 35889a0588a0b1510ca012d70652018983f5f955

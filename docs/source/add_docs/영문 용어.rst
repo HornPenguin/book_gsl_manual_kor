@@ -2,6 +2,8 @@
 영문 용어
 ************
 
+.. include::include.rst
+
 본 단원은 사용 설명서 내 용어들의 영문 용어 사전입니다. 
 번역 과정에서 :code:`번역 용어(원문 용어)` 와 같이 표기할 수도 있지만
 내용의 길이가 길어지고 사용 설명서를 읽기 불편해지는 단점이 있습니다.
@@ -31,73 +33,168 @@
 
 이 용어집은 한글 자모의 배열 순서를 따르지만 받침에 따른 구분은 하지 않습니다.
 
+
+.. raw:: latex
+
+    \begin{multicols}{2}
+
+|mcolsectionfront|
+
 ㄱ
 ================================================
+
+|mcolsectionback|
+
+
 .. include:: /dic/ㄱ.inc
+
+|mcolsectionfront|
 
 ㄴ
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㄴ.inc
+
+|mcolsectionfront|
 
 ㄷ 
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㄷ.inc
+
+|mcolsectionfront|
 
 ㄹ 
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㄹ.inc
+
+|mcolsectionfront|
 
 ㅁ 
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㅁ.inc
+
+|mcolsectionfront|
 
 ㅂ 
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㅂ.inc
+
+|mcolsectionfront|
 
 ㅃ
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㅃ.inc
+
+|mcolsectionfront|
 
 ㅅ 
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㅅ.inc
+
+|mcolsectionfront|
 
 ㅆ
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㅆ.inc
+
+|mcolsectionfront|
 
 ㅇ 
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㅇ.inc
+
+|mcolsectionfront|
 
 ㅈ 
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㅈ.inc
+
+|mcolsectionfront|
 
 ㅉ 
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㅉ.inc
+
+|mcolsectionfront|
 
 ㅊ 
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㅊ.inc
+
+|mcolsectionfront|
 
 ㅋ 
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㅋ.inc
 
 
+|mcolsectionfront|
+
 ㅌ 
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㅌ.inc
 
+|mcolsectionfront|
 
 ㅍ 
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㅍ.inc
 
 
+|mcolsectionfront|
+
 ㅎ 
 ================================================
+
+|mcolsectionback|
+
 .. include:: /dic/ㅎ.inc
+
+
+.. raw:: latex
+    
+    \end{multicols}

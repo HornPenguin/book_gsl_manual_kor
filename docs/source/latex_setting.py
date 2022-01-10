@@ -2,6 +2,7 @@
 packagelist= {
     "pdfpages" :"",
     "xeCJK" : "CJKspace",
+    "multicol":""
 }
 
 #    "xeCJK" : "CJKspace",

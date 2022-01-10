@@ -14,3 +14,11 @@
 .. |newpage| raw:: latex
 
    \newpage
+   
+.. |mcolsectionfront| raw:: latex
+
+   [
+
+.. |mcolsectionback| raw:: latex
+
+   ]

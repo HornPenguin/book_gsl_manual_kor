@@ -18,13 +18,13 @@
 
     번역중
 
-This chapter describes the statistical functions in the library.  The
-basic statistical functions include routines to compute the mean,
-variance and standard deviation.  More advanced functions allow you to
-calculate absolute deviations, skewness, and kurtosis as well as the
-median and arbitrary percentiles.  The algorithms use recurrence
-relations to compute average quantities in a stable way, without large
-intermediate values that might overflow. 
+이 단원은 라이브러리 내의 통계 함수들에 대해 기술합니다. 기본 통계 함수들은
+자료의 평균, 분산, 그리고 표준 편차를 계산하는 기능들을 포함하고 있습니다.
+좀 더 심화적인 함수들에는 절대 편차, 비대칭도, 그리고 첨도
+의 계산 함수들이 구현되어 있고, 중앙값과 임의의 백분위수 계산 기능도 포함하고 있습니다.
+사용된 알고리즘들은 재귀 관계를 이용해 평균 값을 계산합니다. 이 방법들은
+안정적인 방법을 사용해 오버플로우를 야기할 수 있는 큰 중간 단계의 값을 사용하지 않습니다.
+
 
 The functions are available in versions for datasets in the standard
 floating-point and integer types.  The versions for double precision
@@ -35,7 +35,7 @@ file :file:`gsl_statistics_int.h`.   All the functions operate on C
 arrays with a :code:`stride` parameter specifying the spacing between 
 elements.  
 
-Mean, Standard Deviation and Variance
+평균, 표준 편차, 분산
 =====================================
 
 .. function:: double gsl_stats_mean (const double data[], size_t stride, size_t n)
