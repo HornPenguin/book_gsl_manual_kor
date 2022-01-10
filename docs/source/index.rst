@@ -135,15 +135,24 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
 
 .. only:: latex
 
-   .. topic:: 원 영문 원서의 저작권 Copyright of the Original English Version
+   .. topic:: 내용
+      
+      **원 영문 원서의 저작권 Copyright of the Original English Version**
 
        Copyright © 1996-2021 The GSL Team.
        Permission is granted to copy, distribute and/or modify this document under the terms of the
        GNU Free Documentation License, Version 1.3 or any later version published by the Free Software
-       Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. 
-       A copy of the license is included in the section entitled “GNU Free Documentation License”
-
-   .. topic:: 번역서의 저작권 Copyright of the Translated Korean Version
+       Foundation; with the Invariant Sections being “GNU General Public License” and “Free Software
+       Needs Free Documentation”, the Front-Cover text being “A GNU Manual”, and with the Back-
+       Cover Text being (a) (see below). A copy of the license is included in the section entitled “GNU
+       Free Documentation License”.
+       (a) The Back-Cover Text is: “You have freedom to copy and modify this GNU Manual, like
+       GNU software.”
+       Printed copies of this manual can be purchased from Network Theory Ltd at
+       http://www.network-theory.co.uk/gsl/manual/.
+       The money raised from sales of the manual helps support the development of GSL.
+      
+      **번역서의 저작권 Copyright of the Translated Korean Version**
 
        Copyright © 2022  김현성 Hyung Seong, Kim
 
@@ -160,10 +169,28 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
        추가 변경 불가 부분 "역자와 참고 자료(*)" 단원을 포함해 따릅니다.
        이 허가서의 복사본은 "GNU 자유 문서 사용 허가서"로 지어진 단락에
        포함되어 있습니다.
+ 
+   .. topic:: 표지와 글꼴
+
+      **글꼴**
+
+      ..
+
+         나눔 명조
+         나눔 고딕
+         나눔 D2 폰트를 사용했습니다.
+
+         Copyright (c) 2010, NAVER Corporation (https://www.navercorp.com/) 
+      
+      **그림**
+
+      본 커버의 디자인은 여러 저작물의 조합입니다.
+      그림 라이센스 조항은 해당 그림들과 함께 본 책의 "그림의 허가서"
+      단락에 기재합니다. 이 외 메뉴얼 원본의 그래프등의 그림은 GDFL을 따르고
+      외부 디자인을 제외한 커버의 디자인은 GPL 라이센스 아래에 베포됩니다.
 
 
-
-.. toctree::
+.. toctree:: 
    :maxdepth: 2
 
    소개.rst
