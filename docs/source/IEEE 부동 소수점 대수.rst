@@ -11,11 +11,11 @@ IEEE  부동 소수점 대수
 
     번역중
 
+이 단원에서는 부동 소수 표현을 검증하고, 
+제어할 수 있는 함수들에 대해 기술합니다. 
+이 단원에서 기술하는 함수들은 헤더 파일 
+:file:`gsl_ieee_utils.h` 에 정의되어 있습니다
 
-This chapter describes functions for examining the representation of
-floating point numbers and controlling the floating point environment of
-your program.  The functions described in this chapter are declared in
-the header file :file:`gsl_ieee_utils.h`.
 
 .. index::
    single: IEEE format for floating point numbers
@@ -24,66 +24,40 @@ the header file :file:`gsl_ieee_utils.h`.
    single: sign bit, IEEE format
    single: mantissa, IEEE format
 
-Representation of floating point numbers
+부동 소수점의 표현
 ========================================
 
-The IEEE Standard for Binary Floating-Point Arithmetic defines binary
-formats for single and double precision numbers.  Each number is composed
-of three parts: a *sign bit* (:math:`s`), an *exponent*
-(:math:`E`) and a *fraction* (:math:`f`).  The numerical value of the
-combination :math:`(s,E,f)` is given by the following formula,
+IEEE 표준 이진 부동 소수점 대수에서는 단, 배정밀도의 이진 숫자 표현에 대해
+정의하고 있습니다. 각 수는 3가지 부분으로 나뉘어 표현됩니다. 
+부호( :math:`s` ), 지수(), 그리고 소수점()입니다. :math:`(s,E,f)` 표현의
+실제 실수 값은 다음과 같이 주어집니다.
 
-.. only:: not texinfo
+.. math::
 
-   .. math:: (-1)^s (1 \cdot fffff\dots) 2^E
-
-.. only:: texinfo
-
-   ::
-
-      (-1)^s (1.fffff...) 2^E
+   (-1)^s (1 \cdot ffff \dots)2^E
 
 .. index::
    single: normalized form, IEEE format
    single: denormalized form, IEEE format
 
-The sign bit is either zero or one.  The exponent ranges from a minimum value
-:math:`E_{min}`
-to a maximum value
-:math:`E_{max}`
-depending on the precision.  The exponent is converted to an 
-unsigned number
-:math:`e`, known as the *biased exponent*, for storage by adding a
-*bias* parameter,
+부호부는 0이거나 1입니다. 지수부의 하한 :math:`E_{min}` 과 상한 :math:`E_{max}` 는 
+정밀도에 따라 달라집니다. 이 지수는 부호 없는 수 :math:`e` 로 변환될 수 있습니다.
+이는 바이어스 지수부라 불리며, 바이어스 계수 :math:`bias` 를 더해 저장됩니다.
 
-.. only:: not texinfo
+.. math::
 
-   .. math:: e = E + \hbox{\it bias}
+   e = E + bias
 
-.. only:: texinfo
-   
-   ::
+배열 :math:`ffff \dots` 는 이진수의 자릿수를 나타냅니다. 
+이 이진 자릿수는 정규화된 형태로 저장되는데, 지수를 조정해 처음 자리에 1이 오게합니다. 
+정규화된 숫자는 처음 숫자가 항상 1이 온다고 암묵적으로 가정되기 때문에 저장되지 않습니다. 
+만일, 숫자가 :math:`2^{E_{min}}` 보다 작다면, 처음 숫자가 0인 비 정규화된 형태로 저장됩니다.
 
-      e = E + bias
+.. math::
 
-The sequence :math:`fffff...` represents the digits of the binary
-fraction :math:`f`.  The binary digits are stored in *normalized
-form*, by adjusting the exponent to give a leading digit of :math:`1`. 
-Since the leading digit is always 1 for normalized numbers it is
-assumed implicitly and does not have to be stored.
-Numbers smaller than 
-:math:`2^{E_{min}}`
-are be stored in *denormalized form* with a leading zero,
+   (-1)^s (0 \cdot ffff \dots)2^E
 
-.. only:: not texinfo
-
-   .. math:: (-1)^s (0 \cdot fffff\dots) 2^{E_{min}}
-
-.. only:: texinfo
-
-   ::
-
-      (-1)^s (0.fffff...) 2^(E_min)
+The IEEE Standard for Binary Floating-Point Arithmetic
 
 .. index::
    single: zero, IEEE format
@@ -92,16 +66,17 @@ are be stored in *denormalized form* with a leading zero,
 This allows gradual underflow down to 
 :math:`2^{E_{min} - p}`
 for :math:`p` bits of precision. 
-A zero is encoded with the special exponent of 
-:math:`2^{E_{min}-1}`
-and infinities with the exponent of 
-:math:`2^{E_{max}+1}`.
+
+0은 :math:`2^{E_{min}-1}` 형태로 특정 지수 값으로 정의됩니다.
+같은 방식으로 무한대 :math:`\infty` 도 :math:`2^{E_{max}+1}` 로 정의됩니다.
 
 .. index::
    single: single precision, IEEE format
 
-The format for single precision numbers uses 32 bits divided in the
-following way::
+
+32bit를 사용하는 단정밀도 숫자 표현은 다음과 같습니다.
+
+::
 
   seeeeeeeefffffffffffffffffffffff
     
@@ -112,8 +87,9 @@ following way::
 .. index::
    single: double precision, IEEE format
 
-The format for double precision numbers uses 64 bits divided in the
-following way::
+64bit를 사용하는 배정밀도 숫자 표현은 다음과 같습니다.
+
+::
 
   seeeeeeeeeeeffffffffffffffffffffffffffffffffffffffffffffffffffff
 
@@ -121,9 +97,9 @@ following way::
   e = exponent, 11 bits  (E_min=-1022, E_max=1023, bias=1023)
   f = fraction, 52 bits
 
-It is often useful to be able to investigate the behavior of a
-calculation at the bit-level and the library provides functions for
-printing the IEEE representations in a human-readable form.
+이러한 bit 수준의 연산 단계를 확인할 수 있는 기능이 있으면 유용합니다.
+이 라이브러리에서는 IEEE 표현을 읽기 쉬운 형태로 출력해주는 함수들을 제공합니다.
+
 
 .. float vs double vs long double 
 .. (how many digits are available for each)
@@ -131,34 +107,33 @@ printing the IEEE representations in a human-readable form.
 .. function:: void gsl_ieee_fprintf_float (FILE * stream, const float * x)
               void gsl_ieee_fprintf_double (FILE * stream, const double * x)
 
-   These functions output a formatted version of the IEEE floating-point
-   number pointed to by :data:`x` to the stream :data:`stream`. A pointer is
-   used to pass the number indirectly, to avoid any undesired promotion
-   from :code:`float` to :code:`double`.  The output takes one of the
-   following forms,
+   이 함수들은 주어진 값 :data:`x` 의 IEEE 부동 소수점 숫자 형식을 스트림 :data:`stream`
+   에 출력합니다. 포인터를 사용한 이유는 값을 간접적으로 넘겨 :code:`float` 에서 :code:`double`
+   의 형 변환을 방지하기 위함입니다. 출력값은 다음의 형태를 가질 수 있습니다.
+
 
    :code:`NaN`
 
-      the Not-a-Number symbol
+      비정상값(Not a number)
 
    :code:`Inf, -Inf`
 
-      positive or negative infinity
+      양, 음의 무한대
 
    :code:`1.fffff...*2^E, -1.fffff...*2^E`
 
-      a normalized floating point number
+      정규회된 부동 소수 숫자
 
    :code:`0.fffff...*2^E, -0.fffff...*2^E`
 
-      a denormalized floating point number
+      비정규회된 부동 소수 숫자
 
    :code:`0, -0`
 
-      positive or negative zero
+      양, 음수 0
 
-   The output can be used directly in GNU Emacs Calc mode by preceding it
-   with :code:`2#` to indicate binary.
+   결과값은 :code:`2#` 이라는 이진 표현을 표식자를 붙여주면 GNU Emacs Calc에  바로 사용가능합니다.
+
 
 .. @item [non-standard IEEE float], [non-standard IEEE double]
 .. an unrecognized encoding
