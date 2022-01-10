@@ -15,10 +15,3 @@
 
    \newpage
    
-.. |mcolsectionfront| raw:: latex
-
-   [
-
-.. |mcolsectionback| raw:: latex
-
-   ]

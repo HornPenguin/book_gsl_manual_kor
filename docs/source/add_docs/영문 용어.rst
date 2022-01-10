@@ -38,163 +38,110 @@
 
     \begin{multicols}{2}
 
-|mcolsectionfront|
 
-ㄱ
-================================================
 
-|mcolsectionback|
-
+**ㄱ**
 
 .. include:: /dic/ㄱ.inc
 
-|mcolsectionfront|
 
-ㄴ
-================================================
 
-|mcolsectionback|
+**ㄴ**
 
 .. include:: /dic/ㄴ.inc
 
-|mcolsectionfront|
 
-ㄷ 
-================================================
 
-|mcolsectionback|
+**ㄷ**
 
 .. include:: /dic/ㄷ.inc
 
-|mcolsectionfront|
 
-ㄹ 
-================================================
 
-|mcolsectionback|
+**ㄹ** 
 
 .. include:: /dic/ㄹ.inc
 
-|mcolsectionfront|
 
-ㅁ 
-================================================
 
-|mcolsectionback|
+**ㅁ** 
 
 .. include:: /dic/ㅁ.inc
 
-|mcolsectionfront|
 
-ㅂ 
-================================================
 
-|mcolsectionback|
+**ㅂ** 
 
 .. include:: /dic/ㅂ.inc
 
-|mcolsectionfront|
 
-ㅃ
-================================================
 
-|mcolsectionback|
+**ㅃ**
 
 .. include:: /dic/ㅃ.inc
 
-|mcolsectionfront|
 
-ㅅ 
-================================================
 
-|mcolsectionback|
+**ㅅ**
 
 .. include:: /dic/ㅅ.inc
 
-|mcolsectionfront|
 
-ㅆ
-================================================
 
-|mcolsectionback|
+**ㅆ**
 
 .. include:: /dic/ㅆ.inc
 
-|mcolsectionfront|
 
-ㅇ 
-================================================
 
-|mcolsectionback|
+**ㅇ** 
 
 .. include:: /dic/ㅇ.inc
 
-|mcolsectionfront|
 
-ㅈ 
-================================================
 
-|mcolsectionback|
+**ㅈ** 
 
 .. include:: /dic/ㅈ.inc
 
-|mcolsectionfront|
 
-ㅉ 
-================================================
 
-|mcolsectionback|
+**ㅉ** 
 
 .. include:: /dic/ㅉ.inc
 
-|mcolsectionfront|
 
-ㅊ 
-================================================
 
-|mcolsectionback|
+**ㅊ** 
 
 .. include:: /dic/ㅊ.inc
 
-|mcolsectionfront|
 
-ㅋ 
-================================================
 
-|mcolsectionback|
+**ㅋ**
 
 .. include:: /dic/ㅋ.inc
 
 
-|mcolsectionfront|
 
-ㅌ 
-================================================
 
-|mcolsectionback|
+**ㅌ** 
 
 .. include:: /dic/ㅌ.inc
 
-|mcolsectionfront|
 
-ㅍ 
-================================================
 
-|mcolsectionback|
+**ㅍ** 
 
 .. include:: /dic/ㅍ.inc
 
 
-|mcolsectionfront|
 
-ㅎ 
-================================================
-
-|mcolsectionback|
+**ㅎ**
 
 .. include:: /dic/ㅎ.inc
 
 
 .. raw:: latex
     
-    \end{multicols}
+    \end{multicols}[2]
