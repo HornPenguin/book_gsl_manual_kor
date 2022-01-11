@@ -23,6 +23,37 @@ Sphinx-Latex==============================================================
 3. 
 
 
+Latex Font setting in package fontspec~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+\setromanfont{Brygada1918}[
+    Path=./BrygadaFontFiles/,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic
+    ]
+
+\setsansfont{Asap}[
+    Path=./AsapFontFiles/,
+    Scale=0.9,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic
+    ]
+
+\setmonofont{JetBrainsMono}[
+    Path=./JetbrainsFontFiles/,
+    Scale=0.85,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic
+    ]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 역자 추가 문서=============================================================
 
 =GSL 설치------------------------------------------------------------------
