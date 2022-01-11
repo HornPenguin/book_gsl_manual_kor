@@ -710,4 +710,5 @@ FFTPACK의 소스 코드는 `<http://www.netlib.org/fftpack/>`_ 에서 확인할
 
 .. rubri: 각주
 
-.. [#GSLFFT] 이 문서는 :code:`GSL` 라이브러리에 포함되어 있습니다. :code:`doc/fftalgorithms.tex` 경로에 tex 문서로 되어있으며, pdf는 `이곳 <https://github.com/Hyeansung/Hyeansung.github.io/raw/39627054317f26ae5915e2528112884848d9720e/resources/GSL_FFT_ALgorithm.pdf>`_ 에서 내려 받을 수 있습니다.
+.. [#GSLFFT] 이 문서는 :code:`GSL` 라이브러리에 포함되어 있습니다. :code:`doc/fftalgorithms.tex` 경로에 tex 문서로 되어있으며, 
+              pdf는 `이곳 <https://github.com/Hyeansung/Hyeansung.github.io/raw/39627054317f26ae5915e2528112884848d9720e/resources/GSL_FFT_ALgorithm.pdf>`_ 에서 내려 받을 수 있습니다.

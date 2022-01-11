@@ -54,18 +54,22 @@
 
 .. topic:: 사용 설명서의 출판본
 
-      * - GNU Scientific Library Reference Manual 3rd
+      *  GNU Scientific Library Reference Manual 3rd
+
           * Author(s): Mark Galassi et al
           * Publication Date: Jan 2009
           * ISBN: 9780954612078
-      * - GNU Scientific Library Reference Manual 2nd
+      *  GNU Scientific Library Reference Manual 2nd
+          
           * Author(s): Mark Galassi et al
           * Publication Date: Feb 2003
           * ISBN: 9780954161736
-      * - GNU Scientific Library Reference Manual 1st
+      *  GNU Scientific Library Reference Manual 1st
+          
           * Author(s): Mark Galassi et al
           * Publication Date: Dec 2001
           * ISBN: 9780954161705
+
 
 
 **Network Theory Ltd**

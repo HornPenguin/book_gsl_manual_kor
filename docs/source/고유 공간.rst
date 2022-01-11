@@ -17,7 +17,7 @@
 복소수-일반화된 준에르미트, 그리고 실수-일반화된 비대칭 고유계들에 대해 다룹니다.
 고유 값들은 고유 벡터들과 함께 계산되거나 단독으로 계산될 수도 있습니다.
 에르미트와 실수 대칭 행렬을 계산하는 알고리즘들은 대칭 bidigonalization 
-을 QR reducton을 이용합니다. 비대칭 알고리즘은 Francis QR 이중 전이 방법을, 일반화된
+과 QR reducton을 이용합니다. 비대칭 알고리즘은 Francis-QR 이중 전이 방법을, 일반화된
 비대칭 알고리즘은 Moler와 Strwart의 QZ 방법을 사용합니다.
 
 
@@ -27,69 +27,64 @@
    single: symmetric matrix, real, eigensystem
    single: real symmetric matrix, eigensystem
 
-For real symmetric matrices, the library uses the symmetric
-bidiagonalization and QR reduction method.  This is described in Golub
-& van Loan, section 8.3.  The computed eigenvalues are accurate to an
-absolute accuracy of :math:`\epsilon ||A||_2`, where :math:`\epsilon` is
-the machine precision.
+실수 대칭 행렬들은 bidiagonalization과 QR-reduction 방법을 사용합니다.
+이 방법들은 Golub & van Loan, section 8.3 에 기술되어 있습니다.
+고유값의 정확도는 :math:`\epsilon ||A||_2` 의 절대 정확도를 가집니다.
+:math:`\epsilon` 는 계산기 정밀도입니다.
+
 
 .. type:: gsl_eigen_symm_workspace
 
-   This workspace contains internal parameters used for solving symmetric eigenvalue
-   problems.
+   이 작업공간은 대칭 고유값 문제를 풀기위한 내부 인자들을 가지고 있습니다.
+
 
 .. function:: gsl_eigen_symm_workspace * gsl_eigen_symm_alloc (const size_t n)
 
-   This function allocates a workspace for computing eigenvalues of
-   :data:`n`-by-:data:`n` real symmetric matrices.  The size of the workspace
-   is :math:`O(2n)`.
+    :data:`n`-by-:data:`n` 크기의 실수 대칭 행렬의 고유값 문제를 풀기위한
+    작업 공간을 할당합니다. 작업 공간의 크기는 :math:`O(2n)` 입니다.
+
 
 .. function:: void gsl_eigen_symm_free (gsl_eigen_symm_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   할당된 작업 공간 :data:`w` 를 해제합니다.
 
 .. function:: int gsl_eigen_symm (gsl_matrix * A, gsl_vector * eval, gsl_eigen_symm_workspace * w)
 
-   This function computes the eigenvalues of the real symmetric matrix
-   :data:`A`.  Additional workspace of the appropriate size must be provided
-   in :data:`w`.  The diagonal and lower triangular part of :data:`A` are
-   destroyed during the computation, but the strict upper triangular part
-   is not referenced.  The eigenvalues are stored in the vector :data:`eval`
-   and are unordered.
+   실수 대칭 행렬 :data:`A` 의 고유값을 계산합니다. 함수를 호출과정에서 반드시 
+   적절한 크기의 작업 공간을 :data:`w` 에 전해주어야 합니다. 
+   행렬 :data:`A` 의 대각, 하삼각 성분들은 계산과정에서 수정됩니다.
+   반면, 상삼각 성분들은 참조되지 않습니다. 고유값들은 벡터 :data:`eval` 에 무작위 순서로 저장됩니다.
 
 .. type:: gsl_eigen_symmv_workspace
 
-   This workspace contains internal parameters used for solving symmetric eigenvalue
-   and eigenvector problems.
+   이 작업공간은 대칭 행렬의 고유값, 고유 벡터를 계산하기 위한 내부 인자들을 가지고 있습니다.
+
 
 .. function:: gsl_eigen_symmv_workspace * gsl_eigen_symmv_alloc (const size_t n)
 
-   This function allocates a workspace for computing eigenvalues and
-   eigenvectors of :data:`n`-by-:data:`n` real symmetric matrices.  The size of
-   the workspace is :math:`O(4n)`.
+   크기 :data:`n`-by-:data:`n` 의 실수 대칭 행렬의 고유 값, 벡터 문제를 풀기 위한
+   작업공간을 할당합니다. 공간의 크기는 :math:`O(4n)` 입니다.
 
 .. function:: void gsl_eigen_symmv_free (gsl_eigen_symmv_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   :data:`w` 를 해제합니다. 
 
 .. function:: int gsl_eigen_symmv (gsl_matrix * A, gsl_vector * eval, gsl_matrix * evec, gsl_eigen_symmv_workspace * w)
 
-   This function computes the eigenvalues and eigenvectors of the real
-   symmetric matrix :data:`A`.  Additional workspace of the appropriate size
-   must be provided in :data:`w`.  The diagonal and lower triangular part of
-   :data:`A` are destroyed during the computation, but the strict upper
-   triangular part is not referenced.  The eigenvalues are stored in the
-   vector :data:`eval` and are unordered.  The corresponding eigenvectors are
-   stored in the columns of the matrix :data:`evec`.  For example, the
-   eigenvector in the first column corresponds to the first eigenvalue.
-   The eigenvectors are guaranteed to be mutually orthogonal and normalised
-   to unit magnitude.
+   실수 대칭 행렬 :data:`A` 의 고유값, 고유 벡터를 계산합니다. 함수 호출과정에서 반드시
+   적절한 크기의 작업 공간을 :data:`w` 에 제공해 주어야합니다. 
+   행렬 :data:`A` 의 대각, 하삼각 성분들은 계산과정에서 수정됩니다.
+   반면, 상삼각 성분들은 참조되지 않습니다.
+   고유값들은 벡터 :data:`eval` 에 무작위 순서로 저장됩니다.
+   대응 되는 고유 벡터들은 행렬 :data:`evec` 의 열에 고유값과 동일 순서로 저장됩니다.
+   예를 들어, 행렬의 첫번째 열은 첫번째 고유값에 해당하는 고유 벡터입니다.
+   계산된 고유 벡터들은 서로 직교하고 크기 1로 정규화되어 있습니다.
 
-Complex Hermitian Matrices
+복소수-에르미트 행렬
 ==========================
 
-For hermitian matrices, the library uses the complex form of
-the symmetric bidiagonalization and QR reduction method.
+에르미트 행렬의 계산은 대칭 bidiagonalization과 QR-reduction 방법을 사용합니다.
+
 
 .. index::
    single: hermitian matrix, complex, eigensystem
@@ -579,75 +574,76 @@ values. The algorithm used is the QZ method due to Moler and Stewart
    computes the left and right Schur vectors and stores them into :data:`Q`
    and :data:`Z` respectively.
 
-Sorting Eigenvalues and Eigenvectors
+고유 값과 벡터의 정렬
 ====================================
 .. index:: sorting eigenvalues and eigenvectors
 
 .. function:: int gsl_eigen_symmv_sort (gsl_vector * eval, gsl_matrix * evec, gsl_eigen_sort_t sort_type)
 
-   This function simultaneously sorts the eigenvalues stored in the vector
-   :data:`eval` and the corresponding real eigenvectors stored in the columns
-   of the matrix :data:`evec` into ascending or descending order according to
-   the value of the parameter :data:`sort_type`,
+   :data:`eval` 벡터에 저장된 고유 값과, 대응되는 실수 고유 벡터들을 동시에 정렬합니다. 
+   해당 벡터들은 행렬 :data:`evec` 에 열 벡터로 저장되어 있습니다.
+   :data:`sort_type` 의 값에 따라 내림, 오름차순 정렬이 결정됩니다.
 
    .. type:: gsl_eigen_sort_t
 
       ================================= ===================================
-      :macro:`GSL_EIGEN_SORT_VAL_ASC`   ascending order in numerical value
-      :macro:`GSL_EIGEN_SORT_VAL_DESC`  descending order in numerical value
-      :macro:`GSL_EIGEN_SORT_ABS_ASC`   ascending order in magnitude
-      :macro:`GSL_EIGEN_SORT_ABS_DESC`  descending order in magnitude
+      :macro:`GSL_EIGEN_SORT_VAL_ASC`   수치 값에 따른 오름차순 정렬
+      :macro:`GSL_EIGEN_SORT_VAL_DESC`  수치 값에 따른 내림차순 정렬
+      :macro:`GSL_EIGEN_SORT_ABS_ASC`   크기에 따른 오름차순 정렬
+      :macro:`GSL_EIGEN_SORT_ABS_DESC`  크기에 따른 내림차순 정렬
       ================================= ===================================
 
 .. function:: int gsl_eigen_hermv_sort (gsl_vector * eval, gsl_matrix_complex * evec, gsl_eigen_sort_t sort_type)
 
-   This function simultaneously sorts the eigenvalues stored in the vector
-   :data:`eval` and the corresponding complex eigenvectors stored in the
-   columns of the matrix :data:`evec` into ascending or descending order
-   according to the value of the parameter :data:`sort_type` as shown above.
+   
+   :data:`eval` 벡터에 저장된 고유 값과, 행렬 :data:`evec` 에 열 벡터로 저장된 복소수 고유 
+   벡터들을 동시에 정렬합니다. :data:`sort_type` 의 값에 따라 내림, 오름차순 정렬이 결정됩니다.
+   해당 값들은 위 표에 있습니다.
 
 .. function:: int gsl_eigen_nonsymmv_sort (gsl_vector_complex * eval, gsl_matrix_complex * evec, gsl_eigen_sort_t sort_type)
 
-   This function simultaneously sorts the eigenvalues stored in the vector
-   :data:`eval` and the corresponding complex eigenvectors stored in the
-   columns of the matrix :data:`evec` into ascending or descending order
-   according to the value of the parameter :data:`sort_type` as shown above.
-   Only :macro:`GSL_EIGEN_SORT_ABS_ASC` and :macro:`GSL_EIGEN_SORT_ABS_DESC` are
-   supported due to the eigenvalues being complex.
+   :data:`eval` 벡터에 저장된 고유 값과, 대응되는 복소수 고유 벡터들을 동시에 정렬합니다. 
+   해당 벡터들은 행렬 :data:`evec` 에 열 벡터로 저장되어 있습니다. 
+   :data:`sort_type` 의 값에 따라 내림, 오름차순 정렬이 결정됩니다.
+   해당 값들은 위 표에 있습니다. 
+   고유 값들이 복소수이기 때문에 :macro:`GSL_EIGEN_SORT_ABS_ASC` 와
+   :macro:`GSL_EIGEN_SORT_ABS_DESC` 매크로만 사용 가능합니다.
 
 .. function:: int gsl_eigen_gensymmv_sort (gsl_vector * eval, gsl_matrix * evec, gsl_eigen_sort_t sort_type)
 
-   This function simultaneously sorts the eigenvalues stored in the vector
-   :data:`eval` and the corresponding real eigenvectors stored in the columns
-   of the matrix :data:`evec` into ascending or descending order according to
-   the value of the parameter :data:`sort_type` as shown above.
+   :data:`eval` 벡터에 저장된 고유 값과, 대응되는 실수 고유 벡터들을 동시에 정렬합니다. 
+   해당 벡터들은 행렬 :data:`evec` 에 열 벡터로 저장되어 있습니다.
+   :data:`sort_type` 의 값에 따라 내림, 오름차순 정렬이 결정됩니다.
+   :data:`sort_type` 값은 이전 표에 기술되어 있습니다.
 
 .. function:: int gsl_eigen_genhermv_sort (gsl_vector * eval, gsl_matrix_complex * evec, gsl_eigen_sort_t sort_type)
 
-   This function simultaneously sorts the eigenvalues stored in the vector
-   :data:`eval` and the corresponding complex eigenvectors stored in the columns
-   of the matrix :data:`evec` into ascending or descending order according to
-   the value of the parameter :data:`sort_type` as shown above.
+   :data:`eval` 벡터에 저장된 고유 값과, 대응되는 복소수 고유 벡터들을 동시에 정렬합니다. 
+   해당 벡터들은 행렬 :data:`evec` 에 열 벡터로 저장되어 있습니다. 
+   :data:`sort_type` 의 값에 따라 내림, 오름차순 정렬이 결정됩니다.
+   :data:`sort_type` 값은 이전 표에 기술되어 있습니다.
 
 .. function:: int gsl_eigen_genv_sort (gsl_vector_complex * alpha, gsl_vector * beta, gsl_matrix_complex * evec, gsl_eigen_sort_t sort_type)
 
-   This function simultaneously sorts the eigenvalues stored in the vectors
-   (:data:`alpha`, :data:`beta`) and the corresponding complex eigenvectors
-   stored in the columns of the matrix :data:`evec` into ascending or
-   descending order according to the value of the parameter :data:`sort_type`
-   as shown above. Only :macro:`GSL_EIGEN_SORT_ABS_ASC` and
-   :macro:`GSL_EIGEN_SORT_ABS_DESC` are supported due to the eigenvalues being
-   complex.
+   두 벡터 :data:`alpha`, :data:`beta` 에 저장된 고유 값들과 대응 되는 
+   복소수 고유 벡터들을 동시에 정렬합니다. 대응되는 고유 벡터들은 행렬 :data:`evec` 에 열 벡터로
+   저장되어 있습니다. :data:`sort_type` 의 값에 따라 내림, 오름차순 정렬이 결정됩니다.
+   :data:`sort_type` 값은 이전 표에 기술되어 있습니다.
+   고유 값들이 복소수이기 때문에 :macro:`GSL_EIGEN_SORT_ABS_ASC` 와
+   :macro:`GSL_EIGEN_SORT_ABS_DESC` 매크로만 사용 가능합니다.
 
-Examples
+예제
 ========
 
-The following program computes the eigenvalues and eigenvectors of the 4-th order Hilbert matrix, :math:`H(i,j) = 1/(i + j + 1)`.
+다음 프로그램은 4차 힐베르트 행렬 :math:`H(i,j) = 1/(i+j+1)` 의 고유 값과 고유 벡터를 계산합니다.
+
 
 .. include:: examples/eigen.c
    :code:
 
-Here is the beginning of the output from the program::
+다음은 프로그램의 실행 결과입니다.
+
+::
 
    $ ./a.out 
    eigenvalue = 9.67023e-05
@@ -658,7 +654,8 @@ Here is the beginning of the output from the program::
    0.514553
    ...
 
-This can be compared with the corresponding output from |octave|::
+|octave| 의 결과 값과 비교해 볼 수 있습니다.
+::
 
    octave> [v,d] = eig(hilb(4));
    octave> diag(d)  
@@ -677,18 +674,19 @@ This can be compared with the corresponding output from |octave|::
       0.791411   0.100228   0.509579   0.322416
      -0.514553   0.638283   0.514048   0.252161
 
-Note that the eigenvectors can differ by a change of sign, since the
-sign of an eigenvector is arbitrary.
+.. note::
 
-The following program illustrates the use of the nonsymmetric
-eigensolver, by computing the eigenvalues and eigenvectors of
-the Vandermonde matrix
-:math:`V(x;i,j) = x_i^{n - j}`
-with :math:`x = (-1,-2,3,4)`.
+   고유 벡터들은 부호에 의해 달라질 수 있습니다.
+   고유 벡터들의 부호는 무작위로 정해집니다.
+
+다음 프로그램은 비대칭 행렬의 고유문제를 계산합니다.
+이 프로그램은 :math:`x = (-1,-2,3,4)` 에 대해, Vandermonde 행렬 :math:`V(x;i,j) = x_i^{n - j}` 을 사용했습니다.
+
 
 .. include:: examples/eigen_nonsymm.c
    :code:
 
+다음은 프로그램의 실행 결과입니다.
 Here is the beginning of the output from the program::
 
    $ ./a.out 
@@ -706,8 +704,9 @@ Here is the beginning of the output from the program::
    -0.840592 + -0.00148565i
    ...
 
-This can be compared with the corresponding output from |octave|::
+|octave| 의 결과 값과 비교해 볼 수 있습니다.
 
+::
    octave> [v,d] = eig(vander([-1 -2 3 4]));
    octave> diag(d)
    ans =
@@ -734,33 +733,34 @@ This can be compared with the corresponding output from |octave|::
       0.91937 + 0.00000i
       0.08118 + 0.00000i
 
-Note that the eigenvectors corresponding to the eigenvalue
-:math:`5.54555 + 3.08545i` differ by the multiplicative constant
-:math:`0.9999984 + 0.0017674i` which is an arbitrary phase factor 
-of magnitude 1.
+.. note::
 
-References and Further Reading
+
+   Note that the eigenvectors corresponding to the eigenvalue
+   :math:`5.54555 + 3.08545i` differ by the multiplicative constant
+   :math:`0.9999984 + 0.0017674i` which is an arbitrary phase factor 
+   of magnitude 1.
+
+참고 자료와 추가 문헌
 ==============================
 
-Further information on the algorithms described in this section can be
-found in the following book,
+이 단원에 기술된 알고리즘들은 다음 책에 자세히 기술되어 있습니다.
 
 * G. H. Golub, C. F. Van Loan, "Matrix Computations" (3rd Ed, 1996),
   Johns Hopkins University Press, ISBN 0-8018-5414-8.
 
-Further information on the generalized eigensystems QZ algorithm
-can be found in this paper,
+일반화된 고유계의 QZ 알고리즘은 다음 논문을 참고할 수 있습니다.
 
 * C. Moler, G. Stewart, "An Algorithm for Generalized Matrix Eigenvalue
   Problems", SIAM J. Numer. Anal., Vol 10, No 2, 1973.
 
 .. index:: LAPACK
 
-Eigensystem routines for very large matrices can be found in the
-Fortran library |lapack|. The |lapack| library is described in,
+큰 규모의 행렬들에 대한 고유 문제 풀이 기능들은 포트란 라이브러리 |lapack|에서
+찾을 수 있습니다. |lapack|은 다음 문헌에 기술되어 있습니다.
 
 * LAPACK Users' Guide (Third Edition, 1999), Published by SIAM,
   ISBN 0-89871-447-8.
 
-The |lapack| source code can be found at the website http://www.netlib.org/lapack
-along with an online copy of the users guide.
+|lapack| 의 소스코드는 사용자 설명서와 함께 http://www.netlib.org/lapack 에서 찾을 수 있습니다.
+
