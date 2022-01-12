@@ -70,7 +70,9 @@
           * Publication Date: Dec 2001
           * ISBN: 9780954161705
 
+.. raw:: latex
 
+  \newpage
 
 **Network Theory Ltd**
 

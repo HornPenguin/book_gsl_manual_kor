@@ -6,7 +6,7 @@
 이 함수들을 구현한 알고리즘들은 중간 과정에서 불필요한 언더플로우나 오버 플로우가 발생하지 않도록 검토함과 동시에, 
 가능한한 넓은 범위의 복소 평면상에서 값을 계산할 수 있도록 짜였습니다.
 
-다변수 함수는 Abramowitz and Stegun의 규약을 따라, 분지 절단이 결정됩니다. 
+다변수 함수는 Abramowitz & Stegun [#AS]_ 의 규약을 따라, 분지 절단이 결정됩니다. 
 이 함수들은 **GNU Calc** 과 같은 표준 값들을 반환합니다. 
 이들은 "Common Lisp, The Language (Second Edition)"과 HP-28/48 계산기 시리즈에서 구현된 값들과 같습니다.
 
@@ -393,6 +393,8 @@
 * Dave Gillespie, Calc Manual, Free Software Foundation, ISBN 1-882114-18-3
 
 
-.. rubri: 각주
+.. rubri:: 각주
 
+.. [#AS] 미국 표준 기술 연구소에서 Milton Abramowitz와 Irene Stegun이 편집한 수학 문헌으로 수식, 그래프 및 수학표를 포함하는 
+         수학 함수 핸드북입니다(*).
 .. [#R_I] :code:`dat[0]` `dat[1]`
