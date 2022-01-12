@@ -234,7 +234,7 @@ GSL 라이브러리는 **C 언어 하나** 만을 사용합니다. 이는 이미
 이러한 표준을 위한 참고문헌으로 *GNU Coding Standards* 문서, 
 Harbison and Steels * A Reerence Manual*, *GNU, C Library Manual* 그리고 Glib 소스 파일을 볼 수 있습니다.
 
-수학 수식은 Abramowitz & Stegun의 *Handbook of Mathematical Functions* 를 따릅니다 [#AS]_ . 
+수학 수식은 Abramowitz & Stegun의 *Handbook of Mathematical Functions* 를 따릅니다. 
 이 책은 수학계에서 자명한 참고 문헌이며, 자유 이용 저작물으로 사용할 수 있습니다.
 
 본 프로젝트에서 공유하는 정신은 "C로 생각하라" 입니다. 프로젝트가 C로 이루어지기 때문에, 
@@ -992,7 +992,7 @@ DOS는 무시하고, Windows95/Windows 등에서의 사용만을 고려하는 �
 마지막 사항: 하나의 완벽한 구현체가 오류 있는 많은 구현체보다 낫습니다.
 
 
-.. rubri: 각주
+.. rubri:: 각주
 
 .. [#network] 출판사 Network Theory는 폐업했습니다. 해당 파일은 찾을 수 없습니다(*). `Monte Carlo and Quasi-Monte Carlo Wiki <http://roth.cs.kuleuven.be/wiki/Rngextra >`에 따르면, 
               Tiny Encryption Algorithm 을 사용한 별도의 예시 난수 발생자였다고 합니다.

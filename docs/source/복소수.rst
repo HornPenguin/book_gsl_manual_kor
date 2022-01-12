@@ -393,7 +393,7 @@
 * Dave Gillespie, Calc Manual, Free Software Foundation, ISBN 1-882114-18-3
 
 
-.. rubri:: 각주
+.. rubric:: 각주
 
 .. [#AS] 미국 표준 기술 연구소에서 Milton Abramowitz와 Irene Stegun이 편집한 수학 문헌으로 수식, 그래프 및 수학표를 포함하는 
          수학 함수 핸드북입니다(*).
