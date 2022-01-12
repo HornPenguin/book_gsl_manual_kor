@@ -194,7 +194,6 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
    :maxdepth: 2
 
    소개.rst
-   add_docs/GSL 설치.rst
    라이브러리 사용.rst
    오류 관리.rst
    수학 함수들.rst
@@ -249,6 +248,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
    GNU 자유 문서 사용 허가서.rst
    add_docs/GSL 디자인 문서.rst
    add_docs/이력.rst
+   add_docs/GSL 설치.rst
    add_docs/역자와 참고 자료.rst
    add_docs/병렬화.rst
    add_docs/영문 용어.rst
