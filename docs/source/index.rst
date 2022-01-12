@@ -91,7 +91,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
       
       \newpage
 
-      \begin{center}\Large{저작권 고지}\end{center}
+      \begin{center}\Large{\textbf{저작권 고지}}\end{center}
 
 
 .. only:: html
