@@ -80,7 +80,7 @@ ASCII는 정보 교환을 위한 미국 표준 문자표를 의미합니다 [#AS
 
 .. math::
 
-    b_7 b_6 b_5 b_4 b_3 b_2 b_1 = \text{print or contorl character}
+    b_7 b_6 b_5 b_4 b_3 b_2 b_1 = \text{print or control character}
 
 0-31, 127에 제어 문자가 할당되어 있고 나머지는 출력 문자가 할당되어 있습니다.
 
@@ -112,9 +112,8 @@ DE 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
 수학 기호 등을 포함합니다.
 
 
-
-서적과 문헌
-====================
+수학, 과학
+============================
 
 참고 문헌으로 사용 가능한 몇몇 수학과 과학 문헌을 소개합니다. 
 퍼블릭 도메인이거나 GDPL 등과 같은 자유 문서 허가서에 속하는 문서들은
@@ -124,7 +123,8 @@ DE 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
 
   별도의 서술이 없는 이상 디지털 문서가 퍼블릭 도메인인 경우는 많지 않습니다.
   아래 문헌의 디지털 판본을 복사, 베포, 수정할 때는 항상 공식 홈페이지의 
-  저작권 문항을 주의 깊게 읽어야합니다. 일반 출판본은 자명하므로 언급하지 않겠습니다.
+  저작권 문항을 주의 깊게 읽어야합니다. 인용하는 경우라도 표절과 적절한 형식을 따라야합니다.
+  일반 출판본은 자명하므로 언급하지 않겠습니다.
 
 
 * Abramwotiz & Stegun
@@ -164,6 +164,9 @@ DE 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
    핸드북 형태의 디지털 문서로 제공함을 목적으로 합니다.
    해당 문헌은 A&S의 마지막 출간 이후 출판된 여러 새로운 함수와, 기존 함수들의 
    새 성질들을 포함하고 있으며 지속적으로 갱신되고 있습니다.
+   각 단원은 해당 함수들의 구현 알고리즘에 관한 논문을 포함하고 있으며,
+   Software 단원에서 문서내 함수들의 구현체들에 대한 정보도 제공합니다.
+   GSL 또한 이 책에 올라가 있습니다.
    `Cambridge University Press`_ 에서 2010년도에 출판된 서적 또한 판매하고 있습니다. 
    출판본은 `NIST Handbook of Mathematical Functions`_ 으로 명명되어 있습니다.
    
@@ -199,6 +202,12 @@ DE 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
 .. _Wolfram Math World: https://mathworld.wolfram.com
 .. _The CRC Encyclopedia of Mathematics: https://www.routledge.com/The-CRC-Encyclopedia-of-Mathematics-Third-Edition==-3-Volume-Set/Weisstein/p/book/9781420072211
 
+* NIST Standard Reference Data
+
+   NIST에서 운영하는 사이트로 과학 분야의 인용, 참고로 쓰일 수 있는 표준 데이터들을 연구, 생성, 베포합니다.
+   최신 물리 상수나 재료의 특성값이 필요한 경우 유용하게 사용할 수 있습니다.
+
+   * https://www.nist.gov/srd
 
 과학 계산 프로그램과 라이브러리
 ==================================
@@ -212,7 +221,6 @@ GSL의 확장 기능인 라이브러리들은 별도로 **GSL Extension** 으로
 
 라이브러리
 ----------------
-
 
 * `GLPK <https://www.gnu.org/software/glpk/>`_  
   
@@ -243,9 +251,9 @@ GSL의 확장 기능인 라이브러리들은 별도로 **GSL Extension** 으로
      
      * https://www.fftw.org/
    
-* `GMPAL <https://gmplib.org/>`_ 
+* `GMP <https://gmplib.org/>`_ 
 
-   GNU Multiple Precision Arithmetic Library의 약자입니다.  
+   GNU Multiple Precision의 약자입니다. 전체 이름은 The GNU Multiple Precision Arithmetic Library
    정밀한 수학 계산을 할 때 많은 경우 double, float 자료형에서 유효 숫자의 한계가 생깁니다. 
    GMPAL는 이러한 고정밀 대수 연산을 위한 라이브러리로 메모리의 제한을 무시한다면 정밀도의 한계 없이 계산을 할 수 있습니다. 
    GMPAL 라이브러리의 주된 활용 분야는 암호, 인터넷 보안, 대수학과 계산 대수학 등이 있습니다
@@ -253,7 +261,37 @@ GSL의 확장 기능인 라이브러리들은 별도로 **GSL Extension** 으로
    .. only:: latex
      
      * https://gmplib.org/
+
+* `MPFR <https://www.mpfr.org/>`_
+
+    MPFR은 GMP에 기반한 수학 계산 라이브러리로 다중 정밀도의 부동 소수점 계산 기능과 
+    몇몇 특수 함수들의 구현체를 제공하고 있습니다. 전체 이름은 The GNU MPFR Library 입니다.
+
+   .. only:: latex
+     
+     * https://www.mpfr.org/
+
+* `SAM <https://www-pequan.lip6.fr/~jezequel/SAM/>`_
   
+   다중 정밀도의 이산 확률 대수 연산을 구현한 C/C++ 라이브러리입니다. 
+   MPFR 라이브러리에 기반해 있습니다. 관련 이론은 다음 논문에 기반해 있습니다.
+
+   * S. Graillat, F. Jézéquel, S. Wang, Y. Zhu, Stochastic Arithmetic in Multiprecision, Mathematics in Computer Science, 5(4), pages 359-375, 2011.
+
+   .. only:: latex
+     
+     * https://www-pequan.lip6.fr/~jezequel/SAM/
+
+* `MPC <https://www.multiprecision.org/mpc/>`_
+
+   MPC는 MPFR과 같은 목적으로 만들어진 라이브러리입니다. 
+   MPFR에서 다중 정밀도의 실수 구현체를 제공한다면 MPC에서는 다중 정밀도의 복소수 구현체와 관련 함수들을 제공합니다.
+   전체 이름은 GNU MPC 입니다.
+
+   .. only:: latex
+     
+     * https://www.multiprecision.org/mpc/
+    
 * `Libmatheval <https://www.gnu.org/software/libmatheval/>`_ 
 
    심볼릭 연산을 위한 C, Fortran 라이브러리 입니다.
@@ -262,14 +300,28 @@ GSL의 확장 기능인 라이브러리들은 별도로 **GSL Extension** 으로
      
      * https://www.gnu.org/software/libmatheval/
    
-* `GTK+ <https://www.gtk.org/>`_
 
-   Gimp의 그래픽 인터페이스를 위해 시작된 그래픽 라이브러리로 본격적인 소프트웨어의 GUI를 만드는 데 유용하며, 
-   이를 이용해 사용자 정의 플롯 라이브러리를 짤 수도 있습니다.
-   
+* `Arb <https://arblib.org/>`_
+
+   Ball 대수를 이용한 고 정밀도를 지원하는 수학 함수 구현체들의 모음입니다.
+   GSL 만큼이나 다양한 수학 구현체들을 지원하면 복소수 구현체들도 대부분 포함하고 있습니다.
+   Ball 대수는 다음의 논문을 참고 할 수 있습니다.
+
+   * Joris van der Hoeven. Ball arithmetic. 2009. ⟨hal-00432152v3⟩
+
    .. only:: latex
      
-     * https://www.gtk.org/
+     * https://arblib.org/
+
+* `FLINT <http://flintlib.org/>`_
+
+   FLINT는 Fast Library for Number Theory의 약자로 정수론 분야의 여러 구현체들을 제공합니다.
+   다중 정밀도의 정수와 유리수, 정수의 :math:`n` 모듈러 연산 유한 체, p-진수 등의 기능들을
+   제공하고 있습니다.
+
+   .. only:: latex
+     
+     * http://flintlib.org/
 
 **CPU 의존 라이브러리**
 
@@ -285,8 +337,31 @@ GSL 설치 단원에서 ICC와 AOCC를 언급했습니다. Intel과 AMD에서는
 
   다차원 배열 표현과 처리를 위한 텐서(Tensor) 라이브러리입니다.
 
+  .. only:: latex
+
+    * https://github.com/zhtvk/tensor
+
+**기타**
+
+* `GTK+ <https://www.gtk.org/>`_
+
+   Gimp의 그래픽 인터페이스를 위해 시작된 그래픽 라이브러리로 본격적인 소프트웨어의 GUI를 만드는 데 유용하며, 
+   이를 이용해 사용자 정의 플롯 라이브러리를 짤 수도 있습니다.
+   
+   .. only:: latex
+     
+     * https://www.gtk.org/
+
 소프트웨어
 ==============
+
+* `GNU Units <https://www.gnu.org/software/units/>`_
+
+   각기 다른 측정계 (ISO MK, Internationa, Imperial yard&pound ..)로 표현된 값들을 다른 측정계로 변환해주는 프로그램입니다.
+
+   .. only:: latex
+     
+     * https://www.gnu.org/software/units/
 
 * `Gnuplot <http://www.gnuplot.info/>`_ 
 
@@ -344,10 +419,15 @@ GSL 설치 단원에서 ICC와 AOCC를 언급했습니다. Intel과 AMD에서는
 .. _Wolfram Language on Research Server: https://hyunseong-kim.github.io/docs/Miscellaneous/RE_Wolfram_Engine
 
 
-* `PHOEBE <http://phoebe-project.org/>`_ 
- 
-     천체물리에서 식 현상 계산을 위한 모델링 소프트웨어 패키지 입니다.
-     NASA의 지원을 받고 있습니다.
+..
+  
+  * `PHOEBE <http://phoebe-project.org/>`_ 
+  
+  
+  
+       천체물리에서 식 현상 계산을 위한 모델링 소프트웨어 패키지 입니다.
+  
+       NASA의 지원을 받고 있습니다.
 
 
 GSL 지원 HPC 서비스
