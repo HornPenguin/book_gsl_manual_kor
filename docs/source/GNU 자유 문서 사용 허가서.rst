@@ -14,7 +14,12 @@ GNU 자유 문서 사용 허가서
    이 문서는 자유 소프트웨어 재단에서 출판한 문서가 아니며 GNU GFDL을 사용하는 소프트웨어들의
    법적인 베포 규정을 기술하지 않습니다. 해당 사항들은 오직 원본 영어 GNU GFDL 문서에 기반해 있어야 합니다.
    그러나 이 번역본이 한국어 화자들에게 GNU GFDL의 이해에 도움을 줄 수 있을 것이라 믿습니다. 
-   
+
+   자유 소프트웨어 재단은 공식적으로 어떠한 공식 번역본도 인정하지 않습니다.
+   실제 허가서를 사용하려면 변호사, 변리사등과 같은 전문적인 인력의 도움을 받아야합니다.
+   이 번역은 원본과 완전히 동일한 내용을 담았는 지에 대한 검증과 법률적 검토를 거치지 않았습니다.
+   이 번역은 이로 야기되는 모든 법적 문제에 대해 어떠한 보증도 하지 않습니다.
+
    
 영어 원문은 이 단원의 끝 단락에 포함되어 있습니다.
 
@@ -57,6 +62,72 @@ GNU 자유 문서 사용 허가서
 문서의 "수정본"은 원문서나 문서의 일부를 그대로 복제, 
 수정하거나 다른 언어로의 번역본을 포함하는 작업물을 의미합니다.
 
+문서의 "2차 구성부"는 문서의 발행처나 저자가 문서가 다루는 전체 주제, 혹은 관련
+내용 사이의 관계만을 설명하는 서두와 부록을 가르킵니다. 이 구성부는 문서의 전체 주제와
+직접적인 관계를 서술하는 내용이 없어야합니다. (예를 들어서 문서가 수학 교과서일 경우
+2차 구성부는 수학에 관한 어느 내용도 담아서는 안됩니다.)
+2차 구성부가 담는 내용은 관련 내용과 주제에 대한 개정 이력이나, 법적, 상업적, 철학, 
+윤리 아니면 정치적 입장 등이 담길 수 있습니다.
+
+"변경 불가 부분"(Invariant Section)은 2차 구성부의 한 형태로 이 허가서 아래에 베포되는 문서에서
+저작권 고지에 서술된 변경 불가 부분이라 표기된 제목이 붙은 부분들을 의미합니다.
+만약, 이 부분이 2차 구성부의 정의에 맞지 않는다면 변경 불가 부분으로 취급되지 않습니다.
+문서는 변경 불가 부분이 없을 수도 있습니다. 문서에서 변경 불가 부분이
+고지 되지 않았다면 해당 문서에 변경 불가 부분은 없습니다.
+
+"표지 구절"(Cover Texts)은 이 허가서 아래에 베포되는 문서에서
+저작권 고지에 서술된 앞 표지나 뒷 표지에 들어가야 할 짧은 문장을 말합니다.
+앞 표지 구절은 적어도 최대 5개의 단어들로 이루어져야 하고, 뒷 표지 구절은
+최대 25개의 단어들로 이루어질 수 있습니다.
+
+
+문서의 "공개"(Transparent) 복제물이란 기기에서 읽을 수 있는 복제본으로, 공공에
+열려있는 파일 형식으로 되어 있고, 일반적인 문서 편집기(그림의 경우 픽셀로 구성된 그림에서, 
+그리기 프로그램(일반적인 그림), 널리 사용되는 그림 편집기 등에서 출력, 수정이 용이하고
+다양한 형태의 파일 형식으로 자동 변환 하기 용이한 형태로 만들어진 복제물을 말합니다.
+반면, 마크업 언어를 추가하거나 존재하는 마크업 언어를 생략하는 식의 변경을 가해 
+피양도자의 문서 수정을 방해 혹은 금지시키는 형식은 공개되지 않은 복제물로 간주합니다.
+방대한 양의 문서를 그림 파일 형식으로 베포하는 경우 해당 문서는 공개되지 않았다 간주합니다.
+그러한 복제물은 "공개"되지 않은 "비공개"(Opaque) 복제물입니다.
+
+
+이러한 공개된 복제물의 적절한 형식의 예로, 마크업 언어가 포함 되지 않은 평범한 ASCII 형식 텍스트 파일,
+Texinfo 입력 파일, Latex 입력 파일, 공개적으로 사용 가능한 DTD에서 사용하는
+SGML이나 XML 형식 파일, 표준 규약을 준수하는 HMTL 형식, 편집 가능한 PostScript 나
+PDF 형식이 있습니다. 공개 그림 형식의 예로는 PNG, XCF, 그리고 JPG 등이 있습니다.
+
+
+비공개 형식의 예로는 대응 되는 워드 프로세서에서만 읽고 쓸 수 있는 파일 형식이나
+일반적으로 사용할 수 없는 DTD에서 쓰는 SGML과 XML 형식, 편집을 고려하지 않고 
+특정 워드 프로세서에서 출력 목적만을 위해 기기에서 만들어진 HTML, PostScript나 PDF
+등이 있습니다. 
+
+
+"제목 페이지"(Title Page)는 출판된 서적에 대해, 서적의 제목 페이지 자체와
+법적으로 허가서가 필요에 의해 제목 페이지에 귀속 시킨 모든 추가 페이지들을 의미합니다.
+제목 페이지 형식의 페이지가 없는 문서의 경우 "제목 페이지"는 해당 문서에서 본문 앞에
+나오는 문서의 제목에 가장 비슷한 페이지를 의미합니다.
+
+
+"출판사"(Publisher)는 문서를 공공에 베포하는 개인이나 기관을 의미합니다.
+
+
+A section "Entitled XYZ" means a named subunit of the Document whose
+title either is precisely XYZ or contains XYZ in parentheses following
+text that translates XYZ in another language.  (Here XYZ stands for a
+specific section name mentioned below, such as "Acknowledgements",
+"Dedications", "Endorsements", or "History".)  To "Preserve the Title"
+of such a section when you modify the Document means that it remains a
+section "Entitled XYZ" according to this definition.
+
+The Document may include Warranty Disclaimers next to the notice which
+states that this License applies to the Document.  These Warranty
+Disclaimers are considered to be included by reference in this
+License, but only as regards disclaiming warranties: any other
+implication that these Warranty Disclaimers may have is void and has
+no effect on the meaning of this License.
+
+
 2. 동일 복제
 ====================
 
@@ -69,8 +140,58 @@ GNU 자유 문서 사용 허가서
 
 피양도자는 위에 언급한 내용과 같은 조건 아래에서 복사본을 대여하거나 공개적으로 전시할 수도 있습니다.
 
+You may copy and distribute the Document in any medium, either
+commercially or noncommercially, provided that this License, the
+copyright notices, and the license notice saying this License applies
+to the Document are reproduced in all copies, and that you add no
+other conditions whatsoever to those of this License.  You may not use
+technical measures to obstruct or control the reading or further
+copying of the copies you make or distribute.  However, you may accept
+compensation in exchange for copies.  If you distribute a large enough
+number of copies you must also follow the conditions in section 3.
+
+You may also lend copies, under the same conditions stated above, and
+you may publicly display copies.
+
+
 3. 대량 복제
 ====================
+
+If you publish printed copies (or copies in media that commonly have
+printed covers) of the Document, numbering more than 100, and the
+Document's license notice requires Cover Texts, you must enclose the
+copies in covers that carry, clearly and legibly, all these Cover
+Texts: Front-Cover Texts on the front cover, and Back-Cover Texts on
+the back cover.  Both covers must also clearly and legibly identify
+you as the publisher of these copies.  The front cover must present
+the full title with all words of the title equally prominent and
+visible.  You may add other material on the covers in addition.
+Copying with changes limited to the covers, as long as they preserve
+the title of the Document and satisfy these conditions, can be treated
+as verbatim copying in other respects.
+
+If the required texts for either cover are too voluminous to fit
+legibly, you should put the first ones listed (as many as fit
+reasonably) on the actual cover, and continue the rest onto adjacent
+pages.
+
+If you publish or distribute Opaque copies of the Document numbering
+more than 100, you must either include a machine-readable Transparent
+copy along with each Opaque copy, or state in or with each Opaque copy
+a computer-network location from which the general network-using
+public has access to download using public-standard network protocols
+a complete Transparent copy of the Document, free of added material.
+If you use the latter option, you must take reasonably prudent steps,
+when you begin distribution of Opaque copies in quantity, to ensure
+that this Transparent copy will remain thus accessible at the stated
+location until at least one year after the last time you distribute an
+Opaque copy (directly or through your agents or retailers) of that
+edition to the public.
+
+It is requested, but not required, that you contact the authors of the
+Document well before redistributing any large number of copies, to
+give them a chance to provide you with an updated version of the
+Document.
 
 
 4. 수정
@@ -93,10 +214,66 @@ D. 원문서의 모든 저작권 고지 부분을 유지해야 합니다.
 E. 다른 저작권 고지에 인접부에 수정본의 적절한 저작권 고지를 추가해야 합니다.
 F. 저작권 고지 바로 다음에, 이 수정본이 본 허가서 아래에서 사용될 수 있다는
    허가 고지를 포함해야합니다. 이 고지는 아래의 부록 부분의 형태로 사용해야합니다.
-G. 불변 부분
+G. Preserve in that license notice the full lists of Invariant Sections
+   and required Cover Texts given in the Document's license notice.
+H. Include an unaltered copy of this License.
+I. Preserve the section Entitled "History", Preserve its Title, and add
+   to it an item stating at least the title, year, new authors, and
+   publisher of the Modified Version as given on the Title Page.  If
+   there is no section Entitled "History" in the Document, create one
+   stating the title, year, authors, and publisher of the Document as
+   given on its Title Page, then add an item describing the Modified
+   Version as stated in the previous sentence.
+J. Preserve the network location, if any, given in the Document for
+   public access to a Transparent copy of the Document, and likewise
+   the network locations given in the Document for previous versions
+   it was based on.  These may be placed in the "History" section.
+   You may omit a network location for a work that was published at
+   least four years before the Document itself, or if the original
+   publisher of the version it refers to gives permission.
+K. For any section Entitled "Acknowledgements" or "Dedications",
+   Preserve the Title of the section, and preserve in the section all
+   the substance and tone of each of the contributor acknowledgements
+   and/or dedications given therein.
+L. Preserve all the Invariant Sections of the Document,
+   unaltered in their text and in their titles.  Section numbers
+   or the equivalent are not considered part of the section titles.
+M. Delete any section Entitled "Endorsements".  Such a section
+   may not be included in the Modified Version.
+N. Do not retitle any existing section to be Entitled "Endorsements"
+   or to conflict in title with any Invariant Section.
+O. Preserve any Warranty Disclaimers.
+
+If the Modified Version includes new front-matter sections or
+appendices that qualify as Secondary Sections and contain no material
+copied from the Document, you may at your option designate some or all
+of these sections as invariant.  To do this, add their titles to the
+list of Invariant Sections in the Modified Version's license notice.
+These titles must be distinct from any other section titles.
+
+You may add a section Entitled "Endorsements", provided it contains
+nothing but endorsements of your Modified Version by various
+parties--for example, statements of peer review or that the text has
+been approved by an organization as the authoritative definition of a
+standard.
+
+You may add a passage of up to five words as a Front-Cover Text, and a
+passage of up to 25 words as a Back-Cover Text, to the end of the list
+of Cover Texts in the Modified Version.  Only one passage of
+Front-Cover Text and one of Back-Cover Text may be added by (or
+through arrangements made by) any one entity.  If the Document already
+includes a cover text for the same cover, previously added by you or
+by arrangement made by the same entity you are acting on behalf of,
+you may not add another; but you may replace the old one, on explicit
+permission from the previous publisher that added the old one.
+
+The author(s) and publisher(s) of the Document do not by this License
+give permission to use their names for publicity for or to assert or
+imply endorsement of any Modified Version.
 
 5. 문서의 결합
 ====================
+
 
 You may combine the Document with other documents released under this
 License, under the terms defined in section 4 above for modified
@@ -170,7 +347,9 @@ aggregate.
 원본이 우선권을 가집니다.
 
 만약, 저작물 내 단락중 "감사의 말", "헌정" 혹은 "이력" 등의 이름이 붙은 단락이
-있는 경우, 
+있는 경우, the requirement (section 4) to Preserve
+its Title (section 1) will typically require changing the actual
+title.
 
 9. 권리 소멸
 ====================
@@ -266,7 +445,7 @@ provided the MMC is eligible for relicensing.
 
 ::
 
-      본 저작물의 변경 불가 부분은 LIST THEIR TITILES 입니다.
+      본 저작물의 변경 불가 부분은 "LIST THEIR TITILES"입니다.
       앞 표지 구절에 다음과 같은 내용이 명시되어야 합니다. "FRONT_LIST"
       뒷 표지 구절에 다음과 같은 내용이 명시되어야 합니다. "BACK_LIST"
 
@@ -279,5 +458,16 @@ GPL과 같은 자유 소프트웨어 허가서 아래에서 베포해,
 
 영어 원문
 =====================
+
+.. only:: html
+
+   이 전문은 `GNU 공식 웹 사이트 <https://www.gnu.org/licenses/fdl-1.3.html>` 에서도 
+   확인할 수 있습니다.
+
+.. only:: latex
+
+   이 전문은 다음의 GNU 공식 웹 사이트에서도 확인할 수 있습니다.
+
+   https://www.gnu.org/licenses/fdl-1.3.html
 
 .. literalinclude:: _static/fdl.txt

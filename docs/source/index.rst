@@ -159,14 +159,14 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
        Permission is granted to copy, distribute and/or modify this document under 
        the terms of the GNU Free Documentation License, Version 1.3 or any later version 
        published by the Free Software Foundation as same as the original English version of the text (shown above); 
-       with additional Invariant Sections "역자와 참고 자료(*)", 
+       with additional Invariant Sections "역자(*)", 
        A copy of the license is included in the section entitled "GNU 자유 문서 사용 허가서". 
  
        Copyright © 2022  김현성
  
        GNU 자유 문서 사용 허가서 1.3판과 자유 소프트웨어 재단에서 발행한 이후의 갱신본의
        규정에 따라, 본 저작물의 복제, 베포 및 수정을 허가합니다. 상기한 영어 원서와 똑같은 규약을 
-       추가 변경 불가 부분 "역자와 참고 자료(*)" 단원을 포함해 따릅니다.
+       추가 변경 불가 부분 "역자(*)" 단원을 포함해 따릅니다.
        이 허가서의 복사본은 "GNU 자유 문서 사용 허가서"로 지어진 단락에
        포함되어 있습니다.
  
@@ -249,9 +249,10 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
    add_docs/GSL 디자인 문서.rst
    add_docs/이력.rst
    add_docs/GSL 설치.rst
-   add_docs/역자와 참고 자료.rst
+   add_docs/참고 자료.rst
    add_docs/병렬화.rst
    add_docs/영문 용어.rst
+   add_docs/역자.rst
 
 .. rubric:: 각주
 

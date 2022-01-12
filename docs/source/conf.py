@@ -107,6 +107,7 @@ latex_documents = [
 latex_use_xindy =True
 latex_additional_files = [
     "./_static/Cover.pdf",
+    "./_static/A_Slick_GNU_Logo.png "
     "./fonts/NanumMyeongjo.ttf",
     "./fonts/NanumMyeongjoBold.ttf",
     "./fonts/NanumMyeongjoExtraBold.ttf"
