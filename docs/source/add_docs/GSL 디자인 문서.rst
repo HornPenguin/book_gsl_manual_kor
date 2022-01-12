@@ -994,7 +994,8 @@ DOS는 무시하고, Windows95/Windows 등에서의 사용만을 고려하는 �
 
 .. rubric:: 각주
 
-.. [#network] 출판사 Network Theory는 폐업했습니다. 해당 파일은 찾을 수 없습니다(*). `Monte Carlo and Quasi-Monte Carlo Wiki <http://roth.cs.kuleuven.be/wiki/Rngextra >`에 따르면, 
+.. [#network] 출판사 Network Theory는 폐업했습니다. 해당 파일은 찾을 수 없습니다(*). 
+              Monte Carlo and Quasi-Monte Carlo Wiki(roth.cs.kuleuven.be/wiki/Rngextra)에 따르면, 
               Tiny Encryption Algorithm 을 사용한 별도의 예시 난수 발생자였다고 합니다.
 .. [#gnulitically] *GNUlitically correct* 은 GNU 코딩 규약을 따르고 *autoconf* 를 사용하는 프로그램을 뜻합니다(*).
 .. [#closed] 이러한 표현은 수학에서 대수 구조를 정의할 때, 
