@@ -354,10 +354,11 @@ title.
 9. 권리 소멸
 ====================
 
-You may not copy, modify, sublicense, or distribute the Document
-except as expressly provided under this License.  Any attempt
-otherwise to copy, modify, sublicense, or distribute it is void, and
-will automatically terminate your rights under this License.
+이 허가서에서 아래에 명시된 경우를 제외하고, 문서를 복사, 수정
+별도의 부가 허가서 적용, 그리고 베포하는 행위는 모두 금지됩니다.
+그리고 이러한 복사, 수정, 별도 허가서 적용과 베포를 하려는 시도들
+또한, 금지됩니다. 이 허가서 아래에서 해당 사항들에 관한 작업자의 권리는
+정지됩니다.
 
 However, if you cease all violation of this License, then your license
 from a particular copyright holder is reinstated (a) provisionally,
@@ -379,7 +380,7 @@ this License.  If your rights have been terminated and not permanently
 reinstated, receipt of a copy of some or all of the same material does
 not give you any rights to use it.
 
-10. 허가서의 향후 개정
+1.  허가서의 향후 개정
 ======================
 
 자유 소프트웨어 재단에서 GNU 자유 문서 사용 허가서의 새로운 개정안을
@@ -401,13 +402,16 @@ Document.
 11. 재허가
 ====================
 
-"Massive Multiauthor Collaboration Site" (or "MMC Site") means any
-World Wide Web server that publishes copyrightable works and also
-provides prominent facilities for anybody to edit those works.  A
-public wiki that anybody can edit is an example of such a server.  A
-"Massive Multiauthor Collaboration" (or "MMC") contained in the site
+"대규모 다중 저자 협업 사이트"("MMC Site")는 저작물을 베포하고 누구나
+해당 저작물을 수정할 수 있게 하는 기능들을 제공하는 World Wide Web
+서버를 의미합니다. 누구나 수정할 수 있는 공공 위키가 이러한 사이트의
+예시입니다. A "Massive Multiauthor Collaboration" (or "MMC") contained in the site
 means any set of copyrightable works thus published on the MMC site.
 
+"CC-BY-SA"는 Creative Commnos Attribution-Share Alike 3.0을 의미합니다.
+이 허가서는 Creative Commons Corporation에 의해 출판되었습니다.
+
+허가서의 차후 갱신판 또한 동일한 기관에서 베포됩니다.
 "CC-BY-SA" means the Creative Commons Attribution-Share Alike 3.0 
 license published by Creative Commons Corporation, a not-for-profit 
 corporation with a principal place of business in San Francisco, 
@@ -461,7 +465,7 @@ GPL과 같은 자유 소프트웨어 허가서 아래에서 베포해,
 
 .. only:: html
 
-   이 전문은 `GNU 공식 웹 사이트 <https://www.gnu.org/licenses/fdl-1.3.html>` 에서도 
+   이 전문은 `GNU 공식 웹 사이트 <https://www.gnu.org/licenses/fdl-1.3.html>`_ 에서도 
    확인할 수 있습니다.
 
 .. only:: latex
