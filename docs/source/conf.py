@@ -113,9 +113,9 @@ latex_additional_files = [
     "./_static/A_Slick_GNU_Logo.png "
     "./fonts/NanumMyeongjo.ttf",
     "./fonts/NanumMyeongjoExtraBold.ttf",
-    "./fonts/NanumBarunFothic.ttf",
-    "./fonts/NanumBarunFothicBold.ttf",
-    "./fonts/D2Coding.ttf",
+    "./fonts/NanumBarunGothic.ttf",
+    "./fonts/NanumBarunGothicBold.ttf",
+    "./fonts/D2Coding.ttc",
     ]
 
 
