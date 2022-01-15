@@ -14,7 +14,7 @@ Quasi-연속 난수 배열
 
     번역중
 
-.. include:: include.rst
+.. include:: /include.rst
 
 This chapter describes functions for generating quasi-random sequences
 in arbitrary dimensions.  A quasi-random sequence progressively covers a
@@ -153,7 +153,7 @@ between previous points.
 
 .. _fig_qrng:
 
-.. figure:: //images/qrng.png
+.. figure:: /images/qrng.png
    :scale: 60%
 
    Distribution of the first 1024 points 

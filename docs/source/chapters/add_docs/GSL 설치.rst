@@ -651,8 +651,8 @@ GSL 설치 과정에서 configure 스크립트의 여러 설정 사항들은 다
 
     * `Bash <https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html>`_
     * `GNU/Make <https://www.gnu.org/software/make/manual/make.html>`_
-    * `GNU/GCC <https://gcc.gnu.org/onlinedocs/>`_
-    * `LLVM/Clang <https://clang.llvm.org/docs/index.html>`_
+    * `GNU/GCC <https://gcc.gnu.org/online/docs/>`_
+    * `LLVM/Clang <https://clang.llvm.org//docs/index.html>`_
     * `Visual Studio and MSVC <https://docs.microsoft.com/ko-kr/visualstudio/windows/?view=vs-2022>`_
 
 .. only:: latex
@@ -662,9 +662,9 @@ GSL 설치 과정에서 configure 스크립트의 여러 설정 사항들은 다
     * GNU/Make 
          https://www.gnu.org/software/make/manual/make.html
     * GNU/GCC 
-         https://gcc.gnu.org/onlinedocs/
+         https://gcc.gnu.org/online/docs/
     * LLVM/Clang 
-         https://clang.llvm.org/docs/index.html
+         https://clang.llvm.org//docs/index.html
     * Visual Studio and MSVC 
          https://docs.microsoft.com/ko-kr/visualstudio/windows/?view=vs-2022
 

@@ -405,4 +405,4 @@ GPL과 같은 자유 소프트웨어 허가서 아래에서 베포해,
 
    https://www.gnu.org/licenses/fdl-1.3.html
 
-.. literalinclude:: _static/fdl.txt
+.. literalinclude:: /_static/fdl.txt

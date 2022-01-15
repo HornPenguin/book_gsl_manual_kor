@@ -523,7 +523,7 @@ points in :numref:`fig-multimin`.
 
 .. _fig-multimin:
 
-.. figure:: //images/multimin.png
+.. figure:: /images/multimin.png
    :scale: 60%
 
    Function contours with path taken by minimization algorithm

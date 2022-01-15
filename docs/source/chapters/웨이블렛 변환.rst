@@ -318,7 +318,7 @@ archive of public-domain of medical datasets.
 
 .. _fig_dwt:
 
-.. figure:: //images/dwt.png
+.. figure:: /images/dwt.png
    :scale: 60%
 
    Original (upper) and wavelet-compressed (lower) ECG signals, using the

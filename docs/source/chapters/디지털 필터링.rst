@@ -387,7 +387,7 @@ parameters :math:`\alpha = 0.5, 3, 10`. The results are shown in :numref:`fig_fi
 
 .. _fig_filt-gaussian:
 
-.. figure:: //images/gaussfilt.png
+.. figure:: /images/gaussfilt.png
    :scale: 60%
 
    Top panel: Gaussian kernels (unnormalized) for :math:`\alpha = 0.5, 3, 10`.
@@ -433,7 +433,7 @@ of the input signal without smoothing. The results are shown in :numref:`fig_fil
 
 .. _fig_filt-gaussian2:
 
-.. figure:: //images/gaussfilt2.png
+.. figure:: /images/gaussfilt2.png
    :scale: 60%
 
    Top row: original input signal :math:`x(n)` (black) with Gaussian smoothed signal in red.
@@ -467,7 +467,7 @@ a symmetric window of length :math:`K = 7`. The results are shown in
 
 .. _fig_filt-edge:
 
-.. figure:: //images/filt_edge.png
+.. figure:: /images/filt_edge.png
    :scale: 60%
 
    Original time series is in gray. The standard median filter output is in
@@ -493,7 +493,7 @@ measure of scale. The results are plotted in :numref:`fig_impulse`.
 
 .. _fig_impulse:
 
-.. figure:: //images/impulse.png
+.. figure:: /images/impulse.png
    :scale: 60%
 
    Original time series is in blue, filter output is in green, upper and

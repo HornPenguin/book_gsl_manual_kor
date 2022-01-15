@@ -172,7 +172,7 @@ approximation and 40-th order approximation, all sampled at intervals of
 
 .. _fig_cheb:
 
-.. figure:: //images/cheb.png
+.. figure:: /images/cheb.png
    :scale: 60%
 
    Chebyshev approximations to a step function

@@ -13,7 +13,7 @@
     번역중
 
 
-.. include:: include.rst
+.. include:: /include.rst
 
 The Sparse Basic Linear Algebra Subprograms (|blas|) define a set of
 fundamental operations on vectors and sparse matrices which can be used

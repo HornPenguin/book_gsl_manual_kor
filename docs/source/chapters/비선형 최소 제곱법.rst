@@ -12,7 +12,7 @@
     번역중
 
 
-.. include:: include.rst
+.. include:: /include.rst
 
 This chapter describes functions for multidimensional nonlinear
 least-squares fitting.  There are generally two classes of
@@ -1447,7 +1447,7 @@ although this particular system is too small to really benefit.
 
 .. _fig_fit-exp:
 
-.. figure:: //images/fit-exp.png
+.. figure:: /images/fit-exp.png
    :scale: 60%
 
    Exponential fitted curve with data
@@ -1586,7 +1586,7 @@ The program output is shown below::
 
 .. _fig_nlfit2:
 
-.. figure:: //images/nlfit2.png
+.. figure:: /images/nlfit2.png
 
    Paths taken by solver for Rosenbrock function
 
@@ -1758,7 +1758,7 @@ The data and fitted model are shown in :numref:`fig_nlfit2b`.
 
 .. _fig_nlfit2b:
 
-.. figure:: //images/nlfit2b.png
+.. figure:: /images/nlfit2b.png
 
    Gaussian model fitted to data
 
@@ -1819,7 +1819,7 @@ by each solver are shown as colored lines.
 
 .. _fig_nlfit3:
 
-.. figure:: //images/nlfit3.png
+.. figure:: /images/nlfit3.png
    :scale: 60%
 
    Paths taken for different TRS methods for the Branin function

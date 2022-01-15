@@ -185,7 +185,7 @@ radix-2 FFT 방법은 :math:`O(n\log_2 n)` 의 복잡도를 가집니다.
 
 .. _fig_fft-complex-radix2:
 
-.. figure:: //images/fft-complex-radix2.png
+.. figure:: /images/fft-complex-radix2.png
    :scale: 60%
 
    펄스 신호와 그 신호의 이산 푸리에 변환, 예제 프로그램의 결과
@@ -649,7 +649,7 @@ Mixed-radix 알고리즘은 변환의 중간 단계를 유지하기 위해 추�
 
 .. _fig_fft-real-mixedradix:
 
-.. figure:: //images/fft-real-mixedradix.png
+.. figure:: /images/fft-real-mixedradix.png
    :scale: 100%
 
    실수 펄스 신호의 저주파 통과 필터의 적용, 예제 프로그램의 결과.

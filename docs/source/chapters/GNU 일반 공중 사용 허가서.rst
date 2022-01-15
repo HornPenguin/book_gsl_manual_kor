@@ -45,4 +45,4 @@ GNU 일반 공중 사용 허가서
 
    https://www.gnu.org/licenses/gpl-3.0.html
 
-.. literalinclude:: _static/gpl.txt
+.. literalinclude:: /_static/gpl.txt

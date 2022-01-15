@@ -17,7 +17,7 @@
     번역중
 
 
-.. include:: include.rst
+.. include:: /include.rst
 
 This chapter describes functions for generating random variates and
 computing their probability distributions.  Samples from the
@@ -144,7 +144,7 @@ The Gaussian Distribution
    for a Gaussian distribution with standard deviation :data:`sigma`, using
    the formula given above.
 
-   .. image:: //images/rand-gaussian.png
+   .. image:: /images/rand-gaussian.png
 
 .. index:: Ziggurat method
 
@@ -219,7 +219,7 @@ The Gaussian Tail Distribution
    for a Gaussian tail distribution with standard deviation :data:`sigma` and
    lower limit :data:`a`, using the formula given above.
 
-   .. image:: //images/rand-gaussian-tail.png
+   .. image:: /images/rand-gaussian-tail.png
 
 .. function:: double gsl_ran_ugaussian_tail (const gsl_rng * r, double a)
               double gsl_ran_ugaussian_tail_pdf (double x, double a)
@@ -266,7 +266,7 @@ The Bivariate Gaussian Distribution
    deviations :data:`sigma_x`, :data:`sigma_y` and correlation coefficient
    :data:`rho`, using the formula given above.
 
-   .. image:: //images/rand-bivariate-gaussian.png
+   .. image:: /images/rand-bivariate-gaussian.png
 
 |newpage|
 
@@ -356,7 +356,7 @@ The Exponential Distribution
    for an exponential distribution with mean :data:`mu`, using the formula
    given above.
 
-   .. image:: //images/rand-exponential.png
+   .. image:: /images/rand-exponential.png
 
 .. function:: double gsl_cdf_exponential_P (double x, double mu)
               double gsl_cdf_exponential_Q (double x, double mu)
@@ -391,7 +391,7 @@ The Laplace Distribution
    for a Laplace distribution with width :data:`a`, using the formula
    given above.
 
-   .. image:: //images/rand-laplace.png
+   .. image:: /images/rand-laplace.png
 
 .. function:: double gsl_cdf_laplace_P (double x, double a)
               double gsl_cdf_laplace_Q (double x, double a)
@@ -427,7 +427,7 @@ The Exponential Power Distribution
    for an exponential power distribution with scale parameter :data:`a`
    and exponent :data:`b`, using the formula given above.
 
-   .. image:: //images/rand-exppow.png
+   .. image:: /images/rand-exppow.png
 
 .. function:: double gsl_cdf_exppow_P (double x, double a, double b)
               double gsl_cdf_exppow_Q (double x, double a, double b)
@@ -460,7 +460,7 @@ The Cauchy Distribution
    for a Cauchy distribution with scale parameter :data:`a`, using the formula
    given above.
 
-   .. image:: //images/rand-cauchy.png
+   .. image:: /images/rand-cauchy.png
 
 .. function:: double gsl_cdf_cauchy_P (double x, double a)
               double gsl_cdf_cauchy_Q (double x, double a)
@@ -493,7 +493,7 @@ The Rayleigh Distribution
    for a Rayleigh distribution with scale parameter :data:`sigma`, using the
    formula given above.
 
-   .. image:: //images/rand-rayleigh.png
+   .. image:: /images/rand-rayleigh.png
 
 .. function:: double gsl_cdf_rayleigh_P (double x, double sigma)
               double gsl_cdf_rayleigh_Q (double x, double sigma)
@@ -527,7 +527,7 @@ The Rayleigh Tail Distribution
    for a Rayleigh tail distribution with scale parameter :data:`sigma` and
    lower limit :data:`a`, using the formula given above.
 
-   .. image:: //images/rand-rayleigh-tail.png
+   .. image:: /images/rand-rayleigh-tail.png
 
 |newpage|
 
@@ -563,7 +563,7 @@ The Landau Distribution
    for the Landau distribution using an approximation to the formula given
    above.
 
-   .. image:: //images/rand-landau.png
+   .. image:: /images/rand-landau.png
 
 |newpage|
 
@@ -596,7 +596,7 @@ The Levy alpha-Stable Distributions
 
    The algorithm only works for :math:`0 < \alpha \le 2`.
 
-   .. image:: //images/rand-levy.png
+   .. image:: /images/rand-levy.png
 
 |newpage|
 
@@ -650,7 +650,7 @@ distributed as an alpha-stable variate,
 .. exponent :data:`a`, using the formula given above.
 .. @end deftypefun
 
-.. image:: //images/rand-levyskew.png
+.. image:: /images/rand-levyskew.png
 
 |newpage|
 
@@ -690,7 +690,7 @@ The Gamma Distribution
    for a gamma distribution with parameters :data:`a` and :data:`b`, using the
    formula given above.
 
-   .. image:: //images/rand-gamma.png
+   .. image:: /images/rand-gamma.png
 
 .. function:: double gsl_cdf_gamma_P (double x, double a, double b)
               double gsl_cdf_gamma_Q (double x, double a, double b)
@@ -725,7 +725,7 @@ The Flat (Uniform) Distribution
    for a uniform distribution from :data:`a` to :data:`b`, using the formula
    given above.
 
-   .. image:: //images/rand-flat.png
+   .. image:: /images/rand-flat.png
 
 .. function:: double gsl_cdf_flat_P (double x, double a, double b)
               double gsl_cdf_flat_Q (double x, double a, double b)
@@ -758,7 +758,7 @@ The Lognormal Distribution
    for a lognormal distribution with parameters :data:`zeta` and :data:`sigma`,
    using the formula given above.
 
-   .. image:: //images/rand-lognormal.png
+   .. image:: /images/rand-lognormal.png
 
 .. function:: double gsl_cdf_lognormal_P (double x, double zeta, double sigma)
               double gsl_cdf_lognormal_Q (double x, double zeta, double sigma)
@@ -799,7 +799,7 @@ has a chi-squared distribution with :math:`n` degrees of freedom.
    for a chi-squared distribution with :data:`nu` degrees of freedom, using
    the formula given above.
 
-   .. image:: //images/rand-chisq.png
+   .. image:: /images/rand-chisq.png
 
 .. function:: double gsl_cdf_chisq_P (double x, double nu)
               double gsl_cdf_chisq_Q (double x, double nu)
@@ -858,7 +858,7 @@ has an F-distribution :math:`F(x;\nu_1,\nu_2)`.
    for an F-distribution with :data:`nu1` and :data:`nu2` degrees of freedom,
    using the formula given above.
 
-   .. image:: //images/rand-fdist.png
+   .. image:: /images/rand-fdist.png
 
 .. function:: double gsl_cdf_fdist_P (double x, double nu1, double nu2)
               double gsl_cdf_fdist_Q (double x, double nu1, double nu2)
@@ -904,7 +904,7 @@ has a t-distribution :math:`t(x;\nu)` with :math:`\nu` degrees of freedom.
    for a t-distribution with :data:`nu` degrees of freedom, using the formula
    given above.
 
-   .. image:: //images/rand-tdist.png
+   .. image:: /images/rand-tdist.png
 
 .. function:: double gsl_cdf_tdist_P (double x, double nu)
               double gsl_cdf_tdist_Q (double x, double nu)
@@ -937,7 +937,7 @@ The Beta Distribution
    for a beta distribution with parameters :data:`a` and :data:`b`, using the
    formula given above.
 
-   .. image:: //images/rand-beta.png
+   .. image:: /images/rand-beta.png
 
 .. function:: double gsl_cdf_beta_P (double x, double a, double b)
               double gsl_cdf_beta_Q (double x, double a, double b)
@@ -970,7 +970,7 @@ The Logistic Distribution
    for a logistic distribution with scale parameter :data:`a`, using the
    formula given above.
 
-   .. image:: //images/rand-logistic.png
+   .. image:: /images/rand-logistic.png
 
 .. function:: double gsl_cdf_logistic_P (double x, double a)
               double gsl_cdf_logistic_Q (double x, double a)
@@ -1003,7 +1003,7 @@ The Pareto Distribution
    for a Pareto distribution with exponent :data:`a` and scale :data:`b`, using
    the formula given above.
 
-   .. image:: //images/rand-pareto.png
+   .. image:: /images/rand-pareto.png
 
 .. function:: double gsl_cdf_pareto_P (double x, double a, double b)
               double gsl_cdf_pareto_Q (double x, double a, double b)
@@ -1104,7 +1104,7 @@ The Weibull Distribution
    for a Weibull distribution with scale :data:`a` and exponent :data:`b`,
    using the formula given above.
 
-   .. image:: //images/rand-weibull.png
+   .. image:: /images/rand-weibull.png
 
 .. function:: double gsl_cdf_weibull_P (double x, double a, double b)
               double gsl_cdf_weibull_Q (double x, double a, double b)
@@ -1139,7 +1139,7 @@ The Type-1 Gumbel Distribution
    for a Type-1 Gumbel distribution with parameters :data:`a` and :data:`b`,
    using the formula given above.
 
-   .. image:: //images/rand-gumbel1.png
+   .. image:: /images/rand-gumbel1.png
 
 .. function:: double gsl_cdf_gumbel1_P (double x, double a, double b)
               double gsl_cdf_gumbel1_Q (double x, double a, double b)
@@ -1174,7 +1174,7 @@ The Type-2 Gumbel Distribution
    for a Type-2 Gumbel distribution with parameters :data:`a` and :data:`b`,
    using the formula given above.
 
-   .. image:: //images/rand-gumbel2.png
+   .. image:: /images/rand-gumbel2.png
 
 .. function:: double gsl_cdf_gumbel2_P (double x, double a, double b)
               double gsl_cdf_gumbel2_Q (double x, double a, double b)
@@ -1364,7 +1364,7 @@ The Poisson Distribution
    from a Poisson distribution with mean :data:`mu`, using the formula
    given above.
 
-   .. image:: //images/rand-poisson.png
+   .. image:: /images/rand-poisson.png
 
 .. function:: double gsl_cdf_poisson_P (unsigned int k, double mu)
               double gsl_cdf_poisson_Q (unsigned int k, double mu)
@@ -1407,7 +1407,7 @@ The Bernoulli Distribution
    :data:`k` from a Bernoulli distribution with probability parameter
    :data:`p`, using the formula given above.
 
-   .. image:: //images/rand-bernoulli.png
+   .. image:: /images/rand-bernoulli.png
 
 |newpage|
 
@@ -1432,7 +1432,7 @@ The Binomial Distribution
    from a binomial distribution with parameters :data:`p` and :data:`n`, using
    the formula given above.
 
-   .. image:: //images/rand-binomial.png
+   .. image:: /images/rand-binomial.png
 
 .. function:: double gsl_cdf_binomial_P (unsigned int k, double p, unsigned int n)
               double gsl_cdf_binomial_Q (unsigned int k, double p, unsigned int n)
@@ -1520,7 +1520,7 @@ The Negative Binomial Distribution
    from a negative binomial distribution with parameters :data:`p` and
    :data:`n`, using the formula given above.
 
-   .. image:: //images/rand-nbinomial.png
+   .. image:: /images/rand-nbinomial.png
 
 .. function:: double gsl_cdf_negative_binomial_P (unsigned int k, double p, double n)
               double gsl_cdf_negative_binomial_Q (unsigned int k, double p, double n)
@@ -1550,7 +1550,7 @@ The Pascal Distribution
    from a Pascal distribution with parameters :data:`p` and
    :data:`n`, using the formula given above.
 
-   .. image:: //images/rand-pascal.png
+   .. image:: /images/rand-pascal.png
 
 .. function:: double gsl_cdf_pascal_P (unsigned int k, double p, unsigned int n)
               double gsl_cdf_pascal_Q (unsigned int k, double p, unsigned int n)
@@ -1586,7 +1586,7 @@ The Geometric Distribution
    from a geometric distribution with probability parameter :data:`p`, using
    the formula given above.
 
-   .. image:: //images/rand-geometric.png
+   .. image:: /images/rand-geometric.png
 
 .. function:: double gsl_cdf_geometric_P (unsigned int k, double p)
               double gsl_cdf_geometric_Q (unsigned int k, double p)
@@ -1629,7 +1629,7 @@ The Hypergeometric Distribution
    from a hypergeometric distribution with parameters :data:`n1`, :data:`n2`,
    :data:`t`, using the formula given above.
 
-   .. image:: //images/rand-hypergeometric.png
+   .. image:: /images/rand-hypergeometric.png
 
 .. function:: double gsl_cdf_hypergeometric_P (unsigned int k, unsigned int n1, unsigned int n2, unsigned int t)
               double gsl_cdf_hypergeometric_Q (unsigned int k, unsigned int n1, unsigned int n2, unsigned int t)
@@ -1669,7 +1669,7 @@ The Logarithmic Distribution
    from a logarithmic distribution with probability parameter :data:`p`,
    using the formula given above.
 
-   .. image:: //images/rand-logarithmic.png
+   .. image:: /images/rand-logarithmic.png
 
 |newpage|
 
@@ -1815,7 +1815,7 @@ The following program generates a random walk in two dimensions.
 
 .. _fig_rand-walk:
 
-.. figure:: //images/random-walk.png
+.. figure:: /images/random-walk.png
    :scale: 60%
 
    Four 10-step random walks from the origin.

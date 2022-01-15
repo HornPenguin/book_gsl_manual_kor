@@ -1,11 +1,12 @@
 import os
 import sys
 sys.path.append(os.path.dirname(os.getcwd()))
+sys.path.append('.')
 
 from docutils.writers.latex2e import Babel
-from latex_setting import *
+from src.latex_setting import *
 
-
+print(os.getcwd())
 
 Babel.language_codes = {'ko':'korean', 'en':'english'}
 
@@ -92,12 +93,8 @@ latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '10pt',
     'preamble': my_preamble,
-    'fontpkg' : r'''
-    \setmainfont{Noto Serif CJK KR}
-    \setsansfont{Noto Sans CJK KR}
-    \setmonofont{Noto Sans Mono CJK KR}
-    ''',
-    'maketitle' : r'\sphinxmaketitle'
+    'fontpkg' : fontpkg,
+    'maketitle' : maketitle
 }
 
 latex_documents = [
@@ -115,8 +112,10 @@ latex_additional_files = [
     "./_static/Cover.pdf",
     "./_static/A_Slick_GNU_Logo.png "
     "./fonts/NanumMyeongjo.ttf",
-    "./fonts/NanumMyeongjoBold.ttf",
-    "./fonts/NanumMyeongjoExtraBold.ttf"
+    "./fonts/NanumMyeongjoExtraBold.ttf",
+    "./fonts/NanumBarunFothic.ttf",
+    "./fonts/NanumBarunFothicBold.ttf",
+    "./fonts/D2Coding.ttf",
     ]
 
 

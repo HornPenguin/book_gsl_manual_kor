@@ -260,7 +260,7 @@ The calculated solution is shown in :numref:`fig_splinalg-poisson`.
 
 .. _fig_splinalg-poisson:
 
-.. figure:: //images/sparse_poisson.png
+.. figure:: /images/sparse_poisson.png
 
    Solution of PDE
 

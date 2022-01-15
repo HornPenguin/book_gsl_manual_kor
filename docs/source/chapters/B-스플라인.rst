@@ -249,7 +249,7 @@ The data and fitted model are shown in :numref:`fig_bspline`.
 
 .. _fig_bspline:
 
-.. figure:: //images/bspline.png
+.. figure:: /images/bspline.png
    :scale: 60%
 
    Data (black) and fitted model (red)

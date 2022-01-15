@@ -692,7 +692,7 @@ can be passed in through the :data:`params` argument in
 :type:`gsl_odeiv2_system` definition (:data:`mu` in this example) by using
 a pointer to a struct.
 
-.. figure:: //images/ode-vdp.png
+.. figure:: /images/ode-vdp.png
 
    Numerical solution of the Van der Pol oscillator equation 
    using Prince-Dormand 8th order Runge-Kutta.

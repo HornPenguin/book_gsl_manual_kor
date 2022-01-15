@@ -13,7 +13,7 @@
 
     번역중
 
-.. include:: include.rst
+.. include:: /include.rst
 
 This chapter describes routines for performing numerical integration
 (quadrature) of a function in one dimension.  There are routines for

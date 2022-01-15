@@ -10,7 +10,7 @@
 
 
 
-.. include:: include.rst
+.. include:: /include.rst
 
 This chapter describes functions for creating and manipulating
 combinations. A combination :math:`c` is represented by an array of

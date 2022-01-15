@@ -10,7 +10,7 @@
     번역중
 
 
-.. include:: include.rst
+.. include:: /include.rst
 
 This chapter describes functions for creating and manipulating multisets. A
 multiset :math:`c` is represented by an array of :math:`k` integers in the range

@@ -13,7 +13,7 @@
 
     번역중
 
-.. include:: include.rst
+.. include:: /include.rst
 
 This chapter describes functions for multidimensional root-finding
 (solving nonlinear systems with :math:`n` equations in :math:`n`

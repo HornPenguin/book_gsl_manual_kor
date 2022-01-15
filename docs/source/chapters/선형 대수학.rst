@@ -14,7 +14,7 @@
     번역중
 
 
-.. include:: include.rst
+.. include:: /include.rst
 
 This chapter describes functions for solving linear systems.  The
 library provides linear algebra operations which operate directly on

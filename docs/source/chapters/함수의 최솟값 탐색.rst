@@ -20,7 +20,7 @@
 
 Fig 27.을 참고하십시오.
 
-.. figure:: //images/min-interval.png
+.. figure:: /images/min-interval.png
   :scale: 60%
    
   상하한 값이 주어진 닫힌 구간의 함수의 최소값 추정 장면.

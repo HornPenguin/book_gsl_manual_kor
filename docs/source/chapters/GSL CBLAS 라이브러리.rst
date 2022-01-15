@@ -11,7 +11,7 @@ GSL CBLAS 라이브러리
 **************************
 
 
-.. include:: include.rst
+.. include:: /include.rst
 
 저수준의 |cblas| 함수들은 헤더 파일 :file:`gsl_cblas.h` 에 저장되어 있습니다.
 이 함수들의 자세한 정의는 Netlib의 문헌을 참고하길 바랍니다. 

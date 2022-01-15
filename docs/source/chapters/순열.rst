@@ -10,7 +10,7 @@
 
     번역중
 
-.. include:: include.rst
+.. include:: /include.rst
 
 이 단원에서는 순열을 만들고 제어하는 함수들을 서술합니다.
 순열 :math:`p` 는 :math:`0` 에서 :math:`n-1` 의 범주를 가지는 :math:`n` 길이의 정수 배열을
