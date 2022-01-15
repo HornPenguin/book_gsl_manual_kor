@@ -18,12 +18,12 @@ custom_setting = r'''
 '''
 
 fontpkg= r'''
-%\setmainfont{Noto Serif CJK KR}
-%\setsansfont{Noto Sans CJK KR}
-%\setmonofont{Noto Sans Mono CJK KR}
+\setmainfont{NanumMyeongjo.ttf}
+\setsansfont{NanumBarunGothic.ttf}
+\setmonofont{D2Coding.ttc}
 
-\setCJKmainfont[Ligatures=TeX,BoldFont={* ExtraBold},AutoFakeSlant]{NanumMyeongjo.ttf}
-\setCJKsansfont[Ligatures=TeX,BoldFont={* Bold},AutoFakeSlant]{NanumBarunGothic.ttf}
+\setCJKmainfont[Ligatures=TeX,BoldFont={*ExtraBold},AutoFakeSlant]{NanumMyeongjo.ttf}
+\setCJKsansfont[Ligatures=TeX,BoldFont={*Bold},AutoFakeSlant]{NanumBarunGothic.ttf}
 \setmonofont{D2Coding.ttc}
 '''
 
