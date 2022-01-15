@@ -11,7 +11,7 @@ GNU 자유 문서 사용 허가서
    
    
    본 번역본은 GNU 자유 문서 사용 허가서의 비공식 한국어 번역본입니다.
-   이 문서는 자유 소프트웨어 재단에서 출판한 문서가 아니며 GNU GFDL을 사용하는 소프트웨어들의
+   이 문서는 자유 소프트웨어 재단에서 발행한 문서가 아니며 GNU GFDL을 사용하는 소프트웨어들의
    법적인 베포 규정을 기술하지 않습니다. 해당 사항들은 오직 원본 영어 GNU GFDL 문서에 기반해 있어야 합니다.
    그러나 이 번역본이 한국어 화자들에게 GNU GFDL의 이해에 도움을 줄 수 있을 것이라 믿습니다. 
 
@@ -33,7 +33,7 @@ GNU 자유 문서 사용 허가서
 이 허가서의 목적은 메뉴얼이나 서적, 혹은 다른 기능적 문서나 
 유용한 문서들을 "자유"롭게 만듬을 목표로 합니다. 
 이는 상업성과 수정의 여부와 관계 없이 자유롭게 이를 복사하고 재 배포할 수 있는 
-효과적인 자유를 보장한다는 뜻입니다.  이에 더해, 이 허가서는 저자와 출판사가 
+효과적인 자유를 보장한다는 뜻입니다.  이에 더해, 이 허가서는 저자와 발행자가 
 본인의 작업에 대한 이익과 타인의 수정으로 인한 사항에 책임이 없음을 보장합니다.
 
 이 허가서는 "저좌권"의 한 종류입니다. 이는 이 문서의 파생 작업물들 또한 같은 의미로 자유로워야함을 의미합니다. 
@@ -43,7 +43,7 @@ GNU 자유 문서 사용 허가서
 자유 문서는 자유 소프트웨어들에게 필수적이기 때문입니다. 
 자유 소프트웨어는 소프트웨어와 같은 자유도를 가지는 메뉴얼과 함께 제공되어야 합니다. 
 하지만, 이 허가서는 소프트웨어 메뉴얼에만 한정되지 않습니다. 
-주제를 불문하고 모든 출판물이나 문서에 사용할 수 있습니다. 
+주제를 불문하고 모든 발행물이나 문서에 사용할 수 있습니다. 
 교육이나 참조용 문서들에 본 허가서를 사용하는 것을 권장합니다.
 
 1. 적용 대상과 정의
@@ -103,29 +103,24 @@ PDF 형식이 있습니다. 공개 그림 형식의 예로는 PNG, XCF, 그리�
 등이 있습니다. 
 
 
-"제목 페이지"(Title Page)는 출판된 서적에 대해, 서적의 제목 페이지 자체와
+"제목 페이지"(Title Page)는 발행된 서적에 대해, 서적의 제목 페이지 자체와
 법적으로 허가서가 필요에 의해 제목 페이지에 귀속 시킨 모든 추가 페이지들을 의미합니다.
 제목 페이지 형식의 페이지가 없는 문서의 경우 "제목 페이지"는 해당 문서에서 본문 앞에
 나오는 문서의 제목에 가장 비슷한 페이지를 의미합니다.
 
+"발행자"(Publisher)는 문서를 공공에 베포하는 개인이나 기관을 의미합니다.
 
-"출판사"(Publisher)는 문서를 공공에 베포하는 개인이나 기관을 의미합니다.
+"XYZ라 이름 붙은" 단원의 의미는 문서 안에서 이름이 붙은 부분으로 제목이
+정확히 XYZ이거나 XYZ를 다른 언어로 번역한 문서 안에 XYZ가 괄호 안에 
+포함되어 있는 제목이 붙은 부분을 말합니다. 
+(XYZ는 "감사의 글", "헌사", "추천사"나 "개정 이력" 등의 특정 제목이 붙은 부분을 의미합니다.) 
+문서를 수정할 때, 이러한 단원들의 "제목을 유지"함은
+"XYZ라 이름 붙은" 단원이 정의에 따라 남아있어야 함을 의미합니다.
 
-
-A section "Entitled XYZ" means a named subunit of the Document whose
-title either is precisely XYZ or contains XYZ in parentheses following
-text that translates XYZ in another language.  (Here XYZ stands for a
-specific section name mentioned below, such as "Acknowledgements",
-"Dedications", "Endorsements", or "History".)  To "Preserve the Title"
-of such a section when you modify the Document means that it remains a
-section "Entitled XYZ" according to this definition.
-
-The Document may include Warranty Disclaimers next to the notice which
-states that this License applies to the Document.  These Warranty
-Disclaimers are considered to be included by reference in this
-License, but only as regards disclaiming warranties: any other
-implication that these Warranty Disclaimers may have is void and has
-no effect on the meaning of this License.
+경우에 따라 보증 면책 선언이 이 허가서의 적용 고지 다음에 포함될 수도 있습니다.
+이 보증 면책 선언 부분은 허가서에 포함되었다고 간주됩니다.
+하지만, 이는 오직 보증에 관한 면책입니다. 보증 면책이 가질 수 있는 다른
+암묵적 사항들은 모두 무효화되며 이 허가서에 어떠한 영향도 끼치지 않습니다.
 
 
 2. 동일 복제
@@ -140,58 +135,35 @@ no effect on the meaning of this License.
 
 피양도자는 위에 언급한 내용과 같은 조건 아래에서 복사본을 대여하거나 공개적으로 전시할 수도 있습니다.
 
-You may copy and distribute the Document in any medium, either
-commercially or noncommercially, provided that this License, the
-copyright notices, and the license notice saying this License applies
-to the Document are reproduced in all copies, and that you add no
-other conditions whatsoever to those of this License.  You may not use
-technical measures to obstruct or control the reading or further
-copying of the copies you make or distribute.  However, you may accept
-compensation in exchange for copies.  If you distribute a large enough
-number of copies you must also follow the conditions in section 3.
-
-You may also lend copies, under the same conditions stated above, and
-you may publicly display copies.
-
 
 3. 대량 복제
 ====================
 
-If you publish printed copies (or copies in media that commonly have
-printed covers) of the Document, numbering more than 100, and the
-Document's license notice requires Cover Texts, you must enclose the
-copies in covers that carry, clearly and legibly, all these Cover
-Texts: Front-Cover Texts on the front cover, and Back-Cover Texts on
-the back cover.  Both covers must also clearly and legibly identify
-you as the publisher of these copies.  The front cover must present
-the full title with all words of the title equally prominent and
-visible.  You may add other material on the covers in addition.
-Copying with changes limited to the covers, as long as they preserve
-the title of the Document and satisfy these conditions, can be treated
-as verbatim copying in other respects.
+인쇄물이나 인쇄된 표지를 가진 매체의 형태로 복사본을 100부 이상 발행하고
+해당 문서가 표지 구절을 명시하고 있다면, 반드시 인쇄물의 앞, 뒷 표지에
+모든 표지 구절을 명확하고 주시하기 쉬운 형태로, 앞 표지 구절은 앞 표지에,
+뒤 표지 구절은 뒤 표지에 기재해야 합니다. 두 표지 모두 반드시 이 복사본의 
+발행자를 명확하게 판별할 수 있도록 구성되어야 합니다. 앞 표지는 전체
+제목을 모든 단어를 빠뜨리지 않고 동일한 주목성과 가시성을 유지해야 합니다.
+추가로 표지에 다른 내용들을 추가할 수도 있습니다.
+표지에 한정된 변경을 포함하는 복사는 원문을 그대로 복사한다고 간주 될 수 있습니다.
+이때, 문서의 제목을 유지하고 이러한 조건들을 만족시켜야 합니다.
 
-If the required texts for either cover are too voluminous to fit
-legibly, you should put the first ones listed (as many as fit
-reasonably) on the actual cover, and continue the rest onto adjacent
-pages.
+표지에 들어가야할 내용이 너무 많아서 가독성을 해치는 경우 적당히 가능한 
+내용으로 표지에 작성하고 인접한 페이지에 나머지 내용을 기재할 수도 있습니다.
 
-If you publish or distribute Opaque copies of the Document numbering
-more than 100, you must either include a machine-readable Transparent
-copy along with each Opaque copy, or state in or with each Opaque copy
-a computer-network location from which the general network-using
-public has access to download using public-standard network protocols
-a complete Transparent copy of the Document, free of added material.
-If you use the latter option, you must take reasonably prudent steps,
-when you begin distribution of Opaque copies in quantity, to ensure
-that this Transparent copy will remain thus accessible at the stated
-location until at least one year after the last time you distribute an
-Opaque copy (directly or through your agents or retailers) of that
-edition to the public.
+비공개 복제물을 100부 이상 발행, 베포하는 경우 기계에서 읽을 수 있는
+공개 복제물을 각각의 비공개 복제물에 포함시켜야 합니다. 아니면, 일반
+대중이 표준 네트워크 프로토콜을 사용해 공개 복제물을 다운로드 할 수 있는
+네트워크 상의 공개 복제물의 위치를 비공개 저작물 안에 명시하거나 포함시켜야 합니다. 
+이 공개 복제물은 비공개 복제물에서 추가한 내용들을 제거한 상태여야 합니다.
+후자를 선택할 경우 주의해야 할 점이 있습니다. 비공개 복제물에 기재된
+위치에서 공개 복제물의 접근이 마지막 비공개 복제물의 베포
+후 1년까지는 직접적으로나 별도의 대리인, 소매업자를 통해서든 가능해야 합니다.
 
-It is requested, but not required, that you contact the authors of the
-Document well before redistributing any large number of copies, to
-give them a chance to provide you with an updated version of the
-Document.
+필수는 아니지만 문서를 대량으로 재 베포하기 전, 문서의 원본 저자와 연락해
+저자가 최신 판본을 제공할 기회를 주는 행위가 적절합니다. 
+
 
 
 4. 수정
@@ -206,150 +178,122 @@ A. 제목 페이지와 커버에 원본이나 이전 버전과 다른 제목을 
    이전 버전이 있을 경우 이력 부분에 나열되어야 합니다.
    원본이나 이전 버전의 저작권자의 허락이 있다면 동일한 제목을 사용할 수 있습니다.
 B. 제목 페이지에 저자로써 하나 혹은 여러 사람이나 기관의 목록이 올라가야 합니다.
-   이들은 수정본의 수정에 관한 저작권을 소유한 대상으로 최소 문서의 주요 저자가
+   이들은 수정본의 수정에 관한 저작권을 소유한 대상으로 최소 원문서의 주요 저자가
    5명 이상은 올라가 있어야 합니다. (5명 보다 적다면 모든 주요 저자를 적어야합니다)
    이는 저자들이 이 조항의 요구사항을 해제하지 않는 한 지켜저야 합니다.
-C. 제목 페이지에 수정본의 출판사를 기재해야합니다.
+C. 제목 페이지에 수정본의 발행자를 기재해야합니다.
 D. 원문서의 모든 저작권 고지 부분을 유지해야 합니다.
 E. 다른 저작권 고지에 인접부에 수정본의 적절한 저작권 고지를 추가해야 합니다.
 F. 저작권 고지 바로 다음에, 이 수정본이 본 허가서 아래에서 사용될 수 있다는
    허가 고지를 포함해야합니다. 이 고지는 아래의 부록 부분의 형태로 사용해야합니다.
-G. Preserve in that license notice the full lists of Invariant Sections
-   and required Cover Texts given in the Document's license notice.
-H. Include an unaltered copy of this License.
-I. Preserve the section Entitled "History", Preserve its Title, and add
-   to it an item stating at least the title, year, new authors, and
-   publisher of the Modified Version as given on the Title Page.  If
-   there is no section Entitled "History" in the Document, create one
-   stating the title, year, authors, and publisher of the Document as
-   given on its Title Page, then add an item describing the Modified
-   Version as stated in the previous sentence.
-J. Preserve the network location, if any, given in the Document for
-   public access to a Transparent copy of the Document, and likewise
-   the network locations given in the Document for previous versions
-   it was based on.  These may be placed in the "History" section.
-   You may omit a network location for a work that was published at
-   least four years before the Document itself, or if the original
-   publisher of the version it refers to gives permission.
-K. For any section Entitled "Acknowledgements" or "Dedications",
-   Preserve the Title of the section, and preserve in the section all
-   the substance and tone of each of the contributor acknowledgements
-   and/or dedications given therein.
-L. Preserve all the Invariant Sections of the Document,
-   unaltered in their text and in their titles.  Section numbers
-   or the equivalent are not considered part of the section titles.
-M. Delete any section Entitled "Endorsements".  Such a section
-   may not be included in the Modified Version.
-N. Do not retitle any existing section to be Entitled "Endorsements"
-   or to conflict in title with any Invariant Section.
-O. Preserve any Warranty Disclaimers.
+G. 원 문서의 사용 허가 고지에 포함된 모든 변경 불가 부분의 목록과 표지 구절을 수정판에
+   모두 유지시킵니다.
+H. 이 사용 허가서를 변경 없이 그대로 포함시킵니다.
+I. "개정 이력"으로 이름 붙은 단원을 그대로 유지시킵니다. 제목을 그대로 유지하고, 
+   이 부분에 최소한 제목, 발행 년도, 수정본의 새로운 저자, 그리고 수정본의 발행자를 
+   제목페이지에 포함된 대로 추가합니다. "개정 이력"으로 이름 붙은 부분이 없다면 
+   새로 만들고 제목 페이지에 포함된 대로 문서의 제목, 발행 년도, 발행자를 기재합니다.
+   그리고, 이전 글에 서술된 대로 수정본의 정보를 추가합니다.
+J. 네트워크 상에서의 위치를 유지해야합니다. 이는 문서의 공개 복제물을 대중에게
+   공개했을 시에 적용되며 문서의 기반이 된 이전 버전의 네트워크 위치도 마찮가지
+   로 취급됩니다. 이들은 "개정 이력" 부분에 포함되어 있을 수 있습니다.
+   문서가 발행된 시점에서 4년전 이상 전의 네트워크 위치는 포함하지 않을 수 있습니다.
+   아니면 참조하는 버전의 원 저작자가 허가할 경우 포함하지 않을 수 있습니다.
+K. "감사의 글"이나 "헌사" 부분이 있다면 제목을 유지하고 기여자에 대한 감사와 헌사를
+   모든 부분, 내용 및 어조를 포함해서 수정판에도 모두 유지합니다.
+L. 원본의 모든 변경 불가 부분을 수정본에도 유지. 이는 내용과 그 제목을 모두 포함합니다.
+   단원 순서를 나타내는 번호나 이와 동일한 사항들은 변경 불가 부분의 제목으로 간주되지 않습니다.
+M. 원본의 추천사 부분을 삭제할 것, 해당 부분은 수정본에 관한 내용이 아닙니다.
+N. 원본의 어떠한 단원도 "추천사"로 제목을 바꾸지 말고, 바꾸는 제목은
+   변경 불가 부분과 충돌하지 말야아합니다.
+O. 보증 면책 고지를 유지할 것
 
-If the Modified Version includes new front-matter sections or
-appendices that qualify as Secondary Sections and contain no material
-copied from the Document, you may at your option designate some or all
-of these sections as invariant.  To do this, add their titles to the
-list of Invariant Sections in the Modified Version's license notice.
-These titles must be distinct from any other section titles.
 
-You may add a section Entitled "Endorsements", provided it contains
-nothing but endorsements of your Modified Version by various
-parties--for example, statements of peer review or that the text has
-been approved by an organization as the authoritative definition of a
-standard.
+수정본이 문서에 없던 새로운 서두나 부록을 2차 구성부의 형태로 포함하고 있고 본 문서에
+있는 어떤 내용도 가져오지 않았다면, 해당 부분을 변경 불가 부분으로 선언할 수 있습니다.
+선언을 위해서는 수정본의 허가 고지부분에 해당 부분의 제목들을 불변 부분으로 선언하면 됩니다.
+이때, 이 제목들이 다른 단락의 제목들과 구분되어야 합니다.
 
-You may add a passage of up to five words as a Front-Cover Text, and a
-passage of up to 25 words as a Back-Cover Text, to the end of the list
-of Cover Texts in the Modified Version.  Only one passage of
-Front-Cover Text and one of Back-Cover Text may be added by (or
-through arrangements made by) any one entity.  If the Document already
-includes a cover text for the same cover, previously added by you or
-by arrangement made by the same entity you are acting on behalf of,
-you may not add another; but you may replace the old one, on explicit
-permission from the previous publisher that added the old one.
+수정본에 대한 다양한 집단, 예를 들어서 동료 평가나 표준적으로 권위 있는
+기관들이 승인한 내용이 추천사로 제공될 경우 "추천사"부분을 수정본에
+추가할 수 있습니다.
 
-The author(s) and publisher(s) of the Document do not by this License
-give permission to use their names for publicity for or to assert or
-imply endorsement of any Modified Version.
+수정본의 앞, 뒤 표지에 각각 5개, 25개의 단어 이하의 구절을 표지 구절로 
+추가할 수 있습니다. 한 개인, 단체 그리고 이들에 의해 이루진 협약은
+각각 1개의 문장만을 각각 앞, 뒤 표지에 추가할 수 있습니다. 동일 주체에
+의한 표지 구절이 이미 문서에 포함된 경우 새로운 구절을 동일 주체가 추가할 수
+없습니다. 단, 오래된 표지구절을 문서의 발행인으로 부터 명시적으로 승인 받은
+경우 새로운 표지 구절로 교체할 수 있습니다.
+
+이 허가서는 원 문서의 저자(들)과 발행자(들)이 이러한 수정본의 선전이나 
+혹은 수정본의 추천에 명시적으로나 암묵적으로나 이름이 사용됨에 
+동의함을 뜻하지 않습니다.
+
 
 5. 문서의 결합
 ====================
 
+이 허가서 아래에 베포되는 다른 문서들을 수정본에 관한 이 허가서의 4조
+조항들에 따라 결합시킬 수 있습니다. 이 결합은 각각 문서들의 변경 불가 부분들을
+과 그 목록들을 수정 없이 결합본의 허가 고지에 그대로 포함시켜야 합니다.
+또, 모든 보증 면제 부분도 그대로 유지합니다.
 
-You may combine the Document with other documents released under this
-License, under the terms defined in section 4 above for modified
-versions, provided that you include in the combination all of the
-Invariant Sections of all of the original documents, unmodified, and
-list them all as Invariant Sections of your combined work in its
-license notice, and that you preserve all their Warranty Disclaimers.
+결합물은 이 허가서의 복사본 1부만 포함기키면 됩니다. 여러 개의 동일한
+변경 불가 부분들도 1개로 통합할 수 있습니다. 여러 개의 변경 불가 부분들이
+동일한 제목을 가지고 내용이 다른 경우 각각에 대해 구분 가능한 표지를
+각 제목 끝에 괄호 안으로 추가합니다. 원 문서의 저자나
+해당 단락의 발행사를 알고있을 경우 이들을 표지에 넣고 아닐 경우 숫자를 사용할
+수 있습니다. 각 원본 문서의 저작권 고지에 기재된 변경 불가 부분들 또한
+이와 같은 방식을 사용해 결합합니다.
 
-The combined work need only contain one copy of this License, and
-multiple identical Invariant Sections may be replaced with a single
-copy.  If there are multiple Invariant Sections with the same name but
-different contents, make the title of each such section unique by
-adding at the end of it, in parentheses, the name of the original
-author or publisher of that section if known, or else a unique number.
-Make the same adjustment to the section titles in the list of
-Invariant Sections in the license notice of the combined work.
-
-In the combination, you must combine any sections Entitled "History"
-in the various original documents, forming one section Entitled
-"History"; likewise combine any sections Entitled "Acknowledgements",
-and any sections Entitled "Dedications".  You must delete all sections
-Entitled "Endorsements".
-
+결합물에 관해, 각 문서의 "개정 이력"부분은 모두 통합해 새로운 1 개의
+"개정 이력"으로 만들고 "감사의 글"과 "헌사" 등도 동일하게 통합해야 합니다.
+결합시 "추천사"는 모두 삭제해야합니다.
 
 6. 문서 규합
 ====================
 
-You may make a collection consisting of the Document and other
-documents released under this License, and replace the individual
-copies of this License in the various documents with a single copy
-that is included in the collection, provided that you follow the rules
-of this License for verbatim copying of each of the documents in all
-other respects.
+이 허가서를 따르는 여러 저작물을 묶고, 각각 저작물의 허가서 고지를 
+묶음본의 허가서 고지 1개로 대체할 수 있습니다. 단, 각 저작물의 내용
+복사에 관한 모든 측면에서 이 허가서의 내용을 준수해야 합니다.
 
-You may extract a single document from such a collection, and
-distribute it individually under this License, provided you insert a
-copy of this License into the extracted document, and follow this
-License in all other respects regarding verbatim copying of that
-document.
 
-7. 독립된 작업물과의 통합
+이 묶음본에서 단일 저작물을 추출해서, 이 허가서 아래에 다시 베포할 수도 있습니다.
+이 때, 이 허가서의 고지를 추출된 저작물에 포함시켜야 하고, 저작물의
+복사에 관련된 모든 측면에서 이 허가서의 내용을 준수해야 합니다.
+
+
+7. 독립된 저작물과의 통합
 ================================
 
-A compilation of the Document or its derivatives with other separate
-and independent documents or works, in or on a volume of a storage or
-distribution medium, is called an "aggregate" if the copyright
-resulting from the compilation is not used to limit the legal rights
-of the compilation's users beyond what the individual works permit.
-When the Document is included in an aggregate, this License does not
-apply to the other works in the aggregate which are not themselves
-derivative works of the Document.
+저작물이나 2차 저작물들을 독립적인 문헌과 작업물들과 함께 저장, 베포 매체로
+구성된 합본을 만들 경우 이는 "통합본"으로 불립니다. 이러한 통합 구성에 따른
+저작권이 통합본의 이용자들의 향후 작업을 법적으로 제한하는 형태로 사용되지 않는한,
+이 허가서에서 규정하는 수정본으로 취급하지 않습니다. 
+이 허가서가 적용된 저작물이 통합본안에 포함될 경우 이 허가서는 통합본 내
+다른 문서들이 허가서가 적용된 저작물에서 파생되지 않는 한 적용되지 않습니다. 
 
-If the Cover Text requirement of section 3 is applicable to these
-copies of the Document, then if the Document is less than one half of
-the entire aggregate, the Document's Cover Texts may be placed on
-covers that bracket the Document within the aggregate, or the
-electronic equivalent of covers if the Document is in electronic form.
-Otherwise they must appear on printed covers that bracket the whole
-aggregate.
+3조의 표지 구절이 통합본 내의 복제물에 적용되는 경우 해당 복제물이
+통합본의 전체 분량의 절반 미만인 경우 복제물의 표지 구절은 해당 복제물이
+위치한 곳의 표지에, 전자 문서일 경우 전자 문서에서 이에 해당하는 표지에
+위치해도 무방합니다. 다른 경우에는 전체 통합본의 표지 부분에 나타나야 합니다.
+
 
 8. 번역
 ====================
 
 번역은 수정의 일종으로 취급됩니다. 
 따라서 저작물의 번역본을 베포할 때는 4조의 내용을 따라 베포해야 합니다.
-불변 부분을 번역으로 대체할 때는 저작권자의 특별 허락이 필요합니다.
-하지만, 불변 부분의 일부나 전체의 번역본을 불변 부분과 포함할 수는 있습니다.
+변경 불가 부분을 번역으로 대체할 때는 저작권자의 특별 허락이 필요합니다.
+하지만, 변경 불가 부분의 일부나 전체의 번역본을 변경 불가 부분과 포함할 수는 있습니다.
 이 허가서의 번역본, 저작물 내의 허가서와 보증 면제의 통지는 영어 원본을 함께
 제공하는 조건 아래에서 번역본을 제공할 수 있습니다. 
-허가서, 통지, 보증 명제 내용에 관해 번역본과 원본이 다른 차이가 있다면
+허가서, 통지, 보증 면제 내용에 관해 번역본과 원본이 다른 차이가 있다면
 원본이 우선권을 가집니다.
 
-만약, 저작물 내 단락중 "감사의 말", "헌정" 혹은 "이력" 등의 이름이 붙은 단락이
-있는 경우, the requirement (section 4) to Preserve
-its Title (section 1) will typically require changing the actual
-title.
+만약, 저작물 내 단락중 1조에 기재된 "감사의 말", "헌정" 혹은 "이력" 등의 이름이 붙은 단락이
+있는 경우, 4조에 따른 제목의 보존 요건은 일반적으로 번역에 따라 실제 제목을 바꿀 수 있습니다.
+
 
 9. 권리 소멸
 ====================
@@ -357,79 +301,69 @@ title.
 이 허가서에서 아래에 명시된 경우를 제외하고, 문서를 복사, 수정
 별도의 부가 허가서 적용, 그리고 베포하는 행위는 모두 금지됩니다.
 그리고 이러한 복사, 수정, 별도 허가서 적용과 베포를 하려는 시도들
-또한, 금지됩니다. 이 허가서 아래에서 해당 사항들에 관한 작업자의 권리는
+또한, 금지됩니다. 이 허가서 아래에서 해당 사항들에 관한 위반자의 권리는
 정지됩니다.
 
-However, if you cease all violation of this License, then your license
-from a particular copyright holder is reinstated (a) provisionally,
-unless and until the copyright holder explicitly and finally
-terminates your license, and (b) permanently, if the copyright holder
-fails to notify you of the violation by some reasonable means prior to
-60 days after the cessation.
+그러나, 이러한 허가서의 위반을 모두 중단하면 특정 저작권자로 부터 받은
+허가는 다시 회복됩니다. (a) 잠정적으로는 저작권 소유자가 명시적으로 이용자의 허가를
+종료하지 않을 경우 종료할 때까지, (b) 영구적으로는 저작권 소유자가 중단 후
+60일 이내로 적절한 이유로 위반 사실을 통지하지 않은 경우입니다.
 
-Moreover, your license from a particular copyright holder is
-reinstated permanently if the copyright holder notifies you of the
-violation by some reasonable means, this is the first time you have
-received notice of violation of this License (for any work) from that
-copyright holder, and you cure the violation prior to 30 days after
-your receipt of the notice.
+또, 특정 저작권자로 부터 받은 허가는 다음의 경우 영구적으로 복원됩니다.
+저작권자가 위반 사항에 대해 적절한 이유로 통지한 경우, 이 허가에 의해
+해당 저작권자로 부터 위반 통지를 받은 사실이 처음일 때, 저작권자로 부터 
+위반 통보를 받고 해당 통보 이후 30일 이내로 위반 사항을 해결했을 때. 
+(이는 모든 작업물에 적용됩니다.) 
 
-Termination of your rights under this section does not terminate the
-licenses of parties who have received copies or rights from you under
-this License.  If your rights have been terminated and not permanently
-reinstated, receipt of a copy of some or all of the same material does
-not give you any rights to use it.
+이 허가서 아래에서 위반으로 소멸된 권리는 해당 위반자로 부터 복제물과
+권리를 받은 다른 집단의 권리를 소멸시키지 않습니다. 위반자의 권리가 종료 되고
+영구적으로 복원되지 않은 경우, 동일한 자료의 일부 또는 전부의 수령은
+해당 위반자에 대한 어떤 권리도 부여하지 않습니다.
 
-1.  허가서의 향후 개정
-======================
+
+10. 허가서의 향후 개정
+=======================
 
 자유 소프트웨어 재단에서 GNU 자유 문서 사용 허가서의 새로운 개정안을
-차후에 출판할 수도 있습니다. 해당 새 개정본은 현재 판본과 동일한 정신을
+차후에 발행할 수도 있습니다. 해당 새 개정본은 현재 판본과 동일한 정신을
 공유하겠지만 새로운 문제나 고려 사항에 대해 세부적으로는 다를 수 있습니다.
 http://www.gnu.org/copyleft/ 를 참고하길 바랍니다.
 
 허가서의 개정판은 판본의 숫자를 통해 구분합니다. 저작물이 이 허가서의
-특정판본의 숫자와 "차후 갱신본"를 적용했다면, 해당 버전과 차후 출판된 갱신본의
+특정판본의 숫자와 "차후 갱신본"를 적용했다면, 해당 버전과 차후 발행된 갱신본의
 중 하나를 선택해 따를 수 있습니다. 갱신본은 자유 소프트웨어 재단에서 
-정식 출판된 상황이어야 합니다. 초안은 해당하지 않습니다.
-특정 판본이 명시되지 않았다면 자유 소프트웨어 재단에서 출판한 판본을 임의로 선택해
-따를 수 있습니다. If the Document specifies that a proxy can decide 
-which future versions of this License can be used, that proxy's public 
-statement of acceptance of a version permanently authorizes you to choose that version for the
-Document.
+정식 발행된 상황이어야 합니다. 초안은 해당하지 않습니다.
+특정 판본이 명시되지 않았다면 자유 소프트웨어 재단에서 발행한 판본을 임의로 선택해
+따를 수 있습니다. 만약, 문서에서 대리인이 차후의 허가서 판본을 결정할 수 있다고
+명시할경우, 대리인의 차후 공공 고지의 판본 특정이 영구적으로 문서의 허가서
+판본 규정으로 인정됩니다.
 
 
-11. 재허가
+
+11.  재허가
 ====================
 
-"대규모 다중 저자 협업 사이트"("MMC Site")는 저작물을 베포하고 누구나
+"대규모 다중 저자 협업 사이트"("MMC 사이트")는 저작물을 베포하고 누구나
 해당 저작물을 수정할 수 있게 하는 기능들을 제공하는 World Wide Web
 서버를 의미합니다. 누구나 수정할 수 있는 공공 위키가 이러한 사이트의
-예시입니다. A "Massive Multiauthor Collaboration" (or "MMC") contained in the site
-means any set of copyrightable works thus published on the MMC site.
+예시입니다. "대규모 다중 저자 협업물"(MMC)은 이러한 MMC 사이트에서 발행되는
+모든 종류의 저작물을 의미합니다.
 
 "CC-BY-SA"는 Creative Commnos Attribution-Share Alike 3.0을 의미합니다.
-이 허가서는 Creative Commons Corporation에 의해 출판되었습니다.
+이 허가서는 Creative Commons Corporation에 의해 발행되었습니다. 이 기관은
+캘리포니아 주의 샌프란시스코에 위치한 비영리 기관입니다. 허가서의 차후 갱신판 
+또한 동일한 기관에서 베포됩니다.
 
-허가서의 차후 갱신판 또한 동일한 기관에서 베포됩니다.
-"CC-BY-SA" means the Creative Commons Attribution-Share Alike 3.0 
-license published by Creative Commons Corporation, a not-for-profit 
-corporation with a principal place of business in San Francisco, 
-California, as well as future copyleft versions of that license 
-published by that same organization.
+MMC는 다음의 조건 아래에서 "재허가 가능 저작물"입니다. 
+MMC의 이용 허가가 이 허가서를 따르고, MMC의 모든 내용이 
+MMC사이트가 아닌 다른 곳에서 먼저 발행된 문서가 이 허가서를 따르고 
+나중에 MMC에 통합되었을 때, (1) 표지 구절이이나
+변경 불가 부분이 없고, (2) 2008년 11월 1일 전에 통합되었을 경우.
 
-"Incorporate" means to publish or republish a Document, in whole or in 
-part, as part of another Document.
+MMC 사이트의 운영자는 사이트 내부의 MMC를 다음의 조건 아래에서 
+재 발행할 수 있습니다. CC-BY-SA 허가를 따르고, 2009년 8월 1일 이전 시간이고, 
+MMC가 재허가 가능 저작물 일 때.
 
-An MMC is "eligible for relicensing" if it is licensed under this 
-License, and if all works that were first published under this License 
-somewhere other than this MMC, and subsequently incorporated in whole or 
-in part into the MMC, (1) had no cover texts or invariant sections, and 
-(2) were thus incorporated prior to November 1, 2008.
-
-The operator of an MMC Site may republish an MMC contained in the site
-under CC-BY-SA on the same site at any time before August 1, 2009,
-provided the MMC is eligible for relicensing.
 
 부록: 문서에 허가서 적용하기
 =================================
