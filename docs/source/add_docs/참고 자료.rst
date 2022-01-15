@@ -26,7 +26,7 @@ C 프로그래밍
     single: Brian Kernighan
     single: K.N. King
 
-* Kernighan, B.W. & Ritchie, D.M., The C Programming Language, 2nd ANSI, Pearson Educación, 1988, isbn:9789688802052.
+* **Kernighan, B.W. & Ritchie, D.M., The C Programming Language, 2nd ANSI, Pearson Educación, 1988, isbn:9789688802052.**
    
    Denis Ritchie와 Brian Kernighan이 작성한 책으로 ANSI C 표준을 기반으로한 책입니다. 
    이 라이브러리 내에서 쓰이는 표준이 ANSI C를 기반하므로 표준을 참고하기에 충분합니다.
@@ -38,7 +38,7 @@ C 프로그래밍
    현대적인 프로그래밍 규약과 스타일은 다른 서적들이 더 좋은 자료들을
    제공해 줄 수 있습니다.
 
-* King, K.N., C Programming: A Modern Approach. 2nd, W.W. Norton, 2008, isbn:9780393979503.
+* **King, K.N., C Programming: A Modern Approach. 2nd, W.W. Norton, 2008, isbn:9780393979503.**
 
    K.N.King 의 저서로 C99 표준을 따릅니다. 실제 우리가 배우는 많은 편리한 C의 기능들은
    ANSI C 이후 C99에서 도입된 기능들이 많습니다. TCPL이 좋은 책이고 C를 공부할 때 한번은 참고해 봐야할 책이지만 
@@ -127,7 +127,7 @@ DE 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
   일반 출판본은 자명하므로 언급하지 않겠습니다.
 
 
-* Abramwotiz & Stegun
+* **Abramwotiz & Stegun**
 
    * Abramowitz, M., Stegun, I.A.: Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables. US Government Printing Office, 
      Washington, 10th printing, with corrections (December 1972)
@@ -156,7 +156,7 @@ DE 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
 .. _Alan P. Sexton: https://www.cs.bham.ac.uk/~aps/
 .. _A Resource for Scientific Document Analysis: https://www.cs.bham.ac.uk/~aps/research/projects/as/project.php
 
-* DLMF
+* **DLMF**
 
    Abramwotiz & Stegun를 대체하기 위해 `NIST <https://www.nist.gov/>`_ [#NIS]_ 에서 
    `DLMF <https://dlmf.nist.gov/>`_ 프로젝트를 시작했습니다. 
@@ -177,7 +177,7 @@ DE 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
 .. _Cambridge University Press: https://www.cambridge.org/
 .. _NIST Handbook of Mathematical Functions: https://www.cambridge.org/de/academic/subjects/mathematics/abstract-analysis/nist-handbook-mathematical-functions?format=WW&isbn=9780521140638
 
-* Encyclopedia of Mathematics
+* **Encyclopedia of Mathematics**
 
    `Encyclopedia of Mathematics`_ 는 `유럽 수학회`_ 에서 관리하는 온라인 수학 백과입니다.
    `Springer <https://www.springer.com/kr>`_ 출판사에서 `Book series Encyclopaedia of Mathematics`_ 로 출판본을 판매하고 있습니다.
@@ -190,7 +190,7 @@ DE 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
 .. _유럽 수학회: https://euromathsoc.org/
 .. _Book series Encyclopaedia of Mathematics: https://www.springer.com/series/5920
 
-* Wolfram Math World
+* **Wolfram Math World**
 
    `Wolfram Math World`_ 는  Wolfram Research, Inc. 에서 Eric Weisstein의 프로젝트를 후원해 만들어진 온라인 수학 참고 문헌입니다.
    `The CRC Encyclopedia of Mathematics`_ 란 이름으로 `CRC <https://www.routledge.com/>`_ 에서 2009년도에 출판한 서적이 있습니다.
@@ -202,7 +202,7 @@ DE 10진수, HEX: 16진수, OCT: 8진수, CHAR: 문자
 .. _Wolfram Math World: https://mathworld.wolfram.com
 .. _The CRC Encyclopedia of Mathematics: https://www.routledge.com/The-CRC-Encyclopedia-of-Mathematics-Third-Edition==-3-Volume-Set/Weisstein/p/book/9781420072211
 
-* NIST Standard Reference Data
+* **NIST Standard Reference Data**
 
    NIST에서 운영하는 사이트로 과학 분야의 인용, 참고로 쓰일 수 있는 표준 데이터들을 연구, 생성, 베포합니다.
    최신 물리 상수나 재료의 특성값이 필요한 경우 유용하게 사용할 수 있습니다.
@@ -333,6 +333,11 @@ GSL 설치 단원에서 ICC와 AOCC를 언급했습니다. Intel과 AMD에서는
 
 **GSL Extension**
 
+이 단락의 프로그램들은 GNU 공식 홈페이지의 Extensions 목록에 기재되어 있습니다.
+그중 상당수의 프로그램들이 폐업한 Network Theory Ltd 출판사의 서버에 보관되어 있어
+현재 아카이브 서버에 페이지만 남아있습니다. 아래 목록은 현재 사용가능한
+소프트웨어 목록입니다.
+
 * `Tensor <https://github.com/zhtvk/tensor>`_ 
 
   다차원 배열 표현과 처리를 위한 텐서(Tensor) 라이브러리입니다.
@@ -368,9 +373,9 @@ GSL 설치 단원에서 ICC와 AOCC를 언급했습니다. Intel과 AMD에서는
    오픈소스 그래픽 소프트웨어입니다. 
    C api를 제공해 C에서 여러 그래프와 3D 플롯을 그리는 데 사용할 수 있습니다.
 
-.. only:: latex
-  
-  * http://www.gnuplot.info/
+  .. only:: latex
+
+    * http://www.gnuplot.info/
 
 * `GNU Octave`_ 
 
@@ -378,9 +383,9 @@ GSL 설치 단원에서 ICC와 AOCC를 언급했습니다. Intel과 AMD에서는
    자체 언어가 있지만, C, C++, FOTRAN, Python 등으로 쓰인 모듈을 불러오거나 C++ 등에서 Octave 함수를 사용할 수도 있습니다. 
    C는 C++ 함수를 호출하는 형태로 사용 가능합니다.
 
-.. only:: latex
-  
-  * https://www.gnu.org/software/octave/index
+  .. only:: latex
+
+    * https://www.gnu.org/software/octave/index
 
 .. _GNU Octave: https://www.gnu.org/software/octave/index
 
@@ -433,7 +438,7 @@ GSL 설치 단원에서 ICC와 AOCC를 언급했습니다. Intel과 AMD에서는
 GSL 지원 HPC 서비스
 ============================
 
-HPC Service on University
+**HPC Service on University**
 
 * Sheffield 대학 : https://docs.hpc.shef.ac.uk/en/latest/sharc/software/libs/gsl.html?highlight=GSL
 * Honkong 대학 : https://hpc.hku.hk/hpc/software/gsl/
@@ -444,7 +449,7 @@ HPC Service on University
 * Louisiana 주립대 : http://www.hpc.lsu.edu/docs/guides/software.php?software=gsl
 * Siegen 대학 : https://cluster.uni-siegen.de/omni/application-software/gnu-scientific-library/?lang=en
 
-상용
+**상용**
 
 * Livermore Computing Center : https://hpc.llnl.gov/software/mathematical-software/gnu-scientific-library
 * : http://hpc.iucaa.in/?q=pleiadesBeginnersGuide

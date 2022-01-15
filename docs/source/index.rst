@@ -117,19 +117,19 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
 
    :: 
 
-      Copyright © 2022  Hyung Seong, Kim
+      Copyright © 2022  김현성 Hyung Seong, Kim
 
       Permission is granted to copy, distribute and/or modify this document under 
       the terms of the GNU Free Documentation License, Version 1.3 or any later version 
       published by the Free Software Foundation as same as the original English version of the text (shown above); 
-      with additional Invariant Sections "역자와 참고 자료(*)", 
+      with additional Invariant Sections "역자(*)", 
       A copy of the license is included in the section entitled "GNU 자유 문서 사용 허가서". 
 
       Copyright © 2022  김현성 Hyung Seong, Kim
 
       GNU 자유 문서 사용 허가서 1.3판과 자유 소프트웨어 재단에서 발행한 이후의 갱신본의
       규정에 따라, 본 저작물의 복제, 베포 및 수정을 허가합니다. 상기한 영어 원서와 똑같은 규약을 
-      추가 변경 불가 부분 "역자와 참고 자료(*)" 단원을 포함해 따릅니다.
+      추가 변경 불가 부분 "역자(*)" 단원을 포함해 따릅니다.
       이 허가서의 복사본은 "GNU 자유 문서 사용 허가서"로 지어진 단락에
       포함되어 있습니다.
 
@@ -162,7 +162,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
        with additional Invariant Sections "역자(*)", 
        A copy of the license is included in the section entitled "GNU 자유 문서 사용 허가서". 
  
-       Copyright © 2022  김현성
+       Copyright © 2022  김현성 Hyung Seong, Kim
  
        GNU 자유 문서 사용 허가서 1.3판과 자유 소프트웨어 재단에서 발행한 이후의 갱신본의
        규정에 따라, 본 저작물의 복제, 베포 및 수정을 허가합니다. 상기한 영어 원서와 똑같은 규약을 
@@ -186,8 +186,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
 
       본 커버의 디자인은 여러 저작물의 조합입니다.
       그림 라이센스 조항은 해당 그림들과 함께 본 책의 "그림의 허가서"
-      단락에 기재합니다. 이 외 메뉴얼 원본의 그래프등의 그림은 GFDL을 따르고
-      외부 디자인을 제외한 커버의 디자인은 GPL 라이센스 아래에 베포됩니다.
+      단락에 기재합니다. 이 외 메뉴얼 원본의 그래프등의 그림은 GFDL을 따릅니다.
 
 
 .. toctree:: 

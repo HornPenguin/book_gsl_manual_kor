@@ -225,77 +225,24 @@ Fedora 계열과 Mac은 별도로 같이 기술합니다.
 
 .. code-block:: console
 
-    $dnf
-    $dnf
+    $sudo dnf check-update
+    $sudo dnf upgrade
+
+**OSX**
+
+.. code-block:: console
+
+    $brew update
+    $brew upgrade
 
 만약 설치되어있지 않다면, :code:`gcc` 를 설치해 주어야합니다. 
 후술할 :code:`build-essential` 을 이용해 다른 개발 도구들과 함께 한꺼번에 설치해도 됩니다.
 
-
 Ubuntu와 같은 Debian 계열의 기본 저장소에서 이는 :code:`build-essential` 패키지 내에 포함되어 있습니다. 
 이 패키지는 메타 패키지의 일종으로 다른 여러 패키지의 묶어서 한번에 설치하기 위한 패키지입니다.
 
-다음을 입력해 :code:`build-essential`  를 설치하면 필요한 
+다음을 입력해 :code:`build-essential`  를 설치하면 프로그램 개발에 필요한 
 :code:`gcc` , :code:`g++` , :code:`make` 등의 여러 컴파일러와 유틸리티를 설치 할 수 있습니다.
-
-**build-essential** 패키지
-
-.. list-table:: build-essential 패키지의 포함 목록 []
-    :header-rows: 1
-
-    * - Package 
-      - Description
-    * - libc-dev
-      - 표준 ISO C 라이브러리
-    * - gcc, g++
-      - gnu complier collection 과 gnu C++ Compiler
-    * - make
-      - make 
-
-::
-
-    List of Build-Essential packages
-                    as of 2017-09-17, Debian sid
-
-    .
-
-    libc6-dev [!alpha !ia64 !hurd-i386] | libc0.3-dev [hurd-i386] | libc6.1-dev [alpha ia64] | libc-dev
-    Provides the ISO C standard library
-    Indirectly depended on by g++, but we'll ignore
-    it since libc6-dev is used for non-C++ programs too.
-
-    libc6-dev-sparc64 [sparc]
-    Used only on the sparc architecture.
-
-    gcc (>= 4:10.2)
-    g++ (>= 4:10.2)
-
-    NOTE:
-    The libstdc++ -dev library is not needed, as g++ depends on it
-
-    make
-    Also depended on by dpkg-dev, but make does warrant its own
-    dependency since debian/rules will need it even if dpkg-dev
-    stopped depending on it
-
-    dpkg-dev (>= 1.17.11)
-    Provides dpkg-genchanges and other scripts.  Versioned, because
-    of support for the build-time dependency fields in /debian/control
-    and dpkg-architecture support for OS and CPU information.
-
-    NOTE:
-    Although this list does not contain them, all `Essential: yes'
-    packages are build-essential as well.  A list of such packages
-    can be found by executing the following command
-        `grep-status -FEssential -sPackage -ni yes'
-    when the `grep-dctrl' package is installed and in its default
-    configuration.  Such list is installed with this package as
-    the file
-        `/usr/share/doc/build-essential/essential-packages-list'
-    
-    hurd-dev [hurd-i386]
-    Provides libpthread.so (and other such essential components).
-
 
 다음을 입력해 :code:`build-essential` 패키지를 설치합니다.
 
@@ -310,6 +257,8 @@ Fedora/RHEL 계열에서 비슷한 역할을 하는 패키지 묶음으로는
 .. code-block:: console
 
     $sudo dnf groupinstall "Development Tools" "Development Libraries"
+
+OSX에서는 기본으로 clang을 비롯한 make 프로그램들이 설치 되어 있습니다. 
 
 GSL 다운로드 
 ~~~~~~~~~~~~~~~~~~~~~~
