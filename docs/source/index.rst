@@ -192,66 +192,66 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
 .. toctree:: 
    :maxdepth: 2
 
-   소개.rst
-   라이브러리 사용.rst
-   오류 관리.rst
-   수학 함수들.rst
-   복소수.rst
-   다항식.rst
-   특수 함수.rst
-   벡터와 행렬.rst
-   순열.rst
-   조합.rst
-   중복 집합.rst
-   정렬.rst
-   BLAS 지원.rst
-   선형 대수학.rst
-   고유 공간.rst
-   고속 푸리에 변환.rst
-   수치 적분.rst
-   난수 생성기.rst
-   Quasi-연속 난수.rst
-   난수 분포.rst
-   통계.rst
-   통계 실행.rst
-   디지털 필터링.rst
-   히스토그램.rst
-   N-튜플.rst
-   몬테카를로 적분.rst
-   담금질 기법.rst
-   상미분 방정식.rst
-   보간법.rst
-   수치 미분.rst
-   체비쇼프 근사.rst
-   급수 가속.rst
-   웨이블렛 변환
-   이산 한켈 변환.rst
-   함수의 근 탐색.rst
-   함수의 최솟값 탐색.rst
-   다변수 함수의 근 탐색.rst
-   다변수 함수의 최솟값 탐색.rst
-   선형 최소 제곱법.rst
-   비선형 최소 제곱법.rst
-   B-스플라인.rst
-   희소 행렬.rst
-   희소 BLAS 지원.rst
-   희소 선형 대수.rst
-   물리 상수.rst
-   IEEE 부동 소수점 대수.rst
+   chapters/소개.rst
+   chapters/라이브러리 사용.rst
+   chapters/오류 관리.rst
+   chapters/수학 함수들.rst
+   chapters/복소수.rst
+   chapters/다항식.rst
+   chapters/특수 함수.rst
+   chapters/벡터와 행렬.rst
+   chapters/순열.rst
+   chapters/조합.rst
+   chapters/중복 집합.rst
+   chapters/정렬.rst
+   chapters/BLAS 지원.rst
+   chapters/선형 대수학.rst
+   chapters/고유 공간.rst
+   chapters/고속 푸리에 변환.rst
+   chapters/수치 적분.rst
+   chapters/난수 생성기.rst
+   chapters/Quasi-연속 난수.rst
+   chapters/난수 분포.rst
+   chapters/통계.rst
+   chapters/통계 실행.rst
+   chapters/디지털 필터링.rst
+   chapters/히스토그램.rst
+   chapters/N-튜플.rst
+   chapters/몬테카를로 적분.rst
+   chapters/담금질 기법.rst
+   chapters/상미분 방정식.rst
+   chapters/보간법.rst
+   chapters/수치 미분.rst
+   chapters/체비쇼프 근사.rst
+   chapters/급수 가속.rst
+   chapters/웨이블렛 변환
+   chapters/이산 한켈 변환.rst
+   chapters/함수의 근 탐색.rst
+   chapters/함수의 최솟값 탐색.rst
+   chapters/다변수 함수의 근 탐색.rst
+   chapters/다변수 함수의 최솟값 탐색.rst
+   chapters/선형 최소 제곱법.rst
+   chapters/비선형 최소 제곱법.rst
+   chapters/B-스플라인.rst
+   chapters/희소 행렬.rst
+   chapters/희소 BLAS 지원.rst
+   chapters/희소 선형 대수.rst
+   chapters/물리 상수.rst
+   chapters/IEEE 부동 소수점 대수.rst
 
-   수치 해석 프로그램의 디버깅.rst
-   autoconf.rst
-   GSL의 기여자들.rst
-   GSL CBLAS 라이브러리.rst
-   GNU 일반 공중 사용 허가서.rst
-   GNU 자유 문서 사용 허가서.rst
-   add_docs/GSL 디자인 문서.rst
-   add_docs/이력.rst
-   add_docs/GSL 설치.rst
-   add_docs/참고 자료.rst
-   add_docs/병렬화.rst
-   add_docs/영문 용어.rst
-   add_docs/역자.rst
+   chapters/수치 해석 프로그램의 디버깅.rst
+   chapters/autoconf.rst
+   chapters/GSL의 기여자들.rst
+   chapters/GSL CBLAS 라이브러리.rst
+   chapters/GNU 일반 공중 사용 허가서.rst
+   chapters/GNU 자유 문서 사용 허가서.rst
+   chapters/add_docs/GSL 디자인 문서.rst
+   chapters/add_docs/이력.rst
+   chapters/add_docs/GSL 설치.rst
+   chapters/add_docs/참고 자료.rst
+   chapters/add_docs/병렬화.rst
+   chapters/add_docs/영문 용어.rst
+   chapters/add_docs/역자.rst
 
 .. rubric:: 각주
 
