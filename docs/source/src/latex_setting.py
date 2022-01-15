@@ -18,9 +18,20 @@ custom_setting = r'''
 '''
 
 fontpkg= r'''
-\setmainfont{NanumMyeongjo.ttf}
-\setsansfont{NanumBarunGothic.ttf}
-\setmonofont{D2Coding.ttc}
+\setmainfont{NanumMyeongjo}[
+    Path= ./,
+    Extension = .ttf,
+    BoldFont=*ExtraBold
+]
+\setsansfont{NanumBarunGothic}[
+    Path= ./,
+    Extension = .ttf,
+    BoldFont=*Bold
+]
+\setmonofont{D2Coding}[
+    Path= ./,
+    Extension = .ttc
+]
 
 \setCJKmainfont[Ligatures=TeX,BoldFont={*ExtraBold},AutoFakeSlant]{NanumMyeongjo.ttf}
 \setCJKsansfont[Ligatures=TeX,BoldFont={*Bold},AutoFakeSlant]{NanumBarunGothic.ttf}
