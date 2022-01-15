@@ -39,7 +39,7 @@ Spherical Harmonics, Psi(Digamma)함수, Synchrotron 함수, Transport 함수,
     double y = gsl_sf_bessel_J0(x);
 
 
-이 방법은 오류 코드를 확인하거나 오차 값을 계산할 수 없습니다. 
+이 방법은 오류 값를 확인하거나 오차 값을 계산할 수 없습니다. 
 이러한 정보를 얻기 위해서는 오류 관리 호출 형태로 대체해서 해당 정보를 저장할 변수를 인자에 하나 더 추가해야 합니다.
 
 .. code-block:: c

@@ -8,3 +8,4 @@
 * 조정 계수 없는 역 변환: 
 * 조합적 최적화: Combinatorial optimization
 * 조정된 에어리 함수: Scaled version of Airy function
+* 점진적 언더플로우: Gradual Underflow

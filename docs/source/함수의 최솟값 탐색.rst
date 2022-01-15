@@ -106,7 +106,7 @@ Fig 27.을 참고하십시오.
   주어진 함수 :math:`f` 초기 탐색 범위 [ :math:`x_lower` :math:`x_upper` ] 를 사용하도록 설정하며, 
   초기 최소 지점은 :math:`x_minimum` 로 추정합니다.
 
-  만약, 주어진 범위가 최소 지점을 포함하고 있지 않다면, 함수는 :math:`GSLL_EINVAL` 오류 코드를 반환합니다.
+  만약, 주어진 범위가 최소 지점을 포함하고 있지 않다면, 함수는 :math:`GSLL_EINVAL` 오류 값를 반환합니다.
 
 .. function:: int gsl_min_fminimizer_set_with_values (gsl_min_fminimizer * s, gsl_function * f, double x_minimum, double f_minimum, double x_lower, double f_lower, double x_upper, double f_upper)
 
@@ -145,11 +145,11 @@ Fig 27.을 참고하십시오.
 
 .. function:: int gsl_min_fminimizer_iterate (gsl_min_fminimizer * s)
 
-  최소화 공간 :math:`s` 갱신합니다. 만약, 갱신 도중 예상치 못한 문제가 생긴다면 다음의 오류 코드가 반환됩니다.
+  최소화 공간 :math:`s` 갱신합니다. 만약, 갱신 도중 예상치 못한 문제가 생긴다면 다음의 오류 값가 반환됩니다.
 
   .. macro:: GSL_EBADFUNC
 
-      이 오류 코드는 함수 값이 :math:`Inf` 나 :math:`NaN` 가 되는 특이점이 나올 경우 반환됩니다.
+      이 오류 값는 함수 값이 :math:`Inf` 나 :math:`NaN` 가 되는 특이점이 나올 경우 반환됩니다.
 
   .. macro:: GSL_FAILURE
 
