@@ -306,13 +306,13 @@ Here is a short program which shows how to create a global
 generator using the environment variables :macro:`GSL_RNG_TYPE` and
 :macro:`GSL_RNG_SEED`,
 
-.. include:: examples/rng.c
+.. include:: /examples/rng.c
    :code:
 
 Running the program without any environment variables uses the initial
 defaults, an :code:`mt19937` generator with a seed of 0,
 
-.. include:: examples/rng.txt
+.. include:: /examples/rng.txt
    :code:
 
 By setting the two variables on the command line we can
@@ -1106,12 +1106,12 @@ Examples
 The following program demonstrates the use of a random number generator
 to produce uniform random numbers in the range [0.0, 1.0),
 
-.. include:: examples/rngunif.c
+.. include:: /examples/rngunif.c
    :code:
 
 Here is the output of the program,
 
-.. include:: examples/rngunif.txt
+.. include:: /examples/rngunif.txt
    :code:
 
 The numbers depend on the seed used by the generator.  The default seed
@@ -1123,7 +1123,7 @@ multiple-recursive generator :code:`mrg`::
 
   $ GSL_RNG_SEED=123 GSL_RNG_TYPE=mrg ./a.out 
 
-.. include:: examples/rngunif2.txt
+.. include:: /examples/rngunif2.txt
    :code:
 
 References and Further Reading

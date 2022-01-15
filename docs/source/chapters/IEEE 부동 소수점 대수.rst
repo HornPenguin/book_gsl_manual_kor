@@ -152,7 +152,7 @@ the single and double precision representations of the fraction
 For comparison the representation of the value promoted from
 single to double precision is also printed.
 
-.. include:: examples/ieee.c
+.. include:: /examples/ieee.c
    :code:
 
 :math:`1/3` 의 이진 표현은 :math:`0.01010101...` 입니다. 아래의 결과는
@@ -303,7 +303,7 @@ IEEE 표준은 부동 소수점 연산을 제어하기 위해 몇가지 특정 *
       e = 1 + 1/2! + 1/3! + 1/4! + ... 
         = 2.71828182846...
 
-.. include:: examples/ieeeround.c
+.. include:: /examples/ieeeround.c
    :code:
 
 다음 결과는 :code:`round-to-nearest` 설정에서 나온 결과입니다. 

@@ -346,7 +346,7 @@ Level 3
 행렬들은 행-기반 순서로 저장되어 있습니다. 하지만, 열-기반 순서로도 저장할 수 있습니다.
 :func:`cblas_sgemm` 의 첫번째 인자 값을 :code:`CblasColMajor` 로 바꾸면 됩니다.
 
-.. include:: examples/cblas.c
+.. include:: /examples/cblas.c
    :code:
 
 프로그램의 컴파일은 다음 명령어를 사용면 됩니다.
@@ -359,5 +359,5 @@ Level 3
 이는 |cblas| 라이브러리가 독립적으로 제공되기 때문입니다.
 다음은 프로그램의 실행 결과입니다.
 
-.. include:: examples/cblas.txt
+.. include:: /examples/cblas.txt
    :code:

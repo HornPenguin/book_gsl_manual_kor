@@ -285,12 +285,12 @@ The next example uses the function :func:`gsl_sort_smallest` to select
 the 5 smallest numbers from 100000 uniform random variates stored in an
 array,
 
-.. include:: examples/sortsmall.c
+.. include:: /examples/sortsmall.c
    :code:
 
 The output lists the 5 smallest values, in ascending order,
 
-.. include:: examples/sortsmall.txt
+.. include:: /examples/sortsmall.txt
    :code:
 
 References and Further Reading

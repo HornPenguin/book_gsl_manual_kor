@@ -165,7 +165,7 @@ simulated "events", each with 3 associated values :math:`(x,y,z)`.  These
 are generated from a Gaussian distribution with unit variance, for
 demonstration purposes, and written to the ntuple file :file:`test.dat`.
 
-.. include:: examples/ntuplew.c
+.. include:: /examples/ntuplew.c
    :code:
 
 The next program analyses the ntuple data in the file :file:`test.dat`.
@@ -174,7 +174,7 @@ event, :math:`E^2=x^2+y^2+z^2`, and select only those which exceed a
 lower limit of 1.5.  The selected events are then histogrammed using
 their :math:`E^2` values.
 
-.. include:: examples/ntupler.c
+.. include:: /examples/ntupler.c
    :code:
 
 :numref:`fig_ntuples` shows the distribution of the selected events.
@@ -182,7 +182,7 @@ Note the cut-off at the lower bound.
 
 .. _fig_ntuples:
 
-.. figure:: /images/ntuple.png
+.. figure:: //images/ntuple.png
    :scale: 60%
 
    Distribution of selected events

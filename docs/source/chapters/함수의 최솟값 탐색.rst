@@ -20,7 +20,7 @@
 
 Fig 27.을 참고하십시오.
 
-.. figure:: /images/min-interval.png
+.. figure:: //images/min-interval.png
   :scale: 60%
    
   상하한 값이 주어진 닫힌 구간의 함수의 최소값 추정 장면.
@@ -246,13 +246,13 @@ Fig 27.을 참고하십시오.
 의 최소값을 찾는 프로그램입니다. 해당 함수의 최소값은 :math:`x= \pi` 지점입니다.
 시작 구간은 :math:`(0,6)` , 초기 추정 최소값은 :math:`2` 입니다.
 
-.. include:: examples/min.c
+.. include:: /examples/min.c
    :code:
 
 
 다음은 작성한 최소화 프로그램의 결과입니다.
 
-.. include:: examples/min.txt
+.. include:: /examples/min.txt
    :code:
          
 참고 문헌과 추가 자료

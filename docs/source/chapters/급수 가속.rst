@@ -129,7 +129,7 @@ using the series,
 After :data:`N` terms the error in the sum is :math:`O(1/N)`, making direct
 summation of the series converge slowly.
 
-.. include:: examples/sum.c
+.. include:: /examples/sum.c
    :code:
 
 The output below shows that the Levin :math:`u`-transform is able to obtain an 
@@ -139,7 +139,7 @@ using the first eleven terms of the series.  The
 error estimate returned by the function is also accurate, giving
 the correct number of significant digits. 
 
-.. include:: examples/sum.txt
+.. include:: /examples/sum.txt
    :code:
 
 Note that a direct summation of this series would require 

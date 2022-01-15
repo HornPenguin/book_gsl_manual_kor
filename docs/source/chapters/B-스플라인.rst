@@ -237,7 +237,7 @@ cubic B-spline basis functions with uniform breakpoints. The data is
 generated from the curve :math:`y(x) = \cos{(x)} \exp{(-x/10)}` on
 the interval :math:`[0, 15]` with Gaussian noise added.
 
-.. include:: examples/bspline.c
+.. include:: /examples/bspline.c
    :code:
 
 The output is shown below::
@@ -249,7 +249,7 @@ The data and fitted model are shown in :numref:`fig_bspline`.
 
 .. _fig_bspline:
 
-.. figure:: /images/bspline.png
+.. figure:: //images/bspline.png
    :scale: 60%
 
    Data (black) and fitted model (red)

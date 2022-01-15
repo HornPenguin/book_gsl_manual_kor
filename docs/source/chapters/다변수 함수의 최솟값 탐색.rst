@@ -231,7 +231,7 @@ following data types:
 The following example function defines a simple two-dimensional
 paraboloid with five parameters,
 
-.. include:: examples/multiminfn.c
+.. include:: /examples/multiminfn.c
    :code:
 
 The function can be initialized using the following code::
@@ -506,7 +506,7 @@ in :math:`x` and :math:`y`, and the function value at the minimum is
 non-zero. The main program is given below, it requires the example
 function given earlier in this chapter.
 
-.. include:: examples/multimin.c
+.. include:: /examples/multimin.c
    :code:
 
 The initial step-size is chosen as 0.01, a conservative estimate in this
@@ -514,7 +514,7 @@ case, and the line minimization parameter is set at 0.0001.  The program
 terminates when the norm of the gradient has been reduced below
 0.001. The output of the program is shown below,
 
-.. include:: examples/multimin.txt
+.. include:: /examples/multimin.txt
    :code:
 
 Note that the algorithm gradually increases the step size as it
@@ -523,7 +523,7 @@ points in :numref:`fig-multimin`.
 
 .. _fig-multimin:
 
-.. figure:: /images/multimin.png
+.. figure:: //images/multimin.png
    :scale: 60%
 
    Function contours with path taken by minimization algorithm
@@ -535,13 +535,13 @@ iterations would be needed for a more complicated function.
 Here is another example using the Nelder-Mead Simplex algorithm to
 minimize the same example object function, as above.
 
-.. include:: examples/nmsimplex.c
+.. include:: /examples/nmsimplex.c
    :code:
 
 The minimum search stops when the Simplex size drops to 0.01. The output is
 shown below.
 
-.. include:: examples/nmsimplex.txt
+.. include:: /examples/nmsimplex.txt
    :code:
 
 The simplex size first increases, while the simplex moves towards the

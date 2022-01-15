@@ -178,7 +178,7 @@ Trivial 예제
 1.0과 1.5사이에 이 값이 존재합니다. 
 초기 추정은 15.5입니다. 전역 최소값으로 부터 사이에 여러 지역적 최소값이 존재하는 지점입니다.
 
-.. include:: examples/siman.c
+.. include:: /examples/siman.c
       :code: c
 
 
@@ -201,7 +201,7 @@ Trivial 예제
 
 .. _fig_siman-test:
 
-.. figure:: /images/siman-test.png
+.. figure:: //images/siman-test.png
    :scale: 60%
   
    담금질 방법 실행 예시: 높은 온도에서(그래프 시작지점)는 
@@ -211,7 +211,7 @@ Trivial 예제
 
 .. _fig_siman-energy:
 
-.. figure:: /images/siman-energy.png
+.. figure:: //images/siman-energy.png
    :scale: 60%
   
    담금질 방법 에너지 vs 시행 횟수
@@ -230,7 +230,7 @@ Mark Galassi는 미국 남부 도시 12개의 좌표를 기반으로 아주 간�
 
 전체 코드는 다음과 같습니다.
 
-.. include:: examples/siman_tsp.c
+.. include:: /examples/siman_tsp.c
    :code: c
 
 다음 코드는 시각 그래프를 만들어 줍니다.
@@ -295,19 +295,19 @@ Mark Galassi는 미국 남부 도시 12개의 좌표를 기반으로 아주 간�
   ###final_city_coord: -105.95 35.68 Santa Fe
 
 
-.. figure:: /images/siman-initial-route.png
+.. figure:: //images/siman-initial-route.png
    :scale: 60%
   
    12개의 남서부 도시를 방문하는 비행기 외판원 문제의 초기 방문 경로.
 
-.. figure:: /images/siman-final-route.png
+.. figure:: //images/siman-final-route.png
    :scale: 60%
   
    12개의 남서부 도시를 방문하는 비행기 외판원 문제의 최종(최적화 된) 방문 경로.
 
 다음은 비용 함수(에너지) vs 시행 횟수 그래프입니다. (각 지점은 새로운 온도가 설정되는 계산 지점을 의미합니다.)
 
-.. figure:: /images/siman-12-cities.png
+.. figure:: //images/siman-12-cities.png
    :scale: 60%
   
    12개의 남서부 도시를 방문하는 비행기 외판원 문제의 담금질 방법 실행 결과.

@@ -304,7 +304,7 @@ wavelet transform functions.  It computes an approximation to an input
 signal (of length 256) using the 20 largest components of the wavelet
 transform, while setting the others to zero.
 
-.. include:: examples/dwt.c
+.. include:: /examples/dwt.c
    :code:
 
 The output can be used with the GNU plotutils :code:`graph` program::
@@ -318,7 +318,7 @@ archive of public-domain of medical datasets.
 
 .. _fig_dwt:
 
-.. figure:: /images/dwt.png
+.. figure:: //images/dwt.png
    :scale: 60%
 
    Original (upper) and wavelet-compressed (lower) ECG signals, using the

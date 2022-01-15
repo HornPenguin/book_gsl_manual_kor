@@ -677,14 +677,14 @@ in the function values :math:`(u, v)`.
 The loop in the example prints the solution at the points
 :math:`t_i = 1, 2, \dots, 100`.
 
-.. include:: examples/ode-initval.c
+.. include:: /examples/ode-initval.c
    :code:
 
 The user can work with the lower level functions directly, as in
 the following example. In this case an intermediate result is printed
 after each successful step instead of equidistant time points. 
 
-.. include:: examples/ode-initval-low-level.c
+.. include:: /examples/ode-initval-low-level.c
    :code:
 
 For functions with multiple parameters, the appropriate information
@@ -692,7 +692,7 @@ can be passed in through the :data:`params` argument in
 :type:`gsl_odeiv2_system` definition (:data:`mu` in this example) by using
 a pointer to a struct.
 
-.. figure:: /images/ode-vdp.png
+.. figure:: //images/ode-vdp.png
 
    Numerical solution of the Van der Pol oscillator equation 
    using Prince-Dormand 8th order Runge-Kutta.
@@ -705,7 +705,7 @@ the driver level function, with fourth-order
 Runge-Kutta stepping function with a fixed stepsize of
 0.001.
 
-.. include:: examples/odefixed.c
+.. include:: /examples/odefixed.c
    :code:
 
 References and Further Reading

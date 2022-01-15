@@ -2568,12 +2568,12 @@ system to be solved is,
 
 and the solution is found using LU decomposition of the matrix :math:`A`.
 
-.. include:: examples/linalglu.c
+.. include:: /examples/linalglu.c
    :code:
 
 Here is the output from the program,
 
-.. include:: examples/linalglu.txt
+.. include:: /examples/linalglu.txt
    :code:
 
 This can be verified by multiplying the solution :math:`x` by the

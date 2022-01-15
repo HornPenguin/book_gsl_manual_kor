@@ -923,22 +923,22 @@ Examples
 
 Here is a basic example of how to use the statistical functions:
 
-.. include:: examples/stat.c
+.. include:: /examples/stat.c
    :code:
 
 The program should produce the following output,
 
-.. include:: examples/stat.txt
+.. include:: /examples/stat.txt
    :code:
 
 Here is an example using sorted data,
 
-.. include:: examples/statsort.c
+.. include:: /examples/statsort.c
    :code:
 
 This program should produce the following output,
 
-.. include:: examples/statsort.txt
+.. include:: /examples/statsort.txt
    :code:
 
 References and Further Reading

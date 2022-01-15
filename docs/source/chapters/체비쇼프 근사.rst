@@ -163,7 +163,7 @@ approximation error is visible.  For smooth functions the Chebyshev
 approximation converges extremely rapidly and errors would not be
 visible.
 
-.. include:: examples/cheb.c
+.. include:: /examples/cheb.c
    :code:
 
 :numref:`fig_cheb` shows output from the program with the original function, 10-th order
@@ -172,7 +172,7 @@ approximation and 40-th order approximation, all sampled at intervals of
 
 .. _fig_cheb:
 
-.. figure:: /images/cheb.png
+.. figure:: //images/cheb.png
    :scale: 60%
 
    Chebyshev approximations to a step function

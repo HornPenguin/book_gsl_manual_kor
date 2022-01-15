@@ -186,12 +186,12 @@ The example program below prints all subsets of the set
 :math:`{0,1,2,3}` ordered by size.  Subsets of the same size are
 ordered lexicographically.
 
-.. include:: examples/combination.c
+.. include:: /examples/combination.c
    :code:
 
 Here is the output from the program,
 
-.. include:: examples/combination.txt
+.. include:: /examples/combination.txt
    :code:
 
 All 16 subsets are generated, and the subsets of each size are sorted

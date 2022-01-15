@@ -218,12 +218,12 @@ Examples
 
 Here is a basic example of how to use the statistical functions:
 
-.. include:: examples/rstat.c
+.. include:: /examples/rstat.c
    :code:
 
 The program should produce the following output,
 
-.. include:: examples/rstat.txt
+.. include:: /examples/rstat.txt
    :code:
 
 This next program estimates the lower quartile, median and upper
@@ -232,12 +232,12 @@ using the :math:`P^2` algorithm of Jain and Chlamtec. For
 comparison, the exact values are also computed from the sorted
 dataset.
 
-.. include:: examples/rquantile.c
+.. include:: /examples/rquantile.c
    :code:
 
 The program should produce the following output,
 
-.. include:: examples/rquantile.txt
+.. include:: /examples/rquantile.txt
    :code:
 
 References and Further Reading

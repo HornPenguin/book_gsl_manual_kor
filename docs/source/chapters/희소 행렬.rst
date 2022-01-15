@@ -701,7 +701,7 @@ stores the column index of the corresponding data element, and
 the :math:`p` array stores the index of the start of each row
 in the data array.
 
-.. include:: examples/spmatrix.c
+.. include:: /examples/spmatrix.c
    :code:
 
 .. index::

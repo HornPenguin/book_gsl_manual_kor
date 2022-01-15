@@ -638,7 +638,7 @@ values. The algorithm used is the QZ method due to Moler and Stewart
 다음 프로그램은 4차 힐베르트 행렬 :math:`H(i,j) = 1/(i+j+1)` 의 고유 값과 고유 벡터를 계산합니다.
 
 
-.. include:: examples/eigen.c
+.. include:: /examples/eigen.c
    :code:
 
 다음은 프로그램의 실행 결과입니다.
@@ -683,7 +683,7 @@ values. The algorithm used is the QZ method due to Moler and Stewart
 이 프로그램은 :math:`x = (-1,-2,3,4)` 에 대해, Vandermonde 행렬 :math:`V(x;i,j) = x_i^{n - j}` 을 사용했습니다.
 
 
-.. include:: examples/eigen_nonsymm.c
+.. include:: /examples/eigen_nonsymm.c
    :code:
 
 다음은 프로그램의 실행 결과입니다.
