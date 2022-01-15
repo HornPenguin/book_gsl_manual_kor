@@ -713,7 +713,7 @@ Robust Location Estimates
 =========================
 
 A *location estimate* refers to a typical or central value which best describes a given
-dataset. The mean and median are both ../examples of location estimators. However, the
+dataset. The mean and median are both examples of location estimators. However, the
 mean has a severe sensitivity to data outliers and can give erroneous values when
 even a small number of outliers are present. The median on the other hand, has
 a strong insensitivity to data outliers, but due to its non-smoothness it can
@@ -923,22 +923,22 @@ Examples
 
 Here is a basic example of how to use the statistical functions:
 
-.. include:: ../examples/stat.c
+.. include:: examples/stat.c
    :code:
 
 The program should produce the following output,
 
-.. include:: ../examples/stat.txt
+.. include:: examples/stat.txt
    :code:
 
 Here is an example using sorted data,
 
-.. include:: ../examples/statsort.c
+.. include:: examples/statsort.c
    :code:
 
 This program should produce the following output,
 
-.. include:: ../examples/statsort.txt
+.. include:: examples/statsort.txt
    :code:
 
 References and Further Reading

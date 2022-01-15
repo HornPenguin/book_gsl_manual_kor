@@ -612,7 +612,7 @@ Monte Carlo routines only select points which are strictly within the
 integration region and so no special measures are needed to avoid these
 singularities.
 
-.. include:: ../examples/monte.c
+.. include:: examples/monte.c
    :code:
 
 With 500,000 function calls the plain Monte Carlo algorithm achieves a

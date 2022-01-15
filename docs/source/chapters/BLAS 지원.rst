@@ -468,12 +468,12 @@ Level 3 BLAS 인터페이스
 행렬은 배열의 C 표준 순서에 따라, 
 열을 기준으로 배열합니다.
 
-.. include:: ../examples/blas.c
+.. include:: examples/blas.c
    :code:
 
 다음은 프로그램의 출력 결과입니다.
 
-.. include:: ../examples/blas.txt
+.. include:: examples/blas.txt
    :code:
 
 

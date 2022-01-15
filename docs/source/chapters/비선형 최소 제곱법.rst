@@ -1447,12 +1447,12 @@ although this particular system is too small to really benefit.
 
 .. _fig_fit-exp:
 
-.. figure:: /../images/fit-exp.png
+.. figure:: /images/fit-exp.png
    :scale: 60%
 
    Exponential fitted curve with data
 
-.. include:: ../examples/nlfit.c
+.. include:: examples/nlfit.c
    :code:
 
 Geodesic Acceleration Example 1
@@ -1586,7 +1586,7 @@ The program output is shown below::
 
 .. _fig_nlfit2:
 
-.. figure:: /../images/nlfit2.png
+.. figure:: /images/nlfit2.png
 
    Paths taken by solver for Rosenbrock function
 
@@ -1601,7 +1601,7 @@ fewer iterations.
 
 The program is given below.
 
-.. include:: ../examples/nlfit2.c
+.. include:: examples/nlfit2.c
    :code:
 
 Geodesic Acceleration Example 2
@@ -1758,13 +1758,13 @@ The data and fitted model are shown in :numref:`fig_nlfit2b`.
 
 .. _fig_nlfit2b:
 
-.. figure:: /../images/nlfit2b.png
+.. figure:: /images/nlfit2b.png
 
    Gaussian model fitted to data
 
 The program is given below.
 
-.. include:: ../examples/nlfit2b.c
+.. include:: examples/nlfit2b.c
    :code:
 
 Comparing TRS Methods Example
@@ -1819,14 +1819,14 @@ by each solver are shown as colored lines.
 
 .. _fig_nlfit3:
 
-.. figure:: /../images/nlfit3.png
+.. figure:: /images/nlfit3.png
    :scale: 60%
 
    Paths taken for different TRS methods for the Branin function
 
 The program is given below.
 
-.. include:: ../examples/nlfit3.c
+.. include:: examples/nlfit3.c
    :code:
 
 Large Nonlinear Least Squares Example
@@ -1924,7 +1924,7 @@ iterative method (see last column).
 
 The program is given below.
 
-.. include:: ../examples/nlfit4.c
+.. include:: examples/nlfit4.c
    :code:
 
 References and Further Reading

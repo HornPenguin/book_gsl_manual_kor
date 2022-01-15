@@ -184,12 +184,12 @@ The example program below prints all multisets elements containing the values
 :math:`{0,1,2,3}` ordered by size.  Multiset elements of the same size are
 ordered lexicographically.
 
-.. include:: ../examples/multiset.c
+.. include:: examples/multiset.c
    :code:
 
 Here is the output from the program,
 
-.. include:: ../examples/multiset.txt
+.. include:: examples/multiset.txt
    :code:
 
 All 70 multisets are generated and sorted lexicographically.

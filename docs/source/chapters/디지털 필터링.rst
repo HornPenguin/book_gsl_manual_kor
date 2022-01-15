@@ -387,7 +387,7 @@ parameters :math:`\alpha = 0.5, 3, 10`. The results are shown in :numref:`fig_fi
 
 .. _fig_filt-gaussian:
 
-.. figure:: /../images/gaussfilt.png
+.. figure:: /images/gaussfilt.png
    :scale: 60%
 
    Top panel: Gaussian kernels (unnormalized) for :math:`\alpha = 0.5, 3, 10`.
@@ -398,7 +398,7 @@ We see that the filter corresponding to :math:`\alpha = 0.5` applies the most sm
 while :math:`\alpha = 10` corresponds to the least amount of smoothing.
 The program is given below.
 
-.. include:: ../examples/gaussfilt.c
+.. include:: examples/gaussfilt.c
    :code:
 
 Gaussian Example 2
@@ -406,7 +406,7 @@ Gaussian Example 2
 
 A common application of the Gaussian filter is to detect edges, or sudden jumps, in a noisy
 input signal. It is used both for 1D edge detection in time series, as well as 2D edge
-detection in ../images. Here we will examine a noisy time series of length :math:`N = 1000`
+detection in images. Here we will examine a noisy time series of length :math:`N = 1000`
 with a single edge. The input signal is defined as
 
 .. only:: not texinfo
@@ -433,7 +433,7 @@ of the input signal without smoothing. The results are shown in :numref:`fig_fil
 
 .. _fig_filt-gaussian2:
 
-.. figure:: /../images/gaussfilt2.png
+.. figure:: /images/gaussfilt2.png
    :scale: 60%
 
    Top row: original input signal :math:`x(n)` (black) with Gaussian smoothed signal in red.
@@ -451,7 +451,7 @@ the edge location.
 
 The program is given below.
 
-.. include:: ../examples/gaussfilt2.c
+.. include:: examples/gaussfilt2.c
    :code:
 
 Square Wave Signal Example
@@ -467,7 +467,7 @@ a symmetric window of length :math:`K = 7`. The results are shown in
 
 .. _fig_filt-edge:
 
-.. figure:: /../images/filt_edge.png
+.. figure:: /images/filt_edge.png
    :scale: 60%
 
    Original time series is in gray. The standard median filter output is in
@@ -478,7 +478,7 @@ recursive median filter achieves a smoother result than the standard median
 filter. The "blocky" nature of the output is characteristic of all median
 filters. The program is given below.
 
-.. include:: ../examples/filt_edge.c
+.. include:: examples/filt_edge.c
    :code:
 
 Impulse Detection Example
@@ -493,7 +493,7 @@ measure of scale. The results are plotted in :numref:`fig_impulse`.
 
 .. _fig_impulse:
 
-.. figure:: /../images/impulse.png
+.. figure:: /images/impulse.png
    :scale: 60%
 
    Original time series is in blue, filter output is in green, upper and
@@ -502,7 +502,7 @@ measure of scale. The results are plotted in :numref:`fig_impulse`.
 
 The program is given below.
 
-.. include:: ../examples/impulse.c
+.. include:: examples/impulse.c
    :code:
 
 References and Further Reading

@@ -625,7 +625,7 @@ format and vice versa with the following routines.
    Input matrix formats supported: :ref:`COO <sec_spmatrix-coo>`, :ref:`CSC <sec_spmatrix-csc>`, :ref:`CSR <sec_spmatrix-csr>`
 
 .. index::
-   single: sparse matrices, ../examples
+   single: sparse matrices, examples
 
 Examples
 ========
@@ -701,7 +701,7 @@ stores the column index of the corresponding data element, and
 the :math:`p` array stores the index of the start of each row
 in the data array.
 
-.. include:: ../examples/spmatrix.c
+.. include:: examples/spmatrix.c
    :code:
 
 .. index::

@@ -2,7 +2,7 @@
 GNU 일반 공중 사용 허가서
 **************************
 
-.. image:: ../images/gpl_v3_logo.png
+.. image:: images/gpl_v3_logo.png
    :width: 200px
 
 

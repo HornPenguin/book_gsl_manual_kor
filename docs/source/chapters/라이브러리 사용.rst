@@ -11,13 +11,13 @@
 다음 프로그램 코드는 베셀 함수 :math:`J_0(x)`가 :math:`x= 5` 일 때의 
 값을 구하는 프로그램 입니다.
 
-.. include:: ../examples/intro.c
+.. include:: examples/intro.c
    :code:
 
 결과는 다음과 같습니다. 이는 배정밀도의 정확도를 가집니다 [#double]_ .
 
 
-.. include:: ../examples/intro.txt
+.. include:: examples/intro.txt
    :code:
 
 컴파일과 링킹

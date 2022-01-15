@@ -283,7 +283,7 @@ spline functions.  It computes a cubic spline interpolation of the
 10-point dataset :math:`(x_i, y_i)` where :math:`x_i = i + \sin(i)/2` and
 :math:`y_i = i + \cos(i^2)` for :math:`i = 0 \dots 9`.
 
-.. include:: ../examples/interp.c
+.. include:: examples/interp.c
    :code:
 
 The output is designed to be used with the GNU plotutils
@@ -294,7 +294,7 @@ The output is designed to be used with the GNU plotutils
 
 .. _fig_interp:
 
-.. figure:: /../images/interp.png
+.. figure:: /images/interp.png
    :scale: 60%
 
    Cubic spline interpolation
@@ -307,7 +307,7 @@ The next program demonstrates a periodic cubic spline with 4 data
 points.  Note that the first and last points must be supplied with 
 the same y-value for a periodic spline.
 
-.. include:: ../examples/interpp.c
+.. include:: examples/interpp.c
    :code:
 
 The output can be plotted with GNU :code:`graph`::
@@ -317,7 +317,7 @@ The output can be plotted with GNU :code:`graph`::
 
 .. _fig_interpp:
 
-.. figure:: /../images/interpp.png
+.. figure:: /images/interpp.png
    :scale: 60%
 
    Periodic cubic spline interpolation
@@ -329,12 +329,12 @@ data, and the second derivative is also.
 The next program illustrates the difference between the cubic spline,
 Akima, and Steffen interpolation types on a difficult dataset.
 
-.. include:: ../examples/interp_compare.c
+.. include:: examples/interp_compare.c
    :code:
 
 .. _fig_interp-compare:
 
-.. figure:: /../images/interp_compare.png
+.. figure:: /images/interp_compare.png
    :scale: 60%
 
    Comparison of different 1D interpolation methods
@@ -593,7 +593,7 @@ The following example performs bilinear interpolation on the unit
 square, using :math:`z` values of :math:`(0,1,0.5,1)` going clockwise
 around the square.
 
-.. include:: ../examples/interp2d.c
+.. include:: examples/interp2d.c
    :code:
 
 The results of the interpolation are shown in :numref:`fig_interp2d`,
@@ -601,7 +601,7 @@ where the corners are labeled with their fixed :math:`z` values.
 
 .. _fig_interp2d:
 
-.. figure:: /../images/interp2d.png
+.. figure:: /images/interp2d.png
    :scale: 60%
 
    2D interpolation example

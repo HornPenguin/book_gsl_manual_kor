@@ -165,7 +165,7 @@ radix-2 FFT 방법은 :math:`O(n\log_2 n)` 의 복잡도를 가집니다.
 푸리에 변환 결과를 실수로 얻기 위해 펄스는 시간 공간에서 원점을 중심으로 대칭인 범주
 (:math:`-10 \dots 10`)에 대해 정의되어 있습니다. 여기서 음수인 시간은 배열의 끝에서 반올림 됩니다.
 
-.. include:: ../examples/fft.c
+.. include:: examples/fft.c
    :code:
 
 
@@ -185,7 +185,7 @@ radix-2 FFT 방법은 :math:`O(n\log_2 n)` 의 복잡도를 가집니다.
 
 .. _fig_fft-complex-radix2:
 
-.. figure:: /../images/fft-complex-radix2.png
+.. figure:: /images/fft-complex-radix2.png
    :scale: 60%
 
    펄스 신호와 그 신호의 이산 푸리에 변환, 예제 프로그램의 결과
@@ -329,7 +329,7 @@ Mixed-radix의 초기화 함수 :code:`gsl_fft_complex_wavetable_alloc` 는 주�
 길이 630 ( :math:`1=2*3*3*5*7` )의 고속 푸리에 변환을 계산하는 
 예제를 보여줍니다.
 
-.. include:: ../examples/fftmr.c
+.. include:: examples/fftmr.c
    :code: c
 
 프로그램에서 암묵적으로 기본 오류 관리자(오류를 발견하면 프로그램을 정지합니다)를 사용함을 가정함을 알고 있어야합니다.
@@ -641,7 +641,7 @@ Mixed-radix 알고리즘은 변환의 중간 단계를 유지하기 위해 추�
 이는 필터를 거친 사각 신호를 나타냅니다. 푸리에 계수는 반 복소 대칭성을 사용해 저장되므로 
 양의 신호와 음의 신호는 모두 제거되고 최종 필터링된 신호도 실수가 됩니다.
 
-.. include:: ../examples/fftreal.c
+.. include:: examples/fftreal.c
    :code:
 
 
@@ -649,7 +649,7 @@ Mixed-radix 알고리즘은 변환의 중간 단계를 유지하기 위해 추�
 
 .. _fig_fft-real-mixedradix:
 
-.. figure:: /../images/fft-real-mixedradix.png
+.. figure:: /images/fft-real-mixedradix.png
    :scale: 100%
 
    실수 펄스 신호의 저주파 통과 필터의 적용, 예제 프로그램의 결과.

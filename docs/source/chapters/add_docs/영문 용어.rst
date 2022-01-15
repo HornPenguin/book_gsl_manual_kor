@@ -2,7 +2,7 @@
 영문 용어(*)
 **************
 
-.. include:: ../include.rst
+.. include:: include.rst
 
 본 단원은 사용 설명서 내 용어들의 영문 용어 사전입니다. 
 번역 과정에서 :code:`번역 용어(원문 용어)` 와 같이 표기할 수도 있지만
@@ -42,104 +42,104 @@
 
 **ㄱ**
 
-.. include:: ../../dic/ㄱ.inc
+.. include:: dic/ㄱ.inc
 
 
 
 **ㄴ**
 
-.. include:: ../../dic/ㄴ.inc
+.. include:: dic/ㄴ.inc
 
 
 
 **ㄷ**
 
-.. include:: ../../dic/ㄷ.inc
+.. include:: dic/ㄷ.inc
 
 
 
 **ㄹ** 
 
-.. include:: ../../dic/ㄹ.inc
+.. include:: dic/ㄹ.inc
 
 
 
 **ㅁ** 
 
-.. include:: ../../dic/ㅁ.inc
+.. include:: dic/ㅁ.inc
 
 
 
 **ㅂ** 
 
-.. include:: ../../dic/ㅂ.inc
+.. include:: dic/ㅂ.inc
 
 
 
 **ㅃ**
 
-.. include:: ../../dic/ㅃ.inc
+.. include:: dic/ㅃ.inc
 
 
 
 **ㅅ**
 
-.. include:: ../../dic/ㅅ.inc
+.. include:: dic/ㅅ.inc
 
 
 
 **ㅆ**
 
-.. include:: ../../dic/ㅆ.inc
+.. include:: dic/ㅆ.inc
 
 
 
 **ㅇ** 
 
-.. include:: ../../dic/ㅇ.inc
+.. include:: dic/ㅇ.inc
 
 
 
 **ㅈ** 
 
-.. include:: ../../dic/ㅈ.inc
+.. include:: dic/ㅈ.inc
 
 
 
 **ㅉ** 
 
-.. include:: ../../dic/ㅉ.inc
+.. include:: dic/ㅉ.inc
 
 
 
 **ㅊ** 
 
-.. include:: ../../dic/ㅊ.inc
+.. include:: dic/ㅊ.inc
 
 
 
 **ㅋ**
 
-.. include:: ../../dic/ㅋ.inc
+.. include:: dic/ㅋ.inc
 
 
 
 
 **ㅌ** 
 
-.. include:: ../../dic/ㅌ.inc
+.. include:: dic/ㅌ.inc
 
 
 
 **ㅍ** 
 
-.. include:: ../../dic/ㅍ.inc
+.. include:: dic/ㅍ.inc
 
 
 
 **ㅎ**
 
-.. include:: ../../dic/ㅎ.inc
+.. include:: dic/ㅎ.inc
 
 
 .. raw:: latex

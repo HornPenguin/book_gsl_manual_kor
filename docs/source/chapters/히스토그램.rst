@@ -591,7 +591,7 @@ a time, and adds them to the histogram.  When there is no more data to
 read it prints out the accumulated histogram using
 :func:`gsl_histogram_fprintf`.
 
-.. include:: ../examples/histogram.c
+.. include:: examples/histogram.c
    :code:
 
 Here is an example of the program in use.  We generate 10000 random
@@ -607,7 +607,7 @@ size.
 
 .. _fig_histogram:
 
-.. figure:: /../images/histogram.png
+.. figure:: /images/histogram.png
    :scale: 60%
 
    Histogram output from example program
@@ -1115,7 +1115,7 @@ from 0 to 1.  Then a few sample points are added to the histogram, at
 used to generate a random sample of 1000 simulated events, which are
 printed out.
 
-.. include:: ../examples/histogram2d.c
+.. include:: examples/histogram2d.c
    :code:
 
 The following plot shows the distribution of the simulated events.  Using
@@ -1123,7 +1123,7 @@ a higher resolution grid we can see the original underlying histogram
 and also the statistical fluctuations caused by the events being
 uniformly distributed over the area of the original bins.
 
-.. figure:: /../images/histogram2d.png
+.. figure:: /images/histogram2d.png
    :scale: 60%
 
    Distribution of simulated events from example program

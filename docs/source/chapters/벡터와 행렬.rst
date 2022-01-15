@@ -160,12 +160,12 @@ gsl_block_complex_long_double   complex long double
 
 다음 프로그램은 블럭을 할당하는 방법을 보여줍니다.
 
-.. include:: ../examples/block.c
+.. include:: examples/block.c
    :code:
 
 다음은 프로그램의 출력 결과입니다.
 
-.. include:: ../examples/block.txt
+.. include:: examples/block.txt
    :code:
 
   
@@ -636,7 +636,7 @@ gsl_block_complex_long_double   complex long double
 :code:`gsl_vector_alloc()` 와 :code:`gsl_vector_set()` 그리고 
 :code:`gsl_vector_get()` 를 사용합니다.
 
-.. include:: ../examples/vector.c
+.. include:: examples/vector.c
    :code:
 
 다음은 프로그램의 출력 결과입니다. 반복문의 마지막 단계에서 함수는 벡터 :code:`v` 의 길이 이상을 읽으려 시도하고 
@@ -655,7 +655,7 @@ gsl_block_complex_long_double   complex long double
 
 다음 프로그램은 벡터를 어떻게 파일에 기록하는지를 보여줍니다.
 
-.. include:: ../examples/vectorw.c
+.. include:: examples/vectorw.c
    :code:
 
 
@@ -664,7 +664,7 @@ gsl_block_complex_long_double   complex long double
 해당 값들은 :code:`%.5g` 형식으로 저장되어져 있습니다. 
 :code:`gsl_vector_fscanf(f,v)` 를 사용해 다음과 같이 읽을 수 있습니다.
 
-.. include:: ../examples/vectorr.c
+.. include:: examples/vectorr.c
    :code:
 
 
@@ -1377,7 +1377,7 @@ The following operations are only defined for real matrices.
 그리고 :code:`gsl_matrix_get()` 를 이용해 
 행렬의 할당, 초기화, 그리고 값을 읽는 방법을 보여줍니다.
 
-.. include:: ../examples/matrix.c
+.. include:: examples/matrix.c
    :code:
 
 
@@ -1403,7 +1403,7 @@ The following operations are only defined for real matrices.
 
 다음 프로그램은 행렬을 어떻게 파일로 저장하는지 보여줍니다.
 
-.. include:: ../examples/matrixw.c
+.. include:: examples/matrixw.c
 
 
 프로그램의 실행이 끝나면, :code:`m` 행렬의 원소들을 담고 있는 파일 
@@ -1413,13 +1413,13 @@ The following operations are only defined for real matrices.
 다음 프로그램은 벡터 view를 사용하는 법을 기술합니다. 
 이 프로그램은 행렬의 열 노름을 계산합니다.
 
-.. include:: ../examples/vectorview.c
+.. include:: examples/vectorview.c
    :code:
 
 
 결과는 다음과 같습니다.
 
-.. include:: ../examples/vectorview.txt
+.. include:: examples/vectorview.txt
    :code:
 
 GNU octave를 이용해 이 결과를 검증해볼 수 있습니다.

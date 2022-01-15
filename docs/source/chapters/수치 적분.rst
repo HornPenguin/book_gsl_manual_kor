@@ -935,13 +935,13 @@ algebraic-logarithmic singularity at the origin,
 The program below computes this integral to a relative accuracy bound of
 :code:`1e-7`.
 
-.. include:: ../examples/integration.c
+.. include:: examples/integration.c
    :code:
 
 The results below show that the desired accuracy is achieved after 8
 subdivisions. 
 
-.. include:: ../examples/integration.txt
+.. include:: examples/integration.txt
    :code:
 
 In fact, the extrapolation procedure used by :code:`QAGS` produces an
@@ -978,7 +978,7 @@ our criteria above::
 
 The output is,
 
-.. include:: ../examples/integration2a.txt
+.. include:: examples/integration2a.txt
    :code:
 
 So, we find a large error. Now we try integrating for :math:`m = 10, n = 6` which
@@ -988,12 +988,12 @@ does satisfy the criteria above::
 
 The output is,
 
-.. include:: ../examples/integration2b.txt
+.. include:: examples/integration2b.txt
    :code:
 
 The program is given below.
 
-.. include:: ../examples/integration2.c
+.. include:: examples/integration2.c
    :code:
 
 References and Further Reading
@@ -1001,7 +1001,7 @@ References and Further Reading
 
 The following book is the definitive reference for |quadpack|, and was
 written by the original authors.  It provides descriptions of the
-algorithms, program listings, test programs and ../examples.  It also
+algorithms, program listings, test programs and examples.  It also
 includes useful advice on numerical integration and many references to
 the numerical integration literature used in developing |quadpack|.
 

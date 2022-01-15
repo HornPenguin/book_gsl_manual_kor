@@ -130,7 +130,7 @@ Examples
 The following program prints the first 1024 points of the 2-dimensional
 Sobol sequence.
 
-.. include:: ../examples/qrng.c
+.. include:: examples/qrng.c
    :code:
 
 Here is the output from the program::
@@ -153,7 +153,7 @@ between previous points.
 
 .. _fig_qrng:
 
-.. figure:: /../images/qrng.png
+.. figure:: /images/qrng.png
    :scale: 60%
 
    Distribution of the first 1024 points 

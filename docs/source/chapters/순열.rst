@@ -335,7 +335,7 @@ many applications in the theory of permutations.
 그 순열의 역순열을 찾는 방법을 보여줍니다.
 
 
-.. include:: ../examples/permshuffle.c
+.. include:: examples/permshuffle.c
    :code:
 
 프로그램의 출력 결과는 다음과 같습니다.
@@ -354,7 +354,7 @@ from the output.
 The next example program steps forwards through all possible third order
 permutations, starting from the identity,
 
-.. include:: ../examples/permseq.c
+.. include:: examples/permseq.c
    :code: c
 
 프로그램의 출력 결과는 다음과 같습니다.
