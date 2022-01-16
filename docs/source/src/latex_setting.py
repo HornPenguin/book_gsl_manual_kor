@@ -1,6 +1,7 @@
 
 packagelist= {
     "pdfpages" :"",
+    "xltxtra" : "",
     "xeCJK" : "CJKspace",
     "multicol":"",
     "setspace":"" # 
@@ -18,24 +19,24 @@ custom_setting = r'''
 '''
 
 fontpkg= r'''
-\setmainfont{NanumMyeongjo}[
-    Path= ./,
-    Extension = .ttf,
-    BoldFont=*ExtraBold
-]
-\setsansfont{NanumBarunGothic}[
-    Path= ./,
-    Extension = .ttf,
-    BoldFont=*Bold
-]
-\setmonofont{D2Coding}[
-    Path= ./,
-    Extension = .ttc
-]
+%\setmainfont{NanumMyeongjo}[
+%    Path= ./,
+%    Extension = .ttf,
+%    BoldFont=*ExtraBold
+%]
+%\setsansfont{NanumBarunGothic}[
+%    Path= ./,
+%    Extension = .ttf,
+%    BoldFont=*Bold
+%]
+%\setmonofont{D2Coding}[
+%    Path= ./,
+%    Extension = .ttc
+%]
 
-%\setCJKmainfont[Ligatures=TeX,BoldFont={*ExtraBold},AutoFakeSlant]{NanumMyeongjo.ttf}
-%\setCJKsansfont[Ligatures=TeX,BoldFont={*Bold},AutoFakeSlant]{NanumBarunGothic.ttf}
-%\setmonofont{D2Coding.ttc}
+\setCJKmainfont[Ligatures=TeX,BoldFont={* ExtraBold},AutoFakeSlant]{나눔명조}
+\setCJKsansfont[Ligatures=TeX,BoldFont={* ExtraBold},AutoFakeSlant]{나눔고딕}
+\setmonofont{나눔고딕코딩}
 '''
 
 maketitle=r'''
