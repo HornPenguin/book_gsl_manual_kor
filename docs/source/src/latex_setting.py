@@ -2,9 +2,9 @@
 packagelist= {
     "pdfpages" :"",
     "xltxtra" : "",
-    "xeCJK" : "CJKspace",
     "multicol":"",
-    "setspace":"" # 
+    "setspace":"", # 
+    "xetexko" : ""
 }
 
 #    "xeCJK" : "CJKspace",
@@ -16,13 +16,21 @@ custom_setting = r'''
 \onehalfspacing
 %\setstretch{1.25} % custom spacing
 %------------------------------------------------------------
+% 영문 폰트 설정
+\setmainfont[Mapping=tex-text]{나눔고딕}
+\setsansfont[Mapping=tex-text]{나눔명조}
+\setmonofont{나눔고딕코딩}
 
+% 한글 폰트 설정
+\setmainhangulfont[Mapping=tex-text]{나눔고딕}
+\setsanshangulfont[Mapping=tex-text]{나눔명조}
+\setmonohangulfont{나눔고딕코딩}
 '''
 
 fontpkg= r'''
-\setCJKmainfont{Noto Serif CJK KR}
-\setCJKsansfont{Noto Sans CJK KR}
-\setCJKmonofont{Noto Sans Mono CJK KR}
+%\setCJKmainfont{Noto Serif CJK KR}
+%\setCJKsansfont{Noto Sans CJK KR}
+%\setCJKmonofont{Noto Sans Mono CJK KR}
 '''
 
 maketitle=r'''
