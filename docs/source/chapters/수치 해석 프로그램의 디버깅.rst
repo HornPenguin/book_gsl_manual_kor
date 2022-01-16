@@ -7,22 +7,25 @@
     번역중
 
 
-
-This chapter describes some tips and tricks for debugging numerical
-programs which use GSL.
+이 단원은 GSL을 사용한 프로그램의 디버깅에 사용할 수 있는 몇가지 조언과 우회법을 
+소개합니다.
 
 .. index::
    single: gdb
    single: debugging numerical programs
    single: breakpoints
 
-Using gdb
+GDB 사용
 =========
 
-Any errors reported by the library are passed to the function
-:func:`gsl_error`.  By running your programs under gdb and setting a
-breakpoint in this function you can automatically catch any library
-errors.  You can add a breakpoint for every session by putting::
+라이브러리에서 생기는 모든 오류는 :func:`gsl_error` 함수로 전달됩니다.
+GDB를 사용한 디버그 모드에서 프로그램을 구동시키고 이 함수에 중단점을 
+지정핻면 라이브러리에서 생기는 모든 오류를 감지할 수 있습니다.
+다음의 내용을 프로그램이 있는 디렉토리의 파일 :file:`.gdbinit` 에 넣어서
+모든 세션에 중단점을 넣을 수 있습니다. 
+
+You can add a breakpoint for every session by putting
+::
 
   break gsl_error
 
