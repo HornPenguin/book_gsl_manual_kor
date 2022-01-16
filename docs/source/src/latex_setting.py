@@ -33,9 +33,9 @@ fontpkg= r'''
     Extension = .ttc
 ]
 
-\setCJKmainfont[Ligatures=TeX,BoldFont={*ExtraBold},AutoFakeSlant]{NanumMyeongjo.ttf}
-\setCJKsansfont[Ligatures=TeX,BoldFont={*Bold},AutoFakeSlant]{NanumBarunGothic.ttf}
-\setmonofont{D2Coding.ttc}
+%\setCJKmainfont[Ligatures=TeX,BoldFont={*ExtraBold},AutoFakeSlant]{NanumMyeongjo.ttf}
+%\setCJKsansfont[Ligatures=TeX,BoldFont={*Bold},AutoFakeSlant]{NanumBarunGothic.ttf}
+%\setmonofont{D2Coding.ttc}
 '''
 
 maketitle=r'''
