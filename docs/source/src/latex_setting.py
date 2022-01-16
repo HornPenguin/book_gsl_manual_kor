@@ -16,27 +16,41 @@ custom_setting = r'''
 \onehalfspacing
 %\setstretch{1.25} % custom spacing
 %------------------------------------------------------------
+\setmainfont{NanumMyeongjo}[
+    Path= ./,
+    Extension = .ttf,
+    BoldFont=*ExtraBold
+]
+\setsansfont{NanumBarunGothic}[
+    Path= ./,
+    Extension = .ttf,
+    BoldFont=*Bold
+]
+\setmonofont{D2Coding}[
+    Path= ./,
+    Extension = .ttc
+]
 '''
 
 fontpkg= r'''
-%\setmainfont{NanumMyeongjo}[
-%    Path= ./,
-%    Extension = .ttf,
-%    BoldFont=*ExtraBold
-%]
-%\setsansfont{NanumBarunGothic}[
-%    Path= ./,
-%    Extension = .ttf,
-%    BoldFont=*Bold
-%]
-%\setmonofont{D2Coding}[
-%    Path= ./,
-%    Extension = .ttc
-%]
+\setmainfont{NanumMyeongjo}[
+    Path= ./,
+    Extension = .ttf,
+    BoldFont=*ExtraBold
+]
+\setsansfont{NanumBarunGothic}[
+    Path= ./,
+    Extension = .ttf,
+    BoldFont=*Bold
+]
+\setmonofont{D2Coding}[
+    Path= ./,
+    Extension = .ttc
+]
 
-\setCJKmainfont[Ligatures=TeX,BoldFont={* ExtraBold},AutoFakeSlant]{나눔명조}
-\setCJKsansfont[Ligatures=TeX,BoldFont={* ExtraBold},AutoFakeSlant]{나눔고딕}
-\setmonofont{나눔고딕코딩}
+%\setCJKmainfont[Ligatures=TeX,BoldFont={* ExtraBold},AutoFakeSlant]{나눔명조}
+%\setCJKsansfont[Ligatures=TeX,BoldFont={* ExtraBold},AutoFakeSlant]{나눔고딕}
+%\setmonofont{나눔고딕코딩}
 '''
 
 maketitle=r'''

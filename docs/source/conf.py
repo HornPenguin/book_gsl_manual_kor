@@ -93,7 +93,6 @@ latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '10pt',
     'preamble': my_preamble,
-    'fontpkg' : fontpkg,
     'maketitle' : maketitle
 }
 
@@ -112,6 +111,7 @@ latex_additional_files = [
     "./_static/Cover.pdf",
     "./_static/A_Slick_GNU_Logo.png "
     "./fonts/NanumMyeongjo.ttf",
+    "./fonts/NanumMyeongjoBold.ttf",
     "./fonts/NanumMyeongjoExtraBold.ttf",
     "./fonts/NanumBarunGothic.ttf",
     "./fonts/NanumBarunGothicBold.ttf",

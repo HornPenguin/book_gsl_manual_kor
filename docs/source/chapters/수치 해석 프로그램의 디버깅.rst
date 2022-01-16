@@ -32,6 +32,8 @@ You can add a breakpoint for every session by putting
 into your :file:`.gdbinit` file in the directory where your program is
 started.  
 
+중단점이 오류를 감지하면 backtrace( :code:`bt` )를 사용해 호출-트리와
+오류를 유발한 인자를 확인할 수 있습니다. 
 If the breakpoint catches an error then you can use a backtrace
 (:code:`bt`) to see the call-tree, and the arguments which possibly
 caused the error.  By moving up into the calling function you can
