@@ -95,6 +95,7 @@ latex_elements = {
     'pointsize': '10pt',
     'preamble': my_preamble,
     'maketitle' : maketitle,
+    'fontpkg' : fontpkg
 }
 
 latex_documents = [

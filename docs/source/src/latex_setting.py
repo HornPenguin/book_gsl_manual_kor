@@ -14,13 +14,29 @@ custom_setting = r'''
 %setspace 패키지 설정: CJK가 주인 문서에서 줄간격이 너무 좁을 때
 \onehalfspacing
 %\setstretch{1.25} % custom spacing
+%------------------------------------------------------------
 
+%%\setsansfont{NanumBarunGothic}[
+%%    Mapping=tex-text, 
+%%    Path=./,
+%%    Extension = .ttf
+%%    ]
+%%\setmainfont{Nanum Myeongjo}[
+%%    Mapping=tex-text, 
+%%    Path=./,
+%%    Extension = .ttf
+%%    ]
+%%
 '''
 
 fontpkg= r'''
 \setmainfont{Noto Serif CJK KR}
 \setsansfont{Noto Sans CJK KR}
-\setmonofont{Noto Sans Mono CJK KR}
+\setmonofont{D2Coding}[
+    Path=./,
+    Extension = .ttc
+    ]
+%\setmonofont{Noto Sans Mono CJK KR}
 
 '''
 
