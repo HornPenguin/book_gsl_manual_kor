@@ -7,6 +7,8 @@ from docutils.writers.latex2e import Babel
 from src.latex_setting import *
 
 
+Babel.language_codes = {'ko':'korean', 'en':'english'}
+
 # Configuration file for the Sphinx documentation builder.
 
 # -- Project information
