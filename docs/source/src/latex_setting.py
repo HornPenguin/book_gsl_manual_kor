@@ -17,33 +17,34 @@ custom_setting = r'''
 %\setstretch{1.25} % custom spacing
 %------------------------------------------------------------
 % 영문 폰트 설정
-\setmainfont{NanumMyeongjo}[
+\setmainfont{Noto Serif CJK KR}
+%\setmainfont{Nanum Myeongjo}[
+%    Mapping=tex-text, 
+%    Path=./,
+%    Extension = .ttf
+%    ]
+\setsansfont{Nanum BarunGothic}[
     Mapping=tex-text, 
     Path=./,
     Extension = .ttf
     ]
-\setsansfont{NanumBarunGothic}[
-    Mapping=tex-text, 
-    Path=./,
-    Extension = .ttf
-    ]
-\setmonofont{D2Coding}[
+\setmonofont{D2 Coding}[
     Path=./,
     Extension = .ttc
     ]
 %
 %% 한글 폰트 설정
-\setmainhangulfont{NanumMyeongjo}[
+\setmainhangulfont{Nanum Myeongjo}[
     Mapping=tex-text, 
     Path=./,
     Extension = .ttf
     ]
-\setsanshangulfont{NanumBarunGothic}[
+\setsanshangulfont{Nanum BarunGothic}[
     Mapping=tex-text, 
     Path=./,
     Extension = .ttf
     ]
-\setmonohangulfont{D2Coding}[
+\setmonohangulfont{D2 Coding}[
     Path=./,
     Extension = .ttc
     ]
