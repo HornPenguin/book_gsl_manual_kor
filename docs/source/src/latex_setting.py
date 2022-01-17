@@ -26,15 +26,17 @@ custom_setting = r'''
 %%    Path=./,
 %%    Extension = .ttf
 %%    ]
+%%\setmonofont{D2Coding}[
+%%    Path=./,
+%%    Extension = .ttc
+%%    ]
 '''
 
 fontpkg= r'''
 \setmainfont{Noto Serif CJK KR}
 \setsansfont{Noto Sans CJK KR}
-\setmonofont{D2Coding}[
-    Path=./,
-    Extension = .ttc
-    ]
+\setmonofont{Noto Sans Mono CJK KR}
+
 '''
 
 maketitle=r'''
