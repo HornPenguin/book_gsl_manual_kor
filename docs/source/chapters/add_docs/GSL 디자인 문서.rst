@@ -38,6 +38,7 @@ GSL 디자인 문서(*)
 .. list-table:: 여러 수치해석 라이브러리
     :widths: 20 80
     :header-rows: 1
+    :class: longtable
 
     * - 라이브러리
       - 설명
