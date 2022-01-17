@@ -95,7 +95,6 @@ latex_elements = {
     'pointsize': '10pt',
     'preamble': my_preamble,
     'maketitle' : maketitle,
-    'babel': ' ',
 }
 
 latex_documents = [
