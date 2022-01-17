@@ -7,9 +7,6 @@
 IEEE  부동 소수점 대수
 **************************
 
-.. note::
-
-    번역중
 
 이 단원에서는 부동 소수 표현을 검증하고, 
 제어할 수 있는 함수들에 대해 기술합니다. 
@@ -144,11 +141,9 @@ IEEE의 이진 부동 소수 대수 표준은 다음과 같이 정의됩니다.
    :data:`x` 가 가르키는 숫자를 형식화 된 IEEE 부동소수점 표현으로  
    :code:`stdout` 에 출력합니다.
 
-다음 프로그램은 이 함수들을 사용해 :math:`1/3` 를 단, 배정밀도 표현으로
-출력하는 방법을 보여줍니다. 비교를 위해 일반적인 단, 배 정밀도 값도 같이 출력됩니다. 
-The following program demonstrates the use of the functions by printing
-the single and double precision representations of the fraction
-:math:`1/3`.  
+다음 프로그램은 이 함수들을 사용해 :math:`1/3` 를 단, 배 정밀도 표현으로
+출력하는 방법을 보여줍니다. 비교를 위해 단 정밀도 표현을 배 정밀도로 변환한 값도 같이 출력됩니다. 
+
 For comparison the representation of the value promoted from
 single to double precision is also printed.
 
@@ -157,7 +152,6 @@ single to double precision is also printed.
 
 :math:`1/3` 의 이진 표현은 :math:`0.01010101...` 입니다. 아래의 결과는
 IEEE 형식의 정규화 표현에서 이 분수 값의 앞 자릿수는 1이라는 사실을 보여줍니다.
-
 
 ::
 
