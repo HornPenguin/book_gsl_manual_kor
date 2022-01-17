@@ -23,11 +23,12 @@ custom_setting = r'''
 %    Path=./,
 %    Extension = .ttf
 %    ]
-\setsansfont{NanumBarunGothic}[
-    Mapping=tex-text, 
-    Path=./,
-    Extension = .ttf
-    ]
+\setsansfont{Noto Sans CJK KR}
+%\setsansfont{NanumBarunGothic}[
+%    Mapping=tex-text, 
+%    Path=./,
+%    Extension = .ttf
+%    ]
 \setmonofont{D2Coding}[
     Path=./,
     Extension = .ttc
