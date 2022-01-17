@@ -628,9 +628,9 @@ GSL에서는 이 두 가지 형태의 알고리즘을 비슷한 이름의 작업
 브렌트-데커 알고리즘 (Brent-Dekker algorithm)에 대한 추가 정보를 얻고 싶다면, 다음을 참고할 수 있습니다.
 
 * R. P. Brent, “An algorithm with guaranteed convergence for finding a zero of a function”, Computer Journal, 
-  14 (1971) 422–425
+  14 (1971) 422-425
 * J. C. P. Bus and T. J. Dekker, “Two Efficient Algorithms with Guaranteed Convergence for 
-  Finding a Zero of a Function”, ACM Transactions of Mathematical Software, Vol.: 1 No.: 4 (1975) 330–345
+  Finding a Zero of a Function”, ACM Transactions of Mathematical Software, Vol.: 1 No.: 4 (1975) 330-345
 
 .. rubri: 각주
 

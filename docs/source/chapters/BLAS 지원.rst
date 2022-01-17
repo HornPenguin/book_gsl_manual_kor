@@ -491,11 +491,11 @@ BLAS 홈페이지 및 BLAS 기술 포럼 웹 사이트에서 온라인으로 확
 BLAS의 Level 1,2,3의 자세한 사양을 확안하고 싶다면 다음 문서를 확인하시길 바랍니다.
 
 * C. Lawson, R. Hanson, D. Kincaid, F. Krogh, “Basic Linear Algebra Subprograms for Fortran Usage”, 
-  ACM Transactions on Mathematical Software, Vol.: 5 (1979), Pages 308–325.
+  ACM Transactions on Mathematical Software, Vol.: 5 (1979), Pages 308-325.
 * J.J. Dongarra, J. DuCroz, S. Hammarling, R. Hanson, “An Extended Set of Fortran Basic Linear Algebra Subprograms”, 
-  ACM Transactions on Mathematical Software, Vol.: 14, No.: 1 (1988), Pages 1–32.
+  ACM Transactions on Mathematical Software, Vol.: 14, No.: 1 (1988), Pages 1-32.
 * J.J. Dongarra, I. Duff, J. DuCroz, S. Hammarling, “A Set of Level 3 Basic Linear Algebra Subprograms”, 
-  ACM Transactions on Mathematical Software, Vol.: 16 (1990), Pages 1–28.
+  ACM Transactions on Mathematical Software, Vol.: 16 (1990), Pages 1-28.
 
 마지막 두 개 문서의 postscript 버전은 http://www.netlib.org/blas/ 에서 확인할 수 있습니다. 
 Fortran BLAS 라이브러리의 CBLAS 이식 버전의 정보도 동일한 곳에서 사용할 수 있습니다.

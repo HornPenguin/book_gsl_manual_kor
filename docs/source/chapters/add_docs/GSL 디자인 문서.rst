@@ -4,20 +4,30 @@ GSL 디자인 문서(*)
 
 .. only:: html
 
-  본 문서는 Mark Galassi, James Theiler 와 Brian Gough 가 저술한 
-  `GNU Scientific Library -- Design document <https://www.gnu.org/software/gsl/design/gsl-design_toc.html>`_ 
-  의 번역본 입니다(*). 
+  .. note::
+    
+    본 문서는 Mark Galassi, James Theiler 와 Brian Gough 가 저술한 
+    `GNU Scientific Library -- Design document <https://www.gnu.org/software/gsl/design/gsl-design_toc.html>`_ 
+    의 번역본 입니다. 
+
+    이 문서는 프로젝트의 초창기에 작성되었기 때문에 몇몇 내용들은 
+    현재 라이브러리의 제공 기능들과 맞지 않을 수도 있습니다. 
+    차후 제공 예정으로 서술된 기능이 현재 라이브러리에서 이미 구현되어 있기도 합니다.
+    일부 내용의 갱신이 이루어지지 않았기 때문에 본 문서는 해당 내용을 일부 수정했습니다(*).
 
 .. only:: latex
 
-  본 문서는 Mark Galassi, James Theiler 와 Brian Gough 가 저술한 **GNU Scientific Library -- Design document** 
-  의 번역본 입니다. 
+  .. note::
 
-  원문은 https://www.gnu.org/software/gsl/design/gsl-design_toc.html 를 참고할 수 있습니다(*).
+    본 문서는 Mark Galassi, James Theiler 와 Brian Gough 가 저술한 **GNU Scientific Library -- Design document** 
+    의 번역본 입니다. 
 
-이 문서는 프로젝트의 초창기에 작성되었기 때문에 몇몇 내용들은 
-현재 라이브러리의 제공 기능들과 맞지 않을 수도 있습니다. 
-차후 제공 예정으로 서술된 기능이 현재 라이브러리에서 이미 구현되어 있기도 합니다(*).
+    원문은 https://www.gnu.org/software/gsl/design/gsl-design_toc.html 를 참고할 수 있습니다.
+
+    이 문서는 프로젝트의 초창기에 작성되었기 때문에 몇몇 내용들은 
+    현재 라이브러리의 제공 기능들과 맞지 않을 수도 있습니다. 
+    차후 제공 예정으로 서술된 기능이 현재 라이브러리에서 이미 구현되어 있기도 합니다.
+    일부 내용의 갱신이 이루어지지 않았기 때문에 본 문서는 해당 내용을 일부 수정했습니다(*).
 
 
 프로젝트의 시작
@@ -57,12 +67,12 @@ GSL 디자인 문서(*)
         `Reviews of Numerical Recipes <https://www.lysator.liu.se/c/num-recipes-in-c.html>`_
     * - SLATEC
       - SLATEC는 1970년도 Department of Energy program에서 작성된 수치 해석 소프트웨어들의 대규모 집합체입니다.  
-        해당 소프트웨어들은 퍼블릭 도메인으로 배포되고 있습니다. 각각의 기능들은 잘 검증되어 있고, 
+        해당 소프트웨어들은 자유 이용 저작물으로 배포되고 있습니다. 각각의 기능들은 잘 검증되어 있고, 
         그 시기 한계가 있기는 하지만 정갈하게 잘 조직된 구조를 가지고 있습니다.
         GSL은 현대적인 SLATEC를 목적으로 하고 있습니다.
     * - NSWC
       - NSWC는 Naval Surface Warfare Center numerical library의 약자입니다. 
-        퍼블릭 도메인으로 배포되는 고수준의 대규모 포트란 라이브러리입니다. 
+        자유 이용 저작물으로 배포되는 고수준의 대규모 포트란 라이브러리입니다. 
         이 라이브러리는 문서를 찾기가 매우 힘듭니다. 출판본의 일부 복사본이 확인되었을 뿐입니다.
     * - NAG와 IMSL
       - NAG와 IMSL는 모두 상업적으로 판매되는 고수준의 수치 해석 라이브러리입니다. 
@@ -91,7 +101,7 @@ GSL 디자인 문서(*)
     * - CEPHES
       - CEPHES는 C로 작성된 고품질의 특수 함수 구현체 모음입니다. GPL 라이센스가 아닙니다.
     * - WNLIB
-      - WNLIB는 소규모의 수치 해석 C 구현체의 집합입니다. Will Naylor가 작성했으며, 퍼블릭 도메인입니다.
+      - WNLIB는 소규모의 수치 해석 C 구현체의 집합입니다. Will Naylor가 작성했으며, 자유 이용 저작물입니다.
     * - MESHACH
       - MESHACH는 C로 작성된 포괄적인 행렬-벡터 선행 대수 라이브러리입니다. 자유롭게 사용가능하나 GPL은 아닙니다.
     * - CERNLIB
@@ -99,33 +109,34 @@ GSL 디자인 문서(*)
         본래 비자유 소프트웨어였으나 최근 GPL 라이센스로 베포되고 있습니다.
     * - COLT
       - COLT는 자바로 작성된 자유로은 수치 해석 라이브러리로 CERN에서 Wolfgang Hoschek가 작성했습니다. 
-        이 라이브러리는 BSD 형태의 라이센스 하에 베포됩니다.
+        이 라이브러리는 BSD 라이센스 아래에서 베포됩니다.
 
 
-GSL 라이브러리는 실제 수치 해석 전문가나 그들의 대학원생이 기여할 환경을 제공하는 것을 장기적인 목표로 삼고 있습니다.
+GSL은 실제 수치 해석 전문가나 그들의 대학원생이 기여할 환경을 제공하는 것을 장기적인 목표로 삼고 있습니다.
 
 기여
 ===============
 
-GSL 팀은 라이브러리의 기능을 강화해 줄 수 있는 새 기여자를 언제나 환영하고 있습니다. 일반적으로 중점을 두는 일들은, 
-라이브러리 내 함수들의 안전성, 라이브러리의 일관성과 보고된 버그 수정들 입니다. 
+GSL 팀은 라이브러리의 기능을 강화해 줄 수 있는 새 기여자를 언제나 환영하고 있습니다. 
+프로젝트에서 일반적으로 우선시 하는 작업은 라이브러리 내 함수들의 안전성, 라이브러리의 일관성과 보고된 버그 수정들 입니다. 
 잠재적 기여자들은 GSL 사바나 페이지 버그 추적기에 나열된 버그들을 조사하고 수정해 라이브러리에 
 먼저 익숙해지는 것을 권장합니다. 
 
-많은 양의 새 코드를 라이브러리에 추가하는 일은 라이브러리의 다른 부분들과 완성도 면에서 
-큰 차이를 야기할 수 있기 때문입니다. 
+개발한 패키지를 한번에 라이브러리에 추가하는 행위는 일반적으로 권장되지 않습니다.
+많은 양의 새 코드들은 다른 구현체들과 완성도 면에서 큰 차이를 야기할 수 있기 때문입니다. 
+
 라이브러리의 안전성 유지를 위해 이러한 새 기능들은 GSL 프로젝트 최상단에 패키지로 만들어 개발자가 각각 독립적으로 유지보수하는 것을 권장합니다. 
 이는 Perl CPAN 아카이브나 TEX CTAN 아카이브등과 같은 자유 소프트웨어 프로젝트에서도 사용하는 방법입니다.
 
 패키지
 -------------------------
 
-GSL의 설계는 라이브러리 안에 존재하는 기능들을 간단하게 연결해, 따로 떼어 사용하게 할 수 있습니다. 
-예로, 추가적인 난수 생성기 :code:`rngextra` 는 독립된 라이브러리로 제공될 수 있습니다.
+GSL의 설계는 라이브러리 안에 존재하는 기능들을 추가적인 확장 기능들과 간단하게 연결해 사용할 수 있습니다. 
+예로, 별도의 라이브러리로 제공되는 추가적인 난수 생성기 :code:`rngextra` 와 함께 다음과 같이 사용할 수 있습니다.
 
 .. code-block:: console
 
-    $tar xvfz rngextra-0.1.tar.gz
+    $tar -xvfz rngextra-0.1.tar.gz
     $cd rngextra-0.1
     $./configure; make; make check; make install
     $...
@@ -135,16 +146,18 @@ GSL의 설계는 라이브러리 안에 존재하는 기능들을 간단하게 �
 아래 내용의 요점은 패키지 디자인 방법에 관한 것입니다. 해당 방법은 GSL 스스로 패키지들의 일관성을 보장해, 
 실 사용자들이 사용하기 쉽고, 향후 GSL에 포함될 잘 검증되고 인기 있는 패키지를 해당 패키지만으로 베포할 수 있게하기 위함입니다.
 
-* 이 문서에서 제공하는 GSL과 GNU 코딩 표준 규약을 준수해야합니다. 이는 표준 GNU 패키징 도구들을 이용하는 것으로, *Automake* 의 사용, *Texinfo* 를 사용한 문서화와 *test suite* 를 제공함을 의미합니다. 
-  *test suite* 는 :code:`make check` 를 실행해 검증해야하고, GSL에서 제공하는 검증 함수들을 사용해 결과가 :code:`PASS:/FAIL:` 로 출력되도록 해야합니다. 
+* 이 문서에서 제공하는 GSL과 GNU 코딩 표준 규약을 준수해야합니다. 이는 표준 GNU 패키징 도구들을 이용하는 것으로, 
+  *Automake* 의 사용, *Texinfo* 를 사용한 문서화와 *test suite* 를 제공함을 의미합니다. 
+  *test suite* 는 :code:`make check` 를 실행해 검증해야하고, 
+  GSL에서 제공하는 검증 함수들을 사용해 결과가 :code:`PASS:/FAIL:` 로 출력되도록 해야합니다. 
   *libtool* 사용은 필수가 아닙니다. 패키지는 충분히 작게 만들 수 있고, 정적 라이브러리는 손쉽게 만들수 있기 때문입니다.
-* 패키지를 위한 새로운 접두사를 만들어야 합니다. :code:`gsl_` 은 내부 사용을 위한 접두사입니다. 
-  예로, 추가적인 난수 생성자는 :code:`rngextra` 라는 접두사를 사용할 수 있습니다.
+* 패키지를 위한 새로운 접두사를 만들어야 합니다. :code:`gsl_` 은 라이브러리 내부에서 이미 사용되는 접두사이니 사용하면 안됩니다. 
+  예로, 별도의 난수 생성자는 :code:`rngextra` 라는 접두사를 사용할 수 있습니다.
 
-.. code-block:: c
-
-    #include<rngextra.h>
-    gsl_rng * r = gsl_rng_alloc (rngextra_lsfr32);
+  .. code-block:: c
+  
+      #include<rngextra.h>
+      gsl_rng * r = gsl_rng_alloc (rngextra_lsfr32);
 
 
 * 개발단계를 잘 반영하는 버전 숫자를 사용해야 합니다. 
@@ -157,24 +170,37 @@ GSL의 설계는 라이브러리 안에 존재하는 기능들을 간단하게 �
 * GNU 일반 공중 사용 허가서 (GPL)을 사용해야 합니다. 
   패키지가 향후 GSL에 포함되기를 원한다면, 저작권 고지를 얻는 일반적인 절차를 따를 수 있습니다.
 
-만드는 패키지의 갱신 소식 정보를 :code:`sources.redhat.com` 의 :code:`gsl-discuss` 에 올리면, GSL 웹사이트에 추가시킬 수 있습니다.
+GSL에 추가할 새로운 기능은 별도의 패키지로 만들어 따로 개발되고 해당 패키지의 개발 과정이
+일정 수준 이상이 되면 GSL의 정식 패키지로 포함됩니다. 만드는 패키지의 갱신 소식을 다음에
+이메일
 
-예시 패키지 :code:`rngextra` 는 두 개의 난수 발생기를 가지고 있습니다. 
-이들은 http://www.network-theory.co.uk/download/rngextra/ 에서 찾을 수 있습니다 [#network]_ .
+::
+  
+  gsl-discuss@sourceware.org
+
+에 올리면 `GSL 공식 사이트 <https://www.gnu.org/software/gsl/#extensions>` 에 추가 할 수 있습니다(*) [#gsldiscuss]_ .
+
+
+ [#network]_ .
 
 GSL의 디자인
 ===============
 
 언어
 -------------------------
-GSL 라이브러리는 **C 언어 하나** 만을 사용합니다. 이는 이미 존재하는 컴파일러의 사용이 가능하며, 구조가 간단하고, 손쉽게 범용성을 얻을 수 있는 장점이 있습니다.
+GSL 라이브러리는 **C 언어 하나** 만을 사용합니다. 
+이미 존재하는 컴파일러의 사용이 가능하며, 구조가 간단하고, 
+손쉽게 범용성을 얻을 수 있는 장점이 있습니다.
 
 다른 언어를 위한 인터페이스
 ---------------------------
 
-다른 언어를 위한 랩핑은 "별도의" 패키지로 제공됩니다. "핵심" 라이브러리 패키지로는 제공되지 않습니다. 해당 랩핑은 각각의 기여자들이 별도 관리합니다.
+다른 언어를 위한 랩핑은 "별도의" 패키지로 제공됩니다. 
+"핵심" 라이브러리 패키지로는 제공되지 않습니다. 
+해당 랩핑은 각각의 기여자들이 별도 관리합니다.
 
-랩핑을 위한 표준 도구들을 사용하는 것을 권장합니다. swing이나 g-warp가 있습니다.
+랩핑을 위한 표준 도구들을 사용하는 것을 권장합니다. 
+swing이나 g-warp가 있습니다.
 
 구현하는 기능
 -------------------------
@@ -185,8 +211,15 @@ GSL 라이브러리는 **C 언어 하나** 만을 사용합니다. 이는 이미
 -------------------------
 
 * GPL 라이센스 하에 베포되는 고품질의 패키지에 있는 기능
-* 너무 광대한 기능, 하위 기능이 아닌 응용 프로그램 수주을 만드는 것을 의미합니다. 예를 들어, 편미분 방정식(PDE)의 풀이를 위한 기능은 매우 크고 전문화된 응용 프로그램으로 제공되는 경우가 빈번합니다. 이는  매우 다양한 편미분 방정식과 해, 방법들이 존재하기 때문입니다. 이러한 종류의 기능들은 각각 작은 기능들로 분할해서 남겨야합니다. 이런 경우는 사용자들에게 해당하는 좋은 응용 프로그램들을 추천하는 것이 좋습니다.
-* 독립적으로 별도 제공되었을 때 유용한 것들, 날짜와 시간등을 조작하는 기능이나, 재정 관련 함수들은 "과학 계산" 라이브러리에 포함될 수 있습니다. 이는 의심할 여지가 없지만, 이러한 모듈은 다른 프로그램들에서도 독립적으로 사용할 수 있어, 별도의 라이브러리 사용이 더 유용합니다.
+* 너무 광대한 기능, 하위 기능이 아닌 응용 프로그램 수주을 만드는 것을 의미합니다. 예를 들어, 
+  편미분 방정식(PDE)의 풀이를 위한 기능은 매우 크고 전문화된 응용 프로그램으로 제공되는 경우가 빈번합니다. 
+  이는 매우 다양한 편미분 방정식과 해, 방법들이 존재하기 때문입니다. 
+  이러한 종류의 기능들은 각각 작은 기능들로 분할해서 남겨야합니다. 
+  이런 경우는 사용자들에게 해당하는 좋은 응용 프로그램들을 추천하는 것이 좋습니다.
+* 독립적으로 별도 제공되었을 때 유용한 것들, 날짜와 시간등을 조작하는 기능이나, 재정 관련 함수들은 
+  "과학 계산" 라이브러리에 포함될 수 있습니다. 
+  이는 의심할 여지가 없지만, 이러한 모듈은 다른 프로그램들에서도 독립적으로 사용할 수 있어, 
+  별도의 라이브러리 사용이 더 유용합니다.
 
 수치해석  라이브러리의 디자인
 -----------------------------
@@ -230,18 +263,24 @@ GSL 라이브러리는 **C 언어 하나** 만을 사용합니다. 이는 이미
 * GNU 코딩 표준
 * ANSI 표준 C 라이브러리 규약
 * GNU C 라이브러리 규약
-* glib GTK 지원 라이브러리 규약
+* glib: GTK 지원 라이브러리 규약
 
-이러한 표준을 위한 참고문헌으로 *GNU Coding Standards* 문서, 
-Harbison and Steels * A Reerence Manual*, *GNU, C Library Manual* 그리고 Glib 소스 파일을 볼 수 있습니다.
+이러한 표준을 위한 참고 문헌들으로 다음을 참고할 수 있습니다.
+
+* `GNU Coding Standards <https://www.gnu.org/prep/standards/standards.html>`_
+* Harbison and Steels "C, a Reference Manual", 5th, 2002, Prentice-Hall, ISBN:9780130895929
+* `GNU, C Library Manual <https://www.gnu.org/software/libc/manual/html_mono/libc.html>`_
+* `Glib Online Documentation <https://docs.gtk.org/glib/>`_
 
 수학 수식은 Abramowitz & Stegun의 *Handbook of Mathematical Functions* 를 따릅니다. 
 이 책은 수학계에서 자명한 참고 문헌이며, 자유 이용 저작물으로 사용할 수 있습니다.
 
-본 프로젝트에서 공유하는 정신은 "C로 생각하라" 입니다. 프로젝트가 C로 이루어지기 때문에, 
-C에서 어떤 것이 자연스러운가를 생각해야 합니다. 다른 언어의 특징을 흉내 내기 보다는 C에 집중해야 합니다. 
-C에서 부자연스러워 다른 언어의 형태로 시물레이션해야한다면, 해당 사항들은 본 프로젝트에서 포함하지 않을 것입니다. 
-해당 기능을 없으면 라이브러리에서 특정 기능의 제공이 어렵거나 제한된 버전만 제공한다 하더라도 해당 기능은 제외되어야 합니다. 
+본 프로젝트에서 공유하는 정신은 " **C로 생각하라** " 입니다. 프로젝트가 C로 이루어지기 때문에, 
+다른 언어의 특징을 흉내 내기 보다는 C에 집중해, 어떤 점이 C에서 자연스러운가를 생각해야 합니다. 
+C에서 부자연스러워 다른 언어의 형태로 시물레이션해야한다면, 
+해당 사항들은 본 프로젝트에서 포함하지 않을 것입니다. 
+해당 기능을 없으면 라이브러리에서 특정 기능의 제공이 어렵거나 제한된 버전만 제공한다 하더라도 
+해당 기능은 제외되어야 합니다. 
 라이브러리를 지나치게 복잡하게 만드는 일은 가치가 없습니다. 
 다른 언어들에도 다양한 수치 해석 라이브러리들이 있으며, 
 해당 언어에서 사용하는 기능이 필요하다면, C 라이브러리를 강제로 사용하는 대신 해당 언어의 
@@ -251,19 +290,24 @@ C 가 매크로 어셈블러라는 사실을 항상 기억하는 것이 좋습�
 만약, 특정 기능이 너무 복잡하다면, 스스로 "이 기능을 매크로-어셈블러로 작성할 수 있는가?"를 생각해보길 바랍니다. 
 만약, "아니다"라면 해당 기능은  GSL에 포함하지 말아야 합니다.
 
-
 다음의 논문을 참고해 볼 수 있습니다.
 
-* Kiem-Phong Vo, "The Discipline and Method Architecture for Reusable Libraries", Software - Practice & Experience, v.30, pp.107-128, 2000.
+* Kiem-Phong Vo, "The Discipline and Method Architecture for Reusable Libraries", Software - Practice & Experience, v.30, pp.107-128, 2000. DOI:10.1002/(SICI)1097-024X(200002)30:2<107::AID-SPE289>3.0.CO;2-D
 
-이 논문은 http://www.research.att.com/sw/tools/sfio/dm-spe.ps 에서 찾아보거나, 더 이전의 기술 보고서를  Kiem-Phong Vo, "An Architecture for Reusable Libraries" http://citeseer.nj.nec.com/48973.html 에서 찾아 볼 수 있습니다.
+이 논문은 `Wiley Online Library <https://onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-024X(200002)30:2%3C107::AID-SPE289%3E3.0.CO;2-D>`_ 에서 찾아보거나, 
+더 이전의 기술 보고서를 `IEEE Xplore <https://ieeexplore.ieee.org/document/685743>`_ 에서 다음의 내용으로
 
-포터블 C 라이브러리 디자인에 관련한 Vmalloc, SFIO 그리고 CDT 논문들이 있습니다.
+::
 
-* Kiem-Phong Vo, "Vmallo A General and Efficient Memory Allocator". Software Practice & Experience, 26:1--18, 1996. http://www.research.att.com/sw/tools/vmalloc/vmalloc.ps
-* iem-Phong Vo. "Cdt: A Container Data Type Library". Soft. Prac. & Exp., 27:1177--1197, 1997 http://www.research.att.com/sw/tools/cdt/cdt.ps
-* David G. Korn and Kiem-Phong Vo, "Sfio: Safe/Fast String/File IO", Proceedings of the Summer '91 Usenix Conference, pp. 235-256, 1991. http://citeseer.nj.nec.com/korn91sfio.html
+  Kiem-Phong Vo, "An architecture for reusable libraries," Proceedings. Fifth International Conference on Software Reuse (Cat. No.98TB100203), 1998, pp. 184-194, DOI: 10.1109/ICSR.1998.685743.
 
+찾아볼 수 있습니다.
+
+이식성 있는 C 라이브러리 디자인에 관련한 다음의 논문들이 있습니다.
+
+* Kiem-Phong Vo, "Vmallo A General and Efficient Memory Allocator". Software Practice & Experience, 26:1--18, 1996, DOI: 10.1002/(SICI)1097-024X(199603)26:3<357::AID-SPE15>3.0.CO;2-%23
+* iem-Phong Vo. "Cdt: A Container Data Type Library". Soft. Prac. & Exp., 27:1177--1197, 1997, DOI: 10.1002/(SICI)1097-024X(199710)27:10<1177::AID-SPE125>3.0.CO;2-7
+* David G. Korn and Kiem-Phong Vo, "Sfio: Safe/Fast String/File IO", Proceedings of the Summer '91 Usenix Conference, pp. 235-256, 1991, http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.51.6574
 
 소스 코드들은 GNU Coding Standards에 맞추어 탭이 아닌 스페이스만 사용해야 합니다. 
 탭으로 작성했을 시 이를 스페이스로 바꾸어 주어야 하는데 여러방법이 있습니다. 
@@ -456,7 +500,8 @@ GNU 표준 코딩 규약을 따릅니다. 인용구는 다음과 같이 쓸 수 
 -------------------------
 
 구조를 최소화하길 바랍니다. 
-예를 들어 여러 단계의 알고리즘들로 풀 수 있는 문제가 있다면 (예: 미분값 정보가 있거나 없는 경우를 모두 사용하는 상황), 
+예를 들어 여러 단계의 알고리즘들로 풀 수 있는 문제가 있다면 
+(예: 미분값 정보가 있거나 없는 경우를 모두 사용하는 상황), 
 각 경우를 다룰 수 있는 분리된 구조체를 만드는 것이 더 좋습니다. 
 다시 말해, 런타임 식별자 사용은 권장하지 않습니다.
 
@@ -537,7 +582,10 @@ heap 영역에 할당되어야 하는 함수들은 :code:`_alloc` 으로 끝나�
 오류를 나타낼 때, 오류 값를 반환하기 보다 항상 :code:`GSL_ERROR`  매크로를 사용해야 합니다. 
 이 매크로는 사용자가 해당 오류들을 디버거를 이용해 잡을 수 있게 해줍니다(:code:`gsl_error`  함수의 중단점을 정의해서 사용할 수 있습니다). 
 
-:code:`GSL_ERROR`  매크로를 사용하지 말아야 할 상황은 반환 값이 오류를 나타내기보다는 특정한 표기를 위한 경우입니다. 예를 들어서 반복 작업등에서 반환 값은 각 반복 단계의 성공, 실패등을 나타낼 수 있습니다. 일반적으로 반복 알고리즘의 "실패"( :code:`GSL_CONTINUE` 를 반환합니다.)는 빈번히 일어나는 일이고 :code:`GSL_ERROR` 를 사용할 필요는 없습니다.
+:code:`GSL_ERROR`  매크로를 사용하지 말아야 할 상황은 반환 값이 오류를 나타내기보다는 특정한 표기를 위한 경우입니다. 
+예를 들어서 반복 작업등에서 반환 값은 각 반복 단계의 성공, 실패등을 나타낼 수 있습니다. 
+일반적으로 반복 알고리즘의 "실패"( :code:`GSL_CONTINUE` 를 반환합니다.)는 빈번히 일어나는 일이고 
+이런 경우에 :code:`GSL_ERROR` 를 사용할 필요는 없습니다.
 
 특정 초기화 객체를 이용한 작업에서 발생한 오류와 같이, 사전에 할당된 메모리에서 오류가 발생했다면, 해당 메모리를 해제하는 것을 잊으면 안됩니다.
 
@@ -783,7 +831,8 @@ size_t
 임의의 상수 사용은 피해야 합니다.
 
 예를 들어서, :code:`1e-30` , :code:`1e-100` 이나 :code:`10*GSL_DBL_EPSILON` 과 같은 "작은" 값들을 구현체 안에 
-하드 코딩하는 행위를 해서는 안됩니다. 이런 작성법은 일반적인 라이브러리에는 적합하지 않습니다.
+하드 코딩하는 행위를 해서는 안됩니다. 
+이런 작성법은 일반적인 라이브러리에는 적합하지 않습니다 [#embeded]_ .
 
 변수들의 계산은 IEEE 대수를 따라 정학히 계산해야 합니다. 
 만약, 계산에서 잠재적으로 오차가 중요해질 수도 있다면, 
@@ -791,7 +840,8 @@ size_t
 이 과정은 수식의 오차 전파를 해석적으로 분석해 제공해야합니다. 
 어림짐작으로 제공해서는 안됩니다.
 
-주의 깊게 잘 설계된 알고리즘은 일반적으로 임의의 상수가 불필요하고 중요한 계수들은 사용자가 접근할 수 있어야 합니다.
+주의 깊게 잘 설계된 알고리즘은 일반적으로 임의의 상수가 불필요하고 
+중요한 계수들은 사용자가 접근할 수 있어야 합니다.
 
 예를 들어서 다음의 코드를 생각해 봅시다.
 
@@ -874,12 +924,26 @@ Test suites
 
 그리고 :code:`checkergcc` 를 사용해 스택(stack)과 힙(heap)에서 발생할 수 있는 메모리 문제를 검증해야합니다. 
 :code:`checkergcc` 는 최고의 메모리 검사 도구입니다. 
-:code:`checkergcc` 를 사용할 수 없다면, Electric Fence를 사용해 힙영역을 검사해야 합니다. 
+:code:`checkergcc` 를 사용할 수 없다면, Electric Fence를 사용해 힙 영역을 검사해야 합니다. 
 아무런 검사가 없는 것보다는 좋습니다.
 
 메모리 접근을 검사하는 데 :code:`valgrind` 라는 새로운 도구를 사용할 수도 있습니다. 
 
-라이브러리가 C++ 컴파일러(g++)로도 컴파일이 이루어지는 지 검사애햐합니다. 
+.. note::
+
+  :code:`checkergcc` 의 정식 명칭은 `GNU Checker <https://www.gnu.org/software/checker/>`_ 입니다. 
+  해당 프로그램은 개발이 중단 되었고
+  `Valgrind <https://valgrind.org/>`_ 를 사용할 수 있습니다. 
+  공식 소개 페이지에서도 Valgrind를 권장하고
+  GNU Checker 페이지는 교육용으로 남겨두었습니다.
+
+  Electric Fence는 `Bruce Perens <https://perens.com/>`_ 가 작성한 프로그램입니다.
+  매우 오래된 프로그램이고(manpage는 1993년도 작성되었습니다.)
+  리눅스 베포판 저장소 등에서 컴파일 된 패키지를 찾을 수 있습니다.
+  github에 소스코드가 공개되어 있습니다. `efence <https://github.com/boundarydevices/efence>`_
+
+
+라이브러리가 C++ 컴파일러(g++)로도 컴파일이 이루어지는 지 검사해야합니다. 
 ANSI C로 작성했다면 많은 문제가 발생하지는 않을 것입니다.
 
 스레드 안전성
@@ -914,17 +978,19 @@ ANSI C로 작성했다면 많은 문제가 발생하지는 않을 것입니다.
    
        <signature of Ty Coon>, 1 April 1989
        Ty Coon, President of Vice
+
 * 자명하게도, 비-자유 코드들을 사용하거나 가져오면 안됩니다. 특히, *Numerical Recipes* 나 *ACM TOMS* 에서 코드를 가져오거나 번역해오면 안됩니다. 
    Numerical Recipes는 제약 있는 허가서 아래에 있고 자유 소프트웨어가 아닙니다. 
-   출판사인 Cambridge University Press는 책과 그 안의 모든 코드들에 대해 저작권을 행사할 권리가 있고 이는 함수, 변수들의 이름 그리고 수학적으로 정의된 하위식 순서도 포함합니다. 
+   출판사인 Cambridge University Press는 책과 그 안의 모든 코드들에 대해 저작권을 행사할 권리가 있고 이는 함수, 
+   변수들의 이름 그리고 수학적으로 정의된 하위식 순서도 포함합니다. 
    GSL에 있는 기능들은 어떠한 방식으로든, Numerical Recipes을 참고하거나 기반해 있으면 안됩니다. 
-   TOMS(Transactions on Mathematical Software)에서 출판한 ACM 알고리즘은 퍼블릭 도메인이 아닙니다. 
+   TOMS(Transactions on Mathematical Software)에서 출판한 ACM 알고리즘은 자유 이용 저작물이 아닙니다. 
    물론, 인터넷에 공개되어 있기는 하나, ACM 사용자들은 특수한 비-상업적 허가서 아래에 사용가능하고 GPL과 호환되지 않습니다. 
    해당 허가서의 자세한 내용은 ACM Transactions on Mathematical Software의 표지나, ACM 웹사이트에서 확인가능합니다. 
-   확실하게 자유로운 허가서 GPL이나 퍼블릭 도메인 아래에서 사용가능한 코드만을 사용해야 합니다. 
+   확실하게 자유로운 허가서 GPL이나 자유 이용 저작물 아래에서 사용가능한 코드만을 사용해야 합니다. 
 
-   허가서가 없다고 해당 코드들이 퍼블릭 도메인인 것이 아닙니다. 
-   명백한 허가서 조항이 필요하고, 저자에게 재확인을 해야합니다.
+   허가서가 없다고 해당 코드들이 자유 이용 저작물인 것이 아닙니다. 
+   명백한 허가서 조항이 필요하고, 저자에게 재확인 해야합니다.
 
    .. note::
 
@@ -982,7 +1048,7 @@ DOS는 무시하고, Windows95/Windows 등에서의 사용만을 고려하는 �
 -------------------------
 
 알고리즘에서 분지 절단이나 다른 정밀도에 관련된 항들이 있다면 이 항들을 :code:`GSL_DBL_EPSILON` 과 :code:`GSL_DBL_MIN` 를 이용해
-이들의 거듭제곱, 조합으로 작성하길 바랍니다. 이러한 작성은 각 기능들을 다른 정밀도로 손쉽게 이식할 수 있게 합니다.
+이들의 거듭 제곱, 조합으로 작성하길 바랍니다. 이러한 작성은 각 기능들을 다른 정밀도로 손쉽게 이식할 수 있게 합니다.
 
 잡다한 사항
 -------------------------
@@ -995,18 +1061,25 @@ DOS는 무시하고, Windows95/Windows 등에서의 사용만을 고려하는 �
 
 .. rubric:: 각주
 
-.. [#network] 출판사 Network Theory는 폐업했습니다. 해당 파일은 찾을 수 없습니다(*). 
-              Monte Carlo and Quasi-Monte Carlo Wiki(roth.cs.kuleuven.be/wiki/Rngextra)에 따르면, 
-              Tiny Encryption Algorithm 을 사용한 별도의 예시 난수 발생자였다고 합니다.
 .. [#gnulitically] *GNUlitically correct* 은 GNU 코딩 규약을 따르고 *autoconf* 를 사용하는 프로그램을 뜻합니다(*).
+.. [#gsldiscuss] 원본 내용은 "만드는 패키지의 갱신 소식 정보를 :code:`sources.redhat.com` 의 :code:`gsl-discuss` 에 올리면, GSL 웹사이트에 추가시킬 수 있습니다.
+                 예시 패키지 :code:`rngextra` 는 두 개의 난수 발생기를 가지고 있습니다. 이들은 http://www.network-theory.co.uk/download/rngextra/ 에서 찾을 수 있습니다." 였습니다. 
+                 
+                 rngextra 는 BJG가 만든 예시 패키지입니다. 공식 홈페이지에도 확장 기능으로
+                 소개되어 있지만 해당 링크는 출판사 서버에 대한 아카이브 링크로 Network Theory가 폐업됨에 따라 해당 파일은 찾을 수 없습니다(*). 
+                 Monte Carlo and Quasi-Monte Carlo Wiki(roth.cs.kuleuven.be/wiki/Rngextra)에 따르면, 
+                 Tiny Encryption Algorithm 을 사용한 별도의 예시 난수 발생자였다고 합니다(*).
+.. [#embeded] 임베디드 프로그래밍에서는 시스템의 한계로 인해 이렇게 프로그래밍하기도 합니다. 
+              하지만 GSL은 과학 계산 라이브러리입니다. 
+              그러한 시스템은 고려 대상이 아닙니다(*). 
 .. [#closed] 이러한 표현은 수학에서 대수 구조를 정의할 때, 
              연산에 대해 닫혀 있다라는 정의에서 왔습니다. 
-             수학적으로는 집합 위에 정의된 연산의 결과가 정의된 집합에 있을 때 이를 닫혀 있다라 합니다. 
+             수학적으로는 집합 위에 정의된 연산의 모든 결과가 정의된 집합에 있을 때 이를 닫혀 있다라 합니다. 
              여기서 닫혀 있다는 뜻은 라이브러리에서 제공하는 객체와 기능들이 충분이 방대해 어떠한 연산을 수행하든지 
              해당 연산의 결과가 표현하는 수학적 구조가 라이브러리 내부의 기능과 객체들에 이미 구현되어 있음을 의미합니다(*). 
 .. [#Knuth] The Art of Computer Programming (TAOCP) (*)
 .. [#K_S] THE ADVANCED THEORY OF STATISTICS (*)
-.. [#int_size] short 같은 자료형이 고정된 byte 크기를 가진 반면, int는 플랫폼에 따라서 다양한데, 
+.. [#int_size] int는 플랫폼에 따라서 다양한 크기를 가질 수 있습니다. 
                어떤 플랫폼에서는 32bit, 64bit 크기를 가지고 어떤 플랫폼에서는 16bit의 크기를 가질 수도 있습니다. 
                대표적으로 아두이노와 같은 AVR 시스템에서 16bit 크기를 가진 경우가 흔합니다. 
                시스템에 따른 이러한 자료형 크기의 차이는 ISO C 표준 문서의 규약이 int 자료형의 최소 크기 16bit와 
@@ -1014,4 +1087,4 @@ DOS는 무시하고, Windows95/Windows 등에서의 사용만을 고려하는 �
                이로 인해 시스템마다 자료형의 실제 크기는 최소 크기보다 같거나 크기만 하면 다양하게 나올 수 있습니다.
                int 자료형은 일반적으로 구동 플랫폼의 기본 데이터 처리 타입을 따릅니다. 
                이는 실행 환경에서 가장 빠른 동작을 보장하기 위함입니다(*). 
-.. [#putpot] 원문은 "putting a quart into a pint pot"로 실현 불가능한 일을 일컫는 표현입니다. :code:`quart` 는 약 946.353ml이고 :code:`pint` 는 약 473.176ml입니다. 
+.. [#putpot] 원문은 "putting a quart into a pint pot"로 실현 불가능한 일을 일컫는 표현입니다. :code:`quart` 는 약 946.353ml이고 :code:`pint` 는 약 473.176ml입니다(*). 

@@ -377,19 +377,19 @@
 
 * T. E. Hull, Thomas F. Fairgrieve, Ping Tak Peter Tang, 
   “Implementing Complex Elementary Functions Using Exception Handling”, 
-  ACM Transactions on Mathematical Software, Volume 20 (1994), pp 215–244, 
+  ACM Transactions on Mathematical Software, Volume 20 (1994), pp 215-244, 
   Corrigenda, p553
 * T. E. Hull, Thomas F. Fairgrieve, Ping Tak Peter Tang, 
   “Implementing the complex arcsin and arccosine functions using exception handling”, 
-  ACM Transactions on Mathematical Software, Volume 23 (1997) pp 299–335
+  ACM Transactions on Mathematical Software, Volume 23 (1997) pp 299-335
 
 일반 식들과 분지점은 다음의 책들을 참고할 수 있습니다.
 
-* Abramowitz and Stegun, Handbook of Mathematical Functions, 
-  “Circular Functions in Terms of Real and Imaginary Parts”, Formulas 4.3.55–58, 
-  “Inverse Circular Functions in Terms of Real and Imaginary Parts”, Formulas 4.4.37–39, 
-  “Hyperbolic Functions in Terms of Real and Imaginary Parts”, Formulas 4.5.49–52, 
-  “Inverse Hyperbolic Functions—relation to Inverse Circular Functions”, Formulas 4.6.14–19.
+* Abramowitz & Stegun, Handbook of Mathematical Functions, 
+  “Circular Functions in Terms of Real and Imaginary Parts”, Formulas 4.3.55-58, 
+  “Inverse Circular Functions in Terms of Real and Imaginary Parts”, Formulas 4.4.37-39, 
+  “Hyperbolic Functions in Terms of Real and Imaginary Parts”, Formulas 4.5.49-52, 
+  “Inverse Hyperbolic Functions—relation to Inverse Circular Functions”, Formulas 4.6.14-19.
 * Dave Gillespie, Calc Manual, Free Software Foundation, ISBN 1-882114-18-3
 
 
