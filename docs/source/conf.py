@@ -93,7 +93,8 @@ latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '10pt',
     'preamble': my_preamble,
-    'maketitle' : maketitle
+    'maketitle' : maketitle,
+    'babel': ' ',
 }
 
 latex_documents = [

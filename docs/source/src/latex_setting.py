@@ -18,13 +18,13 @@ custom_setting = r'''
 %------------------------------------------------------------
 % 영문 폰트 설정
 \setmainfont[Mapping=tex-text]{NanumMyeongjo.ttf}
-%\setsansfont[Mapping=tex-text]{NanumBarunGothic.ttf}
-%\setmonofont{D2Coding.ttc}
+\setsansfont[Mapping=tex-text]{NanumBarunGothic.ttf}
+\setmonofont{D2Coding.ttc}
 %
 %% 한글 폰트 설정
 \setmainhangulfont[Mapping=tex-text]{NanumMyeongjo.ttf}
-%\setsanshangulfont[Mapping=tex-text]{NanumBarunGothic.ttf}
-%\setmonohangulfont{D2Coding.ttc}
+\setsanshangulfont[Mapping=tex-text]{NanumBarunGothic.ttf}
+\setmonohangulfont{D2Coding.ttc}
 '''
 
 fontpkg= r'''
