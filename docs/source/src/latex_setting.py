@@ -1,7 +1,6 @@
 
 packagelist= {
     "pdfpages" :"",
-    "xltxtra" : "",
     "xeCJK" : "CJKspace",
     "multicol":"",
     "setspace":""
@@ -16,28 +15,26 @@ custom_setting = r'''
 \onehalfspacing
 %\setstretch{1.25} % custom spacing
 %------------------------------------------------------------
-% 영문 폰트 설정
+
+%%\setsansfont{NanumBarunGothic}[
+%%    Mapping=tex-text, 
+%%    Path=./,
+%%    Extension = .ttf
+%%    ]
+%%\setmainfont{Nanum Myeongjo}[
+%%    Mapping=tex-text, 
+%%    Path=./,
+%%    Extension = .ttf
+%%    ]
+'''
+
+fontpkg= r'''
 \setmainfont{Noto Serif CJK KR}
-%\setmainfont{Nanum Myeongjo}[
-%    Mapping=tex-text, 
-%    Path=./,
-%    Extension = .ttf
-%    ]
 \setsansfont{Noto Sans CJK KR}
-%\setsansfont{NanumBarunGothic}[
-%    Mapping=tex-text, 
-%    Path=./,
-%    Extension = .ttf
-%    ]
 \setmonofont{D2Coding}[
     Path=./,
     Extension = .ttc
     ]
-
-'''
-
-fontpkg= r'''
-
 '''
 
 maketitle=r'''
