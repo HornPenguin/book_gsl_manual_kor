@@ -19,32 +19,32 @@ custom_setting = r'''
 % 영문 폰트 설정
 \setmainfont{NanumMyeongjo}[
     Mapping=tex-text, 
-    Path=./,
+    Path=./fonts/,
     Extension = .ttf
     ]
 \setsansfont{NanumBarunGothic}[
     Mapping=tex-text, 
-    Path=./,
+    Path=./fonts/,
     Extension = .ttf
     ]
 \setmonofont{D2Coding}[
-    Path=./,
+    Path=./fonts/,
     Extension = .ttc
     ]
 %
 %% 한글 폰트 설정
 \setmainhangulfont{NanumMyeongjo}[
     Mapping=tex-text, 
-    Path=./,
+    Path=./fonts/,
     Extension = .ttf
     ]
 \setsanshangulfont{NanumBarunGothic}[
     Mapping=tex-text, 
-    Path=./,
+    Path=./fonts/,
     Extension = .ttf
     ]
 \setmonohangulfont{D2Coding}[
-    Path=./,
+    Path=./fonts/,
     Extension = .ttc
     ]
 '''
