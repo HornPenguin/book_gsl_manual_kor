@@ -2,9 +2,9 @@
 packagelist= {
     "pdfpages" :"",
     "xltxtra" : "",
+    "xeCJK" : "CJKspace",
     "multicol":"",
-    "setspace":"", 
-    "xetexko" : ""
+    "setspace":""
 }
 
 #    "xeCJK" : "CJKspace",
@@ -23,31 +23,16 @@ custom_setting = r'''
 %    Path=./,
 %    Extension = .ttf
 %    ]
-\setsansfont{Nanum BarunGothic}[
+\setsansfont{NanumBarunGothic}[
     Mapping=tex-text, 
     Path=./,
     Extension = .ttf
     ]
-\setmonofont{D2 Coding}[
+\setmonofont{D2Coding}[
     Path=./,
     Extension = .ttc
     ]
-%
-%% 한글 폰트 설정
-\setmainhangulfont{Nanum Myeongjo}[
-    Mapping=tex-text, 
-    Path=./,
-    Extension = .ttf
-    ]
-\setsanshangulfont{Nanum BarunGothic}[
-    Mapping=tex-text, 
-    Path=./,
-    Extension = .ttf
-    ]
-\setmonohangulfont{D2 Coding}[
-    Path=./,
-    Extension = .ttc
-    ]
+
 '''
 
 fontpkg= r'''
