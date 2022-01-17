@@ -181,8 +181,6 @@ GSL에 추가할 새로운 기능은 별도의 패키지로 만들어 따로 개
 에 올리면 `GSL 공식 사이트 <https://www.gnu.org/software/gsl/#extensions>` 에 추가 할 수 있습니다(*) [#gsldiscuss]_ .
 
 
- [#network]_ .
-
 GSL의 디자인
 ===============
 
@@ -1064,7 +1062,6 @@ DOS는 무시하고, Windows95/Windows 등에서의 사용만을 고려하는 �
 .. [#gnulitically] *GNUlitically correct* 은 GNU 코딩 규약을 따르고 *autoconf* 를 사용하는 프로그램을 뜻합니다(*).
 .. [#gsldiscuss] 원본 내용은 "만드는 패키지의 갱신 소식 정보를 :code:`sources.redhat.com` 의 :code:`gsl-discuss` 에 올리면, GSL 웹사이트에 추가시킬 수 있습니다.
                  예시 패키지 :code:`rngextra` 는 두 개의 난수 발생기를 가지고 있습니다. 이들은 http://www.network-theory.co.uk/download/rngextra/ 에서 찾을 수 있습니다." 였습니다. 
-                 
                  rngextra 는 BJG가 만든 예시 패키지입니다. 공식 홈페이지에도 확장 기능으로
                  소개되어 있지만 해당 링크는 출판사 서버에 대한 아카이브 링크로 Network Theory가 폐업됨에 따라 해당 파일은 찾을 수 없습니다(*). 
                  Monte Carlo and Quasi-Monte Carlo Wiki(roth.cs.kuleuven.be/wiki/Rngextra)에 따르면, 
