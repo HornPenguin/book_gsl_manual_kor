@@ -12,25 +12,24 @@
 
     번역중
 
-This chapter describes functions for solving sparse linear systems
-of equations. The library provides linear algebra routines which
-operate directly on the :type:`gsl_spmatrix` and :type:`gsl_vector`
-objects.
+이 단원에서 기술하는 함수들은 희소 선형계를 풀기위한 기능들을 제공합니다.
+이 함수들은 :type:`gsl_spmatrix` 와 :type:`gsl_vector`
+객체들에 직접 접근해 계산합니다.
 
-The functions described in this chapter are declared in the header file
-:file:`gsl_splinalg.h`.
+헤더 파일 :file:`gsl_splinalg.h` 에 정의되어 있습니다.
+
 
 .. index::
    single: sparse linear algebra, overview
 
-Overview
+개요
 ========
 
-This chapter is primarily concerned with the solution of the
-linear system
+이 단원에서 제공하는 기능들의 주된 목표는 다음의 선형계의 해답을 얻는 것입니다.
 
 .. math:: A x = b
 
+:math:`A` 는 일반적인 :math:`n \times n` 정사각 행렬
 where :math:`A` is a general square :math:`n`-by-:math:`n` non-singular
 sparse matrix, :math:`x` is an unknown :math:`n`-by-:math:`1` vector, and
 :math:`b` is a given :math:`n`-by-1 right hand side vector. There exist
