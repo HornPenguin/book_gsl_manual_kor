@@ -185,7 +185,7 @@
 결과는 다음과 같습니다.
 
 
-참고문헌과 추가자료
+참고 문헌과 추가 자료
 ============================
 
 최소 제곱법과 관련된 수식과 기법들은 Particle Data Group에서 출판한 The Review of Particle Physics의 "Statistics" 단원을 참고할 수 있습니다.

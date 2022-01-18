@@ -346,7 +346,7 @@ local maxima but recovers and follows the data well after the 7th grid point.
 Steffen preserves monotonicity in all intervals and does not exhibit oscillations,
 at the expense of having a discontinuous second derivative.
 
-Introduction to 2D Interpolation
+2D 보간법의 개요
 ================================
 
 Given a set of :math:`x` coordinates :math:`x_1,...,x_m` and a set of
@@ -356,7 +356,7 @@ for each grid point :math:`(x_i,y_j)`, the routines described in this
 section compute a continuous interpolation function :math:`z(x,y)` such
 that :math:`z(x_i,y_j) = z_{ij}`.
 
-2D Interpolation Functions
+2D 보간 함수
 ==========================
 
 The interpolation function for a given dataset is stored in a
@@ -416,7 +416,7 @@ internal ordering.
    This function returns the index corresponding to the grid point
    (:data:`i`, :data:`j`). The index is given by :math:`j*xsize + i`.
 
-2D Interpolation Types
+2D 보간법 유형
 ======================
 
 .. type:: gsl_interp2d_type
@@ -532,7 +532,7 @@ internal ordering.
    is outside the range of :data:`ya`, the error code
    :macro:`GSL_EDOM` is returned.
 
-2D Higher-level Interface
+2D 고수준 인터페이스
 =========================
 
 The functions described in the previous sections required the user to
@@ -586,7 +586,7 @@ defined in the header file :file:`gsl_spline2d.h`.
    This function returns the value :math:`z_{ij}` for grid point
    (:data:`i`, :data:`j`) stored in the array :data:`za`.
 
-2D Interpolation Example programs
+2D 보간법의 예제
 =================================
 
 The following example performs bilinear interpolation on the unit
@@ -606,11 +606,11 @@ where the corners are labeled with their fixed :math:`z` values.
 
    2D interpolation example
 
-References and Further Reading
+참고 문헌과 추가 자료
 ==============================
 
-Descriptions of the interpolation algorithms and further references can
-be found in the following publications:
+보간법 알고리즘에 대한 자세한 기술과 추가 자료들은 다음 출판물들에서 참고할 수
+있습니다.
 
 * C.W. Ueberhuber,
   *Numerical Computation (Volume 1), Chapter 9 "Interpolation"*,
