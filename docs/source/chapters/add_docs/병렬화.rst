@@ -9,6 +9,21 @@
 어떠한 사항을 추가로 고려해야 하는지에 대해 간단히 알아봅시다.
 
 
+
+Message-Passing Interface에 관한 표준 규약이 존재합니다.
+해당 내용은 `MPI-Forum <https://www.mpi-forum.org/>` 에서 관리하며 
+표준 문서는 무료로 온라인에 pdf로 공개되어 있습니다. 
+
+
+* `Open MPI <https://www.open-mpi.org/>`_
+
+     Open source Message Passing Interface의 약자입니다. 
+     MPI 표준을 구현하기 위한
+
+* `OpenMP <https://www.openmp.org/>`_
+     Open Multi-Processing의 약자로 shared
+
+
 참고 문헌
 
 * Blaise Barney, Livermore Computing (retired), Donald Frederick, LLNL, Introduction to Parallel Computing Tutorial, URL: https://hpc.llnl.gov/training/tutorials/introduction-parallel-computing-tutorial#Whatis, CHECKED: Jan 2022
@@ -18,3 +33,7 @@
 * Alhubail, Maitham Makki, A thread-based parallel programming library for numerical algorithms, MIT PhD Thesis, 2014, URI: http://hdl.handle.net/1721.1/90080
    
      C++ 기반으로 짜인 스레드 기반 병렬 처리 라이브러리에 관한 논문입니다.
+* GSL Parallel 구현 논문들
+     - Aliaga J. et al. (2004) Parallelization of GSL: Architecture, Interfaces, and Programming Models. In: Kranzlmüller D., Kacsuk P., Dongarra J. (eds) Recent Advances in Parallel Virtual Machine and Message Passing Interface. EuroPVM/MPI 2004. Lecture Notes in Computer Science, vol 3241. Springer, Berlin, Heidelberg. https://doi.org/10.1007/978-3-540-30218-6_31
+     - Aliaga, J.I., Almeida, F., Badía, J.M. et al. Toward the parallelization of GSL. J Supercomput 48, 88–114 (2009). https://doi.org/10.1007/s11227-008-0207-z
+     - Yustina Sri Suharini, & Melani, Parallel Programming Implementation of Williamson Array to Calculate skew-Hadamard Matrices , Vol. 9 No. 1 (2014): Jurnal IPTEK,  https://doi.org/10.31543/jii.v9i1.48 
