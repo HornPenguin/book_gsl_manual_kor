@@ -21,7 +21,7 @@
 비대칭 알고리즘은 Moler와 Strwart의 QZ 방법을 사용합니다.
 
 
-실수-대칭 행렬
+실수 위 대칭 행렬
 =======================
 .. index::
    single: symmetric matrix, real, eigensystem
@@ -80,7 +80,7 @@
    예를 들어, 행렬의 첫번째 열은 첫번째 고유값에 해당하는 고유 벡터입니다.
    계산된 고유 벡터들은 서로 직교하고 크기 1로 정규화되어 있습니다.
 
-복소수-에르미트 행렬
+복소수 위 에르미트 행렬
 ==========================
 
 에르미트 행렬의 계산은 대칭 bidiagonalization과 QR-감소 방법을 사용합니다.
@@ -138,7 +138,7 @@
    예로 행렬 :data:`evec` 의 첫번째 열 벡터는 :data:`eval` 의 첫번째 값에 대응되는
    고유 벡터입니다. 이 고유 벡터들은 서로 직교하고 크기 1로 정규화 되어 있습니다.
 
-실수 비대칭 행렬
+실수 위 비대칭 행렬
 ==========================
 .. index::
    single: nonsymmetric matrix, real, eigensystem
@@ -176,31 +176,27 @@ Quasi-상 삼각 행렬은 블록 상 삼각 행렬로 대각 성분이 :math:`1
    :data:`compute_t` 가 1로 정해지면 슈어 형태 :math:`T` 가 :func:`gsl_eigen_nonsymm`
    를 이용해 계산됩니다. 0으로 정해지면 :math:`T`는 계산되지 않습니다. 기본 설정은
    :data:`compute_t` 가 0인 상황입니다. 완전한 슈어 형태 :math:`T` 의 계산은 
-   1.5--2 Flops의 시간을 필요로 합니다.
+   근사적으로 1.5-2 Flops의 시간을 필요로 합니다.
 
-   :data:`balance` 가 1로 정해지면 고유 값을 계산하느 과정에서 규녛ㅇ 변환이
-   행렬의 prior에 적용됩니다. 이 변환은 행렬의 행과 열을 
-   If :data:`balance` is set to 1, a balancing transformation is applied
-   to the matrix prior to computing eigenvalues. This transformation is
-   designed to make the rows and columns of the matrix have comparable
-   norms, and can result in more accurate eigenvalues for matrices
-   whose entries vary widely in magnitude. See :ref:`Balancing <balancing>` for more
-   information. Note that the balancing transformation does not preserve
-   the orthogonality of the Schur vectors, so if you wish to compute the
-   Schur vectors with :func:`gsl_eigen_nonsymm_Z` you will obtain the Schur
-   vectors of the balanced matrix instead of the original matrix. The
-   relationship will be
+   :data:`balance` 가 1로 정해지면 고유 값을 계산하기 전 군형 변환이
+   행렬에 적용됩니다. 이 변환은 행렬의 행과 열들이 comparable 노름을 가지도록 만들어
+   더 정확한 고유 값들을 얻을 수 있습니다. 더 자세한 내용은 :ref:`Balancing <balancing>`
+   을 참고할 수 있습니다. 유의할 점은 균형 변환이 슈어 벡터들의 직교성을 보존하지 않는다는
+   점입니다. 따라서 :func:`gsl_eigen_nonsymm_Z` 를 이용해 슈어 벡터를 계산하고자 한다면,
+   원본 행렬의 슈어 벡터가 아니라 균형 변환된 행렬의 슈어 벡터를 얻게됩니다.
+   이 두 벡터들 사이의 관계는 다음과 같습니다.
 
    .. math:: T = Q^T D^{-1} A D Q
 
-   where :data:`Q` is the matrix of Schur vectors for the balanced matrix, and
-   :data:`D` is the balancing transformation. Then :func:`gsl_eigen_nonsymm_Z`
-   will compute a matrix :data:`Z` which satisfies
+   :data:`Q` 는 행렬로 균형 변환된 행렬에 대한 슈어 벡터들을 나타냅니다.
+   :data:`D` 는 균형 변환에 대응되는 행렬입니다.
+   :func:`gsl_eigen_nonsymm_Z` 함수는 다음을 만족하는 행렬 :data:`Z` 를 계산합니다.
 
    .. math:: T = Z^{-1} A Z
 
-   with :math:`Z = D Q`. Note that :data:`Z` will not be orthogonal. For
-   this reason, balancing is not performed by default.
+   :math:`Z = D Q` 를 의미합니다. :math:`Z` 는 직교하지 않음을 유의해야 합니다.
+   이러한 이유로 균형 변환 기능이 기본 설정으로 사용되지 않는 것입니다.
+
 
 .. function:: int gsl_eigen_nonsymm (gsl_matrix * A, gsl_vector_complex * eval, gsl_eigen_nonsymm_workspace * w)
 
@@ -260,7 +256,7 @@ Quasi-상 삼각 행렬은 블록 상 삼각 행렬로 대각 성분이 :math:`1
    This function is identical to :func:`gsl_eigen_nonsymmv` except that it also saves
    the Schur vectors into :data:`Z`.
 
-실수 일반화된 대칭-정부호 고유계
+실수 위 일반화된 대칭-정부호 고유계
 ================================================
 .. index:: generalized symmetric eigensystems
 
@@ -292,11 +288,10 @@ Quasi-상 삼각 행렬은 블록 상 삼각 행렬로 대각 성분이 :math:`1
 따라서, 원래 문제는 대칭 행렬 :math:`C = L^{-1} A L^{-T}` 와
 :math:`y = L^T x` 에 대해 
 :math:`C y = \lambda y` 형태로 표현할 수 있습니다.
-The standard
-symmetric eigensolver can be applied to the matrix :math:`C`.
-The resulting eigenvectors are backtransformed to find the
-vectors of the original problem. The eigenvalues and eigenvectors
-of the generalized symmetric-definite eigenproblem are always real.
+이 경우 표준적인 대칭 행렬의 고유 문제 풀이 기능을 행렬 :math:`C` 에 적용할 수 있습니다.
+해당 계산 결과로 나온 고유 값들을 역변환해 원래 행렬의 고유 값들을 찾을 수 있습니다.
+일반화된 대칭-정부호 행렬의 고유 값과 고유 벡터들은 항상 실수 있습니다.
+
 
 .. type:: gsl_eigen_gensymm_workspace
 
@@ -314,20 +309,20 @@ of the generalized symmetric-definite eigenproblem are always real.
 
 .. function:: int gsl_eigen_gensymm (gsl_matrix * A, gsl_matrix * B, gsl_vector * eval, gsl_eigen_gensymm_workspace * w)
 
-   This function computes the eigenvalues of the real generalized
-   symmetric-definite matrix pair (:data:`A`, :data:`B`), and stores them 
-   in :data:`eval`, using the method outlined above. On output, :data:`B`
-   contains its Cholesky decomposition and :data:`A` is destroyed.
+   일반화된 대칭-정부호 행렬쌍 ( :data:`A` , :data:`B` )의 고유 값을 계산해
+   :data:`eval` 에 저장합니다. 이 함수는 위에 기술된 일반 대칭 행렬 문제로 변환하는 방법을 사용합니다.
+   계산후 :data:`B` 에는 :data:`B` 의 춈스키 분해가 저장되고 :data:`A` 는 본래 값을
+   잃습니다.
+
 
 .. type:: gsl_eigen_gensymmv_workspace
 
-   generalized symmetric 고유 값과 고유 벡터를 계산하기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
+   일반화된 대칭 행렬의 고유 값과 고유 벡터를 계산하기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
 
 .. function:: gsl_eigen_gensymmv_workspace * gsl_eigen_gensymmv_alloc (const size_t n)
 
-   This function allocates a workspace for computing eigenvalues and
-   eigenvectors of :data:`n`-by-:data:`n` real generalized symmetric-definite
-   eigensystems. 공간의 크기는 :math:`O(4n)` 입니다.
+   :data:`n` :math:`\times` :data:`n` 크기의 실수 일반화된 대칭-정부호 행렬의 고유 값과 고유 벡터를 계산하기 위한 작업 공간을
+   메모리에 할당합니다. 공간의 크기는 :math:`O(4n)` 입니다.
 
 .. function:: void gsl_eigen_gensymmv_free (gsl_eigen_gensymmv_workspace * w)
 
@@ -341,7 +336,7 @@ of the generalized symmetric-definite eigenproblem are always real.
    eigenvectors are normalized to have unit magnitude. On output,
    :data:`B` contains its Cholesky decomposition and :data:`A` is destroyed.
 
-Complex Generalized Hermitian-Definite Eigensystems
+복소수 위 일반화된 에르미트-정부호 고유계
 ===================================================
 .. index:: generalized hermitian definite eigensystems
 
@@ -406,7 +401,7 @@ of the generalized hermitian-definite eigenproblem are always real.
    eigenvectors are normalized to have unit magnitude. On output,
    :data:`B` contains its Cholesky decomposition and :data:`A` is destroyed.
 
-Real Generalized Nonsymmetric Eigensystems
+실수 위 일반화된 비대칭 고유계
 ==========================================
 .. index:: generalized eigensystems
 
@@ -529,8 +524,7 @@ values. The algorithm used is the QZ method due to Moler and Stewart
 
 .. type:: gsl_eigen_genv_workspace
 
-   generalized 고유값 문제를 풀기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
-   and eigenvector problems.
+   일반화된 고유 값과 고유 벡터를 계산하기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
 
 .. function:: gsl_eigen_genv_workspace * gsl_eigen_genv_alloc (const size_t n)
 
@@ -676,7 +670,8 @@ values. The algorithm used is the QZ method due to Moler and Stewart
    :code:
 
 다음은 프로그램의 실행 결과입니다.
-Here is the beginning of the output from the program::
+
+::
 
    $ ./a.out 
    eigenvalue = -6.41391 + 0i
