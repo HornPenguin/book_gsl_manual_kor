@@ -4,11 +4,11 @@
 
 .. default-domain:: c
 
-.. |gnulogo| image:: /_static/A_Slick_GNU_Logo.png 
-   :width: 120px
+.. raw:: latex
 
-
-|gnulogo| **과학 계산 라이브러리 사용 설명서**
+   \begin{center}
+   \textbf{\Huge{서문}}
+   \end{center}
 
 .. note::
 
@@ -101,15 +101,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
       Copyright © 1996-2021 The GSL Team.
       Permission is granted to copy, distribute and/or modify this document under the terms of the
       GNU Free Documentation License, Version 1.3 or any later version published by the Free Software
-      Foundation; with the Invariant Sections being “GNU General Public License” and “Free Software
-      Needs Free Documentation”, the Front-Cover text being “A GNU Manual”, and with the Back-
-      Cover Text being (a) (see below). A copy of the license is included in the section entitled “GNU
-      Free Documentation License”.
-      (a) The Back-Cover Text is: “You have freedom to copy and modify this GNU Manual, like
-      GNU software.”
-      Printed copies of this manual can be purchased from Network Theory Ltd at
-      http://www.network-theory.co.uk/gsl/manual/.
-      The money raised from sales of the manual helps support the development of GSL.
+      Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 
    **번역서의 저작권 Copyright of the Translated Korean Version:**
 
@@ -140,15 +132,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
        Copyright © 1996-2021 The GSL Team.
        Permission is granted to copy, distribute and/or modify this document under the terms of the
        GNU Free Documentation License, Version 1.3 or any later version published by the Free Software
-       Foundation; with the Invariant Sections being “GNU General Public License” and “Free Software
-       Needs Free Documentation”, the Front-Cover text being “A GNU Manual”, and with the Back-
-       Cover Text being (a) (see below). A copy of the license is included in the section entitled “GNU
-       Free Documentation License”.
-       (a) The Back-Cover Text is: “You have freedom to copy and modify this GNU Manual, like
-       GNU software.”
-       Printed copies of this manual can be purchased from Network Theory Ltd at
-       http://www.network-theory.co.uk/gsl/manual/.
-       The money raised from sales of the manual helps support the development of GSL.
+       Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
       
       **번역서의 저작권 Copyright of the Translated Korean Version**
 
@@ -174,9 +158,7 @@ GSL의 베포 파일 내부 :code:`/doc/` 디렉토리에 예제 코드와 그�
 
       ..
 
-         나눔 명조
-         나눔 고딕
-         나눔 D2 폰트를 사용했습니다.
+         D2Coding 폰트를 mono 폰트에 사용했습니다.
 
          Copyright (c) 2010, NAVER Corporation (https://www.navercorp.com/) 
       

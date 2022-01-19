@@ -6,7 +6,15 @@
 디자인 문서에서 밝혔다시피 이 라이브러리는 병렬 처리를 고려하지 않습니다.
 이 단원은 기초적인 병렬 컴퓨팅의 개요를 서술합니다. 
 따라서 간결한 라이브러리 구현에서 병렬화를 왜 고려하지 않는지, 
-어떠한 사항을 추가로 고려해야 하는지에 대해 간단히 알아봅시다.
+어떠한 사항을 추가로 고려해야 하는지에 대해 알아봅시다.
+
+용어
+=====
+병렬 컴퓨팅, 병행 컴퓨팅, 분산 컴퓨팅 등 많은 용어가 존재합니다. 세세한 개념의 차이 자체는 있지만
+이들을 완벽하게 구분할 수 있는 기준은 없습니다. 
+이 부록에서는 병렬 컴퓨팅이라는 용어를 사용합니다. 이 용어에서 시작해
+살펴볼 것이며 나머지 개념들은 추가로 해당 내용이 나올 때 서술하겠습니다. 
+
 
 병렬 처리
 -------------------
@@ -20,8 +28,18 @@
 후자는 그리드 컴퓨팅으로 잘 구현되어 있습니다. SETI@home 이나 Boinc 시스템이 그 예시입니다.
 
 이러한 분야는 컴퓨터 아키텍처, OS의 구성과 관리 시스템 등과도 연관되어 있습니다.
-이들을 짧은 부록안에서 전부 서술하는 것은 불가능합니다. 간단한 개요 수준으로만 살펴보도록할 것입니다.
+세세하게 살펴볼 경우, 아키텍처의 역사, 발전, 분류, 그 위에서 돌아가는 OS의 구성, 구현 방법
+관리, 병렬화를 지원하는 언어와 그 확장까지 모두 살펴볼 수 있습니다.
+이들을 짧은 부록안에서 전부 서술하는 것은 불가능합니다. 
+간단한 개요 수준으로만 살펴보도록할 것입니다.
 
+컴퓨터 아키텍처의 분류
+-----------------------
+
+
+
+스레드와 프로세스
+========================
 
 스레드
 -----------------
@@ -36,14 +54,20 @@ C에서 스레드-안전에 영향을 미치는 요인으로 다음이 있습니
 * 전역 변수
 * 정적 변수
 
+프로세스
+---------------------
 
-근래의 개인용 컴퓨터들도 멀티-코어가 매우 흔한만큼
-일반 개인들도 프로그래밍을 공부할 때 하드웨어의 제약이 그리크지는 않습니다.
+프로세스는
+
+근래의 개인용 컴퓨터들도 멀티-코어 시스템이 매우 흔한만큼
+일반 개인들도 병렬 프로그래밍을 공부할 때 하드웨어의 제약이 그리크지는 않습니다.
 게임 시장의 활발한 성장에 감사합시다. 
 
 
+
+
 구현 라이브러리와 소프트웨어
----------------------------------------
+====================================
 
 Message-Passing Interface에 관한 표준 규약이 존재합니다.
 해당 내용은 `MPI-Forum <https://www.mpi-forum.org/>` 에서 관리하며 
@@ -65,6 +89,24 @@ Message-Passing Interface에 관한 표준 규약이 존재합니다.
      Open Multi-Processing의 약자로 shared
 
 
+참고 문헌과 추가 자료
+====================================
+
+병렬 컴퓨팅의 개요로 다음의 서적들을 참고할 수 있습니다.
+
+* Parallel Programming in C with MPI and Open MP
+
+* Parallel Numerical Algorithms
+
+
+라이브러리들에 관한 자세한 내용과 추가 자료들은 다음의 공식 문헌들을 참고하길 바랍니다.
+
+* 
+
+병렬 컴퓨팅을 다루는 학술지로 다음이 있습니다.
+
+* `The International Journal of Parallel Programming <https://www.springer.com/journal/10766/>`_
+
 참고 문헌
 
 * Blaise Barney, Livermore Computing (retired), Donald Frederick, LLNL, Introduction to Parallel Computing Tutorial, URL: https://hpc.llnl.gov/training/tutorials/introduction-parallel-computing-tutorial#Whatis, CHECKED: Jan 2022
@@ -76,5 +118,5 @@ Message-Passing Interface에 관한 표준 규약이 존재합니다.
      C++ 기반으로 짜인 스레드 기반 병렬 처리 라이브러리에 관한 논문입니다.
 * GSL Parallel 구현 논문들
      - Aliaga J. et al. (2004) Parallelization of GSL: Architecture, Interfaces, and Programming Models. In: Kranzlmüller D., Kacsuk P., Dongarra J. (eds) Recent Advances in Parallel Virtual Machine and Message Passing Interface. EuroPVM/MPI 2004. Lecture Notes in Computer Science, vol 3241. Springer, Berlin, Heidelberg. https://doi.org/10.1007/978-3-540-30218-6_31
-     - Aliaga, J.I., Almeida, F., Badía, J.M. et al. Toward the parallelization of GSL. J Supercomput 48, 88–114 (2009). https://doi.org/10.1007/s11227-008-0207-z
+     - Aliaga, J.I., Almeida, F., Badía, J.M. et al. Toward the parallelization of GSL. J Supercomput 48, 88-114 (2009). https://doi.org/10.1007/s11227-008-0207-z
      - Yustina Sri Suharini, & Melani, Parallel Programming Implementation of Williamson Array to Calculate skew-Hadamard Matrices , Vol. 9 No. 1 (2014): Jurnal IPTEK,  https://doi.org/10.31543/jii.v9i1.48 
