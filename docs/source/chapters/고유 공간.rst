@@ -14,7 +14,7 @@
 
 이 단원에서는 행렬의 고유 값과 고유 벡터를 계산하는 함수들에 대해 다룹니다.
 이 함수들은 실수-대칭, 실수-비대칭, 복소수-에르미트, 실수-일반회된 준대칭,
-복소수-일반화된 준에르미트, 그리고 실수-일반화된 비대칭 고유계들의 풀이 기능들을 제공합니다.
+복소수-일반화된 준 에르미트, 그리고 실수-일반화된 비대칭 고유계들의 풀이 기능들을 제공합니다.
 고유 값들은 고유 벡터들과 함께 계산되거나 단독으로 계산될 수도 있습니다.
 에르미트와 실수 대칭 행렬을 계산하는 알고리즘들은 대칭 bidigonalization 
 과 QR reducton을 이용합니다. 비대칭 알고리즘은 Francis-QR 이중 전이 방법을, 일반화된
@@ -35,7 +35,7 @@
 
 .. type:: gsl_eigen_symm_workspace
 
-   이 작업공간은 대칭 고유값 문제를 풀기 위한 내부 인자들을 가지고 있습니다.
+   실수 대칭 행렬의 고유 값을 계산하기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
 
 
 .. function:: gsl_eigen_symm_workspace * gsl_eigen_symm_alloc (const size_t n)
@@ -57,7 +57,7 @@
 
 .. type:: gsl_eigen_symmv_workspace
 
-   이 작업공간은 대칭 행렬의 고유값, 고유 벡터를 계산하기 위한 내부 인자들을 가지고 있습니다.
+   실수 대칭 행렬의 고유 값과 고유 벡터를 계산하기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
 
 
 .. function:: gsl_eigen_symmv_workspace * gsl_eigen_symmv_alloc (const size_t n)
@@ -67,12 +67,12 @@
 
 .. function:: void gsl_eigen_symmv_free (gsl_eigen_symmv_workspace * w)
 
-   :data:`w` 를 해제합니다. 
+   :data:`w` 가 가르키는 작업 공간 영역을 해제합니다. 
 
 .. function:: int gsl_eigen_symmv (gsl_matrix * A, gsl_vector * eval, gsl_matrix * evec, gsl_eigen_symmv_workspace * w)
 
-   실수 대칭 행렬 :data:`A` 의 고유값, 고유 벡터를 계산합니다. 함수 호출과정에서 반드시
-   적절한 크기의 작업 공간을 :data:`w` 에 제공해 주어야합니다. 
+   실수 대칭 행렬 :data:`A` 의 고유값, 고유 벡터를 계산합니다. 반드시, 
+   함수 호출과정에서 적절한 크기의 작업 공간을 :data:`w` 에 제공해 주어야합니다. 
    행렬 :data:`A` 의 대각, 하삼각 성분들은 계산과정에서 수정됩니다.
    반면, 상삼각 성분들은 참조되지 않습니다.
    고유값들은 벡터 :data:`eval` 에 무작위 순서로 저장됩니다.
@@ -83,7 +83,7 @@
 복소수-에르미트 행렬
 ==========================
 
-에르미트 행렬의 계산은 대칭 bidiagonalization과 QR-reduction 방법을 사용합니다.
+에르미트 행렬의 계산은 대칭 bidiagonalization과 QR-감소 방법을 사용합니다.
 
 
 .. index::
@@ -92,18 +92,17 @@
 
 .. type:: gsl_eigen_herm_workspace
 
-   이 작업공간은 hermitian 고유갑 문제를 풀기 위한 내부 인자들을 가지고 있습니다.
-   problems.
+   에르미트 행렬의 고유 값을 계산하기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
 
 .. function:: gsl_eigen_herm_workspace * gsl_eigen_herm_alloc (const size_t n)
 
-   This function allocates a workspace for computing eigenvalues of
-   :data:`n`-by-:data:`n` complex hermitian matrices.  The size of the workspace
+   :code:`n` :math:`\times` :code:`n` 크기의 복소수 에르미트 행렬의 고유 값을
+   찾기 위한 작업 공간을 메모리에 할당합니다.  The size of the workspace
    is :math:`O(3n)`.
 
 .. function:: void gsl_eigen_herm_free (gsl_eigen_herm_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   T:data:`w` 가 가르키는 작업 공간 영역을 해제합니다. 
 
 .. function:: int gsl_eigen_herm (gsl_matrix_complex * A, gsl_vector * eval, gsl_eigen_herm_workspace * w)
 
@@ -117,65 +116,60 @@
 
 .. type:: gsl_eigen_hermv_workspace
 
-   이 작업공간은 hermitian 고유갑 문제를 풀기 위한 내부 인자들을 가지고 있습니다.
-   and eigenvector problems.
+   에르미트 행렬의 고유 값과 고유 벡터를 계산하기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
 
 .. function:: gsl_eigen_hermv_workspace * gsl_eigen_hermv_alloc (const size_t n)
 
-   This function allocates a workspace for computing eigenvalues and
-   eigenvectors of :data:`n`-by-:data:`n` complex hermitian matrices.  The size of
-   the workspace is :math:`O(5n)`.
+   :code:`n` :math:`\times` :code:`n` 크기의 복소수 에르미트 행렬의 고유 값과 고유 벡터를
+   찾기 위한 작업 공간을 메모리에 할당합니다. 작업 공간의 크기는 :math:`O(5n)` 입니다.
+
 
 .. function:: void gsl_eigen_hermv_free (gsl_eigen_hermv_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   :data:`w` 가 가르키는 작업 공간 영역을 해제합니다. 
 
 .. function:: int gsl_eigen_hermv (gsl_matrix_complex * A, gsl_vector * eval, gsl_matrix_complex * evec, gsl_eigen_hermv_workspace * w)
 
-   This function computes the eigenvalues and eigenvectors of the complex
-   hermitian matrix :data:`A`.  Additional workspace of the appropriate size
-   must be provided in :data:`w`.  The diagonal and lower triangular part of
-   :data:`A` are destroyed during the computation, but the strict upper
-   triangular part is not referenced. The imaginary parts of the diagonal
-   are assumed to be zero and are not referenced.  The eigenvalues are
-   stored in the vector :data:`eval` and are unordered.  The corresponding
-   complex eigenvectors are stored in the columns of the matrix :data:`evec`.
-   For example, the eigenvector in the first column corresponds to the
-   first eigenvalue.  The eigenvectors are guaranteed to be mutually
-   orthogonal and normalised to unit magnitude.
+   복소수 에르미트 행렬 :data:`A` 의 고유 벡터와 고유 값을 계산합니다. 반드시, 
+   함수 호출과정에서 적절한 크기의 작업 공간을 :data:`w` 에 제공해 주어야합니다. 
+   행렬 :data:`A` 의 대각 성분과 하 삼각 성분은 계산 과정에서 수정됩니다.
+   대각 성분의 허수부는 0으로 간주되며 계산 과정에서 사용되지 않습니다. 
+   고유 값들은 :data:`eval` 이 가르키는 벡터에 무자구이 순서로 저장됩니다.
+   이 고유 값들에 대응되는 고유 벡터들은 행렬 :data:`evec` 에 열 벡터로 저장됩니다.
+   예로 행렬 :data:`evec` 의 첫번째 열 벡터는 :data:`eval` 의 첫번째 값에 대응되는
+   고유 벡터입니다. 이 고유 벡터들은 서로 직교하고 크기 1로 정규화 되어 있습니다.
 
-Real Nonsymmetric Matrices
+실수 비대칭 행렬
 ==========================
 .. index::
    single: nonsymmetric matrix, real, eigensystem
    single: real nonsymmetric matrix, eigensystem
+   single: Schur decomposition
+   single: Francis method
 
-The solution of the real nonsymmetric eigensystem problem for a
-matrix :math:`A` involves computing the Schur decomposition
+실수 비대칭 행렬 :math:`A` 의 고유 값과 고유 벡터들을 찾는 문제는
+슈어 분해(Schur decomposition)를 이용해 계산할 수 있습니다.
 
 .. math:: A = Z T Z^T
 
-where :math:`Z` is an orthogonal matrix of Schur vectors and :math:`T`,
-the Schur form, is quasi upper triangular with diagonal
-:math:`1`-by-:math:`1` blocks which are real eigenvalues of :math:`A`, and
-diagonal :math:`2`-by-:math:`2` blocks whose eigenvalues are complex
-conjugate eigenvalues of :math:`A`. The algorithm used is the double-shift 
-Francis method.
+:math:`Z` 는 슈어 벡터들의 직교 행렬, :math:`T` 은 Schur 형태로 Quasi-상 삼각 행렬입니다.
+Quasi-상 삼각 행렬은 블록 상 삼각 행렬로 대각 성분이 :math:`1 \times 1` 이나 :math:`2 \times 2` 크기의
+블록 행렬인 행렬을 의미합니다. 이 때, :math:`2 \times 2` 크기 행렬의 고유 값들은 :math:`A` 행렬의 고유 값들의
+켤례 복소수입니다.  이 과정에서 사용되는 알고리즘에는 이중 전이 프란시스 방법이 사용됩니다.
 
 .. type:: gsl_eigen_nonsymm_workspace
 
-   이 작업공간은 nonsymmetric 고유갑 문제를 풀기 위한 내부 인자들을 가지고 있습니다.
-   problems.
+   비대칭 행렬의 고유 값 문제를 풀기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
 
 .. function:: gsl_eigen_nonsymm_workspace * gsl_eigen_nonsymm_alloc (const size_t n)
 
-   This function allocates a workspace for computing eigenvalues of
-   :data:`n`-by-:data:`n` real nonsymmetric matrices. The size of the workspace
+   :code:`n` :math:`\times` :code:`n` 크기의 실수 비대칭 행렬의 고유 값을
+   찾기 위한 작업 공간을 메모리에 할당합니다. The size of the workspace
    is :math:`O(2n)`.
 
 .. function:: void gsl_eigen_nonsymm_free (gsl_eigen_nonsymm_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   :data:`w` 가 가르키는 작업 공간 영역을 해제합니다. 
 
 .. function:: void gsl_eigen_nonsymm_params (const int compute_t, const int balance, gsl_eigen_nonsymm_workspace * w)
 
@@ -230,7 +224,7 @@ Francis method.
 
 .. type:: gsl_eigen_nonsymmv_workspace
 
-   이 작업공간은 nonsymmetric 고유갑 문제를 풀기 위한 내부 인자들을 가지고 있습니다.
+   nonsymmetric 고유 값 문제를 풀기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
    and eigenvector problems.
 
 .. function:: gsl_eigen_nonsymmv_workspace * gsl_eigen_nonsymmv_alloc (const size_t n)
@@ -241,7 +235,7 @@ Francis method.
 
 .. function:: void gsl_eigen_nonsymmv_free (gsl_eigen_nonsymmv_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   :data:`w` 가 가르키는 작업 공간 영역을 해제합니다. 
 
 .. function:: void gsl_eigen_nonsymmv_params (const int balance, gsl_eigen_nonsymm_workspace * w)
 
@@ -270,18 +264,18 @@ Francis method.
    This function is identical to :func:`gsl_eigen_nonsymmv` except that it also saves
    the Schur vectors into :data:`Z`.
 
-Real Generalized Symmetric-Definite Eigensystems
+실수 일반화된 대칭 정부호 고유계
 ================================================
 .. index:: generalized symmetric eigensystems
 
-The real generalized symmetric-definite eigenvalue problem is to find
-eigenvalues :math:`\lambda` and eigenvectors :math:`x` such that
+실수 위에서 일반화된 대칭-정부호 행렬의 고유 문제는 다음과 같은
+고유 값과 고유 벡터들을 계산하는 문제입니다.
 
 .. math:: A x = \lambda B x
 
-where :math:`A` and :math:`B` are symmetric matrices, and :math:`B` is
-positive-definite. This problem reduces to the standard symmetric
-eigenvalue problem by applying the Cholesky decomposition to :math:`B`:
+:math:`A` 와 :math:`B` 는 대칭 행렬이고, :math:`B` 는 양의 정부호 행렬입니다.
+이 문제는 :math:`B` 에 춈스키 분해를 적용해 표준적인 대칭 행렬의 고유 값 문제로
+바꿀 수 있습니다.
 
 .. only:: not texinfo
 
@@ -299,9 +293,10 @@ eigenvalue problem by applying the Cholesky decomposition to :math:`B`:
       A x = \lambda L L^T x
       ( L^{-1} A L^{-T} ) L^T x = \lambda L^T x
 
-Therefore, the problem becomes :math:`C y = \lambda y` where
-:math:`C = L^{-1} A L^{-T}`
-is symmetric, and :math:`y = L^T x`. The standard
+따라서, 원래 문제는 대칭 행렬 :math:`C = L^{-1} A L^{-T}` 와
+:math:`y = L^T x` 에 대해 
+:math:`C y = \lambda y` 형태로 표현할 수 있습니다.
+The standard
 symmetric eigensolver can be applied to the matrix :math:`C`.
 The resulting eigenvectors are backtransformed to find the
 vectors of the original problem. The eigenvalues and eigenvectors
@@ -309,18 +304,18 @@ of the generalized symmetric-definite eigenproblem are always real.
 
 .. type:: gsl_eigen_gensymm_workspace
 
-   이 작업공간은 generalized symmetric 고유갑 문제를 풀기 위한 내부 인자들을 가지고 있습니다.
+   generalized symmetric 고유 값 문제를 풀기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
    problems.
 
 .. function:: gsl_eigen_gensymm_workspace * gsl_eigen_gensymm_alloc (const size_t n)
 
-   This function allocates a workspace for computing eigenvalues of
-   :data:`n`-by-:data:`n` real generalized symmetric-definite eigensystems. The
+   :code:`n` :math:`\times` :code:`n` 크기의 일반화된 대칭-정부호 행렬의 고유 값을
+   찾기 위한 작업 공간을 메모리에 할당합니다. The
    size of the workspace is :math:`O(2n)`.
 
 .. function:: void gsl_eigen_gensymm_free (gsl_eigen_gensymm_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   :data:`w` 가 가르키는 작업 공간 영역을 해제합니다. 
 
 .. function:: int gsl_eigen_gensymm (gsl_matrix * A, gsl_matrix * B, gsl_vector * eval, gsl_eigen_gensymm_workspace * w)
 
@@ -331,8 +326,7 @@ of the generalized symmetric-definite eigenproblem are always real.
 
 .. type:: gsl_eigen_gensymmv_workspace
 
-   이 작업공간은 generalized symmetric 고유갑 문제를 풀기 위한 내부 인자들을 가지고 있습니다.
-   and eigenvector problems.
+   generalized symmetric 고유 값과 고유 벡터를 계산하기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
 
 .. function:: gsl_eigen_gensymmv_workspace * gsl_eigen_gensymmv_alloc (const size_t n)
 
@@ -342,7 +336,7 @@ of the generalized symmetric-definite eigenproblem are always real.
 
 .. function:: void gsl_eigen_gensymmv_free (gsl_eigen_gensymmv_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   :data:`w` 가 가르키는 작업 공간 영역을 해제합니다. 
 
 .. function:: int gsl_eigen_gensymmv (gsl_matrix * A, gsl_matrix * B, gsl_vector * eval, gsl_matrix * evec, gsl_eigen_gensymmv_workspace * w)
 
@@ -374,18 +368,18 @@ of the generalized hermitian-definite eigenproblem are always real.
 
 .. type:: gsl_eigen_genherm_workspace
 
-   이 작업공간은 generalized hermitian 고유갑 문제를 풀기 위한 내부 인자들을 가지고 있습니다.
+   generalized hermitian 고유 값 문제를 풀기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
    problems.
 
 .. function:: gsl_eigen_genherm_workspace * gsl_eigen_genherm_alloc (const size_t n)
 
-   This function allocates a workspace for computing eigenvalues of
-   :data:`n`-by-:data:`n` complex generalized hermitian-definite eigensystems. The
+   :code:`n` :math:`\times` :code:`n` 크기의 -- 행렬의 고유를
+   찾기 위한 작업 공간을 메모리에 할당합니다.complex generalized hermitian-definite eigensystems. The
    size of the workspace is :math:`O(3n)`.
 
 .. function:: void gsl_eigen_genherm_free (gsl_eigen_genherm_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   :data:`w` 가 가르키는 작업 공간 영역을 해제합니다. 
 
 .. function:: int gsl_eigen_genherm (gsl_matrix_complex * A, gsl_matrix_complex * B, gsl_vector * eval, gsl_eigen_genherm_workspace * w)
 
@@ -396,7 +390,7 @@ of the generalized hermitian-definite eigenproblem are always real.
 
 .. type:: gsl_eigen_genhermv_workspace
 
-   이 작업공간은 generalized hermitian 고유갑 문제를 풀기 위한 내부 인자들을 가지고 있습니다.
+   generalized hermitian 고유 값 문제를 풀기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
    and eigenvector problems.
 
 .. function:: gsl_eigen_genhermv_workspace * gsl_eigen_genhermv_alloc (const size_t n)
@@ -407,7 +401,7 @@ of the generalized hermitian-definite eigenproblem are always real.
 
 .. function:: void gsl_eigen_genhermv_free (gsl_eigen_genhermv_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   :data:`w` 가 가르키는 작업 공간 영역을 해제합니다. 
 
 .. function:: int gsl_eigen_genhermv (gsl_matrix_complex * A, gsl_matrix_complex * B, gsl_vector * eval, gsl_matrix_complex * evec, gsl_eigen_genhermv_workspace * w)
 
@@ -478,18 +472,18 @@ values. The algorithm used is the QZ method due to Moler and Stewart
 
 .. type:: gsl_eigen_gen_workspace
 
-   이 작업공간은 generalized 고유갑 문제를 풀기 위한 내부 인자들을 가지고 있습니다.
+   generalized 고유 값 문제를 풀기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
    problems.
 
 .. function:: gsl_eigen_gen_workspace * gsl_eigen_gen_alloc (const size_t n)
 
-   This function allocates a workspace for computing eigenvalues of
-   :data:`n`-by-:data:`n` real generalized nonsymmetric eigensystems. The
+   :code:`n` :math:`\times` :code:`n` 크기의 -- 행렬의 고유를
+   찾기 위한 작업 공간을 메모리에 할당합니다.real generalized nonsymmetric eigensystems. The
    size of the workspace is :math:`O(n)`.
 
 .. function:: void gsl_eigen_gen_free (gsl_eigen_gen_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   :data:`w` 가 가르키는 작업 공간 영역을 해제합니다. 
 
 .. function:: void gsl_eigen_gen_params (const int compute_s, const int compute_t, const int balance, gsl_eigen_gen_workspace * w)
 
@@ -540,7 +534,7 @@ values. The algorithm used is the QZ method due to Moler and Stewart
 
 .. type:: gsl_eigen_genv_workspace
 
-   이 작업공간은 generalized 고유갑 문제를 풀기 위한 내부 인자들을 가지고 있습니다.
+   generalized 고유값 문제를 풀기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
    and eigenvector problems.
 
 .. function:: gsl_eigen_genv_workspace * gsl_eigen_genv_alloc (const size_t n)
@@ -551,7 +545,7 @@ values. The algorithm used is the QZ method due to Moler and Stewart
 
 .. function:: void gsl_eigen_genv_free (gsl_eigen_genv_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   :data:`w` 가 가르키는 작업 공간 영역을 해제합니다. 
 
 .. function:: int gsl_eigen_genv (gsl_matrix * A, gsl_matrix * B, gsl_vector_complex * alpha, gsl_vector * beta, gsl_matrix_complex * evec, gsl_eigen_genv_workspace * w)
 
