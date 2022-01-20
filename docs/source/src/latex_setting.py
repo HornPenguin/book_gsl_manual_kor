@@ -3,7 +3,8 @@ packagelist= {
     "pdfpages" :"",
     "xeCJK" : "CJKspace",
     "multicol":"",
-    "setspace":""
+    "setspace":"",
+    "imakeidx": ""
 }
 
 #    "xeCJK" : "CJKspace",

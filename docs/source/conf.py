@@ -94,8 +94,12 @@ latex_elements = {
     'pointsize': '10pt',
     'preamble': my_preamble,
     'maketitle' : maketitle,
-    'fontpkg' : fontpkg
+    'fontpkg' : fontpkg,
+    'fancychap' : r'\usepackage[Conny]{fncychap}',
+    'printindex' : r'\footnotesize\raggedright\printindex'
+
 }
+
 
 latex_documents = [
     (master_doc, 
