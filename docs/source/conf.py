@@ -96,7 +96,7 @@ latex_elements = {
     'maketitle' : maketitle,
     'fontpkg' : fontpkg,
     'fncychap' : r'\usepackage[Glenn]{fncychap}',
-    'printindex' : r'\footnotesize\raggedright\printindex'
+    'printindex' : r'\footnotesize\printindex'
 
 }
 
