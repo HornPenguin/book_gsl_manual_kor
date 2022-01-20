@@ -95,7 +95,7 @@ latex_elements = {
     'preamble': my_preamble,
     'maketitle' : maketitle,
     'fontpkg' : fontpkg,
-    'fancychap' : r'\usepackage[Conny]{fncychap}',
+    'fncychap' : r'\usepackage[Conny]{fncychap}',
     'printindex' : r'\footnotesize\raggedright\printindex'
 
 }
