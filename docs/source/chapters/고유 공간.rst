@@ -17,7 +17,7 @@
 복소수-일반화된 준 에르미트, 그리고 실수-일반화된 비대칭 고유계들의 풀이 기능들을 제공합니다.
 고유 값들은 고유 벡터들과 함께 계산되거나 단독으로 계산될 수도 있습니다.
 에르미트와 실수 대칭 행렬을 계산하는 알고리즘들은 대칭 bidigonalization 
-과 QR reducton을 이용합니다. 비대칭 알고리즘은 Francis-QR 이중 전이 방법을, 일반화된
+과 QR 감소을 이용합니다. 비대칭 알고리즘은 Francis-QR 이중 전이 방법을, 일반화된
 비대칭 알고리즘은 Moler와 Strwart의 QZ 방법을 사용합니다.
 
 
@@ -27,20 +27,20 @@
    single: symmetric matrix, real, eigensystem
    single: real symmetric matrix, eigensystem
 
-실수 대칭 행렬들은 bidiagonalization과 QR-reduction 방법을 사용합니다.
+실수 위 대칭 행렬의 고유 값, 벡터 문제는 bidiagonalization과 QR-감소 방법을 사용합니다.
 이 방법들은 Golub & van Loan, section 8.3 에 기술되어 있습니다.
-고유값의 정확도는 :math:`\epsilon ||A||_2` 의 절대 정확도를 가집니다.
-:math:`\epsilon` 는 계산기 정밀도입니다.
+고유 값은 :math:`\epsilon ||A||_2` 의 절대 정확도를 가집니다.
+:math:`\epsilon` 은 계산기 정밀도입니다.
 
 
 .. type:: gsl_eigen_symm_workspace
 
-   실수 대칭 행렬의 고유 값을 계산하기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
+   실수 위 대칭 행렬의 고유 값을 계산하기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
 
 
 .. function:: gsl_eigen_symm_workspace * gsl_eigen_symm_alloc (const size_t n)
 
-    :data:`n`-by-:data:`n` 크기의 실수 대칭 행렬의 고유값 문제를 풀기위한
+    :data:`n`-by-:data:`n` 크기의 실수 위 대칭 행렬의 고유값 문제를 풀기위한
     작업 공간을 할당합니다. 작업 공간의 크기는 :math:`O(2n)` 입니다.
 
 
@@ -50,10 +50,10 @@
 
 .. function:: int gsl_eigen_symm (gsl_matrix * A, gsl_vector * eval, gsl_eigen_symm_workspace * w)
 
-   실수 대칭 행렬 :data:`A` 의 고유값을 계산합니다. 함수를 호출과정에서 반드시 
+   대칭 행렬 :data:`A` 의 고유값을 계산합니다. 함수를 호출과정에서 반드시 
    적절한 크기의 작업 공간을 :data:`w` 에 전해주어야 합니다. 
    행렬 :data:`A` 의 대각, 하삼각 성분들은 계산과정에서 수정됩니다.
-   반면, 상삼각 성분들은 참조되지 않습니다. 고유값들은 벡터 :data:`eval` 에 무작위 순서로 저장됩니다.
+   반면, 상삼각 성분들은 참조되지 않습니다. 고유 값들은 벡터 :data:`eval` 에 무작위 순서로 저장됩니다.
 
 .. type:: gsl_eigen_symmv_workspace
 
@@ -84,7 +84,6 @@
 ==========================
 
 에르미트 행렬의 계산은 대칭 bidiagonalization과 QR-감소 방법을 사용합니다.
-
 
 .. index::
    single: hermitian matrix, complex, eigensystem
