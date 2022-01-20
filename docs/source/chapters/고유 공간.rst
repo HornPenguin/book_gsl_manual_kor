@@ -194,30 +194,30 @@ Quasi-상 삼각 행렬은 블록 상 삼각 행렬로 대각 성분이 :math:`1
    .. math:: T = Z^{-1} A Z
 
    :math:`Z = D Q` 를 의미합니다. :math:`Z` 는 직교하지 않음을 유의해야 합니다.
-   이러한 이유로 균형 변환 기능이 기본 설정으로 사용되지 않는 것입니다.
-
+   이러한 이유로 균형 변환을 포함하면 더 정확한 고유 값들을 계산할 수 있음에도
+   불구하고 기본 설정에서 제거하고 선택 사항으로 제공합니다.
 
 .. function:: int gsl_eigen_nonsymm (gsl_matrix * A, gsl_vector_complex * eval, gsl_eigen_nonsymm_workspace * w)
 
-   This function computes the eigenvalues of the real nonsymmetric matrix
-   :data:`A` and stores them in the vector :data:`eval`. If :math:`T` is
-   desired, it is stored in the upper portion of :data:`A` on output.
-   Otherwise, on output, the diagonal of :data:`A` will contain the
-   :math:`1`-by-:math:`1` real eigenvalues and :math:`2`-by-:math:`2`
-   complex conjugate eigenvalue systems, and the rest of :data:`A` is
-   destroyed. In rare cases, this function may fail to find all
-   eigenvalues. If this happens, an error code is returned
-   and the number of converged eigenvalues is stored in :code:`w->n_evals`.
-   The converged eigenvalues are stored in the beginning of :data:`eval`.
+   실수 위 비대칭 행렬 :data:`A` 의 고유 값을 계산합니다. 계산된 고유 값들은
+   벡터 :data:`eval` 에 저장됩니다. :math:`T` 값이 필요한 경우, 해당 값들은
+   꼐산이 끝난 후 행렬 :data:`A` 의 대각 성분을 포함한 상 삼각 부분에 저장됩니다. 
+   계산 후 :data:`A` 의 대각 성분은 :math:`1 \times 1` 크기의 고유 값과
+   고유 값이 :data:`A` 고유 값의 켤레 복소수 값을 가지는 크기 :math:` 2 \times 2` 행렬들을
+   가지고 있습니다. :data:`A` 의 나머지 부분들의 값은 계산 과정에서 훼손됩니다.
+   드믄 일이지만 이 함수가 모든 고유 값을 찾지 못하는 경우가 있습니다.
+   이 경우 오류 값이 반환되고 수렴한 고유 값들의 숫자가 :code:`w -> n_evals` 에 저장됩니다.
+   수렴된 고유 값들은 :data:`eval` 에 앞 자리부터 채워져 저장됩니다.
 
 .. function:: int gsl_eigen_nonsymm_Z (gsl_matrix * A, gsl_vector_complex * eval, gsl_matrix * Z, gsl_eigen_nonsymm_workspace * w)
 
-   This function is identical to :func:`gsl_eigen_nonsymm` except that it also
-   computes the Schur vectors and stores them into :data:`Z`.
+   :func:`gsl_eigen_nonsymm` 와 동일합니다. 
+   다만 추가로 슈어 벡터를 계산하고 :data:`Z` 에 저장한다는 차이가 있습니다.
+
 
 .. type:: gsl_eigen_nonsymmv_workspace
 
-   비 대칭 행렬의 고유 값과 고유 벡터를 계산하기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
+   비대칭 행렬의 고유 값과 고유 벡터를 계산하기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
 
 .. function:: gsl_eigen_nonsymmv_workspace * gsl_eigen_nonsymmv_alloc (const size_t n)
 
