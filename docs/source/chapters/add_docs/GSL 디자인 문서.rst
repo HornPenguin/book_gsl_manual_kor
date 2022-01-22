@@ -1148,7 +1148,49 @@ DOS는 무시하고, Windows95/Windows 등에서의 사용만을 고려하는 �
 변수 이름에 :code:`l` 는 사용하지 말아야 합니다. 숫자 :code:`1` 과 구분하기 힘듭니다. 
 오래된 포트란 프로그램에서 매우 흔한 일이었습니다.
 
-마지막 사항: 하나의 완벽한 구현체가 오류 있는 많은 구현체보다 낫습니다.
+.. topic:: 마지막 첨언
+  
+    하나의 완벽한 구현체가 오류 있는 많은 구현체보다 낫습니다.
+
+참고 문헌
+=========================
+
+수치 해석
+-----------------
+
+* Numerical Computation (2 Volumes) by C.W. Ueberhuber, Springer 1997, 
+  ISBN 3540620583 (Vol 1) and ISBN 3540620575 (Vol 2).
+* Accuracy and Stability of Numerical Algorithms by N.J. Higham, SIAM, 
+  ISBN 0898715210.
+* Sources and Development of Mathematical Software edited by W.R. Cowell, 
+  Prentice Hall, ISBN 0138235015.
+* A Survey of Numerical Mathematics (2 vols) by D.M. Young and R.T. 
+  Gregory, ISBN 0486656918, ISBN 0486656926.
+* Methods and Programs for Mathematical Functions by Stephen L. 
+  Moshier, Hard to find (ISBN 13578980X or 0135789982, possibly others).
+* Numerical Methods That Work by Forman S. Acton, ISBN 0883854503.
+* Real Computing Made Real: Preventing Errors in Scientific and 
+  Engineering Calculations by Forman S. Acton, ISBN 0486442217.
+
+
+표준 문헌
+-------------------
+
+* Handbook of Mathematical Functions edited by Abramowitz & Stegun, 
+  Dover, ISBN 0486612724.
+* The Art of Computer Programming (3rd Edition, 3 Volumes) 
+  by D. Knuth, Addison Wesley, ISBN 0201485419.
+
+특정 주제
+------------------
+
+* Matrix Computations (3rd Ed) by G.H. Golub, C.F. Van Loan, 
+  Johns Hopkins University Press 1996, ISBN 0801854148.
+* LAPACK Users’ Guide (3rd Edition), SIAM 1999, ISBN 0898714478.
+* Treatise on the Theory of Bessel Functions 2ND Edition 
+  by G N Watson, ISBN 0521483913.
+* Higher Transcendental Functions satisfying nonhomogeneous 
+  linear differential equations by A W Babister, ISBN 1114401773.
 
 이용
 ======================
