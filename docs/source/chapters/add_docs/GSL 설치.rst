@@ -658,7 +658,9 @@ GSL 설치 과정에서 configure 스크립트의 여러 설정 사항들은 다
     * `Visual Studio and MSVC <https://docs.microsoft.com/ko-kr/visualstudio/windows/?view=vs-2022>`_
 
 .. only:: latex
+
     Checked: 3.Janurary.2022
+    
     * Bash 
          https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html
     * GNU/Make 
