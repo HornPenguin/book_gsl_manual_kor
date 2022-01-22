@@ -691,7 +691,7 @@ Windows 에서의 설치에 사용한 도구들과 관련 내용은 다음을 �
          https://docs.microsoft.com/en-us/cpp/build/reference/lib-reference?view=msvc-170
 
 
-.. rubri:: 각주
+.. rubric:: 각주
 
 .. [#MSVS] Microsoft Visual Studio
 .. [#MSVC] Microsoft Visual C++: Microsofot 사의 MSVC는 C++ 컴파일러로 지원하는 C 표준은 
