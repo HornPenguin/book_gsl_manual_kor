@@ -7,7 +7,7 @@ GSL 설치(*)
 이 단원에서는 GSL 라이브러리의 설치에 관해 다룹니다. 
 라이브러리를 설치한다는 것은 정적이나 공유/동적 라이브러리 파일을 다른 프로그램이나
 컴파일 과정에서 사용할 수 있는 환경을 구축하는 행위를 말합니다.
-그냥 단순히 베포하고 있는 :code:`.c` :code:`.h` 파일들을 복사해서
+단순히 베포하고 있는 :code:`.c` :code:`.h` 파일들을 복사해서
 프로젝트 디렉토리에 포함시켜도 됩니다. 
 하지만 매우 번거롭고, 프로그램이 공유/동적 라이브러리를
 사용할 수 없어 실행 파일의 크기가 커집니다.
@@ -63,7 +63,9 @@ Windows에서는 OS 자체적으로 저장소를 활용한 프로그램 설치�
 
 `Cygwin`_ 의 사전 컴파일된 라이브러리를 설치하는 형식으로 사용할 수 있습니다. 
 아니면 Microsoft 사에서 베포한 `Nuget <https://www.nuget.org/>`_ 이라는 패키지 관리 프로그램에서 
-컴파일된 라이브러리를 설치할 수도 있습니다. 
+컴파일된 라이브러리를 설치할 수도 있습니다. Nuget은 Visual Studio에서 개발하고자 할 때 
+사용할 수 있는데, 특정 버전에서만 호환될 수도 있습니다.
+
 
 .. only:: html
 
@@ -90,7 +92,6 @@ MSYS2를 설치하면 Bash, MinGW, Make 등의 환경을 윈도우에서 이용�
 MSVC 등에서 이용하려면 설치후 라이브러리 파일들을 조금 수정해 주어야합니다.
 소스 코드 설치에서 dlltool 이용 단원을 참고하길 바랍니다.
 
-Nuget은 Visual Studio에서 개발하고자 할 때 사용할 수 있습니다.
 
 
 소스 코드 설치
@@ -351,10 +352,10 @@ clang과 icc등과 같이 다른 컴파일러를 사용한다면 별도로
 
 :macro:`CC`  , :macro:`CPP` 는 실행 가능한 C, C++ 컴파일러의 이름을 말합니다.
 
-더 자세한 정보는 라이브러리 베포 파일내의 
+더 자세한 정보는 라이브러리 베포 파일내의 configure 파일 설명서를 읽어보기 바랍니다.
 
 Windows를 Linuex/Mac과 별개로 서술하는 이유는 이 단계 때문입니다. 
-해당 파일은  Shell-script를 사용하기 때문에 Windows CMD나 PowerShell에서 사용할 수 없습니다.
+해당 파일은 Shell-script를 사용하기 때문에 Windows CMD나 PowerShell에서 사용할 수 없습니다.
 
 Building & Test
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -416,42 +417,44 @@ Configre - Final Install 단계를 한번에 진행하도록 할 수도 있습�
 해당 파일이 없다면, 별도의 설정이 필요합니다. 다양한 방법이 존재합니다.
 
 * 실행 중, 환경 변수 :code:`LD_LIBRARY_PATH` 에 :code:`LIBDIR`  추가하기
+
+     :code:`bash` 창에 다음을 입력하면 환경 변수 :code:`LD_LIBRARY_PATH` 에 위치를 추가할 수 있습니다. 
+ 
+     .. code-block:: console
+ 
+         LD_LIBRARY_PATH=${LD_LIBRARY_PARH}:/usr/local/lib
+         export LD_LIBRARY_PATH 
+ 
+ 
+     그러나 이 방법은 새로운 :code:`bash` 창을 열 때마다 별도로 입력해 주어야합니다. 
+     때문에, 계정의 홈 디렉토리에 있는 :code:`.bashrc` 파일의 끝에 다음의 문구를 추가해줍니다 [#bashrc]_ .
+ 
+ 
+     .. code-block:: console
+ 
+         LD_LIBRARY_PATH=${LD_LIBRARY_PARH}:/usr/local/lib
+         export LD_LIBRARY_PATH 
+ 
+ 
+     재부팅 후나 :code:`$source ~/.bashrc` 를 입력하면 정상적으로 사용이 가능합니다.
+
 * 링크 과정에서 환경 변수 :code:`LD_RUN_PATH` 에 :code:`LIBDIR`  추가하기
 * :code:`-Wl, -rpath -Wl, LIBDIR`  옵션을 링크에 넣기
 * 관리자 권한을 얻은 후 :code:`/etc/ld.so.conf/`  디렉토리에 :code:`LIBDIR` 이 있는 파일 추가하기
 
-마지막 방법은 :code:`libc.conf` 을 만들어 주면 됩니다. 파일이름은 중요하지 않습니다. :code:`.conf` 파일은 1 줄에 각각 
-:code:`.so`  동적 라이브러리 파일들이 있는 디렉토리 경로를 작성하면 됩니다. 
-일반적으로 이 방법이 권장됩니다. 
-최신 Ubuntu에서는 기본으로 :code:`libc.conf`  파일이 :code:`/etc/ld.so.conf/`  디렉토리에 있어 별도의 설정없이 
-설치 후 라이브러리를  바로 활용 가능합니다. :code:`libc.conf`  파일의 내용은 다음과 같습니다.
+     :code:`libc.conf` 을 만들어 주면 됩니다. 파일이름은 중요하지 않습니다. :code:`.conf` 파일은 1 줄에 각각 
+     :code:`.so`  동적 라이브러리 파일들이 있는 디렉토리 경로를 작성하면 됩니다. 
+     일반적으로 이 방법이 권장됩니다. 
+     최신 Ubuntu에서는 기본으로 :code:`libc.conf`  파일이 :code:`/etc/ld.so.conf/`  디렉토리에 있어 별도의 설정없이 
+     설치 후 라이브러리를  바로 활용 가능합니다. :code:`libc.conf`  파일의 내용은 다음과 같습니다.
+     
+     .. code-block:: console
+     
+         # libc default configuration
+         /usr/local/lib
+     
 
-.. code-block:: console
-
-    # libc default configuration
-    /usr/local/lib
-
-* 환경 변수에 추가하기
-
-    :code:`bash` 창에 다음을 입력하면 환경 변수 :code:`LD_LIBRARY_PATH` 에 위치를 추가할 수 있습니다. 
-
-    .. code-block:: console
-
-        LD_LIBRARY_PATH=${LD_LIBRARY_PARH}:/usr/local/lib
-        export LD_LIBRARY_PATH 
-
-
-    그러나 이 방법은 새로운 :code:`bash` 창을 열 때마다 별도로 입력해 주어야합니다. 
-    때문에, 계정의 홈 디렉토리에 있는 :code:`.bashrc` 파일의 끝에 다음의 문구를 추가해줍니다 [#bashrc]_ .
-
-
-    .. code-block:: console
-
-        LD_LIBRARY_PATH=${LD_LIBRARY_PARH}:/usr/local/lib
-        export LD_LIBRARY_PATH 
-
-
-    재부팅 후나 :code:`$source ~/.bashrc` 를 입력하면 정상적으로 사용이 가능합니다.
+    
 
 Windows
 ==================
@@ -459,7 +462,8 @@ Windows
 Windows 에서의 설치는 복잡합니다. 사실 1가지로 제약하면 의외로 쉽게 해결할 수 있는데 
 (VS studio 에서만 사용, Mingw에서만 사용 등과 같이) 설치된 모든 컴파일러에서 사용가능하게
 구현하려면 결국은 소스코드를 컴파일해서 Windows의 정적/동적 라이브러리 파일을 만들어야합니다.
-gcc 자체가 크로스 컴파일을 지원하므로 Linux에서 Windows 라이브러리 파일을 만드는게 가능합니다.
+gcc 자체가 크로스 컴파일을 지원하므로 Linux에서 Windows 라이브러리 파일을 만드는 것도 가능합니다.
+하지만, Windows 환경에서 개발을 한다고 가정합시다.
 
 근래에 나온 Windows Subsystem for Linux(`WSL <https://docs.microsoft.com/ko-kr/windows/wsl/about>`_ )를 사용하면
 굳이 Windows에서 사용할 목적으로 GSL을 설치하지 않고 Windows 내의 Linux 환경에서 개발을 할 수도 있습니다.
@@ -472,13 +476,22 @@ gcc 자체가 크로스 컴파일을 지원하므로 Linux에서 Windows 라이�
 
 Prerequisites에서 필요한 컴파일러, make 도구는 Windows에서도 설치가 가능합니다. 가장 큰 문제는
 시스템을 검사해 실제 설치에 사용할 Makefile을 만드는 :code:`configure` 파일이 Shell-script이기 때문에
-Windows의 CMD나 Powershell에서 사용할 수 없다는 점입니다. 
+Windows의 CMD나 Powershell에서 사용할 수 없다는 점입니다. 이 경우 2가지 방법이 있습니다.
 
-때문에 bash 환경 설치가 필요합니다. 다양한 방법이 있지만 (`Gitbash <https://git-scm.com/downloads>`_ 를 사용할 수도 있습니다)
-MinGw와 make까지 한번에 설치 가능한 방법을 사용하도록 합시다. 
-이 문서에서는 `MSYS2 <https://www.msys2.org/>`_ 를 사용할 것입니다.
+1. Bash 환경을 설치해서 사용하기
+2. Make 파일을 만드는 다른 방법을 사용하기
+
+Bash 환경 설치는 다양한 프로그램에서 제공합니다. 이 문서에서는 `MSYS2 <https://www.msys2.org/>`_ 를 사용할 것입니다.
+Make 파일을 만들 수 있는 build 도구로 Cmake가 있습니다. 이 프로그램은 GNU/Linux, OSX, Windows 모두 사용가능합니다.
+
+
+MSYS2
+-------------------
+
 MSYS2는 Windows Native 프로그램을 개발할 수 있게 해주는 도구 모음입니다.
-홈페이지에서 https://www.msys2.org/ 설치 파일을 내려받아 MSYS2를 설치합니다.
+홈페이지에서 설치 파일을 내려받아 MSYS2를 설치합니다.
+
+https://www.msys2.org/
 
 .. warning::
 
@@ -584,11 +597,11 @@ MSVS를 사용하지 않아도, 빌드를 위해 설치한 Tool-chain에서 관�
 
     이 라이브러리는 :code:`autoconf` 를 사용해 라이브러리의 컴파일 과정에서 시스템과
     컴파일러에 의존하는 몇몇 최적화를 수행하기도 합니다. MinGW와 Clang을 그대로 사용하면
-    상관없겠지만, 이렇게 MSVC와 같은 다른 컴파일러 환경으로 라이브러리를 옿긴다면 해당
-    사항을 인지하고 있어야 합니다.
+    상관 없겠지만, 이렇게 MSVC와 같은 다른 컴파일러 환경으로 라이브러리를 옿긴다면 해당
+    사항을 인지하고 있어야 합니다. 
 
 def 파일 생성
---------------------
+~~~~~~~~~~~~~~~~~~
 
 GCC: gendef, dlltool
 
@@ -597,7 +610,7 @@ LLVM/Clang: llvm-dlltool
 MSVC [#MSVC]_ :
 
 lib 파일 생성
--------------------
+~~~~~~~~~~~~~~~~~~
  
 디렉토리 내부에
 MinGW:
@@ -609,28 +622,14 @@ Clang과 GCC를 IDE에서 컴파일러로 설치하고 링크 설정을 완료�
 만약, MSVC를 사용하고자 한다면 추가 작업이 필요합니다.
 
 def -> lib
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 몇가지 선택 사항이 있습니다.
 
-dlltool
-^^^^^^^^^^^^^^^^
-
-GNU binary 도구에 포함된 dll 관리 도구 입니다.
-
-
-
-
-llvm-dlltool
-^^^^^^^^^^^^^^^^
-
-LLVM/Clang 도구 모음에 포함된 dll 관리 도구 입니다.
-
-LIB
-^^^^^^^^^^^^^^^^
-
-Visual Studio의 라이브러리 관리 도구입니다. 이를 사용하려면 Visual Studio의 개발자 터미널 내에서 사용해야 합니다.
-일반 CMD에서도 사용이 불가능하지는 않지만 몇가지 설정을 변경해야합니다.
+* dlltool: GNU binary 도구에 포함된 dll 관리 도구 입니다.
+* llvm-dlltool: LLVM/Clang 도구 모음에 포함된 dll 관리 도구 입니다.
+* LIB: Visual Studio의 라이브러리 관리 도구입니다. 이를 사용하려면 Visual Studio의 개발자 터미널 내에서 사용해야 합니다.
+  일반 CMD에서도 사용이 불가능하지는 않지만 몇가지 설정을 변경해야합니다.
 
 .. _common_library_document:
 
@@ -659,7 +658,7 @@ GSL 설치 과정에서 configure 스크립트의 여러 설정 사항들은 다
     * `Visual Studio and MSVC <https://docs.microsoft.com/ko-kr/visualstudio/windows/?view=vs-2022>`_
 
 .. only:: latex
-
+    Checked: 3.Janurary.2022
     * Bash 
          https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html
     * GNU/Make 
@@ -674,14 +673,14 @@ GSL 설치 과정에서 configure 스크립트의 여러 설정 사항들은 다
 Windows 에서의 설치에 사용한 도구들과 관련 내용은 다음을 참고할 수 있습니다.
 
 .. only:: html
-
+    Checked: 3.Janurary.2022
     * `Build GSL on Windows Using Native Tools: MSVC <https://www.gnu.org/software/gsl/extras/native_win_builds.html>`_
     * `How to compile GSL for Windows <https://titanwolf.org/Network/Articles/Article?AID=02d574bd-a867-4ebf-acab-34baf0146445>`_
     * `GNU Binary Utils Manual- dlltool <https://sourceware.org/binutils/docs/binutils/dlltool.html>`_
     * `Microsoft technical documentation, Additional MSVC build tools - LIB Reference <https://docs.microsoft.com/en-us/cpp/build/reference/lib-reference?view=msvc-170>`_
 
 .. only:: latex
-    
+    Checked: 3.Janurary.2022
     * Build GSL on Windows Using Native Tools: MSVC
          https://www.gnu.org/software/gsl/extras/native_win_builds.html
     * How to compile GSL for Windows
@@ -692,7 +691,7 @@ Windows 에서의 설치에 사용한 도구들과 관련 내용은 다음을 �
          https://docs.microsoft.com/en-us/cpp/build/reference/lib-reference?view=msvc-170
 
 
-.. rubri: 각주
+.. rubri:: 각주
 
 .. [#MSVS] Microsoft Visual Studio
 .. [#MSVC] Microsoft Visual C++: Microsofot 사의 MSVC는 C++ 컴파일러로 지원하는 C 표준은 
