@@ -675,7 +675,9 @@ GSL 설치 과정에서 configure 스크립트의 여러 설정 사항들은 다
 Windows 에서의 설치에 사용한 도구들과 관련 내용은 다음을 참고할 수 있습니다.
 
 .. only:: html
+
     Checked: 3.Janurary.2022
+    
     * `Build GSL on Windows Using Native Tools: MSVC <https://www.gnu.org/software/gsl/extras/native_win_builds.html>`_
     * `How to compile GSL for Windows <https://titanwolf.org/Network/Articles/Article?AID=02d574bd-a867-4ebf-acab-34baf0146445>`_
     * `GNU Binary Utils Manual- dlltool <https://sourceware.org/binutils/docs/binutils/dlltool.html>`_
