@@ -116,7 +116,7 @@
 
 .. function:: gsl_complex gsl_complex_react(double x, double y)
 
-  직교 데카르트 좌표계 :math:`(x,y)`  를 이용해 :math:`z = x + iy`  복소수를 반환합니다.  :code:`HAVE_INLINE` 정의하면, 인라인 형태의 함수를 사용할 수 있습니다.
+  직교 데카르트 좌표계 :math:`(x,y)`  를 이용해 :math:`z = x + iy`  복소수를 반환합니다.  :macro:`HAVE_INLINE` 을 정의하면, 인라인 형태의 함수를 사용할 수 있습니다.
 
 .. function:: gsl_complex gsl_complex_polar(double r, double theta)
 

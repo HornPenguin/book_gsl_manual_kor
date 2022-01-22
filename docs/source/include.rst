@@ -1,5 +1,5 @@
-.. |inlinefns| replace:: :code:`HAVE_INLINE` 이 정의된 경우, 각 함수들의 인라인 함수가 사용됩니다. 
-.. |inlinefn| replace:: :code:`HAVE_INLINE` 이 정의된 경우, 인라인 함수가 사용됩니다. 
+.. |inlinefns| replace:: :macro:`HAVE_INLINE` 이 정의된 경우, 각 함수들의 인라인 함수가 사용됩니다. 
+.. |inlinefn| replace:: :macro:`HAVE_INLINE` 이 정의된 경우, 인라인 함수가 사용됩니다. 
 .. |lapack| replace:: LAPACK
 .. |octave| replace:: GNU octave
 .. |fftpack| replace:: FFTPACK

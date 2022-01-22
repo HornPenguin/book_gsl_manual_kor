@@ -12,19 +12,19 @@
 다항식의 계산
 ======================
 
-다항식의 값을 계산하는 함수들을 기술합니다.
+다항식 값의 계산은 안전성을 위해 호너 방법(Horner's method)을 사용합니다. 
 
 .. math::
   
   P(x) = c[0] + c[1] x + c[2] x^2 + \dotsb + c[len-1] x^{len -1}
 
-호너 방법(Horner's method)을 사용합니다. 
-inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
+
+:macro:`HAVE_INLINE` 가 정의되어 있으면 inline 함수가 사용됩니다.
 
 
 .. function:: double gsl_poly_eval (const double c[], const int len, const double x)
 
-  실수 값 :code:`x` 대해, 실수 계수를 가지는 다항식의 값을 계산합니다. 
+  실수 값 :var:`x` 대해, 실수 계수를 가지는 다항식의 값을 계산합니다. 
 
 .. function:: gsl_complex gsl_poly_complex_eval (const double c[], const int len, const gsl_complex z)
 
@@ -37,7 +37,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
 .. function:: int gsl_poly_eval_derivs (const double c[], const size_t lenc, const double x, double res[], const size_t lenres)
 
   다항식과 그 도함수를 계산해 길이 :code:`lenres` 의 배열 :code:`res` 에 저장합니다. 
-  이 배열은 주어진 :code:`x` 값에 대한, :math:`d^k P(x)/ d x^k` 값을 
+  이 배열은 주어진 :var:`x` 값에 대한, :math:`d^k P(x)/ d x^k` 값을 
   각각의 원소로 가지고 있습니다. :math:`k` 는 :math:`0` 부터 시작합니다.
 
 
@@ -45,20 +45,21 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
 ===========================
 
 이 단락에서 기술하는 함수들은 뉴턴의 분할 차분법으로 
-표현된 다항식들을 다룹니다. 분할 차분법은 Abramowitz & Stegun의 25.1.4와 25.2.26 단원, 
+표현된 다항식들을 다룹니다. 
+분할 차분법은 Abramowitz & Stegun의 25.1.4와 25.2.26 단원, 
 그리고 Burden and Faires, 3단원에 기술되어 있습니다. 
-이 단락에서는 간단하게 분할 차분법의 개요를 서술할 것입니다.
+이 단락에서는 분할 차분법의 개요를 서술합니다.
 
 주어진 함수 :math:`f(x)` 와 :math:`n` 차수의 다항식 :math:`P_n(x)` 는 
 함수 :math:`f` 와 :math:`n+1` 개의 서로 다른 지점 :math:`x_0, x_1, \dots, x_n` 들로 표현할 수 있습니다. 
-이 다음과 같은 다항식의 표현법을 뉴턴의 분할 차분 표현이라 합니다.
+다음과 같은 다항식의 표현법을 뉴턴의 분할 차분 표현이라 합니다.
 
 .. math::
   
   P_n(x) = f(x_0) + \sum_{k=1}^n [x_0, x_1, \dots, x_k] (x-x_0)(x-x_1) \cdots (x-x_{k-1})
 
 분할 차분 :math:`[x_0, x_1, \dots, x_k]` 은 Abramowitz & Stegun 25.1.4에 정의되어 있습니다. 
-추가적으로, :math:`x_0, x_1, \dots, x_k` 에서 :math:`f` 의 :math:`1` 계 도함수 값이 주어졌다면, 
+추가적으로 :math:`x_0, x_1, \dots, x_k` 에서 :math:`f` 의 :math:`1` 계 도함수 값이 주어졌다면, 
 차수 :math:`2n+1` 의 보간 다항식을 만드는 데 사용할 수도 있습니다. 
 이 보간 다항식은 에르미트 보간 다항식으로 불리며 
 다음과 같이 정의됩니다.
@@ -74,37 +75,37 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
 
 .. function:: int gsl_poly_dd_init (double dd[], const double xa[], const double ya[], size_t size)
 
-  길이 :code:`size` 의 배열 :code:`xa` 와 :code:`ya` 에 저장된 지점 :math:`(x,y)` 에 대해, 
+  길이 :var:`size` 의 배열 :var:`xa` 와 :var:`ya` 에 저장된 지점 :math:`(x,y)` 에 대해, 
   보간 다항식의 분할 차분 표현을 계산합니다.  
-  ( :code:`xa` :code:`ya` )의  분할 차분 계산 결과는 길이 :code:`size` 배열 :code:`dd` 저장됩니다. 
+  ( :var:`xa` :var:`ya` )의  분할 차분 계산 결과는 길이 :var:`size` 배열 :var:`dd` 저장됩니다. 
   개요에서 설명한 서술법을 따라 :math:`dd[k] = [x_0, x_1,\dots, x_k]` 입니다.
 
 .. function:: double gsl_poly_dd_eval (const double dd[], const double xa[], const size_t size, const double x)
 
-  길이 :code:`size` 의 배열 :code:`xa` 와 :code:`ya` 에 저장된 분할 차분 표현된 다항식의 값을 
-  주어진 변수 :code:`x` 대해 계산합니다. 
-  매크로 :code:`HAVE_INLINE` 가 정의되어 있으면 인라인 버전이 사용됩니다.
+  길이 :var:`size` 의 배열 :var:`xa` 와 :var:`ya` 에 저장된 분할 차분 표현된 다항식의 값을 
+  주어진 변수 :var:`x` 대해 계산합니다. 
+  매크로 :macro:`HAVE_INLINE` 가 정의되어 있으면 인라인 버전이 사용됩니다.
 
 .. function:: int gsl_poly_dd_taylor (double c[], double xp, const double dd[], const double xa[], size_t size, double w[])
 
   분할 차분 표현된 다항식을 테일러 전개로 바꾸어줍니다. 
-  분할 차분 표현은 길이 :code:`size` 배열 :code:`dd` 와 :code:`xa` 로 표현됩니다. 
-  :code:`xp` 지점의 테일러 계수들은 배열 :code:`c` 에 저장됩니다. :code:`c` 배열도  :code:`size` 크기의 길이를 가집니다. 
-  배열  :code:`w` 는 길이가 :code:`size` 로 같습니다. 
+  분할 차분 표현은 길이 :var:`size` 배열 :var:`dd` 와 :var:`xa` 로 표현됩니다. 
+  :var:`xp` 지점의 테일러 계수들은 배열 :var:`c` 에 저장됩니다. :var:`c` 배열도  :var:`size` 크기의 길이를 가집니다. 
+  배열  :code:`w` 는 길이가 :var:`size` 로 같습니다. 
 
 .. function:: int gsl_poly_dd_hermite_init (double dd[], double za[], const double xa[], const double ya[], const double dya[], const size_t size)
 
-  길이 :code:`size` 배열 :code:`xa` 와 :code:`ya` 에 저장된 지점 :math:`(x,y)` 들에 대해, 
+  길이 :var:`size` 배열 :var:`xa` 와 :var:`ya` 에 저장된 지점 :math:`(x,y)` 들에 대해, 
   에르미트 보간 다항식의 분할 차분 표현을 계산합니다. 
   에르미트 보간법으로 만들어지는 다항식은 :math:`1`  계 도함수 :math:`dy/dx` 의 값을 필요로 합니다. 
-  이 값은 길이 :code:`size` 의 배열 :code:`dya` 로 주어져 있습니다.  
+  이 값은 길이 :var:`size` 의 배열 :var:`dya` 로 주어져 있습니다.  
   :math:`1`  계 도함수 값들은 새로운 자료 집합 :math:`z= \{ x_0, x_0, x_1, x_1 \dots\}` 를 정의해서, 
   일반적인 분할 차분법에 통합시킬 수 있습니다. 
-  이 값들은 길이 :math:`2 \cdot` :code:`size` 의 배열 :code:`za` 에 저장되어 있습니다. 
-  계산 결과들은 :math:`2 \cdot` :code:`size` 길이를 가지는 배열 :code:`dd` 저장됩니다.  
+  이 값들은 길이 :math:`2 \cdot` :var:`size` 의 배열 :code:`za` 에 저장되어 있습니다. 
+  계산 결과들은 :math:`2 \cdot` :var:`size` 길이를 가지는 배열 :var:`dd` 저장됩니다.  
   개요에서 설명한 서술법을 따라 :math:`dd[k] = [z_0, z_1, \dots, z_k]` 로 표현됩니다. 
   계산된 에르미트 다항식은 :code:`gsl_poly_dd_eval()` 함수를 호출해 
-  :code:`xa` 에 대한  :code:`za` 값을 넘겨 계산될 수 있습니다.
+  :var:`xa` 에 대한  :code:`za` 값을 넘겨 계산될 수 있습니다.
 
 2 차 다항식 (Quadratic Equations)
 ====================================================
@@ -118,10 +119,10 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
       a x^2 + b x + c = 0
 
   의 실수 근을 찾습니다. 근의 갯수(0,1,2)를 반환하며, 
-  각 근의 위치는 :code:`x0` 와 :code:`x` 에 저장됩니다. 
-  만약, 실수 근이 존재하지 않는다면 :code:`x0` 와 :code:`x1` 의 값을 수정하지 않습니다. 
-  한 개의 근만이 있는 경우(예를 들어 :math:`a=0`  )는 :code:`x0` 에 저장됩니다. 
-  두 개의 근이 존재하면 :code:`x0` 와 :code:`x1` 는 각각 오름차순으로 저장됩니다. 
+  각 근의 위치는 :var:`x0` 와 :var:`x` 에 저장됩니다. 
+  만약, 실수 근이 존재하지 않는다면 :var:`x0` 와 :var:`x1` 의 값을 수정하지 않습니다. 
+  한 개의 근만이 있는 경우(예를 들어 :math:`a=0`  )는 :var:`x0` 에 저장됩니다. 
+  두 개의 근이 존재하면 :var:`x0` 와 :var:`x1` 는 각각 오름차순으로 저장됩니다. 
   중근의 경우는 특별히 취급되지 않습니다. 
   예를 들어, :math:`(x-1)^2 = 0` 은 값이 같은 두 개의 근을 가지는 방정식으로 취급됩니다.
 
@@ -140,7 +141,11 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
   
   의 복소수 근을 계산합니다.
 
-함수의 반환 값은 복소수 근의 숫자를 의미합니다. ( :math:`1` 이거나 :math:`2` 입니다.) 각 근의 위치는 :code:`z0`  :code:`z1`  저장됩니다. 저장되는 순서는 오름차순으로 저장되고, 먼저 실수부를 기준으로 판정하고 그 다음에 허수부의 크기를 기준으로 배열합니다. 만약 한 개의 실수 근만 존재하면 ( 예를 들어 :math:`a=0` ) :code:`z0` 저장됩니다.
+함수의 반환 값은 복소수 근의 숫자를 의미합니다. ( :math:`1` 이거나 :math:`2` 입니다.) 
+각 근의 위치는 :var:`z0`  :var:`z1`  에 저장됩니다. 
+저장되는 순서는 오름차순으로 저장되고, 
+실수부를 우선으로 판정하고 그 다음 허수부의 크기를 기준으로 배열합니다. 
+만약 한 개의 실수 근만 존재하면 ( 예를 들어 :math:`a=0` ) :var:`z0` 에 저장됩니다.
 
 3 차 다항식 (Cubic Equations)
 ====================================================
@@ -154,9 +159,9 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
         x^3 + a x^2 + b x + c = 0
 
   의 실수 근을 계산합니다. 실수 근의 숫자 (1-3)을 반환합니다. 
-  이 근들의 위치는 :code:`x0` , :code:`x1` 그리고 :code:`x2` 에 저장됩니다. 
-  만약 한 개의 실수 근만이 존재한다면, :code:`x0` 에 저장됩니다. 
-  세 개의 근이 존재한다면, 오름차순으로 :code:`x0` , :code:`x1` 그리고 :code:`x2` 에 저장됩니다. 
+  이 근들의 위치는 :var:`x0` , :var:`x1` 그리고 :var:`x2` 에 저장됩니다. 
+  만약 한 개의 실수 근만이 존재한다면, :var:`x0` 에 저장됩니다. 
+  세 개의 근이 존재한다면, 오름차순으로 :var:`x0` , :var:`x1` 그리고 :var:`x2` 에 저장됩니다. 
   중근은 특별하게 취급하지 않습니다. 
   예로 :math:`(x-1)^3 =0` 인 경우, 같은 값을 가지는 세 개의 근을 가지는 것으로 취급됩니다. 
 
@@ -173,7 +178,7 @@ inline 버전을 사용하려면 :code:`HAVE_INLINE` 정의하면 됩니다.
         z^3 + a z^2 + b z + c = 0
 
   의 복소수 근을 찾습니다. 복소수 근의 숫자를 의미합니다(항상 3 입니다). 
-  각 근의 위치는 :code:`z0` , :code:`z1` 그리고 :code:`z2` 에 저장됩니다. 
+  각 근의 위치는 :var:`z0` , :var:`z1` 그리고 :var:`z2` 에 저장됩니다. 
   각 근은 오름차순으로 실수부를 우선 판정하고, 허수부를 판정해 결정합니다.
 
 일반 다항식
