@@ -684,7 +684,9 @@ Windows 에서의 설치에 사용한 도구들과 관련 내용은 다음을 �
     * `Microsoft technical documentation, Additional MSVC build tools - LIB Reference <https://docs.microsoft.com/en-us/cpp/build/reference/lib-reference?view=msvc-170>`_
 
 .. only:: latex
+
     Checked: 3.Janurary.2022
+    
     * Build GSL on Windows Using Native Tools: MSVC
          https://www.gnu.org/software/gsl/extras/native_win_builds.html
     * How to compile GSL for Windows
