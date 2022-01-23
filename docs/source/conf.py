@@ -86,7 +86,7 @@ my_preamble = r'''
 
 my_cover_and_license = r'''
     \newpage
-    \includepdf[pages=-]{Cover.pdf}
+    \includepdf[pages=1]{Cover.pdf}
     \newpage
     '''
 latex_elements = {
