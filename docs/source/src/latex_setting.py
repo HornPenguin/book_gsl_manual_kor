@@ -33,11 +33,11 @@ custom_setting = r'''
 fontpkg= r'''
 \setmainfont{Noto Serif CJK KR}
 \setsansfont{Noto Sans CJK KR}
-\setmonofont{D2Coding}[
-    Path=./,
-    Extension = .ttc
-    ]
-%\setmonofont{Noto Sans Mono CJK KR}
+%\setmonofont{D2Coding}[
+%    Path=./,
+%    Extension = .ttc
+%    ]
+\setmonofont{Noto Sans Mono CJK KR}
 
 '''
 

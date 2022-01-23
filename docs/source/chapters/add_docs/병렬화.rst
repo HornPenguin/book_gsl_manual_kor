@@ -117,6 +117,9 @@ Message-Passing Interface에 관한 표준 규약이 존재합니다.
    
      C++ 기반으로 짜인 스레드 기반 병렬 처리 라이브러리에 관한 논문입니다.
 * GSL Parallel 구현 논문들
+     -  Park et al, Training and Research on Computational Science and Cyber-Infrastructure, 
+        Government White paper, KISTI, Dec. 2011. ReNum: TRKO201200010737, 
+        URL: https://repository.kisti.re.kr/handle/10580/11076. 
      - Aliaga J. et al. (2004) Parallelization of GSL: Architecture, Interfaces, and Programming Models. In: Kranzlmüller D., Kacsuk P., Dongarra J. (eds) Recent Advances in Parallel Virtual Machine and Message Passing Interface. EuroPVM/MPI 2004. Lecture Notes in Computer Science, vol 3241. Springer, Berlin, Heidelberg. https://doi.org/10.1007/978-3-540-30218-6_31
      - Aliaga, J.I., Almeida, F., Badía, J.M. et al. Toward the parallelization of GSL. J Supercomput 48, 88-114 (2009). https://doi.org/10.1007/s11227-008-0207-z
      - Yustina Sri Suharini, & Melani, Parallel Programming Implementation of Williamson Array to Calculate skew-Hadamard Matrices , Vol. 9 No. 1 (2014): Jurnal IPTEK,  https://doi.org/10.31543/jii.v9i1.48 
