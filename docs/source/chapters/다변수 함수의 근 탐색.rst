@@ -37,10 +37,8 @@
 개요
 ========
 
-다변수 함수의 근 탐색 문제는 동등한 
-The problem of multidimensional root finding requires the simultaneous
-solution of :math:`n` equations, :math:`f_i`, in :math:`n` variables,
-:math:`x_i`,
+다변수 함수의 근 탐색 문제는 :math:`n` 개의 변수 :math:`x_i` 를 가지는
+:math:`n` 개의 :math:`f_i` 방정식의 해를 필요로합니다.
 
 .. only:: not texinfo
 
