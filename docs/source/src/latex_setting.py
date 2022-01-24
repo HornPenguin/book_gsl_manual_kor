@@ -5,7 +5,7 @@ packagelist= {
     "multicol":"",
     "setspace":"",
     "imakeidx": "",
-    "fontspec":""
+    "bookmark": ""
 }
 
 #    "xeCJK" : "CJKspace",
@@ -18,18 +18,14 @@ custom_setting = r'''
 %\setstretch{1.25} % custom spacing
 %------------------------------------------------------------
 
-\setmainfont{Noto Serif}
-\setsansfont{Noto Sans CJK KR}
-\setCJKmainfont{NanumMyeongjo}[
-    Kerning=On,
-    Mapping=tex-text
+\setmainfont{NanumMyeongjo}[
     Path=./,
     Extension = .otf,
     ItalicFont=*Italic,
     BoldFont=*ExtraBold,
     BoldItalicFont=*ExtraBoldItalic
 ]
-\setCJKsansfont{NanumBarunGothic}[
+\setsansfont{NanumBarunGothic}[
     Path=./,
     Extension = .otf,
     ItalicFont=*Italic,
@@ -40,23 +36,19 @@ custom_setting = r'''
     Path=./,
     Extension = .ttc
 ]
-
-\newfontfamily\hangulfont[Script=Hangul]{NanumMyeongjo}
-\newfontfamily\hangulfontsf[Script=Hangul]{NanumBarunGothic}
-\newfontfamily\hangulfonttt[Script=Hangul]{D2Coding}
-
+          
+\setCJKmainfont{NanumMyeongjo}
+\setCJKsansfont{NanumBarunGothic}
+\setCJKmonofont{D2Coding}
 '''
 
 fontpkg= r'''
-%\setmainfont{Noto Serif CJK KR}
-%\setsansfont{Noto Sans CJK KR}
-%\setmonofont{Noto Sans Mono CJK KR}
+
 '''
 
 maketitle=r'''
 \newpage
     \includepdf[pages=-]{Cover.pdf}
-\newpage
 \sphinxmaketitle
 '''
 # Void Resources============================================================================

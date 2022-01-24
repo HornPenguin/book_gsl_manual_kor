@@ -16,7 +16,7 @@ Babel.language_codes = {'ko':'korean', 'en':'english'}
 project = 'GSL'
 copyright = '1996-2021 The GSL Team'
 author = 'GSL Team'
-language = 'en'
+language = 'ko'
 title= u'GNU 과학계산 라이브러리'
 
 release = u'2.7'
@@ -87,11 +87,10 @@ my_preamble = r'''
 my_cover_and_license = r'''
     \newpage
     \includepdf[pages=1]{Cover.pdf}
-    \newpage
     '''
 latex_elements = {
     'papersize': 'a4paper',
-    'pointsize': '7pt',
+    'pointsize': '9pt',
     'preamble': my_preamble,
     'maketitle' : maketitle,
     'fontpkg' : fontpkg,
