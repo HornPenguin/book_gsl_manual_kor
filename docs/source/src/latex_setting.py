@@ -31,11 +31,13 @@ custom_setting = r'''
 '''
 
 fontpkg= r'''
-\setmainfont{Noto Serif CJK KR}
-\setsansfont{Noto Sans CJK KR}
+%\setmainfont{Noto Serif CJK KR}
+%\setsansfont{Noto Sans CJK KR}
 %\setmonofont{Noto Sans Mono CJK KR}
 
 \setmainfont{NanumMyeongjo}[
+    Kerning=On,
+    Mapping=tex-text
     Path=./,
     Extension = .otf,
     ItalicFont=*Italic,
@@ -53,6 +55,11 @@ fontpkg= r'''
     Path=./,
     Extension = .ttc
 ]
+
+\newfontfamily\hangulfont[Script=Hangul]{NanumMyeongjo}
+\newfontfamily\hangulfontsf[Script=Hangul]{NanumBarunGothic}
+\newfontfamily\hangulfonttt[Script=Hangul]{D2Coding}
+
 
 '''
 
