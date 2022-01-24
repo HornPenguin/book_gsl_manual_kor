@@ -4,7 +4,8 @@ packagelist= {
     "xeCJK" : "CJKspace",
     "multicol":"",
     "setspace":"",
-    "imakeidx": ""
+    "imakeidx": "",
+    "fontspec":""
 }
 
 #    "xeCJK" : "CJKspace",
@@ -16,24 +17,6 @@ custom_setting = r'''
 \onehalfspacing
 %\setstretch{1.25} % custom spacing
 %------------------------------------------------------------
-
-%%\setsansfont{NanumBarunGothic}[
-%%    Mapping=tex-text, 
-%%    Path=./,
-%%    Extension = .ttf
-%%    ]
-%%\setmainfont{Nanum Myeongjo}[
-%%    Mapping=tex-text, 
-%%    Path=./,
-%%    Extension = .ttf
-%%    ]
-%%
-'''
-
-fontpkg= r'''
-%\setmainfont{Noto Serif CJK KR}
-%\setsansfont{Noto Sans CJK KR}
-%\setmonofont{Noto Sans Mono CJK KR}
 
 \setmainfont{NanumMyeongjo}[
     Kerning=On,
@@ -60,7 +43,12 @@ fontpkg= r'''
 \newfontfamily\hangulfontsf[Script=Hangul]{NanumBarunGothic}
 \newfontfamily\hangulfonttt[Script=Hangul]{D2Coding}
 
+'''
 
+fontpkg= r'''
+%\setmainfont{Noto Serif CJK KR}
+%\setsansfont{Noto Sans CJK KR}
+%\setmonofont{Noto Sans Mono CJK KR}
 '''
 
 maketitle=r'''
