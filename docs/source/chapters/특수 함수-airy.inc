@@ -18,12 +18,12 @@
 .. c:function:: double gsl_sf_airy_Ai (double x, gsl_mode_t mode)
                 int gsl_sf_airy_Ai_e (double x, gsl_mode_t mode, gsl_sf_result * result)
 
-    에어리 함수 :math:`Ai(x)`의 값을 주어진 :math:`mode` 정밀도에 따라 계산합니다.
+    에어리 함수 :math:`Ai(x)`의 값을 주어진 :var:`mode` 정밀도에 따라 계산합니다.
 
 .. c:function:: double gsl_sf_airy_Bi (double x, gsl_mode_t mode)
                 int gsl_sf_airy_Bi_e (double x, gsl_mode_t mode, gsl_sf_result * result)
 
-    에어리 함수 :math:`Bi(x)`의 값을 주어진 :math:`mode` 정밀도에 따라 계산합니다.
+    에어리 함수 :math:`Bi(x)`의 값을 주어진 :var:`mode` 정밀도에 따라 계산합니다.
 
 .. c:function:: double gsl_sf_airy_Ai_scaled (double x, gsl_mode_t mode)
                 int gsl_sf_airy_Ai_scaled_e (double x, gsl_mode_t mode, gsl_sf_result * result)
