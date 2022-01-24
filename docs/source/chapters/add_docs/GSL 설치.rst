@@ -350,7 +350,8 @@ clang과 icc등과 같이 다른 컴파일러를 사용한다면 별도로
 
     $./configure CC=clang CPP="clang -E" CFLAGS="-O3" LD="llvm-ld" OTOOL=llvm-ld AR=llvm-ar RANLIB=llvm-ranlib NM=llvm-nm MC=llvmc PROF=llvm-prof AS=llvm-as
 
-:macro:`CC`  , :macro:`CPP` 는 실행 가능한 C, C++ 컴파일러의 이름을 말합니다.
+:macro:`CC` 는 명령줄 인터페이스에서 호출가능한 컴파일러의 이름을 
+:macro:`CPP` 는 전처리기 단계를 의미합니다.
 
 더 자세한 정보는 라이브러리 베포 파일내의 configure 파일 설명서를 읽어보기 바랍니다.
 

@@ -33,11 +33,26 @@ custom_setting = r'''
 fontpkg= r'''
 \setmainfont{Noto Serif CJK KR}
 \setsansfont{Noto Sans CJK KR}
-%\setmonofont{D2Coding}[
-%    Path=./,
-%    Extension = .ttc
-%    ]
-\setmonofont{Noto Sans Mono CJK KR}
+%\setmonofont{Noto Sans Mono CJK KR}
+
+\setmainfont{NanumMyeongjo}[
+    Path=./,
+    Extension = .otf,
+    ItalicFont=*Italic,
+    BoldFont=*ExtraBold,
+    BoldItalicFont=*ExtraBoldItalic
+]
+\setsansfont{NanumBarunGothic}[
+    Path=./,
+    Extension = .otf,
+    ItalicFont=*Italic,
+    BoldFont=*Bold,
+    BoldItalicFont=*BoldItalic
+]
+\setmonofont{D2Coding}[
+    Path=./,
+    Extension = .ttc
+]
 
 '''
 
