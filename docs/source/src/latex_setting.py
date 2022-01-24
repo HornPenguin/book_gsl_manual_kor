@@ -18,7 +18,9 @@ custom_setting = r'''
 %\setstretch{1.25} % custom spacing
 %------------------------------------------------------------
 
-\setmainfont{NanumMyeongjo}[
+\setmainfont{Noto Serif}
+\setsansfont{Noto Sans CJK KR}
+\setCJKmainfont{NanumMyeongjo}[
     Kerning=On,
     Mapping=tex-text
     Path=./,
@@ -27,7 +29,7 @@ custom_setting = r'''
     BoldFont=*ExtraBold,
     BoldItalicFont=*ExtraBoldItalic
 ]
-\setsansfont{NanumBarunGothic}[
+\setCJKsansfont{NanumBarunGothic}[
     Path=./,
     Extension = .otf,
     ItalicFont=*Italic,
