@@ -80,8 +80,7 @@ my_latex_authors = 'Mark Galassi \\\\ \
 
 my_preamble = r'''  
     {0}
-
-    {1}                        
+                      
     '''.format(custom_setting)
 
 my_cover_and_license = r'''
