@@ -47,6 +47,7 @@ fontpkg= r'''
 maketitle=r'''
 \newpage
     \includepdf[pages=-]{Cover.pdf}
+\newpage
 \sphinxmaketitle
 '''
 # Void Resources============================================================================

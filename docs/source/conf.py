@@ -82,7 +82,7 @@ my_preamble = r'''
     {0}
 
     {1}                        
-    '''.format(packages, custom_setting)
+    '''.format(custom_setting)
 
 my_cover_and_license = r'''
     \newpage
