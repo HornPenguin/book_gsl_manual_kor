@@ -91,6 +91,7 @@ my_cover_and_license = r'''
 latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '9pt',
+    'packages' : addpackages,
     'preamble': my_preamble,
     'maketitle' : maketitle,
     'fontpkg' : fontpkg,

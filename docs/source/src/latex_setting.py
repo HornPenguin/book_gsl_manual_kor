@@ -1,25 +1,21 @@
 
-packagelist= {
-    "pdfpages" :"",
-    "multicol":"",
-    "setspace":"",
-    "imakeidx": "",
-    "bookmark": ""
-}
+addpackages = r'''
 
-#    "xeCJK" : "CJKspace",
-
-packages = "\n".join(["\\usepackage[{}]{{{}}}".format(v, k) for k, v in packagelist.items()])
+\usepackage{pdfpages}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{imakeidx}
+\usepackage{bookmark}
+'''
 
 custom_setting = r'''
 %setspace 패키지 설정: CJK가 주인 문서에서 줄간격이 너무 좁을 때
 \onehalfspacing
 %\setstretch{1.25} % custom spacing
 %------------------------------------------------------------
+'''
 
-\selectlanguage{english}
-\otherlanguage{korean}
-
+fontpkg= r'''
 \setmainfont{NanumMyeongjo}[
     Path=./,
     Extension = .otf,
@@ -46,11 +42,6 @@ custom_setting = r'''
 \newfontfamily\hangulfont[Script=Hangul]{NanumMyeongjo}
 \newfontfamily\hangulfontsf[Script=Hangul]{NanumBarunGothic}
 \newfontfamily\hangulfonttt[Script=Hangul]{D2Coding}
-
-'''
-
-fontpkg= r'''
-
 '''
 
 maketitle=r'''
