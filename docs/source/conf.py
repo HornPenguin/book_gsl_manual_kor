@@ -16,7 +16,7 @@ Babel.language_codes = {'ko':'korean', 'en':'english'}
 project = 'GSL'
 copyright = '1996-2021 The GSL Team'
 author = 'GSL Team'
-language = 'ko'
+language = 'en'
 title= u'GNU 과학계산 라이브러리'
 
 release = u'2.7'

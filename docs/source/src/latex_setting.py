@@ -18,6 +18,9 @@ custom_setting = r'''
 %\setstretch{1.25} % custom spacing
 %------------------------------------------------------------
 
+\selectlanguage{english}
+\otherlanguage{korean}
+
 \setmainfont{NanumMyeongjo}[
     Path=./,
     Extension = .otf,
@@ -40,6 +43,11 @@ custom_setting = r'''
 \setCJKmainfont{NanumMyeongjo}
 \setCJKsansfont{NanumBarunGothic}
 \setCJKmonofont{D2Coding}
+
+\newfontfamily\hangulfont[Script=Hangul]{NanumMyeongjo}
+\newfontfamily\hangulfontsf[Script=Hangul]{NanumBarunGothic}
+\newfontfamily\hangulfonttt[Script=Hangul]{D2Coding}
+
 '''
 
 fontpkg= r'''
