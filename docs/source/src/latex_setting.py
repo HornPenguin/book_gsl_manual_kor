@@ -1,7 +1,6 @@
 
 packagelist= {
     "pdfpages" :"",
-    "xeCJK" : "CJKspace",
     "multicol":"",
     "setspace":"",
     "imakeidx": "",
