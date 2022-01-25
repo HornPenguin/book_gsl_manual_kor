@@ -19,9 +19,9 @@ preamble = r'''
 
 fontpkg= r'''
 
-\setCJKmainfont{NanumMyeongjo}
-\setCJKsansfont{NanumBarunGothic}
-\setCJKmonofont{D2Coding}
+\setmainfont{Noto Serif CJK KR}
+\setsansfont{Noto Sans CJK KR}
+\setmonofont{Noto Sans Mono CJK KR}
 
 '''
 
