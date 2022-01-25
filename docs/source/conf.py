@@ -114,15 +114,15 @@ latex_use_xindy =True
 latex_additional_files = [
     "./_static/Cover.pdf",
     "./_static/A_Slick_GNU_Logo.png "
-    "./fonts/NanumMyeongjo.otf",
-    "./fonts/NanumMyeongjoItalic.otf",
-    "./fonts/NanumMyeongjoExtraBold.otf",
-    "./fonts/NanumMyeongjoExtraBoldItalic.otf",
-    "./fonts/NanumBarunGothic.otf",
-    "./fonts/NanumBarunGothicItalic.otf",
-    "./fonts/NanumBarunGothicBold.otf",
-    "./fonts/NanumBarunGothicBoldItalic.otf",
-    "./fonts/D2Coding.ttc",
+    "./_static/NanumMyeongjo.otf",
+    "./_static/NanumMyeongjoItalic.otf",
+    "./_static/NanumMyeongjoExtraBold.otf",
+    "./_static/NanumMyeongjoExtraBoldItalic.otf",
+    "./_static/NanumBarunGothic.otf",
+    "./_static/NanumBarunGothicItalic.otf",
+    "./_static/NanumBarunGothicBold.otf",
+    "./_static/NanumBarunGothicBoldItalic.otf",
+    "./_static/D2Coding.ttc",
     ]
 
 
