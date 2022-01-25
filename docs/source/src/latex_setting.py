@@ -8,7 +8,8 @@ addpackages = r'''
 \usepackage{bookmark}
 '''
 
-custom_setting = r'''
+preamble = r'''
+\renewcommand{\hyperref}[2][]{#2}
 %setspace 패키지 설정: CJK가 주인 문서에서 줄간격이 너무 좁을 때
 \onehalfspacing
 %\setstretch{1.25} % custom spacing
@@ -35,13 +36,28 @@ fontpkg= r'''
     Extension = .ttc
 ]
           
-\setCJKmainfont{NanumMyeongjo}
-\setCJKsansfont{NanumBarunGothic}
-\setCJKmonofont{D2Coding}
+%\setCJKmainfont{NanumMyeongjo}
+%\setCJKsansfont{NanumBarunGothic}
+%\setCJKmonofont{D2Coding}
 
-\newfontfamily\hangulfont[Script=Hangul]{NanumMyeongjo}
-\newfontfamily\hangulfontsf[Script=Hangul]{NanumBarunGothic}
-\newfontfamily\hangulfonttt[Script=Hangul]{D2Coding}
+\newfontfamily\hangulfont[Script=Hangul]{NanumMyeongjo}[
+    Path=./,
+    Extension = .otf,
+    ItalicFont=*Italic,
+    BoldFont=*ExtraBold,
+    BoldItalicFont=*ExtraBoldItalic
+]
+\newfontfamily\hangulfontsf[Script=Hangul]{NanumBarunGothic}[
+    Path=./,
+    Extension = .otf,
+    ItalicFont=*Italic,
+    BoldFont=*Bold,
+    BoldItalicFont=*BoldItalic
+]
+\newfontfamily\hangulfonttt[Script=Hangul]{D2Coding}[
+    Path=./,
+    Extension = .ttc
+]
 '''
 
 maketitle=r'''

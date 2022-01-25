@@ -14,7 +14,7 @@ Babel.language_codes = {'ko':'korean', 'en':'english'}
 # -- Project information
 
 project = 'GSL'
-copyright = '1996-2021 The GSL Team'
+copyright = '1996-2021, The GSL Team'
 author = 'GSL Team'
 language = 'en'
 title= u'GNU 과학계산 라이브러리'
@@ -78,10 +78,6 @@ my_latex_authors = 'Mark Galassi \\\\ \
                     저\\\\~\\\\ \
                     \\small{번역}:  김현성 \\\\'
 
-my_preamble = r'''  
-    {0}
-                      
-    '''.format(custom_setting)
 
 my_cover_and_license = r'''
     \newpage
@@ -91,7 +87,7 @@ latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '9pt',
     'extrapackages' : addpackages,
-    'preamble': my_preamble,
+    'preamble': preamble,
     'maketitle' : maketitle,
     'fontpkg' : fontpkg,
     'fncychap' : r'\usepackage[Glenn]{fncychap}',
