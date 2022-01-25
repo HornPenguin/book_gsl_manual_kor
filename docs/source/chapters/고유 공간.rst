@@ -400,40 +400,43 @@ Quasi-상 삼각 행렬은 블록 상 삼각 행렬로 대각 성분이 :math:`1
 ==========================================
 .. index:: generalized eigensystems
 
-Given two square matrices (:math:`A`, :math:`B`), the generalized
-nonsymmetric eigenvalue problem is to find eigenvalues :math:`\lambda` and
-eigenvectors :math:`x` such that
+주어진 두 정사각 행렬 ( :math:`A`, :math:`B` ) 에 대해, 일반화된 비대칭 계의 풀이는 
+다음을 만족하는 고유 값 :math:`\lambda` 와 고유 벡터 :math:`x` 를 찾는 문제입니다.
+
 
 .. math:: A x = \lambda B x
 
-We may also define the problem as finding eigenvalues :math:`\mu` and
-eigenvectors :math:`y` such that
+고유 값 :math:`mu` 와 고유 벡터 :math:`y` 에 대해 다음과 같은
+형식도 가능합니다.
 
 .. math:: \mu A y = B y
 
-Note that these two problems are equivalent (with :math:`\lambda = 1/\mu`)
-if neither :math:`\lambda` nor :math:`\mu` is zero. If say, :math:`\lambda`
-is zero, then it is still a well defined eigenproblem, but its alternate
-problem involving :math:`\mu` is not. Therefore, to allow for zero
-(and infinite) eigenvalues, the problem which is actually solved is
+이 두 문제는 :math:`\lambda = 1/\mu` 식을 이용하면 동일한 식임을 알 수 있습니다.
+이때,  :math:`lambda` 와 :math:`mu` 는 모두 0이 아니여야 합니다. 
+:math:`lambda` 가 0이여도 첫번째 식은 여전히 잘 정의된 고유계를 형성하지만
+두번째 식은 :math:`mu` 가 정의되지 않습니다. 고유 값으로 0과 무한대를 사용하기 위해
+라이브러리에서 제공하는 함수들은 다음과 같은 형태의 고유 계를 풀게 됩니다.
+
 
 .. math:: \beta A x = \alpha B x
 
-The eigensolver routines below will return two values :math:`\alpha`
-and :math:`\beta` and leave it to the user to perform the divisions
-:math:`\lambda = \alpha / \beta` and :math:`\mu = \beta / \alpha`.
+풀이 함수들은 :math:`\alpha` 와 :math:`\beta` 두 값을 반환해 사용자가
+:math:`\lambda` 나 :math:`\mu` 를 계산해 사용할 수 있게 합니다.
+각각은 나눗셈을 이용해서 :math:`\lambda = \alpha / \beta` 와
+:math:`\mu = \beta / \alpha` 로 계산할 수 있습니다.
 
-If the determinant of the matrix pencil :math:`A - \lambda B` is zero
-for all :math:`\lambda`, the problem is said to be singular; otherwise
-it is called regular.  Singularity normally leads to some
-:math:`\alpha = \beta = 0` which means the eigenproblem is ill-conditioned
-and generally does not have well defined eigenvalue solutions. The
-routines below are intended for regular matrix pencils and could yield
-unpredictable results when applied to singular pencils.
 
-The solution of the real generalized nonsymmetric eigensystem problem for a
-matrix pair :math:`(A, B)` involves computing the generalized Schur
-decomposition
+선형 행렬 pencil :math:`A - \lambda B` 의 행렬식이 모든 :math:`\lambda`
+에 대해 0이면 해당 고유 계는 특이성을 가집니다. 
+특이성을 가지는 고유 계는 :math:`\alpha = \beta = 0` 를 가지게 됩니다.
+이는 해당 고유 계가 제대로 정의된 고유 값과 벡터를 가지지 않음을 의미합니다.
+이 단원의 함수들은 특이성을 가지지 않는 일반적인 문제들에 대한 풀이를 제공합니다.
+이러한 특이 pencil 값을 가지는 문제에 함수들을 적용할 경우 예기치 못한
+결과가 나올 수 있습니다.
+
+
+행렬 쌍 :math:`(A, B)` 의 실수 위의 일반화된 비 대칭 고유 계 문제는 
+일반화된 슈어 분해와 관련되어 있습니다.
 
 .. only:: not texinfo
 
@@ -449,21 +452,20 @@ decomposition
       A = Q S Z^T
       B = Q T Z^T
 
-where :math:`Q` and :math:`Z` are orthogonal matrices of left and right
-Schur vectors respectively, and :math:`(S, T)` is the generalized Schur
-form whose diagonal elements give the :math:`\alpha` and :math:`\beta`
-values. The algorithm used is the QZ method due to Moler and Stewart
-(see references).
+
+:math:`Q` 와 :math:`Z` 는 각각 좌, 우 슈어 벡터들의 직교 행렬입니다.
+:math:`(S, T)` 는 일반화된 슈어 형태로 이들의 대각 성분은 각각 :math:`\alpha` 와 :math:`\beta`
+값들을 제공해줍니다. 이 알고리즘들은 Moler & StewartQZ 의 QZ 방법에 기반해 있습니다. (참고 문헌을 확인할 수 있습니다.)
 
 .. type:: gsl_eigen_gen_workspace
 
-   generalized 고유 값 문제를 풀기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
+   일반화된 비대칭 행렬의 고유 값 문제를 풀기 위한 내부 인자들을 가지고 있는 작업 공간입니다.
    problems.
 
 .. function:: gsl_eigen_gen_workspace * gsl_eigen_gen_alloc (const size_t n)
 
-   :code:`n` :math:`\times` :code:`n` 크기의 실수 일반화된 비대칭 행렬의 고유를
-   찾기 위한 작업 공간을 메모리에 할당합니다.real generalized nonsymmetric eigensystems.
+   :code:`n` :math:`\times` :code:`n` 크기의 실수 일반화된 비대칭 행렬의 고유 값을
+   찾기 위한 작업 공간을 메모리에 할당합니다.
    공간의 크기는 :math:`O(n)` 입니다.
 
 .. function:: void gsl_eigen_gen_free (gsl_eigen_gen_workspace * w)
@@ -472,9 +474,11 @@ values. The algorithm used is the QZ method due to Moler and Stewart
 
 .. function:: void gsl_eigen_gen_params (const int compute_s, const int compute_t, const int balance, gsl_eigen_gen_workspace * w)
 
-   This function sets some parameters which determine how the eigenvalue
-   problem is solved in subsequent calls to :func:`gsl_eigen_gen`.
+   :func:`gsl_eigen_gen` 을 사용하기 위한 계수들을 설정합니다.
 
+   :data:`compute_s` 가 1로 정해지면, :func:`gsl_eigen_gen`가 완전한 슈어 형태 :math:`S` 
+   계산에 쓰입니다. 0으로 정해지면 :math:`S` 계산되지 않습니다. 0이 기본 설정입니다.
+   :math:`S` 는 quasi 상 삼각 행렬로 
    If :data:`compute_s` is set to 1, the full Schur form :math:`S` will be
    computed by :func:`gsl_eigen_gen`. If it is set to 0,
    :math:`S` will not be computed (this is the default setting). :math:`S`
