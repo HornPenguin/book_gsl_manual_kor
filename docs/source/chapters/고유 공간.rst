@@ -151,9 +151,9 @@
 .. math:: A = Z T Z^T
 
 :math:`Z` 는 슈어 벡터들의 직교 행렬, :math:`T` 은 Schur 형태로 Quasi-상 삼각 행렬입니다.
-Quasi-상 삼각 행렬은 블록 상 삼각 행렬로 대각 성분이 :math:`1 \times 1` 이나 :math:`2 \times 2` 크기의
-블록 행렬인 행렬을 의미합니다. 이 때, :math:`2 \times 2` 크기 행렬의 고유 값들은 :math:`A` 행렬의 고유 값들의
-켤례 복소수입니다.  이 과정에서 사용되는 알고리즘에는 이중 전이 Francis 방법(double-shiftted Francis method)이 
+Quasi-상 삼각 행렬은 블럭 상 삼각 행렬로 대각 성분이 :math:`1 \times 1` 이나 :math:`2 \times 2` 크기의
+블럭 행렬인 행렬을 의미합니다. 이 때, :math:`2 \times 2` 크기 행렬의 고유 값들은 :math:`A` 행렬의 고유 값들의
+켤례 복소수입니다. 이 과정에서 사용되는 알고리즘에는 이중 전이 Francis 방법(double-shiftted Francis method)이 
 사용됩니다.
 
 .. type:: gsl_eigen_nonsymm_workspace
@@ -476,50 +476,41 @@ Quasi-상 삼각 행렬은 블록 상 삼각 행렬로 대각 성분이 :math:`1
 
    :func:`gsl_eigen_gen` 을 사용하기 위한 계수들을 설정합니다.
 
-   :data:`compute_s` 가 1로 정해지면, :func:`gsl_eigen_gen`가 완전한 슈어 형태 :math:`S` 
-   계산에 쓰입니다. 0으로 정해지면 :math:`S` 계산되지 않습니다. 0이 기본 설정입니다.
-   :math:`S` 는 quasi 상 삼각 행렬로 
-   If :data:`compute_s` is set to 1, the full Schur form :math:`S` will be
-   computed by :func:`gsl_eigen_gen`. If it is set to 0,
-   :math:`S` will not be computed (this is the default setting). :math:`S`
-   is a quasi upper triangular matrix with 1-by-1 and 2-by-2 blocks
-   on its diagonal. 1-by-1 blocks correspond to real eigenvalues, and
-   2-by-2 blocks correspond to complex eigenvalues.
+   :data:`compute_s` 가 1로 정해지면 완전한 슈어 형태 :math:`S` 함수 :func:`gsl_eigen_gen` 에 의해
+   계산됩니다. 0이 주어지면 :math:`S` 는 계산되지 않습니다. 0이 기본 설정입니다.
+   :math:`S` 는 Schur 형태로 Quasi-상 삼각 행렬입니다.
+   Quasi-상 삼각 행렬은 블럭 상 삼각 행렬로 대각 성분이 :math:`1 \times 1` 이나 :math:`2 \times 2` 크기의
+   블럭 행렬인 행렬을 의미합니다. 이 때, :math:`2 \times 2` 크기 행렬의 고유 값들은 :math:`A` 행렬의 고유 값들의
+   켤례 복소수입니다. :math:`1 \times 1` 행렬은 실수 고유 값과 대응됩니다.
 
-   If :data:`compute_t` is set to 1, the full Schur form :math:`T` will be
-   computed by :func:`gsl_eigen_gen`. If it is set to 0,
-   :math:`T` will not be computed (this is the default setting). :math:`T`
-   is an upper triangular matrix with non-negative elements on its diagonal.
-   Any 2-by-2 blocks in :math:`S` will correspond to a 2-by-2 diagonal
-   block in :math:`T`.
+   :data:`compute_t` 가 1로 정해지면 완전한 슈어 형태 :math:`T` 가 함수 :func:`gsl_eigen_gen` 에 의해
+   계산됩니다. 0이 주어지면 :math:`T` 는 계산되지 않습니다. 0이 기본 설정입니다.
+   :math:`T` 는 상 삼각 행렬로 대각선에 음수 값이
+   없는 행렬입니다. :math:`S` 의 :math:`2 \times 2` 크기 블럭 행렬은 :math:`T` 의 
+   :math:`2 \times 2` 크기 블럭 행렬에 대응됩니다.
 
-   The :data:`balance` parameter is currently ignored, since generalized
-   balancing is not yet implemented.
+   :data:`balance` 값은 현재 사용되지 않습니다. 잃반화된 균형 행렬기능은 아직 구현되지 않았습니다.
 
 .. function:: int gsl_eigen_gen (gsl_matrix * A, gsl_matrix * B, gsl_vector_complex * alpha, gsl_vector * beta, gsl_eigen_gen_workspace * w)
 
-   This function computes the eigenvalues of the real generalized nonsymmetric
-   matrix pair (:data:`A`, :data:`B`), and stores them as pairs in
-   (:data:`alpha`, :data:`beta`), where :data:`alpha` is complex and :data:`beta` is
-   real. If :math:`\beta_i` is non-zero, then
-   :math:`\lambda = \alpha_i / \beta_i` is an eigenvalue. Likewise,
-   if :math:`\alpha_i` is non-zero, then
-   :math:`\mu = \beta_i / \alpha_i` is an eigenvalue of the alternate
-   problem :math:`\mu A y = B y`. The elements of :data:`beta` are normalized
-   to be non-negative.
+   실수 위 일반화된 비대칭 행렬 쌍 ( :data:`A`, :data:`B` ) 의 고유 값을 계산해 
+    ( :data:`alpha`, :data:`beta` )에 저장합니다. :data:`alpha` 는 복소수, 
+    :data:`beta` 는 실수입니다. :math:`\beta_i` 가 0이 아니라면 
+    :math:`\lambda = \alpha_i / \beta_i` 이 고유 값이 됩니다.
+    비슷하게 :math:`\alpha_i` 가 0이 아니라면 :math:`\mu = \beta_i / \alpha_i` 이
+    :math:`\mu A y = B y` 의 고유 값이 됩니다. :data:`beta` 의 원소들은 모두
+    음수가 되지 않도록 정규화되어 있습니다.
 
-   If :math:`S` is desired, it is stored in :data:`A` on output. If :math:`T`
-   is desired, it is stored in :data:`B` on output. The ordering of
-   eigenvalues in (:data:`alpha`, :data:`beta`) follows the ordering
-   of the diagonal blocks in the Schur forms :math:`S` and :math:`T`. In rare
-   cases, this function may fail to find all eigenvalues. If this occurs, an
-   error code is returned.
+    :math:`S` 가 필요하다면 이 행렬은 계산이 끝난 후 :data:`A` 에 저장되어 있습니다.
+    :math:`T` 도 계산이 끝난 후 :data:`B` 에 저장됩니다. ( :data:`alpha`, :data:`beta` ) 
+    의 고유 값 순서는 슈어 형태 :math:`S` 와 :math:`T` 의 대각선 블럭들 순서를 따릅니다.
+    드문 일이지만 함수에서 모든 고유 값들을 찾지 못하는 경우가 있습니다. 이 경우 오류 값이 반환됩니다.
+
 
 .. function:: int gsl_eigen_gen_QZ (gsl_matrix * A, gsl_matrix * B, gsl_vector_complex * alpha, gsl_vector * beta, gsl_matrix * Q, gsl_matrix * Z, gsl_eigen_gen_workspace * w)
 
-   This function is identical to :func:`gsl_eigen_gen` except that it also
-   computes the left and right Schur vectors and stores them into :data:`Q`
-   and :data:`Z` respectively.
+   :func:`gsl_eigen_gen` 함수와 동일합니다. 다만 좌, 우 슈어 벡터들을 계산해
+   각각 :data:`Q` 와 :data:`Z` 에 저장합니다.
 
 .. type:: gsl_eigen_genv_workspace
 
@@ -527,9 +518,9 @@ Quasi-상 삼각 행렬은 블록 상 삼각 행렬로 대각 성분이 :math:`1
 
 .. function:: gsl_eigen_genv_workspace * gsl_eigen_genv_alloc (const size_t n)
 
-   This function allocates a workspace for computing eigenvalues and
-   eigenvectors of :data:`n`-by-:data:`n` real generalized nonsymmetric
-   eigensystems. The size of the workspace is :math:`O(7n)`.
+    실수 위 크기 :math:`n \times n` 의 일반화된 비 대칭 고유 계의 
+    고유 값과 고유 벡터를 찾기 위한 작업 공간을 메모리에 할당합니다.
+    공간의 크기는 :math:`O(7n)` 입니다.
 
 .. function:: void gsl_eigen_genv_free (gsl_eigen_genv_workspace * w)
 
@@ -537,18 +528,17 @@ Quasi-상 삼각 행렬은 블록 상 삼각 행렬로 대각 성분이 :math:`1
 
 .. function:: int gsl_eigen_genv (gsl_matrix * A, gsl_matrix * B, gsl_vector_complex * alpha, gsl_vector * beta, gsl_matrix_complex * evec, gsl_eigen_genv_workspace * w)
 
-   This function computes eigenvalues and right eigenvectors of the
-   :data:`n`-by-:data:`n` real generalized nonsymmetric matrix pair
-   (:data:`A`, :data:`B`). The eigenvalues are stored in (:data:`alpha`, :data:`beta`)
-   and the eigenvectors are stored in :data:`evec`. It first calls
-   :func:`gsl_eigen_gen` to compute the eigenvalues, Schur forms, and
-   Schur vectors. Then it finds eigenvectors of the Schur forms and
-   backtransforms them using the Schur vectors. The Schur vectors are
-   destroyed in the process, but can be saved by using
-   :func:`gsl_eigen_genv_QZ`. The computed eigenvectors are normalized
-   to have unit magnitude. On output, (:data:`A`, :data:`B`) contains
-   the generalized Schur form (:math:`S`, :math:`T`). If :func:`gsl_eigen_gen`
-   fails, no eigenvectors are computed, and an error code is returned.
+   실수 위 크기 :data:`n \times n` 의 일반화된 비 대칭 행렬 쌍( :data:`A` , :data:`B` )의 
+   고유 값과 우 고유 벡터를 찾습니다. 고유 벡터들은 ( :data:`alpha` , :data:`beta` )에 
+   저장되고 고유 벡터들은 :data:`evec` 에 저장됩니다. 이 함수는 먼저
+   함수 :func:`gsl_eigen_gen` 를 호출해 고유 값들과 슈어 형태 그리고 슈어 벡터를 계산합니다.
+   그 후 슈어 형태에 대한 고유 벡터를 찾고 이들을 슈어 벡터를 이용해 역변환 시켜
+   원래 계의 고유 벡터들을 얻습니다. 슈어 벡터들은 계산과정에서 사용되 훼손됩니다.
+   함수 :func:`gsl_eigen_genv_QZ` 를 사용하면 별도로 저장해둘 수 있습니다.
+   계산된 고유 벡터는 크기 1을 가지도록 정규화 되어 있습니다. 
+   계산 후 ( :data:`A` , :data:`B` ) 는 일반화된 슈어 형태 ( :math:`S` , :math:`T` )가 됩니다.
+   함수 :func:`gsl_eigen_gen` 의 구동이 실패하면 고유 벡터들은 계산되지 않고
+   오류 코드가 반환됩니다.
 
 .. function:: int gsl_eigen_genv_QZ (gsl_matrix * A, gsl_matrix * B, gsl_vector_complex * alpha, gsl_vector * beta, gsl_matrix_complex * evec, gsl_matrix * Q, gsl_matrix * Z, gsl_eigen_genv_workspace * w)
 
