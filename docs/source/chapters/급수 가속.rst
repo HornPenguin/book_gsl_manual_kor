@@ -16,18 +16,22 @@
 
     번역중
 
-The functions described in this chapter accelerate the convergence of a
-series using the Levin :math:`u`-transform.  This method takes a small number of
-terms from the start of a series and uses a systematic approximation to
-compute an extrapolated value and an estimate of its error.  The
-:math:`u`-transform works for both convergent and divergent series, including
-asymptotic series.
+이 단원은 Levin :math:`u` 변환을 이용해 급수의 수렴을 가속하는 방법에 관해
+기술합니다. 이 방법은 급수의 초기 항들에 외삽법을 적용해 수렴값을 근사해 
+계산하고 근사 값의 오차도 같이 계산해 제공해 줍니다. :math:`u` 변환은 
+수렴하는 급수, 발산하는 급수 그리고 점근적 확장을 표현하는 급수에도
+사용할 수 있습니다.
 
-These functions are declared in the header file :file:`gsl_sum.h`.
+이 단원의 함수들은 :file:`gsl_sum.h` 에 기술되어 있습니다.
 
-Acceleration functions
+가속 함수
 ======================
 
+다음 함수들은 급수의 Levin :math:`u` 변환을 오차 값과 함께 계산합니다.
+오차의 계산은 각 항부터 마지막 외삽법까지 계산과정에 있는 오차 전파를 이용해서 
+추정합니다.
+
+이 함수들은
 The following functions compute the full Levin :math:`u`-transform of a series
 with its error estimate.  The error estimate is computed by propagating
 rounding errors from each term through to the final extrapolation. 
@@ -37,75 +41,78 @@ is known to high accuracy, and the rounding errors are assumed to
 originate from finite precision. They are taken to be relative errors of
 order :macro:`GSL_DBL_EPSILON` for each term.
 
-The calculation of the error in the extrapolated value is an
-:math:`O(N^2)` process, which is expensive in time and memory.  A faster
-but less reliable method which estimates the error from the convergence
-of the extrapolated value is described in the next section.  For the
-method described here a full table of intermediate values and
-derivatives through to :math:`O(N)` must be computed and stored, but this
-does give a reliable error estimate.
+
+외삽된 값들의 오차 계산은 :math:`O(N^2)` 의 계산 복잡도를 가집니다. 이 복잡도는
+시간과 자원을 매우 많이 소모합니다. 정확도는 낮지만 외삽법의 수렴 오차를 더 빠르게
+추정할 수 있는 방법도 있습니다. 해당 방법은 다음 소단원에 기술되어 있습니다.
+이 단원에서 기술하는 방법은 모든 중간값과 미분 값을 사용하는 방법으로 :math:`O(N)`
+ 복잡도의 자원이 계산 과정에서 필요하지만, 신뢰성 있는 오차 추정치를 제공해줍니다.
 
 .. type:: gsl_sum_levin_u_workspace
 
-   Workspace for a Leven :math:`u`-transform.
+   Levin :math:`u` 변환을 위한 작업 공간입니다.
 
 .. function:: gsl_sum_levin_u_workspace * gsl_sum_levin_u_alloc (size_t n)
 
-   This function allocates a workspace for a Levin :math:`u`-transform of :data:`n`
-   terms.  The size of the workspace is :math:`O(2n^2 + 3n)`.
+   Levin :math:`u` 변환을 위한 작업 공간을 메모리에 할당합니다.
+   공간의 크기는 :math:`O(2n^2 + 3n)` 입니다.
 
 .. function:: void gsl_sum_levin_u_free (gsl_sum_levin_u_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   :data:`w` 가 가르키는 작업 공간을 메모리에서 해제합니다.
 
 .. function:: int gsl_sum_levin_u_accel (const double * array, size_t array_size, gsl_sum_levin_u_workspace * w, double * sum_accel, double * abserr)
 
-   This function takes the terms of a series in :data:`array` of size
-   :data:`array_size` and computes the extrapolated limit of the series using
-   a Levin :math:`u`-transform.  Additional working space must be provided in
-   :data:`w`.  The extrapolated sum is stored in :data:`sum_accel`, with an
-   estimate of the absolute error stored in :data:`abserr`.  The actual
-   term-by-term sum is returned in :code:`w->sum_plain`. The algorithm
-   calculates the truncation error (the difference between two successive
-   extrapolations) and round-off error (propagated from the individual
-   terms) to choose an optimal number of terms for the extrapolation.  
-   All the terms of the series passed in through :data:`array` should be non-zero.
+   크기 :data:`array_size` 의 배열 :data:`array` 로 주어진 급수 항들을
+   이용해 급수의 극한 값을 계산합니다. 이 방법은 외삽법의 일종으로 Levin :math:`u` 변환을
+   이용합니다. 함수의 호출 과정에서 별도의 작업 공간을 반드시 :data:`w` 에 제공해주어야 합니다.
+   
+   
+   외삽된 합들은 :data:`sum_accel` 에 저장됩니다. 해당 값들에 대한 절대 오차는
+   :data:`abserr` 에 저장됩니다. 실제 항들의 합은 :code:`w->sum_plain` 에 반환됩니다.
+   이 함수에 사용된 알고리즘은 절단 오차와 반올림 오차를 계산해 외삽법을 위한 최적화된 항 갯수를 찾습니다.
+   절단 오차는 2개의 외삽법들의 차로 계산되고 반올림 오차는 각 항의 계산의 오차 전파를 이용합니다.
+   :data:`array` 를 통해 함수에 전달되는 모든 급수 항들은 반드시 0이 아니어야 합니다.
 
-Acceleration functions without error estimation
+
+오차 추정이 없는 가속 함수
 ===============================================
 
-The functions described in this section compute the Levin :math:`u`-transform of
-series and attempt to estimate the error from the "truncation error" in
-the extrapolation, the difference between the final two approximations.
-Using this method avoids the need to compute an intermediate table of
-derivatives because the error is estimated from the behavior of the
-extrapolated value itself. Consequently this algorithm is an :math:`O(N)`
-process and only requires :math:`O(N)` terms of storage.  If the series
-converges sufficiently fast then this procedure can be acceptable.  It
-is appropriate to use this method when there is a need to compute many
-extrapolations of series with similar convergence properties at high-speed.
-For example, when numerically integrating a function defined by a
-parameterized series where the parameter varies only slightly. A
-reliable error estimate should be computed first using the full
-algorithm described above in order to verify the consistency of the
-results.
+이 단락의 함수들은 Levin :math:`u` 변환을 계산할 때, 오차 추정을 
+절단 오차(truncation error)를 이용해 계산합니다. 이 값은 마지막 두 근사 값의
+차를 이용해 계산됩니다. 오차가 외삽법의 계산에서 추정되므로 중간에 미분 값
+표를 계산할 필요가 없습니다. 결과적으로 이 알고리즘은 :math:`O(n)` 의 
+복잡도를 가지고 :math:`O(n)` 크기의 저장소만을 필요로 합니다.
+급수가 충분히 빠르게 수렴한다면 이 방법을 사용해 좋은 결과를 얻을 수 있습니다.
+이 방법을 사용하기 적절한 상황은 비슷한 수렴 성절을 가지는 여러
+급수들을 외삽법을 이용해 빠르게 계산하는 상황입니다.
+예를 들어서, 어느 함수가 여러 매개 변수들을 가진 급수로 정의되었고 매개 변수들의
+값 차이가 그리 크지 않은 여러 경우에 대한 수치 적분을 계산하는 상황이 있습니다.
+전 단락에 쓰인 알고리즘을 이용해 먼저 적절한 오차 추정치를 계산해 계산 결과의
+일관성을 검증해 볼 수도 있습니다.
+
 
 .. type:: gsl_sum_levin_utrunc_workspace
 
-   Workspace for a Levin :math:`u`-transform without error estimation
+   오차 추정 계산을 하지 않는 Levin :math:`u` 변환을 위한 작업 공간입니다.
 
 .. function:: gsl_sum_levin_utrunc_workspace * gsl_sum_levin_utrunc_alloc (size_t n)
 
-   This function allocates a workspace for a Levin :math:`u`-transform of :data:`n`
-   terms, without error estimation.  The size of the workspace is
-   :math:`O(3n)`.
+   오차 추정 계산이 없는 크기 :data:`n` 의 Levin :math:`u` 변환을 위한 작업 공간을 메모리에 할당합니다.
+   작업 공간의 크기는 :math:`O(3n)` 입니다.
 
 .. function:: void gsl_sum_levin_utrunc_free (gsl_sum_levin_utrunc_workspace * w)
 
-   This function frees the memory associated with the workspace :data:`w`.
+   :data:`w` 가 가르키는 작업 공간을 메모리에서 해제합니다.
 
 .. function:: int gsl_sum_levin_utrunc_accel (const double * array, size_t array_size, gsl_sum_levin_utrunc_workspace * w, double * sum_accel, double * abserr_trunc)
 
+   크기 :data:`array_size` 의 배열 :data:`array` 로 주어진 급수 항들을
+   이용해 급수의 극한 값을 계산합니다. 이 방법은 외삽법의 일종으로 Levin :math:`u` 변환을
+   이용합니다. 함수의 호출 과정에서 별도의 작업 공간을 반드시 :data:`w` 에 제공해주어야 합니다.
+
+   외삽된 합들은 :data:`sum_accel` 에 저장됩니다. 해당 값들에 대한 절대 오차는
+   :data:`abserr` 에 저장됩니다. 실제 항들의 합은 :code:`w->sum_plain` 에 반환됩니다.
    This function takes the terms of a series in :data:`array` of size
    :data:`array_size` and computes the extrapolated limit of the series using
    a Levin :math:`u`-transform.  Additional working space must be provided in
@@ -118,52 +125,53 @@ results.
    extrapolated values are replaced by moving averages when calculating the
    truncation error, smoothing out any fluctuations.
 
-Examples
+예제
 ========
+
+
+다음 프로그램은 :math:`\zeta(2) = \pi^2 / 6` 의 값을 급수를 이용해 계산합니다.
 
 The following code calculates an estimate of :math:`\zeta(2) = \pi^2 / 6`
 using the series,
 
 .. math:: \zeta(2) = 1 + 1/2^2 + 1/3^2 + 1/4^2 + \dots
 
-After :data:`N` terms the error in the sum is :math:`O(1/N)`, making direct
-summation of the series converge slowly.
+:data:`N` 항 이후 급수의 오차는 :math:`O(1/N)` 를 따릅니다. 직접
+급수를 계산하는 방법은 수렴 속도가 매우 느립니다.
+
 
 .. include:: /examples/sum.c
    :code:
 
-The output below shows that the Levin :math:`u`-transform is able to obtain an 
-estimate of the sum to 1 part in 
-:math:`10^{10}`
-using the first eleven terms of the series.  The
-error estimate returned by the function is also accurate, giving
-the correct number of significant digits. 
+아래의 결과는 Levin :math:`u` 변환으로 처음 11개의 항을 이용해
+:math:`10^{10}` 자리 숫자의 정확도를 가지는 값을 계산할 수 있음을 보여줍니다.
+함수가 반환한 오차 추정치도 참 값의 유효 숫자 갯수와 동일한 결과를 보여줍니다.
+
 
 .. include:: /examples/sum.txt
    :code:
 
-Note that a direct summation of this series would require 
-:math:`10^{10}`
-terms to achieve the same precision as the accelerated 
-sum does in 13 terms.
+직접 급수를 계산해 13개의 가속 변환값을 이용한 결과와
+동일한 정밀도를 얻으려면 :math:`10^{10}` 개 항의 합이 필요합니다.
 
-References and Further Reading
+
+참고 문헌과 추가 자료
 ==============================
 
-The algorithms used by these functions are described in the following papers,
+함수들에 쓰인 알고리즘들은 다음의 논문들에 기반합니다.
 
 * T. Fessler, W.F. Ford, D.A. Smith,
   HURRY: An acceleration algorithm for scalar sequences and series
   *ACM Transactions on Mathematical Software*, 9(3):346--354, 1983.
   and Algorithm 602 9(3):355--357, 1983.
 
-The theory of the :math:`u`-transform was presented by Levin,
+:math:`u` 변환은 Levin의 논문에서 소개되어 있습니다.
 
 * D. Levin,
   Development of Non-Linear Transformations for Improving Convergence of
   Sequences, *Intern.: J.: Computer Math.* B3:371--388, 1973.
 
-A review paper on the Levin Transform is available online,
+Levin 변환에 대한 리뷰 논문을 온라인에서 찾을 수 있습니다.
 
 * Herbert H. H. Homeier, Scalar Levin-Type Sequence Transformations,
   http://arxiv.org/abs/math/0005209
