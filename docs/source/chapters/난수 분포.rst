@@ -19,11 +19,15 @@
 
 .. include:: /include.rst
 
+이 단원에서는 난수 분포를 생성하고 이들의 확률 분포를 계산하는 함수들에 대해 기술합니다.
+이 단원에서 기술된 분포들의 특정 샘플은 라이브러리의 난수 발생기를 실행해 얻을 수 있습니다.
+
 This chapter describes functions for generating random variates and
 computing their probability distributions.  Samples from the
 distributions described in this chapter can be obtained using any of the
 random number generators in the library as an underlying source of
 randomness.  
+
 
 In the simplest cases a non-uniform distribution can be obtained
 analytically from the uniform distribution of a random number generator
@@ -63,123 +67,111 @@ a safe range of parameters (where there is a negligible probability of
 a variate exceeding this limit) to prevent incorrect results due to
 overflow.
 
-Introduction
+개요
 ============
+
+연속 난수 분포는 확률 밀도 함수로 정의됩니다. 확률 밀도 함수는 :math:`p(x)` 로 표기되며
+:math:`x` 가 :math:`x` 에서 :math:`x + dx` 까지의 극소 범위에서 발생할 확률은 
+:math:`p(x) dx` 로 표현할 수 있습니다.
 
 Continuous random number distributions are defined by a probability
 density function, :math:`p(x)`, such that the probability of :math:`x`
 occurring in the infinitesimal range :math:`x` to :math:`x + dx` is
 :math:`p(x) dx`.
 
-The cumulative distribution function for the lower tail :math:`P(x)` is
-defined by the integral,
+누적 분포 함수 :math:`P(x)` 는 다음의 적분으로 정의되고
 
 .. math:: P(x) = \int_{-\infty}^{x} dx' p(x')
 
-and gives the probability of a variate taking a value less than :math:`x`.
+확률 변수가 :math:`x` 보다 작을 확률을 나타냅니다.
 
-The cumulative distribution function for the upper tail :math:`Q(x)` is
-defined by the integral,
+보완(complementary) 누적 분포 함수 :math:`Q(x)` 는 다음 적분으로 정의되며 
 
 .. math:: Q(x) = \int_{x}^{+\infty} dx' p(x')
 
-and gives the probability of a variate taking a value greater than :math:`x`.
+확률 변수가 :math:`x` 보다 클 확률을 나타냅니다..
 
-The upper and lower cumulative distribution functions are related by
-:math:`P(x) + Q(x) = 1` and satisfy :math:`0 \le P(x) \le 1`,
-:math:`0 \le Q(x) \le 1`.
+이 두 분포 함수는 :math:`P(x) + Q(x) = 1` 의 관계를 가지고 :math:`0 \le P(x) \le 1`,
+:math:`0 \le Q(x) \le 1` 를 만족합니다.
 
-The inverse cumulative distributions, :math:`x = P^{-1}(P)`
-and :math:`x = Q^{-1}(Q)`
-give the values of :math:`x`
-which correspond to a specific value of :math:`P` or :math:`Q`.  
-They can be used to find confidence limits from probability values.
+역 누적 분포 :math:`x = P^{-1}(P)` 와 :math:`x = Q^{-1}(Q)` 는 
+특정 :math:`P` 와 :math:`Q` 값에 대한 해당 :math:`x` 값을 나타냅니다.
+이는 확률 변수들로부터 적절한 범위를 계산하는 데 사용될 수 있습니다. 
 
-For discrete distributions the probability of sampling the integer
-value :math:`k` is given by :math:`p(k)`, where :math:`\sum_k p(k) = 1`.
-The cumulative distribution for the lower tail :math:`P(k)` of a
-discrete distribution is defined as,
+이상 확률 분포에서 정수값 :math:`k` 를 뽑아내는 확률은 :math:`p(k)` 로 주어지고 
+:math:`p(k)`는 :math:`\sum_k p(k) = 1` 의 성질을 가집니다.
+이산 누적 분포 :math:`P(k)` 는 다음과 같이 정의됩니다.
 
 .. math:: P(k) = \sum_{i \le k} p(i) 
 
-where the sum is over the allowed range of the distribution less than
-or equal to :math:`k`.  
+이 정의의 분포 값 급수는 :math:`k` 와 같거나 작을 확률을 나타냅니다.
 
-The cumulative distribution for the upper tail of a discrete
-distribution :math:`Q(k)` is defined as
+
+똑같이 보완 누적 분포의 이산 변수 형태 :math:`Q(k)` 는 다음과 같이 정의되며
 
 .. math:: Q(k) = \sum_{i > k} p(i) 
 
-giving the sum of probabilities for all values greater than :math:`k`.
-These two definitions satisfy the identity :math:`P(k)+Q(k)=1`.
-
-If the range of the distribution is 1 to :math:`n` inclusive then
-:math:`P(n) = 1`, :math:`Q(n) = 0` while :math:`P(1) = p(1)`,
-:math:`Q(1) = 1 - p(1)`.
+:math:`k` 보다 큰 샘플들의 확률 합을 나타냅니다. 이 두 정의는 :math:`P(k)+Q(k)=1` 관계를 만족합니다.
+예를 들어 이산 분포의 범주가 :math:`1` 에서 :math:`n` 로 주어졌다면, :math:`P(n) = 1`, :math:`Q(n) = 0` 이고 :math:`P(1) = p(1)`,
+:math:`Q(1) = 1 - p(1)` 가 됩니다.
 
 |newpage|
 
-The Gaussian Distribution
-=========================
+가우스 분포(Gaussian distribution)
+=============================================
 
 .. index:: Gaussian distribution
 
 .. function:: double gsl_ran_gaussian (const gsl_rng * r, double sigma)
 
-   This function returns a Gaussian random variate, with mean zero and
-   standard deviation :data:`sigma`.  The probability distribution for
-   Gaussian random variates is,
+   평균이 :math:`0` 이고 표준 편차가 :data:`sigma` 인 가우스 난수를 반환합니다.
+   가우스 난수의 확률 분포는 가우스 분포라 불리며 :math:`x \in (-\infty, \infty)` 에 대해 다음과 같이 정의됩니다.
 
    .. math:: p(x) dx = {1 \over \sqrt{2 \pi \sigma^2}} \exp (-x^2 / 2\sigma^2) dx
 
-   for :math:`x` in the range :math:`-\infty` to :math:`+\infty`.  Use the
-   transformation :math:`z = \mu + x` on the numbers returned by
-   :func:`gsl_ran_gaussian` to obtain a Gaussian distribution with mean
-   :math:`\mu`.  This function uses the Box-Muller algorithm which requires two
-   calls to the random number generator :data:`r`.
+   :math:`z = \mu + x` 변환을 이용해 평균이 :math:`\mu` 인 가우스 분포를 얻을 수도 있습니다.
+   이 함수는 Box-Muller 알고리즘을 사용합니다. 이 알고리즘은 난수 생성자 :data:`r` 을 두 번에 걸쳐 
+   호출합니다.
 
 .. function:: double gsl_ran_gaussian_pdf (double x, double sigma)
 
-   This function computes the probability density :math:`p(x)` at :data:`x`
-   for a Gaussian distribution with standard deviation :data:`sigma`, using
-   the formula given above.
+   표준편차가 :data:`sigma` 가우스 분포에 대해 :data:`x` 의 확률 밀도 함수 :math:`p(x)` 를 계산합니다.
+   위에 기술된 수식을 사용합니다.
 
    .. image:: /images/rand-gaussian.png
 
 .. index:: Ziggurat method
+.. index:: 지구라트 알고리즘
 
 .. function:: double gsl_ran_gaussian_ziggurat (const gsl_rng * r, double sigma)
               double gsl_ran_gaussian_ratio_method (const gsl_rng * r, double sigma)
 
-   This function computes a Gaussian random variate using the alternative
-   Marsaglia-Tsang ziggurat and Kinderman-Monahan-Leva ratio methods.  The
-   Ziggurat algorithm is the fastest available algorithm in most cases.
+   가우스 난수를 Marsaglia-Tsang 지구라트(ziggurat) 알고리즘과 Kinderman-Monahan-Leva 비율 방법을 사용해 계싼합니다.
+   지구라트 알고리즘은 대부분의 경우 가장 빠른 속도를 보여줍니다.
 
 .. function:: double gsl_ran_ugaussian (const gsl_rng * r)
               double gsl_ran_ugaussian_pdf (double x)
               double gsl_ran_ugaussian_ratio_method (const gsl_rng * r)
 
-   These functions compute results for the unit Gaussian distribution.  They
-   are equivalent to the functions above with a standard deviation of one,
-   :data:`sigma` = 1.
+   단위-가우스 분포(unit Gaussian distribution)를 계산합니다. 이들은 위의 함수들이 :data:`sigma =1` 인 표준 편차와 같습니다.
 
 .. function:: double gsl_cdf_gaussian_P (double x, double sigma)
               double gsl_cdf_gaussian_Q (double x, double sigma)
               double gsl_cdf_gaussian_Pinv (double P, double sigma)
               double gsl_cdf_gaussian_Qinv (double Q, double sigma)
 
-   These functions compute the cumulative distribution functions
-   :math:`P(x)`, :math:`Q(x)` and their inverses for the Gaussian
-   distribution with standard deviation :data:`sigma`.
+   표준 편차가 :data:`sigma` 인 가우스 분포에 대해 
+   누적 분포 함수 :math:`P(x)`, :math:`Q(x)` 와 이들의 역함수를 계산합니다. 
+
 
 .. function:: double gsl_cdf_ugaussian_P (double x)
               double gsl_cdf_ugaussian_Q (double x)
               double gsl_cdf_ugaussian_Pinv (double P)
               double gsl_cdf_ugaussian_Qinv (double Q)
 
-   These functions compute the cumulative distribution functions
-   :math:`P(x)`, :math:`Q(x)` and their inverses for the unit Gaussian
-   distribution.
+   단위-가우스 분포에 대해
+   누적 분포 함수 :math:`P(x)`, :math:`Q(x)` 와 이들의 역함수를 계산합니다. 
+
 
 |newpage|
 
@@ -336,8 +328,8 @@ The Multivariate Gaussian Distribution
 
 |newpage|
 
-The Exponential Distribution
-============================
+지수 분포(Exponential distribution)
+===========================================
 
 .. index:: Exponential distribution
 

@@ -17,36 +17,29 @@
     번역중
 
 이 단원은 Levin :math:`u` 변환을 이용해 급수의 수렴을 가속하는 방법에 관해
-기술합니다. 이 방법은 급수의 초기 항들에 외삽법을 적용해 수렴값을 근사해 
+기술합니다. 이 방법은 급수의 초기 항들에 외삽법(extrapolation)을 적용해 수렴값을 근사해 
 계산하고 근사 값의 오차도 같이 계산해 제공해 줍니다. :math:`u` 변환은 
 수렴하는 급수, 발산하는 급수 그리고 점근적 확장을 표현하는 급수에도
 사용할 수 있습니다.
 
-이 단원의 함수들은 :file:`gsl_sum.h` 에 기술되어 있습니다.
+헤더파일 :file:`gsl_sum.h` 에 기술되어 있습니다.
 
 가속 함수
 ======================
 
 다음 함수들은 급수의 Levin :math:`u` 변환을 오차 값과 함께 계산합니다.
-오차의 계산은 각 항부터 마지막 외삽법까지 계산과정에 있는 오차 전파를 이용해서 
-추정합니다.
+오차는 마지막 외삽항까지 각각 항의 오차 전파를 이용해 계산합니다.
+외삽법의 마지막 항까지 각각의 항을 계산하는 과정에서 오차 전파를 이용해 추정합니다.
 
-이 함수들은
-The following functions compute the full Levin :math:`u`-transform of a series
-with its error estimate.  The error estimate is computed by propagating
-rounding errors from each term through to the final extrapolation. 
-
-These functions are intended for summing analytic series where each term
-is known to high accuracy, and the rounding errors are assumed to
-originate from finite precision. They are taken to be relative errors of
-order :macro:`GSL_DBL_EPSILON` for each term.
-
+이 함수들은 해석적 급수들을 계산하기 위해 만들어졌습니다. 이러한 급수들은 각 항들이
+높은 정확도의 수치로 알려져있고 반올림 오차는 한정된 정밀도에서 발생된다고 가정됩니다.
+각 항들의 상대 오차는 :macro:`GSL_DBL_EPSILON` 수준의 정밀도로 정해집니다.
 
 외삽된 값들의 오차 계산은 :math:`O(N^2)` 의 계산 복잡도를 가집니다. 이 복잡도는
 시간과 자원을 매우 많이 소모합니다. 정확도는 낮지만 외삽법의 수렴 오차를 더 빠르게
 추정할 수 있는 방법도 있습니다. 해당 방법은 다음 소단원에 기술되어 있습니다.
 이 단원에서 기술하는 방법은 모든 중간값과 미분 값을 사용하는 방법으로 :math:`O(N)`
- 복잡도의 자원이 계산 과정에서 필요하지만, 신뢰성 있는 오차 추정치를 제공해줍니다.
+복잡도의 자원이 계산 과정에서 필요하지만 신뢰성 있는 오차 추정치를 제공해줍니다.
 
 .. type:: gsl_sum_levin_u_workspace
 
@@ -82,7 +75,7 @@ order :macro:`GSL_DBL_EPSILON` for each term.
 절단 오차(truncation error)를 이용해 계산합니다. 이 값은 마지막 두 근사 값의
 차를 이용해 계산됩니다. 오차가 외삽법의 계산에서 추정되므로 중간에 미분 값
 표를 계산할 필요가 없습니다. 결과적으로 이 알고리즘은 :math:`O(n)` 의 
-복잡도를 가지고 :math:`O(n)` 크기의 저장소만을 필요로 합니다.
+복잡도를 가지고 :math:`O(n)` 크기의 저장공간만을 필요로 합니다.
 급수가 충분히 빠르게 수렴한다면 이 방법을 사용해 좋은 결과를 얻을 수 있습니다.
 이 방법을 사용하기 적절한 상황은 비슷한 수렴 성절을 가지는 여러
 급수들을 외삽법을 이용해 빠르게 계산하는 상황입니다.
@@ -113,17 +106,12 @@ order :macro:`GSL_DBL_EPSILON` for each term.
 
    외삽된 합들은 :data:`sum_accel` 에 저장됩니다. 해당 값들에 대한 절대 오차는
    :data:`abserr` 에 저장됩니다. 실제 항들의 합은 :code:`w->sum_plain` 에 반환됩니다.
-   This function takes the terms of a series in :data:`array` of size
-   :data:`array_size` and computes the extrapolated limit of the series using
-   a Levin :math:`u`-transform.  Additional working space must be provided in
-   :data:`w`.  The extrapolated sum is stored in :data:`sum_accel`.  The actual
-   term-by-term sum is returned in :code:`w->sum_plain`. The algorithm
-   terminates when the difference between two successive extrapolations
-   reaches a minimum or is sufficiently small. The difference between these
-   two values is used as estimate of the error and is stored in
-   :data:`abserr_trunc`.  To improve the reliability of the algorithm the
-   extrapolated values are replaced by moving averages when calculating the
-   truncation error, smoothing out any fluctuations.
+
+   이 알고리즘은 2개의 외삽법이 성공적으로 계산되었을 때, 해당 값들의 차이가 최소에 이르거나
+   충분히 작을 때 정지합니다. 
+   차이는 오차를 추정하는 데 사용되며 :data:`abserr_trunc`에 저장됩니다. 
+   알고리즘의 신뢰성을 개선하기 위해 외삽된 값들이 절단 오차를 계산할 때 이동 평균으로 대체되어
+   변동치를 줄여줍니다.
 
 예제
 ========
