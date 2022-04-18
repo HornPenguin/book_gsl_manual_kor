@@ -153,7 +153,7 @@ occurring in the infinitesimal range :math:`x` to :math:`x + dx` is
               double gsl_ran_ugaussian_pdf (double x)
               double gsl_ran_ugaussian_ratio_method (const gsl_rng * r)
 
-   단위-가우스 분포(unit Gaussian distribution)를 계산합니다. 이들은 위의 함수들이 :data:`sigma =1` 인 표준 편차와 같습니다.
+   단위-가우스 분포(unit Gaussian distribution)를 계산합니다. 이들은 위의 함수들이 :data:`sigma` = 1 인 표준 편차와 같습니다.
 
 .. function:: double gsl_cdf_gaussian_P (double x, double sigma)
               double gsl_cdf_gaussian_Q (double x, double sigma)

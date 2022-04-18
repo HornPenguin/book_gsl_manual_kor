@@ -6,9 +6,6 @@
 고유 공간
 **************************
 
-.. note::
-
-    번역중
 
 .. include:: /include.rst
 
@@ -528,7 +525,7 @@ Quasi-상 삼각 행렬은 블럭 상 삼각 행렬로 대각 성분이 :math:`1
 
 .. function:: int gsl_eigen_genv (gsl_matrix * A, gsl_matrix * B, gsl_vector_complex * alpha, gsl_vector * beta, gsl_matrix_complex * evec, gsl_eigen_genv_workspace * w)
 
-   실수 위 크기 :data:`n \times n` 의 일반화된 비 대칭 행렬 쌍( :data:`A` , :data:`B` )의 
+   실수 위 크기 :math:`n \times n` 의 일반화된 비 대칭 행렬 쌍( :data:`A` , :data:`B` )의 
    고유 값과 우 고유 벡터를 찾습니다. 고유 벡터들은 ( :data:`alpha` , :data:`beta` )에 
    저장되고 고유 벡터들은 :data:`evec` 에 저장됩니다. 이 함수는 먼저
    함수 :func:`gsl_eigen_gen` 를 호출해 고유 값들과 슈어 형태 그리고 슈어 벡터를 계산합니다.
