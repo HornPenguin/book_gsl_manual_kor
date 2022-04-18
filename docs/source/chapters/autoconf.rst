@@ -6,9 +6,9 @@ Autoconf 매크로
 
 :code:`autoconf` 를 사용하는 응용 프로그램들은 표준 매크로 :code:`AC_CHECK_LIB` 를 사용해  
 :code:`configure` 스크립트에서 GSL를 자동으로 링크할 수 있습니다. 라이브러리는 CBLAS와 
-수학 라이브러리들에 대해서도 자체적으로 의존하고 있기 때문에 이 의존 라이브러리들을 :code:`libgsl` 을
+수학 라이브러리들에 대해서도 자체적으로 의존하고 있기 때문에 의존 라이브러리들을 :code:`libgsl` 을
 링크하기 전에 가져오도록 해야합니다. 이를 수행할 수 있는 명령어는 다음과 같습니다.
-명령어들은 :file:`configure.ac` 에 작성되어야합니다. 
+명령어들은 :file:`configure.ac` 파일에 작성되어야합니다. 
 
 .. code-block:: 
 
