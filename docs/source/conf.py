@@ -90,9 +90,8 @@ latex_elements = {
     'preamble': preamble,
     'maketitle' : maketitle,
     'fontpkg' : fontpkg,
-    'fncychap' : r'\usepackage[Glenn]{fncychap}',
+    'fncychap' : r'\usepackage[Glenn]{fancychap}',
     'printindex' : r'\printindex'
-
 }
 
 
@@ -120,7 +119,6 @@ latex_additional_files = [
     "./_static/NanumBarunGothicBoldItalic.otf",
     "./_static/D2Coding.ttc",
     ]
-
 
 def setup(app):
     app.add_css_file('custom.css')
